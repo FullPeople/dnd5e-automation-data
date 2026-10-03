@@ -67,5 +67,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-subrace-dragonborn-001",
+    "path": "subrace/PHB-subrace-dragonborn-001.json",
+    "sha256": "128206907016e77d5cee63d60c4cf40f792c0861e7f9c85dfb1ecfc1c8a9c8db",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:subrace:phb:dragonborn%20(black)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(blue)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(brass)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(bronze)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(copper)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(gold)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(green)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(red)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(silver)::::::phb:dragonborn:",
+      "kiwee:subrace:phb:dragonborn%20(white)::::::phb:dragonborn:"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
