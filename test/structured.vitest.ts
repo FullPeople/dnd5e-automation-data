@@ -58,6 +58,12 @@ test('one-time equipment resolves identity and copper without copying special-it
   expect(result.mechanics.startingEquipment!.blocks[0].options[0].items).toEqual([{quantity:2,identity:dagger.identity.key},{quantity:1,copper:1500},{quantity:1,unresolved:true}]);
   expect(result.unsupported.map(row=>row.code)).toContain('special-equipment');
 });
+test('starting focus groups declare an explicit category choice from their typed metadata, never from their name',()=>{
+ const group=material('itemGroup',{name:'Renamed Group',ENG_name:'Renamed Group',source:'PHB',type:'SCF',scfType:'holy'});
+ const result=run('class',{startingEquipment:{defaultData:[{A:[{item:'Renamed Group|PHB',quantity:2},{value:700}]}]}},[group]);
+ expect(result.mechanics.startingEquipment!.blocks[0].options[0].items).toEqual([{quantity:2,category:'focusSpellcastingHoly'},{quantity:1,copper:700}]);
+ group.raw.scfType='unknown';expect(run('class',{startingEquipment:[{_:[{item:'Renamed Group|PHB'}]}]},[group]).mechanics.startingEquipment!.blocks[0].options[0].items[0]).toEqual({quantity:1,unresolved:true});
+});
 test('source spells preserve shared ability choices, gates and ambiguity in multi-spell daily pools',()=>{
   const one=material('spell',{ENG_name:'Synthetic One',name:'Synthetic One',source:'PHB',level:1}),two=material('spell',{ENG_name:'Synthetic Two',name:'Synthetic Two',source:'PHB',level:1});
   const result=run('feat',{additionalSpells:[{ability:{choose:['int','wis']},prepared:{3:{daily:{'1':['Synthetic One','Synthetic Two']}}}}]},[one,two]);
