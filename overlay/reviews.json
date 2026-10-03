@@ -310,5 +310,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-spell-002",
+    "path": "spell/PHB-spell-002.json",
+    "sha256": "f17ea921e1508226d804c7ec6417d6143e249273bb105238710d3076a39b1f69",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:spell:phb:shapechange::::::::",
+      "kiwee:spell:phb:mass%20heal::::::::",
+      "kiwee:spell:phb:mage%20armor::::::::",
+      "kiwee:spell:phb:bestow%20curse::::::::",
+      "kiwee:spell:phb:storm%20of%20vengeance::::::::",
+      "kiwee:spell:phb:antipathy%2Fsympathy::::::::",
+      "kiwee:spell:phb:creation::::::::",
+      "kiwee:spell:phb:antilife%20shell::::::::",
+      "kiwee:spell:phb:heroism::::::::",
+      "kiwee:spell:phb:control%20water::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
