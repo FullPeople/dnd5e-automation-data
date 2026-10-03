@@ -1,1 +1,1 @@
-export const TOOL_VERSION = 'dnd5e-automation-data/0.1.0';
+export const TOOL_VERSION = 'dnd5e-automation-data/0.2.0';

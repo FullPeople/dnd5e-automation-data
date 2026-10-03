@@ -1,0 +1,2445 @@
+[
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Alchemist's Supplies",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:alchemist's%20supplies::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:alchemist's%20supplies::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 8,
+        "value": 5000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-tool-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "crafting",
+        "code": "long-rest-alchemy-material-cost-not-modeled",
+        "ref": "additionalEntries/4"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the verified inventory model and replace the provisional verdict with identified proficiency-gated checks and alchemical crafting limits.",
+    "notes": "Partial: possession grants no proficiency. Arcana and Investigation benefits depend on tool proficiency. The supplied XGE addition permits one dose during a long rest, from six specified products, spending half its value in carried materials; materials weigh 1 lb per 50 gp. Optional advantage requires DM permission. Activity DCs are 10, 10, 15, 15 and 20. No replenishing resource is implied."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Arrow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:arrow::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:arrow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.05,
+        "value": 5
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-linked-consumption-and-retrieval-deferred",
+        "ref": "propertyDefinitions/itemProperty:A",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 150
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified single-arrow inventory model; identify attack-linked expenditure and battlefield retrieval as deferred ammunition settlement.",
+    "notes": "Partial: type A denotes ammunition, not a weapon possessing property A. Its use with an ammunition weapon expends one unit per attack; after battle a one-minute search recovers half the expended ammunition. The supplied weapon-property definition supplies this use rule. No attack action, damage value or rest recovery is granted to the arrow."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Arrows (20)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:arrows%20(20)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:arrows%20(20)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-linked-consumption-and-retrieval-deferred",
+        "ref": "propertyDefinitions/itemProperty:A",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "pack-unpacking-not-modeled",
+        "ref": "packContents/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 150
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain aggregate package weight and value; expose ammunition settlement and the exact pack contents without inventing a starting-equipment grant.",
+    "notes": "Partial: the package contains 20 units of kiwee:baseitem:phb:arrow::::::::, confirmed in the full snapshot. EquipmentModel has no pack-content field. StartingEquipment allocates equipment and is not asserted as an unconditional entitlement for owning this package. Expenditure is one unit per attack; half of expended ammunition is recoverable after battle with a one-minute search, not on a rest schedule."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Bagpipes",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:bagpipes::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:bagpipes::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 6,
+        "value": 3000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve weight and value; identify performance-check proficiency and bard-specific instrument-focus eligibility missing from the equipment model.",
+    "notes": "Partial: proficiency applies only to checks made to play this instrument and must already be possessed. The focus permission is for a bard; the supported holy, arcane and druid focus tokens do not represent this permission. Owning bagpipes grants neither proficiency nor an unrestricted arcane focus."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Battleaxe",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:battleaxe::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:battleaxe::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "V"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-hand-dependent-damage-deferred",
+        "ref": "property/V",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the complete confirmed weapon model; identify deferred attack settlement and the two-handed melee condition on versatile damage.",
+    "notes": "Partial: 1d8 slashing is the base die; 1d10 applies only to a melee attack using two hands. No unconditional 1d10 replacement or global damage modifier is applied."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Blowgun",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:blowgun::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:blowgun::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 1,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-consumption-and-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-loading-and-hand-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the verified weapon model; replace the generic range diagnostic with the actual range, ammunition, loading and combat boundaries.",
+    "notes": "Partial: fixed damage is 1 piercing, not 1d4. Normal/long range is 25/100 ft; long-range disadvantage and the maximum-distance limit remain unresolved execution. Compatible ammunition is kiwee:baseitem:phb:blowgun%20needle::::::::. A fires one piece per attack and allows half retrieval after battle with one minute of searching; one-handed loading needs a free hand. LD limits firing to one piece per action, bonus action or reaction regardless of extra attacks. Melee use follows the improvised-weapon rule. R is the weapon type here, not Reach."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Blowgun Needle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:blowgun%20needle::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:blowgun%20needle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.02,
+        "value": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-linked-consumption-and-retrieval-deferred",
+        "ref": "propertyDefinitions/itemProperty:A",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 150
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified single-needle inventory model; identify ammunition expenditure and battlefield retrieval instead of ignoring its use rule.",
+    "notes": "Partial: this is ammunition, with no independent weapon damage. Use with an ammunition weapon consumes one piece per attack; half the expended pieces can be retrieved after battle with a one-minute search. Neither poison damage nor rest-based replenishment is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Blowgun Needles (50)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:blowgun%20needles%20(50)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:blowgun%20needles%20(50)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-linked-consumption-and-retrieval-deferred",
+        "ref": "propertyDefinitions/itemProperty:A",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "pack-unpacking-not-modeled",
+        "ref": "packContents/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 150
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep aggregate package weight and value; identify exact contents and deferred ammunition settlement without inventing item grants or rest resources.",
+    "notes": "Partial: packContents specifies 50 units of kiwee:baseitem:phb:blowgun%20needle::::::::, confirmed in the snapshot. EquipmentModel does not express unpacking. Do not reinterpret this as starting equipment or a 50-use replenishing resource. Ammunition use consumes one piece per attack and permits half retrieval after battle with a one-minute search."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Breastplate",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:breastplate::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:breastplate::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 14,
+        "weight": 20,
+        "value": 40000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 145,
+      "quote": "This armor consists of a fitted metal chest piece worn with supple leather."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete armor model is confirmed; the remaining description adds no operative rule, so replace the provisional verdict.",
+    "notes": "AC 14 with the supported medium-armor Dexterity cap of 2; weight 20 lb and value 40000 cp. The description creates no movement bonus or additional defense modifier."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Brewer's Supplies",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:brewer's%20supplies::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:brewer's%20supplies::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 9,
+        "value": 2000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-tool-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "crafting",
+        "code": "brewing-and-rest-water-purification-not-modeled",
+        "ref": "additionalEntries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified inventory model; identify proficiency-gated skill uses, brewing and rest-based water purification omitted by the draft.",
+    "notes": "Partial: History, Medicine and Persuasion benefits are situational and require proficiency. Brewing requires weeks of fermentation with only hours of active work; no exact duration is inferred. The supplied XGE text permits up to 6 gallons of water purification during a long rest or 1 gallon during a short rest. Activity DCs are 10, 15 and 20. These are processing limits, not a daily use counter."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Calligrapher's Supplies",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:calligrapher's%20supplies::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:calligrapher's%20supplies::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 1000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-writing-and-map-checks",
+        "ref": "additionalEntries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve weight and value; identify the actual writing, authorship, forgery and map-examination checks instead of leaving prose unreviewed.",
+    "notes": "Partial: Arcana assistance concerns authorship of magical writing, not deciphering its magical content; History concerns ancient writing. Map examination uses an Intelligence check. Descriptive expertise does not establish a double-proficiency grant. Activity DCs are 10 for nonmagical authorship, 15 for mental state or forged text, and 20 for a forged signature. Possession grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Carpenter's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:carpenter's%20tools::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:carpenter's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 6,
+        "value": 800
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-woodwork-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "objectDefense",
+        "code": "conditional-door-window-dc-increase-not-modeled",
+        "ref": "additionalEntries/6"
+      },
+      {
+        "family": "crafting",
+        "code": "temporary-shelter-construction-and-expiry-not-modeled",
+        "ref": "additionalEntries/7"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified inventory model; identify woodwork checks, conditional fortification and temporary shelter expiry missing from the draft.",
+    "notes": "Partial: History, Investigation, Perception and Stealth benefits concern wooden structures. Fortification takes 1 minute plus raw materials and raises the forced-opening DC of a door or window by 5; it is not AC +5. A long-rest shelter collapses after 1d3 days and protects the group during that rest. Activity DCs are 10, 15, 15 and 20. Possession grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Cartographer's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:cartographer's%20tools::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:cartographer's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 6,
+        "value": 1500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-map-and-navigation-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "exploration",
+        "code": "mapping-concurrent-with-travel-activity-not-modeled",
+        "ref": "additionalEntries/5"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the inventory model; identify situational map and navigation checks and concurrent travel mapping omitted by the draft.",
+    "notes": "Partial: Arcana, History, Religion, Nature and Survival benefits depend on map or geography context. Map drawing can accompany another activity while traveling; no travel speed or global skill bonus is stated. Activity DCs are 10 for map age/origin, 15 for a landmark estimate or forgery detection, and 20 for filling a map gap. Possession grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Chain Mail",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:chain%20mail::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:chain%20mail::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "ac": 16,
+        "strength": 13,
+        "weight": 55,
+        "value": 7500,
+        "stealthDisadvantage": true
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 145,
+      "quote": "The suit includes gauntlets."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "All supported heavy-armor fields are confirmed and the description adds no separate operative mechanic; replace the provisional verdict.",
+    "notes": "Retain AC 16, Strength threshold 13, Stealth disadvantage, weight 55 lb and value 7500 cp. The heavy-armor category carries its supported armor rules. Described padding and gauntlets confer no added resistance or weapon grant."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Chain Shirt",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:chain%20shirt::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:chain%20shirt::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 13,
+        "weight": 20,
+        "value": 5000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 144
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The medium-armor model is complete and confirmed; descriptive sound muffling grants no independent Stealth modifier.",
+    "notes": "Retain AC 13, Dexterity cap 2, weight 20 lb and value 5000 cp. The description does not establish a Stealth bonus or disadvantage."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Club",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:club::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:club::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 10,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-two-weapon-use-deferred",
+        "ref": "property/L",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the confirmed simple melee weapon model; identify deferred attack settlement and Light weapon use.",
+    "notes": "Partial: retain 1d4 bludgeoning and property L. Light concerns weapon use; it grants no unconditional extra attack or ability-score modifier."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Cobbler's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:cobbler's%20tools::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:cobbler's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-footwear-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "travelEffects",
+        "code": "shoe-dependent-forced-march-benefit-deferred",
+        "ref": "additionalEntries/4",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "shoe-compartment-and-check-derived-dc-not-modeled",
+        "ref": "additionalEntries/5"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified inventory model; identify footwear checks, conditional timed travel protection and hidden-compartment crafting.",
+    "notes": "Partial: Arcana/History concern boots; Investigation concerns footwear evidence. Long-rest maintenance benefits at most six chosen wearers of the worked shoes for 24 hours, allowing up to 10 travel hours per day without exhaustion saves. It grants no general exhaustion immunity. A compartment takes 8 hours and holds at most 3 by 1 by 1 inches; its detection DC is the crafter's Intelligence/tool check result. Table DCs are 10 and 15. Possession grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Cook's Utensils",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:cook's%20utensils::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:cook's%20utensils::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 8,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-cooking-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "healingSettlement",
+        "code": "food-and-hit-die-dependent-rest-healing-deferred",
+        "ref": "additionalEntries/5",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain weight and value; identify cooking checks and conditional short-rest Hit Die healing without converting it to unconditional HP.",
+    "notes": "Partial: History, Medicine and Survival uses concern food. A short-rest meal adds 1 HP per Hit Die spent for the cook and at most five chosen creatures, provided utensils and sufficient food are available. This is not +1 maximum HP or a fixed 6 HP heal. Activity DCs are 10, 10, 15 and 15. Possession grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Crossbow Bolt",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:crossbow%20bolt::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:crossbow%20bolt::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.075,
+        "value": 5
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-linked-consumption-and-retrieval-deferred",
+        "ref": "propertyDefinitions/itemProperty:A",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 150
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the verified single-bolt inventory model; identify ammunition expenditure and battlefield retrieval as deferred settlement.",
+    "notes": "Partial: type A is ammunition. An ammunition weapon expends one piece per attack and permits half retrieval after battle with a one-minute search. The bolt has no independent damage die, attack action or rest recovery."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Crossbow Bolts (20)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:crossbow%20bolts%20(20)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:crossbow%20bolts%20(20)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1.5,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-linked-consumption-and-retrieval-deferred",
+        "ref": "propertyDefinitions/itemProperty:A",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "pack-unpacking-not-modeled",
+        "ref": "packContents/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 150
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain aggregate weight and value; identify exact pack contents and deferred ammunition settlement without inventing starting-equipment delivery.",
+    "notes": "Partial: packContents specifies 20 units of kiwee:baseitem:phb:crossbow%20bolt::::::::, confirmed in the snapshot. EquipmentModel does not express unpacking; no unconditional item grant is added. Ammunition use consumes one piece per attack, with half retrieval after battle through a one-minute search. No recovery period is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Crystal",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:crystal::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:crystal::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 1000,
+        "spellFocus": "arcane"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 151
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The explicit arcane focus type, weight and value completely match the supported model; empty entries add no unresolved mechanism.",
+    "notes": "Retain the explicit scfType arcane, weight 1 lb and value 1000 cp. This is an operative focus model, not a noMechanics placeholder. No spell grant or class permission is invented."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Dagger",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:dagger::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:dagger::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 1,
+        "value": 200,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "L",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-light-and-thrown-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete confirmed weapon model; identify the actual range and Finesse, Light, Thrown and combat boundaries.",
+    "notes": "Partial: 1d4 piercing, normal/long thrown range 20/60 ft. Finesse allows Strength or Dexterity, using the same choice for attack and damage; this also applies when throwing this melee weapon. Light does not grant an unconditional extra attack. T is Thrown, not the Tool type. No global ability modifier is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Dart",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:dart::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:dart::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 0.25,
+        "value": 5,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-and-thrown-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the ranged weapon model; identify 20/60 range, Finesse and Thrown resolution and combat settlement missing from the draft.",
+    "notes": "Partial: this is a simple ranged weapon with 1d4 piercing, not a melee weapon or ammunition. Finesse permits Strength or Dexterity consistently for attack and damage. Range is 20/60 ft with long-range disadvantage and a maximum limit. R is the weapon type, not Reach; T is Thrown, not Tool."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Drum",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:drum::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:drum::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 3,
+        "value": 600
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the inventory model; identify instrument-specific proficiency checks and bard focus eligibility absent from the equipment model.",
+    "notes": "Partial: playing checks add proficiency only if drum proficiency is already possessed. Bard focus permission cannot be encoded as an unrestricted arcane focus; owning the drum grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Dulcimer",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:dulcimer::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:dulcimer::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 10,
+        "value": 2500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified weight and value; identify proficiency-gated playing checks and bard-only instrument-focus use missing from the draft.",
+    "notes": "Partial: dulcimer proficiency must already exist to add the proficiency bonus to playing checks. Its bard focus permission is not one of the supported focus tokens and does not apply to all arcane casters."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Flail",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:flail::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:flail::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "bludgeoning"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The weapon fields are confirmed, but an operative damage model still entails deferred attack and damage settlement despite empty prose.",
+    "notes": "Partial: retain martial melee type, 1d8 bludgeoning, weight 2 lb and value 1000 cp. No special property, save DC or additional damage rider is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Flute",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:flute::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:flute::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 200
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the inventory model; identify flute-proficiency playing checks and bard instrument-focus eligibility missing from the draft.",
+    "notes": "Partial: only checks to play the flute use existing flute proficiency. Bard focus use is class-specific; no proficiency grant, general skill bonus or unrestricted arcane focus is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Glaive",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:glaive::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:glaive::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 2000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "R",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "heavy-reach-and-two-handed-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the complete glaive model; identify deferred combat and size, reach and hand-use conditions represented only by property tokens.",
+    "notes": "Partial: H imposes disadvantage on Small or Tiny attackers. R adds 5 ft to reach for this weapon's attacks and opportunity attacks; it does not make this a ranged weapon. 2H applies while attacking, not merely holding. Retain 1d10 slashing without global reach or damage modifiers."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Glassblower's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:glassblower's%20tools::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:glassblower's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 3000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-glass-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "crafting",
+        "code": "heat-dependent-glassworking-not-modeled",
+        "ref": "additionalEntries/1"
+      },
+      {
+        "family": "objectDamage",
+        "code": "studied-glass-weak-spot-double-damage-deferred",
+        "ref": "additionalEntries/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the verified inventory model; identify heat-dependent glassworking, contextual checks and conditional object damage missing from the draft.",
+    "notes": "Partial: glassworking needs a heat source. Arcana/History and Investigation benefits concern glass. One minute studying a glass object identifies weak spots; only damage from striking a weak spot is doubled. No global damage multiplier is applied. Table DCs are 10 for glass source and 20 for past contents. Possession grants no proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Greataxe",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:greataxe::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:greataxe::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 7,
+        "value": 3000,
+        "weaponCategory": "martial",
+        "damage": "1d12",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "heavy-and-two-handed-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve all confirmed weapon fields; identify deferred attack settlement and Heavy and Two-Handed execution conditions.",
+    "notes": "Partial: retain 1d12 slashing. H disadvantage applies to Small or Tiny attackers; 2H requires two hands only while attacking. No size restriction or hand requirement is applied merely from owning the greataxe."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Greatclub",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:greatclub::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:greatclub::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 10,
+        "value": 20,
+        "weaponCategory": "simple",
+        "damage": "1d8",
+        "damageType": "bludgeoning",
+        "properties": [
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attack-use-deferred",
+        "ref": "property/2H",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified simple melee weapon model; identify deferred attack settlement and the attack-only two-hand requirement.",
+    "notes": "Partial: retain 1d8 bludgeoning and 2H. The greatclub is not Heavy; no Small/Tiny disadvantage is added. Two hands are required for attacking, not simply holding it."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Greatsword",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:greatsword::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:greatsword::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 5000,
+        "weaponCategory": "martial",
+        "damage": "2d6",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "heavy-and-two-handed-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete weapon model; identify deferred combat and size-dependent Heavy and attack-only Two-Handed conditions.",
+    "notes": "Partial: retain 2d6 slashing, not 1d12. Heavy disadvantage applies to Small or Tiny attackers. Two-Handed applies to attacks, not merely holding the weapon."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Halberd",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:halberd::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:halberd::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 2000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "R",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "heavy-reach-and-two-handed-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the confirmed halberd model; identify deferred combat plus Heavy, Reach and Two-Handed execution conditions.",
+    "notes": "Partial: 1d10 slashing. Heavy disadvantages Small or Tiny attackers; Reach adds 5 ft for this weapon's attacks and opportunity attacks. Two-Handed is relevant to attacks. R is Reach here, not a ranged weapon classification."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Half Plate Armor",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:half%20plate%20armor::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:half%20plate%20armor::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 15,
+        "weight": 40,
+        "value": 75000,
+        "stealthDisadvantage": true
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 145
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full medium-armor model and Stealth flag are confirmed; descriptive coverage of the body adds no separate rule.",
+    "notes": "Retain AC 15, Dexterity cap 2, Stealth disadvantage, weight 40 lb and value 75000 cp. No additional movement penalty or limb-specific damage rule is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Hand Crossbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:hand%20crossbow::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:hand%20crossbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "value": 7500,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "L",
+          "LD"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-consumption-and-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-light-loading-and-hand-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain all confirmed weapon fields; identify precise range, bolt compatibility, ammunition, Light, Loading and combat limitations.",
+    "notes": "Partial: 1d6 piercing, normal/long range 30/120 ft. Uses kiwee:baseitem:phb:crossbow%20bolt::::::::; each attack expends one, with half retrieval after battle through a one-minute search. Loading the one-handed weapon needs a free hand; LD permits one fired piece per action, bonus action or reaction regardless of extra attacks. L does not grant an unconditional off-hand attack. Melee use is improvised. R denotes the ranged type, not Reach."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Handaxe",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:handaxe::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:handaxe::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 500,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "slashing",
+        "properties": [
+          "L",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-and-thrown-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified weapon model; identify 20/60 thrown range, Light and Thrown execution and deferred combat settlement.",
+    "notes": "Partial: 1d6 slashing. Throwing this melee weapon uses the same melee ability modifier; it has no Finesse permission. Normal/long range is 20/60 ft. Light does not independently grant an attack. T means Thrown, not Tool."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Heavy Crossbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:heavy%20crossbow::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:heavy%20crossbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 18,
+        "value": 5000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "H",
+          "LD",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-consumption-and-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-heavy-loading-and-two-handed-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the weapon model; replace generic range diagnostics with exact range, ammunition compatibility and conditional property execution boundaries.",
+    "notes": "Partial: 1d10 piercing, normal/long range 100/400 ft. Uses kiwee:baseitem:phb:crossbow%20bolt:::::::: with one piece per attack and half retrieval after battle through a one-minute search. LD limits fired pieces to one per action, bonus action or reaction. H disadvantages Small or Tiny attackers; 2H is required for attacks. Melee use is improvised. R is the ranged type, not Reach."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Hide Armor",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:hide%20armor::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:hide%20armor::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 12,
+        "weight": 12,
+        "value": 1000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 144,
+      "quote": "This crude armor consists of thick furs and pelts."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The supported medium-armor model is complete and confirmed; its description adds no operative rule.",
+    "notes": "Retain AC 12, Dexterity cap 2, weight 12 lb and value 1000 cp. References to common wearers do not restrict who may use it or grant proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Horn",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:horn::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:horn::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 300
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain verified weight and value; identify existing horn-proficiency playing checks and bard focus permission absent from the draft model.",
+    "notes": "Partial: proficiency applies to checks to play the horn only if the character already has that proficiency. The bard focus permission is not a grant to every caster and cannot be labeled arcane focus without changing its eligibility."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Javelin",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:javelin::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:javelin::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 50,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "thrown-melee-ability-resolution-deferred",
+        "ref": "property/T",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the confirmed melee weapon model; identify 30/120 thrown range, attack-linked ability resolution and deferred combat.",
+    "notes": "Partial: 1d6 piercing and thrown range 30/120 ft. Throwing uses the same melee ability modifier; no Finesse permission is stated. T is Thrown, not the Tool type. No global attack bonus is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Jeweler's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:jeweler's%20tools::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:jeweler's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 2500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-gem-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "identification",
+        "code": "proficiency-dependent-instant-gem-appraisal-not-modeled",
+        "ref": "additionalEntries/4"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep weight and value; identify contextual gem checks and at-a-glance appraisal, without interpreting descriptive expertise as a proficiency grant.",
+    "notes": "Partial: Arcana concerns gems or gem-encrusted objects; Investigation concerns jeweled clues. Trained use permits gem identification and valuation at a glance. The prose word expertise does not prescribe doubled proficiency. Activity DCs are 15 for appearance changes and 20 for gem history. Possession alone does not confer any of these proficiency benefits."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Lance",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:lance::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:lance::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1d12",
+        "damageType": "piercing",
+        "properties": [
+          "R",
+          "S"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "reach-opportunity-attack-resolution-deferred",
+        "ref": "property/R",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "close-target-disadvantage-and-unmounted-hands-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149,
+      "quote": "You have disadvantage when you use a lance to attack a target within 5 feet"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the confirmed lance model; identify Reach and both Special conditions without replacing them with unconditional disadvantage or Two-Handed.",
+    "notes": "Partial: 1d12 piercing. Targets within 5 ft impose disadvantage; two hands are required when unmounted. Reach adds 5 ft for this weapon's attacks and opportunity attacks. R means Reach, not ranged type; S means Special, not Shield. No permanent 2H property or unconditional attack penalty is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Leather Armor",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:leather%20armor::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:leather%20armor::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "lightArmor",
+        "ac": 11,
+        "weight": 10,
+        "value": 1000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 144
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The supported light-armor model is complete and confirmed; material descriptions add no separate operative rule.",
+    "notes": "Retain AC 11 with supported light-armor Dexterity handling, weight 10 lb and value 1000 cp. No Dexterity cap, Strength threshold or Stealth disadvantage is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Leatherworker's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:leatherworker's%20tools::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:leatherworker's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "proficiency-gated-leather-and-skill-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "identification",
+        "code": "proficiency-dependent-hide-and-treatment-identification-not-modeled",
+        "ref": "additionalEntries/4"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "Each type of artisan's tools requires a separate proficiency."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified inventory model; identify leather-context checks and hide/treatment identification missing from the draft.",
+    "notes": "Partial: Arcana assistance concerns leather magic items; Investigation concerns leather clues. Trained use identifies a hide's source and treatment techniques by inspection. Activity DCs are 10 for appearance changes and 20 for history. No expertise multiplier, armor proficiency or unrestricted skill bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Light Crossbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:light%20crossbow::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:light%20crossbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 5,
+        "value": 2500,
+        "weaponCategory": "simple",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-consumption-and-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-loading-and-two-handed-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the complete weapon model; identify exact range, bolt compatibility and Ammunition, Loading, Two-Handed and combat boundaries.",
+    "notes": "Partial: 1d8 piercing, normal/long range 80/320 ft. Uses kiwee:baseitem:phb:crossbow%20bolt:::::::: with one piece per attack and half retrieval after battle through one minute of searching. LD limits firing to one piece per action, bonus action or reaction; 2H applies when attacking. Melee use is improvised. The name Light does not confer property L, and type R does not confer Reach."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Light Hammer",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:light%20hammer::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:light%20hammer::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 200,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-and-thrown-resolution-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified weapon model; identify 20/60 thrown range, Light and Thrown execution and deferred combat settlement.",
+    "notes": "Partial: 1d4 bludgeoning and normal/long thrown range 20/60 ft. Throwing uses the melee ability modifier; no Finesse permission is given. Light does not grant an unconditional extra attack, and T is Thrown rather than Tool."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Longbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:longbow::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:longbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "value": 5000,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "H",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-consumption-and-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-heavy-and-two-handed-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve every confirmed weapon field; identify exact range, arrow compatibility and Ammunition, Heavy, Two-Handed and combat limits.",
+    "notes": "Partial: 1d8 piercing, normal/long range 150/600 ft. Uses kiwee:baseitem:phb:arrow:::::::: with one piece per attack and half retrieval after battle through a one-minute search. H disadvantages Small or Tiny attackers; 2H applies when attacking. Melee use is improvised. There is no LD property or one-shot-per-action restriction. R is the ranged type, not Reach."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Longsword",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:longsword::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:longsword::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "value": 1500,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "V"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-hand-dependent-damage-deferred",
+        "ref": "property/V",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 149
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the confirmed weapon model; identify deferred attack settlement and the two-handed melee condition on versatile damage.",
+    "notes": "Partial: base damage 1d8 slashing; 1d10 is reserved for a melee attack with two hands. No unconditional replacement die or global damage bonus is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Lute",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:lute::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:lute::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 3500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the inventory model; identify lute-proficiency playing checks and class-specific bard focus eligibility absent from the equipment model.",
+    "notes": "Partial: only playing checks use an existing lute proficiency. The bard focus permission is not an unrestricted arcane focus and does not grant instrument proficiency."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "PHB",
+      "engName": "Lyre",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:phb:lyre::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:phb:lyre::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 3000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "instrument-proficiency-gated-checks",
+        "ref": "entries"
+      },
+      {
+        "family": "spellcastingFocus",
+        "code": "bard-instrument-focus-not-represented",
+        "ref": "entries"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-baseitem-001",
+    "evidence": {
+      "page": 154,
+      "quote": "A bard can use a musical instrument as a spellcasting focus."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified weight and value; identify existing lyre-proficiency playing checks and bard-only focus use missing from the draft.",
+    "notes": "Partial: lyre proficiency must already be possessed to benefit playing checks. Bard focus use cannot be encoded with holy, arcane or druid tokens without altering eligibility; no new proficiency or spell grant is added."
+  }
+]
