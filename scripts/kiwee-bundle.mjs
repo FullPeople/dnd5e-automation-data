@@ -1,0 +1,17 @@
+import {build} from 'esbuild';
+import {execFileSync} from 'node:child_process';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+const root=resolve(new URL('..',import.meta.url).pathname),scratch=join(root,'.cache/g7/validator'),out=resolve(process.argv[2]||join(root,'generate-automation.mjs'));
+await mkdir(scratch,{recursive:true});
+execFileSync(process.execPath,[join(root,'scripts/browser-bundle.mjs'),scratch],{cwd:root,stdio:'pipe'});
+const validator=join(scratch,'identity.ts');
+const result=await build({entryPoints:[join(root,'src/kiwee/generator.ts')],bundle:true,write:false,metafile:true,format:'esm',platform:'node',target:'node22',legalComments:'inline',plugins:[{name:'precompiled-validation',setup(builder){builder.onResolve({filter:/validate\/index\.ts$/},args=>resolve(args.resolveDir,args.path)===join(root,'src/validate/index.ts')?{path:validator}:undefined);}}]});
+const imports=Object.values(result.metafile.outputs).flatMap(output=>output.imports).map(item=>item.path);
+if(imports.some(path=>!path.startsWith('node:')))throw Error('Kiwee script has a non-builtin runtime dependency');
+const ajvLicense=await readFile(join(root,'node_modules/ajv/LICENSE'),'utf8');
+const sourceLicense=await readFile(join(root,'LICENSE'),'utf8');
+const licenseComments=text=>text.split('\n').map(line=>'//'+(line.trimEnd()?' '+line.trimEnd():'')).join('\n');
+const notice='// Generated from FullPeople/dnd5e-automation-data. Node 22.12+; no packages/network at runtime.\n// Preferred source/build instructions: https://github.com/FullPeople/dnd5e-automation-data\n// Covered Web-derived code license (this does not relicense Kiwee):\n'+licenseComments(sourceLicense)+'\n// Embedded Ajv 8.17.1 validator compiler output/runtime helpers:\n'+licenseComments(ajvLicense)+'\n';
+await writeFile(out,notice+result.outputFiles[0].text);
+console.log(JSON.stringify({out,bytes:(await readFile(out)).length,imports}));
