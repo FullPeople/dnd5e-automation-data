@@ -1,13 +1,9 @@
-# Withdrawn — source maximum was not safely bound
+# Main source review — PHB-classFeature-family-001-revision-002
 
-2026-10-03: main reproduced STR/CON24 ->28 despite the source maximum24. The previous zero-error acceptance below is superseded: one conditional numerical execution error. Entire15-row batch withdrawn from the current index and re-reviewed as `PHB-classFeature-family-001-revision-002`; the earlier bytes and review are retained in Git history. Main runtime evidence `evidence/g6/primal-champion-runtime-before.log`, no player cards altered.
-
-# Main source review — PHB-classFeature-family-001
-
-Main read all 15 complete PHB Barbarian feature sources and overlays, independently checked the complete parent usage/damage table; receipt records ten selected numerical/conditional risk samples.
+Main re-read all15 complete English PHB Barbarian features and the parent progression, and compared the entire corrected batch. Ten exact risk samples recorded. Previous batch was withdrawn after actual bounded-ability runtime counterexample; the revision is a new acceptance decision.
 
 Rows: 15; verdicts: {"automated":0,"noMechanics":0,"unsupported":15}.
-Overlay SHA-256: `30f02430a9b375b3f7c8ebe340fce56aa05a0b660bcd822b2a8ace4726bd49f5`.
+Overlay SHA-256: `c19f0d8fb66e6197a51aae550d8fd0655106c34bf09f1ac115d714dcab729021`.
 Upstream input lock: `f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f`.
 English reference: v2.36.0 commit `3a09c05a3a3be94423cd2b3c33936034eeae02f2`.
 Main reviewer: model:Codex-main, 2026-10-03. Sample errors: 0; accepted.
@@ -19,12 +15,12 @@ Main reviewer: model:Codex-main, 2026-10-03. Sample errors: 0; accepted.
 | kiwee:classfeature:phb:fast%20movement:phb:barbarian:::5::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Fast Movement +10 at5 only without heavy armor. Removed unsafe unconditional Foundry bonus/effect; fully unarmored would wrongly exclude light/medium. |
 | kiwee:classfeature:phb:feral%20instinct:phb:barbarian:::7::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Feral Instinct initiative advantage, surprised first turn only if not incapacitated and Rage before everything; no blanket surprise immunity or second pool. |
 | kiwee:classfeature:phb:persistent%20rage:phb:barbarian:::15::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Persistent Rage removes inactivity early ending at15, preserves one-minute duration, unconscious/voluntary ending and base Rage restrictions. |
-| kiwee:classfeature:phb:primal%20champion:phb:barbarian:::20::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Primal Champion +4 STR/CON preserved once, separate maximum24 unsupported; no set24 or max-as-floor. |
+| kiwee:classfeature:phb:primal%20champion:phb:barbarian:::20::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Primal Champion +4 STR/CON and maximum24 must settle together. Actual Web runtime with existing24 yielded28 for the former bare add4; both increments now exist only in a deferred effect descriptor, no executable standalone ability addition or lowering min24. Corrected runtime retains24 and shows the unsupported boundary. |
 | kiwee:classfeature:phb:rage:phb:barbarian:::1::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Rage own-turn bonus, active/noheavy Strength advantage, Strength melee +2/3/4 at1/9/16, BPS resistance, casting/concentration prohibition. Table verifies finite2/3/4/5/6 at1/3/6/12/17 then unlimited20; no false finite pool or constant resistance. |
 | kiwee:classfeature:phb:reckless%20attack:phb:barbarian:::2::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Reckless Attack choose at first own-turn attack, Strength melee advantage only this turn; incoming allattack advantage until next turn. No Rage prerequisite, ranged benefit or permanent bonus. |
 | kiwee:classfeature:phb:relentless%20rage:phb:barbarian:::11::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Relentless Rage zeroHP raging/not outright death CON DC10 ->1HP, subsequent USES DC+5, reset short/long. No fabricated action cost or finite pool. |
 | kiwee:classfeature:phb:unarmored%20defense:phb:barbarian:::1::: | PHB p46; data/class/class-barbarian.json and complete PHB parent table | Unarmored Defense base10+Dex+Con permits shield; no finalAC overwrite losing shield/alternative calculation. Actual Foundry is suppress-only, not mechanical payload. |
 
-15 unsupported partial rows. Safe +4 ability and max critical-count candidates retained once; absent contextual combat operations remain visible. The finite-to-unlimited Rage transition is explicitly unsupported rather than capped or granted twice. No 2024 features or raw-prose runtime fallback.
+15 unsupported partial rows. The earlier batch is withdrawn and remains in Git history with a public failure notice. No player-card changes or source-body publication. Primal Champion increase/cap is wholly deferred; other safe counts/declared scales unchanged after full source re-review. No source assertion or test weakened.
 
 Rollback: revert this batch and its review-index receipt together, then regenerate the locked pipeline. Raw source bodies and intermediate proposals stay in ignored private cache.

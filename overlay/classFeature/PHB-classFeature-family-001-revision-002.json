@@ -31,7 +31,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "Beginning at 9th level, you can roll one additional weapon damage die"
@@ -85,7 +85,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "At 13th level, you can roll two additional weapon damage dice"
@@ -139,7 +139,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "At 17th level, you can roll three additional weapon damage dice"
@@ -187,7 +187,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "You have advantage on Dexterity saving throws against effects that you can see,"
@@ -224,7 +224,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "you can attack twice, instead of once,"
@@ -270,7 +270,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "your speed increases by 10 feet while you aren't wearing heavy armor."
@@ -317,7 +317,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "you have advantage on initiative rolls."
@@ -360,7 +360,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "you can use that score in place of the total."
@@ -403,7 +403,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "Beginning at 15th level, your rage is so fierce"
@@ -432,15 +432,15 @@
     "verdict": "unsupported",
     "unsupported": [
       {
-        "family": "abilityScoreMaximum",
-        "code": "strength-and-constitution-maximum24-separate-from-plus4",
+        "family": "abilityScoreIncreaseAndMaximum",
+        "code": "str-con-increase4-and-maximum24-jointly-bound-not-unguarded-add",
         "ref": "english.raw.entries/0",
         "deferred": true
       }
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "Your Strength and Constitution scores increase by 4."
@@ -449,22 +449,32 @@
       "structured",
       "foundry"
     ],
-    "overrideReason": "Preserve the real Foundry STR/CON ADD4 modifiers and consolidate the duplicate passive effect. Identify the separate maximum24 rule, which cannot be represented as a score-setting or minimum modifier.",
-    "notes": "2014 PHB Barbarian; gained at Barbarian class level 20 (not total character level). Parent UID: Primal Champion|Barbarian||20. At Barbarian level20, permanently increase Strength and Constitution by4 and raise each score's maximum to24. Retain both safe draft +4 modifiers exactly, with the original empty grants list; remove the identical Foundry passive effect descriptor to keep one operative representation. The protocol has no separate ability-score maximum field. Setting either score to24 or using max24 as a floor would not model the cap and would wrongly raise lower scores.",
+    "overrideReason": "Main runtime re-review found bare STR/CON ADD4 exceeds the source maximum24 for an existing24 score. Defer the complete source increase-and-maximum operation; retain its numeric effect descriptor without executable standalone additions or a min24 lowering existing higher scores.",
+    "notes": "2014 PHB Barbarian20: Strength and Constitution increase by4 and their maximum is24. These two statements are one bounded ability-score operation. Current IR has no exact raw-score/increase-with-maximum primitive preserving prior higher exceptional scores. Bare add4 would produce28 from24; a final min24 could lower a prior higher score. Therefore retain +4 only inside a deferred source effect, with both score maxima explicit unsupported; no executable ability modifier is granted. The original duplicate passive representation is consolidated. This is not setting both scores to24 or raising a minimum.",
     "mechanics": {
-      "modifiers": [
+      "grants": [],
+      "effects": [
         {
-          "target": "str",
-          "op": "add",
-          "value": 4
-        },
-        {
-          "target": "con",
-          "op": "add",
-          "value": 4
+          "name": "Primal Champion source ability increase and maximum require joint settlement",
+          "duration": {
+            "unit": "permanent"
+          },
+          "changes": [
+            {
+              "target": "str",
+              "op": "add",
+              "value": 4
+            },
+            {
+              "target": "con",
+              "op": "add",
+              "value": 4
+            }
+          ],
+          "statuses": [],
+          "deferred": true
         }
-      ],
-      "grants": []
+      ]
     }
   },
   {
@@ -499,7 +509,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "Your choice grants you features at 3rd level"
@@ -572,7 +582,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "On your turn, you can enter a rage as a bonus action."
@@ -658,7 +668,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "When you make your first attack on your turn,"
@@ -701,7 +711,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "When you finish a short or long rest, the DC resets to 10."
@@ -747,7 +757,7 @@
     ],
     "reviewer": "model:Codex-annotation",
     "reviewedAt": "2026-10-03",
-    "batch": "PHB-classFeature-family-001",
+    "batch": "PHB-classFeature-family-001-revision-002",
     "evidence": {
       "page": 46,
       "quote": "You can use a shield and still gain this benefit."

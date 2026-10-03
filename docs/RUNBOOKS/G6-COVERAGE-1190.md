@@ -1,3 +1,13 @@
+# 更正：Primal Champion 上限与加值共同处理
+
+2026-10-03，先前放行的PHB Barbarian批次存在一处条件/数值执行错误，整批15条已撤回并重新审阅：真实Web c5b3a29执行原裸+4时，已有STR/CON24 ->28，尽管同时提示max24未支持，仍执行了违规增量。此前“安全+4”判断撤销，旧批次报告已标Withdrawn，失败和Git历史保留。
+
+主重新阅读全部15条原文并记录10条抽样；新批`PHB-classFeature-family-001-revision-002`将+4仅保留在deferred effect，原文max24与加值一起明确unsupported，不执行裸加值或会降低既有高值的min24。真实Web反例修复后24/24保留、未支持提示可见；没有修改运行器、测试断言或玩家卡。
+
+更正生产冻结`42437319272f2f5660c67e21dfabcb9655adb689`，核心已审仍1190、needsAnnotation5206、stale0；Node22.12/24.19八产物逐字节一致。automation.json 26,644,459 bytes，SHA256 `31ce9c64111cc0263943b93fcf1cfa81120f4dc89b0dbdbf46aeafd04599de2e`。原始证据在忽略的`evidence/g6/primal-champion-runtime-before.log`、`primal-champion-runtime-after-correct-shape.log`、`accepted1190-corrected-node22.log`/`node24.log`、`accepted1190-corrected-node-replay.json`。首次辅助反例工具把proposal对象当数组，校正输入形状后重跑实际运行器通过；不把该辅助失败当产品或源规则通过。
+
+下方fc39b48与旧SHA仅是更正前的阶段回执，不能替代本更正。远端之前数据main a69b542/候选f4decb6保留回滚，修复候选需重新CI后普通合并；Web代码验证c5b3a29的18/18 CI37151509207已成功且18原始日志归档。G6/G7/G8仍未过。
+
 # G6 已审1190条阶段回执
 
 2026-10-03。实际资料18,789条、核心6,396条，主代理已按批逐条证据和每批十条（不足十则全部）独立抽检放行1,190条，31批。判定：automated 82、noMechanics 120、unsupported 988；其余5,206条仍needsAnnotation，G6未过。unsupported是已审明示边界/安全子集，不是完整战斗自动化；未通读的行不计覆盖。
