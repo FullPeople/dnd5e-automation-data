@@ -1,0 +1,762 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Brutal Critical (1 die)",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 9,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:brutal%20critical%20(1%20die):phb:barbarian:::9:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:brutal%20critical%20(1%20die):phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::9:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "meleeCriticalDamage",
+        "code": "melee-critical-extra-current-weapon-die-resolution",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tierReplacement",
+        "code": "one-shared-count1-at9-2-at13-3-at17-not-additive",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "Beginning at 9th level, you can roll one additional weapon damage die"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve criticalDice max1 from the actual melee-critical Foundry flag; remove its duplicate passive effect descriptor. Identify melee/weapon-die settlement and max-based replacement by the later two tiers.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 9 (not total character level). Parent UID: Brutal Critical (1 die)|Barbarian||9. At Barbarian level9 add one weapon damage die to the extra damage of a melee critical hit. It is not another attack, a fixed damage amount, a ranged-critical benefit or doubling the weapon's entire damage expression. Levels13/17 replace the same family count with two/three dice. Retain draft criticalDice max1, whose real Foundry origin is meleeCriticalDamageDice UPGRADE1; consolidate its identical passive effect into that modifier. The current protocol preserves the count but does not settle eligible melee critical hits or select the weapon die.",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "criticalDice",
+          "op": "max",
+          "value": 1
+        }
+      ],
+      "grants": []
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Brutal Critical (2 dice)",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 13,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:brutal%20critical%20(2%20dice):phb:barbarian:::13:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:brutal%20critical%20(2%20dice):phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::13:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "meleeCriticalDamage",
+        "code": "melee-critical-two-extra-weapon-dice-resolution",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tierReplacement",
+        "code": "tier13-count2-replaces-tier9-count1-tier17-count3",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "At 13th level, you can roll two additional weapon damage dice"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve criticalDice max2 from the actual melee-critical flag and remove its duplicate passive effect descriptor. Keep nonadditive family progression and weapon-die critical settlement explicit.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 13 (not total character level). Parent UID: Brutal Critical (2 dice)|Barbarian||13. At Barbarian level13 the Brutal Critical family supplies two additional weapon damage dice for melee critical extra damage, replacing its level9 count rather than adding two to it. Level17 replaces the count with three. Retain draft criticalDice max2 from the genuine meleeCriticalDamageDice UPGRADE2 flag; remove only its identical passive effect descriptor. Weapon-die selection and melee critical-hit settlement remain deferred; no new resource or additional attack is introduced.",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "criticalDice",
+          "op": "max",
+          "value": 2
+        }
+      ],
+      "grants": []
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Brutal Critical (3 dice)",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:brutal%20critical%20(3%20dice):phb:barbarian:::17:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:brutal%20critical%20(3%20dice):phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::17:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "meleeCriticalDamage",
+        "code": "melee-critical-three-extra-current-weapon-dice",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tierReplacement",
+        "code": "tier17-count3-replaces-prior-counts-not-six-dice",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "At 17th level, you can roll three additional weapon damage dice"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve criticalDice max3 from the actual melee-critical flag; remove its duplicate passive effect descriptor and identify melee/weapon-die settlement. The earlier tiers remain max upgrades of this single family.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 17 (not total character level). Parent UID: Brutal Critical (3 dice)|Barbarian||17. At Barbarian level17 the same Brutal Critical family supplies three additional weapon damage dice for melee critical extra damage. This supersedes the one/two-die tiers; gaining all three records does not produce six dice or three separate abilities. Retain draft criticalDice max3 from meleeCriticalDamageDice UPGRADE3 and consolidate its duplicate passive effect. Its qualifying melee critical and current-weapon die must still be resolved at attack time.",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "criticalDice",
+          "op": "max",
+          "value": 3
+        }
+      ],
+      "grants": []
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Danger Sense",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 2,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:danger%20sense:phb:barbarian:::2:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:danger%20sense:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::2:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "conditionalSaveAdvantage",
+        "code": "dex-save-visible-effect-not-blind-deaf-incapacitated",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "You have advantage on Dexterity saving throws against effects that you can see,"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Resolve the reviewed visible-effect Dexterity-save advantage and three status gates; the protocol has no advantage or effect-visibility/status predicate for this benefit.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 2 (not total character level). Parent UID: Danger Sense|Barbarian||2. From Barbarian level2, Dexterity saves against visible effects gain advantage. The character must not be blinded, deafened or incapacitated. Traps and spells are examples, not an exclusive effect list. Visibility of the effect and all three status exclusions apply per save. This gives neither Dexterity-save proficiency, a numeric saving bonus, immunity nor advantage on unseen hazards."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Extra Attack",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 5,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:extra%20attack:phb:barbarian:::5:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:extra%20attack:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::5:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackActionCount",
+        "code": "own-turn-attack-action-two-instead-of-one",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can attack twice, instead of once,"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the own-turn Attack-action count replacement as unsupported; do not fabricate extra actions or a numeric attack-roll modifier.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 5 (not total character level). Parent UID: Extra Attack|Barbarian||5. From Barbarian level5, the Attack action on the character's own turn permits two attacks instead of one. It does not add an action, double spell attacks or grant two attacks on an opportunity attack. This is an Attack-action attack-count replacement; it is not a +2 attack-roll modifier. Current protocol has no action-scoped attack-count field, and duplicate Attack-action grants would misstate the rule."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Fast Movement",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 5,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:fast%20movement:phb:barbarian:::5:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:fast%20movement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::5:"
+    ],
+    "foundryFlags": [
+      "ignoreSrdEffects"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "conditionalMovement",
+        "code": "level5-speed-plus10ft-only-no-heavy-armor",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "armorCategoryCondition",
+        "code": "heavy-armor-category-worn-gate-not-unarmored-only",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "your speed increases by 10 feet while you aren't wearing heavy armor."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "English requires no heavy armor; actual Foundry movement.walk ADD10 omits that gate. Remove the unconditional modifier and duplicate effect, retain safe draft fields, and defer the exact armor-category condition.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 5 (not total character level). Parent UID: Fast Movement|Barbarian||5. From Barbarian level5, speed increases10ft only while not wearing heavy armor. The locked Foundry sidecar adds10 to walking speed with no armor condition, and draft exports that as an unconditional modifier plus a duplicate permanent effect. Remove both unsafe unconditional representations while retaining the original empty grants list. The no-heavy-armor gate requires an armor-category predicate; substituting fully unarmored would wrongly exclude light/medium armor.",
+    "mechanics": {
+      "grants": []
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Feral Instinct",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:feral%20instinct:phb:barbarian:::7:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:feral%20instinct:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::7:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "initiativeAdvantage",
+        "code": "level7-initiative-rolls-advantage",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "surpriseActionException",
+        "code": "not-incapacitated-first-turn-rage-before-anything-else",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you have advantage on initiative rolls."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify initiative advantage and the surprised-first-turn Rage-first exception; retain the Rage dependency without a duplicate resource or blanket surprise immunity.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 7 (not total character level). Parent UID: Feral Instinct|Barbarian||7. From Barbarian level7, initiative rolls have advantage. If surprised at combat start and not incapacitated, the character may act normally on the first turn only by entering Rage before doing anything else that turn. This is a conditional first-turn exception, not permanent surprise immunity; normal Rage activation and resource rules still apply. Advantage, combat-start state and ordered Rage activation cannot be expressed as an initiative numeric bonus."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Indomitable Might",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 18,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:indomitable%20might:phb:barbarian:::18:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:indomitable%20might:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::18:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "optionalCheckTotalReplacement",
+        "code": "strength-check-total-below-own-score-may-use-score",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "formulaContext",
+        "code": "raw-strength-score-and-check-total-not-whitelisted-context",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can use that score in place of the total."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify optional Strength-check total replacement using the actual Strength score. Do not encode it as a score/skill bonus or derive the score from an ability modifier.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 18 (not total character level). Parent UID: Indomitable Might|Barbarian||18. From Barbarian level18, when a Strength check's total is below the character's Strength score, the character may replace the total with that score. The comparison uses the final check total and ability score, not the d20 result or ability modifier. It covers Strength checks only, not saves or attacks. No score increase or automatic always-on roll replacement is granted; the protocol lacks this optional check-total operation and a raw ability-score formula variable."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Persistent Rage",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:persistent%20rage:phb:barbarian:::15:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:persistent%20rage:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::15:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "rageTerminationOverride",
+        "code": "level15-removes-inactivity-ending-only-unconscious-or-voluntary",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "sharedRageLifecycle",
+        "code": "same-root-rage-minute-duration-and-use-family-no-new-pool",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "Beginning at 15th level, your rage is so fierce"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the level15 override of Rage early-ending conditions while retaining its minute duration and root usage family; the protocol cannot patch that active lifecycle by feature stage.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 15 (not total character level). Parent UID: Persistent Rage|Barbarian||15. From Barbarian level15, Rage ends early only on unconsciousness or voluntary ending. This replaces the base Rage turn-end inactivity termination; it does not remove the normal one-minute duration. The original own-turn bonus-action dismissal remains the known voluntary ending method. Heavy-armor benefit restrictions, casting/concentration prohibition and the existing Rage-use family remain; this feature neither grants permanent resistance nor supplies a second pool."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Primal Champion",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 20,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:primal%20champion:phb:barbarian:::20:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:primal%20champion:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::20:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "abilityScoreMaximum",
+        "code": "strength-and-constitution-maximum24-separate-from-plus4",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "Your Strength and Constitution scores increase by 4."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the real Foundry STR/CON ADD4 modifiers and consolidate the duplicate passive effect. Identify the separate maximum24 rule, which cannot be represented as a score-setting or minimum modifier.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 20 (not total character level). Parent UID: Primal Champion|Barbarian||20. At Barbarian level20, permanently increase Strength and Constitution by4 and raise each score's maximum to24. Retain both safe draft +4 modifiers exactly, with the original empty grants list; remove the identical Foundry passive effect descriptor to keep one operative representation. The protocol has no separate ability-score maximum field. Setting either score to24 or using max24 as a floor would not model the cap and would wrongly raise lower scores.",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 4
+        },
+        {
+          "target": "con",
+          "op": "add",
+          "value": 4
+        }
+      ],
+      "grants": []
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Primal Path",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 3,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:primal%20path:phb:barbarian:::3:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:primal%20path:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::3:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "subclassSelection",
+        "code": "one-primal-path-at-barbarian3",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "subclassProgression",
+        "code": "same-choice-features-at3-6-10-14-linked-uid-chains",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "Your choice grants you features at 3rd level"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify one persistent path choice and its 3/6/10/14 feature progression using actual parent/path UIDs. Do not classify this selection introduction as a placeholder or grant every available path.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 3 (not total character level). Parent UID: Primal Path|Barbarian||3. At Barbarian level3 choose one Primal Path; the same choice supplies path features at levels3/6/10/14. The English parent class UID list marks those four subclass-gain stages; PHB path UID chains are Berserker and Totem Warrior, each tied to Barbarian/PHB and the matching stages. This is a persistent subclass choice with linked feature progression, not four independent path choices or grants of all paths. The generic feature grant cannot express a subclass selection and its coordinated progression, so no unscoped collection of features is added."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Rage",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:rage:phb:barbarian:::1:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:rage:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::1:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "rageActivation",
+        "code": "own-turn-bonus-enter-or-voluntary-end-self",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionalRageBenefits",
+        "code": "active-no-heavy-strength-advantage-melee-strength-damage-bps-resistance",
+        "ref": "english.raw.entries/2",
+        "deferred": true
+      },
+      {
+        "family": "rageCastingRestriction",
+        "code": "active-rage-no-spellcasting-or-spell-concentration",
+        "ref": "english.raw.entries/3",
+        "deferred": true
+      },
+      {
+        "family": "rageLifecycle",
+        "code": "one-minute-unconscious-inactivity-or-own-turn-bonus-dismissal",
+        "ref": "english.raw.entries/4",
+        "deferred": true
+      },
+      {
+        "family": "sharedResourceProgression",
+        "code": "one-long-rest-family2-3-4-5-6-uses-at1-3-6-12-17",
+        "ref": "english.raw.entries/5",
+        "deferred": true
+      },
+      {
+        "family": "resourceStageOverride",
+        "code": "level20-unlimited-no-infinity-or-finite-pool-disable-field",
+        "ref": ".cache/english-upstream/data/class/class-barbarian.json#/class/0/classTableGroups/0/rows/19/0",
+        "deferred": true
+      },
+      {
+        "family": "rageDamageScaling",
+        "code": "barbarian-level1-9-16-plus2-3-4-active-strength-melee-only",
+        "ref": ".cache/english-upstream/data/class/class-barbarian.json#/class/0/classTableGroups/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "On your turn, you can enter a rage as a bonus action."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Model only deferred bonus-action activation/dismissal and the real +2/+3/+4 damage scale. Explicitly defer conditional benefits and the finite-to-Unlimited shared resource transition; never grant permanent resistances or duplicate tier pools.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 1 (not total character level). Parent UID: Rage|Barbarian||1. From Barbarian level1, own-turn bonus action enters Rage. While active and not in heavy armor: Strength checks/saves gain advantage, Strength-based melee weapon hits add Rage Damage, and bludgeoning/piercing/slashing are resisted. Raging prevents spellcasting and spell concentration. Duration one minute; unconsciousness, qualifying turn-end inactivity, or own-turn bonus-action dismissal ends it early. Inactivity means neither a hostile-creature attack since the prior turn nor damage taken. One long-rest usage family has2 uses at1,3 at3,4 at6,5 at12,6 at17, then Unlimited at20 per the parent table. Current numeric resources have no infinity or stage-disable field; omit an executable capped pool rather than impose6 at20 or create tier pools. Record safe deferred enter/end action descriptors and the parent table's numeric damage scale, without global resistances or damage modifiers.",
+    "mechanics": {
+      "actions": [
+        {
+          "type": "utility",
+          "key": "annotation:barbarian:rage:enter",
+          "activation": "bonus",
+          "target": "self",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "annotation:barbarian:rage:end",
+          "activation": "bonus",
+          "target": "self",
+          "deferred": true
+        }
+      ],
+      "scales": [
+        {
+          "key": "barbarian_rage_damage",
+          "values": [
+            {
+              "level": 1,
+              "value": 2
+            },
+            {
+              "level": 9,
+              "value": 3
+            },
+            {
+              "level": 16,
+              "value": 4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Reckless Attack",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 2,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:reckless%20attack:phb:barbarian:::2:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:reckless%20attack:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::2:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "turnAttackChoice",
+        "code": "first-own-turn-attack-optional-reckless-decision",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionalAttackAdvantage",
+        "code": "strength-melee-weapon-rolls-only-during-own-turn",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "incomingAttackAdvantage",
+        "code": "all-attack-rolls-against-user-until-next-turn",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "When you make your first attack on your turn,"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the first-attack choice, Strength-melee outgoing advantage and broader incoming advantage with distinct lifetimes; do not create unconditional attack modifiers.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 2 (not total character level). Parent UID: Reckless Attack|Barbarian||2. From Barbarian level2, decide whether to be reckless when making the first attack on the character's turn. If chosen, Strength-based melee weapon attack rolls during that turn gain advantage; attack rolls against the character gain advantage until its next turn. It does not benefit ranged attacks, Dexterity melee attacks or off-turn attacks, and the incoming advantage is not limited to melee. This is an optional per-turn tradeoff with different outgoing/incoming lifetimes, not a permanent attack bonus or a Rage prerequisite."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Relentless Rage",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 11,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:relentless%20rage:phb:barbarian:::11:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:relentless%20rage:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::11:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "dropToZeroInterception",
+        "code": "raging-zero-hp-not-outright-death-con-save-stay1hp",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "escalatingSaveDifficulty",
+        "code": "dc10-first-plus5-per-later-use-short-or-long-rest-reset",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "When you finish a short or long rest, the DC resets to 10."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify Rage-qualified zero-HP interception, optional Constitution save and per-use DC escalation/reset. Omit a fixed-DC action or fabricated bounded use pool.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 11 (not total character level). Parent UID: Relentless Rage|Barbarian||11. From Barbarian level11, dropping to0HP while raging without outright death permits a Constitution save, initially DC10; success leaves the character at1HP instead of0. Each subsequent use raises DC by5, and either a short or long rest resets DC10. The increase is per use, not stated only on success. No action/reaction cost or finite daily count is supplied. The rule needs an active-Rage/HP/death trigger, replacement outcome and an escalating per-rest DC counter; a fixed-DC action or invented finite resource would be inaccurate."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Unarmored Defense",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:unarmored%20defense:phb:barbarian:::1:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:unarmored%20defense:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::1:"
+    ],
+    "foundryFlags": [
+      "ignoreSrdEffects"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "unarmoredArmorCalculation",
+        "code": "no-armor-base10-plus-dex-plus-con-shield-allowed",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "armorCalculationComposition",
+        "code": "separate-base-ac-shield-and-alternative-calculation-handling",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-001",
+    "evidence": {
+      "page": 46,
+      "quote": "You can use a shield and still gain this benefit."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Identify the exact no-armor AC calculation and shield allowance. Actual Foundry only suppresses SRD defaults; do not fabricate a final-AC overwrite or unsupported shield composition.",
+    "notes": "2014 PHB Barbarian; gained at Barbarian class level 1 (not total character level). Parent UID: Unarmored Defense|Barbarian||1. From Barbarian level1 while wearing no armor, the AC calculation is10 plus Dexterity modifier plus Constitution modifier. A shield remains allowed and its normal AC contribution must still be handled. The genuine Foundry row only marks ignoreSrdEffects and supplies no replacement AC payload; draft has no AC mechanic. Do not invent an unconditional AC bonus, prohibit shields, or overwrite final AC with a base formula that loses shield/alternative-calculation handling. The current protocol has an unarmored predicate and numeric formulas, but no separate base-AC calculation with defined shield/alternative-AC composition."
+  }
+]

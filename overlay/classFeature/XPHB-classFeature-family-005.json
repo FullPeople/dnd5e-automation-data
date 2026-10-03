@@ -1,0 +1,957 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Action Surge",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:action%20surge:xphb:fighter:::17:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:action%20surge:xphb:%E6%88%98%E5%A3%AB:::17:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "resourceOwnership",
+        "code": "level17-upgrades-base-action-surge-no-independent-pool",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "own-turn-extra-action-excludes-magic",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "turnLimit",
+        "code": "level17-only-one-surge-use-per-turn",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 91,
+      "quote": "only once on a turn."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep the level-17 identity and ignored Foundry flags; add no independent resource or action. Record the two-use tier as an upgrade of the base-owned pool and defer extra-action/turn-limit settlement.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 17; use Fighter class levels, not total character level. At Fighter level 17, the same Action Surge pool allows two uses between Short or Long Rests, with at most one use on a turn. Each use supplies one extra action on the user's own turn, excluding Magic. It upgrades the level-2 feature rather than adding another two-use pool. The only resource owner is kiwee:classfeature:xphb:action%20surge:xphb:fighter:::2:::; its Fighter-level formula already supplies the full capacity. The ignored Foundry tier has no activity to preserve.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities",
+      "isIgnored"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Action Surge",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 2,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:action%20surge:xphb:fighter:::2:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:action%20surge:xphb:%E6%88%98%E5%A3%AB:::2:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "actionEconomy",
+        "code": "own-turn-one-extra-action-excludes-magic",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "turnLimit",
+        "code": "fighter17-two-capacity-but-once-per-turn",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 91,
+      "quote": "only once on a turn."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Add one base-owned Fighter-level resource with complete Short/Long Rest recovery and one-use consumption on the genuine deferred activity. The level-17 entry creates no resource; extra-action and per-turn settlement remain deferred.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 2; use Fighter class levels, not total character level. Starting at Fighter level 2, one use gives one additional action on the user's own turn, except Magic. A Short or Long Rest restores all uses. The single pool has one use at Fighter 2-16 and two at Fighter 17-20; the level-17 tier adds capacity, not another pool, and permits only one use on a turn. The capacity formula uses Fighter levels and yields zero before level 2; no total-character-level or unresolved parent-scale variable is used. No attack, spell or equipment bonus is inherent.",
+    "mechanics": {
+      "resources": [
+        {
+          "key": "fighter:action-surge",
+          "max": {
+            "formula": "min(1, floor(@classes.fighter.levels / 2)) + min(1, floor(@classes.fighter.levels / 17))"
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "special",
+          "target": "self",
+          "deferred": true,
+          "consumes": {
+            "resource": "fighter:action-surge",
+            "amount": 1
+          }
+        }
+      ]
+    },
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Epic Boon",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:epic%20boon:xphb:fighter:::19:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:epic%20boon:xphb:%E6%88%98%E5%A3%AB:::19:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "featChoice",
+        "code": "one-epic-boon-or-any-other-qualifying-feat",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "featEligibility",
+        "code": "arbitrary-feat-prerequisites-and-source-set-not-expressible",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "recommendation",
+        "code": "combat-prowess-reference-not-fixed-grant",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Replace the ignored-Foundry diagnostic with the actual one-feat choice and qualification boundary. Preserve flags and identity; do not invent a fixed recommended boon or an Epic-Boon-only choice set.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 19; use Fighter class levels, not total character level. At Fighter level 19 choose one Epic Boon feat or another qualifying feat. Boon of Combat Prowess is a recommendation, never a mandatory fixed grant or a restriction to Epic Boons. The referenced XPHB feat is independently owned at page 210, requires level 19, offers a capped ability increase and once-between-starts-of-turn miss-to-hit option. Those child benefits are not copied here. The current grant schema cannot safely encode the unrestricted feat choice together with arbitrary per-feat qualification and source availability; no narrowed Epic-Boon-only or unconditional recommended-feat grant is emitted.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities",
+      "isIgnored"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Extra Attack",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 5,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:extra%20attack:xphb:fighter:::5:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:extra%20attack:xphb:%E6%88%98%E5%A3%AB:::5:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackCount",
+        "code": "own-turn-attack-action-two-instead-of-one",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tierReplacement",
+        "code": "fighter-extra-attack-counts-replace-not-add",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You can attack twice instead of once"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the actual own-turn Attack-action count and replacing Fighter tiers; emit no guessed attack modifier or unconditional extra action.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 5; use Fighter class levels, not total character level. At Fighter level 5, the Attack action on the user's own turn allows two attacks instead of one. This changes that action's attack count, not an attack-roll bonus, damage bonus, off-turn attack or free additional action. Fighter's level-11 and level-20 features replace the count with three and four; their tiers are not additive. The current modifier targets and action schema lack a typed per-Attack-action count with the own-turn restriction."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Fighter Subclass",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 3,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:fighter%20subclass:xphb:fighter:::3:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:fighter%20subclass:xphb:%E6%88%98%E5%A3%AB:::3:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "subclassChoice",
+        "code": "fighter-level3-select-one-fighter-subclass",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "classProgression",
+        "code": "only-selected-subclass-children-at-or-below-fighter-level",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You gain a Fighter subclass of your choice."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Record the genuine subclass choice and selected-child Fighter-level progression. Keep the source/parent identity; add no grant of all subclasses or misclassified feature references.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 3; use Fighter class levels, not total character level. At Fighter level 3 select one Fighter subclass. For subsequent progression, gain only that selected subclass's features whose required Fighter levels are at or below the actual Fighter level. This three-sentence operative selection/progression rule is not one of the separately accepted single-sentence Subclass Feature placeholders. The current grant enum and reference-kind checks cannot express a subclass choice or conditionally grant every eligible selected-child feature; granting all subclass children would be unsafe. Parent class/source and child editions must remain compatible."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Fighting Style",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:fighting%20style:xphb:fighter:::1:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:fighting%20style:xphb:%E6%88%98%E5%A3%AB:::1:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "featReplacement",
+        "code": "fighter-level-gain-replace-old-style-with-one-different-style",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "choiceScope",
+        "code": "source-unrestricted-fs-filter-beyond-verified-core-subset",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 91,
+      "quote": "Whenever you gain a Fighter level"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Add the supported initial one-choice grant with genuine 2024 XPHB feat keys. Do not fix Defense or copy child equipment effects; defer later replacement and non-core FS source/eligibility expansion.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 1; use Fighter class levels, not total character level. At Fighter level 1 select one Fighting Style feat; Defense is only recommended. Preserve a one-choice grant over the ten verified XPHB Fighting Style feats, each requiring the Fighting Style feature; their own conditional/equipment/target effects stay with the selected feat. Defense's page-209 armor-dependent +1 AC is not applied here. At each later Fighter-level gain the chosen feat may be replaced with a different Fighting Style, maintaining one choice from this source rather than another grant each level. The finite core list is a supported subset, not a claim that the English source-unrestricted FS filter excludes other books; non-core source availability/eligibility and atomic old-feat removal/new-feat selection remain deferred.",
+    "mechanics": {
+      "grants": [
+        {
+          "type": "feat",
+          "key": "fighter:fighting-style-choice",
+          "choose": {
+            "count": 1,
+            "from": [
+              "kiwee:feat:xphb:archery::::::::",
+              "kiwee:feat:xphb:blind%20fighting::::::::",
+              "kiwee:feat:xphb:defense::::::::",
+              "kiwee:feat:xphb:dueling::::::::",
+              "kiwee:feat:xphb:great%20weapon%20fighting::::::::",
+              "kiwee:feat:xphb:interception::::::::",
+              "kiwee:feat:xphb:protection::::::::",
+              "kiwee:feat:xphb:thrown%20weapon%20fighting::::::::",
+              "kiwee:feat:xphb:two-weapon%20fighting::::::::",
+              "kiwee:feat:xphb:unarmed%20fighting::::::::"
+            ]
+          },
+          "atLevel": 1
+        }
+      ]
+    }
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Indomitable",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 13,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:indomitable:xphb:fighter:::13:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:indomitable:xphb:%E6%88%98%E5%A3%AB:::13:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "resourceOwnership",
+        "code": "level13-upgrades-base-indomitable-no-independent-pool",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "saveReroll",
+        "code": "failed-save-only-fighter-level-bonus-must-use-new-result",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You must use the new roll"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep the distinct level-13 tier identity and flags; represent its two-use increase through the single base resource rather than a second pool, and explicitly defer triggered reroll settlement.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 13; use Fighter class levels, not total character level. At Fighter level 13, the same Indomitable pool grows to two uses per Long Rest; at Fighter 17 it grows to three. Only a failed saving throw can trigger an optional reroll with a bonus equal to Fighter level, and the new result must be used. The only resource owner is kiwee:classfeature:xphb:indomitable:xphb:fighter:::9:::; this tier creates no additional independent pool, global save bonus or reroll action. The actual Foundry record is ignored and supplies no operative candidate.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities",
+      "isIgnored"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Indomitable",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:indomitable:xphb:fighter:::17:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:indomitable:xphb:%E6%88%98%E5%A3%AB:::17:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "resourceOwnership",
+        "code": "level17-upgrades-base-indomitable-no-independent-pool",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "saveReroll",
+        "code": "failed-save-only-fighter-level-bonus-must-use-new-result",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You must use the new roll"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep the level-17 identity and ignored flags; the base-owned capacity reaches three and this record creates no independent resource. Defer the failed-save reroll and mandatory new-result settlement.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 17; use Fighter class levels, not total character level. At Fighter level 17, the same Indomitable pool grows to three uses per Long Rest, replacing its one-use level-9 and two-use level-13 capacities. A failed saving throw permits an optional reroll plus Fighter level; the new result is mandatory once used. The only resource owner is kiwee:classfeature:xphb:indomitable:xphb:fighter:::9:::; no three-use independent tier pool or permanent save bonus is emitted. The actual Foundry record is ignored with no activity to retain.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities",
+      "isIgnored"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Indomitable",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 9,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:indomitable:xphb:fighter:::9:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:indomitable:xphb:%E6%88%98%E5%A3%AB:::9:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "saveReroll",
+        "code": "failed-save-optional-reroll-plus-fighter-level-mandatory-new-result",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "failed-save-trigger-not-unconditional-action",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You must use the new roll"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Replace the unresolved Foundry scale and empty recovery with one base-owned Fighter-level pool and complete Long Rest recovery. Keep the real roll formula as a deferred failed-save activity, correcting its activation and one-use consumption.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 9; use Fighter class levels, not total character level. Starting at Fighter level 9, after a failed saving throw the user may spend one Indomitable use to reroll with a bonus equal to actual Fighter level and must accept the new roll. Long Rest restores all uses. One base-owned pool has one/two/three uses at Fighter 9/13/17, respectively; the 13/17 records create no separate pools. Capacity is zero below Fighter 9 and never uses total character level. The genuine Foundry roll formula is only the conditional reroll bonus, not a permanent save modifier or separate action requirement.",
+    "mechanics": {
+      "resources": [
+        {
+          "key": "fighter:indomitable",
+          "max": {
+            "formula": "min(1, floor(@classes.fighter.levels / 9)) + min(1, floor(@classes.fighter.levels / 13)) + min(1, floor(@classes.fighter.levels / 17))"
+          },
+          "recovery": [
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "special",
+          "target": "self",
+          "formula": "@classes.fighter.levels",
+          "deferred": true,
+          "consumes": {
+            "resource": "fighter:indomitable",
+            "amount": 1
+          }
+        }
+      ]
+    },
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Second Wind",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:second%20wind:xphb:fighter:::1:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:second%20wind:xphb:%E6%88%98%E5%A3%AB:::1:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "healing",
+        "code": "bonus-action-self-1d10-plus-fighter-level",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "crossFeatureConsumption",
+        "code": "tactical-mind-shares-pool-with-failed-check-refund",
+        "ref": "packet/records/12/english/raw/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 91,
+      "quote": "You can use this feature twice."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Add the single verified Fighter-level Second Wind pool with Short Rest one/Long Rest all recovery and deferred heal consumption. Keep the genuine self-heal formula; no pool is duplicated in Tactical Mind or Tactical Shift.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 1; use Fighter class levels, not total character level. Starting at Fighter level 1, a Bonus Action spends one Second Wind use to heal the user for 1d10 plus Fighter level. Short Rest returns exactly one expended use, while Long Rest returns all. The complete Fighter table sets capacity to two at levels 1-3, three at 4-9 and four at 10-20. The one base-owned pool yields zero with no Fighter levels. Its maximum uses an explicit Fighter-level formula, not total character level or unresolved Foundry scale. Tactical Mind can spend this same pool instead of healing, with no expenditure if its modified check still fails; Tactical Shift adds optional movement only to Bonus Action activation. Those cross-feature transactions remain deferred, and neither creates a second pool.",
+    "mechanics": {
+      "resources": [
+        {
+          "key": "fighter:second-wind",
+          "max": {
+            "formula": "2 * min(1, @classes.fighter.levels) + min(1, floor(@classes.fighter.levels / 4)) + min(1, floor(@classes.fighter.levels / 10))"
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": 1
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "heal",
+          "key": "foundry:activity:0",
+          "activation": "bonus",
+          "target": "self",
+          "formula": "1d10 + (@classes.fighter.levels)",
+          "deferred": true,
+          "consumes": {
+            "resource": "fighter:second-wind",
+            "amount": 1
+          }
+        }
+      ]
+    },
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Studied Attacks",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 13,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:studied%20attacks:xphb:fighter:::13:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:studied%20attacks:xphb:%E6%88%98%E5%A3%AB:::13:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackHistory",
+        "code": "miss-creature-next-attack-same-creature-advantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "one-qualifying-roll-before-user-next-turn-end",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "on your next attack roll against that creature"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Replace the empty draft with specific same-creature miss-history and next-roll expiry boundaries; add no unconditional attack modifier or fabricated resource.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 13; use Fighter class levels, not total character level. At Fighter level 13, missing an attack roll against a creature gives advantage only on the next attack roll against that same creature before the end of the user's next turn. No weapon requirement, expenditure or standalone action is stated. It requires per-target miss history, consumes the next qualifying attack and has an exact next-turn expiry; no global advantage, attack bonus or advantage against every creature is valid."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Tactical Master",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 9,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:tactical%20master:xphb:fighter:::9:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:tactical%20master:xphb:%E6%88%98%E5%A3%AB:::9:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "weaponMastery",
+        "code": "already-eligible-weapon-optional-exclusive-per-attack-substitution",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "forcedMovement",
+        "code": "push-hit-large-or-smaller-up-to-ten-feet-straight-away",
+        "ref": "propertyDefinitions/0/raw/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "attackRoll",
+        "code": "sap-hit-next-target-attack-before-user-next-turn-start",
+        "ref": "propertyDefinitions/1/raw/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "movementPenalty",
+        "code": "slow-hit-and-damage-ten-feet-until-user-next-turn-start-nonstack",
+        "ref": "propertyDefinitions/2/raw/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "for that attack."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Remove the empty permanent Foundry effect and empty candidate lists. Record the three real mastery references with already-eligible weapon, exclusive per-attack choice, target, expiry and nonstacking limits.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 9; use Fighter class levels, not total character level. At Fighter level 9, when attacking with a weapon whose mastery the user is already entitled to use, optionally replace that mastery for this attack with one of Push, Sap or Slow. It grants neither permanent mastery of every weapon nor weapon proficiency. Supplied XPHB page-214 definitions were fully read: Push needs a weapon hit on a Large-or-smaller creature and optionally pushes up to ten feet straight away; Sap on hit penalizes only that creature's next attack before the user's next-turn start; Slow requires hit and damage, optionally reduces target Speed by ten until the user's next-turn start, and multiple Slow hits cannot exceed a ten-foot reduction. Choices are exclusive and per attack.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Tactical Mind",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 2,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:tactical%20mind:xphb:fighter:::2:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:tactical%20mind:xphb:%E6%88%98%E5%A3%AB:::2:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "checkModification",
+        "code": "failed-ability-check-optional-d10-instead-of-healing",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "crossFeatureConsumption",
+        "code": "same-second-wind-pool-spend-only-if-improved-check-succeeds",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionalConsumption",
+        "code": "still-failed-check-no-expenditure-atomic-settlement-unexpressed",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 91,
+      "quote": "If the check still fails"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep the real deferred d10 activity with self scope; identify the actual Second Wind UID/owner and success-dependent spend. Add no duplicate pool or unsafe unconditional local/cross-record consumes field.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 2; use Fighter class levels, not total character level. At Fighter level 2, after failing an ability check, the user may use Second Wind for a 1d10 bonus to that check instead of healing. If the improved check still fails, no Second Wind use is spent. The actual cross-feature owner is kiwee:classfeature:xphb:second%20wind:xphb:fighter:::1:::; the genuine Foundry UID resolves to that Fighter-1 XPHB feature. The current local-resource consumption schema cannot atomically reference another record's pool and condition expenditure on the final check result. Keep the real deferred d10 activity but no independent resource or unconditional consumption. This is neither a new ability check nor a global skill bonus, and it does not trigger Tactical Shift's Bonus Action requirement.",
+    "mechanics": {
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "none",
+          "target": "self",
+          "formula": "1d10",
+          "deferred": true
+        }
+      ]
+    },
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Tactical Shift",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 5,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:tactical%20shift:xphb:fighter:::5:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:tactical%20shift:xphb:%E6%88%98%E5%A3%AB:::5:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "activationTrigger",
+        "code": "only-second-wind-bonus-action-activation",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "triggeredMovement",
+        "code": "optional-half-current-speed-self-no-opportunity-attacks",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "you can move up to half your"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Record the actual Bonus Action Second Wind trigger and bounded self movement; add no duplicate resource, global Speed modifier or permanent Opportunity Attack immunity.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 5; use Fighter class levels, not total character level. At Fighter level 5, whenever the user activates Second Wind with a Bonus Action, optional self movement up to half current Speed provokes no Opportunity Attacks. This modifies the same activation, not all turns, all movement or any use of Second Wind. Tactical Mind's failed-check use is not Bonus Action activation and does not automatically qualify. Reference the existing Second Wind owner kiwee:classfeature:xphb:second%20wind:xphb:fighter:::1:::; there is no separate use pool, extra expenditure, permanent Speed increase or ongoing immunity to Opportunity Attacks."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Three Extra Attacks",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 20,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:three%20extra%20attacks:xphb:fighter:::20:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:three%20extra%20attacks:xphb:%E6%88%98%E5%A3%AB:::20:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackCount",
+        "code": "own-turn-attack-action-four-instead-of-one",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tierReplacement",
+        "code": "replaces-fighter-five-and-eleven-counts-not-additive",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You can attack four times instead of once"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify four attacks as the replacing Fighter-20 own-turn Attack count; emit no additive modifier, duplicate extra-attack grant or unbounded action.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 20; use Fighter class levels, not total character level. At Fighter level 20, the Attack action on the user's own turn allows four attacks instead of one. This is the final replacement of Fighter's two-attacks level-5 and three-attacks level-11 counts, never four plus the earlier grants. It gives no off-turn attacks, attack-roll modifier, weapon restriction or independent additional action. A typed own-turn per-Attack-action attack count is absent from the current schema."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Two Extra Attacks",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 11,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:two%20extra%20attacks:xphb:fighter:::11:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:two%20extra%20attacks:xphb:%E6%88%98%E5%A3%AB:::11:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackCount",
+        "code": "own-turn-attack-action-three-instead-of-one",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tierReplacement",
+        "code": "replaces-fighter-five-count-and-later-replaced-by-twenty",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 92,
+      "quote": "You can attack three times instead of once"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact three-attack replacement and own-turn limit; add no additive attack modifier or duplicate tier mechanism.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 11; use Fighter class levels, not total character level. At Fighter level 11, the Attack action on the user's own turn allows three attacks instead of one, replacing the level-5 two-attacks count. Fighter level 20 later replaces it with four. It is not three extra attacks, a sum of tier counts, an off-turn benefit or an attack-roll/damage bonus. The current schema cannot express the action-specific count and own-turn predicate safely."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Weapon Mastery",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:weapon%20mastery:xphb:fighter:::1:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:weapon%20mastery:xphb:%E6%88%98%E5%A3%AB:::1:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "weaponMasteryChoice",
+        "code": "three-simple-or-martial-weapon-kinds-not-proficiency",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "choiceReplacement",
+        "code": "long-rest-drills-replace-exactly-one-weapon-kind",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "classLevelQuota",
+        "code": "fighter-one-four-ten-sixteen-total-three-four-five-six",
+        "ref": "data/class/class-fighter.json#/class/1/classTableGroups/0/rows",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "selected-kind-eligibility-and-property-execution",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-family-005",
+    "evidence": {
+      "page": 91,
+      "quote": "change one of those weapon choices."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact Fighter table quotas, one-choice Long Rest replacement and mastery eligibility. Add no false weapon-proficiency grant, property-as-feature reference or invented usage pool.",
+    "notes": "Partial: Fighter (XPHB), feature threshold Fighter 1; use Fighter class levels, not total character level. At Fighter level 1 choose three kinds of Simple or Martial weapons whose mastery properties the user can use; no new weapon proficiency or owned weapon item is granted. After each Long Rest weapon drills may replace exactly one selected kind. The complete Fighter table gives selection quotas three/four/five/six at Fighter 1/4/10/16, respectively; all are total quotas, not additive fresh sets. Only mastery on selected weapon kinds is eligible, and a property's actual hit/target/equipment/timing rules still govern. The current grant enum has no weapon-mastery selection type; encoding proficiency, granting property identities as features, or granting all weapons would be unsafe. No limited-use resource is specified."
+  }
+]

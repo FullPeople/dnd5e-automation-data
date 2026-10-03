@@ -1,0 +1,615 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Action Surge (two uses)",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:action%20surge%20(two%20uses):phb:fighter:::17:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:action%20surge%20(two%20uses):phb:%E6%88%98%E5%A3%AB:::17:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "resourceOwnership",
+        "code": "fighter17-two-uses-replace-base-capacity-no-independent-pool",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "own-turn-one-additional-action-settlement",
+        "ref": "data/class/class-fighter.json#/classFeature/2/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "turnLimit",
+        "code": "fighter17-only-one-action-surge-use-on-same-turn",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "only once on the same turn."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the level-17 PHB identity. The base Action Surge resource already reaches two uses; emit no tier pool or action, and record the inherited own-turn extra action and once-per-turn limit as deferred.",
+    "notes": "2014 PHB Fighter, threshold Fighter 17. Two uses between Short or Long Rests replace the level-2 capacity; only one use on the same turn. Owner kiwee:classfeature:phb:action%20surge:phb:fighter:::2::: supplies the complete Fighter-level capacity and restores all uses on either rest. This tier adds no resource or action. The inherited effect grants the user one additional action on their own turn; this PHB body imposes no Magic-action exclusion. Cross-record tier ownership, own-turn action settlement and the once-per-turn limit remain explicit deferred boundaries. No equipment requirement, independent target effect, attack bonus or permanent modifier is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Action Surge",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 2,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:action%20surge:phb:fighter:::2:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:action%20surge:phb:%E6%88%98%E5%A3%AB:::2:"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "resources": [
+        {
+          "key": "fighter:phb:action-surge",
+          "max": {
+            "formula": "min(1, floor(@classes.fighter.levels / 2)) + min(1, floor(@classes.fighter.levels / 17))"
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "text-action:entries:0",
+          "activation": "special",
+          "target": "self",
+          "consumes": {
+            "resource": "fighter:phb:action-surge",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "actionEconomy",
+        "code": "own-turn-one-additional-action-settlement",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "turnLimit",
+        "code": "fighter17-two-capacity-only-once-on-same-turn",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "On your turn, you can take one additional action."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Add one PHB base-owned Fighter-level pool with full Short/Long Rest recovery and a source-derived deferred one-use activity. Its formula includes the level-17 tier; extra-action and once-per-turn execution remain deferred.",
+    "notes": "2014 PHB Fighter, threshold Fighter 2. One use grants one additional action on the user's own turn. All uses return after a Short or Long Rest. One base-owned PHB pool has one use at Fighter 2-16 and two at Fighter 17-20; the formula yields zero below Fighter 2 and uses Fighter class levels, never total character level. The level-17 row creates no second pool. A source-derived deferred utility action spends one use; special activation preserves the absence of an action/bonus-action/reaction cost in the body. Own-turn extra-action execution and the level-17 once-per-turn limit require deferred settlement. The 2014 body imposes no Magic-action exclusion. No equipment requirement or permanent attack/save modifier is inherent."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Extra Attack (2)",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 11,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:extra%20attack%20(2):phb:fighter:::11:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:extra%20attack%20(2):phb:%E6%88%98%E5%A3%AB:::11:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackCount",
+        "code": "fighter11-three-attacks-within-one-attack-action",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "attack-action-on-users-own-turn-only",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "At 11th level, you can attack three times"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the Fighter-11 PHB tier and record three attacks within one own-turn Attack action. The schema lacks this scoped count and replacement semantics; emit no global modifier, extra action or pool.",
+    "notes": "2014 PHB Fighter, threshold Fighter 11. Three attacks are made within a single Attack action on the user's own turn, replacing the two-attack Fighter-5 tier, rather than adding three attacks or three Attack actions. The family base kiwee:classfeature:phb:extra%20attack:phb:fighter:::5::: and Fighter-20 row define the 2/3/4 progression. There is no resource, equipment prerequisite, fixed proficiency or numeric global attack bonus in this feature. Targets and weapon choices follow the individual attacks; this feature grants no damage roll. The current modifier/action model does not encode conditional per-Attack-action counts or same-family non-additive stacking, so attack-count/own-turn settlement remains deferred."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Extra Attack (3)",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 20,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:extra%20attack%20(3):phb:fighter:::20:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:extra%20attack%20(3):phb:%E6%88%98%E5%A3%AB:::20:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackCount",
+        "code": "fighter20-four-attacks-within-one-attack-action",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "attack-action-on-users-own-turn-only",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "sourceIntegrity",
+        "code": "kiwee-prose-fighter11-and-four-actions-versus-en-fighter20-four-attacks",
+        "ref": "kiwee/raw/entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "At 20th level, you can attack four times"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the level-20 PHB identity and use the complete English four-attacks rule. Record the settled Kiwee level/action-count defect, and defer scoped Attack-action count without adding a global modifier.",
+    "notes": "2014 PHB Fighter, threshold Fighter 20. Four attacks within one Attack action on the user's own turn replace the preceding two/three-attack tiers. The source level field is 20 and the PHB parent UID resolves this exact level-20 identity. Kiwee prose at kiwee/raw/entries/0 instead says level 11 and describes four Attack actions. This is an identified translation defect, resolved by English entries/0, level=20, the base feature's entries/1 and the parent level-20 UID; no source text is rewritten. Attack-action count, turn scope and replacement/non-additive stacking remain deferred. There is no resource, damage formula, proficiency grant, equipment prerequisite or permanent modifier. Family base: kiwee:classfeature:phb:extra%20attack:phb:fighter:::5:::."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Extra Attack",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 5,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:extra%20attack:phb:fighter:::5:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:extra%20attack:phb:%E6%88%98%E5%A3%AB:::5:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "attackCount",
+        "code": "fighter5-11-20-two-three-four-attacks-within-one-attack-action",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "attack-action-on-users-own-turn-only",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "sourceIntegrity",
+        "code": "kiwee-upgrade-prose-omits-fighter20-four-and-misstates-actions",
+        "ref": "kiwee/raw/entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "The number of attacks increases to three"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Read the full Fighter 5/11/20 progression and preserve its same-action, own-turn scope. Mark the settled Kiwee omission/action-count defect; defer scoped counts without creating global bonuses or additive tier mechanisms.",
+    "notes": "2014 PHB Fighter, threshold Fighter 5. Two attacks replace one whenever the user takes the Attack action on their own turn. Full English entries/1 gives three at Fighter 11 and four at Fighter 20, explicitly using levels in this class. The upgrade rows preserve their level-11/20 identities and must not add independent counts. Kiwee entries/1 omits the Fighter-20/four tier and calls the Fighter-11 increase an action count; these translation defects are settled by the English second paragraph and the two upgrade UIDs. There is no pool or action-cost grant, weapon restriction, fixed proficiency or damage bonus. Per-action attack counts, own-turn restriction and non-additive family replacement are deferred; no global attack modifier or additional Attack action is emitted."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Fighting Style",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:fighting%20style:phb:fighter:::1:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:fighting%20style:phb:%E6%88%98%E5%A3%AB:::1:"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "grants": [
+        {
+          "type": "feature",
+          "choose": {
+            "count": 1,
+            "from": [
+              "kiwee:optionalfeature:phb:archery::::::::",
+              "kiwee:optionalfeature:phb:defense::::::::",
+              "kiwee:optionalfeature:phb:dueling::::::::",
+              "kiwee:optionalfeature:phb:great%20weapon%20fighting::::::::",
+              "kiwee:optionalfeature:phb:protection::::::::",
+              "kiwee:optionalfeature:phb:two-weapon%20fighting::::::::",
+              "kiwee:optionalfeature:tce:blind%20fighting::::::::",
+              "kiwee:optionalfeature:tce:interception::::::::",
+              "kiwee:optionalfeature:tce:superior%20technique::::::::",
+              "kiwee:optionalfeature:tce:thrown%20weapon%20fighting::::::::",
+              "kiwee:optionalfeature:tce:unarmed%20fighting::::::::"
+            ]
+          },
+          "key": "text-option:entries:1"
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "choiceUniqueness",
+        "code": "same-fighting-style-option-cannot-repeat-across-all-style-selections",
+        "ref": "entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "Choose one of the following options."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the safe draft eleven-option feature grant and all original UID identities. Add the explicit cross-selection no-repeat gap after comparing the real Foundry record, which supplies no activities or effects.",
+    "notes": "2014 PHB Fighter, threshold Fighter 1. Retain the exact draft feature grant: choose one of six PHB styles or five explicitly listed legacy TCE styles. Resolve the supplied optionalfeature UIDs to their actual catalogue identities; the PHB options remain 2014 and TCE extensions have no catalogue edition field. Selection is a grant of the chosen referenced feature only. The schema cannot enforce the same-style prohibition across separate sources or later selections; that specific selection gap is unsupported. There is no 2024 Fighting Style feat filter, recommended default or automatic level-up replacement in this body. All eleven referenced bodies were read: weapon/armor/shield/hand/range/visibility/hit/turn/grapple restrictions and any reactions remain on the selected child. No unchosen bonuses, fixed proficiencies or Superior Technique dice are imported into this parent. The actual Foundry row has no activity/effect or flag candidate."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Indomitable (three uses)",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:indomitable%20(three%20uses):phb:fighter:::17:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:indomitable%20(three%20uses):phb:%E6%88%98%E5%A3%AB:::17:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "resourceOwnership",
+        "code": "fighter17-three-uses-replace-base-indomitable-capacity-no-new-pool",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveReroll",
+        "code": "failed-save-only-reroll-must-use-new-result",
+        "ref": "data/class/class-fighter.json#/classFeature/10/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "failed-saving-throw-trigger-not-unconditional-action",
+        "ref": "data/class/class-fighter.json#/classFeature/10/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "three times between long rests."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the level-17 PHB tier while assigning its three-use capacity to the single base Indomitable resource. Add no pool or activity, and defer the inherited failed-save trigger and mandatory new result.",
+    "notes": "2014 PHB Fighter, threshold Fighter 17. Three uses between Long Rests replace the one-use Fighter-9 and two-use Fighter-13 capacities. Owner kiwee:classfeature:phb:indomitable:phb:fighter:::9::: supplies one complete Fighter-level pool and full Long Rest recovery; this row has no resource or activity. The inherited rule permits an optional reroll only of the user's own failed saving throw, and the new result must be used. This 2014 feature adds no Fighter-level bonus to that reroll and supplies no Short Rest recovery. Cross-record tier ownership, the failed-save trigger and mandatory new-result settlement remain specific deferred boundaries. No fixed proficiency, equipment requirement or permanent save modifier is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Indomitable (two uses)",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 13,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:indomitable%20(two%20uses):phb:fighter:::13:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:indomitable%20(two%20uses):phb:%E6%88%98%E5%A3%AB:::13:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "resourceOwnership",
+        "code": "fighter13-two-uses-replace-base-indomitable-capacity-no-new-pool",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveReroll",
+        "code": "failed-save-only-reroll-must-use-new-result",
+        "ref": "data/class/class-fighter.json#/classFeature/10/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "failed-saving-throw-trigger-not-unconditional-action",
+        "ref": "data/class/class-fighter.json#/classFeature/10/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "twice between long rests."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the Fighter-13 PHB identity and represent its two-use increase through the single base pool. Emit no duplicate resource/action and defer the inherited failed-save and mandatory-new-result semantics.",
+    "notes": "2014 PHB Fighter, threshold Fighter 13. Two uses between Long Rests replace the Fighter-9 one-use capacity; Fighter 17 later replaces that with three. Owner kiwee:classfeature:phb:indomitable:phb:fighter:::9::: already supplies both increases in one Fighter-level formula with full Long Rest recovery. This tier creates no independent resource or reroll activity. The inherited effect applies only to the user's own failed saving throw; choosing to reroll makes the new result mandatory. No Fighter-level reroll bonus or Short Rest recovery appears in the PHB rule. Cross-record tier ownership, failed-save trigger and reroll settlement remain deferred, with no permanent save bonus, fixed proficiency or equipment requirement."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Indomitable",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 9,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:indomitable:phb:fighter:::9:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:indomitable:phb:%E6%88%98%E5%A3%AB:::9:"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "resources": [
+        {
+          "key": "fighter:phb:indomitable",
+          "max": {
+            "formula": "min(1, floor(@classes.fighter.levels / 9)) + min(1, floor(@classes.fighter.levels / 13)) + min(1, floor(@classes.fighter.levels / 17))"
+          },
+          "recovery": [
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "text-action:entries:0",
+          "activation": "special",
+          "target": "self",
+          "consumes": {
+            "resource": "fighter:phb:indomitable",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "saveReroll",
+        "code": "optional-failed-save-reroll-with-mandatory-new-result",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "failed-saving-throw-trigger-not-unconditional-action",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "you must use the new roll"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Add one PHB base-owned resource with the complete Fighter 9/13/17 capacity and full Long Rest recovery. A source-derived deferred activity spends one use; failed-save trigger/new-result execution remains deferred with no reroll bonus.",
+    "notes": "2014 PHB Fighter, threshold Fighter 9. An optional reroll is available only after the user's own saving throw fails; the new roll is mandatory after using it. A Long Rest restores all uses. One base-owned PHB pool has one/two/three uses at Fighter 9/13/17, respectively; the formula yields zero below Fighter 9 and uses only Fighter class levels. The two upgrade rows create no resources. A source-derived deferred utility activity spends one use with special activation, without inventing a Reaction or Action cost. The failed-save trigger and reroll/new-result settlement remain deferred. There is no Fighter-level bonus to the reroll in this body, no Short Rest recovery, equipment restriction, fixed proficiency or global save modifier."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Martial Archetype",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 3,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:martial%20archetype:phb:fighter:::3:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:martial%20archetype:phb:%E6%88%98%E5%A3%AB:::3:"
+    ],
+    "verdict": "unsupported",
+    "unsupported": [
+      {
+        "family": "subclassChoice",
+        "code": "fighter3-select-one-available-martial-archetype",
+        "ref": "entries/0"
+      },
+      {
+        "family": "subclassProgression",
+        "code": "selected-archetype-features-at-fighter3-7-10-15-18",
+        "ref": "entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "at 3rd level and again at 7th, 10th, 15th, and 18th level."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the real Fighter-3 PHB choice and its 3/7/10/15/18 progression. The schema cannot route one selected subclass's level-gated features, so record those exact gaps without unsafe all-subclass grants.",
+    "notes": "2014 PHB Fighter, threshold Fighter 3. The complete body makes a genuine choice of one available martial archetype, then grants that selected archetype's features at Fighter 3/7/10/15/18. The PHB parent marks these levels as subclass-feature milestones and confirms Fighter-level gating. This is a selection/progression rule, not merely narrative or an empty subclass-feature placeholder. The current grant model has no typed subclass selection with selected-parent, edition and level-gated child routing. Record both unsupported selection and progression; do not grant every archetype, coerce subclass identities into feature refs or add fixed proficiencies/resources. The word combat describes the archetype's role and supplies no action, equipment restriction or target effect here."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Second Wind",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 1,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:second%20wind:phb:fighter:::1:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:second%20wind:phb:%E6%88%98%E5%A3%AB:::1:"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "resources": [
+        {
+          "key": "fighter:phb:second-wind",
+          "max": {
+            "formula": "min(1, @classes.fighter.levels)"
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "heal",
+          "key": "text-action:entries:0",
+          "activation": "bonus",
+          "target": "self",
+          "formula": "1d10 + @classes.fighter.levels",
+          "consumes": {
+            "resource": "fighter:phb:second-wind",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "healing",
+        "code": "self-heal-1d10-plus-fighter-level-settlement",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionTiming",
+        "code": "bonus-action-on-users-own-turn-only",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-family-005",
+    "evidence": {
+      "page": 72,
+      "quote": "On your turn, you can use a bonus action"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Add the PHB one-use resource with full Short/Long Rest recovery and its exact source-derived deferred Bonus Action self-heal. Preserve Fighter-level healing while excluding unsupported own-turn/healing execution and any 2024 capacity rules.",
+    "notes": "2014 PHB Fighter, threshold Fighter 1. On the user's own turn, a Bonus Action restores their own hit points by 1d10 plus Fighter class level. The sole PHB pool always has one use at Fighter 1-20 and zero at Fighter 0; all uses return after either a Short or Long Rest. No PHB upgrade UID increases its capacity. Preserve the exact source healing formula as a source-derived deferred self activity spending one use, never a permanent HP modifier or a heal of another creature. Actual healing and own-turn timing remain deferred. This body contains no 2024 extra uses, partial Short Rest refill, Tactical Mind or Tactical Shift rules. No equipment requirement or fixed proficiency is present."
+  }
+]

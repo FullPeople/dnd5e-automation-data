@@ -1,0 +1,3223 @@
+[
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Bronze Dragon Scale Mail",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:bronze%20dragon%20scale%20mail::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:bronze%20dragon%20scale%20mail::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 14,
+        "weight": 45,
+        "stealthDisadvantage": true,
+        "requiresAttunement": true
+      },
+      "modifiers": [
+        {
+          "target": "resist:lightning",
+          "op": "set",
+          "value": true,
+          "condition": {
+            "all": [
+              {
+                "target": "equipped",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "target": "ac",
+          "op": "add",
+          "value": 1,
+          "condition": {
+            "all": [
+              {
+                "target": "equipped",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        }
+      ],
+      "resources": [
+        {
+          "key": "dragonSense",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "conditionalDefense",
+        "code": "worn-attuned-lightning-resistance",
+        "deferred": true
+      },
+      {
+        "family": "savingThrows",
+        "code": "dragon-frightful-presence-and-breath-advantage",
+        "deferred": true
+      },
+      {
+        "family": "detection",
+        "code": "action-nearest-bronze-dragon-thirty-miles",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 165,
+      "quote": "While wearing this armor"
+    },
+    "notes": "Partial: worn and attuned armor grants +1 AC, lightning resistance, and advantage against dragons' Frightful Presence and breath weapons. Preserve AC14, Dexterity cap2, weight45 and Stealth disadvantage. One action per dawn locates distance/direction of the nearest bronze dragon within30miles; no global dragon sense or arbitrary detection DC.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Gate unsafe AC and lightning-resistance candidates on wearing and attunement. Retain the armor model, add the explicit daily detection counter and identify contextual dragon saves and detection execution.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Splint Armor (Adamantine Armor)",
+      "extra": "PHB|Splint Armor|DMG|Adamantine Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:splint%20armor%20(adamantine%20armor)::::::::phb%7Csplint%20armor%7Cdmg%7Cadamantine%20armor"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:splint%20armor%20(adamantine%20armor):::::::phb%7Csplint%20armor%7Cdmg%7Cadamantine%20armor"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "ac": 17,
+        "strength": 15,
+        "weight": 60,
+        "stealthDisadvantage": true,
+        "baseItem": "kiwee:baseitem:phb:splint%20armor::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "criticalHits",
+        "code": "worn-armor-critical-becomes-normal",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 150,
+      "quote": "any critical hit against you becomes a normal hit."
+    },
+    "notes": "Partial: keep AC17 heavy armor, Strength15, sixty-pound weight and Stealth disadvantage. Critical hits become normal hits only while worn. No attunement, numerical magic AC bonus or damage immunity is stated.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain all supported splint armor fields and explicitly identify the worn-only critical-hit conversion omitted by the draft.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Potion of Animal Friendship",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:potion%20of%20animal%20friendship::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:potion%20of%20animal%20friendship::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "potion",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ],
+      "actions": [
+        {
+          "key": "drinkOrAdminister",
+          "type": "utility",
+          "activation": "action",
+          "target": "creature",
+          "consumes": {
+            "resource": "potion",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "timedItemCasting",
+        "code": "consumed-hour-at-will-animal-friendship-dc13",
+        "ref": "kiwee:spell:phb:animal%20friendship::::::::",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 187,
+      "quote": "When you drink this potion"
+    },
+    "notes": "Partial: a single consumed potion enables at-will Animal Friendship casting at DC13 for one hour. Drinking/administering takes an action in2014. The hour limits casting availability; it does not redefine the spell's own effect duration. No permanent spell grant or invented cast count; liquid fragments are descriptive.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the item model and add the definite single-use potion counter and2014 consumption action. Identify consumed, one-hour casting availability with DC13 instead of granting the spell permanently.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Hooked Shortspear (Vicious Weapon)",
+      "extra": "OotA|Hooked Shortspear|DMG|Vicious Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:hooked%20shortspear%20(vicious%20weapon)::::::::oota%7Chooked%20shortspear%7Cdmg%7Cvicious%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:hooked%20shortspear%20(vicious%20weapon):::::::oota%7Chooked%20shortspear%7Cdmg%7Cvicious%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "martial",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:oota:hooked%20shortspear::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "criticalHits",
+        "code": "natural-twenty-extra-seven-weapon-type",
+        "deferred": true
+      },
+      {
+        "family": "hitAlternative",
+        "code": "forgo-damage-strength-save-or-trip",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-two-weapon-attacks",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 209,
+      "quote": "When you roll a 20 with this magic weapon"
+    },
+    "notes": "Partial: primary1d4 piercing, martial melee, Light, weight2. Natural20 adds seven piercing, not2d6 or every critical. On a hit the wielder may forgo damage to trip: Strength save DC8+Strength modifier+proficiency bonus, failure prone. This cannot become an unrestricted trip action or retain damage when that alternative is chosen.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the entire weapon model and identify natural20 damage, the base weapon's hit-dependent damage-for-trip alternative and2014 Light/combat execution.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Folding Boat",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:folding%20boat::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:folding%20boat::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 4
+      }
+    },
+    "unsupported": [
+      {
+        "family": "objectTransformation",
+        "code": "three-command-action-box-boat-ship-forms",
+        "deferred": true
+      },
+      {
+        "family": "capacity",
+        "code": "four-or-fifteen-medium-passengers"
+      },
+      {
+        "family": "inventoryTransfer",
+        "code": "empty-creature-gate-and-fit-dependent-cargo",
+        "deferred": true
+      },
+      {
+        "family": "equipmentState",
+        "code": "vessel-weight-replaces-four-pound-box-weight"
+      }
+    ],
+    "evidence": {
+      "page": 170,
+      "quote": "It weighs 4 pounds and floats."
+    },
+    "notes": "Partial: weight4 is the12x6x6-inch floating storage box. Action commands make10x4x2-foot boat for four Medium occupants,24x8x6-foot ship for fifteen, or restore box only without creatures aboard. Vessel forms have ordinary vessel weight, not four pounds. Stored items travel with transformation; only fitting cargo enters restored box, remainder stays outside. Equipment varies by form.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the four-pound box model but expose form-dependent weight/capacity, three command transformations and creature/cargo conditions; do not assign invented vessel weights or unconditional folding.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Hat of Disguise",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:hat%20of%20disguise::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:hat%20of%20disguise::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "requiresAttunement": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "itemCasting",
+        "code": "worn-attuned-action-at-will-disguise",
+        "ref": "kiwee:spell:phb:disguise%20self::::::::",
+        "deferred": true
+      },
+      {
+        "family": "effectTermination",
+        "code": "hat-removal-ends-spell",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 173,
+      "quote": "The spell ends if the hat is removed."
+    },
+    "notes": "Partial: wearing and attunement enable action casting of Disguise Self at will. Removing the hat terminates the spell. Cast/grant shapes cannot faithfully encode the wear gate/removal termination; no permanent grant, finite daily uses or language/skill proficiency.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the attunement model and identify worn action casting and removal-dependent spell termination rather than treating attachedSpells as a permanent grant.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Armor of Invulnerability",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:armor%20of%20invulnerability::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:armor%20of%20invulnerability::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "ac": 18,
+        "strength": 15,
+        "weight": 65,
+        "stealthDisadvantage": true,
+        "requiresAttunement": true,
+        "baseItem": "kiwee:baseitem:phb:plate%20armor::::::::"
+      },
+      "resources": [
+        {
+          "key": "invulnerability",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "conditionalDefense",
+        "code": "worn-attuned-nonmagical-source-resistance",
+        "deferred": true
+      },
+      {
+        "family": "duration",
+        "code": "action-nonmagical-immunity-ten-minutes-or-unequip",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 152,
+      "quote": "You have resistance to nonmagical damage while you wear this armor."
+    },
+    "notes": "Partial: preserve plate model and once-per-dawn action counter. While worn/attuned, resistance is to nonmagical damage, not merely three physical types. Action immunity has the same source qualifier and lasts ten minutes or until unequipped. The modifier vocabulary has no faithful damage-source predicate; no invented immune:nonmagical flag.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain all plate/attunement fields and add the explicit daily immunity-use counter. Identify nonmagical-source resistance/immunity and ten-minute-or-removal duration without inventing damage-type flags.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Sword of Answering (Scather)",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:sword%20of%20answering%20(scather)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:sword%20of%20answering%20(scather)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "V"
+        ],
+        "baseItem": "kiwee:baseitem:phb:longsword::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "lawful-evil-creature-prerequisite"
+      },
+      {
+        "family": "reactionAttack",
+        "code": "held-sword-damaged-by-creature-in-reach",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "special-reaction-advantage-bypasses-resistance-immunity",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-two-handed-melee-damage",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 206,
+      "quote": "You gain a +3 bonus to attack and damage rolls made with this sword."
+    },
+    "notes": "Partial: preserve local+3 longsword and1d8/1d10 versatile damage. Attunement requires a Lawful Evil creature. While held, a reaction attacks a creature in reach that damages the user; that attack alone has advantage and ignores target damage resistance/immunity. Garnet and nine-blade/Greyhawk/Fragarach history add no operative rules.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the weapon model and replace generic attunement warning with the actual Lawful Evil prerequisite, damage-triggered held reaction and attack-specific defense bypass.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Amethyst",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:amethyst::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:amethyst::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "value": 10000
+      }
+    },
+    "unsupported": [],
+    "evidence": {
+      "page": 134,
+      "quote": "A transparent deep purple gemstone."
+    },
+    "notes": "Complete supported fixed-value gemstone:10000 copper,100gp. Transparency/color add no rules; no additional mechanism in the complete entry or actual gemstone type.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Confirm the complete supported value model after full description/type review; value is operative, so no narrative-placeholder verdict.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Studded Leather Armor (+2 Armor)",
+      "extra": "PHB|Studded Leather Armor|DMG|+2 Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:studded%20leather%20armor%20(%2B2%20armor)::::::::phb%7Cstudded%20leather%20armor%7Cdmg%7C%2B2%20armor"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:studded%20leather%20armor%20(%2B2%20armor):::::::phb%7Cstudded%20leather%20armor%7Cdmg%7C%2B2%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "lightArmor",
+        "ac": 12,
+        "weight": 13,
+        "baseItem": "kiwee:baseitem:phb:studded%20leather%20armor::::::::"
+      },
+      "modifiers": [
+        {
+          "target": "ac",
+          "op": "add",
+          "value": 2,
+          "condition": {
+            "target": "equipped",
+            "op": "eq",
+            "value": true
+          }
+        }
+      ]
+    },
+    "unsupported": [],
+    "evidence": {
+      "page": 152,
+      "quote": "You have a +2 bonus to AC while wearing this armor."
+    },
+    "notes": "Complete supported light-armor model: baseAC12 plus uncapped Dexterity, weight13, no attunement/Strength/Stealth penalty. Magic+2 applies only while worn, resulting armorAC14 plus Dexterity. Do not inflate baseAC and also add the modifier.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Correct unconditional+2AC to require equipped/worn armor. Preserve baseAC12, light-armor rules, weight and reference so the bonus cannot apply globally or be counted twice.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Boots of Elvenkind",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:boots%20of%20elvenkind::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:boots%20of%20elvenkind::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "pairedEquipment",
+        "code": "both-boots-worn-required"
+      },
+      {
+        "family": "audibility",
+        "code": "worn-steps-silent-on-any-surface",
+        "deferred": true
+      },
+      {
+        "family": "skillChecks",
+        "code": "stealth-advantage-only-moving-silently",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 155,
+      "quote": "your steps make no sound"
+    },
+    "notes": "Partial: both boots must be worn; no attunement. Steps are silent on any surface. Advantage is limited to Dexterity(Stealth) checks relying on silent movement, not all Stealth or all Dexterity checks. No flat numerical skill bonus or broad stealth proficiency.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the item model and identify paired-wearing, silent-step and contextual Stealth-advantage rules absent from the candidate rather than granting unconditional expertise or bonuses.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Handaxe (+1 Weapon)",
+      "extra": "PHB|Handaxe|DMG|+1 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:handaxe%20(%2B1%20weapon)::::::::phb%7Chandaxe%7Cdmg%7C%2B1%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:handaxe%20(%2B1%20weapon):::::::phb%7Chandaxe%7Cdmg%7C%2B1%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "slashing",
+        "properties": [
+          "L",
+          "T"
+        ],
+        "baseItem": "kiwee:baseitem:phb:handaxe::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "thrown-normal-long-range-not-represented",
+        "ref": "20/60"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "thrown-same-melee-ability-light-two-weapon-attacks",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: preserve simple melee handaxe,1d6 slashing,weight2,L/T and local+1. Thrown range20/60 uses same melee ability for attack/damage. Light has2014 two-weapon meaning. No ammunition, charge limit or2024 mastery is introduced.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the full weapon model and replace generic range warning with the actual thrown range, same-ability/Light rules and combat settlement boundary.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Light Hammer (+1 Weapon)",
+      "extra": "PHB|Light Hammer|DMG|+1 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:light%20hammer%20(%2B1%20weapon)::::::::phb%7Clight%20hammer%7Cdmg%7C%2B1%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:light%20hammer%20(%2B1%20weapon):::::::phb%7Clight%20hammer%7Cdmg%7C%2B1%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L",
+          "T"
+        ],
+        "baseItem": "kiwee:baseitem:phb:light%20hammer::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "thrown-normal-long-range-not-represented",
+        "ref": "20/60"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "thrown-same-melee-ability-light-two-weapon-attacks",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: retain1d4 bludgeoning simple melee hammer,weight2,Light/Thrown and item-local+1. Range20/60; throwing uses melee ability for both rolls.2014 Light attacks, range and settlement remain deferred; no renewable thrown-item resource.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve every supported hammer field and identify exact thrown range,2014 property execution and combat instead of the draft's generic range warning.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Longbow (+3 Weapon)",
+      "extra": "PHB|Longbow|DMG|+3 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:longbow%20(%2B3%20weapon)::::::::phb%7Clongbow%7Cdmg%7C%2B3%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:longbow%20(%2B3%20weapon):::::::phb%7Clongbow%7Cdmg%7C%2B3%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "H",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:phb:longbow::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "150/600"
+      },
+      {
+        "family": "ammunition",
+        "code": "arrow-availability-consumption-recovery",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "small-tiny-heavy-disadvantage-two-handed-attacks",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: preserve martial ranged1d8 piercing,weight2,A/H/2H and local+3. Range150/600 feet, arrows. Full2014 ammo requirement/consumption/drawing/free-hand/recovery/improvised rules apply. Small/Tiny users have Heavy disadvantage; two hands needed for attack, not holding. No2024 Dexterity13 prerequisite.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the full longbow model and replace generic range warning with exact range, ammunition,2014 Heavy/Two-Handed and combat execution boundaries.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Potion of Greater Healing",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:potion%20of%20greater%20healing::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:potion%20of%20greater%20healing::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "potion",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ],
+      "actions": [
+        {
+          "key": "drinkOrAdminister",
+          "type": "heal",
+          "activation": "action",
+          "target": "creature",
+          "formula": "4d4 + 4",
+          "consumes": {
+            "resource": "potion",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "healing",
+        "code": "consumed-recipient-four-d-four-plus-four-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 187,
+      "quote": "hit points when you drink this potion."
+    },
+    "notes": "Partial: one consumed potion restores4d4+4HP. Drinking or administering requires an action in2014; no recovery or attunement. Preserve formula as a deferred healing action without selecting a roll, applying it to the holder automatically or using2024 bonus-action drinking.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Add the definite single-use counter and2014 action with exact4d4+4 healing formula while retaining the visible recipient/healing settlement boundary.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Scimitar (Frost Brand)",
+      "extra": "PHB|Scimitar|DMG|Frost Brand",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:scimitar%20(frost%20brand)::::::::phb%7Cscimitar%7Cdmg%7Cfrost%20brand"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:scimitar%20(frost%20brand):::::::phb%7Cscimitar%7Cdmg%7Cfrost%20brand"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "slashing",
+        "properties": [
+          "F",
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:phb:scimitar::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "conditionalDefense",
+        "code": "held-attuned-fire-resistance",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "sword-hit-extra-one-d-six-cold",
+        "deferred": true
+      },
+      {
+        "family": "illumination",
+        "code": "freezing-temperature-ten-foot-bright-dim",
+        "deferred": true
+      },
+      {
+        "family": "drawTrigger",
+        "code": "nonmagical-flames-thirty-feet-once-per-hour",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-and-light-two-weapon-attacks",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 171,
+      "quote": "while you hold the sword, you have resistance to fire damage."
+    },
+    "notes": "Partial: preserve full scimitar model. Fire resistance requires held and attuned sword; remove ungated modifier because protocol has no explicit held predicate and equipped is not proven equivalent. Hits add1d6 cold. Freezing-only bright10/dim additional10. Drawing extinguishes nonmagical flames within30feet at most once per hour; no manual/dawn recovery substitute. No numerical magic attack bonus.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Remove unsafe unconditional fire resistance: held state is required and cannot be assumed from equipped. Keep every weapon field and identify held/attuned defense, cold-hit, freezing light, draw/hour flame suppression and2014 properties.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Shortsword (Frost Brand)",
+      "extra": "PHB|Shortsword|DMG|Frost Brand",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:shortsword%20(frost%20brand)::::::::phb%7Cshortsword%7Cdmg%7Cfrost%20brand"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:shortsword%20(frost%20brand):::::::phb%7Cshortsword%7Cdmg%7Cfrost%20brand"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:phb:shortsword::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "conditionalDefense",
+        "code": "held-attuned-fire-resistance",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "sword-hit-extra-one-d-six-cold",
+        "deferred": true
+      },
+      {
+        "family": "illumination",
+        "code": "freezing-temperature-ten-foot-bright-dim",
+        "deferred": true
+      },
+      {
+        "family": "drawTrigger",
+        "code": "nonmagical-flames-thirty-feet-once-per-hour",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-and-light-two-weapon-attacks",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 171,
+      "quote": "In freezing temperatures"
+    },
+    "notes": "Partial: retain martial2014 shortsword,1d6 piercing,weight2,F/L and attunement. Remove ungated resistance; actual fire defense requires held/attuned sword, and protocol does not establish equipped as held. Hits add1d6 cold; freezing-only bright10/dim additional10; drawing suppresses nonmagical flames30feet once per hour. No global defense/light or unbounded suppression.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Remove unsafe fire resistance missing held/attuned gate; no explicit held predicate exists and equipped is not a justified substitute. Preserve full shortsword model and expose cold-hit, freezing light, draw/hour and2014 property limits.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Blowgun (+2 Weapon)",
+      "extra": "PHB|Blowgun|DMG|+2 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:blowgun%20(%2B2%20weapon)::::::::phb%7Cblowgun%7Cdmg%7C%2B2%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:blowgun%20(%2B2%20weapon):::::::phb%7Cblowgun%7Cdmg%7C%2B2%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 1,
+        "weaponCategory": "martial",
+        "damage": "1",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD"
+        ],
+        "baseItem": "kiwee:baseitem:phb:blowgun::::::::",
+        "attackBonus": 2,
+        "damageBonus": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "25/100"
+      },
+      {
+        "family": "ammunition",
+        "code": "needle-availability-consumption-loading-recovery",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "loading-one-shot-per-activation",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: keep flat1 piercing blowgun,weight1,martial,A/LD,local+2. Range25/100, blowgun needles. Ammunition and free-hand loading/recovery/improvised rules apply; Loading permits only one shot per action/bonus/reaction regardless extra attacks. No invented magazine or1d1 damage.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full blowgun model and replace the generic range marker with actual range, needle ammunition,2014 Loading and combat limits.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Spell Scroll (1st Level)",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:spell%20scroll%20(1st%20level)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:spell%20scroll%20(1st%20level)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "scroll",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "storedSpell",
+        "code": "unspecified-first-level-scroll-content"
+      },
+      {
+        "family": "itemCasting",
+        "code": "class-list-normal-time-no-material-dc13-attack5",
+        "deferred": true
+      },
+      {
+        "family": "castingCheck",
+        "code": "higher-than-castable-spell-ability-dc11-failure-consumes",
+        "deferred": true
+      },
+      {
+        "family": "consumableLifecycle",
+        "code": "completed-cast-consumes-interruption-preserves",
+        "deferred": true
+      },
+      {
+        "family": "spellCopying",
+        "code": "wizard-scroll-dc11-arcana-always-destroys",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 200,
+      "quote": "If the casting is interrupted, the scroll is not lost."
+    },
+    "notes": "Partial: one consumable scroll, no recovery; its spell is intentionally unspecified. Only class-list readers can cast, with normal casting time/no materials, fixedDC13/attack+5. If above normal castable level, spell-ability checkDC11; failure loses spell. Completed casting consumes, interruption preserves. Wizard copying requires Intelligence(Arcana)DC11 and destroys scroll regardless success. Never assign a guessed spell or global DC/attack bonuses.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the model and definite single-scroll counter; identify variable content, reader/class/level checks, scoped casting statistics, interruption/consumption and copying lifecycle instead of a placeholder verdict.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Shortbow (+2 Weapon)",
+      "extra": "PHB|Shortbow|DMG|+2 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:shortbow%20(%2B2%20weapon)::::::::phb%7Cshortbow%7Cdmg%7C%2B2%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:shortbow%20(%2B2%20weapon):::::::phb%7Cshortbow%7Cdmg%7C%2B2%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:phb:shortbow::::::::",
+        "attackBonus": 2,
+        "damageBonus": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "80/320"
+      },
+      {
+        "family": "ammunition",
+        "code": "arrow-availability-consumption-recovery",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attacks-only",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: retain simple ranged1d6 piercing,weight2,A/2H and scoped+2. Range80/320 feet, arrows; full ammo/drawing/free-hand/recovery/improvised rules and attack-only two-handed requirement are deferred. No Heavy property or2024 mastery.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain every supported shortbow field and replace generic range warning with exact range, ammunition, handedness and combat execution boundaries.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Potion of Clairvoyance",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:potion%20of%20clairvoyance::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:potion%20of%20clairvoyance::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "potion",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ],
+      "actions": [
+        {
+          "key": "drinkOrAdminister",
+          "type": "utility",
+          "activation": "action",
+          "target": "creature",
+          "consumes": {
+            "resource": "potion",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellEffect",
+        "code": "consumed-clairvoyance-one-mile-sensor-seeing-or-hearing",
+        "ref": "kiwee:spell:phb:clairvoyance::::::::",
+        "deferred": true
+      },
+      {
+        "family": "duration",
+        "code": "clairvoyance-normal-ten-minute-potion-effect-lifecycle",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 187,
+      "quote": "When you drink this potion"
+    },
+    "notes": "Partial: single-use potion, no recovery,2014 action drinking/administering. Recipient gains Clairvoyance effect, not at-will casting. PHB222 defines normal10-minute duration and fixed invisible sensor within1mile at familiar/obvious location, choose sight/hearing and action switch; sensor cannot be attacked/interacted with, visible as orb to special senses. Effect binding/perception/lifecycle deferred. Eyeball disappears on opening as flavor. No spell casting ability, DC, ten-minute drinking time or one-hour duration invented.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the model and add the definite single-use consumption counter/action. Identify the actual bestowed Clairvoyance effect and its spell-derived lifecycle without inventing permanent casting access.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Sovereign Glue",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:sovereign%20glue::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:sovereign%20glue::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "ounces",
+          "max": {
+            "formula": "1d6 + 1"
+          },
+          "recovery": []
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "resources",
+        "code": "random-container-quantity-needs-fixed-roll-state"
+      },
+      {
+        "family": "storageCondition",
+        "code": "container-lined-with-oil-of-slipperiness",
+        "ref": "kiwee:item:dmg:oil%20of%20slipperiness::::::::"
+      },
+      {
+        "family": "objectBinding",
+        "code": "one-ounce-square-foot-minute-set-permanent-bond",
+        "deferred": true
+      },
+      {
+        "family": "bondRemoval",
+        "code": "universal-solvent-or-oil-of-etherealness-or-wish",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 200,
+      "quote": "The glue takes 1 minute to set."
+    },
+    "notes": "Partial: preserve literal1d6+1-ounce quantity without selecting an inventory roll. One ounce covers a one-foot square surface, sets in one minute and bonds two objects permanently. Storage must be lined with Oil of Slipperiness. Only Universal Solvent, Oil of Etherealness or Wish breaks the set bond; no generic Strength check or guessed application activation.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the item model and exact finite quantity formula. Identify required storage, measured coverage, one-minute setting, permanent object bond and exclusive removal methods instead of generic unreviewed prose.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Plate Armor (Mariner's Armor)",
+      "extra": "PHB|Plate Armor|DMG|Mariner's Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:plate%20armor%20(mariner's%20armor)::::::::phb%7Cplate%20armor%7Cdmg%7Cmariner's%20armor"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:plate%20armor%20(mariner's%20armor):::::::phb%7Cplate%20armor%7Cdmg%7Cmariner's%20armor"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "ac": 18,
+        "strength": 15,
+        "weight": 65,
+        "stealthDisadvantage": true,
+        "baseItem": "kiwee:baseitem:phb:plate%20armor::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "movement",
+        "code": "worn-swim-speed-equals-walk"
+      },
+      {
+        "family": "turnTrigger",
+        "code": "underwater-zero-hp-start-turn-rise-sixty-feet",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 181,
+      "quote": "While wearing this armor"
+    },
+    "notes": "Partial: preserve plateAC18,Strength15,weight65 and Stealth disadvantage, no attunement. Wearing grants swim speed equal to current walking speed, not a fixed30. Starting a turn underwater at0HP causes a60-foot rise toward the surface. The movement is not healing or generic levitation; fish/shell motifs and plate construction add no rules.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full plate model and replace generic relative-speed warning with exact worn swim equality and underwater/zero-HP start-turn rise trigger.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Chrysoberyl",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:chrysoberyl::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:chrysoberyl::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "value": 10000
+      }
+    },
+    "unsupported": [],
+    "evidence": {
+      "page": 134,
+      "quote": "A transparent yellow-green to pale green gemstone."
+    },
+    "notes": "Complete supported fixed value10000 copper,100gp. Color and transparency are the entry's only other details; actual gemstone type has no additional mechanism.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Confirm the complete supported gemstone value model after reading the full English description and actual DMG type; no noMechanics or unsupported disposition is needed.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Javelin (Weapon of Warning)",
+      "extra": "PHB|Javelin|DMG|Weapon of Warning",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:javelin%20(weapon%20of%20warning)::::::::phb%7Cjavelin%7Cdmg%7Cweapon%20of%20warning"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:javelin%20(weapon%20of%20warning):::::::phb%7Cjavelin%7Cdmg%7Cweapon%20of%20warning"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "T"
+        ],
+        "baseItem": "kiwee:baseitem:phb:javelin::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "carriedItemCondition",
+        "code": "on-person-initiative-advantage"
+      },
+      {
+        "family": "surpriseProtection",
+        "code": "companions-thirty-feet-incapacitation-exception",
+        "deferred": true
+      },
+      {
+        "family": "turnTrigger",
+        "code": "combat-start-awakens-natural-sleepers",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "thrown-normal-long-range-not-represented",
+        "ref": "30/120"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "thrown-same-melee-ability",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "While the weapon is on your person"
+    },
+    "notes": "Partial: attuned carried javelin grants initiative advantage; user and companions within30feet avoid surprise except incapacitation other than nonmagical sleep; natural sleepers wake when combat starts. On-person is not equivalent to equipped. Retain1d6 piercing/weight2/simple/T model. Thrown30/120 uses melee ability for both rolls; no numeric magic bonus.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain full javelin/attunement model and replace generic range warning with actual carried-warning, companion exception/wake triggers, thrown range and combat boundaries.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Wand of Lightning Bolts",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:wand%20of%20lightning%20bolts::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:wand%20of%20lightning%20bolts::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "requiresAttunement": true
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 7
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6 + 1"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "spellcaster-prerequisite"
+      },
+      {
+        "family": "itemCasting",
+        "code": "held-action-lightning-dc15-variable-charges-upcast",
+        "ref": "kiwee:spell:phb:lightning%20bolt::::::::",
+        "deferred": true
+      },
+      {
+        "family": "depletionRisk",
+        "code": "last-charge-d20-one-destroys-wand",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 211,
+      "quote": "This wand has 7 charges."
+    },
+    "notes": "Partial: seven charges recover1d6+1 at dawn; one-pound wand, spellcaster attunement required. Held action spends one or more charges for Lightning Bolt, DC15: one charge gives level3, each extra raises slot level by one. Last charge triggers d20;1 destroys wand. No permanent spell grant, guessed ability or fixed one-charge-only action.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the exact supported charge pool/recovery and item model; replace generic attunement warning with spellcaster eligibility, held variable-cost upcasting and last-charge destruction.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Dwarven Thrower",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:dwarven%20thrower::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:dwarven%20thrower::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "bludgeoning",
+        "properties": [
+          "T",
+          "V"
+        ],
+        "baseItem": "kiwee:baseitem:phb:warhammer::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "dwarf-prerequisite"
+      },
+      {
+        "family": "weaponRange",
+        "code": "thrown-normal-long-range-not-represented",
+        "ref": "20/60"
+      },
+      {
+        "family": "combat",
+        "code": "ranged-hit-extra-one-d-eight-or-two-against-giants",
+        "deferred": true
+      },
+      {
+        "family": "returningWeapon",
+        "code": "immediately-after-attack-hit-or-miss",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "thrown-same-ability-versatile-melee-only",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 167,
+      "quote": "Immediately after the attack, the weapon flies back to your hand."
+    },
+    "notes": "Partial: dwarf attunement; retain local+3 warhammer,1d8/1d10 bludgeoning,weight2,T/V. Thrown20/60, same attack/damage ability. Ranged hits add1d8, or2d8 instead against giants, not3d8. Return occurs after attack even on miss. Versatile1d10 is two-handed melee, not thrown damage. No global giant rider or ammunition resource.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve all weapon fields/+3; replace generic prerequisite/range markers with dwarf eligibility, exact thrown range, ranged-only alternate giant damage, unconditional post-attack return and versatile execution.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Club (Vicious Weapon)",
+      "extra": "PHB|Club|DMG|Vicious Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:club%20(vicious%20weapon)::::::::phb%7Cclub%7Cdmg%7Cvicious%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:club%20(vicious%20weapon):::::::phb%7Cclub%7Cdmg%7Cvicious%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:phb:club::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "criticalHits",
+        "code": "natural-twenty-extra-seven-weapon-type",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-two-weapon-attacks",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 209,
+      "quote": "When you roll a 20 with this magic weapon"
+    },
+    "notes": "Partial: retain simple melee club,weight2,1d4 bludgeoning and2014 Light. Natural20 adds exactly seven bludgeoning, not every critical and not the noted SRD2d6 discrepancy. No flat+7 damage or numerical magic attack bonus.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full club model and identify book-correct natural20 seven-damage,2014 Light and combat execution omitted by the draft.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Longsword (Holy Avenger)",
+      "extra": "PHB|Longsword|DMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:longsword%20(holy%20avenger)::::::::phb%7Clongsword%7Cdmg%7Choly%20avenger"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:longsword%20(holy%20avenger):::::::phb%7Clongsword%7Cdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "V"
+        ],
+        "baseItem": "kiwee:baseitem:phb:longsword::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-prerequisite"
+      },
+      {
+        "family": "combat",
+        "code": "fiend-or-undead-hit-extra-two-d-ten-radiant",
+        "deferred": true
+      },
+      {
+        "family": "aura",
+        "code": "drawn-held-friendly-creature-magical-save-advantage",
+        "deferred": true
+      },
+      {
+        "family": "classLevelGate",
+        "code": "paladin-seventeen-aura-ten-to-thirty-feet"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-two-handed-melee-damage",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 174,
+      "quote": "While you hold the drawn sword"
+    },
+    "notes": "Partial: paladin attunement; retain+3 longsword and1d8/1d10 slashing. Only fiend/undead hits add2d10 radiant. Drawn held sword grants user and friendly creatures magical/spell save advantage within10feet,30feet at17paladin levels, not17total levels. No global saves/extra damage or aura from a sheathed/carried weapon.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the complete+3 longsword model and replace generic attunement warning with paladin eligibility, exact creature-type hit rider, drawn-held friendly aura and paladin17 radius gate.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Figurine of Wondrous Power, Golden Lions",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:figurine%20of%20wondrous%20power%2C%20golden%20lions::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:figurine%20of%20wondrous%20power%2C%20golden%20lions::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "summoning",
+        "code": "paired-lions-one-or-both-command-sixty-feet-clear-space",
+        "deferred": true
+      },
+      {
+        "family": "companionControl",
+        "code": "friendly-language-orders-or-self-defense",
+        "deferred": true
+      },
+      {
+        "family": "duration",
+        "code": "each-one-hour-zero-hp-or-touch-command-reversion",
+        "deferred": true
+      },
+      {
+        "family": "cooldown",
+        "code": "independent-seven-day-per-figurine-reuse"
+      }
+    ],
+    "evidence": {
+      "page": 169,
+      "quote": "You can use one figurine or both simultaneously."
+    },
+    "notes": "Partial: two gold lion statuettes, one or both usable simultaneously, each up to one hour and independently unavailable for seven days after use. Action command/throw within60feet requires sufficient unoccupied ground space. Friendly lions understand languages/obey spoken orders, otherwise only defend. Revert at duration,0HP or action/touch/command. No shared daily resource, invented activation count or stat block.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the model and identify complete generic figurine rules plus exact paired-lion selection, one-hour form and independent seven-day cooldowns; do not replace elapsed days with dawn recovery.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Manual of Stone Golems",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:manual%20of%20stone%20golems::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:manual%20of%20stone%20golems::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5
+      },
+      "resources": [
+        {
+          "key": "manual",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "usePrerequisite",
+        "code": "spellcaster-at-least-two-fifth-level-slots"
+      },
+      {
+        "family": "combat",
+        "code": "ineligible-reading-six-d-six-psychic",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "ninety-days-eight-hour-rest-limit-eighty-thousand-gp",
+        "deferred": true
+      },
+      {
+        "family": "objectTransformation",
+        "code": "manual-consumed-ashes-animate-controlled-stone-golem",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 180,
+      "quote": "The golem becomes animate when the ashes of the manual are sprinkled on it."
+    },
+    "notes": "Partial: five-pound single-use manual. User needs spellcasting and at least two5th-level spell slots; ineligible reader takes6d6 psychic. Stone golem creation needs90 uninterrupted days, manual at hand, no more than8hours rest per day,80000gp materials. Completion consumes book; ashes animate golem under creator's spoken-command control. Materials cost is not item value; no spell-slot expenditure or concentration is invented.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve weight and add the explicit consumed-manual counter. Identify exact slot eligibility, reading penalty, crafting time/rest/cost and ash-triggered construct control without treating costs as item price.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Dart (+1 Weapon)",
+      "extra": "PHB|Dart|DMG|+1 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:dart%20(%2B1%20weapon)::::::::phb%7Cdart%7Cdmg%7C%2B1%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:dart%20(%2B1%20weapon):::::::phb%7Cdart%7Cdmg%7C%2B1%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 0.25,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "T"
+        ],
+        "baseItem": "kiwee:baseitem:phb:dart::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "20/60"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ranged-finesse-thrown-ability-choice",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: preserve the ranged simple dart,quarter-pound weight,1d4 piercing,Finesse/Thrown and local+1. Range20/60. Finesse allows Strength or Dexterity consistently for both rolls even for this ranged weapon. Dart is not Ammunition and no expend-on-shot counter or destroyed-on-hit enchantment is stated.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the full ranged dart model and replace generic range warning with exact range, ranged Finesse/Thrown choice and combat boundaries; do not import ammunition rules.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Automatic Rifle (+2 Weapon)",
+      "extra": "DMG|Automatic Rifle|DMG|+2 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:automatic%20rifle%20(%2B2%20weapon)::::::::dmg%7Cautomatic%20rifle%7Cdmg%7C%2B2%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:automatic%20rifle%20(%2B2%20weapon):::::::dmg%7Cautomatic%20rifle%7Cdmg%7C%2B2%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 8,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "BF",
+          "RLD",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:dmg:automatic%20rifle::::::::",
+        "firearm": true,
+        "attackBonus": 2,
+        "damageBonus": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "80/240"
+      },
+      {
+        "family": "ammunition",
+        "code": "modern-bullet-availability-consumption-destruction",
+        "deferred": true
+      },
+      {
+        "family": "reload",
+        "code": "thirty-shots-action-or-bonus-reload",
+        "deferred": true
+      },
+      {
+        "family": "burstFire",
+        "code": "ten-bullets-normal-range-ten-foot-cube-dc15-dex",
+        "deferred": true
+      },
+      {
+        "family": "proficiency",
+        "code": "firearm-proficiency-dm-decision"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attacks-only",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: retain2d8 piercing modern firearm,weight8,local+2 and actual properties. Range80/240,thirty shots before action/bonus reload, bullets destroyed on use; proficiency is DM-decided. Burst uses ten bullets in a10-foot cube within normal range; DC15 Dexterity failure takes normal weapon damage, no half-success damage stated. Two hands required for attacks. No guessed stock or free reload.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain every rifle field/+2 and replace generic range warning with exact range, ammunition,30-shot reload, ten-bullet burst/target/save, DM-decided proficiency and two-handed combat boundaries.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Iron Bands of Bilarro",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:iron%20bands%20of%20bilarro::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:iron%20bands%20of%20bilarro::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1
+      },
+      "resources": [
+        {
+          "key": "binding",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "targetRestrictions",
+        "code": "action-command-visible-huge-or-smaller-sixty-feet",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "dexterity-plus-proficiency-ranged-hit-restrains",
+        "deferred": true
+      },
+      {
+        "family": "conditionLifecycle",
+        "code": "bonus-command-release-or-miss-reverts-sphere",
+        "deferred": true
+      },
+      {
+        "family": "escapeCheck",
+        "code": "action-dc20-strength-success-destroys-item",
+        "deferred": true
+      },
+      {
+        "family": "retryState",
+        "code": "failed-creature-auto-fails-next-twenty-four-hours",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 177,
+      "quote": "Once the bands are used, they can't be used again until the next dawn."
+    },
+    "notes": "Partial: one-pound3-inch sphere, one use per dawn even if attack misses. Action command/throw targets visible Huge-or-smaller creature within60feet; attack bonus Dexterity modifier+proficiency. Hit restrains until bonus command release. Miss/release reverts sphere. Any creature's actionDC20 Strength success destroys bands and frees target; failure blocks that creature's retries for24hours, not everyone else's.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain weight and add the definite daily-use counter. Identify complete size/sight/range attack, restraint/release, destruction and per-creature retry lifecycle without a global escape lock or miss refund.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Shortbow (+1 Weapon)",
+      "extra": "PHB|Shortbow|DMG|+1 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:shortbow%20(%2B1%20weapon)::::::::phb%7Cshortbow%7Cdmg%7C%2B1%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:shortbow%20(%2B1%20weapon):::::::phb%7Cshortbow%7Cdmg%7C%2B1%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:phb:shortbow::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "80/320"
+      },
+      {
+        "family": "ammunition",
+        "code": "arrow-availability-consumption-recovery",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attacks-only",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: preserve simple ranged1d6 piercing,weight2,A/2H and local+1. Range80/320,arrows; full2014 ammo availability/drawing/loading/recovery/improvised behavior applies. Two hands only needed to attack. No Heavy or mastery property is introduced.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve all supported shortbow fields and replace generic range warning with exact range, ammunition, attack-only handedness and combat limits.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Greatsword (Sword of Wounding)",
+      "extra": "PHB|Greatsword|DMG|Sword of Wounding",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:greatsword%20(sword%20of%20wounding)::::::::phb%7Cgreatsword%7Cdmg%7Csword%20of%20wounding"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:greatsword%20(sword%20of%20wounding):::::::phb%7Cgreatsword%7Cdmg%7Csword%20of%20wounding"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "2d6",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:phb:greatsword::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "healingRestriction",
+        "code": "weapon-damage-hp-rest-only-recovery",
+        "deferred": true
+      },
+      {
+        "family": "woundState",
+        "code": "optional-hit-once-per-turn-stacking-wounds",
+        "deferred": true
+      },
+      {
+        "family": "turnTrigger",
+        "code": "target-start-turn-one-d-four-necrotic-per-wound-then-con15",
+        "deferred": true
+      },
+      {
+        "family": "escapeCheck",
+        "code": "action-medicine15-self-or-within-five-feet-clears-all",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "small-tiny-heavy-disadvantage-two-handed-attacks",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 207,
+      "quote": "Once per turn, when you hit a creature"
+    },
+    "notes": "Partial: preserve2d6 slashing greatsword/attunement. HP lost to this weapon is recoverable only by short/long rests. Optional wound once per turn, not only own turn; target start-turn takes1d4 necrotic per accumulated wound, then DC15 Constitution success ends all wounds. Target or creature within5feet can actionDC15 Wisdom(Medicine) to end all. No blanket permanent healing immunity or fixed wound duration;2014 H/2H apply.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the full weapon model and identify damage-specific healing restriction, optional once-per-turn stacking wounds, damage-before-save turn order, Medicine removal and2014 weapon properties.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Staff of Charming",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:staff%20of%20charming::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:staff%20of%20charming::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "requiresAttunement": true,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "versatileDamage": "1d8",
+        "damageType": "bludgeoning",
+        "properties": [
+          "V"
+        ],
+        "baseItem": "kiwee:baseitem:phb:quarterstaff::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 10
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d8 + 2"
+            }
+          ]
+        },
+        {
+          "key": "enchantmentSave",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "bard-cleric-druid-sorcerer-warlock-or-wizard"
+      },
+      {
+        "family": "itemCasting",
+        "code": "held-action-one-charge-charm-person-own-dc",
+        "ref": "kiwee:spell:phb:charm%20person::::::::",
+        "deferred": true
+      },
+      {
+        "family": "itemCasting",
+        "code": "held-action-one-charge-command-own-dc",
+        "ref": "kiwee:spell:phb:command::::::::",
+        "deferred": true
+      },
+      {
+        "family": "itemCasting",
+        "code": "held-action-one-charge-comprehend-languages-own-dc",
+        "ref": "kiwee:spell:phb:comprehend%20languages::::::::",
+        "deferred": true
+      },
+      {
+        "family": "savingThrows",
+        "code": "held-single-target-enchantment-failed-save-conversion",
+        "deferred": true
+      },
+      {
+        "family": "spellReflection",
+        "code": "successful-single-target-enchantment-reaction-charge-back-to-caster",
+        "deferred": true
+      },
+      {
+        "family": "depletionRisk",
+        "code": "last-charge-d20-one-becomes-nonmagical-quarterstaff",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-two-handed-melee-damage",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 201,
+      "quote": "The staff can also be used as a magic quarterstaff."
+    },
+    "notes": "Partial: correct magic-quarterstaff model.10charges recover1d8+2 dawn. Held action spends1charge for Charm Person/Command/Comprehend Languages using user's spellDC. Separate once-per-dawn failed-save conversion only for enchantment targeting solely user, no reaction cost stated. Any successful such save enables reaction/1charge reflection BACK TO ORIGINAL CASTER as if user cast, with or without conversion. Last-charge d20=1 removes magic, not quarterstaff. Six named caster classes eligible.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Correct other to melee weapon and add explicit quarterstaff base. Preserve damage/weight/attunement; add omitted10-charge1d8+2 dawn pool and independent daily save counter, then identify exact casting/reflection/prerequisite/depletion limits.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Greatclub (+2 Weapon)",
+      "extra": "PHB|Greatclub|DMG|+2 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:greatclub%20(%2B2%20weapon)::::::::phb%7Cgreatclub%7Cdmg%7C%2B2%20weapon"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:greatclub%20(%2B2%20weapon):::::::phb%7Cgreatclub%7Cdmg%7C%2B2%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 10,
+        "weaponCategory": "simple",
+        "damage": "1d8",
+        "damageType": "bludgeoning",
+        "properties": [
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:phb:greatclub::::::::",
+        "attackBonus": 2,
+        "damageBonus": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attacks-only",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 213,
+      "quote": "bonus to attack and damage rolls made with this magic weapon."
+    },
+    "notes": "Partial: preserve simple melee greatclub,1d8 bludgeoning,weight10,2H and local+2 attack/damage. Two hands required only for attacks, not holding. No Heavy, Push mastery, attunement or range rule is stated.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep every supported greatclub field and identify attack-only two-handed and combat execution, with no invented2014 property or2024 mastery.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Talisman of the Sphere",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:talisman%20of%20the%20sphere::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:talisman%20of%20the%20sphere::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "requiresAttunement": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "skillChecks",
+        "code": "held-sphere-control-arcana-double-proficiency",
+        "ref": "kiwee:item:dmg:sphere%20of%20annihilation::::::::",
+        "deferred": true
+      },
+      {
+        "family": "turnTrigger",
+        "code": "start-turn-controlling-sphere-action-distance-intelligence",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 207,
+      "quote": "you double your proficiency bonus on the check."
+    },
+    "notes": "Partial: one-pound attuned talisman. Only while held on Intelligence(Arcana) checks to control a Sphere of Annihilation, double proficiency. Starting turn in control allows an action to levitate sphere10feet+10times Intelligence modifier. No general Arcana expertise, proficiency grant, permanent speed or guessed nonnegative distance floor.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain weight/attunement and identify held-sphere-specific proficiency multiplication and start-turn control/action movement formula, rather than broad expertise or a generic item action.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Daern's Instant Fortress",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:daern's%20instant%20fortress::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:daern's%20instant%20fortress::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "objectTransformation",
+        "code": "ground-command-action-fortress-empty-dismissal",
+        "deferred": true
+      },
+      {
+        "family": "accessControl",
+        "code": "bonus-command-door-immune-opening-magic",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "appearance-dex15-ten-d-ten-half-success-push",
+        "deferred": true
+      },
+      {
+        "family": "objectCombat",
+        "code": "roof-door-walls-hp100-source-qualified-defenses-no-tipping",
+        "deferred": true
+      },
+      {
+        "family": "objectRepair",
+        "code": "wish-only-one-part-fifty-hp",
+        "ref": "kiwee:spell:phb:wish::::::::",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 160,
+      "quote": "which works only if the fortress is empty."
+    },
+    "notes": "Partial: action/ground/command expands1-inch cube into20-foot-square30-foot-high tower; action dismissal only when empty. Door faces activator, opens by bonus command, ignores Knock/Chime-type opening magic. Appearance: creatures DC15Dex,10d10 bludgeoning/half, pushed adjacent outside on either result; unworn/uncarried objects auto damaged/pushed. Roof/door/each wall100HP, immune nonmagical weapons except siege, resist other damage, no tipping. Wish repairs one part50HP as<=8th-level replication; no player stats.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the model and identify complete ground/empty transformation, door controls, area damage/push, independent object-part defenses and Wish-only repair without transferring tower stats or inventing daily uses.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Dagger of Venom",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:dagger%20of%20venom::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:dagger%20of%20venom::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 1,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "L",
+          "T"
+        ],
+        "baseItem": "kiwee:baseitem:phb:dagger::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      },
+      "resources": [
+        {
+          "key": "venom",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "name": "Poisoned after venom hit and failed save",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [],
+          "statuses": [
+            "poisoned"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "activationState",
+        "code": "action-coat-own-blade-one-minute-or-first-creature-hit",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "venom-hit-con15-two-d-ten-poison-no-success-damage",
+        "deferred": true
+      },
+      {
+        "family": "duration",
+        "code": "failed-venom-save-one-minute-poisoned-effect-binding",
+        "deferred": true
+      },
+      {
+        "family": "range",
+        "code": "thrown-normal20-long60",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-same-ability-light-two-weapon-thrown-melee-ability",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 161,
+      "quote": "The poison remains for 1 minute"
+    },
+    "notes": "Partial: preserve full simple dagger and local+1 attack/damage. Action coats this blade once per dawn; coating ends after1minute or first creature hit even if save succeeds. That creature fails DC15Con to take2d10 poison and be poisoned1minute; success has neither rider, no half damage. Timed status is deferred, not a carried passive. Range20/60 and2014 F/L/T apply; no attunement.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain all dagger fields; replace generic range omission with exact20/60, add explicit once-per-dawn venom counter and deferred one-minute status, and identify coating, hit/save and2014 property gates.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Ioun Stone, Leadership",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:ioun%20stone%2C%20leadership::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:ioun%20stone%2C%20leadership::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "requiresAttunement": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ability",
+        "code": "orbiting-plus-two-charisma-cap20-not-represented"
+      },
+      {
+        "family": "activationState",
+        "code": "action-orbit-one-d-three-feet-action-stow-ends-benefit",
+        "deferred": true
+      },
+      {
+        "family": "objectSeparation",
+        "code": "other-creature-action-attack-ac24-or-dex-acrobatics24",
+        "deferred": true
+      },
+      {
+        "family": "objectCombat",
+        "code": "stone-ac24-hp10-resist-all-object-worn-while-orbiting",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 176,
+      "quote": "to a maximum of 20"
+    },
+    "notes": "Partial: keep attunement. Orbiting marbled pink/green sphere grants+2 Charisma capped20; raw-score formula is unavailable, and add2/min20 could reduce existing scores above20. Do not flatten cap to unconditional+2. Action starts orbit1d3feet; owner action stows/ends, others action attackAC24 or DC24Dex(Acrobatics) separates. Stone is worn only while orbiting, AC24/10HP/resist all are object stats. Ioun lore is descriptive.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep attunement and replace vague ability-shape with the actual orbit-gated+2 Charisma maximum20 limitation; add stone activation, separation and object defenses without player-stat leakage or an invalid raw-score formula.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Helm of Telepathy",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:helm%20of%20telepathy::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:helm%20of%20telepathy::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "requiresAttunement": true
+      },
+      "resources": [
+        {
+          "key": "suggestion",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "itemCasting",
+        "code": "worn-action-detect-thoughts-save13",
+        "ref": "kiwee:spell:phb:detect%20thoughts::::::::",
+        "deferred": true
+      },
+      {
+        "family": "telepathy",
+        "code": "concentration-focused-creature-bonus-message-and-reply",
+        "deferred": true
+      },
+      {
+        "family": "itemCasting",
+        "code": "action-suggestion13-only-detect-thoughts-focused-creature",
+        "ref": "kiwee:spell:phb:suggestion::::::::",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 174,
+      "quote": "While wearing this helm"
+    },
+    "notes": "Partial: keep attuned helm and independent once-per-dawn Suggestion counter. Worn action casts Detect Thoughts DC13 without stated finite uses. Maintaining its concentration permits bonus-action messages only to focused creature; reply is that creature's bonus action while focus continues. Suggestion action/DC13 targets only that Detect Thoughts focus, not any creature. No permanent spell grant or daily Detect Thoughts quota.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain attunement, add explicit dawn Suggestion use, and identify worn casting, concentration/focus message exchange and focused-target Suggestion rather than unconditional spell grants.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Double-Bladed Scimitar (Luck Blade)",
+      "extra": "ERLW|Double-Bladed Scimitar|DMG|Luck Blade",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:double-bladed%20scimitar%20(luck%20blade)::::::::erlw%7Cdouble-bladed%20scimitar%7Cdmg%7Cluck%20blade"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:double-bladed%20scimitar%20(luck%20blade):::::::erlw%7Cdouble-bladed%20scimitar%7Cdmg%7Cluck%20blade"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "2d4",
+        "damageType": "slashing",
+        "properties": [
+          "S",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:erlw:double-bladed%20scimitar::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      },
+      "resources": [
+        {
+          "key": "luck",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        },
+        {
+          "key": "wishCharges",
+          "max": {
+            "formula": "1d4 - 1"
+          },
+          "recovery": []
+        },
+        {
+          "key": "wishDaily",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "carriedItemCondition",
+        "code": "on-person-plus-one-all-saves-and-luck",
+        "deferred": true
+      },
+      {
+        "family": "reroll",
+        "code": "no-action-disliked-attack-check-save-must-use-second",
+        "deferred": true
+      },
+      {
+        "family": "randomQuantity",
+        "code": "wish-one-d-four-minus-one-initial-count-can-zero",
+        "deferred": true
+      },
+      {
+        "family": "itemCasting",
+        "code": "held-action-wish-one-nonrecovering-charge",
+        "ref": "kiwee:spell:phb:wish::::::::",
+        "deferred": true
+      },
+      {
+        "family": "multiResourceGate",
+        "code": "wish-finite-charge-and-independent-once-per-dawn",
+        "deferred": true
+      },
+      {
+        "family": "depletionRisk",
+        "code": "zero-charges-loses-wish-property",
+        "deferred": true
+      },
+      {
+        "family": "additionalAttack",
+        "code": "own-turn-attack-action-immediate-bonus-melee-one-d-four",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attacks-only",
+        "deferred": true
+      },
+      {
+        "family": "combat",
+        "code": "weapon-hit-damage-settlement",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 179,
+      "quote": "You must use the second roll."
+    },
+    "notes": "Partial: preserve full ERLW weapon model and local+1. Remove six attuned-only save modifiers: saves/luck require on-person state, which attuned/equipped cannot replace. Luck reroll needs no action, once dawn, must second result. Wish starts1d4-1 charges, possibly0, never recovers; held action spends1 and also once dawn, property lost at0. Base Special grants immediate bonus melee1d4 only after own-turn Attack action with this weapon;2H attack-only. No fixed initial roll or global bonus attack.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Remove six unsafe attuned-only saves missing on-person gate; preserve weapon model and add separate luck/dawn, nonrecovering random Wish charges and Wish/dawn counters, with exact reroll, depletion and base Special limits.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Dwarven Plate",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:dwarven%20plate::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:dwarven%20plate::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "ac": 18,
+        "strength": 15,
+        "weight": 65,
+        "stealthDisadvantage": true,
+        "baseItem": "kiwee:baseitem:phb:plate%20armor::::::::"
+      },
+      "modifiers": [
+        {
+          "target": "ac",
+          "op": "add",
+          "value": 2,
+          "condition": {
+            "target": "equipped",
+            "op": "eq",
+            "value": true
+          }
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "forcedMovement",
+        "code": "worn-reaction-involuntary-ground-movement-reduce-up-to-ten",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 167,
+      "quote": "While wearing this armor"
+    },
+    "notes": "Partial: preserve plate AC18, Strength15,65lb and Stealth disadvantage; gate+2AC to worn/equipped, not inventory-wide. Worn reaction reduces involuntary movement along ground by up to10feet, not voluntary movement, flight, general speed or mandatory10feet. No dwarf-only prerequisite or attunement is stated.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Add missing equipped/worn condition to+2AC, retain complete base plate model, and identify reaction-only involuntary ground movement with optional reduction up to10feet.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Jet",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:jet::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:jet::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "value": 10000
+      }
+    },
+    "unsupported": [],
+    "evidence": {
+      "page": 134,
+      "quote": "An opaque deep black gemstone."
+    },
+    "notes": "Complete known model:2014 DMG gemstone, value10000cp. Opaque black appearance is descriptive; no activation, attunement, benefit, property, weight or use count is supplied.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the supported10000cp equipment value and confirm that all English content is appearance only; no operative prose mechanism is omitted.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Scimitar (Holy Avenger)",
+      "extra": "PHB|Scimitar|DMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:scimitar%20(holy%20avenger)::::::::phb%7Cscimitar%7Cdmg%7Choly%20avenger"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:scimitar%20(holy%20avenger):::::::phb%7Cscimitar%7Cdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "slashing",
+        "properties": [
+          "F",
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:phb:scimitar::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-required"
+      },
+      {
+        "family": "combat",
+        "code": "fiend-or-undead-hit-extra-two-d-ten-radiant",
+        "deferred": true
+      },
+      {
+        "family": "aura",
+        "code": "drawn-held-friendly-ten-feet-magical-save-advantage",
+        "deferred": true
+      },
+      {
+        "family": "classLevel",
+        "code": "seventeen-paladin-levels-aura-thirty-feet",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-same-ability-light-two-weapon",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 174,
+      "quote": "While you hold the drawn sword"
+    },
+    "notes": "Partial: full2014 martial scimitar,1d6 slashing,3lb,F/L and local+3 retained. Paladin attunement; fiend/undead hit adds2d10 radiant only. Drawn and held aura10feet gives user/friendly creatures advantage only against spells/other magical effects;30feet at17 PALADIN levels, not total level. No universal advantage, target-independent extra damage, aura while sheathed or2024 mastery.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete scimitar model and local+3, replace generic attunement omission with paladin prerequisite, and identify target-qualified hit rider, drawn/held friendly aura, paladin-only radius and2014 properties.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Shortsword (Holy Avenger)",
+      "extra": "PHB|Shortsword|DMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:shortsword%20(holy%20avenger)::::::::phb%7Cshortsword%7Cdmg%7Choly%20avenger"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:shortsword%20(holy%20avenger):::::::phb%7Cshortsword%7Cdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:phb:shortsword::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-required"
+      },
+      {
+        "family": "combat",
+        "code": "fiend-or-undead-hit-extra-two-d-ten-radiant",
+        "deferred": true
+      },
+      {
+        "family": "aura",
+        "code": "drawn-held-friendly-ten-feet-magical-save-advantage",
+        "deferred": true
+      },
+      {
+        "family": "classLevel",
+        "code": "seventeen-paladin-levels-aura-thirty-feet",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-same-ability-light-two-weapon",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 174,
+      "quote": "While you hold the drawn sword"
+    },
+    "notes": "Partial: full2014 martial shortsword,1d6 piercing,2lb,F/L and local+3 retained. Paladin attunement; only fiend/undead hit adds2d10 radiant. Drawn/held10-foot aura benefits user/friendly creatures against magical saves only;17 paladin levels makes30feet. Keep2014 martial classification and properties; no2024 simple classification/mastery, unconditional aura or global damage rider.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep all2014 shortsword fields and local+3, specify paladin prerequisite, conditional fiend/undead damage, drawn/held friendly magical-save aura, paladin-class radius and F/L execution limits.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "+3 Rod of the Pact Keeper",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:%2B3%20rod%20of%20the%20pact%20keeper::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:%2B3%20rod%20of%20the%20pact%20keeper::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "requiresAttunement": true
+      },
+      "resources": [
+        {
+          "key": "slotRecovery",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "warlock-required"
+      },
+      {
+        "family": "spellBonuses",
+        "code": "held-plus-three-spell-attacks-and-warlock-spell-dcs"
+      },
+      {
+        "family": "spellSlotRecovery",
+        "code": "held-action-one-warlock-slot-once-per-long-rest",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 197,
+      "quote": "While holding this rod"
+    },
+    "notes": "Partial: keep2lb and attunement; warlock prerequisite. Remove broad model spellAttackBonus/spellDcBonus: benefits require held rod, and saveDC+3 applies to warlock spells. No supported holder predicate/source-scoped DC exists here. Preserve one slot-recovery use per long rest; held action restores one WARLOCK slot, not any caster's slot or all slots. No slot level, resource link or spell ability guessed.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Remove ungated spellAttackBonus/spellDcBonus missing held state and warlock-spell DC scope; retain weight/attunement, add explicit once-per-long-rest slot recovery counter, and mark prerequisite, conditional bonuses and warlock-slot restoration.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "DMG",
+      "engName": "Potion of Flying",
+      "packId": "kiwee",
+      "key": "kiwee:item:dmg:potion%20of%20flying::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:potion%20of%20flying::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "potion",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "drinkOrAdminister",
+          "activation": "action",
+          "target": "creature",
+          "consumes": {
+            "resource": "potion",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Consumed potion hover",
+          "duration": {
+            "unit": "hour",
+            "value": 1
+          },
+          "changes": [
+            {
+              "target": "speed.hover",
+              "op": "set",
+              "value": true
+            }
+          ],
+          "statuses": [],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "movement",
+        "code": "consumed-fly-speed-equals-walking-speed"
+      },
+      {
+        "family": "consumableEffect",
+        "code": "action-consumption-binds-one-hour-flight-and-hover",
+        "deferred": true
+      },
+      {
+        "family": "duration",
+        "code": "one-hour-expiry-fall-only-if-airborne-without-other-means",
+        "deferred": true
+      }
+    ],
+    "evidence": {
+      "page": 187,
+      "quote": "you gain a flying speed equal to your walking speed"
+    },
+    "notes": "Partial: one-use nonrecovering potion,2014 drinking/administering action and deferred one-hour hover descriptor retained. Consumed flight equals walking speed, not fixed30/60 or unsupported speed formula. After1hour, fall only if still in air and no other means to stay aloft. No hover while merely carrying potion; effect binding/timer/fall require execution. Clear floating liquid/cloudy impurities are descriptive.",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep equipment model, add one-use nonrecovering consumption and exact deferred one-hour hover, replace vague relative-speed omission with walk-equal flight and conditional expiry fall; never add permanent inventory flight.",
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-item-004"
+  }
+]
