@@ -265,5 +265,27 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XDMG-baseitem-001",
+    "path": "baseitem/XDMG-baseitem-001.json",
+    "sha256": "9a086f53106681534562a50a72d03211fe129a44fcb061f7249446174ef4ea24",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:baseitem:xdmg:revolver::::::::",
+      "kiwee:baseitem:xdmg:shotgun::::::::",
+      "kiwee:baseitem:xdmg:hunting%20rifle::::::::",
+      "kiwee:baseitem:xdmg:laser%20rifle::::::::",
+      "kiwee:baseitem:xdmg:laser%20pistol::::::::",
+      "kiwee:baseitem:xdmg:semiautomatic%20pistol::::::::",
+      "kiwee:baseitem:xdmg:antimatter%20rifle::::::::",
+      "kiwee:baseitem:xdmg:energy%20cell::::::::",
+      "kiwee:baseitem:xdmg:automatic%20rifle::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
