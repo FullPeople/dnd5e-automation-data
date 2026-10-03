@@ -44,5 +44,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-classFeature-placeholder-001",
+    "path": "classFeature/XPHB-classFeature-placeholder-001.json",
+    "sha256": "4f1d6c48a193eff1454913ed095bf3e95ca9acbd1ae66689fb474a9d948a10f3",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:barbarian:::10:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:bard:::14:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:cleric:::17:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:druid:::10:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:fighter:::10:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:monk:::11:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:paladin:::15:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:ranger:::11:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:rogue:::13:::",
+      "kiwee:classfeature:xphb:subclass%20feature:xphb:wizard:::10:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
