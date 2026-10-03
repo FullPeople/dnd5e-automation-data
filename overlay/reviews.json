@@ -448,5 +448,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XDMG-item-003",
+    "path": "item/XDMG-item-003.json",
+    "sha256": "33dbaedfc22501ac211d19c1c0d70047a55fcd879ab6f48b96338074949a175e",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:xdmg:ring%20mail%20(enspelled%20armor%20(level%201))::::::::xphb%7Cring%20mail%7Cxdmg%7Censpelled%20armor%20(level%201)",
+      "kiwee:item:xdmg:energy%20cell%20(%2B3%20ammunition)::::::::xdmg%7Cenergy%20cell%7Cxdmg%7C%2B3%20ammunition",
+      "kiwee:item:xdmg:rope%20of%20climbing::::::::",
+      "kiwee:item:xdmg:wand%20of%20paralysis::::::::",
+      "kiwee:item:xdmg:mirror%20of%20life%20trapping::::::::",
+      "kiwee:item:xdmg:scimitar%20(moonblade)::::::::xphb%7Cscimitar%7Cxdmg%7Cmoonblade",
+      "kiwee:item:xdmg:flail%20(holy%20avenger)::::::::xphb%7Cflail%7Cxdmg%7Choly%20avenger",
+      "kiwee:item:xdmg:hoopak%20(%2B3%20weapon)::::::::dsotdq%7Choopak%7Cxdmg%7C%2B3%20weapon",
+      "kiwee:item:xdmg:book%20of%20vile%20darkness::::::::",
+      "kiwee:item:xdmg:pale%20tincture::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]

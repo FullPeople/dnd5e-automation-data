@@ -1,0 +1,3794 @@
+[
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Ring Mail (Enspelled Armor (Level 1))",
+      "extra": "XPHB|Ring Mail|XDMG|Enspelled Armor (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:ring%20mail%20(enspelled%20armor%20(level%201))::::::::xphb%7Cring%20mail%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:ring%20mail%20(enspelled%20armor%20(level%201)):::::::xphb%7Cring%20mail%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "weight": 40,
+        "ac": 14,
+        "stealthDisadvantage": true,
+        "requiresAttunement": true,
+        "baseItem": "kiwee:baseitem:xphb:ring%20mail::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-one-abjuration-or-illusion-spell",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "worn-attuned-armor-one-charge-dc-thirteen-attack-five",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While wearing the armor, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English armor rule fixes a level-1 Abjuration/Illusion spell at creation and gates one-charge DC-13/attack-5 casting on wearing and attunement.",
+    "notes": "Partial: requires attunement. One level-1 spell from Abjuration or Illusion is fixed when the armor is created. The armor holds 6 charges and regains 1d6 expended charges at dawn, capped at 6. While wearing it, expend 1 charge to cast that fixed spell using absolute save DC 13 and spell attack +5. These are not +13/+5 bonuses to the wearer's other spells. Spell identity, normal casting time, targets, duration and any concentration cannot be assigned before its creation-time choice is bound. Preserve the actual armor AC, Dexterity handling, Strength threshold, Stealth disadvantage and weight where present."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Scale Mail (Enspelled Armor (Level 1))",
+      "extra": "XPHB|Scale Mail|XDMG|Enspelled Armor (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:scale%20mail%20(enspelled%20armor%20(level%201))::::::::xphb%7Cscale%20mail%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:scale%20mail%20(enspelled%20armor%20(level%201)):::::::xphb%7Cscale%20mail%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "weight": 45,
+        "ac": 14,
+        "stealthDisadvantage": true,
+        "requiresAttunement": true,
+        "baseItem": "kiwee:baseitem:xphb:scale%20mail::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-one-abjuration-or-illusion-spell",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "worn-attuned-armor-one-charge-dc-thirteen-attack-five",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While wearing the armor, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English armor rule fixes a level-1 Abjuration/Illusion spell at creation and gates one-charge DC-13/attack-5 casting on wearing and attunement.",
+    "notes": "Partial: requires attunement. One level-1 spell from Abjuration or Illusion is fixed when the armor is created. The armor holds 6 charges and regains 1d6 expended charges at dawn, capped at 6. While wearing it, expend 1 charge to cast that fixed spell using absolute save DC 13 and spell attack +5. These are not +13/+5 bonuses to the wearer's other spells. Spell identity, normal casting time, targets, duration and any concentration cannot be assigned before its creation-time choice is bound. Preserve the actual armor AC, Dexterity handling, Strength threshold, Stealth disadvantage and weight where present."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Splint Armor (Enspelled Armor (Level 1))",
+      "extra": "XPHB|Splint Armor|XDMG|Enspelled Armor (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:splint%20armor%20(enspelled%20armor%20(level%201))::::::::xphb%7Csplint%20armor%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:splint%20armor%20(enspelled%20armor%20(level%201)):::::::xphb%7Csplint%20armor%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "weight": 60,
+        "ac": 17,
+        "strength": 15,
+        "stealthDisadvantage": true,
+        "requiresAttunement": true,
+        "baseItem": "kiwee:baseitem:xphb:splint%20armor::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-one-abjuration-or-illusion-spell",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "worn-attuned-armor-one-charge-dc-thirteen-attack-five",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While wearing the armor, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English armor rule fixes a level-1 Abjuration/Illusion spell at creation and gates one-charge DC-13/attack-5 casting on wearing and attunement.",
+    "notes": "Partial: requires attunement. One level-1 spell from Abjuration or Illusion is fixed when the armor is created. The armor holds 6 charges and regains 1d6 expended charges at dawn, capped at 6. While wearing it, expend 1 charge to cast that fixed spell using absolute save DC 13 and spell attack +5. These are not +13/+5 bonuses to the wearer's other spells. Spell identity, normal casting time, targets, duration and any concentration cannot be assigned before its creation-time choice is bound. Preserve the actual armor AC, Dexterity handling, Strength threshold, Stealth disadvantage and weight where present."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Studded Leather Armor (Enspelled Armor (Level 1))",
+      "extra": "XPHB|Studded Leather Armor|XDMG|Enspelled Armor (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:studded%20leather%20armor%20(enspelled%20armor%20(level%201))::::::::xphb%7Cstudded%20leather%20armor%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:studded%20leather%20armor%20(enspelled%20armor%20(level%201)):::::::xphb%7Cstudded%20leather%20armor%7Cxdmg%7Censpelled%20armor%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "lightArmor",
+        "weight": 13,
+        "ac": 12,
+        "requiresAttunement": true,
+        "baseItem": "kiwee:baseitem:xphb:studded%20leather%20armor::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-one-abjuration-or-illusion-spell",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "worn-attuned-armor-one-charge-dc-thirteen-attack-five",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While wearing the armor, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English armor rule fixes a level-1 Abjuration/Illusion spell at creation and gates one-charge DC-13/attack-5 casting on wearing and attunement.",
+    "notes": "Partial: requires attunement. One level-1 spell from Abjuration or Illusion is fixed when the armor is created. The armor holds 6 charges and regains 1d6 expended charges at dawn, capped at 6. While wearing it, expend 1 charge to cast that fixed spell using absolute save DC 13 and spell attack +5. These are not +13/+5 bonuses to the wearer's other spells. Spell identity, normal casting time, targets, duration and any concentration cannot be assigned before its creation-time choice is bound. Preserve the actual armor AC, Dexterity handling, Strength threshold, Stealth disadvantage and weight where present."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Energy Cell (+3 Ammunition)",
+      "extra": "XDMG|Energy Cell|XDMG|+3 Ammunition",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:energy%20cell%20(%2B3%20ammunition)::::::::xdmg%7Cenergy%20cell%7Cxdmg%7C%2B3%20ammunition"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:energy%20cell%20(%2B3%20ammunition):::::::xdmg%7Cenergy%20cell%7Cxdmg%7C%2B3%20ammunition"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.5,
+        "baseItem": "kiwee:baseitem:xdmg:energy%20cell::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunitionBinding",
+        "code": "cell-specific-plus-three-shot-attack-and-damage",
+        "ref": "english.raw.bonusWeapon",
+        "deferred": true
+      },
+      {
+        "family": "ammunitionEnchantmentLifecycle",
+        "code": "magic-lost-after-first-target-hit",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "energyCellDepletion",
+        "code": "futuristic-cell-depletion-and-dm-permitted-recharge",
+        "ref": "english.raw.baseItem",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 228,
+      "quote": "Once it hits a target, the ammunition is no longer magical."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English ammunition rule limits +3 to the magic ammunition and ends it on a hit; physical cell depletion/recharging needs its own state and supplies no fixed resource definition.",
+    "notes": "Partial: the futuristic Energy Cell weighs 0.5 lb and gives +3 only to attack/damage rolls made with its magic ammunition. Its enchantment ends once the ammunition hits a target; do not preserve +3 indefinitely after a hit or assign it to every weapon the bearer uses. Futuristic cells deplete with use and may be recharged only with suitable equipment and DM permission. No shot capacity, fixed recharge period or restoration of the +3 enchantment by electrical recharging is specified. Physical depletion and the on-hit loss of magic are separate states."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Revolver (Enspelled Weapon (Cantrip))",
+      "extra": "XDMG|Revolver|XDMG|Enspelled Weapon (Cantrip)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:revolver%20(enspelled%20weapon%20(cantrip))::::::::xdmg%7Crevolver%7Cxdmg%7Censpelled%20weapon%20(cantrip)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:revolver%20(enspelled%20weapon%20(cantrip)):::::::xdmg%7Crevolver%7Cxdmg%7Censpelled%20weapon%20(cantrip)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "baseItem": "kiwee:baseitem:xdmg:revolver::::::::",
+        "firearm": true
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-0-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-13-attack-5",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "ammunitionConsumption",
+        "code": "modern-firearm-ammunition-destroyed-on-use",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmReload",
+        "code": "shot-capacity-action-or-bonus-reload-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-40-long-120-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-0 spell, one-charge held-item use and absolute DC 13/attack +5; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One cantrip is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 13 and spell attack +5; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Quaal's Feather Token, Swan Boat",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:quaal's%20feather%20token%2C%20swan%20boat::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:quaal's%20feather%20token%2C%20swan%20boat::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "token-use",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "create-swan-boat",
+          "activation": "action",
+          "target": "area",
+          "consumes": {
+            "resource": "token-use",
+            "amount": 1
+          },
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "command-swan-boat",
+          "activation": "action",
+          "target": "object",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "dismiss-swan-boat",
+          "activation": "action",
+          "target": "object",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "vehicleCreation",
+        "code": "consumed-token-water-sixty-foot-diameter-fifty-by-twenty-foot-boat",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "vehicleMovement",
+        "code": "aboard-magic-action-six-miles-per-hour-ninety-degree-turn",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "createdObjectLifecycle",
+        "code": "boat-twenty-four-hours-or-magic-action-dismissal",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 290,
+      "quote": "The boat remains for 24 hours and then disappears."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The full English token procedure fixes one consumption, water suitability, vehicle dimensions, movement commands and disappearance; Foundry's single utility activity omits required state.",
+    "notes": "Partial: a Magic action touches this token to water at least 60 ft in diameter. The token is consumed and replaced by a swan-shaped boat 50 ft long and 20 ft wide. It propels itself across water at 6 miles per hour. While aboard, a Magic action commands movement or a turn of up to 90 degrees. It disappears after 24 hours or can be dismissed by a Magic action. No passenger/cargo capacity or character Swim Speed is supplied; no attunement is required by the source fields."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Longbow (Enspelled Weapon (Level 4))",
+      "extra": "XPHB|Longbow|XDMG|Enspelled Weapon (Level 4)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:longbow%20(enspelled%20weapon%20(level%204))::::::::xphb%7Clongbow%7Cxdmg%7Censpelled%20weapon%20(level%204)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:longbow%20(enspelled%20weapon%20(level%204)):::::::xphb%7Clongbow%7Cxdmg%7Censpelled%20weapon%20(level%204)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "H",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:longbow::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-4-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-15-attack-7",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "attack-ammunition-free-hand-and-recovery-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponAbility",
+        "code": "heavy-attack-ability-threshold-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponGrip",
+        "code": "two-handed-attack-hand-occupancy-deferred",
+        "ref": "english.raw.property/2",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-damaging-hit-speed-reduction-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-150-long-600-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-4 spell, one-charge held-item use and absolute DC 15/attack +7; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-4 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 15 and spell attack +7; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Rope of Climbing",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:rope%20of%20climbing::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:rope%20of%20climbing::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "command-rope",
+          "activation": "action",
+          "target": "object",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "animatedRopeMovement",
+        "code": "held-end-magic-command-ten-foot-turn-movement-with-length-limit",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "ropeManipulation",
+        "code": "fasten-unfasten-knot-unknot-coil-state-and-three-thousand-pound-capacity",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "climbingChecks",
+        "code": "knotted-fifty-foot-rope-one-foot-knots-climbing-only-advantage",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "objectDurability",
+        "code": "rope-ac-twenty-hp-twenty-poison-psychic-immunity",
+        "ref": "english.raw.entries/2"
+      },
+      {
+        "family": "objectRegeneration",
+        "code": "one-hp-per-five-minutes-while-alive-destroyed-at-zero",
+        "ref": "english.raw.entries/2",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 301,
+      "quote": "This 60-foot length of rope can hold up to 3,000 pounds."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The English rope owns its AC/HP/immunities and conditional regeneration; its movement, knots and climbing checks require object state rather than transferred actor benefits.",
+    "notes": "Partial: while holding one end, a Magic action commands the other end toward a selected destination up to the rope's 60-ft length away. It moves 10 ft on the first commanded turn and 10 ft at each later turn start until arrival or a stop command. It can fasten/unfasten to an object, knot/unknot or coil. Knots appear every 1 ft, shorten it to 50 ft, and grant advantage only on checks to climb using the knotted rope. Capacity is 3,000 lb. The rope itself has AC 20, HP 20 and Poison/Psychic immunity, regenerating 1 HP per 5 minutes only while at least 1 HP remains; at 0 HP it is destroyed. These are object stats, not wielder stats or an arbitrary repair action. No actual item weight/price is supplied."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Boots of Levitation",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:boots%20of%20levitation::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:boots%20of%20levitation::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "requiresAttunement": true
+      },
+      "actions": [
+        {
+          "type": "cast",
+          "key": "self-levitate",
+          "activation": "action",
+          "target": "self",
+          "spell": "kiwee:spell:xphb:levitate::::::::",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "itemSpellcasting",
+        "code": "worn-attuned-at-will-self-only-levitate",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "levitationMovement",
+        "code": "concentration-ten-minute-self-altitude-and-surface-motion",
+        "ref": "spell:Levitate|XPHB",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 239,
+      "quote": "on yourself."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Full English text gives at-will Levitate only on the worn boots' attuned user; actual spell timing and concentration/movement need deferred execution.",
+    "notes": "Partial: while worn and attuned, the boots cast Levitate on the wearer at will with its normal action casting time. Levitate lasts up to 10 minutes with concentration, initially lifts the wearer up to 20 ft, and allows self altitude adjustment by up to 20 ft as part of movement on the wearer's turn. Horizontal movement needs pushing/pulling against an object within reach; when it ends the wearer floats gently down. Wearing gates casting; use the spell's normal lifecycle. No charge pool, flight speed or spell preparation is granted."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Wand of Paralysis",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:wand%20of%20paralysis::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:wand%20of%20paralysis::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "requiresAttunement": true
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 7
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6+1"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "paralyzing-ray",
+          "activation": "action",
+          "target": "creature",
+          "save": {
+            "ability": "con",
+            "dc": 15
+          },
+          "consumes": {
+            "resource": "charges",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "spellcaster-prerequisite",
+        "ref": "english.raw.reqAttune"
+      },
+      {
+        "family": "paralyzingRay",
+        "code": "held-wand-visible-creature-sixty-feet-con-fifteen",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "target-paralyzed-one-minute-end-turn-repeat-save",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "itemDestruction",
+        "code": "last-charge-d-twenty-one-destroys-wand",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 321,
+      "quote": "If you expend the wand's last charge, roll"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The complete English ray rule specifies visibility/range, zero damage, target-only timed paralysis and final-charge destruction; replace unsafe Foundry effect ownership and missing consumption.",
+    "notes": "Partial: attunement requires a spellcaster. This 1-lb wand has 7 charges, regaining 1d6+1 expended charges each dawn up to 7. While holding it, a Magic action spends 1 charge against one visible creature within 60 ft: CON DC 15, failure Paralyzed for 1 minute. The target repeats the save at the end of each of its turns; success ends its effect. No damage occurs on either save outcome. Spending the final charge also rolls d20; a 1 destroys the wand. Paralysis is a temporary target effect, never a transferred bearer condition."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Mirror of Life Trapping",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:mirror%20of%20life%20trapping::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:mirror%20of%20life%20trapping::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 50
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "activate-or-deactivate-mirror",
+          "activation": "action",
+          "target": "object",
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "reflection-capture",
+          "activation": "special",
+          "target": "creature",
+          "save": {
+            "ability": "cha",
+            "dc": 15
+          },
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "communicate-with-prisoner",
+          "activation": "action",
+          "target": "object",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "release-prisoner",
+          "activation": "action",
+          "target": "object",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "objectDurability",
+        "code": "mirror-owned-ac-eleven-hp-ten-immunities-and-bludgeoning-vulnerability",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "activatedObjectState",
+        "code": "vertical-mirror-five-foot-command-word-magic-toggle",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "reflectionCapture",
+        "code": "active-mirror-thirty-foot-reflection-cha-fifteen-exemptions",
+        "ref": "english.raw.entries/2",
+        "deferred": true
+      },
+      {
+        "family": "extradimensionalCells",
+        "code": "twelve-cells-fog-needs-suspension-and-planar-escape",
+        "ref": "english.raw.entries/3",
+        "deferred": true
+      },
+      {
+        "family": "prisonerRelease",
+        "code": "full-capacity-random-release-shatter-all-and-command-release",
+        "ref": "english.raw.entries/4",
+        "deferred": true
+      },
+      {
+        "family": "prisonerCommunication",
+        "code": "five-foot-magic-action-prisoner-or-cell-image",
+        "ref": "english.raw.entries/5",
+        "deferred": true
+      },
+      {
+        "family": "extradimensionalCatastrophe",
+        "code": "nested-items-destroyed-ten-foot-total-cover-astral-gate",
+        "ref": "english.raw.entries/7",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 278,
+      "quote": "If the mirror is shattered, all creatures it contains are freed"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The full English mirror procedure needs object-owned defenses, activation/observer identity, cell occupancy and prisoner lifecycle; replace unbound Foundry counters with its actual conditional actions.",
+    "notes": "Partial: a 4-ft-tall, 2-ft-wide, 50-lb mirror with object AC 11, HP 10, Poison/Psychic immunity and Bludgeoning vulnerability; 0 HP shatters it. To activate it, hang it vertically, be within 5 ft, and use a Magic action/command word; a Magic action repeating that word deactivates it. While active, another creature seeing its reflection within 30 ft makes CHA DC 15: failure traps it and worn/carried possessions in one of 12 cells. The activator is exempt, informed creatures have advantage, and Constructs automatically succeed. A cell is infinite fog with 10-ft visibility; captives neither age nor need food/drink/sleep and can escape by planar travel. Capturing into a full mirror frees a random prisoner, appearing in an unoccupied space within sight facing away; shattering frees all near it. Within 5 ft, a Magic action naming a prisoner or cell displays an image for communication; a second command word/Magic action releases one prisoner and possessions to the nearest unoccupied space facing away. Nesting it inside a Bag of Holding, Portable Hole or similar extradimensional item destroys both and creates a closing, one-way Astral gate: creatures within 10 ft without Total Cover go to a random Astral location."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Cap of Water Breathing",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:cap%20of%20water%20breathing::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:cap%20of%20water%20breathing::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "create-air-bubble",
+          "activation": "action",
+          "target": "self",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "underwaterBreathing",
+        "code": "worn-underwater-cap-magic-action-head-air-bubble",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "bubble-ends-on-cap-removal-or-leaving-underwater",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 242,
+      "quote": "This bubble allows you to breathe normally underwater."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The cap creates a conditional air bubble, not a permanent transformed status; discard unsafe Foundry transfer/duration metadata and catalog class links.",
+    "notes": "Partial: while wearing the cap underwater, a Magic action creates an air bubble around the wearer's head that permits normal underwater breathing. The bubble remains only until the cap is removed or the wearer leaves the water. The source supplies no attunement, charge pool, Swim Speed, shape change or permanent breathing trait. Carrying the cap alone gives no benefit."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Lute of Thunderous Thumping",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:lute%20of%20thunderous%20thumping::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:lute%20of%20thunderous%20thumping::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:club::::::::"
+      },
+      "actions": [
+        {
+          "type": "damage",
+          "key": "additional-thunder-on-hit",
+          "activation": "special",
+          "target": "other",
+          "formula": "2d8",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "additionalHitDamage",
+        "code": "club-hit-two-d-eight-extra-thunder",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionalAttackAbility",
+        "code": "bard-singing-or-humming-melee-attack-roll-only-charisma",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "lightExtraAttack",
+        "code": "different-light-weapon-bonus-action-sequence-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-damaging-hit-speed-reduction-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 275,
+      "quote": "provided you sing or hum while making the attack."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The full English rule adds Thunder on hits but restricts CHA substitution to a singing/humming Bard's melee attack roll; Foundry's unconditional ability override is unsafe.",
+    "notes": "Partial: the 2-lb Lute works as a simple magic Club, 1d4 Bludgeoning with Light/Slow, adding 2d8 Thunder on a hit. If the wielder is a Bard and sings or hums during a melee attack, CHA may replace STR for that melee attack roll only. The text does not replace the damage-roll ability or grant an unrestricted CHA weapon attack. No numeric weapon enhancement or attunement field is supplied. Preserve hit damage separately from the base Club damage and the conditional ability substitution."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Laser Pistol (Enspelled Weapon (Level 3))",
+      "extra": "XDMG|Laser Pistol|XDMG|Enspelled Weapon (Level 3)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:laser%20pistol%20(enspelled%20weapon%20(level%203))::::::::xdmg%7Claser%20pistol%7Cxdmg%7Censpelled%20weapon%20(level%203)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:laser%20pistol%20(enspelled%20weapon%20(level%203)):::::::xdmg%7Claser%20pistol%7Cxdmg%7Censpelled%20weapon%20(level%203)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "3d6",
+        "damageType": "radiant",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "baseItem": "kiwee:baseitem:xdmg:laser%20pistol::::::::",
+        "firearm": true
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-3-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-15-attack-7",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "energyCellDepletion",
+        "code": "futuristic-cell-depletion-and-dm-permitted-recharge",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmReload",
+        "code": "shot-capacity-action-or-bonus-reload-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-40-long-120-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-3 spell, one-charge held-item use and absolute DC 15/attack +7; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-3 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 15 and spell attack +7; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Semiautomatic Pistol (Enspelled Weapon (Level 3))",
+      "extra": "XDMG|Semiautomatic Pistol|XDMG|Enspelled Weapon (Level 3)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:semiautomatic%20pistol%20(enspelled%20weapon%20(level%203))::::::::xdmg%7Csemiautomatic%20pistol%7Cxdmg%7Censpelled%20weapon%20(level%203)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:semiautomatic%20pistol%20(enspelled%20weapon%20(level%203)):::::::xdmg%7Csemiautomatic%20pistol%7Cxdmg%7Censpelled%20weapon%20(level%203)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "2d6",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "baseItem": "kiwee:baseitem:xdmg:semiautomatic%20pistol::::::::",
+        "firearm": true
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-3-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-15-attack-7",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "ammunitionConsumption",
+        "code": "modern-firearm-ammunition-destroyed-on-use",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmReload",
+        "code": "shot-capacity-action-or-bonus-reload-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-50-long-150-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-3 spell, one-charge held-item use and absolute DC 15/attack +7; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-3 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 15 and spell attack +7; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Scimitar (Moonblade)",
+      "extra": "XPHB|Scimitar|XDMG|Moonblade",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:scimitar%20(moonblade)::::::::xphb%7Cscimitar%7Cxdmg%7Cmoonblade"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:scimitar%20(moonblade):::::::xphb%7Cscimitar%7Cxdmg%7Cmoonblade"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "slashing",
+        "properties": [
+          "F",
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:scimitar::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "weapon-chosen-bearer-instant-attunement-only-magic-owner",
+        "ref": "english.raw.entries/1"
+      },
+      {
+        "family": "attunementLifecycle",
+        "code": "bound-until-bearer-death-or-weapon-destruction",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "rejectionCurse",
+        "code": "unaccepted-attunement-all-d-twenty-disadvantage-twenty-four-hours",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "moonbladeRunes",
+        "code": "bearer-history-typically-one-d-six-plus-one-dm-or-table-properties",
+        "ref": "english.raw.entries/2"
+      },
+      {
+        "family": "runeWeaponEnhancement",
+        "code": "chosen-rune-plus-one-weapon-bonus-capped-at-three-reroll-cap",
+        "ref": "english.raw.entries/6/rows/0"
+      },
+      {
+        "family": "runeForceDamage",
+        "code": "chosen-rune-hit-one-d-six-force-stacks-to-three-d-six",
+        "ref": "english.raw.entries/6/rows/1",
+        "deferred": true
+      },
+      {
+        "family": "runeReturningWeapon",
+        "code": "chosen-rune-thrown-twenty-sixty-return-after-attack",
+        "ref": "english.raw.entries/6/rows/2",
+        "deferred": true
+      },
+      {
+        "family": "runeCriticalThreshold",
+        "code": "chosen-rune-natural-nineteen-or-twenty-only",
+        "ref": "english.raw.entries/6/rows/3",
+        "deferred": true
+      },
+      {
+        "family": "runeBlindingFlash",
+        "code": "chosen-rune-bonus-action-con-fifteen-other-targets-rest-recovery",
+        "ref": "english.raw.entries/6/rows/4",
+        "deferred": true
+      },
+      {
+        "family": "runeSpellStorage",
+        "code": "chosen-rune-ring-of-spell-storing-state-and-original-caster-values",
+        "ref": "english.raw.entries/6/rows/5",
+        "deferred": true
+      },
+      {
+        "family": "runeSummoning",
+        "code": "chosen-rune-one-controlled-fey-neutral-shadow-no-propagation",
+        "ref": "english.raw.entries/6/rows/6",
+        "deferred": true
+      },
+      {
+        "family": "minorPropertySelection",
+        "code": "linked-d-twenty-minor-property-roll-twice-on-twenty",
+        "ref": "english.raw.entries/3"
+      },
+      {
+        "family": "itemSentience",
+        "code": "sword-owned-abilities-senses-alignment-and-emotive-communication",
+        "ref": "english.raw.entries/4"
+      },
+      {
+        "family": "weaponAbility",
+        "code": "finesse-same-ability-attack-and-damage-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "lightExtraAttack",
+        "code": "different-light-weapon-bonus-action-sequence-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "nick-light-extra-attack-once-per-turn-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "a nonmagical weapon of its kind for anyone other than its chosen bearer."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full Moonblade body restricts magic to its chosen bearer and makes later runes/minor properties instance-specific selections; preserve the first rune and explicitly defer each selected-property procedure.",
+    "notes": "Partial: only the weapon's chosen bearer receives magic benefits. An accepted creature attunes instantly and creates a rune; attunement ends only on death or destruction, even if alignment/goals later differ. Rejection curses all D20 Tests with disadvantage for 24 hours or until Remove Curse/similar magic. First rune grants +1 attack/damage; there is one rune per willing bearer, typically 1d6+1, with one DM-chosen or d100 property per later rune. This count is history, not charges. Extra properties are unselected: bonus increases up to +3; 1d6 Force per hit accumulates to 3d6; Thrown 20/60 ft returns after attack; critical 19/20; Bonus Action flash blinds other creatures within 30 ft without Total Cover on CON DC 15 for 1 minute, repeating saves at turn ends, once per Short or Long Rest; Ring of Spell Storing properties; or a controlled shadow-elf Fey summon. Only one summon may serve at once; Magic action creates it within 120 ft in an empty space, Neutral Shadow stats without creating shadows, ending at 0 HP or Magic dismissal. One linked minor-property selection is also required. Sentience belongs to the sword: INT 12/WIS 10/CHA 12, hearing/Darkvision 120 ft, creator's alignment, emotion/tingling communication and trance/sleep visions."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Ring of Psychic Resistance",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:ring%20of%20psychic%20resistance::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:ring%20of%20psychic%20resistance::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "modifiers": [
+        {
+          "target": "resist:psychic",
+          "op": "set",
+          "value": true,
+          "condition": {
+            "target": "equipped",
+            "op": "eq",
+            "value": true
+          }
+        }
+      ]
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 294,
+      "quote": "damage while wearing this ring."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The actual XDMG template and psychic field confirm worn-only resistance; add the missing ownership condition and resolve the helper placeholder from real fields.",
+    "notes": "Complete: expand the actual Ring of Resistance|XDMG template with resist=[psychic] and detail1=jade. The worn ring grants Psychic damage resistance; carrying it is insufficient. No attunement requirement, weight or price is supplied in this English item. The template helper's resistance label is resolved from the actual psychic field rather than treating its unresolved placeholder as absent mechanics."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Flail (Enspelled Weapon (Level 1))",
+      "extra": "XPHB|Flail|XDMG|Enspelled Weapon (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:flail%20(enspelled%20weapon%20(level%201))::::::::xphb%7Cflail%7Cxdmg%7Censpelled%20weapon%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:flail%20(enspelled%20weapon%20(level%201)):::::::xphb%7Cflail%7Cxdmg%7Censpelled%20weapon%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "bludgeoning",
+        "baseItem": "kiwee:baseitem:xphb:flail::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-1-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-13-attack-5",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-1 spell, one-charge held-item use and absolute DC 13/attack +5; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-1 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 13 and spell attack +5; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Mace (Enspelled Weapon (Level 1))",
+      "extra": "XPHB|Mace|XDMG|Enspelled Weapon (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:mace%20(enspelled%20weapon%20(level%201))::::::::xphb%7Cmace%7Cxdmg%7Censpelled%20weapon%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:mace%20(enspelled%20weapon%20(level%201)):::::::xphb%7Cmace%7Cxdmg%7Censpelled%20weapon%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "requiresAttunement": true,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "bludgeoning",
+        "baseItem": "kiwee:baseitem:xphb:mace::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-1-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-13-attack-5",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-1 spell, one-charge held-item use and absolute DC 13/attack +5; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-1 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 13 and spell attack +5; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Morningstar (Enspelled Weapon (Level 1))",
+      "extra": "XPHB|Morningstar|XDMG|Enspelled Weapon (Level 1)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:morningstar%20(enspelled%20weapon%20(level%201))::::::::xphb%7Cmorningstar%7Cxdmg%7Censpelled%20weapon%20(level%201)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:morningstar%20(enspelled%20weapon%20(level%201)):::::::xphb%7Cmorningstar%7Cxdmg%7Censpelled%20weapon%20(level%201)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "baseItem": "kiwee:baseitem:xphb:morningstar::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-1-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-13-attack-5",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-1 spell, one-charge held-item use and absolute DC 13/attack +5; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-1 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 13 and spell attack +5; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Flail (Holy Avenger)",
+      "extra": "XPHB|Flail|XDMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:flail%20(holy%20avenger)::::::::xphb%7Cflail%7Cxdmg%7Choly%20avenger"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:flail%20(holy%20avenger):::::::xphb%7Cflail%7Cxdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "bludgeoning",
+        "baseItem": "kiwee:baseitem:xphb:flail::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-prerequisite",
+        "ref": "english.raw.reqAttune"
+      },
+      {
+        "family": "conditionalDamage",
+        "code": "fiend-or-undead-only-two-d-ten-radiant",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "protectiveAura",
+        "code": "drawn-held-friendly-magic-save-advantage-ten-or-thirty-feet",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 269,
+      "quote": "You gain a +3 bonus to attack rolls and damage rolls"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full English Holy Avenger rule restricts attunement, Radiant damage targets and friendly aura conditions; retain verified equipment and identify the deferred procedures.",
+    "notes": "Partial: requires Paladin attunement. This weapon gives +3 to its own attack/damage and adds 2d10 Radiant only on a hit against a Fiend or an Undead. Holding it drawn produces a 10-ft Emanation for the wielder and creatures Friendly to the wielder, granting advantage only on saving throws against spells and other magical effects. At 17+ Paladin class levels the Emanation is 30 ft. Ordinary character level, merely carrying it, hostile creatures and nonmagical saves do not qualify. This is neither damage resistance nor a numeric universal save bonus."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Mace (Holy Avenger)",
+      "extra": "XPHB|Mace|XDMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:mace%20(holy%20avenger)::::::::xphb%7Cmace%7Cxdmg%7Choly%20avenger"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:mace%20(holy%20avenger):::::::xphb%7Cmace%7Cxdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "requiresAttunement": true,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "bludgeoning",
+        "baseItem": "kiwee:baseitem:xphb:mace::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-prerequisite",
+        "ref": "english.raw.reqAttune"
+      },
+      {
+        "family": "conditionalDamage",
+        "code": "fiend-or-undead-only-two-d-ten-radiant",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "protectiveAura",
+        "code": "drawn-held-friendly-magic-save-advantage-ten-or-thirty-feet",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 269,
+      "quote": "You gain a +3 bonus to attack rolls and damage rolls"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full English Holy Avenger rule restricts attunement, Radiant damage targets and friendly aura conditions; retain verified equipment and identify the deferred procedures.",
+    "notes": "Partial: requires Paladin attunement. This weapon gives +3 to its own attack/damage and adds 2d10 Radiant only on a hit against a Fiend or an Undead. Holding it drawn produces a 10-ft Emanation for the wielder and creatures Friendly to the wielder, granting advantage only on saving throws against spells and other magical effects. At 17+ Paladin class levels the Emanation is 30 ft. Ordinary character level, merely carrying it, hostile creatures and nonmagical saves do not qualify. This is neither damage resistance nor a numeric universal save bonus."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Morningstar (Holy Avenger)",
+      "extra": "XPHB|Morningstar|XDMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:morningstar%20(holy%20avenger)::::::::xphb%7Cmorningstar%7Cxdmg%7Choly%20avenger"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:morningstar%20(holy%20avenger):::::::xphb%7Cmorningstar%7Cxdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "baseItem": "kiwee:baseitem:xphb:morningstar::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-prerequisite",
+        "ref": "english.raw.reqAttune"
+      },
+      {
+        "family": "conditionalDamage",
+        "code": "fiend-or-undead-only-two-d-ten-radiant",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "protectiveAura",
+        "code": "drawn-held-friendly-magic-save-advantage-ten-or-thirty-feet",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 269,
+      "quote": "You gain a +3 bonus to attack rolls and damage rolls"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full English Holy Avenger rule restricts attunement, Radiant damage targets and friendly aura conditions; retain verified equipment and identify the deferred procedures.",
+    "notes": "Partial: requires Paladin attunement. This weapon gives +3 to its own attack/damage and adds 2d10 Radiant only on a hit against a Fiend or an Undead. Holding it drawn produces a 10-ft Emanation for the wielder and creatures Friendly to the wielder, granting advantage only on saving throws against spells and other magical effects. At 17+ Paladin class levels the Emanation is 30 ft. Ordinary character level, merely carrying it, hostile creatures and nonmagical saves do not qualify. This is neither damage resistance nor a numeric universal save bonus."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Warhammer (Weapon of Warning)",
+      "extra": "XPHB|Warhammer|XDMG|Weapon of Warning",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:warhammer%20(weapon%20of%20warning)::::::::xphb%7Cwarhammer%7Cxdmg%7Cweapon%20of%20warning"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:warhammer%20(weapon%20of%20warning):::::::xphb%7Cwarhammer%7Cxdmg%7Cweapon%20of%20warning"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 5,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "bludgeoning",
+        "properties": [
+          "V"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:warhammer::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "warningAura",
+        "code": "attuned-weapon-within-reach-allies-thirty-foot-initiative-advantage",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "combatStartAwakening",
+        "code": "natural-sleep-only-allied-aura-awakening",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponGrip",
+        "code": "versatile-two-handed-melee-damage-selection-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "push-hit-large-or-smaller-ten-feet-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 324,
+      "quote": "This benefit doesn't wake a subject from magically induced sleep."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English warning benefit depends on weapon reach and allied proximity, and wakes only natural sleep at combat start; inventory alone omits these conditions.",
+    "notes": "Partial: while the attuned Warhammer is within the bearer’s reach, the bearer and allies within 30 ft gain advantage on Initiative. When combat begins it wakes affected subjects only from natural sleep, not magical sleep. Within reach is not equivalent to equipped or held; merely being attuned at a distance does not suffice. The source grants no general attack/damage enhancement or 2014 surprise-immunity rule. Preserve Versatile and feature-gated Push. Catalog replication links do not grant Artificer features."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Hoopak (+3 Weapon)",
+      "extra": "DSotDQ|Hoopak|XDMG|+3 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:hoopak%20(%2B3%20weapon)::::::::dsotdq%7Choopak%7Cxdmg%7C%2B3%20weapon"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:hoopak%20(%2B3%20weapon):::::::dsotdq%7Choopak%7Cxdmg%7C%2B3%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "2H"
+        ],
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "sourceBinding",
+        "code": "legacy-dsotdq-base-phb-properties-and-ammo-no-same-edition-definition",
+        "ref": "english.raw.baseItem",
+        "deferred": true
+      },
+      {
+        "family": "weaponModes",
+        "code": "melee-no-ammunition-or-ranged-sling-bullet-one-d-four-bludgeoning",
+        "ref": "english.raw.entries/2",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "hoopak-ranged-only-sling-bullet-consumption-and-half-recovery",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponAbility",
+        "code": "finesse-same-ability-attack-and-damage-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponModes",
+        "code": "hoopak-special-melee-and-martial-ranged-modes-deferred",
+        "ref": "english.raw.property/2",
+        "deferred": true
+      },
+      {
+        "family": "weaponGrip",
+        "code": "two-handed-attack-hand-occupancy-deferred",
+        "ref": "english.raw.property/3",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-40-long-160-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 324,
+      "quote": "When you make a melee attack with this weapon, you ignore its ammunition property."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Full source explicitly inherits the legacy Hoopak: retain common verified values, remove cross-edition execution binding, and defer its Special ammunition/damage mode switch and legacy dependencies.",
+    "notes": "Partial: the 2024 +3 variant explicitly inherits the DSotDQ Hoopak and its unqualified PHB property/ammunition sources. Keep independently explicit 2-lb martial melee 1d6 Piercing and +3 attack/damage, Finesse choosing the same STR/DEX for attack and damage, and two-handed attacks. The Special rule overrides generic Ammunition in melee: no ammunition is used there. It also permits a martial ranged form using sling bullets at 40/160 ft for 1d4 Bludgeoning, with ammunition spent per ranged shot, disadvantage beyond normal range and no attack beyond long range; a 1-minute postcombat search recovers half the ammunition. No attunement or mastery is supplied. No same-edition base definition is present, so remove the execution-layer cross-edition baseItem reference rather than inventing a replacement. The ammunition mode switch and legacy binding remain explicit deferred boundaries."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Breastplate (Mithral Armor)",
+      "extra": "XPHB|Breastplate|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:breastplate%20(mithral%20armor)::::::::xphb%7Cbreastplate%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:breastplate%20(mithral%20armor):::::::xphb%7Cbreastplate%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "weight": 20,
+        "ac": 14,
+        "baseItem": "kiwee:baseitem:xphb:breastplate::::::::",
+        "stealthDisadvantage": false
+      }
+    },
+    "unsupported": [
+      {
+        "family": "armorClothingCompatibility",
+        "code": "mithral-breastplate-under-normal-clothes-permission",
+        "ref": "english.raw.entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English Mithral exception cancels Strength and Stealth restrictions while preserving actual AC/weight; its permission to wear this armor under normal clothes lacks a clothing-compatibility field.",
+    "notes": "Partial: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. This armor can be worn under normal clothes; clothing-layer compatibility has no protocol field and remains explicitly unsupported. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Chain Mail (Mithral Armor)",
+      "extra": "XPHB|Chain Mail|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:chain%20mail%20(mithral%20armor)::::::::xphb%7Cchain%20mail%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:chain%20mail%20(mithral%20armor):::::::xphb%7Cchain%20mail%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "weight": 55,
+        "ac": 16,
+        "stealthDisadvantage": false,
+        "baseItem": "kiwee:baseitem:xphb:chain%20mail::::::::"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English Mithral exception cancels the inherited Strength and Stealth restrictions; override those structured candidates while preserving actual AC and weight.",
+    "notes": "Complete equipment mechanics: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. A Mithral Breastplate or Chain Shirt can be worn under ordinary clothes. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Chain Shirt (Mithral Armor)",
+      "extra": "XPHB|Chain Shirt|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:chain%20shirt%20(mithral%20armor)::::::::xphb%7Cchain%20shirt%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:chain%20shirt%20(mithral%20armor):::::::xphb%7Cchain%20shirt%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "weight": 20,
+        "ac": 13,
+        "baseItem": "kiwee:baseitem:xphb:chain%20shirt::::::::",
+        "stealthDisadvantage": false
+      }
+    },
+    "unsupported": [
+      {
+        "family": "armorClothingCompatibility",
+        "code": "mithral-chain-shirt-under-normal-clothes-permission",
+        "ref": "english.raw.entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English Mithral exception cancels Strength and Stealth restrictions while preserving actual AC/weight; its permission to wear this armor under normal clothes lacks a clothing-compatibility field.",
+    "notes": "Partial: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. This armor can be worn under normal clothes; clothing-layer compatibility has no protocol field and remains explicitly unsupported. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Half Plate Armor (Mithral Armor)",
+      "extra": "XPHB|Half Plate Armor|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:half%20plate%20armor%20(mithral%20armor)::::::::xphb%7Chalf%20plate%20armor%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:half%20plate%20armor%20(mithral%20armor):::::::xphb%7Chalf%20plate%20armor%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "weight": 40,
+        "ac": 15,
+        "stealthDisadvantage": false,
+        "baseItem": "kiwee:baseitem:xphb:half%20plate%20armor::::::::"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English Mithral exception cancels the inherited Strength and Stealth restrictions; override those structured candidates while preserving actual AC and weight.",
+    "notes": "Complete equipment mechanics: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. A Mithral Breastplate or Chain Shirt can be worn under ordinary clothes. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Plate Armor (Mithral Armor)",
+      "extra": "XPHB|Plate Armor|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:plate%20armor%20(mithral%20armor)::::::::xphb%7Cplate%20armor%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:plate%20armor%20(mithral%20armor):::::::xphb%7Cplate%20armor%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "weight": 65,
+        "ac": 18,
+        "stealthDisadvantage": false,
+        "baseItem": "kiwee:baseitem:xphb:plate%20armor::::::::"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English Mithral exception cancels the inherited Strength and Stealth restrictions; override those structured candidates while preserving actual AC and weight.",
+    "notes": "Complete equipment mechanics: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. A Mithral Breastplate or Chain Shirt can be worn under ordinary clothes. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Ring Mail (Mithral Armor)",
+      "extra": "XPHB|Ring Mail|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:ring%20mail%20(mithral%20armor)::::::::xphb%7Cring%20mail%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:ring%20mail%20(mithral%20armor):::::::xphb%7Cring%20mail%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "weight": 40,
+        "ac": 14,
+        "stealthDisadvantage": false,
+        "baseItem": "kiwee:baseitem:xphb:ring%20mail::::::::"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English Mithral exception cancels the inherited Strength and Stealth restrictions; override those structured candidates while preserving actual AC and weight.",
+    "notes": "Complete equipment mechanics: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. A Mithral Breastplate or Chain Shirt can be worn under ordinary clothes. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Scale Mail (Mithral Armor)",
+      "extra": "XPHB|Scale Mail|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:scale%20mail%20(mithral%20armor)::::::::xphb%7Cscale%20mail%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:scale%20mail%20(mithral%20armor):::::::xphb%7Cscale%20mail%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "weight": 45,
+        "ac": 14,
+        "stealthDisadvantage": false,
+        "baseItem": "kiwee:baseitem:xphb:scale%20mail::::::::"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English Mithral exception cancels the inherited Strength and Stealth restrictions; override those structured candidates while preserving actual AC and weight.",
+    "notes": "Complete equipment mechanics: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. A Mithral Breastplate or Chain Shirt can be worn under ordinary clothes. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Splint Armor (Mithral Armor)",
+      "extra": "XPHB|Splint Armor|XDMG|Mithral Armor",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:splint%20armor%20(mithral%20armor)::::::::xphb%7Csplint%20armor%7Cxdmg%7Cmithral%20armor"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:splint%20armor%20(mithral%20armor):::::::xphb%7Csplint%20armor%7Cxdmg%7Cmithral%20armor"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "weight": 60,
+        "ac": 17,
+        "stealthDisadvantage": false,
+        "baseItem": "kiwee:baseitem:xphb:splint%20armor::::::::"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "the mithral version of the armor doesn't."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English Mithral exception cancels the inherited Strength and Stealth restrictions; override those structured candidates while preserving actual AC and weight.",
+    "notes": "Complete equipment mechanics: Mithral removes any normal Strength threshold and Dexterity (Stealth) disadvantage. Preserve actual AC, armor category, Dexterity handling and the supplied weight; 'light, flexible' does not authorize halving weight. A Mithral Breastplate or Chain Shirt can be worn under ordinary clothes. There is no attunement or additional numerical AC bonus. The normal base item's purchase price is not a supplied magic-item price."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Shortsword (Enspelled Weapon (Level 7))",
+      "extra": "XPHB|Shortsword|XDMG|Enspelled Weapon (Level 7)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:shortsword%20(enspelled%20weapon%20(level%207))::::::::xphb%7Cshortsword%7Cxdmg%7Censpelled%20weapon%20(level%207)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:shortsword%20(enspelled%20weapon%20(level%207)):::::::xphb%7Cshortsword%7Cxdmg%7Censpelled%20weapon%20(level%207)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:shortsword::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-7-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-18-attack-10",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponAbility",
+        "code": "finesse-same-ability-attack-and-damage-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "lightExtraAttack",
+        "code": "different-light-weapon-bonus-action-sequence-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-7 spell, one-charge held-item use and absolute DC 18/attack +10; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-7 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 18 and spell attack +10; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Book of Vile Darkness",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:book%20of%20vile%20darkness::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:book%20of%20vile%20darkness::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "requiresAttunement": true
+      },
+      "resources": [
+        {
+          "key": "animate-dead",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        },
+        {
+          "key": "circle-of-death",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        },
+        {
+          "key": "dominate-monster",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        },
+        {
+          "key": "finger-of-death",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "attunement-hazard",
+          "activation": "special",
+          "target": "self",
+          "save": {
+            "ability": "cha",
+            "dc": 17
+          },
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "study-book",
+          "activation": "hour",
+          "target": "object",
+          "deferred": true
+        },
+        {
+          "type": "cast",
+          "key": "animate-dead",
+          "activation": "minute",
+          "target": "object",
+          "spell": "kiwee:spell:xphb:animate%20dead::::::::",
+          "consumes": {
+            "resource": "animate-dead",
+            "amount": 1
+          },
+          "deferred": true
+        },
+        {
+          "type": "cast",
+          "key": "circle-of-death",
+          "activation": "action",
+          "target": "area",
+          "spell": "kiwee:spell:xphb:circle%20of%20death::::::::",
+          "save": {
+            "ability": "con",
+            "dc": 18
+          },
+          "consumes": {
+            "resource": "circle-of-death",
+            "amount": 1
+          },
+          "deferred": true
+        },
+        {
+          "type": "cast",
+          "key": "dominate-monster",
+          "activation": "action",
+          "target": "creature",
+          "spell": "kiwee:spell:xphb:dominate%20monster::::::::",
+          "save": {
+            "ability": "wis",
+            "dc": 18
+          },
+          "consumes": {
+            "resource": "dominate-monster",
+            "amount": 1
+          },
+          "deferred": true
+        },
+        {
+          "type": "cast",
+          "key": "finger-of-death",
+          "activation": "action",
+          "target": "creature",
+          "spell": "kiwee:spell:xphb:finger%20of%20death::::::::",
+          "save": {
+            "ability": "con",
+            "dc": 18
+          },
+          "consumes": {
+            "resource": "finger-of-death",
+            "amount": 1
+          },
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "vile-speech",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Tireless Form after study while attuned and carried",
+          "duration": {
+            "unit": "special"
+          },
+          "changes": [
+            {
+              "target": "conditionImmune:exhaustion",
+              "op": "set",
+              "value": true,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            }
+          ],
+          "statuses": [],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "attunementHazard",
+        "code": "non-fiend-non-undead-cha-seventeen-dm-larva-wish-reversal",
+        "ref": "english.raw.entries/4",
+        "deferred": true
+      },
+      {
+        "family": "studyPrerequisite",
+        "code": "eighty-hours-attuned-reading-before-five-named-properties",
+        "ref": "english.raw.entries/5"
+      },
+      {
+        "family": "abilityScoreTradeoff",
+        "code": "one-time-distinct-plus-two-cap-twenty-four-minus-two-floor-three",
+        "ref": "english.raw.entries/7"
+      },
+      {
+        "family": "exhaustionImmunity",
+        "code": "studied-attuned-carried-book-only-tireless-form",
+        "ref": "english.raw.entries/8",
+        "deferred": true
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "studied-attuned-held-book-dc-eighteen-separate-dawn-casts",
+        "ref": "english.raw.entries/10",
+        "deferred": true
+      },
+      {
+        "family": "conditionalLoreChecks",
+        "code": "book-reference-intelligence-evil-lore-only-advantage",
+        "ref": "english.raw.entries/11",
+        "deferred": true
+      },
+      {
+        "family": "vileSpeechDamage",
+        "code": "studied-carried-book-self-one-d-twelve-area-three-d-six-psychic-exclusions",
+        "ref": "english.raw.entries/12",
+        "deferred": true
+      },
+      {
+        "family": "artifactConductLifecycle",
+        "code": "ten-day-evil-act-or-good-act-disappearance-attunement-and-benefits-end",
+        "ref": "english.raw.entries/6",
+        "deferred": true
+      },
+      {
+        "family": "soulImprisonment",
+        "code": "death-while-attuned-prevents-restoration-while-soul-imprisoned",
+        "ref": "english.raw.entries/6",
+        "deferred": true
+      },
+      {
+        "family": "artifactProperties",
+        "code": "three-one-beneficial-three-two-detrimental-table-selections",
+        "ref": "english.raw.entries/9"
+      },
+      {
+        "family": "environmentalCorruption",
+        "code": "plants-wither-animals-avoid-and-contact-object-decay",
+        "ref": "english.raw.entries/3"
+      },
+      {
+        "family": "artifactDestruction",
+        "code": "solar-or-century-attunement-celestial-phrase-and-delayed-reformation",
+        "ref": "english.raw.entries/13",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 238,
+      "quote": "The book can't adjust your ability scores again."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Full English rules gate five properties on 80-hour study and ongoing attunement/conduct; correct unsafe Foundry timing, study counters and unconditional benefit/damage candidates while retaining daily spells.",
+    "notes": "Partial: attunement by a non-Fiend/non-Undead triggers CHA DC 17; failure makes a DM-controlled Larva, reversible only by Wish. Before Adjusted Scores, Tireless Form, spells, Vile Lore or Vile Speech, the attuned reader must study 80 hours. Choose one ability +2 (cap 24) and another -2 (floor 3), once for that reader. After study, carried Tireless Form grants Exhaustion immunity; held spells Animate Dead/Circle of Death/Dominate Monster/Finger of Death each have a separate dawn use and DC 18. Animate Dead takes 1 minute; others take an action; normal spell concentration remains. Referencing the book grants advantage only on Intelligence checks recalling evil lore; extra secrets are at DM discretion. Carried Vile Speech is a Magic action: self 1d12 Psychic, and each creature within 15 ft except Fiends/Undead takes 3d6 Psychic, without a stated save. Failure to do at least one evil act in 10 days, or willingly doing good, makes the book disappear, ends attunement and removes benefits. Death while attuned imprisons the reader's soul and prevents restoration while imprisoned. Random properties: 3 minor/1 major beneficial and 3 minor/2 major detrimental. Contact corrupts plants, animals and objects qualitatively. Solar tearing destroys it for 1d100 years; after 100 years attuned, a hidden phrase spoken in Celestial destroys speaker and book, which returns after 1d10x100 years while evil exists."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Lance (Enspelled Weapon (Level 5))",
+      "extra": "XPHB|Lance|XDMG|Enspelled Weapon (Level 5)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:lance%20(enspelled%20weapon%20(level%205))::::::::xphb%7Clance%7Cxdmg%7Censpelled%20weapon%20(level%205)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:lance%20(enspelled%20weapon%20(level%205)):::::::xphb%7Clance%7Cxdmg%7Censpelled%20weapon%20(level%205)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "H",
+          "R"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:lance::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-5-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-17-attack-9",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponAbility",
+        "code": "heavy-attack-ability-threshold-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponReach",
+        "code": "weapon-scoped-five-foot-reach-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "conditionalWeaponGrip",
+        "code": "lance-two-handed-attacks-unless-mounted",
+        "ref": "english.raw.property/2",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "topple-hit-con-save-prone-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-5 spell, one-charge held-item use and absolute DC 17/attack +9; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-5 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 17 and spell attack +9; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated. A Lance requires two hands only when the wielder is not mounted; retain Heavy and Reach without making Two-Handed unconditional."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Scroll of Protection (Plants)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:scroll%20of%20protection%20(plants)::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:scroll%20of%20protection%20(plants)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other"
+      },
+      "resources": [
+        {
+          "key": "scroll-use",
+          "max": {
+            "value": 1
+          },
+          "recovery": []
+        }
+      ],
+      "actions": [
+        {
+          "type": "utility",
+          "key": "read-protection-scroll",
+          "activation": "action",
+          "target": "area",
+          "consumes": {
+            "resource": "scroll-use",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "protectiveEmanation",
+        "code": "plant-only-five-foot-five-minute-entry-and-effect-barrier",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "moving-area-over-plant-ends-barrier",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "barrierOverride",
+        "code": "nearby-creature-magic-action-cha-fifteen-individual-exemption",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 302,
+      "quote": "Plants can't enter or affect anything in the area."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The actual itemEntry template expands into a timed Plant barrier, movement termination and creature-specific bypass; these are deferred execution boundaries, not missing or empty prose.",
+    "notes": "Partial: expand Scroll of Protection|XDMG with detail1=Plant and detail2=Plants. One consumed scroll is read with a Magic action, creating a 5-ft Emanation from the reader for 5 minutes. Plants cannot enter or affect anything inside. If the reader moves so that a Plant would be within the area, the entire barrier ends. A creature within 5 ft of the Emanation may use its own Magic action to attempt CHA DC 15; success exempts that creature. This is a Plant-only barrier, not unrestricted immunity or a permanent wearer effect."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Halberd (Dragon Slayer)",
+      "extra": "XPHB|Halberd|XDMG|Dragon Slayer",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:halberd%20(dragon%20slayer)::::::::xphb%7Chalberd%7Cxdmg%7Cdragon%20slayer"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:halberd%20(dragon%20slayer):::::::xphb%7Chalberd%7Cxdmg%7Cdragon%20slayer"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "R",
+          "2H"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:halberd::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "conditionalDamage",
+        "code": "dragon-only-three-d-six-slashing-on-hit",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponAbility",
+        "code": "heavy-attack-ability-threshold-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponReach",
+        "code": "weapon-scoped-five-foot-reach-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponGrip",
+        "code": "two-handed-attack-hand-occupancy-deferred",
+        "ref": "english.raw.property/2",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "cleave-second-target-once-per-turn-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 254,
+      "quote": "damage of the weapon's type if the target is a Dragon."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full English rider is limited to Dragon targets; preserve +1 weapon-specific equipment and identify target, property and mastery settlement.",
+    "notes": "Partial: this magic Halberd gives +1 only to its own attack/damage rolls and +3d6 Slashing on a hit only if the target is a Dragon. No use limit, attunement or rider against other creature types is stated. Preserve Heavy, Reach, Two-Handed and feature-gated Cleave, including its second-target range and once-per-turn restrictions."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Black Pearl",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:black%20pearl::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:black%20pearl::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "value": 50000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 214,
+      "quote": "A pure black gemstone."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full English item and gemstone type define inventory value only, with no other mechanism; the numeric value field is already in copper pieces.",
+    "notes": "Complete inventory mechanics: Black Pearl has actual value 50000 copper pieces, equivalent to 500 GP. The gemstone and treasure-type prose supplies no activated effect, grant or modifier. No weight field is supplied."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Pale Tincture",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:pale%20tincture::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:pale%20tincture::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "value": 25000
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "ingested-poison-exposure",
+          "activation": "special",
+          "target": "creature",
+          "formula": "1d6",
+          "save": {
+            "ability": "con",
+            "dc": 16
+          },
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "poison-repeat-after-twenty-four-hours",
+          "activation": "special",
+          "target": "creature",
+          "formula": "1d6",
+          "save": {
+            "ability": "con",
+            "dc": 16
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "poisonDelivery",
+        "code": "ingested-full-dose-food-or-liquid-partial-dose-dm-adjudication",
+        "ref": "english.raw.poisonTypes",
+        "deferred": true
+      },
+      {
+        "family": "poisonResolution",
+        "code": "con-sixteen-failure-only-one-d-six-poison-and-poisoned",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "periodicSaveProgression",
+        "code": "twenty-four-hour-repeats-seven-total-successes",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "healingRestriction",
+        "code": "poison-damage-unhealable-only-while-that-target-is-poisoned",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "target-owned-poison-ledger-until-seven-successes",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 91,
+      "quote": "The damage the poison deals can't be healed by any means"
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The full English poison deals damage only on failed saves, persists until seven successes and forbids healing its own damage; Foundry half-on-save, HP-max and expiry proxies are unsafe.",
+    "notes": "Partial: actual price 25000 copper pieces (250 GP); weight is absent. Pale Tincture is ingested: swallow an entire dose, normally delivered in food/liquid; partial doses are handled at DM discretion. On exposure, CON DC 16 success causes no specified damage or Poisoned condition; failure causes 3 average/1d6 Poison and Poisoned. While Poisoned, repeat CON DC 16 every 24 hours; failed repeats deal 3/1d6 Poison. Seven successful saves end the condition; they need not be consecutive. Poison damage cannot be healed by any means while this condition remains; that is a wound-specific healing restriction, not HP-maximum reduction or a block on unrelated injuries. The repeat clock is not a fixed 24-hour condition expiration. The target, not the poison bearer, owns the condition, damage history and success count."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Sickle (Silvered Weapon)",
+      "extra": "XPHB|Sickle|XDMG|Silvered Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:sickle%20(silvered%20weapon)::::::::xphb%7Csickle%7Cxdmg%7Csilvered%20weapon"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:sickle%20(silvered%20weapon):::::::xphb%7Csickle%7Cxdmg%7Csilvered%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "slashing",
+        "properties": [
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:sickle::::::::"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "conditionalCriticalDamage",
+        "code": "currently-shape-shifted-creature-critical-one-extra-d-four-slashing",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "lightExtraAttack",
+        "code": "different-light-weapon-bonus-action-sequence-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "nick-light-extra-attack-once-per-turn-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 304,
+      "quote": "An alchemical process has bonded silver to this magic weapon."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete Silvered rule is a target-state-dependent critical-hit extra die; inventory remains known while critical/Light/Nick execution remains deferred.",
+    "notes": "Partial: this Silvered Sickle adds one extra d4 of Slashing weapon damage only when it scores a critical hit against a currently shape-shifted creature. It has no general enhancement bonus or rider against a shapeshifter in its ordinary form. Retain Light and feature-gated Nick; no attunement is supplied."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Club (Holy Avenger)",
+      "extra": "XPHB|Club|XDMG|Holy Avenger",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:club%20(holy%20avenger)::::::::xphb%7Cclub%7Cxdmg%7Choly%20avenger"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:club%20(holy%20avenger):::::::xphb%7Cclub%7Cxdmg%7Choly%20avenger"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:club::::::::",
+        "attackBonus": 3,
+        "damageBonus": 3
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "paladin-prerequisite",
+        "ref": "english.raw.reqAttune"
+      },
+      {
+        "family": "conditionalDamage",
+        "code": "fiend-or-undead-only-two-d-ten-radiant",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "protectiveAura",
+        "code": "drawn-held-friendly-magic-save-advantage-ten-or-thirty-feet",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "lightExtraAttack",
+        "code": "different-light-weapon-bonus-action-sequence-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-damaging-hit-speed-reduction-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 269,
+      "quote": "You gain a +3 bonus to attack rolls and damage rolls"
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full English Holy Avenger rule restricts attunement, Radiant damage targets and friendly aura conditions; retain verified equipment and identify the deferred procedures.",
+    "notes": "Partial: requires Paladin attunement. This weapon gives +3 to its own attack/damage and adds 2d10 Radiant only on a hit against a Fiend or an Undead. Holding it drawn produces a 10-ft Emanation for the wielder and creatures Friendly to the wielder, granting advantage only on saving throws against spells and other magical effects. At 17+ Paladin class levels the Emanation is 30 ft. Ordinary character level, merely carrying it, hostile creatures and nonmagical saves do not qualify. This is neither damage resistance nor a numeric universal save bonus."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Lance (+1 Weapon)",
+      "extra": "XPHB|Lance|XDMG|+1 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:lance%20(%2B1%20weapon)::::::::xphb%7Clance%7Cxdmg%7C%2B1%20weapon"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:lance%20(%2B1%20weapon):::::::xphb%7Clance%7Cxdmg%7C%2B1%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "H",
+          "R"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:lance::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponAbility",
+        "code": "heavy-attack-ability-threshold-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponReach",
+        "code": "weapon-scoped-five-foot-reach-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "conditionalWeaponGrip",
+        "code": "lance-two-handed-attacks-unless-mounted",
+        "ref": "english.raw.property/2",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "topple-hit-con-save-prone-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 324,
+      "quote": "You have a +1 bonus to attack and damage rolls made with this magic weapon."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English weapon confirms its item-specific enhancement, while its actual properties/mastery require attack execution; discard catalog class links and identify concrete limits.",
+    "notes": "Partial: +1 applies only to this weapon's attack/damage rolls. Preserve actual base damage, weapon category, weight, ammunition/range and feature-gated mastery. No extra magical damage or attunement is supplied. Catalog Replicate Magic Item links are not class-feature grants. The Lance's two-handed requirement applies only while not mounted; Heavy still requires STR 13 and Reach adds 5 ft for attacks with it."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Javelin (Enspelled Weapon (Level 2))",
+      "extra": "XPHB|Javelin|XDMG|Enspelled Weapon (Level 2)",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:javelin%20(enspelled%20weapon%20(level%202))::::::::xphb%7Cjavelin%7Cxdmg%7Censpelled%20weapon%20(level%202)"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:javelin%20(enspelled%20weapon%20(level%202)):::::::xphb%7Cjavelin%7Cxdmg%7Censpelled%20weapon%20(level%202)"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "T"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:javelin::::::::"
+      },
+      "resources": [
+        {
+          "key": "charges",
+          "max": {
+            "value": 6
+          },
+          "recovery": [
+            {
+              "period": "dawn",
+              "amount": "1d6"
+            }
+          ]
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellSelection",
+        "code": "creation-fixed-level-2-five-school-spell-binding",
+        "ref": "english.raw.entries/0"
+      },
+      {
+        "family": "itemSpellcasting",
+        "code": "held-attuned-item-one-charge-dc-13-attack-5",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "thrownWeapon",
+        "code": "draw-and-throw-ability-and-range-settlement-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-damaging-hit-speed-reduction-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-30-long-120-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 258,
+      "quote": "While holding the weapon, you can expend 1 charge to cast its spell."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The English body confirms a creation-fixed level-2 spell, one-charge held-item use and absolute DC 13/attack +5; retain safe inventory and charge mechanics while deferring binding.",
+    "notes": "Partial: attunement is required. One level-2 spell is fixed at weapon creation from Conjuration, Divination, Evocation, Necromancy or Transmutation. It is not chosen anew on each cast. Six charges recover 1d6 expended charges at dawn, capped at 6. Holding the weapon permits spending 1 charge to cast that fixed spell with absolute DC 13 and spell attack +5; these values do not modify other spells. Bind the chosen spell before assigning its normal casting time, targets, duration or concentration. Preserve actual weapon damage, weight, properties and feature-gated mastery. No weapon enhancement bonus is stated."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Hand Crossbow (+1 Weapon)",
+      "extra": "XPHB|Hand Crossbow|XDMG|+1 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:hand%20crossbow%20(%2B1%20weapon)::::::::xphb%7Chand%20crossbow%7Cxdmg%7C%2B1%20weapon"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:hand%20crossbow%20(%2B1%20weapon):::::::xphb%7Chand%20crossbow%7Cxdmg%7C%2B1%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "L",
+          "LD"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:hand%20crossbow::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-ammunition-free-hand-and-recovery-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "lightExtraAttack",
+        "code": "different-light-weapon-bonus-action-sequence-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "loading",
+        "code": "one-missile-per-action-bonus-or-reaction-deferred",
+        "ref": "english.raw.property/2",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-30-long-120-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 324,
+      "quote": "You have a +1 bonus to attack and damage rolls made with this magic weapon."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English weapon confirms its item-specific enhancement, while its actual properties/mastery require attack execution; discard catalog class links and identify concrete limits.",
+    "notes": "Partial: +1 applies only to this weapon's attack/damage rolls. Preserve actual base damage, weapon category, weight, ammunition/range and feature-gated mastery. No extra magical damage or attunement is supplied. Catalog Replicate Magic Item links are not class-feature grants."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Rapier (Moonblade)",
+      "extra": "XPHB|Rapier|XDMG|Moonblade",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:rapier%20(moonblade)::::::::xphb%7Crapier%7Cxdmg%7Cmoonblade"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:rapier%20(moonblade):::::::xphb%7Crapier%7Cxdmg%7Cmoonblade"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "requiresAttunement": true,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "F"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:rapier::::::::",
+        "attackBonus": 1,
+        "damageBonus": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "attunement",
+        "code": "weapon-chosen-bearer-instant-attunement-only-magic-owner",
+        "ref": "english.raw.entries/1"
+      },
+      {
+        "family": "attunementLifecycle",
+        "code": "bound-until-bearer-death-or-weapon-destruction",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "rejectionCurse",
+        "code": "unaccepted-attunement-all-d-twenty-disadvantage-twenty-four-hours",
+        "ref": "english.raw.entries/1",
+        "deferred": true
+      },
+      {
+        "family": "moonbladeRunes",
+        "code": "bearer-history-typically-one-d-six-plus-one-dm-or-table-properties",
+        "ref": "english.raw.entries/2"
+      },
+      {
+        "family": "runeWeaponEnhancement",
+        "code": "chosen-rune-plus-one-weapon-bonus-capped-at-three-reroll-cap",
+        "ref": "english.raw.entries/6/rows/0"
+      },
+      {
+        "family": "runeForceDamage",
+        "code": "chosen-rune-hit-one-d-six-force-stacks-to-three-d-six",
+        "ref": "english.raw.entries/6/rows/1",
+        "deferred": true
+      },
+      {
+        "family": "runeReturningWeapon",
+        "code": "chosen-rune-thrown-twenty-sixty-return-after-attack",
+        "ref": "english.raw.entries/6/rows/2",
+        "deferred": true
+      },
+      {
+        "family": "runeCriticalThreshold",
+        "code": "chosen-rune-natural-nineteen-or-twenty-only",
+        "ref": "english.raw.entries/6/rows/3",
+        "deferred": true
+      },
+      {
+        "family": "runeBlindingFlash",
+        "code": "chosen-rune-bonus-action-con-fifteen-other-targets-rest-recovery",
+        "ref": "english.raw.entries/6/rows/4",
+        "deferred": true
+      },
+      {
+        "family": "runeSpellStorage",
+        "code": "chosen-rune-ring-of-spell-storing-state-and-original-caster-values",
+        "ref": "english.raw.entries/6/rows/5",
+        "deferred": true
+      },
+      {
+        "family": "runeSummoning",
+        "code": "chosen-rune-one-controlled-fey-neutral-shadow-no-propagation",
+        "ref": "english.raw.entries/6/rows/6",
+        "deferred": true
+      },
+      {
+        "family": "minorPropertySelection",
+        "code": "linked-d-twenty-minor-property-roll-twice-on-twenty",
+        "ref": "english.raw.entries/3"
+      },
+      {
+        "family": "itemSentience",
+        "code": "sword-owned-abilities-senses-alignment-and-emotive-communication",
+        "ref": "english.raw.entries/4"
+      },
+      {
+        "family": "weaponAbility",
+        "code": "finesse-same-ability-attack-and-damage-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 279,
+      "quote": "a nonmagical weapon of its kind for anyone other than its chosen bearer."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The full Moonblade body restricts magic to its chosen bearer and makes later runes/minor properties instance-specific selections; preserve the first rune and explicitly defer each selected-property procedure.",
+    "notes": "Partial: only the weapon's chosen bearer receives magic benefits. An accepted creature attunes instantly and creates a rune; attunement ends only on death or destruction, even if alignment/goals later differ. Rejection curses all D20 Tests with disadvantage for 24 hours or until Remove Curse/similar magic. First rune grants +1 attack/damage; there is one rune per willing bearer, typically 1d6+1, with one DM-chosen or d100 property per later rune. This count is history, not charges. Extra properties are unselected: bonus increases up to +3; 1d6 Force per hit accumulates to 3d6; Thrown 20/60 ft returns after attack; critical 19/20; Bonus Action flash blinds other creatures within 30 ft without Total Cover on CON DC 15 for 1 minute, repeating saves at turn ends, once per Short or Long Rest; Ring of Spell Storing properties; or a controlled shadow-elf Fey summon. Only one summon may serve at once; Magic action creates it within 120 ft in an empty space, Neutral Shadow stats without creating shadows, ending at 0 HP or Magic dismissal. One linked minor-property selection is also required. Sentience belongs to the sword: INT 12/WIS 10/CHA 12, hearing/Darkvision 120 ft, creator's alignment, emotion/tingling communication and trance/sleep visions."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Stone of Good Luck",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:stone%20of%20good%20luck::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:stone%20of%20good%20luck::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "requiresAttunement": true
+      },
+      "effects": [
+        {
+          "name": "Luckstone saves while attuned and carried",
+          "duration": {
+            "unit": "special"
+          },
+          "changes": [
+            {
+              "target": "save:str",
+              "op": "add",
+              "value": 1,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            },
+            {
+              "target": "save:dex",
+              "op": "add",
+              "value": 1,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            },
+            {
+              "target": "save:con",
+              "op": "add",
+              "value": 1,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            },
+            {
+              "target": "save:int",
+              "op": "add",
+              "value": 1,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            },
+            {
+              "target": "save:wis",
+              "op": "add",
+              "value": 1,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            },
+            {
+              "target": "save:cha",
+              "op": "add",
+              "value": 1,
+              "condition": {
+                "target": "attuned",
+                "op": "eq",
+                "value": true
+              }
+            }
+          ],
+          "statuses": [],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "itemEffectOwnership",
+        "code": "attuned-and-carried-stone-only-benefit-binding",
+        "ref": "english.raw.entries/0",
+        "deferred": true
+      },
+      {
+        "family": "abilityCheckBonus",
+        "code": "plus-one-all-ability-checks-including-non-skill-checks",
+        "ref": "english.raw.bonusAbilityCheck",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 312,
+      "quote": "you gain a +1 bonus to ability checks and saving throws."
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "The English Luckstone requires carrying and attunement, gives saves exactly once and covers all ability checks; collapse duplicate candidates and defer the unsupported ownership/check binding.",
+    "notes": "Partial: while carried and attuned, the Luckstone gives +1 to all ability checks and all six ability saving throws. This includes general checks, not only named skill checks, and does not increase ability scores. Carrying is broader than wearing/holding; attunement without the stone on the person is insufficient. Represent the six known save bonuses once as a deferred carried-item benefit, pending ownership binding. No use pool, weight or price is supplied."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Blowgun (+2 Weapon)",
+      "extra": "XPHB|Blowgun|XDMG|+2 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:blowgun%20(%2B2%20weapon)::::::::xphb%7Cblowgun%7Cxdmg%7C%2B2%20weapon"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:blowgun%20(%2B2%20weapon):::::::xphb%7Cblowgun%7Cxdmg%7C%2B2%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 1,
+        "weaponCategory": "martial",
+        "damage": "1",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:blowgun::::::::",
+        "attackBonus": 2,
+        "damageBonus": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-ammunition-free-hand-and-recovery-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "loading",
+        "code": "one-missile-per-action-bonus-or-reaction-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-25-long-100-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 324,
+      "quote": "You have a +2 bonus to attack and damage rolls made with this magic weapon."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English weapon confirms its item-specific enhancement, while its actual properties/mastery require attack execution; discard catalog class links and identify concrete limits.",
+    "notes": "Partial: +2 applies only to this weapon's attack/damage rolls. Preserve actual base damage, weapon category, weight, ammunition/range and feature-gated mastery. No extra magical damage or attunement is supplied. Catalog Replicate Magic Item links are not class-feature grants. Blowgun base damage is the constant 1 Piercing, not 1d1; it uses needles, range 25/100 ft, Loading and Vex."
+  },
+  {
+    "identity": {
+      "kind": "item",
+      "source": "XDMG",
+      "engName": "Pistol (+2 Weapon)",
+      "extra": "XPHB|Pistol|XDMG|+2 Weapon",
+      "packId": "kiwee",
+      "key": "kiwee:item:xdmg:pistol%20(%2B2%20weapon)::::::::xphb%7Cpistol%7Cxdmg%7C%2B2%20weapon"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:pistol%20(%2B2%20weapon):::::::xphb%7Cpistol%7Cxdmg%7C%2B2%20weapon"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD"
+        ],
+        "baseItem": "kiwee:baseitem:xphb:pistol::::::::",
+        "firearm": true,
+        "attackBonus": 2,
+        "damageBonus": 2
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-ammunition-free-hand-and-recovery-deferred",
+        "ref": "english.raw.property/0",
+        "deferred": true
+      },
+      {
+        "family": "loading",
+        "code": "one-missile-per-action-bonus-or-reaction-deferred",
+        "ref": "english.raw.property/1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-damaging-hit-next-same-target-advantage-deferred",
+        "ref": "english.raw.mastery",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-30-long-90-ranged-attack-limits",
+        "ref": "english.raw.range",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-item-003",
+    "evidence": {
+      "page": 324,
+      "quote": "You have a +2 bonus to attack and damage rolls made with this magic weapon."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The complete English weapon confirms its item-specific enhancement, while its actual properties/mastery require attack execution; discard catalog class links and identify concrete limits.",
+    "notes": "Partial: +2 applies only to this weapon's attack/damage rolls. Preserve actual base damage, weapon category, weight, ammunition/range and feature-gated mastery. No extra magical damage or attunement is supplied. Catalog Replicate Magic Item links are not class-feature grants. This XPHB Pistol uses 1d10 Piercing, bullets, range 30/90 ft, ordinary Ammunition/Loading and Vex; do not import modern-firearm AF/RLD or a magazine."
+  }
+]
