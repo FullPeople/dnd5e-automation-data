@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-baseitem-001",
+    "path": "baseitem/PHB-baseitem-001.json",
+    "sha256": "cff0ff23241080dc1df7923aeddc6f94b8f4e73e656d902a23f3bac52a4ef3b4",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:baseitem:phb:alchemist's%20supplies::::::::",
+      "kiwee:baseitem:phb:arrows%20(20)::::::::",
+      "kiwee:baseitem:phb:blowgun::::::::",
+      "kiwee:baseitem:phb:breastplate::::::::",
+      "kiwee:baseitem:phb:chain%20mail::::::::",
+      "kiwee:baseitem:phb:crystal::::::::",
+      "kiwee:baseitem:phb:dagger::::::::",
+      "kiwee:baseitem:phb:hand%20crossbow::::::::",
+      "kiwee:baseitem:phb:lance::::::::",
+      "kiwee:baseitem:phb:lute::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
+  }
+]
