@@ -1,6 +1,6 @@
 {
   "name": "dnd5e-automation-data",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "license": "SEE LICENSE IN LICENSE",
@@ -15,7 +15,8 @@
     "build": "tsc -p tsconfig.json",
     "schema": "python3 scripts/build_schema.py",
     "validate": "node --experimental-strip-types src/cli.ts validate",
-    "derive": "node --experimental-strip-types src/cli.ts derive --offline --out artifacts"
+    "derive": "node --experimental-strip-types src/cli.ts derive --offline --out artifacts",
+    "pipeline": "node --experimental-strip-types src/cli.ts pipeline --out artifacts"
   },
   "devDependencies": {
     "@types/node": "26.6.2",

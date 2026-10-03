@@ -4,3 +4,4 @@ dist/
 evidence/
 *.log
 artifacts/
+artifacts.previous/
