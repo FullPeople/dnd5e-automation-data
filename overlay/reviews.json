@@ -517,5 +517,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-spell-003-known-001",
+    "path": "spell/PHB-spell-003-known-001.json",
+    "sha256": "c92ccd3a5af01ff32aa73c19c79e80800da231acda58ce9aa5e581f9b5bdc991",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:spell:phb:time%20stop::::::::",
+      "kiwee:spell:phb:feeblemind::::::::",
+      "kiwee:spell:phb:conjure%20animals::::::::",
+      "kiwee:spell:phb:meteor%20swarm::::::::",
+      "kiwee:spell:phb:forbiddance::::::::",
+      "kiwee:spell:phb:reincarnate::::::::",
+      "kiwee:spell:phb:magic%20missile::::::::",
+      "kiwee:spell:phb:leomund's%20secret%20chest::::::::",
+      "kiwee:spell:phb:reverse%20gravity::::::::",
+      "kiwee:spell:phb:contact%20other%20plane::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
