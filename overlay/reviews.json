@@ -182,5 +182,19 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-classFeature-asi-002",
+    "path": "classFeature/XPHB-classFeature-asi-002.json",
+    "sha256": "3f97e62c621d21d2f92440f9b23734bd80efc06e537f08a72d0ace1694da8998",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:wizard:::8:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
