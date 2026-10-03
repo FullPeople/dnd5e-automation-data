@@ -402,5 +402,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "DMG-item-001",
+    "path": "item/DMG-item-001.json",
+    "sha256": "c8ae8e3511c97210b36e6a948a2207da686918488792890cb5237c7b01f86a6f",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:dmg:azurite::::::::",
+      "kiwee:item:dmg:cloak%20of%20elvenkind::::::::",
+      "kiwee:item:dmg:staff%20of%20thunder%20and%20lightning::::::::",
+      "kiwee:item:dmg:decanter%20of%20endless%20water::::::::",
+      "kiwee:item:dmg:ring%20of%20lightning%20resistance::::::::",
+      "kiwee:item:dmg:tome%20of%20understanding::::::::",
+      "kiwee:item:dmg:automatic%20pistol%20(weapon%20of%20warning)::::::::dmg%7Cautomatic%20pistol%7Cdmg%7Cweapon%20of%20warning",
+      "kiwee:item:dmg:whelm::::::::",
+      "kiwee:item:dmg:double-bladed%20scimitar%20(vorpal%20sword)::::::::erlw%7Cdouble-bladed%20scimitar%7Cdmg%7Cvorpal%20sword",
+      "kiwee:item:dmg:energy%20cell%20(%2B3%20ammunition)::::::::dmg%7Cenergy%20cell%7Cdmg%7C%2B3%20ammunition"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
