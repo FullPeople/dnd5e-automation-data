@@ -12,39 +12,31 @@ const overlay=JSON.parse(await readFile(join(root,'schema/overlay.schema.json'),
 const record={$schema:schema.$schema,$id:schema.$id.replace('automation-ir','record'),$ref:'#/$defs/record',$defs:schema.$defs};
 const ajv=new Ajv2020({allErrors:true,strict:true,strictRequired:false,code:{source:true,esm:true}});
 ajv.addSchema(schema);ajv.addSchema(overlay);ajv.addSchema(record);
-const source=standalone(ajv,{envelopeSchema:schema.$id,overlaysSchema:overlay.$id,recordSchema:record.$id});
-const bundled=await build({stdin:{contents:source,resolveDir:root,sourcefile:'schema-validation.generated.js'},bundle:true,write:false,metafile:true,format:'esm',platform:'browser',target:'es2022',legalComments:'inline'});
-const imports=Object.values(bundled.metafile.outputs).flatMap(output=>output.imports);if(imports.length)throw Error('Browser schema bundle contains an external import');
-// Ajv's compiler helper metadata is not used by its precompiled validators.
-// Remove the compiler-only require string; keep the bundled runtime function.
-const compilerMetadata='    ucs2length.code = \'require("ajv/dist/runtime/ucs2length").default\';\n';
-const browserCode=bundled.outputFiles[0].text;if(!browserCode.includes(compilerMetadata))throw Error('Ajv runtime helper changed; review its browser adapter');
-await writeFile(join(out,'schema-validation.js'),browserCode.replace(compilerMetadata,''));
-const recordBundle=await build({stdin:{contents:standalone(ajv,{recordSchema:record.$id}),resolveDir:root,sourcefile:'record-validation.generated.js'},bundle:true,write:false,metafile:true,format:'esm',platform:'browser',target:'es2022',legalComments:'inline'});
-if(Object.values(recordBundle.metafile.outputs).some(output=>output.imports.length))throw Error('Record validator contains an external import');
-await writeFile(join(out,'record-schema.js'),recordBundle.outputFiles[0].text.replace(compilerMetadata,''));
-await writeFile(join(out,'record-schema.d.ts'),`import type {SchemaValidator} from './schema-validation.js';
-export const recordSchema:SchemaValidator;
-`);
-await writeFile(join(out,'schema-validation.d.ts'),`export interface SchemaError {instancePath:string;message?:string}
-export interface SchemaValidator {(value:unknown):boolean;errors:SchemaError[]|null}
-export const envelopeSchema:SchemaValidator,overlaysSchema:SchemaValidator,recordSchema:SchemaValidator;
-`);
-let validate=await readFile(join(root,'src/validate/index.ts'),'utf8');
-const start=validate.indexOf('// Conditional required checks'),end=validate.indexOf('const bodyFields');
-if(start<0||end<start)throw Error('Semantic validator adapter anchor changed; review required');
-validate=validate.slice(0,start)+validate.slice(end);
-validate=validate.replace("import { Ajv2020 } from 'ajv/dist/2020.js';\n",'').replace("import { automationSchema, overlaySchema } from './schemas.ts';","import { envelopeSchema, overlaysSchema, recordSchema } from './schema-validation.js';");
-validate=validate.replace("from '../identity.ts'","from './identity.ts'").replace("from '../protocol.ts'","from './protocol.ts'");
-await writeFile(join(out,'validate.ts'),'// Generated semantic adapter; no runtime dependencies.\n'+validate);
-const recordOnly=validate.slice(0,validate.indexOf('export function schemaErrors')).replace("import { envelopeSchema, overlaysSchema, recordSchema } from './schema-validation.js';","import {recordSchema} from './record-schema.js';")+validate.slice(validate.indexOf('export function recordErrors'));
-await writeFile(join(out,'record-validation.ts'),'// Generated partial-snapshot semantic adapter; full dataset references are checked by the loader.\n'+recordOnly);
-
-const files=['identity.ts','protocol.ts'];for(const file of files)await writeFile(join(out,file),await readFile(join(root,'src',file)));
-await writeFile(join(out,'formula.ts'),await readFile(join(root,'src/validate/formula.ts')));
+async function compiled(exports){
+ const generated=standalone(ajv,exports),result=await build({stdin:{contents:generated,resolveDir:root,sourcefile:'schema-validation.generated.js'},bundle:true,write:false,metafile:true,format:'esm',platform:'browser',target:'es2022',legalComments:'inline'});
+ if(Object.values(result.metafile.outputs).some(output=>output.imports.length))throw Error('Browser validator contains an external import');
+ const metadata='    ucs2length.code = \'require("ajv/dist/runtime/ucs2length").default\';\n';
+ let code=result.outputFiles[0].text;if(!code.includes(metadata))throw Error('Ajv helper changed; review adapter');code=code.replace(metadata,'');
+ const match=code.match(/\nexport \{\n([\s\S]*?)\n\};\s*$/);if(!match)throw Error('Compiled export adapter changed');
+ const names=match[1].split(',').map(name=>name.trim());if(names.some(name=>!Object.hasOwn(exports,name)))throw Error('Unexpected compiled validator export');
+ return code.slice(0,match.index)+`\nreturn {${names.join(',')}};\n`;
+}
+const withoutImports=text=>text.replace(/^import[^\n]*;\n/gm,'');
+const identity=await readFile(join(root,'src/identity.ts'),'utf8'),protocol=withoutImports(await readFile(join(root,'src/protocol.ts'),'utf8')),formula=await readFile(join(root,'src/validate/formula.ts'),'utf8');
+let semantic=await readFile(join(root,'src/validate/index.ts'),'utf8');
+const start=semantic.indexOf('// Conditional required checks'),end=semantic.indexOf('const bodyFields');if(start<0||end<start)throw Error('Semantic adapter anchor changed');
+semantic=withoutImports(semantic.slice(0,start)+semantic.slice(end));
+const types=`interface SchemaError {instancePath:string;message?:string}\ninterface SchemaValidator {(value:unknown):boolean;errors:SchemaError[]|null}\n`;
+// Independent pure factories preserve tree shaking for foreground record checks.
+const validators=`const recordSchema:SchemaValidator=/* @__PURE__ */ (()=>{\n${await compiled({recordSchema:record.$id})}})().recordSchema;\nconst fullSchemas:{envelopeSchema:SchemaValidator;overlaysSchema:SchemaValidator}=/* @__PURE__ */ (()=>{\n${await compiled({envelopeSchema:schema.$id,overlaysSchema:overlay.$id})}})();\n`;
+semantic=semantic.replace(/\benvelopeSchema\b/g,'fullSchemas.envelopeSchema').replace(/\boverlaysSchema\b/g,'fullSchemas.overlaysSchema');
+// Compiler-produced JS remains unchecked as in the former .js schema files.
+// Handwritten producer sources are strictly checked; public TS signatures stay.
+const module='// @ts-nocheck\n// Generated browser-safe identity, protocol, formula and validation module.\n// No runtime imports. Regenerate from strictly checked producer sources.\n'+types+identity+'\n'+protocol+'\n'+formula+'\n'+validators+'\n'+semantic;
+if(/^import\b/m.test(module)||/require\(["']ajv/.test(module))throw Error('Single browser module is not self-contained');
+await writeFile(join(out,'identity.ts'),module);
+// Test-only fixture: deliberately excluded from the runtime shared manifest.
 await writeFile(join(out,'identity.fixture.json'),await readFile(join(root,'fixtures/shared/identity.json')));
-const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
-const shared={sourceRepository:'FullPeople/dnd5e-automation-data',sourceCommit:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),files:{}};
-for(const file of ['identity.ts','protocol.ts','formula.ts','validate.ts','schema-validation.js','schema-validation.d.ts','identity.fixture.json','record-schema.js','record-schema.d.ts','record-validation.ts'])shared.files[file]=digest(await readFile(join(out,file)));
-await writeFile(join(out,'shared-files.json'),JSON.stringify(shared,null,2)+'\n');
-console.log(JSON.stringify({out,standaloneSchemaBytes:bundled.outputFiles[0].contents.length,files:Object.keys(shared.files)}));
+const bytes=await readFile(join(out,'identity.ts')),manifest={sourceRepository:'FullPeople/dnd5e-automation-data',sourceCommit:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),files:{'identity.ts':createHash('sha256').update(bytes).digest('hex')}};
+await writeFile(join(out,'shared-files.json'),JSON.stringify(manifest,null,2)+'\n');
+console.log(JSON.stringify({out,bytes:bytes.length,files:Object.keys(manifest.files)}));

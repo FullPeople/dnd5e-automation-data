@@ -26,8 +26,9 @@ Core editions, full parent identity, hashes and version locks remain distinct.
 The safe formula parser accepts a small arithmetic/dice grammar without eval.
 
 The browser bundle contains precompiled strict schema validators and semantic
-checks with no runtime package dependencies. Its ten shared files are SHA-256
-locked. Web imports the generated files and hashed artifact; it does not import
+checks with no runtime package dependencies. Its single `identity.ts` module is
+SHA-256 locked and includes explicit protocol and formula signatures. Web
+imports that module and the hashed artifact; it does not import
 this repository or its test tooling at runtime.
 
 Raw publisher inputs stay in ignored `.cache/`; do not commit them or player
