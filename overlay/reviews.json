@@ -678,5 +678,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "DMG-item-004",
+    "path": "item/DMG-item-004.json",
+    "sha256": "eaecbb18cc8532a0f7afc304d6af66f8050f5eddbeb66a200bef01a398c45da5",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:dmg:bronze%20dragon%20scale%20mail::::::::",
+      "kiwee:item:dmg:folding%20boat::::::::",
+      "kiwee:item:dmg:amethyst::::::::",
+      "kiwee:item:dmg:longbow%20(%2B3%20weapon)::::::::phb%7Clongbow%7Cdmg%7C%2B3%20weapon",
+      "kiwee:item:dmg:javelin%20(weapon%20of%20warning)::::::::phb%7Cjavelin%7Cdmg%7Cweapon%20of%20warning",
+      "kiwee:item:dmg:longsword%20(holy%20avenger)::::::::phb%7Clongsword%7Cdmg%7Choly%20avenger",
+      "kiwee:item:dmg:dagger%20of%20venom::::::::",
+      "kiwee:item:dmg:ioun%20stone%2C%20leadership::::::::",
+      "kiwee:item:dmg:figurine%20of%20wondrous%20power%2C%20golden%20lions::::::::",
+      "kiwee:item:dmg:daern's%20instant%20fortress::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
