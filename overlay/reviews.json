@@ -136,5 +136,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-classFeature-asi-002",
+    "path": "classFeature/PHB-classFeature-asi-002.json",
+    "sha256": "5c449912dfc834cda8abdac85bb51a584af14506d7dfdd0cb2c618070a359f59",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:sorcerer:::19:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:sorcerer:::4:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:sorcerer:::8:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:warlock:::16:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:warlock:::19:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:warlock:::4:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:wizard:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:wizard:::16:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:wizard:::19:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:wizard:::8:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
