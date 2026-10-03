@@ -21,5 +21,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-baseitem-002",
+    "path": "baseitem/PHB-baseitem-002.json",
+    "sha256": "8f3505688e2d90589e7cd7561dd2ea7aaf28ca4546c80831cac653dfc53421f0",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:baseitem:phb:net::::::::",
+      "kiwee:baseitem:phb:padded%20armor::::::::",
+      "kiwee:baseitem:phb:plate%20armor::::::::",
+      "kiwee:baseitem:phb:potter's%20tools::::::::",
+      "kiwee:baseitem:phb:scale%20mail::::::::",
+      "kiwee:baseitem:phb:shield::::::::",
+      "kiwee:baseitem:phb:sling%20bullets%20(20)::::::::",
+      "kiwee:baseitem:phb:staff::::::::",
+      "kiwee:baseitem:phb:tinker's%20tools::::::::",
+      "kiwee:baseitem:phb:wooden%20staff::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
