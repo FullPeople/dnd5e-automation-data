@@ -242,5 +242,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "DMG-baseitem-001",
+    "path": "baseitem/DMG-baseitem-001.json",
+    "sha256": "2100ab4bb5c59c21dd6addb574c67d26a4a6fd1bcfdea76191390d4ca3148085",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:baseitem:dmg:antimatter%20rifle::::::::",
+      "kiwee:baseitem:dmg:hunting%20rifle::::::::",
+      "kiwee:baseitem:dmg:shotgun::::::::",
+      "kiwee:baseitem:dmg:laser%20pistol::::::::",
+      "kiwee:baseitem:dmg:musket::::::::",
+      "kiwee:baseitem:dmg:automatic%20rifle::::::::",
+      "kiwee:baseitem:dmg:energy%20cell::::::::",
+      "kiwee:baseitem:dmg:modern%20bullets%20(10)::::::::",
+      "kiwee:baseitem:dmg:renaissance%20bullet::::::::",
+      "kiwee:baseitem:dmg:renaissance%20bullets%20(10)::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
