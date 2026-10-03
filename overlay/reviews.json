@@ -425,5 +425,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "DMG-item-002",
+    "path": "item/DMG-item-002.json",
+    "sha256": "346b4f35298a7d6872f3bc1a06882e21649026039ef14a1bd14545c3dd915fbf",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:dmg:dust%20of%20dryness::::::::",
+      "kiwee:item:dmg:wind%20fan::::::::",
+      "kiwee:item:dmg:ring%20of%20spell%20turning::::::::",
+      "kiwee:item:dmg:stone%20of%20good%20luck::::::::",
+      "kiwee:item:dmg:ring%20of%20fire%20elemental%20command::::::::",
+      "kiwee:item:dmg:scale%20mail%20(mithral%20armor)::::::::phb%7Cscale%20mail%7Cdmg%7Cmithral%20armor",
+      "kiwee:item:dmg:saddle%20of%20the%20cavalier::::::::",
+      "kiwee:item:dmg:ring%20of%20x-ray%20vision::::::::",
+      "kiwee:item:dmg:ioun%20stone%2C%20mastery::::::::",
+      "kiwee:item:dmg:oathbow::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
