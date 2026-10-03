@@ -471,5 +471,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XDMG-item-002",
+    "path": "item/XDMG-item-002.json",
+    "sha256": "6a7b9afacda35f8f97685434f8545bd037643b885f76844e0f6e11d323e544b6",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:xdmg:nolzur's%20marvelous%20pigments::::::::",
+      "kiwee:item:xdmg:scroll%20of%20titan%20summoning%20(animal%20lord)::::::::",
+      "kiwee:item:xdmg:ring%20of%20elemental%20command%20(earth)::::::::",
+      "kiwee:item:xdmg:manual%20of%20gainful%20exercise::::::::",
+      "kiwee:item:xdmg:rod%20of%20resurrection::::::::",
+      "kiwee:item:xdmg:enspelled%20staff%20(level%203)::::::::",
+      "kiwee:item:xdmg:manual%20of%20iron%20golems::::::::",
+      "kiwee:item:xdmg:greatsword%20(luck%20blade)::::::::xphb%7Cgreatsword%7Cxdmg%7Cluck%20blade",
+      "kiwee:item:xdmg:plate%20armor%20(enspelled%20armor%20(level%201))::::::::xphb%7Cplate%20armor%7Cxdmg%7Censpelled%20armor%20(level%201)",
+      "kiwee:item:xdmg:laser%20pistol%20(giant%20slayer)::::::::xdmg%7Claser%20pistol%7Cxdmg%7Cgiant%20slayer"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
