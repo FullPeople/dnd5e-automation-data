@@ -1,0 +1,65 @@
+[
+  {
+    "ENG_name": "Magic Initiate; Cleric",
+    "source": "XPHB",
+    "additionalSpells": [
+      {
+        "ability": {
+          "choose": [
+            "int",
+            "wis",
+            "cha"
+          ]
+        },
+        "innate": {
+          "_": {
+            "daily": {
+              "1": [
+                {
+                  "choose": "level=1|class=牧师"
+                }
+              ]
+            }
+          }
+        },
+        "known": {
+          "_": [
+            {
+              "choose": "level=0|class=牧师",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "ENG_name": "Eladrin",
+    "source": "DMG",
+    "additionalSpells": [
+      {
+        "ability": "cha",
+        "known": {
+          "1": {
+            "rest": {
+              "1": [
+                "迷踪步"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ENG_name": "Misty Step",
+    "source": "PHB",
+    "level": 2,
+    "school": "C",
+    "duration": [
+      {
+        "type": "instant"
+      }
+    ]
+  }
+]

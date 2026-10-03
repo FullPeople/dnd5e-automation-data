@@ -1,0 +1,91 @@
+[
+  {
+    "ENG_name": "Artificer",
+    "source": "TCE",
+    "migrationVersion": 3,
+    "advancement": [
+      {
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "infused",
+          "type": "number",
+          "scale": {
+            "2": {
+              "value": 2
+            },
+            "6": {
+              "value": 3
+            },
+            "10": {
+              "value": 4
+            },
+            "14": {
+              "value": 5
+            },
+            "18": {
+              "value": 6
+            }
+          }
+        }
+      },
+      {
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "infusions",
+          "type": "number",
+          "scale": {
+            "2": {
+              "value": 4
+            },
+            "6": {
+              "value": 6
+            },
+            "10": {
+              "value": 8
+            },
+            "14": {
+              "value": 10
+            },
+            "18": {
+              "value": 12
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ENG_name": "Dragonborn (Black)",
+    "source": "XPHB",
+    "ignoreSrdActivities": true,
+    "ignoreSrdEffects": true,
+    "migrationVersion": 3,
+    "advancement": [
+      {
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "breath",
+          "type": "dice",
+          "scale": {
+            "0": {
+              "number": 1,
+              "faces": 10
+            },
+            "5": {
+              "number": 2,
+              "faces": 10
+            },
+            "11": {
+              "number": 3,
+              "faces": 10
+            },
+            "17": {
+              "number": 4,
+              "faces": 10
+            }
+          }
+        }
+      }
+    ]
+  }
+]

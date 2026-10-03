@@ -1,0 +1,37 @@
+[
+  {
+    "ENG_name": "Combat Superiority",
+    "source": "XPHB",
+    "className": "战士",
+    "classSource": "XPHB",
+    "subclassShortName": "战斗大师",
+    "subclassSource": "XPHB",
+    "level": 3,
+    "entryData": {
+      "resources": [
+        {
+          "ENG_name": "Superiority Die",
+          "type": "dicePool",
+          "recharge": "restShort",
+          "count": "floor((<$level$> + 1) / 8) + 4",
+          "number": 1,
+          "faces": "8 + (sign(ceil((<$level$> - 2) / 8) - 1) * 2)"
+        }
+      ]
+    },
+    "system": {
+      "uses": {
+        "max": ""
+      },
+      "recovery": []
+    }
+  },
+  {
+    "ENG_name": "Wand of Magic Missiles",
+    "source": "DMG",
+    "type": "WD|DMG",
+    "charges": 7,
+    "recharge": "拂晓",
+    "rechargeAmount": "{@dice 1d6 + 1}"
+  }
+]

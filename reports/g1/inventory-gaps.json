@@ -1,0 +1,2707 @@
+{
+  "phase": "G1-inventory",
+  "foundryOrphans": [
+    {
+      "identity": {
+        "kind": "subclassFeature",
+        "source": "XGE",
+        "engName": "Radiant Soul",
+        "key": "kiwee:subclassfeature:xge:radiant%20soul:phb:warlock:xge:unresolved-253b880e020107f123c2:6:::",
+        "unresolved": [
+          "subclassEngShortName"
+        ],
+        "classSource": "PHB",
+        "classEngName": "Warlock",
+        "subclassSource": "XGE",
+        "subclassEngShortName": "unresolved-253b880e020107f123c2",
+        "level": 6
+      },
+      "payloadKinds": [
+        "entryData"
+      ],
+      "file": "data/class/foundry.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "subclassFeature",
+        "source": "XGE",
+        "engName": "Searing Vengeance",
+        "key": "kiwee:subclassfeature:xge:searing%20vengeance:phb:warlock:xge:unresolved-253b880e020107f123c2:14:::",
+        "unresolved": [
+          "subclassEngShortName"
+        ],
+        "classSource": "PHB",
+        "classEngName": "Warlock",
+        "subclassSource": "XGE",
+        "subclassEngShortName": "unresolved-253b880e020107f123c2",
+        "level": 14
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/class/foundry.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "subclassFeature",
+        "source": "XPHB",
+        "engName": "Healing Light",
+        "key": "kiwee:subclassfeature:xphb:healing%20light:xphb:warlock:xphb:unresolved-253b880e020107f123c2:3:::",
+        "unresolved": [
+          "subclassEngShortName"
+        ],
+        "classSource": "XPHB",
+        "classEngName": "Warlock",
+        "subclassSource": "XPHB",
+        "subclassEngShortName": "unresolved-253b880e020107f123c2",
+        "level": 3
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/class/foundry.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "subclassFeature",
+        "source": "XPHB",
+        "engName": "Radiant Soul",
+        "key": "kiwee:subclassfeature:xphb:radiant%20soul:xphb:warlock:xphb:unresolved-253b880e020107f123c2:6:::",
+        "unresolved": [
+          "subclassEngShortName"
+        ],
+        "classSource": "XPHB",
+        "classEngName": "Warlock",
+        "subclassSource": "XPHB",
+        "subclassEngShortName": "unresolved-253b880e020107f123c2",
+        "level": 6
+      },
+      "payloadKinds": [
+        "activities",
+        "entryData"
+      ],
+      "file": "data/class/foundry.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "subclassFeature",
+        "source": "XPHB",
+        "engName": "Celestial Resilience",
+        "key": "kiwee:subclassfeature:xphb:celestial%20resilience:xphb:warlock:xphb:unresolved-253b880e020107f123c2:10:::",
+        "unresolved": [
+          "subclassEngShortName"
+        ],
+        "classSource": "XPHB",
+        "classEngName": "Warlock",
+        "subclassSource": "XPHB",
+        "subclassEngShortName": "unresolved-253b880e020107f123c2",
+        "level": 10
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/class/foundry.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "subclassFeature",
+        "source": "XPHB",
+        "engName": "Searing Vengeance",
+        "key": "kiwee:subclassfeature:xphb:searing%20vengeance:xphb:warlock:xphb:unresolved-253b880e020107f123c2:14:::",
+        "unresolved": [
+          "subclassEngShortName"
+        ],
+        "classSource": "XPHB",
+        "classEngName": "Warlock",
+        "subclassSource": "XPHB",
+        "subclassEngShortName": "unresolved-253b880e020107f123c2",
+        "level": 14
+      },
+      "payloadKinds": [
+        "activities",
+        "effects"
+      ],
+      "file": "data/class/foundry.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Black)",
+        "key": "kiwee:race:xphb:dragonborn%20(black)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Blue)",
+        "key": "kiwee:race:xphb:dragonborn%20(blue)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Brass)",
+        "key": "kiwee:race:xphb:dragonborn%20(brass)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Bronze)",
+        "key": "kiwee:race:xphb:dragonborn%20(bronze)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Copper)",
+        "key": "kiwee:race:xphb:dragonborn%20(copper)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Gold)",
+        "key": "kiwee:race:xphb:dragonborn%20(gold)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Green)",
+        "key": "kiwee:race:xphb:dragonborn%20(green)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Red)",
+        "key": "kiwee:race:xphb:dragonborn%20(red)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (Silver)",
+        "key": "kiwee:race:xphb:dragonborn%20(silver)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "XPHB",
+        "engName": "Dragonborn (White)",
+        "key": "kiwee:race:xphb:dragonborn%20(white)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "advancement"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "race",
+        "source": "PSD",
+        "engName": "Human (Keldon)",
+        "key": "kiwee:race:psd:human%20(keldon)::::::::",
+        "unresolved": []
+      },
+      "payloadKinds": [
+        "entryData"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Adrenaline Rush",
+        "key": "kiwee:racefeature:xphb:adrenaline%20rush::::::xphb:orc:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Orc"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "GGR",
+        "engName": "Animal Enhancement",
+        "key": "kiwee:racefeature:ggr:animal%20enhancement::::::ggr:simic%20hybrid:",
+        "unresolved": [],
+        "raceSource": "GGR",
+        "raceEngName": "Simic Hybrid"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "AAG",
+        "engName": "Armored Casing",
+        "key": "kiwee:racefeature:aag:armored%20casing::::::aag:autognome:",
+        "unresolved": [],
+        "raceSource": "AAG",
+        "raceEngName": "Autognome"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-eb1fdc997fea2f1f4b46:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-eb1fdc997fea2f1f4b46"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-9a55c74d7844e133d64c:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-9a55c74d7844e133d64c"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-e79b17d29d6532232c72:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-e79b17d29d6532232c72"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-2d19f72382b5a5787bde:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-2d19f72382b5a5787bde"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-6bc547686c820234951b:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-6bc547686c820234951b"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-0a9f3b82620bc21adffd:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-0a9f3b82620bc21adffd"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-948e21848a7f7159c41f:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-948e21848a7f7159c41f"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-dd20af255223fa26f693:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-dd20af255223fa26f693"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-fb2dd5e4e77c5fff57d5:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-fb2dd5e4e77c5fff57d5"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-1a4d686c95302eeb5e18:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-1a4d686c95302eeb5e18"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-1d18691949d1bc93e7e5:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-1d18691949d1bc93e7e5"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-49b58a1f49149e65314d:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-49b58a1f49149e65314d"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-278ab23e3738835490c3:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-278ab23e3738835490c3"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-748f570ef8451791d1dd:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-748f570ef8451791d1dd"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-e19511f2030ab841cc39:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-e19511f2030ab841cc39"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-5f6137aa1e0a2922cc66:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-5f6137aa1e0a2922cc66"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-b4c30433fb2c5016ded1:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-b4c30433fb2c5016ded1"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-a7243039295588c3e87f:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-a7243039295588c3e87f"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-fcde6619d4b35d90ed91:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-fcde6619d4b35d90ed91"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "EGW",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:egw:breath%20weapon::::::egw:unresolved-6b48e4940c4f4fb4152a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "EGW",
+        "raceEngName": "unresolved-6b48e4940c4f4fb4152a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-5f32a745bfd5e7ecb8c4:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-5f32a745bfd5e7ecb8c4"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-7ca5ebe95ade10d220c8:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-7ca5ebe95ade10d220c8"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-67ce8a120186fa28c725:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-67ce8a120186fa28c725"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-2ad246118261ea45ca3d:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-2ad246118261ea45ca3d"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-1f639a488927d3fc6ce1:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-1f639a488927d3fc6ce1"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-fb7b3bfae89c38820922:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-fb7b3bfae89c38820922"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-e276f4c57e95a22cc006:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-e276f4c57e95a22cc006"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-ce0d7f65f14d54f8431e:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-ce0d7f65f14d54f8431e"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-444346bf87c9bddb85d7:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-444346bf87c9bddb85d7"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-e7e2823e8b0953618f9c:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-e7e2823e8b0953618f9c"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-199bafc876bb59e49971:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-199bafc876bb59e49971"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-0385f56c3bfb57929b5a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-0385f56c3bfb57929b5a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-a1e9a56bb08ba23d5f82:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-a1e9a56bb08ba23d5f82"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-a09a3632e7f432ee47a7:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-a09a3632e7f432ee47a7"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "FTD",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:ftd:breath%20weapon::::::ftd:unresolved-b41e3947d996cf38cf23:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "FTD",
+        "raceEngName": "unresolved-b41e3947d996cf38cf23"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-b27f31da85679530b223:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-b27f31da85679530b223"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-cbfd2c2f1ee6303e02cd:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-cbfd2c2f1ee6303e02cd"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-2d823bfe8c218377a70c:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-2d823bfe8c218377a70c"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-64b03fab191c201fcc09:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-64b03fab191c201fcc09"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-4c6f9576efd3101db99a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-4c6f9576efd3101db99a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-824b443810a47ca02c3a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-824b443810a47ca02c3a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-48780e5b73fe85648367:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-48780e5b73fe85648367"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-f0617045ae14e2c710ca:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-f0617045ae14e2c710ca"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-12dd261d50a9d28dcd7e:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-12dd261d50a9d28dcd7e"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:phb:breath%20weapon::::::phb:unresolved-82dc09f0ade74e31b39a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-82dc09f0ade74e31b39a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-b27f31da85679530b223:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-b27f31da85679530b223"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-cbfd2c2f1ee6303e02cd:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-cbfd2c2f1ee6303e02cd"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-2d823bfe8c218377a70c:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-2d823bfe8c218377a70c"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-64b03fab191c201fcc09:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-64b03fab191c201fcc09"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-4c6f9576efd3101db99a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-4c6f9576efd3101db99a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-824b443810a47ca02c3a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-824b443810a47ca02c3a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-48780e5b73fe85648367:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-48780e5b73fe85648367"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-f0617045ae14e2c710ca:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-f0617045ae14e2c710ca"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-12dd261d50a9d28dcd7e:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-12dd261d50a9d28dcd7e"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Breath Weapon",
+        "key": "kiwee:racefeature:xphb:breath%20weapon::::::xphb:unresolved-82dc09f0ade74e31b39a:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "XPHB",
+        "raceEngName": "unresolved-82dc09f0ade74e31b39a"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Celestial Revelation",
+        "key": "kiwee:racefeature:xphb:celestial%20revelation::::::xphb:aasimar:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Aasimar"
+      },
+      "payloadKinds": [
+        "activities",
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Draconic Flight",
+        "key": "kiwee:racefeature:xphb:draconic%20flight::::::xphb:dragonborn:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Dragonborn"
+      },
+      "payloadKinds": [
+        "activities",
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PHB",
+        "engName": "Dwarven Toughness",
+        "key": "kiwee:racefeature:phb:dwarven%20toughness::::::phb:unresolved-ee5732acb0f7320fad9b:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PHB",
+        "raceEngName": "unresolved-ee5732acb0f7320fad9b"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Dwarven Toughness",
+        "key": "kiwee:racefeature:xphb:dwarven%20toughness::::::xphb:dwarf:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Dwarf"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "RHW",
+        "engName": "Eerie Token",
+        "key": "kiwee:racefeature:rhw:eerie%20token::::::rhw:hexblood:",
+        "unresolved": [],
+        "raceSource": "RHW",
+        "raceEngName": "Hexblood"
+      },
+      "payloadKinds": [
+        "activities",
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "RHW",
+        "engName": "Escaped Death",
+        "key": "kiwee:racefeature:rhw:escaped%20death::::::rhw:reborn:",
+        "unresolved": [],
+        "raceSource": "RHW",
+        "raceEngName": "Reborn"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Gnomish Cunning",
+        "key": "kiwee:racefeature:xphb:gnomish%20cunning::::::xphb:gnome:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Gnome"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PSZ",
+        "engName": "Grit",
+        "key": "kiwee:racefeature:psz:grit::::::psz:unresolved-e7902fbbffe1b54a55ca:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PSZ",
+        "raceEngName": "unresolved-e7902fbbffe1b54a55ca"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PSZ",
+        "engName": "Grit",
+        "key": "kiwee:racefeature:psz:grit::::::psz:unresolved-701c8f33a8f990e6e765:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PSZ",
+        "raceEngName": "unresolved-701c8f33a8f990e6e765"
+      },
+      "payloadKinds": [],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "PSZ",
+        "engName": "Grit",
+        "key": "kiwee:racefeature:psz:grit::::::psz:unresolved-195b1d90eefdfb1733d8:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "PSZ",
+        "raceEngName": "unresolved-195b1d90eefdfb1733d8"
+      },
+      "payloadKinds": [],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "MPMM",
+        "engName": "Hare-Trigger",
+        "key": "kiwee:racefeature:mpmm:hare-trigger::::::mpmm:harengon:",
+        "unresolved": [],
+        "raceSource": "MPMM",
+        "raceEngName": "Harengon"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "MPMM",
+        "engName": "Healing Hands",
+        "key": "kiwee:racefeature:mpmm:healing%20hands::::::mpmm:aasimar:",
+        "unresolved": [],
+        "raceSource": "MPMM",
+        "raceEngName": "Aasimar"
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "VGM",
+        "engName": "Healing Hands",
+        "key": "kiwee:racefeature:vgm:healing%20hands::::::vgm:aasimar:",
+        "unresolved": [],
+        "raceSource": "VGM",
+        "raceEngName": "Aasimar"
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Healing Hands",
+        "key": "kiwee:racefeature:xphb:healing%20hands::::::xphb:aasimar:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Aasimar"
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "GGR",
+        "engName": "Hooves",
+        "key": "kiwee:racefeature:ggr:hooves::::::ggr:centaur:",
+        "unresolved": [],
+        "raceSource": "GGR",
+        "raceEngName": "Centaur"
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "RHW",
+        "engName": "Howl",
+        "key": "kiwee:racefeature:rhw:howl::::::rhw:lupin:",
+        "unresolved": [],
+        "raceSource": "RHW",
+        "raceEngName": "Lupin"
+      },
+      "payloadKinds": [
+        "activities",
+        "effects",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "ERLW",
+        "engName": "Integrated Protection",
+        "key": "kiwee:racefeature:erlw:integrated%20protection::::::erlw:warforged:",
+        "unresolved": [],
+        "raceSource": "ERLW",
+        "raceEngName": "Warforged"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "RHW",
+        "engName": "Knowledge from a Past Life",
+        "key": "kiwee:racefeature:rhw:knowledge%20from%20a%20past%20life::::::rhw:reborn:",
+        "unresolved": [],
+        "raceSource": "RHW",
+        "raceEngName": "Reborn"
+      },
+      "payloadKinds": [
+        "activities",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Large Form",
+        "key": "kiwee:racefeature:xphb:large%20form::::::xphb:goliath:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Goliath"
+      },
+      "payloadKinds": [
+        "activities",
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Luck",
+        "key": "kiwee:racefeature:xphb:luck::::::xphb:halfling:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Halfling"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "DMG",
+        "engName": "Natural Armor",
+        "key": "kiwee:racefeature:dmg:natural%20armor::::::dmg:lizardfolk:",
+        "unresolved": [],
+        "raceSource": "DMG",
+        "raceEngName": "Lizardfolk"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "DMG",
+        "engName": "Natural Armor",
+        "key": "kiwee:racefeature:dmg:natural%20armor::::::dmg:unresolved-f5989275b0ec8139c627:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "DMG",
+        "raceEngName": "unresolved-f5989275b0ec8139c627"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "GGR",
+        "engName": "Natural Armor",
+        "key": "kiwee:racefeature:ggr:natural%20armor::::::ggr:loxodon:",
+        "unresolved": [],
+        "raceSource": "GGR",
+        "raceEngName": "Loxodon"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "LR",
+        "engName": "Natural Armor",
+        "key": "kiwee:racefeature:lr:natural%20armor::::::lr:locathah:",
+        "unresolved": [],
+        "raceSource": "LR",
+        "raceEngName": "Locathah"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "TTP",
+        "engName": "Natural Armor",
+        "key": "kiwee:racefeature:ttp:natural%20armor::::::ttp:tortle:",
+        "unresolved": [],
+        "raceSource": "TTP",
+        "raceEngName": "Tortle"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "VGM",
+        "engName": "Natural Armor",
+        "key": "kiwee:racefeature:vgm:natural%20armor::::::vgm:lizardfolk:",
+        "unresolved": [],
+        "raceSource": "VGM",
+        "raceEngName": "Lizardfolk"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Powerful Build",
+        "key": "kiwee:racefeature:xphb:powerful%20build::::::xphb:goliath:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Goliath"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "VGM",
+        "engName": "Radiant Soul",
+        "key": "kiwee:racefeature:vgm:radiant%20soul::::::vgm:unresolved-27a861f733a7a6468099:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "VGM",
+        "raceEngName": "unresolved-27a861f733a7a6468099"
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Relentless Endurance",
+        "key": "kiwee:racefeature:xphb:relentless%20endurance::::::xphb:orc:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Orc"
+      },
+      "payloadKinds": [
+        "activities"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "TTP",
+        "engName": "Shell Defense",
+        "key": "kiwee:racefeature:ttp:shell%20defense::::::ttp:tortle:",
+        "unresolved": [],
+        "raceSource": "TTP",
+        "raceEngName": "Tortle"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "ERLW",
+        "engName": "Shifting Feature",
+        "key": "kiwee:racefeature:erlw:shifting%20feature::::::erlw:unresolved-3e813352fef30fa2e532:",
+        "unresolved": [
+          "raceEngName"
+        ],
+        "raceSource": "ERLW",
+        "raceEngName": "unresolved-3e813352fef30fa2e532"
+      },
+      "payloadKinds": [
+        "effects"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": []
+    },
+    {
+      "identity": {
+        "kind": "raceFeature",
+        "source": "XPHB",
+        "engName": "Stonecunning",
+        "key": "kiwee:racefeature:xphb:stonecunning::::::xphb:dwarf:",
+        "unresolved": [],
+        "raceSource": "XPHB",
+        "raceEngName": "Dwarf"
+      },
+      "payloadKinds": [
+        "activities",
+        "effects",
+        "system"
+      ],
+      "file": "data/foundry-races.json",
+      "migrationVersion": 3,
+      "flags": [
+        "ignoreSrdEffects",
+        "ignoreSrdActivities"
+      ]
+    }
+  ],
+  "unresolvedIdentities": [
+    {
+      "kind": "item",
+      "source": "DRAGONHORSE2026",
+      "engName": "unresolved-034af83a87f9f05bc979",
+      "key": "kiwee-homebrew:item:dragonhorse2026:unresolved-034af83a87f9f05bc979::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "item",
+      "source": "DRAGONHORSE2026",
+      "engName": "unresolved-8978a0fdd57ca5e587b6",
+      "key": "kiwee-homebrew:item:dragonhorse2026:unresolved-8978a0fdd57ca5e587b6::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "item",
+      "source": "DRAGONHORSE2026",
+      "engName": "unresolved-e0de80a622456bb3e72d",
+      "key": "kiwee-homebrew:item:dragonhorse2026:unresolved-e0de80a622456bb3e72d::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-02617eb2748f8fbf61b6",
+      "key": "kiwee:race:ftd:unresolved-02617eb2748f8fbf61b6::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-0263362fb21f48c1c8bd",
+      "key": "kiwee:race:ftd:unresolved-0263362fb21f48c1c8bd::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-125b5b9dc310b19e02eb",
+      "key": "kiwee:race:ftd:unresolved-125b5b9dc310b19e02eb::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-2b3299db0ea8da31c903",
+      "key": "kiwee:race:ftd:unresolved-2b3299db0ea8da31c903::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-449194aea060475d5577",
+      "key": "kiwee:race:ftd:unresolved-449194aea060475d5577::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-6154942f9f63f7352ca1",
+      "key": "kiwee:race:ftd:unresolved-6154942f9f63f7352ca1::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-755176f9641ccb882218",
+      "key": "kiwee:race:ftd:unresolved-755176f9641ccb882218::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-868828a315d78c96da9c",
+      "key": "kiwee:race:ftd:unresolved-868828a315d78c96da9c::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-94a51920716c7a1c2b18",
+      "key": "kiwee:race:ftd:unresolved-94a51920716c7a1c2b18::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-98950589f4d0f08e76d2",
+      "key": "kiwee:race:ftd:unresolved-98950589f4d0f08e76d2::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-b1b0637b8f60df20c7be",
+      "key": "kiwee:race:ftd:unresolved-b1b0637b8f60df20c7be::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-b26563447f8465c9084c",
+      "key": "kiwee:race:ftd:unresolved-b26563447f8465c9084c::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-bd0c159d18ff78e79d64",
+      "key": "kiwee:race:ftd:unresolved-bd0c159d18ff78e79d64::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-de136f08c7515bed8e43",
+      "key": "kiwee:race:ftd:unresolved-de136f08c7515bed8e43::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "FTD",
+      "engName": "unresolved-df3003df5d2b0ab25d39",
+      "key": "kiwee:race:ftd:unresolved-df3003df5d2b0ab25d39::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-1d3b0ae73f17991153fc",
+      "key": "kiwee:race:xphb:unresolved-1d3b0ae73f17991153fc::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-1fa1baffe94a9cf761f2",
+      "key": "kiwee:race:xphb:unresolved-1fa1baffe94a9cf761f2::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-22e0180d88063cc57d5c",
+      "key": "kiwee:race:xphb:unresolved-22e0180d88063cc57d5c::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-423dd1679f1de90188df",
+      "key": "kiwee:race:xphb:unresolved-423dd1679f1de90188df::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-54a3b619fb71d2ee8597",
+      "key": "kiwee:race:xphb:unresolved-54a3b619fb71d2ee8597::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-99366e1e81fd92517b39",
+      "key": "kiwee:race:xphb:unresolved-99366e1e81fd92517b39::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-b04b432ad469baddf108",
+      "key": "kiwee:race:xphb:unresolved-b04b432ad469baddf108::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-b3965d64f99ae9a5f346",
+      "key": "kiwee:race:xphb:unresolved-b3965d64f99ae9a5f346::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-efc27684bac12b0c30ee",
+      "key": "kiwee:race:xphb:unresolved-efc27684bac12b0c30ee::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "race",
+      "source": "XPHB",
+      "engName": "unresolved-f766bfd9ffd312c3319f",
+      "key": "kiwee:race:xphb:unresolved-f766bfd9ffd312c3319f::::::::",
+      "unresolved": [
+        "engName"
+      ]
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-129416a7d6949a6dcd38",
+      "key": "kiwee:subrace:egw:unresolved-129416a7d6949a6dcd38::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-1f3fa168b3ce0e3c6575",
+      "key": "kiwee:subrace:egw:unresolved-1f3fa168b3ce0e3c6575::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-2c546cd37234af825718",
+      "key": "kiwee:subrace:egw:unresolved-2c546cd37234af825718::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-4639b0ff5e640aa17ae4",
+      "key": "kiwee:subrace:egw:unresolved-4639b0ff5e640aa17ae4::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-47800c56d83c6d1ad3a5",
+      "key": "kiwee:subrace:egw:unresolved-47800c56d83c6d1ad3a5::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-4d6afd8d3161db00c15c",
+      "key": "kiwee:subrace:egw:unresolved-4d6afd8d3161db00c15c::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-5d90c7ccbe87fa001ea9",
+      "key": "kiwee:subrace:egw:unresolved-5d90c7ccbe87fa001ea9::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-663c06ee0002de5c866a",
+      "key": "kiwee:subrace:egw:unresolved-663c06ee0002de5c866a::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-6fedc82ddc0b5f24c5f8",
+      "key": "kiwee:subrace:egw:unresolved-6fedc82ddc0b5f24c5f8::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-864fc90a763faad53ba4",
+      "key": "kiwee:subrace:egw:unresolved-864fc90a763faad53ba4::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-9a73be028c18c78f6e39",
+      "key": "kiwee:subrace:egw:unresolved-9a73be028c18c78f6e39::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-9fd208f57508c3545db0",
+      "key": "kiwee:subrace:egw:unresolved-9fd208f57508c3545db0::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-b0a72d8a51e037216153",
+      "key": "kiwee:subrace:egw:unresolved-b0a72d8a51e037216153::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-bacd83822919d1c58238",
+      "key": "kiwee:subrace:egw:unresolved-bacd83822919d1c58238::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-d0276e0f3b3ed68eef54",
+      "key": "kiwee:subrace:egw:unresolved-d0276e0f3b3ed68eef54::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-d6ebf5a7076de9c93695",
+      "key": "kiwee:subrace:egw:unresolved-d6ebf5a7076de9c93695::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-e7f4c35fae553feebc57",
+      "key": "kiwee:subrace:egw:unresolved-e7f4c35fae553feebc57::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-e837bd660ac6cbd93604",
+      "key": "kiwee:subrace:egw:unresolved-e837bd660ac6cbd93604::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-eb5d9a8081e32edcdac9",
+      "key": "kiwee:subrace:egw:unresolved-eb5d9a8081e32edcdac9::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "EGW",
+      "engName": "unresolved-ec2a7851590a247cd329",
+      "key": "kiwee:subrace:egw:unresolved-ec2a7851590a247cd329::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-1d3b0ae73f17991153fc",
+      "key": "kiwee:subrace:phb:unresolved-1d3b0ae73f17991153fc::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-1fa1baffe94a9cf761f2",
+      "key": "kiwee:subrace:phb:unresolved-1fa1baffe94a9cf761f2::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-22e0180d88063cc57d5c",
+      "key": "kiwee:subrace:phb:unresolved-22e0180d88063cc57d5c::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-423dd1679f1de90188df",
+      "key": "kiwee:subrace:phb:unresolved-423dd1679f1de90188df::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-54a3b619fb71d2ee8597",
+      "key": "kiwee:subrace:phb:unresolved-54a3b619fb71d2ee8597::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-99366e1e81fd92517b39",
+      "key": "kiwee:subrace:phb:unresolved-99366e1e81fd92517b39::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-b04b432ad469baddf108",
+      "key": "kiwee:subrace:phb:unresolved-b04b432ad469baddf108::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-b3965d64f99ae9a5f346",
+      "key": "kiwee:subrace:phb:unresolved-b3965d64f99ae9a5f346::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-efc27684bac12b0c30ee",
+      "key": "kiwee:subrace:phb:unresolved-efc27684bac12b0c30ee::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    },
+    {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "unresolved-f766bfd9ffd312c3319f",
+      "key": "kiwee:subrace:phb:unresolved-f766bfd9ffd312c3319f::::::phb:dragonborn:",
+      "unresolved": [
+        "engName"
+      ],
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn"
+    }
+  ],
+  "duplicateConflicts": [
+    {
+      "key": "kiwee-homebrew:subclassfeature:dragonhorse2026:channel%20divinity%3A%20harness%20divine%20power:xphb:paladin:dragonhorse2026:oath%20of%20iron%20cavalry:3:::",
+      "files": [
+        "unresolved-434854616ea0b9c95ead",
+        "unresolved-434854616ea0b9c95ead"
+      ]
+    },
+    {
+      "key": "kiwee-homebrew:optionalfeature:grimhollowpg24:darkvision::::::::",
+      "files": [
+        "unresolved-5124d5a0c0161ced02b7",
+        "unresolved-5124d5a0c0161ced02b7"
+      ]
+    }
+  ]
+}

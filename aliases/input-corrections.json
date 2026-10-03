@@ -1,0 +1,14 @@
+[
+  {
+    "identityKey": "kiwee:class:xphb:cleric::::::::",
+    "input": "kiwee/data/class/class-cleric.json",
+    "sha256": "949c918679e385384a4979398219165807332ff6ca400f39a87c6fe1779bc65a",
+    "path": ["startingEquipment", "defaultData", "0", "A", "5", "value"],
+    "previous": 7000,
+    "value": 700,
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03",
+    "evidence": {"page": 68, "quote": "7 GP"},
+    "reason": "Preserve the existing validated Web correction for the explicitly labelled starting-equipment package."
+  }
+]

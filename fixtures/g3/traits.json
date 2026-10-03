@@ -1,0 +1,14 @@
+[
+  {
+    "ENG_name": "Dwarf",
+    "source": "PHB",
+    "size": [
+      "M"
+    ],
+    "speed": 25,
+    "darkvision": 60,
+    "resist": [
+      "毒素"
+    ]
+  }
+]

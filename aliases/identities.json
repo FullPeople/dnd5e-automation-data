@@ -1,0 +1,387 @@
+[
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-02617eb2748f8fbf61b6::::::::",
+    "engName": "Dragonborn (Gem; Sapphire)",
+    "ref": "kiwee/data/races.json#/race/30/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-0263362fb21f48c1c8bd::::::::",
+    "engName": "Dragonborn (Gem; Crystal)",
+    "ref": "kiwee/data/races.json#/race/30/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-125b5b9dc310b19e02eb::::::::",
+    "engName": "Dragonborn (Chromatic; Blue)",
+    "ref": "kiwee/data/races.json#/race/29/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-2b3299db0ea8da31c903::::::::",
+    "engName": "Dragonborn (Gem; Amethyst)",
+    "ref": "kiwee/data/races.json#/race/30/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-449194aea060475d5577::::::::",
+    "engName": "Dragonborn (Chromatic; Green)",
+    "ref": "kiwee/data/races.json#/race/29/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-6154942f9f63f7352ca1::::::::",
+    "engName": "Dragonborn (Metallic; Gold)",
+    "ref": "kiwee/data/races.json#/race/31/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-755176f9641ccb882218::::::::",
+    "engName": "Dragonborn (Gem; Topaz)",
+    "ref": "kiwee/data/races.json#/race/30/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-868828a315d78c96da9c::::::::",
+    "engName": "Dragonborn (Metallic; Bronze)",
+    "ref": "kiwee/data/races.json#/race/31/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-94a51920716c7a1c2b18::::::::",
+    "engName": "Dragonborn (Metallic; Copper)",
+    "ref": "kiwee/data/races.json#/race/31/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-98950589f4d0f08e76d2::::::::",
+    "engName": "Dragonborn (Chromatic; Red)",
+    "ref": "kiwee/data/races.json#/race/29/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-b1b0637b8f60df20c7be::::::::",
+    "engName": "Dragonborn (Chromatic; White)",
+    "ref": "kiwee/data/races.json#/race/29/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-b26563447f8465c9084c::::::::",
+    "engName": "Dragonborn (Gem; Emerald)",
+    "ref": "kiwee/data/races.json#/race/30/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-bd0c159d18ff78e79d64::::::::",
+    "engName": "Dragonborn (Metallic; Brass)",
+    "ref": "kiwee/data/races.json#/race/31/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-de136f08c7515bed8e43::::::::",
+    "engName": "Dragonborn (Chromatic; Black)",
+    "ref": "kiwee/data/races.json#/race/29/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:ftd:unresolved-df3003df5d2b0ab25d39::::::::",
+    "engName": "Dragonborn (Metallic; Silver)",
+    "ref": "kiwee/data/races.json#/race/31/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-1d3b0ae73f17991153fc::::::::",
+    "engName": "Dragonborn (White)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/9",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-1fa1baffe94a9cf761f2::::::::",
+    "engName": "Dragonborn (Green)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/6",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-22e0180d88063cc57d5c::::::::",
+    "engName": "Dragonborn (Blue)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-423dd1679f1de90188df::::::::",
+    "engName": "Dragonborn (Bronze)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-54a3b619fb71d2ee8597::::::::",
+    "engName": "Dragonborn (Black)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-99366e1e81fd92517b39::::::::",
+    "engName": "Dragonborn (Copper)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-b04b432ad469baddf108::::::::",
+    "engName": "Dragonborn (Gold)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/5",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-b3965d64f99ae9a5f346::::::::",
+    "engName": "Dragonborn (Brass)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-efc27684bac12b0c30ee::::::::",
+    "engName": "Dragonborn (Red)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/7",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:race:xphb:unresolved-f766bfd9ffd312c3319f::::::::",
+    "engName": "Dragonborn (Silver)",
+    "ref": "kiwee/data/races.json#/race/28/expanded-version/8",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-129416a7d6949a6dcd38::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Silver)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/8",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-1f3fa168b3ce0e3c6575::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Red)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/7",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-2c546cd37234af825718::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; White)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/9",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-4639b0ff5e640aa17ae4::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Black)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-47800c56d83c6d1ad3a5::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Gold)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/5",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-4d6afd8d3161db00c15c::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Bronze)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-5d90c7ccbe87fa001ea9::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; White)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/9",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-663c06ee0002de5c866a::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Red)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/7",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-6fedc82ddc0b5f24c5f8::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Blue)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-864fc90a763faad53ba4::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Gold)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/5",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-9a73be028c18c78f6e39::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Bronze)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-9fd208f57508c3545db0::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Green)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/6",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-b0a72d8a51e037216153::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Brass)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-bacd83822919d1c58238::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Copper)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-d0276e0f3b3ed68eef54::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Silver)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/8",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-d6ebf5a7076de9c93695::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Blue)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-e7f4c35fae553feebc57::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Black)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-e837bd660ac6cbd93604::::::phb:dragonborn:",
+    "engName": "Dragonborn (Draconblood; Green)",
+    "ref": "kiwee/data/races.json#/subrace/7/expanded-version/6",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-eb5d9a8081e32edcdac9::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Copper)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:egw:unresolved-ec2a7851590a247cd329::::::phb:dragonborn:",
+    "engName": "Dragonborn (Ravenite; Brass)",
+    "ref": "kiwee/data/races.json#/subrace/8/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-1d3b0ae73f17991153fc::::::phb:dragonborn:",
+    "engName": "Dragonborn (White)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/9",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-1fa1baffe94a9cf761f2::::::phb:dragonborn:",
+    "engName": "Dragonborn (Green)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/6",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-22e0180d88063cc57d5c::::::phb:dragonborn:",
+    "engName": "Dragonborn (Blue)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/1",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-423dd1679f1de90188df::::::phb:dragonborn:",
+    "engName": "Dragonborn (Bronze)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/3",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-54a3b619fb71d2ee8597::::::phb:dragonborn:",
+    "engName": "Dragonborn (Black)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/0",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-99366e1e81fd92517b39::::::phb:dragonborn:",
+    "engName": "Dragonborn (Copper)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/4",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-b04b432ad469baddf108::::::phb:dragonborn:",
+    "engName": "Dragonborn (Gold)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/5",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-b3965d64f99ae9a5f346::::::phb:dragonborn:",
+    "engName": "Dragonborn (Brass)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/2",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-efc27684bac12b0c30ee::::::phb:dragonborn:",
+    "engName": "Dragonborn (Red)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/7",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  },
+  {
+    "inventoryKey": "kiwee:subrace:phb:unresolved-f766bfd9ffd312c3319f::::::phb:dragonborn:",
+    "engName": "Dragonborn (Silver)",
+    "ref": "kiwee/data/races.json#/subrace/6/expanded-version/8",
+    "reviewer": "model:Codex",
+    "reviewedAt": "2026-10-03"
+  }
+]

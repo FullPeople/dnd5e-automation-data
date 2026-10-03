@@ -1,0 +1,29 @@
+[
+  {
+    "ENG_name": "Cleric",
+    "source": "XPHB",
+    "kind": "class",
+    "translatedIdentityAlias": "牧师"
+  },
+  {
+    "ENG_name": "Fighter",
+    "source": "XPHB",
+    "kind": "class",
+    "translatedIdentityAlias": "战士"
+  },
+  {
+    "ENG_name": "Battle Master",
+    "source": "XPHB",
+    "className": "战士",
+    "classSource": "XPHB",
+    "kind": "subclass",
+    "translatedIdentityAlias": "战斗大师"
+  },
+  {
+    "ENG_name": "Misty Step",
+    "source": "PHB",
+    "level": 2,
+    "kind": "spell",
+    "translatedIdentityAlias": "迷踪步"
+  }
+]

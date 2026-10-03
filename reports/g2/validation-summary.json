@@ -1,0 +1,54 @@
+{
+  "phase": "G2",
+  "scope": "protocol-validation-only",
+  "completeAutomationClaim": false,
+  "nodeVersions": [
+    "24.19.0",
+    "22.12.0"
+  ],
+  "vitest": {
+    "passed": 18,
+    "skipped": 0,
+    "failed": 0
+  },
+  "inventoryTests": {
+    "passed": 14,
+    "skipped": 0,
+    "failed": 0
+  },
+  "types": "passed",
+  "files": [
+    {
+      "path": "schema/automation-ir.schema.json",
+      "sha256": "1397e5e543391b0b4830ba12211cc2c290e66af1259eca2861cfe3ca1f907235"
+    },
+    {
+      "path": "schema/overlay.schema.json",
+      "sha256": "c8c3f6ae3601a704f94e978037c38ae6a4e988cd7b0395339026a13b588ad77c"
+    },
+    {
+      "path": "src/identity.ts",
+      "sha256": "011676d56801e0193c89fa903e698d59bdebe6d19a40cd232956d54e5928291b"
+    },
+    {
+      "path": "evidence/g2/tests.log",
+      "sha256": "0d9d756acc2846fc6e28d2fe221843e30067ca3c916084b7ffece4c0b1ad5d7d"
+    },
+    {
+      "path": "evidence/g2/build.log",
+      "sha256": "7ab4b8718dce6f7f8d2f761e99a1e356597d3a1060496aa795e20e2e034a05a0"
+    },
+    {
+      "path": "evidence/g2/node22-vitest.log",
+      "sha256": "118b4a71ee24c7a10b19b4aea298146c013056701bcbce827d5ca727299fb272"
+    },
+    {
+      "path": "evidence/g2/node22-inventory.log",
+      "sha256": "e61f8e609317b2a43acc9928d71d235667504e77e641b4328dae1261660ff9f5"
+    },
+    {
+      "path": "evidence/g2/node22-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

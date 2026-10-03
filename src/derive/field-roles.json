@@ -1,0 +1,407 @@
+[
+  {
+    "field": "level",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "name",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "ability",
+    "role": "mechanism",
+    "mapping": "abilities"
+  },
+  {
+    "field": "_category",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "speed",
+    "role": "mechanism",
+    "mapping": "traits"
+  },
+  {
+    "field": "classSource",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "_custom",
+    "role": "mechanism",
+    "mapping": "unsupported.customRule"
+  },
+  {
+    "field": "casterProgression",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "ac",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "ENG_name",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "type",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "dmg",
+    "role": "outOfScope",
+    "mapping": "creature/manual combat data outside this catalogue contract"
+  },
+  {
+    "field": "startingEquipment",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "property",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "className",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "_castingSource",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "source",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "proficiency",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "edition",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "weaponCategory",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "spellcastingAbility",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "weight",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "size",
+    "role": "mechanism",
+    "mapping": "traits"
+  },
+  {
+    "field": "preparedSpellsProgression",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "hd",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "entries",
+    "role": "display",
+    "mapping": "source display plus typed inline choice nodes; plain prose never determines a grant"
+  },
+  {
+    "field": "classes",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "classTableGroups",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "_equipmentRef",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "uses",
+    "role": "mechanism",
+    "mapping": "resources"
+  },
+  {
+    "field": "subclassTableGroups",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "subclassShortName",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "startingProficiencies",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "spellsKnownProgression",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "preparedSpells",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "dmgType",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "classFeatures",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "_spellClasses",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "time",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "system",
+    "role": "mechanism",
+    "mapping": "resources"
+  },
+  {
+    "field": "scfType",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "reqAttune",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "range",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "multiclassing",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "legendaryGroup",
+    "role": "outOfScope",
+    "mapping": "creature/manual combat data outside this catalogue contract"
+  },
+  {
+    "field": "hp",
+    "role": "outOfScope",
+    "mapping": "creature/manual combat data outside this catalogue contract"
+  },
+  {
+    "field": "duration",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "attackBonus",
+    "role": "mechanism",
+    "mapping": "unsupported.manualWeapon"
+  },
+  {
+    "field": "additionalEntries",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "_legendaryGroup",
+    "role": "outOfScope",
+    "mapping": "creature/manual combat data outside this catalogue contract"
+  },
+  {
+    "field": "subclassSource",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "subclassName",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "subclassFeatures",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "spellsKnownProgressionFixed",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "shortName",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "script",
+    "role": "mechanism",
+    "mapping": "unsupported.scripts"
+  },
+  {
+    "field": "resources",
+    "role": "mechanism",
+    "mapping": "resources"
+  },
+  {
+    "field": "resource",
+    "role": "mechanism",
+    "mapping": "resources"
+  },
+  {
+    "field": "raceName",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "preparedSpellsChange",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "page",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "overwrite",
+    "role": "bookkeeping",
+    "mapping": "catalogue expansion and visible inheritance diagnostics"
+  },
+  {
+    "field": "items",
+    "role": "mechanism",
+    "mapping": "unsupported.equipmentBundle"
+  },
+  {
+    "field": "inherits",
+    "role": "bookkeeping",
+    "mapping": "catalogue expansion and visible inheritance diagnostics"
+  },
+  {
+    "field": "feats",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "entriesHigherLevel",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "classEnglish",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "classENG_name",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "cantripProgression",
+    "role": "mechanism",
+    "mapping": "classes"
+  },
+  {
+    "field": "bonusAc",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "additionalSpells",
+    "role": "mechanism",
+    "mapping": "spells"
+  },
+  {
+    "field": "_workbenchCustom",
+    "role": "mechanism",
+    "mapping": "unsupported.customRule"
+  },
+  {
+    "field": "_variantIdentity",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "_unresolvedParent",
+    "role": "bookkeeping",
+    "mapping": "catalogue expansion and visible inheritance diagnostics"
+  },
+  {
+    "field": "_trainingCategory",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "_spellSources",
+    "role": "display",
+    "mapping": "source snapshot display; never mechanism inference"
+  },
+  {
+    "field": "_copy",
+    "role": "bookkeeping",
+    "mapping": "catalogue expansion and visible inheritance diagnostics"
+  },
+  {
+    "field": "_classEdition",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "ENG_shortName",
+    "role": "identity",
+    "mapping": "shared identity or source-qualified reference context"
+  },
+  {
+    "field": "value",
+    "role": "mechanism",
+    "mapping": "equipment"
+  },
+  {
+    "field": "consumes",
+    "role": "mechanism",
+    "mapping": "resources"
+  }
+]

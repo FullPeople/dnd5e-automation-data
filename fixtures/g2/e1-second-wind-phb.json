@@ -1,0 +1,62 @@
+{
+  "identity": {
+    "kind": "feature",
+    "source": "PHB",
+    "engName": "Second Wind",
+    "classSource": "PHB",
+    "classEngName": "Fighter",
+    "level": 1,
+    "packId": "kiwee",
+    "key": "kiwee:feature:phb:second%20wind:phb:fighter:::1:::"
+  },
+  "edition": "2014",
+  "verdict": "automated",
+  "provenance": [
+    {
+      "layer": "structured",
+      "ref": "data/class/class-fighter.json#/classFeature/1"
+    },
+    {
+      "layer": "rulePack",
+      "ref": "../dnd-automation-web/docs/AUTOMATION-EXECUTION-PLAN.md:309"
+    }
+  ],
+  "evidence": {
+    "page": 72
+  },
+  "mechanics": {
+    "resources": [
+      {
+        "key": "second-wind",
+        "max": {
+          "formula": "1"
+        },
+        "recovery": [
+          {
+            "period": "short",
+            "amount": "all"
+          },
+          {
+            "period": "long",
+            "amount": "all"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "heal",
+        "activation": "bonus",
+        "target": "self",
+        "formula": "1d10 + @class.level",
+        "consumes": {
+          "resource": "second-wind",
+          "amount": 1
+        },
+        "deferred": true
+      }
+    ]
+  },
+  "unsupported": [],
+  "notes": "Schema example only. PHB structured mechanics are absent; healing execution is deferred."
+}

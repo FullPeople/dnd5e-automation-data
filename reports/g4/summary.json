@@ -1,0 +1,67 @@
+{
+  "phase": "G4-foundry-draft",
+  "completeAutomationClaim": false,
+  "records": 18789,
+  "foundryRows": 1661,
+  "foundryMatched": 1564,
+  "foundryOrphans": {
+    "subclassFeature": 6,
+    "race": 1,
+    "raceFeature": 90
+  },
+  "fourClassRows": {
+    "Fighter": 73,
+    "Cleric": 76,
+    "Barbarian": 39,
+    "Wizard": 45
+  },
+  "whitelistKeys": 236,
+  "g3RecordKeysUnchanged": true,
+  "recordsWithMechanismDiffFromG3": 1457,
+  "tests": {
+    "node24": {
+      "vitestPassed": 291,
+      "inventoryPassed": 14,
+      "failed": 0,
+      "skipped": 0
+    },
+    "node22": {
+      "vitestPassed": 291,
+      "inventoryPassed": 14,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "outputs": {
+    "automation.json": {
+      "bytes": 24767372,
+      "sha256": "272d1a045ad9181af4c817958babdd2cbd01a2eacae1db9e224b1108a98a3321",
+      "node22Node24Identical": true
+    },
+    "coverage-report.json": {
+      "bytes": 12783789,
+      "sha256": "052fb43b3eb5369cb6d3f2a47a314d6b85a81b5640f6b2a41e9338267da13454",
+      "node22Node24Identical": true
+    },
+    "coverage-report.md": {
+      "bytes": 42893,
+      "sha256": "7c60c055ec2b2be6ba5416246e9021c1fbeb22a9c64e876ac14a383c03ca9d22",
+      "node22Node24Identical": true
+    },
+    "derivation-diagnostics.json": {
+      "bytes": 19008,
+      "sha256": "73dc578dac08bea3fdc2648d10e0f7600cc8dc087c9266f1f52899653a3277c2",
+      "node22Node24Identical": true
+    },
+    "foundry-review.json": {
+      "bytes": 3371767,
+      "sha256": "7df203a7b473367ae42fae50e0393605bdfe2c6ece8d5c122916a92174b06080",
+      "node22Node24Identical": true
+    },
+    "unsupported.json": {
+      "bytes": 7402367,
+      "sha256": "0694bccc1ccf17e809083cad455b72e27bb28db4cc4cbe6219da8c23a4e9b0f0",
+      "node22Node24Identical": true
+    }
+  }
+}

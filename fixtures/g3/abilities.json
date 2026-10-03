@@ -1,0 +1,48 @@
+[
+  {
+    "ENG_name": "Dwarf",
+    "source": "PHB",
+    "ability": [
+      {
+        "con": 2
+      }
+    ]
+  },
+  {
+    "ENG_name": "Acolyte",
+    "source": "XPHB",
+    "ability": [
+      {
+        "choose": {
+          "weighted": {
+            "from": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "weights": [
+              2,
+              1
+            ]
+          }
+        }
+      },
+      {
+        "choose": {
+          "weighted": {
+            "from": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "weights": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

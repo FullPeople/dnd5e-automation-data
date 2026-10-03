@@ -1,0 +1,1494 @@
+[
+  {
+    "key": "activity:attack",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "attack"
+  },
+  {
+    "key": "activity:cast",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "cast"
+  },
+  {
+    "key": "activity:check",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "check"
+  },
+  {
+    "key": "activity:damage",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "damage"
+  },
+  {
+    "key": "activity:enchant",
+    "route": "unsupported",
+    "family": "activityEnchant",
+    "reason": "activity-type-execution-deferred"
+  },
+  {
+    "key": "activity:forward",
+    "route": "unsupported",
+    "family": "activityForward",
+    "reason": "activity-type-execution-deferred"
+  },
+  {
+    "key": "activity:heal",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "heal"
+  },
+  {
+    "key": "activity:save",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "save"
+  },
+  {
+    "key": "activity:summon",
+    "route": "unsupported",
+    "family": "activitySummon",
+    "reason": "activity-type-execution-deferred"
+  },
+  {
+    "key": "activity:teleport",
+    "route": "unsupported",
+    "family": "activityTeleport",
+    "reason": "activity-type-execution-deferred"
+  },
+  {
+    "key": "activity:transform",
+    "route": "unsupported",
+    "family": "activityTransform",
+    "reason": "activity-type-execution-deferred"
+  },
+  {
+    "key": "activity:utility",
+    "route": "activity",
+    "family": "activity",
+    "reason": "typed-action-with-explicit-deferred-settlement",
+    "target": "utility"
+  },
+  {
+    "key": "advancement:ScaleValue",
+    "route": "scale",
+    "family": "scale",
+    "reason": "typed-level-values-and-normalized-identifier"
+  },
+  {
+    "key": "effect.key:activities[attack].attack.ability",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[attack].attack.bonus",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[attack].description.chatFlavor",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[enchant].activation.condition",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[enchant].activation.type",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[enchant].consumption.targets",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[enchant].name",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[forward].activation.override",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[forward].activation.type",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[forward].name",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[summon].bonuses.attackDamage",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[summon].bonuses.hp",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:activities[summon].creatureTypes",
+    "route": "unsupported",
+    "family": "activityMutation",
+    "reason": "activity-mutation-execution-deferred"
+  },
+  {
+    "key": "effect.key:attributes.senses.darkvision",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:check",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:damage",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:flags.dnd-players-handbook.mirrorImages",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.diamondSoul",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.elvenAccuracy",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.halflingLucky",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.initiativeAdv",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.initiativeAlert",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.jackOfAllTrades",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.meleeCriticalDamageDice",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "criticalDice"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.observantFeat",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.powerfulBuild",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.reliableTalent",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.remarkableAthlete",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.tavernBrawlerFeat",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:flags.dnd5e.weaponCriticalThreshold",
+    "route": "unsupported",
+    "family": "criticalRange",
+    "reason": "critical-range-settlement-deferred"
+  },
+  {
+    "key": "effect.key:flags.world.dbDice",
+    "route": "unsupported",
+    "family": "systemExtension",
+    "reason": "external-system-extension-execution-deferred"
+  },
+  {
+    "key": "effect.key:img",
+    "route": "metadata",
+    "family": "displayMetadata",
+    "reason": "image-presentation-only"
+  },
+  {
+    "key": "effect.key:name",
+    "route": "metadata",
+    "family": "displayMetadata",
+    "reason": "never-copy-source-body-or-name-change"
+  },
+  {
+    "key": "effect.key:system.abilities.cha.bonuses.check",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.cha.check.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.cha.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.cha.save.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.cha.value",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "cha"
+  },
+  {
+    "key": "effect.key:system.abilities.con.bonuses.check",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.con.bonuses.save",
+    "route": "modifier",
+    "family": "saveBonus",
+    "reason": "ability-specific-save-bonus",
+    "target": "save:con"
+  },
+  {
+    "key": "effect.key:system.abilities.con.check.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.con.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.con.save.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.con.value",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "con"
+  },
+  {
+    "key": "effect.key:system.abilities.dex.bonuses.save",
+    "route": "modifier",
+    "family": "saveBonus",
+    "reason": "ability-specific-save-bonus",
+    "target": "save:dex"
+  },
+  {
+    "key": "effect.key:system.abilities.dex.check.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.dex.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.dex.save.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.dex.value",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "dex"
+  },
+  {
+    "key": "effect.key:system.abilities.int.check.roll.min",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.int.check.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.int.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.int.save.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.int.value",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "int"
+  },
+  {
+    "key": "effect.key:system.abilities.str.bonuses.check",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.str.bonuses.save",
+    "route": "modifier",
+    "family": "saveBonus",
+    "reason": "ability-specific-save-bonus",
+    "target": "save:str"
+  },
+  {
+    "key": "effect.key:system.abilities.str.check.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.str.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.str.save.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.str.value",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "str"
+  },
+  {
+    "key": "effect.key:system.abilities.wis.check.roll.min",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.wis.check.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.wis.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.abilities.wis.save.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.abilities.wis.value",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "wis"
+  },
+  {
+    "key": "effect.key:system.activation.condition",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.activation.cost",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.activation.type",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.armor.magicalBonus",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.attack.bonus",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.attributes.ac.bonus",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "ac"
+  },
+  {
+    "key": "effect.key:system.attributes.ac.calc",
+    "route": "unsupported",
+    "family": "armorCalculation",
+    "reason": "armor-calculation-and-condition-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.ac.formula",
+    "route": "unsupported",
+    "family": "armorCalculation",
+    "reason": "armor-calculation-and-condition-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.ac.min",
+    "route": "unsupported",
+    "family": "armorCalculation",
+    "reason": "armor-calculation-and-condition-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.attunement.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.bonus",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.concentration.bonuses.save",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.concentration.roll.bonus",
+    "route": "unsupported",
+    "family": "concentration",
+    "reason": "concentration-check-lifecycle-deferred"
+  },
+  {
+    "key": "effect.key:system.attributes.concentration.roll.min",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.concentration.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.attributes.death.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.attributes.hp.bonuses.level",
+    "route": "hpPerLevel",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "hp"
+  },
+  {
+    "key": "effect.key:system.attributes.hp.bonuses.overall",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "hp"
+  },
+  {
+    "key": "effect.key:system.attributes.hp.max",
+    "route": "unsupported",
+    "family": "temporaryHitPoints",
+    "reason": "hit-point-effect-settlement-deferred"
+  },
+  {
+    "key": "effect.key:system.attributes.hp.tempmax",
+    "route": "unsupported",
+    "family": "temporaryHitPoints",
+    "reason": "hit-point-effect-settlement-deferred"
+  },
+  {
+    "key": "effect.key:system.attributes.init.bonus",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "initiative"
+  },
+  {
+    "key": "effect.key:system.attributes.init.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.attributes.init.total",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "initiative"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.bonus",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.burrow",
+    "route": "modifier",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required",
+    "target": "speed.burrow"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.climb",
+    "route": "modifier",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required",
+    "target": "speed.climb"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.fly",
+    "route": "modifier",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required",
+    "target": "speed.fly"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.hover",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.ignoredDifficultTerrain",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.multiplier",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.speeds.burrow",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.speeds.climb",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.speeds.fly",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.speeds.walk",
+    "route": "unsupported",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.swim",
+    "route": "modifier",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required",
+    "target": "speed.swim"
+  },
+  {
+    "key": "effect.key:system.attributes.movement.walk",
+    "route": "modifier",
+    "family": "movementCalculation",
+    "reason": "existing-speed-guard-or-multiplication-model-required",
+    "target": "speed.walk"
+  },
+  {
+    "key": "effect.key:system.attributes.prof",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.blindsight",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "sense:blindsight"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.darkvision",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "sense:darkvision"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.ranges.blindsight",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.ranges.darkvision",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.special",
+    "route": "unsupported",
+    "family": "conditionalSenses",
+    "reason": "unstructured-special-sense-predicate"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.tremorsense",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "sense:tremorsense"
+  },
+  {
+    "key": "effect.key:system.attributes.senses.truesight",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "sense:truesight"
+  },
+  {
+    "key": "effect.key:system.attunement",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.bonuses.abilities.check",
+    "route": "unsupported",
+    "family": "abilityCheckBonus",
+    "reason": "global-ability-check-model-required"
+  },
+  {
+    "key": "effect.key:system.bonuses.abilities.save",
+    "route": "saveBonus",
+    "family": "saveBonus",
+    "reason": "six-save-modifiers"
+  },
+  {
+    "key": "effect.key:system.bonuses.msak.attack",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "attack.spellMelee"
+  },
+  {
+    "key": "effect.key:system.bonuses.msak.damage",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "damage.spellMelee"
+  },
+  {
+    "key": "effect.key:system.bonuses.mwak.attack",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "attack.melee"
+  },
+  {
+    "key": "effect.key:system.bonuses.mwak.damage",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "damage.melee"
+  },
+  {
+    "key": "effect.key:system.bonuses.rsak.attack",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "attack.spellRanged"
+  },
+  {
+    "key": "effect.key:system.bonuses.rsak.damage",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "damage.spellRanged"
+  },
+  {
+    "key": "effect.key:system.bonuses.rwak.attack",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "attack.ranged"
+  },
+  {
+    "key": "effect.key:system.bonuses.rwak.damage",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "damage.ranged"
+  },
+  {
+    "key": "effect.key:system.bonuses.spell.dc",
+    "route": "modifier",
+    "family": "passiveModifier",
+    "reason": "literal-or-whitelisted-formula",
+    "target": "dc.spell"
+  },
+  {
+    "key": "effect.key:system.damage.base.bonus",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.base.custom.enabled",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.base.custom.formula",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.base.denomination",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.base.number",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.base.types",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.bonus",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.parts",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.versatile.bonus",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.versatile.denomination",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.versatile.number",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.damage.versatile.types",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.description.value",
+    "route": "metadata",
+    "family": "displayMetadata",
+    "reason": "never-copy-source-body-or-name-change"
+  },
+  {
+    "key": "effect.key:system.details.alignment",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.magicalBonus",
+    "route": "unsupported",
+    "family": "itemActivityMutation",
+    "reason": "target-item-or-activity-context-required"
+  },
+  {
+    "key": "effect.key:system.mastery",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.preparation.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.proficient",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.properties",
+    "route": "unsupported",
+    "family": "itemProperties",
+    "reason": "target-item-property-mutation-deferred"
+  },
+  {
+    "key": "effect.key:system.range.units",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.range.value",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.rolls.ability.check.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.rolls.ability.save.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.rolls.attack.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.acr.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:acrobatics"
+  },
+  {
+    "key": "effect.key:system.skills.acr.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.ani.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:animalHandling"
+  },
+  {
+    "key": "effect.key:system.skills.arc.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:arcana"
+  },
+  {
+    "key": "effect.key:system.skills.ath.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:athletics"
+  },
+  {
+    "key": "effect.key:system.skills.ath.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.dec.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:deception"
+  },
+  {
+    "key": "effect.key:system.skills.dec.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.his.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:history"
+  },
+  {
+    "key": "effect.key:system.skills.ins.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:insight"
+  },
+  {
+    "key": "effect.key:system.skills.inv.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:investigation"
+  },
+  {
+    "key": "effect.key:system.skills.itm.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:intimidation"
+  },
+  {
+    "key": "effect.key:system.skills.itm.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.med.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:medicine"
+  },
+  {
+    "key": "effect.key:system.skills.nat.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:nature"
+  },
+  {
+    "key": "effect.key:system.skills.per.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:persuasion"
+  },
+  {
+    "key": "effect.key:system.skills.per.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.prc.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:perception"
+  },
+  {
+    "key": "effect.key:system.skills.prc.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.prf.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:performance"
+  },
+  {
+    "key": "effect.key:system.skills.rel.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:religion"
+  },
+  {
+    "key": "effect.key:system.skills.slt.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:sleightOfHand"
+  },
+  {
+    "key": "effect.key:system.skills.ste.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:stealth"
+  },
+  {
+    "key": "effect.key:system.skills.ste.roll.mode",
+    "route": "unsupported",
+    "family": "rollMode",
+    "reason": "advantage-roll-mode-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.skills.sur.bonuses.check",
+    "route": "modifier",
+    "family": "skillBonus",
+    "reason": "skill-specific-check-bonus",
+    "target": "skill:survival"
+  },
+  {
+    "key": "effect.key:system.tools.brewer",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.tools.mason",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.traits.ci.value",
+    "route": "trait",
+    "family": "defense",
+    "reason": "finite-trait-values",
+    "target": "conditionImmune"
+  },
+  {
+    "key": "effect.key:system.traits.di.value",
+    "route": "trait",
+    "family": "defense",
+    "reason": "finite-trait-values",
+    "target": "immune"
+  },
+  {
+    "key": "effect.key:system.traits.dm.amount.bludgeoning",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.traits.dm.amount.piercing",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.traits.dm.amount.slashing",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.traits.dr",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.traits.dr.value",
+    "route": "trait",
+    "family": "defense",
+    "reason": "finite-trait-values",
+    "target": "resist"
+  },
+  {
+    "key": "effect.key:system.traits.languages.custom",
+    "route": "unsupported",
+    "family": "languagePredicate",
+    "reason": "unstructured-custom-language-text"
+  },
+  {
+    "key": "effect.key:system.traits.languages.value",
+    "route": "grant",
+    "family": "proficiency",
+    "reason": "finite-catalogue-values",
+    "target": "languageProficiency"
+  },
+  {
+    "key": "effect.key:system.traits.weaponProf.mastery.bonus",
+    "route": "unsupported",
+    "family": "weaponMastery",
+    "reason": "mastery-eligibility-and-execution-deferred"
+  },
+  {
+    "key": "effect.key:system.traits.weaponProf.value",
+    "route": "grant",
+    "family": "proficiency",
+    "reason": "finite-catalogue-values",
+    "target": "weaponProficiency"
+  },
+  {
+    "key": "effect.key:system.type.value",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "effect.key:system.uses.max",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.uses.per",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:system.uses.recovery",
+    "route": "unsupported",
+    "family": "itemMutation",
+    "reason": "target-item-context-required"
+  },
+  {
+    "key": "effect.key:token.light.dim",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "entryData:additionalSpells",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "additionalSpells"
+  },
+  {
+    "key": "entryData:armorProficiencies",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "armorProficiencies"
+  },
+  {
+    "key": "entryData:conditionImmune",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "conditionImmune"
+  },
+  {
+    "key": "entryData:expertise",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "expertise"
+  },
+  {
+    "key": "entryData:immune",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "immune"
+  },
+  {
+    "key": "entryData:languageProficiencies",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "languageProficiencies"
+  },
+  {
+    "key": "entryData:resist",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "resist"
+  },
+  {
+    "key": "entryData:resources",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "resources"
+  },
+  {
+    "key": "entryData:savingThrowProficiencies",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "savingThrowProficiencies"
+  },
+  {
+    "key": "entryData:senses",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "senses"
+  },
+  {
+    "key": "entryData:skillProficiencies",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "skillProficiencies"
+  },
+  {
+    "key": "entryData:toolProficiencies",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "toolProficiencies"
+  },
+  {
+    "key": "entryData:weaponProficiencies",
+    "route": "structured",
+    "family": "structuredEntryData",
+    "reason": "delegate-declared-field-to-structured-deriver",
+    "target": "weaponProficiencies"
+  },
+  {
+    "key": "flag:ignoreSrdActivities",
+    "route": "marker",
+    "family": "srdMarker",
+    "reason": "preserve-marker-without-granting-mechanics"
+  },
+  {
+    "key": "flag:ignoreSrdEffects",
+    "route": "marker",
+    "family": "srdMarker",
+    "reason": "preserve-marker-without-granting-mechanics"
+  },
+  {
+    "key": "flag:isIgnored",
+    "route": "marker",
+    "family": "srdMarker",
+    "reason": "preserve-marker-without-granting-mechanics"
+  },
+  {
+    "key": "system:advancement.tkAWLfJZfdNCKVl7.configuration.spell.uses.max",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "system:armor.dex",
+    "route": "unsupported",
+    "family": "foundryArmorModel",
+    "reason": "armor-model-migration-pending-explicit-target"
+  },
+  {
+    "key": "system:armor.type",
+    "route": "unsupported",
+    "family": "foundryArmorModel",
+    "reason": "armor-model-migration-pending-explicit-target"
+  },
+  {
+    "key": "system:armor.value",
+    "route": "unsupported",
+    "family": "foundryArmorModel",
+    "reason": "armor-model-migration-pending-explicit-target"
+  },
+  {
+    "key": "system:duration.units",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:duration.value",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:magicalBonus",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "system:range.units",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:range.value",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:recovery",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "system:target.affects.count",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:target.affects.type",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:target.template.size",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:target.template.type",
+    "route": "metadata",
+    "family": "targetDurationMetadata",
+    "reason": "informational-shape-no-automatic-target-or-duration-execution"
+  },
+  {
+    "key": "system:type.subtype",
+    "route": "metadata",
+    "family": "itemTypeMetadata",
+    "reason": "item-type-display-metadata"
+  },
+  {
+    "key": "system:type.value",
+    "route": "metadata",
+    "family": "itemTypeMetadata",
+    "reason": "item-type-display-metadata"
+  },
+  {
+    "key": "system:uses.autoDestroy",
+    "route": "unsupported",
+    "family": "foundryField",
+    "reason": "unimplemented-foundry-field"
+  },
+  {
+    "key": "system:uses.max",
+    "route": "resource",
+    "family": "resource",
+    "reason": "explicit-max-and-recovery-only"
+  },
+  {
+    "key": "system:uses.recovery",
+    "route": "resource",
+    "family": "resource",
+    "reason": "explicit-max-and-recovery-only"
+  }
+]
