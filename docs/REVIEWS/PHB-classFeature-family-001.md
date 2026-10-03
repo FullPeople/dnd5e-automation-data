@@ -1,3 +1,7 @@
+# Withdrawn — source maximum was not safely bound
+
+2026-10-03: main reproduced STR/CON24 ->28 despite the source maximum24. The previous zero-error acceptance below is superseded: one conditional numerical execution error. Entire15-row batch withdrawn from the current index and re-reviewed as `PHB-classFeature-family-001-revision-002`; the earlier bytes and review are retained in Git history. Main runtime evidence `evidence/g6/primal-champion-runtime-before.log`, no player cards altered.
+
 # Main source review — PHB-classFeature-family-001
 
 Main read all 15 complete PHB Barbarian feature sources and overlays, independently checked the complete parent usage/damage table; receipt records ten selected numerical/conditional risk samples.
