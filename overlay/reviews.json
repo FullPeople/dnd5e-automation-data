@@ -219,5 +219,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-baseitem-002",
+    "path": "baseitem/XPHB-baseitem-002.json",
+    "sha256": "d96f503ab1cadc16392f36b63c6084c21cf8f5960f9d46478350684557f1747c",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:baseitem:xphb:musket::::::::",
+      "kiwee:baseitem:xphb:needles%20(50)::::::::",
+      "kiwee:baseitem:xphb:plate%20armor::::::::",
+      "kiwee:baseitem:xphb:potter's%20tools::::::::",
+      "kiwee:baseitem:xphb:scimitar::::::::",
+      "kiwee:baseitem:xphb:shield::::::::",
+      "kiwee:baseitem:xphb:sling%20bullets%20(20)::::::::",
+      "kiwee:baseitem:xphb:staff::::::::",
+      "kiwee:baseitem:xphb:tinker's%20tools::::::::",
+      "kiwee:baseitem:xphb:wooden%20staff::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
