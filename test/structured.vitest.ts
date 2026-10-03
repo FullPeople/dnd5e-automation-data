@@ -8,6 +8,17 @@ import { applyCorrections } from '../src/derive/corrections.ts';
 import { readFileSync } from 'node:fs';
 const material=(kind:string,raw:Raw):Material=>({identity:createIdentity({kind,source:raw.source||'PHB',engName:raw.ENG_name||'Synthetic'}),raw,namespace:'kiwee',files:['fixtures/synthetic.json'],expansion:'source'});
 const run=(kind:string,raw:Raw,context:Material[]=[])=>{const row=material(kind,raw);return deriveStructured(row,makeContext([row,...context]));};
+test('fixed feats cannot cross editions, including extension books with explicit edition metadata',()=>{
+ const target:Material={...material('feat',{ENG_name:'Synthetic Feat',source:'EXT24'}),edition:'2024'},row:Material={...material('background',{source:'EXT14',feats:[{'Synthetic Feat|EXT24':true}],ability:[{wis:1}]}),edition:'2014'};
+ const blocked=deriveStructured(row,makeContext([row,target]));expect(blocked.unsupported.map(gap=>gap.code)).toContain('edition-reference');expect(blocked.mechanics.grants).toBeUndefined();expect(blocked.mechanics.modifiers).toEqual([{target:'wis',op:'add',value:1}]);
+ row.edition='2024';expect(deriveStructured(row,makeContext([row,target])).mechanics.grants![0].fixed).toEqual([target.identity.key]);
+});
+test('an explicitly both-edition source retains its declared spell references without allowing a mismatched single edition',()=>{
+ const target:Material={...material('spell',{name:'Synthetic New Spell',ENG_name:'Synthetic New Spell',source:'EXT24',level:1}),edition:'2024'},row:Material={...material('feat',{source:'EXT',additionalSpells:[{prepared:{_:{daily:{'1':['Synthetic New Spell|EXT24']}}}}]}),edition:'both'};
+ expect(deriveStructured(row,makeContext([row,target])).mechanics.grants![0].fixed).toEqual([target.identity.key]);
+ row.edition='2014';expect(deriveStructured(row,makeContext([row,target])).mechanics.grants).toBeUndefined();
+ row.edition='2024';target.edition='both';expect(deriveStructured(row,makeContext([row,target])).mechanics.grants![0].fixed).toEqual([target.identity.key]);
+});
 test('fixed attributes and weighted allocations preserve values and explicit player choices',()=>{
   const fixed=run('race',{ability:[{con:2,str:1}]});expect(fixed.mechanics.modifiers).toEqual([{target:'con',op:'add',value:2},{target:'str',op:'add',value:1}]);
   const weighted=run('background',{ability:[{choose:{weighted:{from:['str','dex','con'],weights:[2,1]}}}]});expect(weighted.mechanics.grants![0].choose).toEqual({count:2,from:['str','dex','con'],weights:[2,1]});

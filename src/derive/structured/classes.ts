@@ -49,7 +49,7 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
       const p=uid.split('|'),sub=field==='subclassFeatures',source=sub?p[6]||p[4]||'PHB':p[4]||p[2]||'PHB',level=Number(p[sub?5:3]);
       const candidates=ctx.rows.filter(candidate=>candidate.identity.kind===(sub?'subclassFeature':'classFeature')&&candidate.identity.source.toLowerCase()===source.toLowerCase()&&candidate.identity.level===level&&[candidate.raw.name,candidate.raw.ENG_name].includes(p[0])&&[candidate.raw.className,candidate.identity.classEngName].includes(p[1])&&candidate.identity.classSource?.toLowerCase()===(p[2]||'PHB').toLowerCase()&&(!sub||[candidate.raw.subclassShortName,candidate.identity.subclassEngShortName].includes(p[3])));
       if(candidates.length===1&&row.edition&&candidates[0].edition&&row.edition!==candidates[0].edition){unsupported(out,'featureProgression','cross-edition-feature-ref',field);continue;}
-      if (candidates.length===1) resolved.push(candidates[0].identity.key);else unsupported(out,'featureProgression','unresolved-feature-ref',field);
+      if (candidates.length===1) {resolved.push(candidates[0].identity.key);(model.referenceAliases||={})[candidates[0].identity.key]=encodeURIComponent(uid);}else unsupported(out,'featureProgression','unresolved-feature-ref',field);
     }
     if (resolved.length) model[field==='classFeatures'?'classFeatures':'subclassFeatures']=resolved;
   });
@@ -73,7 +73,7 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
     if (!Array.isArray(value)) {unsupported(out,'featGrant','feat-grant-shape',field);return;}
     for (const [index,part] of value.entries()) if (plain(part)) for (const [ref,n] of Object.entries(part)) {
       if (ref==='any'&&integer(n,1,100)) grant(out,{type:'feat',choose:{count:n,filter:{kind:'feat'}},key:`feats:${index}`});
-      else if (n===true) {const target=ctx.resolve(ref,'feat',ref.includes('|')?undefined:row.identity.source);if(target)grant(out,{type:'feat',fixed:[target.identity.key],key:`feats:${index}`});else unsupported(out,'featGrant','unresolved-feat',field);}
+      else if (n===true) {const target=ctx.resolve(ref,'feat',ref.includes('|')?undefined:row.identity.source);if(target&&row.edition&&row.edition!=='both'&&target.edition&&target.edition!=='both'&&row.edition!==target.edition)unsupported(out,'featGrant','edition-reference',field);else if(target)grant(out,{type:'feat',fixed:[target.identity.key],referenceAliases:{[target.identity.key]:encodeURIComponent(ref)},key:`feats:${index}`});else unsupported(out,'featGrant','unresolved-feat',field);}
       else unsupported(out,'featGrant','feat-grant-shape',field);
     }
   });

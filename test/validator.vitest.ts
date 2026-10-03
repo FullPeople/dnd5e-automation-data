@@ -55,7 +55,7 @@ describe('all eleven required invariants have positive and negative evidence', (
   });
   test('8 spell grants and cast refer to the versioned spell catalogue', () => {
     const target = spell(), row = record(); row.mechanics!.grants = [{ type: 'spell', fixed: [target.identity.key], usage: 'free' }]; row.mechanics!.actions!.push({ type: 'cast', activation: 'action', target: 'other', spell: target.identity.key }); expect(automationErrors(envelope(row, target))).toEqual([]);
-    expect(codes(envelope(row))).toContain('reference');
+    expect(codes(envelope(row))).toContain('reference-missing');
     const filter = record(); filter.mechanics!.grants = [{ type: 'spell', choose: { count: 1, filter: { level: 1, class: 'Cleric', classSource: 'PHB' } } }]; expect(automationErrors(envelope(filter, target))).toEqual([]); expect(codes(envelope(filter))).toContain('spell-filter');
   });
   test('9 2014 and 2024 remain separate and cannot cross-reference, including filters', () => {
@@ -79,6 +79,22 @@ describe('all eleven required invariants have positive and negative evidence', (
 });
 
 describe('additional protocol integrity', () => {
+  test('feature, feat, class-feature and equipment references enforce target kinds before allowing missing snapshots',()=>{
+    const row=record(),target=spell();row.mechanics={grants:[{type:'feat',fixed:[target.identity.key]}]};expect(codes(envelope(row,target))).toContain('reference-kind');
+    row.mechanics={grants:[{type:'feature',choose:{count:1,from:[id('Missing class','PHB','class').key]}}]};expect(codes(envelope(row))).toContain('reference-kind');
+    row.mechanics={classModel:{classFeatures:[id('Missing feat','PHB','feat').key]}};expect(codes(envelope(row))).toContain('reference-kind');
+    row.mechanics={startingEquipment:{scope:'all',blocks:[{key:'0',options:[{key:'a',items:[{identity:target.identity.key}]}]}]}};expect(codes(envelope(row,target))).toContain('reference-kind');
+  });
+  test('legacy aliases are tied to declared references, editions, kinds and casting levels',()=>{
+    const target=spell(),row=record();row.mechanics!.grants=[{type:'spell',fixed:[target.identity.key],spellLevel:2,referenceAliases:{[target.identity.key]:encodeURIComponent('Synthetic Spell|PHB#2')}}];expect(automationErrors(envelope(row,target))).toEqual([]);
+    row.mechanics!.grants[0].referenceAliases![target.identity.key]=encodeURIComponent('Synthetic Spell|XPHB#2');expect(codes(envelope(row,target))).toContain('reference-alias');
+    row.mechanics!.grants[0].referenceAliases![target.identity.key]=encodeURIComponent('Synthetic Spell|PHB#3');expect(codes(envelope(row,target))).toContain('reference-alias');
+    row.mechanics!.grants[0].referenceAliases={[id('Undeclared','PHB','spell').key]:encodeURIComponent('Undeclared|PHB#2')};expect(codes(envelope(row,target))).toContain('reference-alias');
+    const feature={...record(),identity:createIdentity({kind:'classFeature',source:'PHB',engName:'Synthetic Feature',classSource:'PHB',classEngName:'Synthetic Class',level:3})};row.mechanics={classModel:{classFeatures:[feature.identity.key],referenceAliases:{[feature.identity.key]:encodeURIComponent('Synthetic Feature|Synthetic Class|PHB|3')}}};expect(automationErrors(envelope(row,feature))).toEqual([]);row.mechanics.classModel!.referenceAliases![feature.identity.key]=encodeURIComponent('Synthetic Feature|Synthetic Class|PHB|4');expect(codes(envelope(row,feature))).toContain('reference-alias');
+  });
+  test('typed modifier values reject numerical size and string speed or defenses',()=>{
+    for(const modifier of [{target:'size',op:'set',value:123},{target:'speed.walk',op:'set',value:'30'},{target:'resist:fire',op:'set',value:'yes'}]){const row=record();row.mechanics={modifiers:[modifier as any]};expect(codes(envelope(row))).toContain('modifier-type');}
+  });
   test('appendix E real mechanism subsets pass schema with their stated semantic boundaries', () => {
     const examples = ['e1-second-wind-phb', 'e2-dwarf-phb', 'e3-magic-initiate-cleric-xphb'].map(name => JSON.parse(readFileSync(`fixtures/g2/${name}.json`, 'utf8')) as AutomationRecord);
     for (const row of examples) expect(schemaErrors(envelope(row))).toEqual([]);

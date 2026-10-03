@@ -605,6 +605,21 @@
           "minLength": 1,
           "maxLength": 160
         },
+        "referenceAliases": {
+          "type": "object",
+          "maxProperties": 1000,
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000,
+            "pattern": "^[\\x20-\\x7e]+$"
+          }
+        },
         "scope": {
           "enum": [
             "all",
@@ -1124,6 +1139,28 @@
           },
           "minItems": 0,
           "maxItems": 1000
+        },
+        "referenceAliases": {
+          "type": "object",
+          "maxProperties": 1000,
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000,
+            "pattern": "^[\\x20-\\x7e]+$"
+          }
+        },
+        "ritualAccess": {
+          "enum": [
+            "book",
+            "prepared",
+            "known"
+          ]
         }
       },
       "required": [],
@@ -1689,6 +1726,28 @@
       "properties": {
         "identity": {
           "$ref": "#/$defs/identity"
+        },
+        "tags": {
+          "type": "object",
+          "properties": {
+            "featCategory": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "featureTypes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "minItems": 1,
+              "maxItems": 100
+            }
+          },
+          "required": [],
+          "additionalProperties": false
         },
         "edition": {
           "enum": [

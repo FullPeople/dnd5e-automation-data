@@ -53,12 +53,12 @@ export function spells(row:Material,ctx:DerivationContext,out:Result):void {
             const ambiguous=!!count&&!count.endsWith('e')&&list.reduce((sum,node)=>sum+(typeof node==='string'?1:node?.count??node?.choose?.count??1),0)>1;
             if(ambiguous)unsupported(out,'additionalSpells','spell-usage-pool-ambiguous',pool);
             for(const [nodeIndex,node] of list.entries()) {
-              let selection:Pick<Grant,'fixed'|'choose'>|undefined,spellLevel:number|undefined;
+              let selection:Pick<Grant,'fixed'|'choose'>|undefined,spellLevel:number|undefined;const referenceAliases:Record<string,string>={};
               const ref=(value:string)=>{
                 const [uid,level]=value.split('#'),target=ctx.resolve(uid,'spell',uid.includes('|')?undefined:'PHB');
                 if(level&&!/^(c|[1-9])$/.test(level)||level==='c'&&target?.raw.level!==0)return;
-                const edition=row.edition||coreEdition(row.identity.source),targetEdition=target?.edition||coreEdition(target?.identity.source||'');if(target&&edition&&targetEdition&&edition!==targetEdition)return;
-                if(level&&level!=='c')spellLevel=Number(level);return target?.identity.key;
+                const edition=row.edition||coreEdition(row.identity.source),targetEdition=target?.edition||coreEdition(target?.identity.source||'');if(target&&edition&&edition!=='both'&&targetEdition&&targetEdition!=='both'&&edition!==targetEdition)return;
+                if(level&&level!=='c')spellLevel=Number(level);if(target)referenceAliases[target.identity.key]=encodeURIComponent(value);return target?.identity.key;
               };
               if(typeof node==='string'){const key=ref(node);if(key)selection={fixed:[key]};}
               else if(plain(node)&&node.choose) {
@@ -71,7 +71,7 @@ export function spells(row:Material,ctx:DerivationContext,out:Result):void {
               if(!selection){unsupported(out,'additionalSpells','unresolved-spell-choice',`${pool}/${nodeIndex}`);continue;}
               const max=count?count.replace(/e$/,'')==='pb'?{formula:'@prof'}:amount(count.replace(/e$/,'')):undefined;
               if(count&&(!max||!period)){unsupported(out,'additionalSpells','spell-frequency',pool);continue;}
-              grant(out,{type:'spell',...selection,key:`${pool}/${nodeIndex}`,origin:kind,...set,...gating,usage:kind==='expanded'?'expanded':usage,canUseSlots:kind==='known'||kind==='prepared',...(ability?{ability,abilityChoiceKey:`additionalSpells:${index}:ability`}:{}),...(spellLevel?{spellLevel}:{}),...(max&&period?{uses:{max,recovery:[{period,amount:'all'}]},usagePool:pool}:{}),...(ambiguous?{ambiguous:true}:{})});
+              grant(out,{type:'spell',...selection,...(Object.keys(referenceAliases).length?{referenceAliases}:{}),key:`${pool}/${nodeIndex}`,origin:kind,...set,...gating,usage:kind==='expanded'?'expanded':usage,canUseSlots:kind==='known'||kind==='prepared',...(ability?{ability,abilityChoiceKey:`additionalSpells:${index}:ability`}:{}),...(spellLevel?{spellLevel}:{}),...(max&&period?{uses:{max,recovery:[{period,amount:'all'}]},usagePool:pool}:{}),...(ambiguous?{ambiguous:true}:{})});
             }
           };
           const baseUsage=kind==='known'||kind==='prepared'?'slotOrUses':kind==='expanded'?'expanded':'uses';
