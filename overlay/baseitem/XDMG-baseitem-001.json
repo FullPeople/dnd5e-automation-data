@@ -1,0 +1,779 @@
+[
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Revolver",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:revolver::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:revolver::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/161/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/161/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/3",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-next-attack-disadvantage-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/4",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 2d8 piercing, range 40/120 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xphb:firearm%20bullet::::::::. One-handed loading requires a free hand. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Reload permits 6 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. Hitting a creature with this weapon imposes Disadvantage on that creature next attack roll before the start of the wielder next turn; damage is not an additional trigger requirement. Optional purchase valuation uses rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Shotgun",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:shotgun::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:shotgun::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 7,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/181/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/181/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/1",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-large-or-smaller-push-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/3",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 2d8 piercing, range 30/90 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xphb:firearm%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Reload permits 2 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. On a hit against a Large or smaller creature, the wielder may push it up to 10 feet straight away; no saving throw is stated. Optional purchase valuation uses rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Hunting Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:hunting%20rifle::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:hunting%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 8,
+        "weaponCategory": "martial",
+        "damage": "2d10",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/94/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/94/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/1",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-and-damage-speed-reduction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/5",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 2d10 piercing, range 80/240 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xphb:firearm%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Reload permits 5 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. Hitting and dealing damage permits reducing Speed by 10 feet until the start of the wielder next turn; repeated hits with Slow weapons cannot exceed a 10-foot reduction. Optional purchase valuation uses rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Laser Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:laser%20rifle::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:laser%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 7,
+        "weaponCategory": "martial",
+        "damage": "3d8",
+        "damageType": "radiant",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/104/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/104/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/1",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "energy-cell-depletion-and-shot-inventory-link-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "energyCellRecharge",
+        "code": "gm-and-equipment-gated-cell-recharge-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-and-damage-speed-reduction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/5",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      },
+      {
+        "family": "sourceConstraint",
+        "code": "gm-defined-energy-cell-quantities-not-provided",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 3d8 radiant, range 100/300 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xdmg:energy%20cell::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Energy Cells become depleted; recharge requires proper equipment and GM discretion. This edition does not quantify cell-to-shot conversion or recharge amount, cost or time; No numerical cell conversion or recharge contract is supplied; this GM-defined procedure remains unsupported without an executable quantitative model. Reload permits 30 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. Hitting and dealing damage permits reducing Speed by 10 feet until the start of the wielder next turn; repeated hits with Slow weapons cannot exceed a 10-foot reduction. Optional purchase valuation uses very rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests. Main reviewed the complete 2024 Firearms section and table: the source permits discretionary recharge but supplies no numerical resource, cost, duration or conversion. Classification is unsupported source-defined procedure; no quantity or Boolean condition is guessed."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Laser Pistol",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:laser%20pistol::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:laser%20pistol::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "weaponCategory": "martial",
+        "damage": "3d6",
+        "damageType": "radiant",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/102/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/102/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/3",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "energy-cell-depletion-and-shot-inventory-link-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "energyCellRecharge",
+        "code": "gm-and-equipment-gated-cell-recharge-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-and-damage-same-target-advantage-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/7",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      },
+      {
+        "family": "sourceConstraint",
+        "code": "gm-defined-energy-cell-quantities-not-provided",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 3d6 radiant, range 40/120 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xdmg:energy%20cell::::::::. One-handed loading requires a free hand. Energy Cells become depleted; recharge requires proper equipment and GM discretion. This edition does not quantify cell-to-shot conversion or recharge amount, cost or time; No numerical cell conversion or recharge contract is supplied; this GM-defined procedure remains unsupported without an executable quantitative model. Reload permits 50 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. Hitting and dealing damage gives the wielder Advantage on the next attack roll against that same creature before the end of the wielder next turn. Optional purchase valuation uses very rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests. Main reviewed the complete 2024 Firearms section and table: the source permits discretionary recharge but supplies no numerical resource, cost, duration or conversion. Classification is unsupported source-defined procedure; no quantity or Boolean condition is guessed."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Semiautomatic Pistol",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:semiautomatic%20pistol::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:semiautomatic%20pistol::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "weaponCategory": "martial",
+        "damage": "2d6",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/170/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/170/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/3",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-and-damage-same-target-advantage-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/7",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 2d6 piercing, range 50/150 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xphb:firearm%20bullet::::::::. One-handed loading requires a free hand. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Reload permits 15 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. Hitting and dealing damage gives the wielder Advantage on the next attack roll against that same creature before the end of the wielder next turn. Optional purchase valuation uses rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Antimatter Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:antimatter%20rifle::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:antimatter%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 10,
+        "weaponCategory": "martial",
+        "damage": "6d8",
+        "damageType": "necrotic",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/3/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/3/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/1",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "energy-cell-depletion-and-shot-inventory-link-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "energyCellRecharge",
+        "code": "gm-and-equipment-gated-cell-recharge-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-next-attack-disadvantage-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/4",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      },
+      {
+        "family": "sourceConstraint",
+        "code": "gm-defined-energy-cell-quantities-not-provided",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 6d8 necrotic, range 120/360 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xdmg:energy%20cell::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Energy Cells become depleted; recharge requires proper equipment and GM discretion. This edition does not quantify cell-to-shot conversion or recharge amount, cost or time; No numerical cell conversion or recharge contract is supplied; this GM-defined procedure remains unsupported without an executable quantitative model. Reload permits 2 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. A feature must unlock this weapon mastery. Hitting a creature with this weapon imposes Disadvantage on that creature next attack roll before the start of the wielder next turn; damage is not an additional trigger requirement. Optional purchase valuation uses very rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests. Main reviewed the complete 2024 Firearms section and table: the source permits discretionary recharge but supplies no numerical resource, cost, duration or conversion. Classification is unsupported source-defined procedure; no quantity or Boolean condition is guessed."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Energy Cell",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:energy%20cell::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:energy%20cell::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.5
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "energy-cell-depletion-and-shot-inventory-link-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "energyCellRecharge",
+        "code": "gm-and-equipment-gated-cell-recharge-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "sourceConstraint",
+        "code": "gm-defined-energy-cell-quantities-not-provided",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 72
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete verified inventory model; identify compatible firearm ammunition consumption, cell lifecycle and any package unpacking instead of treating empty item text as complete automation.",
+    "notes": "Partial 2024 ammunition inventory item: weight 0.5 lb; no fixed price is stated. XDMG p.72 says a cell becomes depleted and may be recharged using proper equipment at GM discretion. Cell-to-shot quantity and recharge amount, cost and time are unspecified; this GM-defined procedure remains unsupported without an executable quantitative model. Do not copy the 2014 full-load conversion or destruction rule into this edition. Inventory ownership does not itself grant weapon proficiency or an attack. Use and inventory settlement remain deferred; the verified inventory model is retained in full. Main reviewed the complete 2024 Firearms section and table: the source permits discretionary recharge but supplies no numerical resource, cost, duration or conversion. Classification is unsupported source-defined procedure; no quantity or Boolean condition is guessed."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XDMG",
+      "engName": "Automatic Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xdmg:automatic%20rifle::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xdmg:automatic%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 8,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "BF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "burst_fire",
+          "activation": "action",
+          "target": "area",
+          "formula": "2d8",
+          "save": {
+            "ability": "dex",
+            "dc": 15
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/10/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/10/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/1",
+        "deferred": true
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/5",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/20",
+        "deferred": true
+      },
+      {
+        "family": "burstFire",
+        "code": "ten-ammo-cube-save-and-shared-damage-roll-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/7",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "unlock-gated-hit-and-damage-speed-reduction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemMastery/5",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPricing",
+        "code": "optional-rarity-based-firearm-purchase-valuation",
+        "ref": ".cache/english-upstream/data/book/book-xdmg.json#/data/2/entries/14/entries/2/entries/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XDMG-baseitem-001",
+    "evidence": {
+      "page": 73
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions. Keep mastery feature-gated and cell recharge conditional on equipment and GM discretion.",
+    "notes": "Partial 2024 firearm: verified 2d8 piercing, range 80/240 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:xphb:firearm%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Reload permits 30 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. Burst Fire uses an action and 10 bullets for a 10-ft cube within normal range (80 ft); each creature makes DC 15 Dexterity, taking normal weapon damage on failure. Roll damage once for every failed save; Cube origin is on a face and included only at creator choice. A feature must unlock this weapon mastery. Hitting and dealing damage permits reducing Speed by 10 feet until the start of the wielder next turn; repeated hits with Slow weapons cannot exceed a 10-foot reduction. Optional purchase valuation uses rare rarity; this supplies neither a fixed price nor a magic-damage modifier. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  }
+]

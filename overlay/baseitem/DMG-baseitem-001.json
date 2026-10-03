@@ -1,0 +1,1068 @@
+[
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Antimatter Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:antimatter%20rifle::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:antimatter%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 10,
+        "weaponCategory": "martial",
+        "damage": "6d8",
+        "damageType": "necrotic",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/2/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/2/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "full-load-energy-cell-and-shot-expenditure-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 6d8 necrotic, range 120/360 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:energy%20cell::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. DMG p.267 says one Energy Cell powers all 2 shots of a full load; its ammunition is destroyed upon use. Cell lifecycle and per-shot accounting remain deferred. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 2 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Hunting Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:hunting%20rifle::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:hunting%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 8,
+        "weaponCategory": "martial",
+        "damage": "2d10",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/93/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/93/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 2d10 piercing, range 80/240 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:modern%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 5 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Laser Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:laser%20rifle::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:laser%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 7,
+        "weaponCategory": "martial",
+        "damage": "3d8",
+        "damageType": "radiant",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/103/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/103/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "full-load-energy-cell-and-shot-expenditure-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 3d8 radiant, range 100/300 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:energy%20cell::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. DMG p.267 says one Energy Cell powers all 30 shots of a full load; its ammunition is destroyed upon use. Cell lifecycle and per-shot accounting remain deferred. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 30 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Shotgun",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:shotgun::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:shotgun::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 7,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/180/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/180/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 2d8 piercing, range 30/90 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:modern%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 2 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Automatic Pistol",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:automatic%20pistol::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:automatic%20pistol::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "weaponCategory": "martial",
+        "damage": "2d6",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/8/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/8/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 2d6 piercing, range 50/150 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:modern%20bullet::::::::. One-handed loading requires a free hand. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 15 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Laser Pistol",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:laser%20pistol::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:laser%20pistol::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "weaponCategory": "martial",
+        "damage": "3d6",
+        "damageType": "radiant",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/101/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/101/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "full-load-energy-cell-and-shot-expenditure-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 3d6 radiant, range 40/120 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:energy%20cell::::::::. One-handed loading requires a free hand. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. DMG p.267 says one Energy Cell powers all 50 shots of a full load; its ammunition is destroyed upon use. Cell lifecycle and per-shot accounting remain deferred. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 50 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Revolver",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:revolver::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:revolver::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "RLD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/160/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/160/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 2d8 piercing, range 40/120 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:modern%20bullet::::::::. One-handed loading requires a free hand. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 6 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Musket",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:musket::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:musket::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 10,
+        "value": 50000,
+        "weaponCategory": "martial",
+        "damage": "1d12",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "LD",
+          "2H"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/133/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/133/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "one-shot-per-action-bonus-or-reaction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/15",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 1d12 piercing, range 40/120 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:renaissance%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Loading limits firing to one piece per action, bonus action or reaction regardless of Extra Attack; this weapon has Loading, not a Reload magazine. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Pistol",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:pistol::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:pistol::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "value": 25000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "LD"
+        ],
+        "firearm": true
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/148/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/148/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "free-hand-one-handed-ammunition-loading-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponLoading",
+        "code": "one-shot-per-action-bonus-or-reaction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/15",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 1d10 piercing, range 30/90 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:renaissance%20bullet::::::::. One-handed loading requires a free hand. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Loading limits firing to one piece per action, bonus action or reaction regardless of Extra Attack; this weapon has Loading, not a Reload magazine. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Automatic Rifle",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:automatic%20rifle::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:automatic%20rifle::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 8,
+        "weaponCategory": "martial",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "properties": [
+          "AF",
+          "BF",
+          "RLD",
+          "2H"
+        ],
+        "firearm": true
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "burst_fire",
+          "activation": "action",
+          "target": "area",
+          "formula": "2d8",
+          "save": {
+            "ability": "dex",
+            "dc": 15
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-typed-damage-settlement-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/9/dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-and-distance-gates-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/9/range",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-hands-required-for-attack-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/0",
+        "deferred": true
+      },
+      {
+        "family": "firearmProficiency",
+        "code": "dm-decided-firearm-proficiency-and-training",
+        "ref": ".cache/english-upstream/data/book/book-dmg.json#/data/9/entries/8/entries/4/entries/1"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponExecution",
+        "code": "ammunition-weapon-improvised-melee-use-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "weaponReload",
+        "code": "shot-capacity-and-ammo-linked-action-choice-reload-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/19",
+        "deferred": true
+      },
+      {
+        "family": "burstFire",
+        "code": "ten-ammo-cube-save-and-weapon-damage-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/6",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the full verified equipment profile; replace generic range/mastery diagnostics with actual attack, distance, ammunition, hand, loading/reload and edition-specific conditions.",
+    "notes": "Partial 2014 firearm: verified 2d8 piercing, range 80/240 ft; beyond normal range has Disadvantage and beyond long range is prohibited. Compatible ammunition: kiwee:baseitem:dmg:modern%20bullet::::::::. Two hands are required for attacks; the requirement does not apply to merely holding the weapon. Firearm proficiency is a DM decision; downtime training needs sufficient ammunition. Each ordinary attack expends one compatible bullet, drawn as part of the attack; firearm bullets are destroyed on use and cannot use generic half-ammunition battlefield recovery. Melee use follows the improvised-weapon rule in the DMG AF definition. Reload permits 30 shots before reload; reloading uses an action or bonus action and remains linked to actual ammunition. Capacity is not a regenerating resource. Burst Fire uses an action and 10 bullets for a 10-ft cube within normal range (80 ft); each creature makes DC 15 Dexterity, taking normal weapon damage on failure. The 2014 wording supplies no shared-roll instruction. All attack, target, ammo-consumption and reload operations remain deferred; no ammunition or cell resource is replenished by rests."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Energy Cell",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:energy%20cell::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:energy%20cell::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.3125
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "weapon-dependent-full-load-cell-expenditure-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete verified inventory model; identify compatible firearm ammunition consumption, cell lifecycle and any package unpacking instead of treating empty item text as complete automation.",
+    "notes": "Partial 2014 ammunition inventory item: weight 0.3125 lb; no fixed price is stated. DMG p.267 says one cell powers all shots of its loaded futuristic firearm: Antimatter Rifle 2, Laser Rifle 30, Laser Pistol 50. Firearm ammunition is destroyed upon use. Defer the cell-to-weapon inventory and shot linkage; neither a rest refill nor a rechargeable cycle is stated in this edition. Inventory ownership does not itself grant weapon proficiency or an attack. Use and inventory settlement remain deferred; the verified inventory model is retained in full."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Modern Bullet",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:modern%20bullet::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:modern%20bullet::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "compatible-firearm-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete verified inventory model; identify compatible firearm ammunition consumption, cell lifecycle and any package unpacking instead of treating empty item text as complete automation.",
+    "notes": "Partial 2014 ammunition inventory item: weight 0.1 lb; no fixed price is stated. Use with compatible modern firearms consumes and destroys one bullet per ordinary attack. Drawing is part of the attack; one-handed loading needs a free hand. Firearm ammunition is not eligible for generic half-ammunition retrieval; there is no independent damage profile or rest refill. Inventory ownership does not itself grant weapon proficiency or an attack. Use and inventory settlement remain deferred; the verified inventory model is retained in full."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Modern Bullets (10)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:modern%20bullets%20(10)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:modern%20bullets%20(10)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "compatible-firearm-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "ten-bullet-package-unpacking-not-modeled",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/130/packContents"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete verified inventory model; identify compatible firearm ammunition consumption, cell lifecycle and any package unpacking instead of treating empty item text as complete automation.",
+    "notes": "Partial 2014 ammunition inventory item: weight 1 lb; no fixed price is stated. Use with compatible modern firearms consumes and destroys one bullet per ordinary attack. Drawing is part of the attack; one-handed loading needs a free hand. Firearm ammunition is not eligible for generic half-ammunition retrieval; there is no independent damage profile or rest refill. packContents is exactly 10 units of kiwee:baseitem:dmg:modern%20bullet::::::::; package weight equal ten units. Unpacking remains explicit; the package is not a ten-use regenerating resource. Inventory ownership does not itself grant weapon proficiency or an attack. Use and inventory settlement remain deferred; the verified inventory model is retained in full."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Renaissance Bullet",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:renaissance%20bullet::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:renaissance%20bullet::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.2,
+        "value": 30
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "compatible-firearm-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete verified inventory model; identify compatible firearm ammunition consumption, cell lifecycle and any package unpacking instead of treating empty item text as complete automation.",
+    "notes": "Partial 2014 ammunition inventory item: weight 0.2 lb, value 30 cp. Use with compatible renaissance firearms consumes and destroys one bullet per ordinary attack. Drawing is part of the attack; one-handed loading needs a free hand. Firearm ammunition is not eligible for generic half-ammunition retrieval; there is no independent damage profile or rest refill. Inventory ownership does not itself grant weapon proficiency or an attack. Use and inventory settlement remain deferred; the verified inventory model is retained in full."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "DMG",
+      "engName": "Renaissance Bullets (10)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:dmg:renaissance%20bullets%20(10)::::::::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:item:dmg:renaissance%20bullets%20(10)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 300
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "compatible-firearm-bullet-expenditure-and-destruction-deferred",
+        "ref": ".cache/english-upstream/data/items-base.json#/itemProperty/4",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "ten-bullet-package-unpacking-not-modeled",
+        "ref": ".cache/english-upstream/data/items-base.json#/baseitem/159/packContents"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "DMG-baseitem-001",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete verified inventory model; identify compatible firearm ammunition consumption, cell lifecycle and any package unpacking instead of treating empty item text as complete automation.",
+    "notes": "Partial 2014 ammunition inventory item: weight 2 lb, value 300 cp. Use with compatible renaissance firearms consumes and destroys one bullet per ordinary attack. Drawing is part of the attack; one-handed loading needs a free hand. Firearm ammunition is not eligible for generic half-ammunition retrieval; there is no independent damage profile or rest refill. packContents is exactly 10 units of kiwee:baseitem:dmg:renaissance%20bullet::::::::; package weight and value equal ten units. Unpacking remains explicit; the package is not a ten-use regenerating resource. Inventory ownership does not itself grant weapon proficiency or an attack. Use and inventory settlement remain deferred; the verified inventory model is retained in full."
+  }
+]

@@ -17,6 +17,9 @@ npm run pipeline -- --offline --out .cache/replay
 npm run validate -- --file artifacts/automation.json
 npm run report -- --cache .cache/upstream --out reports/replay
 node scripts/browser-bundle.mjs .cache/browser-share
+node scripts/kiwee-bundle.mjs
+# In a separate Kiwee checkout, without node_modules:
+node generate-automation.mjs --data ./data --out ./data/generated
 ```
 
 Structured fields and Foundry sidecars produce declarative mechanics. Prose
@@ -41,3 +44,8 @@ See [protocol](docs/PROTOCOL.md), [coverage definition](docs/COVERAGE-DEFINITION
 [structured derivation](docs/DERIVATION-RULES.md), [Foundry mapping](docs/FOUNDRY-MAPPING.md)
 and [reviewed overlays](docs/OVERLAY-GUIDE.md), plus [execution receipts](docs/RUNBOOKS/). Stage tags support isolated inspection
 and reversible commits. Production merge/deployment are outside this branch.
+
+The optional [Kiwee integration guide](docs/FOR-KIWEE.md) describes the single-file,
+Node-builtin-only local A+B generator. It deliberately produces annotation drafts
+and does not require Kiwee to maintain overlays. G7 fork publication still requires
+the actual fork to be available; a local source rehearsal is recorded separately.

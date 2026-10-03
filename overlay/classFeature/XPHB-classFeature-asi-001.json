@@ -1,0 +1,1352 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:barbarian:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 53,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:barbarian:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 53,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:barbarian:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 53,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:barbarian:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 53,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Bard",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:bard:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 61,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Bard",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:bard:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 61,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Bard",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:bard:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 61,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Bard",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:bard:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 61,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Cleric",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:cleric:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E7%89%A7%E5%B8%88:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 71,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Cleric",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:cleric:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E7%89%A7%E5%B8%88:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 71,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Cleric",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:cleric:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E7%89%A7%E5%B8%88:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 71,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Cleric",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:cleric:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E7%89%A7%E5%B8%88:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 71,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:druid:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 81,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:druid:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 81,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:druid:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 81,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:druid:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 81,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:fighter:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%88%98%E5%A3%AB:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:fighter:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%88%98%E5%A3%AB:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:fighter:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%88%98%E5%A3%AB:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:fighter:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%88%98%E5%A3%AB:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:fighter:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%88%98%E5%A3%AB:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:fighter:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%88%98%E5%A3%AB:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 92,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:monk:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%AD%A6%E5%83%A7:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 103,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:monk:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%AD%A6%E5%83%A7:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 103,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:monk:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%AD%A6%E5%83%A7:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 103,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:monk:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%AD%A6%E5%83%A7:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 103,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:paladin:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 111,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:paladin:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 111,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:paladin:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 111,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:paladin:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 111,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:ranger:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E4%BE%A0:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 121,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:ranger:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E4%BE%A0:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 121,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:ranger:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E4%BE%A0:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 120,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:ranger:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E4%BE%A0:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 121,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:rogue:::10:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 130,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:rogue:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 131,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:rogue:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 131,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:rogue:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 129,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:rogue:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 130,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:sorcerer:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%9C%AF%E5%A3%AB:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 141,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:sorcerer:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%9C%AF%E5%A3%AB:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 141,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:sorcerer:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%9C%AF%E5%A3%AB:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 141,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:sorcerer:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%9C%AF%E5%A3%AB:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 141,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:warlock:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 155,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:warlock:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 155,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:warlock:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 155,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:warlock:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 155,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:wizard:::12:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B3%95%E5%B8%88:::12:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 167,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:wizard:::16:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B3%95%E5%B8%88:::16:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 167,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:wizard:::4:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B3%95%E5%B8%88:::4:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-001",
+    "evidence": {
+      "page": 167,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  }
+]

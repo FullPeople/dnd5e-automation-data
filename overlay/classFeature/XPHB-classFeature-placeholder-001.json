@@ -1,0 +1,947 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:barbarian:::10:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 53,
+      "quote": "You gain a feature from your Barbarian subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:barbarian:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 53,
+      "quote": "You gain a feature from your Barbarian subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Barbarian",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:barbarian:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 53,
+      "quote": "You gain a feature from your Barbarian subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Bard",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:bard:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 61,
+      "quote": "You gain a feature from your Bard Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Bard",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:bard:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 61,
+      "quote": "You gain a feature from your Bard Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Cleric",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:cleric:::17:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E7%89%A7%E5%B8%88:::17:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 71,
+      "quote": "You gain a feature from your Cleric Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Cleric",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:cleric:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E7%89%A7%E5%B8%88:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 71,
+      "quote": "You gain a feature from your Cleric Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:druid:::10:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 81,
+      "quote": "You gain a feature from your Druid Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:druid:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 81,
+      "quote": "You gain a feature from your Druid Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Druid",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:druid:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 81,
+      "quote": "You gain a feature from your Druid Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:fighter:::10:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%88%98%E5%A3%AB:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 92,
+      "quote": "You gain a feature from your Fighter Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:fighter:::15:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%88%98%E5%A3%AB:::15:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 92,
+      "quote": "You gain a feature from your Fighter Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 18,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:fighter:::18:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%88%98%E5%A3%AB:::18:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 92,
+      "quote": "You gain a feature from your Fighter Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Fighter",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:fighter:::7:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%88%98%E5%A3%AB:::7:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 92,
+      "quote": "You gain a feature from your Fighter Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 11,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:monk:::11:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%AD%A6%E5%83%A7:::11:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 103,
+      "quote": "You gain a feature from your Monk subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:monk:::17:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%AD%A6%E5%83%A7:::17:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 103,
+      "quote": "You gain a feature from your Monk subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Monk",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:monk:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%AD%A6%E5%83%A7:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 103,
+      "quote": "You gain a feature from your Monk subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:paladin:::15:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::15:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 111,
+      "quote": "You gain a feature from your Paladin Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 20,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:paladin:::20:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::20:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 111,
+      "quote": "You gain a feature from your Paladin Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Paladin",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:paladin:::7:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::7:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 111,
+      "quote": "You gain a feature from your Paladin Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 11,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:ranger:::11:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B8%B8%E4%BE%A0:::11:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 121,
+      "quote": "You gain a feature from your Ranger Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:ranger:::15:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B8%B8%E4%BE%A0:::15:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 121,
+      "quote": "You gain a feature from your Ranger Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Ranger",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:ranger:::7:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B8%B8%E4%BE%A0:::7:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 121,
+      "quote": "You gain a feature from your Ranger Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 13,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:rogue:::13:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::13:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 131,
+      "quote": "You gain a feature from your Rogue Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:rogue:::17:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::17:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 131,
+      "quote": "You gain a feature from your Rogue Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Rogue",
+      "level": 9,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:rogue:::9:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B8%B8%E8%8D%A1%E8%80%85:::9:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 130,
+      "quote": "You gain a feature from your Rogue Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:sorcerer:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%9C%AF%E5%A3%AB:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 141,
+      "quote": "You gain a feature from your Sorcerer subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 18,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:sorcerer:::18:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%9C%AF%E5%A3%AB:::18:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 141,
+      "quote": "You gain a feature from your Sorcerer subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Sorcerer",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:sorcerer:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%9C%AF%E5%A3%AB:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 141,
+      "quote": "You gain a feature from your Sorcerer subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:warlock:::10:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 155,
+      "quote": "You gain a feature from your Warlock subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:warlock:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 155,
+      "quote": "You gain a feature from your Warlock subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Warlock",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:warlock:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E9%AD%94%E5%A5%91%E5%B8%88:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 155,
+      "quote": "You gain a feature from your Warlock subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:wizard:::10:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B3%95%E5%B8%88:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 167,
+      "quote": "You gain a feature from your Wizard Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:wizard:::14:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B3%95%E5%B8%88:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 167,
+      "quote": "You gain a feature from your Wizard Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Subclass Feature",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:subclass%20feature:xphb:wizard:::6:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:subclass%20feature:xphb:%E6%B3%95%E5%B8%88:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 167,
+      "quote": "You gain a feature from your Wizard Subclass."
+    },
+    "notes": "Pure subclass-feature marker; the selected subclassFeature record owns operative mechanics. No independent grant or resource is present."
+  }
+]

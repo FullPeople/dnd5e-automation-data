@@ -1,0 +1,2527 @@
+[
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Alchemist's Supplies",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:alchemist's%20supplies::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:alchemist's%20supplies::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 8,
+        "value": 5000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "tool-proficiency-and-related-skill-advantage-not-modeled",
+        "ref": "entries/1"
+      },
+      {
+        "family": "checkSettlement",
+        "code": "intelligence-substance-or-fire-dc15-deferred",
+        "ref": "entries/0/items/1",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep the verified inventory model; remove the generic Foundry check that lacks the specific Intelligence/DC15 uses and their context. Identify actual 2024 tool and crafting boundaries.",
+    "notes": "Partial: Intelligence checks identify a substance or start a fire, each DC 15. Tool proficiency adds PB; proficiency in a skill used by that same check also gives advantage. No proficiency is granted by possession. Craft list: Acid, Alchemist's Fire, Component Pouch, Oil, Paper, Perfume, all XPHB. No production count, cost or rest recovery is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Arrow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:arrow::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:arrow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.05,
+        "value": 5
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-expenditure-and-rounded-retrieval-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 222
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the single-arrow inventory model; identify the actual attack expenditure and 2024 rounded battlefield retrieval instead of ignoring operative prose.",
+    "notes": "Partial: one piece is spent per attack with an ammunition weapon. Drawing is part of the attack; loading a one-handed weapon needs a free hand. A one-minute post-fight search retrieves half, rounded down by the 2024 Ammunition definition; the rest is lost. A quiver is bought separately. No independent attack, damage or rest resource is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Arrows (20)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:arrows%20(20)::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:arrows%20(20)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-expenditure-and-rounded-retrieval-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "pack-unpacking-not-modeled",
+        "ref": "packContents/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 222
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep aggregate weight and value; identify exact pack contents and attack-linked ammunition settlement without fabricating starting-equipment delivery.",
+    "notes": "Partial: 20 units of kiwee:baseitem:xphb:arrow::::::::, confirmed in the 2024 snapshot. EquipmentModel has no unpacking field; no unconditional startingEquipment grant is added. Each attack expends one; one minute after the fight can recover half used, rounded down, with the remainder lost. A quiver is not included. No rest replenishment is implied."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Bagpipes",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:bagpipes::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:bagpipes::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 6,
+        "value": 3000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain inventory fields; identify actual 2024 Charisma performance DCs and tool-plus-skill proficiency conditions omitted by the draft.",
+    "notes": "Partial: Charisma, known tune DC 10 or improvised song DC 15. Existing tool proficiency adds PB; a proficient skill used in the same check also gives advantage. No instrument proficiency is granted. The supplied 2024 item/type text adds no focus rule."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Battleaxe",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:battleaxe::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:battleaxe::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 4,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "V"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-two-handed-melee-damage-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "topple-hit-save-and-prone-deferred",
+        "ref": "kiwee:itemmastery:xphb:topple::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete weapon model; replace generic mastery diagnostics with identified Topple and deferred attack/Versatile execution.",
+    "notes": "Partial: 1d8 slashing, or 1d10 for a two-handed melee attack. With mastery unlocked by a character feature, a hit may force a Constitution save at DC 8 plus the attack ability modifier plus PB; failure inflicts Prone. No unconditional prone status or fixed DC is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Blowgun",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:blowgun::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:blowgun::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 1,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-expenditure-and-rounded-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-loading-and-hand-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-hit-damage-next-attack-advantage-deferred",
+        "ref": "kiwee:itemmastery:xphb:vex::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the verified ranged weapon model; replace generic range/mastery markers with actual range, ammunition, Loading and Vex boundaries.",
+    "notes": "Partial: damage 1 piercing; range 25/100 ft, with disadvantage beyond normal range and no attacks beyond long range. Ammo: kiwee:baseitem:xphb:needle::::::::. Spend one per attack; drawing is included, one-handed loading needs a free hand, and a one-minute post-fight search retrieves half used rounded down. LD allows one fired piece per action, Bonus Action or Reaction. With mastery unlocked, a hit that deals damage grants advantage on the next attack against that creature before the end of the user's next turn."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Bolt",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:bolt::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:bolt::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.075,
+        "value": 5
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-expenditure-and-rounded-retrieval-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 222
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the single-bolt inventory model; identify actual expenditure, free-hand loading context and rounded post-fight retrieval.",
+    "notes": "Partial: one bolt spent per ammunition-weapon attack. Drawing is included; one-handed loading needs a free hand. A one-minute post-fight search recovers half used, rounded down under the 2024 definition; the rest is lost. The storage case is separate. No independent damage or recovery schedule is invented."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Bolts (20)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:bolts%20(20)::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:bolts%20(20)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1.5,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "attack-expenditure-and-rounded-retrieval-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "pack-unpacking-not-modeled",
+        "ref": "packContents/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 222
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve aggregate inventory fields; identify exact pack contents and deferred ammunition settlement without an unconditional equipment grant.",
+    "notes": "Partial: 20 units of kiwee:baseitem:xphb:bolt::::::::, confirmed in the 2024 snapshot. EquipmentModel cannot express unpacking. Ammunition use spends one per attack; a one-minute post-fight search recovers half rounded down, with the rest lost. The case is bought separately. No rest resource or startingEquipment grant is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Breastplate",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:breastplate::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:breastplate::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 14,
+        "weight": 20,
+        "value": 40000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 219
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The explicit 2024 armor fields and supported Medium Armor model are complete; empty item/type prose adds no unresolved mechanism.",
+    "notes": "Retain AC 14, Dexterity cap 2, weight 20 lb and value 40000 cp. No training grant, Stealth disadvantage or additional modifier is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Brewer's Supplies",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:brewer's%20supplies::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:brewer's%20supplies::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 9,
+        "value": 2000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "intelligence-drink-checks-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the inventory model; identify actual 2024 Intelligence drink-check DCs, proficiency/advantage conditions and Antitoxin crafting.",
+    "notes": "Partial: Intelligence, poisoned drink detection DC 15 or alcohol identification DC 10. Tool proficiency adds PB, with advantage when a proficient skill also applies to that same check. Craft product is Antitoxin|XPHB. No 2014 water purification, brewing duration, use count or recovery cycle is imported."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Calligrapher's Supplies",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:calligrapher's%20supplies::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:calligrapher's%20supplies::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 1000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "dexterity-writing-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the verified inventory model; identify Dexterity/DC15 writing, conditional proficiency/advantage and source-qualified crafting products.",
+    "notes": "Partial: Dexterity DC 15 produces ornate writing that resists forgery. Existing tool proficiency adds PB; an applicable proficient skill adds advantage. Products: Ink|XPHB and Spell Scroll|XDMG, both 2024. The scroll is a group, not a specific spell or free scroll grant. No recipe quantities, cost or duration is guessed."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Carpenter's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:carpenter's%20tools::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:carpenter's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 6,
+        "value": 800
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "strength-door-container-check-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep weight and value; identify Strength/DC20 door or container use, conditional proficiency/advantage and the actual crafting list.",
+    "notes": "Partial: Strength DC 20 seals or pries open a door/container. Tool proficiency adds PB; an applicable proficient skill also gives advantage. Craft products: Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch, all XPHB. No 2014 fortification +5 DC or temporary shelter is imported."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Cartographer's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:cartographer's%20tools::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:cartographer's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 6,
+        "value": 1500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "wisdom-map-check-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the inventory model; identify actual Wisdom/DC15 map use, conditional proficiency/advantage and Map crafting.",
+    "notes": "Partial: Wisdom DC 15 drafts a map of a small area. Existing tool proficiency adds PB and an applicable proficient skill also gives advantage. Craft product is Map|XPHB. No concurrent travel permission, global navigation bonus or production schedule is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Chain Mail",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:chain%20mail::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:chain%20mail::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "heavyArmor",
+        "ac": 16,
+        "strength": 13,
+        "weight": 55,
+        "value": 7500,
+        "stealthDisadvantage": true
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 219
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The explicit 2024 Heavy Armor fields are confirmed and complete under the supported model; empty entries introduce no extra mechanism.",
+    "notes": "Retain AC 16, Strength threshold 13, Stealth disadvantage, weight 55 lb and value 7500 cp. This armor threshold is distinct from the 2024 Heavy weapon property. No training grant is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Chain Shirt",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:chain%20shirt::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:chain%20shirt::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 13,
+        "weight": 20,
+        "value": 5000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 219
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The explicit 2024 armor fields match the complete supported Medium Armor model; there is no further item/type prose to interpret.",
+    "notes": "Retain AC 13, Dexterity cap 2, weight 20 lb and value 5000 cp. No Stealth bonus, disadvantage or training grant is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Club",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:club::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:club::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 10,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-different-weapon-bonus-attack-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-hit-damage-nonstacking-speed-deferred",
+        "ref": "kiwee:itemmastery:xphb:slow::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the confirmed weapon model; replace generic mastery diagnostics with actual Slow and 2024 Light execution conditions.",
+    "notes": "Partial: 1d4 bludgeoning. Light requires an Attack-action attack on the user's turn, then one later Bonus Action attack with a different Light weapon; omit its ability damage modifier unless negative. With mastery unlocked, a hit dealing damage may reduce the target's Speed by 10 ft until the start of the user's next turn; repeated Slow hits cannot exceed a 10-ft reduction."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Cobbler's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:cobbler's%20tools::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:cobbler's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "dexterity-footwear-check-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "checkEffects",
+        "code": "modified-shoes-next-acrobatics-advantage-deferred",
+        "ref": "entries/0/items/1",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep inventory fields; identify Dexterity/DC10 footwear use, wearer-specific next-check advantage and Climber's Kit crafting.",
+    "notes": "Partial: Dexterity DC 10 modifies footwear to advantage the wearer's next Dexterity (Acrobatics) check. Tool proficiency adds PB; a proficient skill used by that same tool check adds advantage. Craft product is Climber's Kit|XPHB. No duration or recipient count is stated; no permanent Acrobatics bonus or 2014 travel/exhaustion effect is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Cook's Utensils",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:cook's%20utensils::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:cook's%20utensils::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 8,
+        "value": 100
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "wisdom-food-checks-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the inventory model; identify actual Wisdom food-check DCs, conditional proficiency/advantage and Rations crafting.",
+    "notes": "Partial: Wisdom DC 10 improves flavor; DC 15 detects spoiled or poisoned food. Existing tool proficiency adds PB, with advantage when an applicable skill is also proficient. Craft product is Rations|XPHB. No short-rest Hit Die healing, meal recipient count or recovery schedule is present in this 2024 item."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Crystal",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:crystal::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:crystal::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 1000,
+        "spellFocus": "arcane"
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 224
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Explicit 2024 arcane-focus type, weight and value fully match the supported model; empty entries add no unresolved mechanism.",
+    "notes": "Retain spellFocus arcane, weight 1 lb and value 1000 cp. This is operative equipment, not a noMechanics placeholder. No spell or class-feature grant is invented."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Dagger",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:dagger::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:dagger::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 1,
+        "value": 200,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "L",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-light-and-thrown-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "nick-light-extra-attack-timing-deferred",
+        "ref": "kiwee:itemmastery:xphb:nick::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete weapon model; replace generic range/mastery markers with actual Finesse, Light, Thrown, range and Nick conditions.",
+    "notes": "Partial: 1d4 piercing, thrown range 20/60 ft. Finesse chooses Strength or Dexterity consistently for attack/damage. Thrown allows drawing during the attack and retains the melee ability choice. Light requires an Attack-action attack on the user's turn and a different Light weapon for the extra attack, with no ability damage modifier unless negative. With mastery unlocked, Nick moves that Light extra attack into the Attack action instead of a Bonus Action, only once per turn; it grants no additional attack beyond Light."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Dart",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:dart::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:dart::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 0.25,
+        "value": 5,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "piercing",
+        "properties": [
+          "F",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "finesse-and-thrown-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-hit-damage-next-attack-advantage-deferred",
+        "ref": "kiwee:itemmastery:xphb:vex::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the complete ranged model; replace generic range/mastery markers with actual Finesse, Thrown, range and Vex conditions.",
+    "notes": "Partial: simple ranged weapon, 1d4 piercing, range 20/60 ft. Finesse chooses Strength or Dexterity consistently; Thrown allows drawing as part of the attack. Long-range disadvantage and the maximum range remain unresolved. With mastery unlocked, a hit dealing damage advantages the next attack against that creature before the end of the user's next turn. R is the weapon type, not Reach; no Ammunition rule applies."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Drum",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:drum::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:drum::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 3,
+        "value": 600
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain weight and value; identify actual 2024 Charisma performance DCs and combined tool/skill proficiency conditions.",
+    "notes": "Partial: Charisma, known tune DC 10 or improvised song DC 15. Existing drum proficiency adds PB; a proficient skill applied to that same check also gives advantage. Possession grants no proficiency or global Charisma modifier. No focus permission is stated in the supplied item/type text."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Dulcimer",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:dulcimer::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:dulcimer::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 10,
+        "value": 2500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep inventory fields; identify actual 2024 Charisma performance DCs and proficiency-dependent PB and advantage.",
+    "notes": "Partial: Charisma, known tune DC 10 or improvised song DC 15. Tool proficiency adds PB; proficiency in a skill used by the same check also yields advantage. No automatic proficiency, spell grant or focus permission is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Firearm Bullet",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:firearm%20bullet::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:firearm%20bullet::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 0.2,
+        "value": 30
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "modern-firearm-consumption-destruction-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 222,
+      "quote": "Firearm Bullets are destroyed upon use in a modern firearm."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the single-bullet inventory model; identify the explicit modern-firearm destruction condition instead of applying generic half retrieval to that use.",
+    "notes": "Partial: using the bullet in a modern firearm destroys it. Do not add half-ammunition recovery for that use, or remove the modern-firearm condition to assert universal destruction. No independent damage, firearm weapon model or replenishing resource is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Firearm Bullets (10)",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:firearm%20bullets%20(10)::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:firearm%20bullets%20(10)::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 300
+      }
+    },
+    "unsupported": [
+      {
+        "family": "ammunition",
+        "code": "modern-firearm-consumption-destruction-deferred",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "equipmentPackage",
+        "code": "pack-unpacking-not-modeled",
+        "ref": "packContents/0"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 222,
+      "quote": "Firearm Bullets are destroyed upon use in a modern firearm."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep aggregate inventory fields; expose the exact ten-bullet contents and conditional destruction without fabricating delivery or generic ammo recovery.",
+    "notes": "Partial: 10 units of kiwee:baseitem:xphb:firearm%20bullet::::::::, confirmed in the 2024 snapshot. EquipmentModel cannot express unpacking. Modern-firearm use destroys the bullet, so generic half retrieval must not be applied to that use. No unconditional starting-equipment allocation or 10-use rest resource is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Flail",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:flail::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:flail::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "bludgeoning"
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "kiwee:itemmastery:xphb:sap::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete weapon model; replace the generic mastery marker with actual Sap hit-triggered disadvantage and deferred combat.",
+    "notes": "Partial: 1d8 bludgeoning. With mastery unlocked, a hit disadvantages that creature's next attack roll before the start of the user's next turn. Sap does not require dealing damage and is not a permanent disadvantage effect. No weapon property is invented."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Flute",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:flute::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:flute::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 1,
+        "value": 200
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the inventory model; identify 2024 Charisma performance DCs and PB/advantage conditions requiring actual proficiency.",
+    "notes": "Partial: known tune uses Charisma DC 10; improvisation uses Charisma DC 15. Existing tool proficiency adds PB and proficiency in a skill used by that same check adds advantage. No global Performance bonus, proficiency grant or focus permission is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Glaive",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:glaive::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:glaive::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 2000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "R",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "strength-heavy-reach-and-two-handed-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "graze-miss-damage-deferred",
+        "ref": "kiwee:itemmastery:xphb:graze::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep all weapon fields; replace generic mastery diagnostics with actual Graze and identify the 2024 Strength-based Heavy, Reach and hand conditions.",
+    "notes": "Partial: 1d10 slashing. Melee Heavy disadvantages attacks when Strength is below 13; no Small/Tiny rule applies. Reach adds 5 ft for this weapon's attacks and opportunity attacks; 2H applies when attacking. With mastery unlocked, missing a creature may deal slashing damage equal to the attack ability modifier; this damage increases only when that modifier increases."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Glassblower's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:glassblower's%20tools::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:glassblower's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 3000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "intelligence-glass-history-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain inventory fields; identify the Intelligence/DC15 use with its 24-hour lookback, proficiency/advantage conditions and actual craft products.",
+    "notes": "Partial: Intelligence DC 15 determines what a glass object held during the past 24 hours. Tool proficiency adds PB; a proficient skill used by that same check adds advantage. Products: Glass Bottle, Magnifying Glass, Spyglass, Vial, all XPHB. No double-damage weak-spot effect or production schedule is present in this 2024 item."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Greataxe",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:greataxe::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:greataxe::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 7,
+        "value": 3000,
+        "weaponCategory": "martial",
+        "damage": "1d12",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "strength-heavy-and-two-handed-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "cleave-hit-second-target-attack-deferred",
+        "ref": "kiwee:itemmastery:xphb:cleave::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve all weapon fields; identify actual 2024 Strength-based Heavy, Two-Handed and Cleave conditions instead of a generic mastery marker.",
+    "notes": "Partial: 1d12 slashing; Heavy imposes disadvantage when Strength is below 13; two hands are needed for attacks. With mastery unlocked, a melee hit permits one extra melee attack per turn against a second creature within 5 ft of the first and within the user's reach. Its hit deals weapon damage without the ability modifier unless that modifier is negative. No size-based Heavy rule or unconditional extra attack is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Greatclub",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:greatclub::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:greatclub::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 10,
+        "value": 20,
+        "weaponCategory": "simple",
+        "damage": "1d8",
+        "damageType": "bludgeoning",
+        "properties": [
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-attack-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "push-hit-size-limited-displacement-deferred",
+        "ref": "kiwee:itemmastery:xphb:push::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the complete weapon model; replace the generic mastery marker with actual Push and identify the attack-only Two-Handed rule.",
+    "notes": "Partial: 1d8 bludgeoning, 2H for attacks; no Heavy property. With mastery unlocked, a hit may move a Large or smaller creature up to 10 ft straight away from the user. No save, automatic push on a miss or unrestricted target size is stated."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Greatsword",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:greatsword::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:greatsword::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 5000,
+        "weaponCategory": "martial",
+        "damage": "2d6",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "strength-heavy-and-two-handed-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "graze-miss-damage-deferred",
+        "ref": "kiwee:itemmastery:xphb:graze::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain every weapon field; identify actual Graze and 2024 Strength-based Heavy/Two-Handed execution instead of generic mastery diagnostics.",
+    "notes": "Partial: 2d6 slashing. Heavy disadvantages attacks when Strength is below 13; two hands are required when attacking. With mastery unlocked, missing a creature may deal slashing damage equal to the ability modifier used on that attack; only increasing that modifier can increase Graze damage. No global damage bonus or Small/Tiny condition is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Halberd",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:halberd::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:halberd::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 2000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "H",
+          "R",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "strength-heavy-reach-and-two-handed-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "cleave-hit-second-target-attack-deferred",
+        "ref": "kiwee:itemmastery:xphb:cleave::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the complete model; identify actual 2024 Heavy, Reach, Two-Handed and Cleave trigger, range, damage and quota conditions.",
+    "notes": "Partial: 1d10 slashing; Heavy disadvantage when Strength is below 13; Reach +5 ft for weapon attacks/opportunity attacks; 2H when attacking. With mastery unlocked, a melee hit may trigger one extra melee attack per turn at a second creature within 5 ft of the first and within reach. On that hit omit the ability damage modifier unless negative. R means Reach, not ranged type."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Half Plate Armor",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:half%20plate%20armor::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:half%20plate%20armor::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 15,
+        "weight": 40,
+        "value": 75000,
+        "stealthDisadvantage": true
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 219
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Explicit 2024 armor fields completely match the supported Medium Armor model, including Stealth disadvantage; empty prose adds no unresolved rule.",
+    "notes": "Retain AC 15, Dexterity cap 2, Stealth disadvantage, weight 40 lb and value 75000 cp. No Strength threshold, extra movement penalty or training grant is invented."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Hand Crossbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:hand%20crossbow::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:hand%20crossbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 3,
+        "value": 7500,
+        "weaponCategory": "martial",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "L",
+          "LD"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-expenditure-and-rounded-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-light-loading-and-hand-rules-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-hit-damage-next-attack-advantage-deferred",
+        "ref": "kiwee:itemmastery:xphb:vex::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep all confirmed weapon fields; replace generic range/mastery markers with actual 2024 range, Bolt compatibility, A/L/LD and Vex conditions.",
+    "notes": "Partial: 1d6 piercing, range 30/120 ft; ammo kiwee:baseitem:xphb:bolt::::::::. One per attack, free hand for one-handed loading, half used retrieved rounded down by a one-minute post-fight search. LD caps fired pieces at one per action, Bonus Action or Reaction. Light requires an Attack-action attack on the user's turn then a later Bonus Action attack with a different Light weapon; omit ability damage modifier unless negative. With mastery unlocked, hit plus damage advantages the next attack on that creature before the end of the user's next turn."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Handaxe",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:handaxe::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:handaxe::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 500,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "slashing",
+        "properties": [
+          "L",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-and-thrown-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "vex-hit-damage-next-attack-advantage-deferred",
+        "ref": "kiwee:itemmastery:xphb:vex::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the full weapon model; identify actual range, 2024 Light/Thrown and Vex conditions instead of generic diagnostics.",
+    "notes": "Partial: 1d6 slashing, thrown range 20/60 ft. Thrown allows drawing with the attack and retains the melee ability modifier; no Finesse. Light requires an Attack-action attack on the user's turn then one Bonus Action attack with a different Light weapon, omitting the ability damage modifier unless negative. With mastery unlocked, hit plus damage grants advantage on the next attack against that creature before the end of the user's next turn."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Heavy Crossbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:heavy%20crossbow::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:heavy%20crossbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 18,
+        "value": 5000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "H",
+          "LD",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-expenditure-and-rounded-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-dexterity-heavy-loading-and-two-handed-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "push-hit-size-limited-displacement-deferred",
+        "ref": "kiwee:itemmastery:xphb:push::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the complete weapon model; identify actual range/ammo and 2024 Dexterity-based Heavy, Loading, Two-Handed and Push boundaries.",
+    "notes": "Partial: 1d10 piercing, range 100/400 ft; ammo kiwee:baseitem:xphb:bolt::::::::. Spend one per attack; a one-minute post-fight search recovers half used rounded down. Ranged Heavy disadvantages attacks when Dexterity is below 13. LD caps fired pieces at one per action, Bonus Action or Reaction; 2H applies when attacking. With mastery unlocked, a hit may push a Large or smaller creature up to 10 ft straight away. No Strength threshold or Small/Tiny Heavy condition is imported."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Hide Armor",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:hide%20armor::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:hide%20armor::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "mediumArmor",
+        "dexCap": 2,
+        "ac": 12,
+        "weight": 12,
+        "value": 1000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 219
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "The explicit 2024 armor fields match the complete supported Medium Armor model; empty item/type prose adds no unresolved mechanism.",
+    "notes": "Retain AC 12, Dexterity cap 2, weight 12 lb and value 1000 cp. No ancestry/class restriction, Stealth modifier or training grant is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Horn",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:horn::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:horn::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 300
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve inventory fields; identify actual Charisma/DC10 or DC15 performance and conditional tool/skill proficiency benefits.",
+    "notes": "Partial: known tune uses Charisma DC 10; song improvisation uses Charisma DC 15. Tool proficiency adds PB; an applicable proficient skill used by that same check adds advantage. No proficiency is granted and no focus rule is stated in the supplied 2024 item/type text."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Javelin",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:javelin::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:javelin::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 50,
+        "weaponCategory": "simple",
+        "damage": "1d6",
+        "damageType": "piercing",
+        "properties": [
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "thrown-draw-and-melee-ability-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-hit-damage-nonstacking-speed-deferred",
+        "ref": "kiwee:itemmastery:xphb:slow::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep every weapon field; identify exact range, 2024 Thrown drawing/ability rules and Slow instead of generic range/mastery markers.",
+    "notes": "Partial: 1d6 piercing, thrown range 30/120 ft. Thrown allows drawing during the attack and uses the melee ability modifier. With mastery unlocked, a hit dealing damage may reduce Speed by 10 ft until the start of the user's next turn; repeated Slow hits cannot exceed 10 ft. No Finesse or Tool permission is added."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Jeweler's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:jeweler's%20tools::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:jeweler's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 2500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "intelligence-gem-value-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 220
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve inventory fields; identify actual Intelligence/DC15 gem valuation, conditional proficiency/advantage and source-qualified group craft products.",
+    "notes": "Partial: Intelligence DC 15 evaluates a gem. Existing tool proficiency adds PB; an applicable proficient skill also gives advantage. Products are Arcane Focus|XPHB and Holy Symbol|XPHB groups, confirmed in the 2024 snapshot. No immediate automatic appraisal, expertise grant, specific focus selection or production quantity is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Lance",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:lance::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:lance::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 6,
+        "value": 1000,
+        "weaponCategory": "martial",
+        "damage": "1d10",
+        "damageType": "piercing",
+        "properties": [
+          "H",
+          "R"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "strength-heavy-and-reach-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "two-handed-unless-mounted-not-represented",
+        "ref": "property/2"
+      },
+      {
+        "family": "weaponMastery",
+        "code": "topple-hit-save-and-prone-deferred",
+        "ref": "kiwee:itemmastery:xphb:topple::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215,
+      "quote": "A Lance requires two hands to wield when you aren't mounted."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Restore the confirmed H and R properties lost because one property is an object. Keep the mounted exception explicit rather than adding unconditional 2H; identify actual 2024 Topple.",
+    "notes": "Partial: 1d10 piercing; H disadvantage when Strength is below 13; R adds 5 ft for this weapon's attacks/opportunity attacks. The 2H object says unless mounted, corroborated by item text; no unconditional 2H token is added. With mastery unlocked, a hit may force a Constitution save at DC 8 plus the attack ability modifier plus PB; failure gives Prone. The 2014 1d12, Special token and within-5-ft disadvantage are absent."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Leather Armor",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:leather%20armor::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:leather%20armor::::::"
+    ],
+    "verdict": "automated",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "lightArmor",
+        "ac": 11,
+        "weight": 10,
+        "value": 1000
+      }
+    },
+    "unsupported": [],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 219
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Explicit 2024 armor fields fully match the supported Light Armor model; empty entries add no unresolved rule.",
+    "notes": "Retain AC 11 with supported Light Armor Dexterity handling, weight 10 lb and value 1000 cp. No Dexterity cap, Stealth disadvantage, Strength threshold or training grant is invented."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Leatherworker's Tools",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:leatherworker's%20tools::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:leatherworker's%20tools::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 5,
+        "value": 500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "dexterity-leather-design-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      },
+      {
+        "family": "crafting",
+        "code": "listed-craft-products-and-process-not-modeled",
+        "ref": "entries/0/items/2"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep inventory fields; identify Dexterity/DC10 leather design, conditional tool/skill proficiency benefits and all actual 2024 craft products.",
+    "notes": "Partial: Dexterity DC 10 decorates a leather item. Tool proficiency adds PB; a proficient skill used by that same check adds advantage. Products: Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin, all XPHB. No armor proficiency, expertise, material-identification power or recipe schedule is inferred."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Light Crossbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:light%20crossbow::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:light%20crossbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 5,
+        "value": 2500,
+        "weaponCategory": "simple",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "LD",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-expenditure-and-rounded-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-loading-and-two-handed-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-hit-damage-nonstacking-speed-deferred",
+        "ref": "kiwee:itemmastery:xphb:slow::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the complete weapon model; identify exact range, Bolt compatibility, A/LD/2H execution and Slow instead of generic diagnostics.",
+    "notes": "Partial: 1d8 piercing, range 80/320 ft; ammo kiwee:baseitem:xphb:bolt::::::::. One per attack; a one-minute post-fight search retrieves half used rounded down. LD caps firing at one piece per action, Bonus Action or Reaction; 2H applies when attacking. With mastery unlocked, hit plus damage may reduce Speed by 10 ft until the start of the user's next turn, capped at 10 ft across repeated Slow hits. Name Light does not confer L."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Light Hammer",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:light%20hammer::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:light%20hammer::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 2,
+        "value": 200,
+        "weaponCategory": "simple",
+        "damage": "1d4",
+        "damageType": "bludgeoning",
+        "properties": [
+          "L",
+          "T"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "weaponProperties",
+        "code": "light-and-thrown-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "nick-light-extra-attack-timing-deferred",
+        "ref": "kiwee:itemmastery:xphb:nick::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep all weapon fields; identify actual range, 2024 Light/Thrown and Nick action/quota conditions instead of generic diagnostics.",
+    "notes": "Partial: 1d4 bludgeoning, thrown range 20/60 ft. Thrown allows drawing during the attack and uses the melee ability modifier. Light requires an Attack-action attack on the user's turn and a different Light weapon for its extra attack; omit the ability damage modifier unless negative. With mastery unlocked, Nick puts the Light extra attack in the Attack action rather than a Bonus Action, once per turn; it does not add another extra attack."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Longbow",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:longbow::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:longbow::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "ranged",
+        "weight": 2,
+        "value": 5000,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "damageType": "piercing",
+        "properties": [
+          "A",
+          "H",
+          "2H"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponRange",
+        "code": "normal-long-range-not-represented",
+        "ref": "range"
+      },
+      {
+        "family": "ammunition",
+        "code": "compatible-ammo-expenditure-and-rounded-retrieval-deferred",
+        "ref": "ammoType",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "ammunition-dexterity-heavy-and-two-handed-execution-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "slow-hit-damage-nonstacking-speed-deferred",
+        "ref": "kiwee:itemmastery:xphb:slow::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve every weapon field; identify exact range, Arrow compatibility and actual 2024 Dexterity-based Heavy, Two-Handed and Slow conditions.",
+    "notes": "Partial: 1d8 piercing, range 150/600 ft; ammo kiwee:baseitem:xphb:arrow::::::::. Spend one per attack; a one-minute post-fight search recovers half used rounded down. Ranged Heavy disadvantages attacks when Dexterity is below 13; 2H applies when attacking. With mastery unlocked, hit plus damage may reduce Speed by 10 ft until the start of the user's next turn; repeated Slow hits cap at 10 ft. No LD, Strength threshold or size-based Heavy rule applies."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Longsword",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:longsword::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:longsword::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "weapon",
+        "weaponType": "melee",
+        "weight": 3,
+        "value": 1500,
+        "weaponCategory": "martial",
+        "damage": "1d8",
+        "versatileDamage": "1d10",
+        "damageType": "slashing",
+        "properties": [
+          "V"
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "weaponExecution",
+        "code": "attack-hit-and-damage-settlement-deferred",
+        "ref": "dmg1",
+        "deferred": true
+      },
+      {
+        "family": "weaponProperties",
+        "code": "versatile-two-handed-melee-damage-deferred",
+        "ref": "property",
+        "deferred": true
+      },
+      {
+        "family": "weaponMastery",
+        "code": "sap-hit-next-attack-disadvantage-deferred",
+        "ref": "kiwee:itemmastery:xphb:sap::::::::",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 215
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the full model including both damage dice; identify actual Sap and hand-dependent Versatile execution instead of a generic mastery marker.",
+    "notes": "Partial: 1d8 slashing, or 1d10 only for a two-handed melee attack. With mastery unlocked, a hit disadvantages that creature's next attack roll before the start of the user's next turn. Sap requires a hit, not a damage prerequisite; it is not permanent. No unconditional 1d10 replacement is applied."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Lute",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:lute::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:lute::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 3500
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep inventory fields; identify actual 2024 Charisma performance DCs and conditional tool/skill proficiency benefits.",
+    "notes": "Partial: known tune uses Charisma DC 10; improvisation uses Charisma DC 15. Tool proficiency adds PB, with advantage if a proficient skill applies to that same check. No automatic proficiency, global skill modifier or focus permission is inferred from the supplied 2024 item/type text."
+  },
+  {
+    "identity": {
+      "kind": "baseitem",
+      "source": "XPHB",
+      "engName": "Lyre",
+      "packId": "kiwee",
+      "key": "kiwee:baseitem:xphb:lyre::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:item:xphb:lyre::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "equipmentModel": {
+        "category": "other",
+        "weight": 2,
+        "value": 3000
+      }
+    },
+    "unsupported": [
+      {
+        "family": "toolChecks",
+        "code": "charisma-performance-and-dual-proficiency-advantage-deferred",
+        "ref": "entries",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-baseitem-001",
+    "evidence": {
+      "page": 221
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain inventory fields; identify actual Charisma performance checks and PB/advantage conditions requiring existing proficiency.",
+    "notes": "Partial: Charisma DC 10 for a known tune, DC 15 for improvisation. Existing tool proficiency adds PB; proficiency in a skill used by that same check also gives advantage. No proficiency, spell or focus grant is added."
+  }
+]

@@ -1,0 +1,1592 @@
+[
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Black)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(black)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E9%BB%91)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:acid",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "five-by-thirty-foot-line-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/0",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Black ancestry: acid resistance; action breath in a 5-foot-wide, 30-foot-long line, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is acid: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Blue)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(blue)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E8%93%9D)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:lightning",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "five-by-thirty-foot-line-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/1",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Blue ancestry: lightning resistance; action breath in a 5-foot-wide, 30-foot-long line, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is lightning: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Brass)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(brass)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E9%BB%84%E9%93%9C)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:fire",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "five-by-thirty-foot-line-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/2",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Brass ancestry: fire resistance; action breath in a 5-foot-wide, 30-foot-long line, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is fire: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Bronze)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(bronze)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E9%9D%92%E9%93%9C)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:lightning",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "five-by-thirty-foot-line-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/3",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Bronze ancestry: lightning resistance; action breath in a 5-foot-wide, 30-foot-long line, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is lightning: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Copper)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(copper)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E8%B5%A4%E9%93%9C)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:acid",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "five-by-thirty-foot-line-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/4",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Copper ancestry: acid resistance; action breath in a 5-foot-wide, 30-foot-long line, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is acid: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Gold)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(gold)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E9%87%91)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:fire",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "fifteen-foot-cone-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/5",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Gold ancestry: fire resistance; action breath in a 15-foot cone, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is fire: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Green)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(green)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E7%BB%BF)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:poison",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "con",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "fifteen-foot-cone-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/6",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Green ancestry: poison resistance; action breath in a 15-foot cone, each creature makes a Constitution save, DC 8 + Constitution modifier + proficiency bonus. Damage is poison: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Red)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(red)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E7%BA%A2)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:fire",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "dex",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "fifteen-foot-cone-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/7",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Red ancestry: fire resistance; action breath in a 15-foot cone, each creature makes a Dexterity save, DC 8 + Constitution modifier + proficiency bonus. Damage is fire: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (Silver)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(silver)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E9%93%B6)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:cold",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "con",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "fifteen-foot-cone-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/8",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified Silver ancestry: cold resistance; action breath in a 15-foot cone, each creature makes a Constitution save, DC 8 + Constitution modifier + proficiency bonus. Damage is cold: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  },
+  {
+    "identity": {
+      "kind": "subrace",
+      "source": "PHB",
+      "engName": "Dragonborn (White)",
+      "raceSource": "PHB",
+      "raceEngName": "Dragonborn",
+      "packId": "kiwee",
+      "key": "kiwee:subrace:phb:dragonborn%20(white)::::::phb:dragonborn:"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:race:phb:dragonborn%20(%E7%99%BD)::::::%E9%BE%99%E8%A3%94"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "modifiers": [
+        {
+          "target": "str",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "target": "cha",
+          "op": "add",
+          "value": 1
+        },
+        {
+          "target": "resist:cold",
+          "op": "set",
+          "value": true
+        },
+        {
+          "target": "speed.walk",
+          "op": "set",
+          "value": 30
+        },
+        {
+          "target": "size",
+          "op": "set",
+          "value": "M"
+        }
+      ],
+      "grants": [
+        {
+          "type": "languageProficiency",
+          "fixed": [
+            "Common",
+            "Draconic"
+          ],
+          "scope": "all",
+          "key": "languageProficiencies:0:fixed"
+        }
+      ],
+      "resources": [
+        {
+          "key": "phb_dragonborn_breath_weapon",
+          "max": {
+            "value": 1
+          },
+          "recovery": [
+            {
+              "period": "short",
+              "amount": "all"
+            },
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "key": "phb_dragonborn_breath_damage",
+          "values": [
+            {
+              "level": 1,
+              "dice": {
+                "count": 2,
+                "faces": 6
+              }
+            },
+            {
+              "level": 6,
+              "dice": {
+                "count": 3,
+                "faces": 6
+              }
+            },
+            {
+              "level": 11,
+              "dice": {
+                "count": 4,
+                "faces": 6
+              }
+            },
+            {
+              "level": 16,
+              "dice": {
+                "count": 5,
+                "faces": 6
+              }
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": "save",
+          "key": "phb_dragonborn_breath_weapon",
+          "activation": "action",
+          "target": "area",
+          "formula": "@scale.phb_dragonborn_breath_damage",
+          "save": {
+            "ability": "con",
+            "dc": "8 + @abilities.con.mod + @prof"
+          },
+          "consumes": {
+            "resource": "phb_dragonborn_breath_weapon",
+            "amount": 1
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "areaOfEffect",
+        "code": "fifteen-foot-cone-targeting-deferred",
+        "ref": "data/races.json#/race/27/entries/2/entries/1/rows/9",
+        "deferred": true
+      },
+      {
+        "family": "damageExecution",
+        "code": "typed-damage-and-save-half-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      },
+      {
+        "family": "damageScaling",
+        "code": "character-level-dice-scale-binding-deferred",
+        "ref": "data/races.json#/race/27/entries/3/entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-subrace-dragonborn-001",
+    "evidence": {
+      "page": 34,
+      "quote": "You have resistance to the damage type associated with your draconic ancestry."
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep verified inherited traits and ancestry resistance; add one parent-derived breath pool and exact damage progression, replacing the empty gap list with deferred area selection, typed save-for-half damage, and character-level dice-scale binding.",
+    "notes": "Partial, verified White ancestry: cold resistance; action breath in a 15-foot cone, each creature makes a Constitution save, DC 8 + Constitution modifier + proficiency bonus. Damage is cold: 2d6 at character levels 1-5, 3d6 at 6-10, 4d6 at 11-15, 5d6 at 16-20; success takes half. One use, restored fully on either short or long rest; damage progression never increases the use limit. Area geometry/creature selection, typed damage and save-for-half settlement remain deferred; the declared dice scale requires total-character-level binding and roll resolution, not a class or selection level. This is one complete expanded race choice: inherited Strength +2, Charisma +1, walk 30 ft, Medium size and Common/Draconic are retained once, not added to a second base-race record. The snapshot base race and unnamed subrace declare no resource; this record declares exactly one breath pool, with no separate parent-feature grant or second pool. PHB printed Dragonborn Traits page is 34; raw page 32 identifies the beginning of the race section. Color is proven by the parent table and explicit version variables."
+  }
+]

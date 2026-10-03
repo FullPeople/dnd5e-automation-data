@@ -1,0 +1,29 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "XPHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "XPHB",
+      "classEngName": "Wizard",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:xphb:ability%20score%20improvement:xphb:wizard:::8:::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:feature:xphb:ability%20score%20improvement:xphb:%E6%B3%95%E5%B8%88:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "choiceOfOtherEntry",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-classFeature-asi-002",
+    "evidence": {
+      "page": 167,
+      "quote": "of your choice for which you qualify"
+    },
+    "notes": "This classFeature points to one qualifying feat, including the separately owned XPHB Ability Score Improvement feat; that feat record owns its operative ability mechanism. Repeated class levels are distinct catalogue records and not additional grants from this pointer."
+  }
+]
