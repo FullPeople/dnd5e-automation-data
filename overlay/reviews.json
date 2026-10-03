@@ -632,5 +632,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-classFeature-family-005",
+    "path": "classFeature/PHB-classFeature-family-005.json",
+    "sha256": "8e3c2f40fbeab7b9fd43480fc4da5f2f815c4c5f7495f63bed9261563ae1e67c",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:phb:action%20surge%20(two%20uses):phb:fighter:::17:::",
+      "kiwee:classfeature:phb:action%20surge:phb:fighter:::2:::",
+      "kiwee:classfeature:phb:extra%20attack%20(2):phb:fighter:::11:::",
+      "kiwee:classfeature:phb:extra%20attack%20(3):phb:fighter:::20:::",
+      "kiwee:classfeature:phb:extra%20attack:phb:fighter:::5:::",
+      "kiwee:classfeature:phb:fighting%20style:phb:fighter:::1:::",
+      "kiwee:classfeature:phb:indomitable%20(two%20uses):phb:fighter:::13:::",
+      "kiwee:classfeature:phb:indomitable:phb:fighter:::9:::",
+      "kiwee:classfeature:phb:martial%20archetype:phb:fighter:::3:::",
+      "kiwee:classfeature:phb:second%20wind:phb:fighter:::1:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
