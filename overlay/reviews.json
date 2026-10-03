@@ -586,5 +586,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "DMG-item-003",
+    "path": "item/DMG-item-003.json",
+    "sha256": "a1b496cfb61d3a75452757d3fb56e159f5dd67810ad2cda2b8228cb568fdcb24",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:dmg:light%20hammer%20(weapon%20of%20warning)::::::::phb%7Clight%20hammer%7Cdmg%7Cweapon%20of%20warning",
+      "kiwee:item:dmg:cap%20of%20water%20breathing::::::::",
+      "kiwee:item:dmg:gold%20dragon%20scale%20mail::::::::",
+      "kiwee:item:dmg:fragmentation%20grenade::::::::",
+      "kiwee:item:dmg:rapier%20(defender)::::::::phb%7Crapier%7Cdmg%7Cdefender",
+      "kiwee:item:dmg:half%20plate%20armor%20(%2B2%20armor)::::::::phb%7Chalf%20plate%20armor%7Cdmg%7C%2B2%20armor",
+      "kiwee:item:dmg:chain%20shirt%20(armor%20of%20acid%20resistance)::::::::phb%7Cchain%20shirt%7Cdmg%7Carmor%20of%20acid%20resistance",
+      "kiwee:item:dmg:talisman%20of%20pure%20good::::::::",
+      "kiwee:item:dmg:splint%20armor%20(mithral%20armor)::::::::phb%7Csplint%20armor%7Cdmg%7Cmithral%20armor",
+      "kiwee:item:dmg:pipes%20of%20the%20sewers::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
