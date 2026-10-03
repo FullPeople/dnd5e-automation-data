@@ -655,5 +655,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XDMG-item-005",
+    "path": "item/XDMG-item-005.json",
+    "sha256": "e2483953e547b24ea0d59ace761ccdeff7be5a888e66df7853c99e84cc81fb82",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:xdmg:boots%20of%20striding%20and%20springing::::::::",
+      "kiwee:item:xdmg:dust%20of%20sneezing%20and%20choking::::::::",
+      "kiwee:item:xdmg:scroll%20of%20titan%20summoning%20(elemental%20cataclysm)::::::::",
+      "kiwee:item:xdmg:antimatter%20rifle%20(dragon%20slayer)::::::::xdmg%7Cantimatter%20rifle%7Cxdmg%7Cdragon%20slayer",
+      "kiwee:item:xdmg:daern's%20instant%20fortress::::::::",
+      "kiwee:item:xdmg:hoopak%20(enspelled%20weapon%20(level%202))::::::::dsotdq%7Choopak%7Cxdmg%7Censpelled%20weapon%20(level%202)",
+      "kiwee:item:xdmg:ring%20of%20shooting%20stars::::::::",
+      "kiwee:item:xdmg:scroll%20of%20titan%20summoning%20(colossus)::::::::",
+      "kiwee:item:xdmg:staff%20(holy%20avenger)::::::::xphb%7Cstaff%7Cxdmg%7Choly%20avenger",
+      "kiwee:item:xdmg:wand%20of%20magic%20missiles::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
