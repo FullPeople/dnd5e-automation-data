@@ -379,5 +379,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-spell-002",
+    "path": "spell/XPHB-spell-002.json",
+    "sha256": "8b33addc344cfa3db88e2c59d8867c85e09d218b963648e45c1b7695b9ef2ca8",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:spell:xphb:staggering%20smite::::::::",
+      "kiwee:spell:xphb:conjure%20woodland%20beings::::::::",
+      "kiwee:spell:xphb:arcane%20vigor::::::::",
+      "kiwee:spell:xphb:leomund's%20tiny%20hut::::::::",
+      "kiwee:spell:xphb:conjure%20elemental::::::::",
+      "kiwee:spell:xphb:counterspell::::::::",
+      "kiwee:spell:xphb:lightning%20arrow::::::::",
+      "kiwee:spell:xphb:animal%20shapes::::::::",
+      "kiwee:spell:xphb:contingency::::::::",
+      "kiwee:spell:xphb:spirit%20guardians::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
