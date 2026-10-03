@@ -1,0 +1,5753 @@
+[
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Dissonant Whispers",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:dissonant%20whispers::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:dissonant%20whispers::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "E",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "wisdom-3d6-psychic-success-half",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "forcedMovement",
+        "code": "available-reaction-safest-route-away",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-plus-1d6",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 264
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the actual selection model; replace pending metadata with explicit save, Reaction movement and slot-scaling boundaries.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V; source duration instant; no concentration marker; no ritual marker. Choose one visible creature within 60 feet. Wisdom failure deals 3d6 Psychic and forces an available Reaction to move as far from the caster as possible by the safest route; success deals half without movement. Upgrade boundary: Above slot 1, add 1d6 damage per slot level."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Passwall",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:passwall::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:passwall::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "T",
+        "classes": [
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "terrainTransformation",
+        "code": "visible-wood-plaster-stone-chosen-passage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "closure-safe-nearest-unoccupied-ejection",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 304
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred Foundry area utility; record passage geometry, allowed surfaces and closure ejection instead of unresolved targeting.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S/M; source duration 1 hour; no concentration marker; no ritual marker. At a visible point on wood, plaster or stone within 30 feet, choose a passage no larger than 5 feet wide, 8 feet tall and 20 feet deep. It lasts one hour without destabilizing the surrounding structure. When it closes, occupants and objects are safely moved to the nearest unoccupied space by the casting surface. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Otiluke's Freezing Sphere",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:otiluke's%20freezing%20sphere::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:otiluke's%20freezing%20sphere::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 6,
+        "school": "V",
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "formula": "10d6",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "foundry:activity:1",
+          "activation": "none",
+          "target": "creature",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "foundry:activity:2",
+          "activation": "action",
+          "target": "self",
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "foundry:activity:3",
+          "activation": "action",
+          "target": "area",
+          "formula": "10d6",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Frozen-water surface swimmers: Restrained",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [],
+          "statuses": [
+            "restrained"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "sixty-foot-sphere-constitution-10d6-cold-half",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "terrainTransformation",
+        "code": "water-six-inch-thirty-foot-square-one-minute",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "conditionLifecycle",
+        "code": "surface-swimmer-restrained-action-athletics-escape",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "storedSpell",
+        "code": "hold-transfer-throw-sling-impact-or-minute-explosion",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-sixth-plus-1d6",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 302
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve all four genuine Foundry activity references as deferred cast/fire, freeze-water, cast/hold and throw branches; correct explosion targets to area and ice duration to one minute.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 300 feet; components V/S/M; source duration instant; no concentration marker; no ritual marker. Choose a point within 300 feet: a 60-foot-radius sphere forces Constitution saves, 10d6 Cold on failure and half on success. Water hit freezes six inches deep in a 30-foot square for one minute; surface swimmers are Restrained and may use an action for Strength (Athletics) versus spell DC to escape. Alternatively hold a sling-bullet-sized globe, give it to another creature, throw it 40 feet or sling it to normal range; impact causes the same explosion. Setting it down need not break it, but it explodes after one minute if intact. Upgrade boundary: Above slot 6, add 1d6 Cold per slot level.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Confusion",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:confusion::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:confusion::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 4,
+        "school": "E",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveCondition",
+        "code": "wisdom-area-no-bonus-actions-or-reactions",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "randomBehavior",
+        "code": "start-turn-d10-and-compass-d4-table",
+        "ref": "entries/1/rows",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "target-end-turn-wisdom-save-end",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-fourth-plus-five-foot-radius",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 253
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the real deferred save with an area target; remove the empty unnamed effect stub and do not adopt Foundry's unrelated half-damage field.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 90 feet; components V/S/M; source duration 1 minute; concentration; no ritual marker. A chosen point within 90 feet anchors a 10-foot-radius sphere. Wisdom failure removes Bonus Actions and Reactions; at each target turn start roll d10: 1 uses all movement in a d4-selected compass direction without action; 2-6 no movement/actions; 7-8 no movement and one melee attack against a random reachable creature, or no action if none; 9-10 choose behavior. End-of-turn Wisdom success ends that target's effect. Concentration lasts up to one minute. Upgrade boundary: Above slot 4, radius increases five feet per slot level.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Spike Growth",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:spike%20growth::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:spike%20growth::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 2,
+        "school": "T",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Ranger",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "damage",
+          "key": "foundry:activity:0",
+          "activation": "none",
+          "target": "creature",
+          "formula": "2d4",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "terrainHazard",
+        "code": "twenty-foot-radius-difficult-terrain",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "movementDamage",
+        "code": "entry-or-within-per-five-feet-2d4-piercing",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "hazardDetection",
+        "code": "unseen-at-casting-search-perception-or-survival",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 319
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the real 2d4 damage reference as a deferred movement-triggered event with no action activation; discard implied slot scaling because the complete body supplies none.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 150 feet; components V/S/M; source duration 10 minute; concentration; no ritual marker. A point within 150 feet anchors ground spikes in a 20-foot-radius sphere for up to ten minutes of concentration. The area is difficult terrain and moving into or within it deals 2d4 Piercing per five feet traveled. A creature unable to see the area during casting must Search and pass Wisdom (Perception or Survival) versus spell DC to identify the disguised danger before entry. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Summon Celestial",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:summon%20celestial::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:summon%20celestial::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "C",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Paladin",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "summoning",
+        "code": "visible-unoccupied-celestial-spirit-stat-block",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "avenger-or-defender-at-casting",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "summonTurn",
+        "code": "after-caster-verbal-command-or-dodge",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "summon-zero-hp-or-spell-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "materialComponent",
+        "code": "reliquary-500gp-not-consumed",
+        "ref": "components/m",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "slot-level-in-referenced-spirit-stat-block",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 323
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep the existing selection model without inventing an actor grant, executable summon or stat-block formula; replace pending actor diagnostics with the actual summon choices and lifecycle.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 90 feet; components V/S/M; source duration 1 hour; concentration; no ritual marker. Manifest a Celestial Spirit in a visible unoccupied space within 90 feet, choosing Avenger or Defender at casting to determine stat-block details. It is allied, shares the caster's initiative and acts immediately after the caster; verbal orders cost no action, otherwise it Dodges and moves away from danger. It vanishes at zero HP or spell end; concentration lasts up to one hour. The 500+ GP reliquary is required but not marked consumed. Upgrade boundary: Use the actual slot level wherever the referenced spirit stat block uses spell level; external stat-block calculations remain deferred."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Nystul's Magic Aura",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:nystul's%20magic%20aura::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:nystul's%20magic%20aura::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 2,
+        "school": "I",
+        "classes": [
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "other",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targeting",
+        "code": "willing-creature-or-unworn-uncarried-object",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "mask-other-creature-type-for-magic",
+        "ref": "entries/1/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "illusionDetection",
+        "code": "object-false-aura-nature-or-school-choice",
+        "ref": "entries/2/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "thirty-daily-same-target-castings-until-dispelled",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 302
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the actual deferred utility; remove its empty unnamed effect rather than misrepresenting target-dependent Mask and False Aura as simultaneous global changes.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S/M; source duration 24 hour; no concentration marker; no ritual marker. Touch a willing creature or an unworn, uncarried object for 24 hours. A creature receives Mask: choose a different creature type and magical effects treat it as that type. An object receives False Aura: choose apparent magical/nonmagical nature or magic school for aura detection. Daily casting on the same target for thirty days makes the illusion last until dispelled. The creature and object branches are target-dependent. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Simulacrum",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:simulacrum::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:simulacrum::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 7,
+        "school": "I",
+        "classes": [
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "summon",
+          "key": "foundry:activity:0",
+          "activation": "hour",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "summoning",
+        "code": "beast-humanoid-twelve-hour-proximity-snow-copy",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "copyStatistics",
+        "code": "construct-half-max-hp-no-simulacrum-casting",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "summonTurn",
+        "code": "caster-turn-commands-no-levels-or-rests",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "repair",
+        "code": "caster-long-rest-five-foot-100gp-per-hp",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "zero-hp-melt-or-recast-destroy",
+        "ref": "entries/3",
+        "deferred": true
+      },
+      {
+        "family": "materialConsumption",
+        "code": "1500gp-ruby-consumed",
+        "ref": "components/m",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 317
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Correct the genuine Foundry action-time nondeferred utility to a deferred hour-activation summon; leave copied statistics, repairs and material settlement unexecuted.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 12 hour; range touch; components V/S/M; source duration permanent; ends: dispel; no concentration marker; no ritual marker. Over twelve hours keep one Beast or Humanoid within ten feet, then touch it and a same-sized ice/snow pile. The resulting creature copies the original's casting-time statistics but is a Construct, has half maximum HP and cannot cast Simulacrum. It is friendly to caster/designated creatures, obeys commands and acts on the caster's turn; it gains no levels and takes no Short/Long Rests. Only repair during the caster's Long Rest restores HP, costing 100 GP per HP with the copy within five feet. At zero HP it melts; recasting destroys previous copies made by this spell. Ruby worth 1,500+ GP is consumed. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Toll the Dead",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:toll%20the%20dead::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:toll%20the%20dead::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 0,
+        "school": "N",
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "formula": "1d8",
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "foundry:activity:1",
+          "activation": "action",
+          "target": "creature",
+          "formula": "1d12",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "wisdom-failure-necrotic-success-none",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionalDamage",
+        "code": "target-missing-hp-selects-d12-instead-of-d8",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "cantripScaling",
+        "code": "levels-5-11-17-two-three-four-matching-dice",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 334
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve both genuine deferred d8/d12 save references; explicitly bind the exclusive choice to missing target HP and defer level scaling.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/S; source duration instant; no concentration marker; no ritual marker. One visible creature within 60 feet hears the bell within ten feet of itself. Wisdom failure deals 1d8 Necrotic if no HP is missing, otherwise 1d12; successful save deals none. The two Foundry save templates are mutually exclusive branches of the same casting. Upgrade boundary: At character levels 5/11/17 the matching d8 or d12 branch becomes two/three/four dice."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Wish",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:wish::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:wish::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 9,
+        "school": "C",
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "self",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Caster stress after nonduplication Wish",
+          "duration": {
+            "unit": "special"
+          },
+          "changes": [
+            {
+              "target": "str",
+              "op": "set",
+              "value": 3
+            }
+          ],
+          "statuses": [],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "spellDuplication",
+        "code": "level-eight-or-less-requirements-waived",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "one-duplication-or-listed-alternative",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "objectCreation",
+        "code": "nonmagical-25000gp-300foot-visible-unoccupied-ground",
+        "ref": "entries/3/items/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "healing",
+        "code": "caster-and-twenty-visible-full-hp-restoration-cleansing",
+        "ref": "entries/3/items/1/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "targetEffect",
+        "code": "ten-visible-permanent-one-chosen-damage-resistance",
+        "ref": "entries/3/items/2/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "spellImmunity",
+        "code": "ten-visible-single-spell-or-magical-effect-eight-hours",
+        "ref": "entries/3/items/3/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "featReplacement",
+        "code": "eligible-feat-no-dependent-prerequisites",
+        "ref": "entries/3/items/4/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "rollManipulation",
+        "code": "last-round-advantage-disadvantage-result-choice",
+        "ref": "entries/3/items/5/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "dmAdjudication",
+        "code": "reality-change-intervention-and-forbidden-failure",
+        "ref": "entries/3/items/6/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "spellStress",
+        "code": "nonduplication-necrotic-strength-recovery-and-loss-risk",
+        "ref": "entries/4",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 341
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred self utility; change Strength min-three to body-supported set-three only inside the deferred conditional stress effect, with recovery and permanent-loss risk explicit.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range self; components V; source duration instant; no concentration marker; no ritual marker. Choose duplication of a spell of level eight or lower, waiving its requirements including costly materials, or another option. Options: one nonmagical object worth at most 25,000 GP, at most 300 feet in any dimension, on visible unoccupied ground; full HP and Greater Restoration-listed cleansing for caster and up to twenty visible creatures; permanent resistance to one chosen damage type for up to ten visible creatures; eight-hour immunity to one spell/magical effect for up to ten; replace an eligible personal feat unless others depend on it; reroll a roll from the last round including the last turn, choose advantage/disadvantage and which result. Other reality changes need DM adjudication; multiverse, Sigil or Lady of Pain threats fail, and powerful entities may intervene. Any nonduplication use causes subsequent spellcasting to deal unpreventable 1d10 Necrotic per spell level until Long Rest, sets Strength to three for 2d4 days with each light-activity rest day reducing remaining recovery by two days, and risks permanent loss of Wish with 33 percent probability. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Haste",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:haste::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:haste::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "T",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Artificer",
+            "source": "EFA"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "foundry:activity:1",
+          "activation": "none",
+          "target": "creature",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Haste on willing target",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [
+            {
+              "target": "ac",
+              "op": "add",
+              "value": 2
+            }
+          ],
+          "statuses": [],
+          "deferred": true
+        },
+        {
+          "name": "Haste ends: lethargy through target next-turn end",
+          "duration": {
+            "unit": "special"
+          },
+          "changes": [
+            {
+              "target": "speed.walk",
+              "op": "min",
+              "value": 0
+            },
+            {
+              "target": "speed.burrow",
+              "op": "min",
+              "value": 0
+            },
+            {
+              "target": "speed.climb",
+              "op": "min",
+              "value": 0
+            },
+            {
+              "target": "speed.fly",
+              "op": "min",
+              "value": 0
+            },
+            {
+              "target": "speed.swim",
+              "op": "min",
+              "value": 0
+            }
+          ],
+          "statuses": [
+            "incapacitated"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targetBuff",
+        "code": "willing-visible-double-speed-ac-two-dex-save-advantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "extra-action-only-five-listed-uses-one-attack",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "spell-end-incapacitated-zero-speed-through-next-turn-end",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 284
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain two genuine deferred activities and the target AC/aftermath templates; separate one-minute concentration buff from next-turn lethargy and keep speed/action/advantage settlement deferred.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S/M; source duration 1 minute; concentration; no ritual marker. One visible willing creature within 30 feet gains double Speed, +2 AC, Dexterity-save advantage and one extra action each turn, limited to Attack with one attack, Dash, Disengage, Hide or Utilize. Concentration lasts up to one minute. On any spell end, the target is Incapacitated with zero Speed until the end of its next turn; this aftermath is distinct from the buff. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Tongues",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:tongues::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:tongues::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "D",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "languageComprehension",
+        "code": "touched-target-heard-speech-or-seen-signs",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "communication",
+        "code": "listener-knows-language-and-can-hear-or-see",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 334
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred creature utility; remove the empty effect placeholder and do not convert Foundry's custom language text into permanent language grants.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/M; source duration 1 hour; no concentration marker; no ritual marker. For one hour the touched creature understands spoken or signed languages it hears or sees. Its own speech/signs are understandable to creatures that know at least one language and can hear/see the communication. This does not grant reading, all languages as permanent knowledge, or understanding without the sensory and listener prerequisites. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Plane Shift",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:plane%20shift::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:plane%20shift::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 7,
+        "school": "C",
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "teleport",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "planarTravel",
+        "code": "caster-eight-willing-linked-circle",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "destinationChoice",
+        "code": "general-destination-dm-arrival-or-known-sigil-circle",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "targetPlacement",
+        "code": "circle-overflow-nearest-unoccupied-adjacent",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "materialComponent",
+        "code": "250gp-plane-attuned-rod-not-consumed",
+        "ref": "components/m",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 305
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Correct the genuine nondeferred Foundry utility to a deferred creature teleport; record only the actual willing-travel modes supplied by the 2024 body.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S/M; source duration instant; no concentration marker; no ritual marker. The caster and up to eight willing creatures link hands in a circle and travel to another plane. For a generally described destination, the DM chooses arrival in or nearby. Alternatively use a known other-plane teleportation-circle sigil sequence; overflow appears in the nearest unoccupied adjacent spaces. A plane-attuned metal rod worth 250+ GP is required and not marked consumed. The 2024 body supplies no hostile attack or banishment mode. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Darkness",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:darkness::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:darkness::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 2,
+        "school": "V",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "visibility",
+        "code": "fifteen-foot-sphere-darkvision-and-nonmagical-light-blocked",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "unworn-uncarried-object-emanation-opaque-cover",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "spellInteraction",
+        "code": "overlap-dispels-level-two-or-lower-light-spell",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 260
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the actual concentration selection model; explicitly defer point/object geometry, sensory blocking and low-level light dispelling without a global darkness modifier.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/M; source duration 10 minute; concentration; no ritual marker. For up to ten minutes of concentration choose a point within 60 feet for a 15-foot-radius sphere of magical darkness, blocking Darkvision and nonmagical illumination. Alternatively an unworn, uncarried object originates a 15-foot emanation, suppressed while covered by an opaque object. Overlapping bright/dim light from a spell of level two or lower dispels that light-producing spell. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Vicious Mockery",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:vicious%20mockery::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:vicious%20mockery::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 0,
+        "school": "E",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "formula": "1d6",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "seen-or-heard-target-wisdom-1d6-psychic-success-none",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "attackRoll",
+        "code": "next-attack-only-before-next-turn-end-disadvantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "cantripScaling",
+        "code": "levels-5-11-17-two-three-four-d6",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 337
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred 1d6 creature save; remove the empty effect placeholder and specify one next-attack penalty with its exact expiry rather than a global disadvantage.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V; source duration instant; no concentration marker; no ritual marker. Choose one creature within 60 feet that the caster can see or hear. Wisdom failure deals 1d6 Psychic and imposes disadvantage on only its next attack roll before the end of its next turn; successful save avoids both. The source does not require the target to hear or understand the insults. Upgrade boundary: At character levels 5/11/17 damage becomes 2d6/3d6/4d6.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Heroes' Feast",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:heroes'%20feast::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:heroes'%20feast::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 6,
+        "school": "C",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "minute",
+          "target": "area",
+          "deferred": true
+        },
+        {
+          "type": "heal",
+          "key": "foundry:activity:1",
+          "activation": "hour",
+          "target": "creature",
+          "formula": "2d10",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Feast participant benefits after one-hour meal",
+          "duration": {
+            "unit": "hour",
+            "value": 24
+          },
+          "changes": [
+            {
+              "target": "resist:poison",
+              "op": "set",
+              "value": true
+            },
+            {
+              "target": "conditionImmune:frightened",
+              "op": "set",
+              "value": true
+            },
+            {
+              "target": "conditionImmune:poisoned",
+              "op": "set",
+              "value": true
+            }
+          ],
+          "statuses": [],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "conjuredFeast",
+        "code": "adjacent-unoccupied-cube-twelve-participants-hour-meal",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "targetBuff",
+        "code": "after-meal-24h-poison-resistance-condition-immunities",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "healing",
+        "code": "participant-2d10-max-hp-and-equal-current-hp",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "materialConsumption",
+        "code": "1000gp-gemmed-bowl-consumed",
+        "ref": "components/m",
+        "deferred": true
+      },
+      {
+        "family": "sourceIntegrity",
+        "code": "body-poison-resistance-versus-damage-immune-tag",
+        "ref": "entries/1"
+      },
+      {
+        "family": "sourceIntegrity",
+        "code": "body-poison-resistance-versus-damage-immune-tag",
+        "ref": "damageImmune"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 284
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Remove both structured root condition-immunity modifiers; preserve verified resistances/immunities only in a deferred 24-hour participant effect. Correct conjuration to minute activation; retain hour-meal healing and explicitly reject the conflicting Poison damage-immunity tag.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 10 minute; range 10 feet cube; components V/S/M; source duration instant; no concentration marker; no ritual marker. Ten-minute casting consumes a gemmed bowl worth 1,000+ GP and creates food on a surface in an adjacent unoccupied ten-foot cube. Up to twelve creatures spend one hour eating; the food then disappears and benefits begin only after that hour. For 24 hours each participant has Poison damage resistance, Frightened/Poisoned condition immunity, a 2d10 maximum-HP increase and the same HP gain. The raw damageImmune Poison tag conflicts with the explicit resistance in the English body, corroborated by Kiwee prose and Foundry; it is an identified upstream metadata error, not damage immunity or a permanent owner buff. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Banishing Smite",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:banishing%20smite::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:banishing%20smite::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "C",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Paladin",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "damage",
+          "key": "foundry:activity:0",
+          "activation": "bonus",
+          "target": "creature",
+          "formula": "5d10",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Banishing Smite target in harmless demiplane",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [],
+          "statuses": [
+            "incapacitated"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "castingTrigger",
+        "code": "bonus-immediately-after-melee-weapon-or-unarmed-hit",
+        "ref": "time/0/condition",
+        "deferred": true
+      },
+      {
+        "family": "attackRider",
+        "code": "hit-adds-5d10-force-independent-of-save",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "banishment",
+        "code": "post-attack-50hp-or-less-charisma-failure-demiplane",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "incapacitated-while-banished-return-at-spell-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 245
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Correct the genuine Foundry action-save/half-damage candidate to deferred bonus hit-rider damage; retain the conditional incapacitation template and defer the separate HP-gated Charisma banishment without invented upcast scaling.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 bonus; conditional trigger specified; range self; components V; source duration 1 minute; concentration; no ritual marker. Bonus Action immediately after a Melee weapon or Unarmed Strike hits a creature. The hit gains 5d10 Force regardless of the later save. Only if that attack leaves the target at 50 HP or less does it make a Charisma save; failure sends it to a harmless demiplane, Incapacitated there, for up to one minute of concentration. At spell end it returns to its original space or the nearest unoccupied space. No upcast paragraph is supplied. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Mass Suggestion",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:mass%20suggestion::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:mass%20suggestion::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 6,
+        "school": "E",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Mass Suggestion: failed-save target",
+          "duration": {
+            "unit": "hour",
+            "value": 24
+          },
+          "changes": [],
+          "statuses": [
+            "charmed"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "suggestion",
+        "code": "twelve-visible-hearing-understanding-achievable-25-words",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveCondition",
+        "code": "wisdom-failure-charmed-pursue-course",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "target-completion-or-caster-allied-damage-ends",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "seventh-ten-days-eighth-thirty-ninth-366",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 296
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred Wisdom-save reference and Charmed template with base 24-hour duration; explicitly defer word/target eligibility, independent early endings and all three longer slot durations.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/M; source duration 24 hour; no concentration marker; no ritual marker. Suggest an achievable activity in at most 25 words to up to twelve visible creatures within 60 feet that hear and understand the caster. It cannot obviously damage targets or their allies. Wisdom failure Charms each target and makes it pursue the activity for 24 hours, ending separately on completion or damage from caster/allies. There is no concentration requirement in this source. Upgrade boundary: Slots 7/8/9 set duration to ten/thirty/366 days; preserve each target's early-ending rules.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Stone Shape",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:stone%20shape::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:stone%20shape::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 4,
+        "school": "T",
+        "classes": [
+          {
+            "engName": "Artificer",
+            "source": "EFA"
+          },
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "objectTransformation",
+        "code": "touched-medium-stone-or-five-foot-section-choice",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "constructionLimit",
+        "code": "at-most-two-hinges-one-latch-no-finer-machinery",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 321
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the existing selection model; replace pending metadata with actual stone eligibility, chosen geometry and mechanical-detail limits.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S/M; source duration instant; no concentration marker; no ritual marker. Touch a Medium-or-smaller stone object or a stone section no more than five feet in any dimension and choose its shape, including a passage through at most five-foot thickness or a sealed door/frame. The result may have at most two hinges and one latch; finer mechanical detail is excluded. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Death Ward",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:death%20ward::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:death%20ward::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 4,
+        "school": "A",
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Paladin",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "deathPrevention",
+        "code": "first-zero-hp-event-replaced-by-one-and-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "deathPrevention",
+        "code": "nondamaging-instant-death-negated-and-end",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 261
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the real deferred creature utility; remove the empty effect placeholder and describe two mutually consuming death-prevention triggers, including the 2024 unrestricted zero-HP wording.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S; source duration 8 hour; no concentration marker; no ritual marker. Touch one creature for protection lasting eight hours. Its first otherwise-zero-HP event instead leaves it at one HP and consumes the ward. Alternatively while active, an instant-death effect that deals no damage is negated for that target and consumes the ward. The body does not restrict the first trigger to damage. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Water Breathing",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:water%20breathing::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:water%20breathing::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "T",
+        "ritual": true,
+        "classes": [
+          {
+            "engName": "Artificer",
+            "source": "EFA"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Ranger",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targeting",
+        "code": "up-to-ten-willing-creatures-choice",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "respiration",
+        "code": "underwater-and-original-breathing-24-hours",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "ritualCasting",
+        "code": "ritual-procedure-deferred",
+        "ref": "meta/ritual",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 340
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the true ritual selection field and deferred creature utility; remove the empty effect stub and leave underwater breathing as a target-instance effect.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S/M; source duration 24 hour; no concentration marker; ritual available. Choose up to ten willing creatures within 30 feet; for 24 hours they can breathe underwater while retaining ordinary respiration. Ritual availability remains selection metadata; actual ritual casting and per-target respiration effects are deferred. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Ice Knife",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:ice%20knife::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:ice%20knife::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "C",
+        "classes": [
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "attack",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "formula": "1d10",
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "foundry:activity:1",
+          "activation": "none",
+          "target": "area",
+          "formula": "2d6",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "spellAttack",
+        "code": "ranged-creature-hit-1d10-piercing",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "hit-or-miss-five-foot-explosion-dex-failure-2d6-cold",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-only-cold-plus-1d6",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 287
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain both genuine deferred activity keys and damage formulas; correct attack/explosion target scopes and bind automatic explosion plus scaling to the Cold branch only.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components S/M; source duration instant; no concentration marker; no ritual marker. Make a ranged spell attack against one creature within 60 feet for 1d10 Piercing on hit. Whether hit or miss, the shard then explodes: the original target and every creature within five feet make Dexterity saves, taking 2d6 Cold only on failure. The attack and explosion are sequential, not alternative modes, and need no verbal component. Upgrade boundary: Above slot 1, only Cold explosion damage increases by 1d6 per slot level; Piercing remains 1d10.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Legend Lore",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:legend%20lore::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:legend%20lore::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "D",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "divination",
+        "code": "named-famous-subject-dm-accurate-lore-prior-knowledge",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "dmAdjudication",
+        "code": "detail-and-figurative-presentation",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "spellFailure",
+        "code": "nonfamous-subject-audible-trombone-failure",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "materialConsumption",
+        "code": "250gp-incense-consumed-four-50gp-ivory-required",
+        "ref": "components/m",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 290
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Keep the actual selection model; explicitly distinguish consumed incense from required ivory and defer fame, information and DM adjudication.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 10 minute; range self; components V/S/M; source duration instant; no concentration marker; no ritual marker. Name or describe a famous person, place or object. After ten-minute casting the DM supplies accurate significant lore, potentially secret and figurative; greater prior knowledge yields more precision. A subject that is not actually famous causes audible sad trombone notes and failure. Consume incense worth 250+ GP; also require four ivory strips worth 50+ GP each, whose consumption is not stated. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Hunter's Mark",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:hunter's%20mark::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:hunter's%20mark::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "D",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Ranger",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "damage",
+          "key": "foundry:activity:0",
+          "activation": "none",
+          "target": "creature",
+          "formula": "1d6",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "foundry:activity:1",
+          "activation": "bonus",
+          "target": "creature",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "foundry:activity:2",
+          "activation": "bonus",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "attackRider",
+        "code": "marked-quarry-each-attack-roll-hit-1d6-force",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "tracking",
+        "code": "perception-survival-to-find-quarry-advantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectTransfer",
+        "code": "zero-hp-quarry-bonus-new-visible-in-range-target",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "third-fourth-eight-hours-fifth-plus-24-hours",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 287
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain all three genuine deferred activity keys; correct initial marking from action to bonus and bind damage/transfer to the current quarry. Remove the empty effect stub and reject absent damage upcast scaling.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 bonus; range 90 feet; components V; source duration 1 hour; concentration; no ritual marker. Bonus Action marks one visible creature within 90 feet. For up to one hour of concentration, each attack-roll hit on that quarry deals an extra 1d6 Force and caster Wisdom (Perception or Survival) checks to find it have advantage. If it reaches zero HP before spell end, a Bonus Action may move the mark to another visible creature within range. The bonus applies to attack-roll hits, not arbitrary damage or all attacks against other targets. Upgrade boundary: Slots 3-4 allow up to eight hours of concentration; slots 5+ allow up to 24 hours, without increasing the 1d6 rider.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Chill Touch",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:chill%20touch::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:chill%20touch::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 0,
+        "school": "N",
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "attack",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "other",
+          "formula": "1d10",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "spellAttack",
+        "code": "melee-within-reach-hit-1d10-necrotic",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "healingPrevention",
+        "code": "hit-blocks-regain-hp-through-caster-next-turn-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "cantripScaling",
+        "code": "levels-5-11-17-two-three-four-d10",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 249
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred attack reference and 1d10 formula; remove the empty effect placeholder and describe exact melee targeting and caster-next-turn healing-block expiry.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S; source duration instant; no concentration marker; no ritual marker. Make a melee spell attack against a target within reach. A hit deals 1d10 Necrotic and blocks target HP recovery through the end of the caster's next turn. This source supplies neither a ranged mode nor a separate Undead attack penalty. Upgrade boundary: At character levels 5/11/17 damage becomes 2d10/3d10/4d10.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Summon Fey",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:summon%20fey::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:summon%20fey::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "C",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Ranger",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "summoning",
+        "code": "visible-unoccupied-fey-spirit-stat-block",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "fuming-mirthful-tricksy-and-fey-appearance",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "summonTurn",
+        "code": "after-caster-verbal-command-or-dodge",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "summon-zero-hp-or-spell-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "materialComponent",
+        "code": "gilded-flower-300gp-not-consumed",
+        "ref": "components/m",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "slot-level-in-referenced-spirit-stat-block",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 326
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the actual selection model and declare the real structured/foundry layers; do not fabricate an actor grant, profile identity or executable scaling from unresolved Foundry UUIDs.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 90 feet; components V/S/M; source duration 1 hour; concentration; no ritual marker. At casting choose Fuming, Mirthful or Tricksy and the Fey-like appearance. A Fey Spirit using the referenced stat block appears in a visible unoccupied space within 90 feet; it is allied, shares caster initiative, acts immediately after the caster, obeys no-action verbal orders, and otherwise Dodges/moves from danger. It vanishes at zero HP or spell end; concentration lasts up to one hour. The gilded flower worth 300+ GP is required, not marked consumed. Upgrade boundary: Use actual slot level for the spirit stat block's spell-level inputs; referenced actor scaling remains deferred."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Searing Smite",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:searing%20smite::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:searing%20smite::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "V",
+        "classes": [
+          {
+            "engName": "Paladin",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "none",
+          "target": "other",
+          "formula": "1d6",
+          "deferred": true
+        },
+        {
+          "type": "damage",
+          "key": "foundry:activity:1",
+          "activation": "bonus",
+          "target": "other",
+          "formula": "1d6",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "castingTrigger",
+        "code": "bonus-immediately-after-melee-weapon-or-unarmed-hit",
+        "ref": "time/0/condition",
+        "deferred": true
+      },
+      {
+        "family": "attackRider",
+        "code": "hit-extra-1d6-fire",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "recurringDamage",
+        "code": "target-start-turn-fire-before-constitution-save",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "constitution-success-ends-after-damage-no-concentration",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-plus-1d6-all-initial-and-recurring-damage",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "sourceIntegrity",
+        "code": "english-hit-target-versus-kiwee-creature-trigger",
+        "ref": "time/0/condition"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 314
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain both genuine deferred activity keys and 1d6 formulas; correct recurring save to no-action and hit rider to bonus activation, remove the empty effect stub and defer damage-before-save plus both scaling branches.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 bonus; conditional trigger specified; range self; components V; source duration 1 minute; no concentration marker; no ritual marker. Bonus Action immediately after a Melee weapon or Unarmed Strike hits a target adds 1d6 Fire to that attack. For up to one minute without concentration, the target takes another 1d6 Fire at each of its turn starts, then makes a Constitution save; success ends the spell after that damage, failure continues. The supplied 2024 body has no extinguishing action or water exception. English casting metadata says a target; Kiwee narrows that line to a creature, so the English target boundary is retained. Upgrade boundary: Above slot 1, both initial hit damage and every recurring damage increase by 1d6 per slot level.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Protection from Evil and Good",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:protection%20from%20evil%20and%20good::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:protection%20from%20evil%20and%20good::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "A",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Paladin",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "sourceQualifiedProtection",
+        "code": "six-creature-types-attack-disadvantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionPrevention",
+        "code": "new-possession-charmed-frightened-only-from-six-types",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "savingThrow",
+        "code": "existing-qualifying-effects-new-save-advantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "materialConsumption",
+        "code": "holy-water-flask-25gp-consumed",
+        "ref": "components/m",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 309
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the real deferred willing-creature utility; remove the empty effect stub and do not replace source-qualified prevention or later-save advantage with unconditional condition immunities.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S/M; source duration 10 minute; concentration; no ritual marker. Touch one willing creature, protected for up to ten minutes of concentration specifically against Aberrations, Celestials, Elementals, Fey, Fiends and Undead. Those creatures attack it with disadvantage and cannot newly possess, Charm or Frighten it. Existing effects from them are not removed; the target has advantage on new saves against those effects. A 25+ GP flask of Holy Water is consumed. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Contact Other Plane",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:contact%20other%20plane::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:contact%20other%20plane::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "D",
+        "ritual": true,
+        "classes": [
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "minute",
+          "target": "self",
+          "formula": "6d6",
+          "save": {
+            "ability": "int",
+            "dc": 15
+          },
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "caster-dc15-intelligence-failure-6d6-psychic-success-none",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "divination",
+        "code": "success-five-questions-before-expiry-dm-answers",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionLifecycle",
+        "code": "failed-save-incapacitated-until-long-rest-or-restoration",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "ritualCasting",
+        "code": "ritual-procedure-deferred",
+        "ref": "meta/ritual",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 255
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the actual DC 15 Intelligence save and 6d6 reference; correct activation to minute and target to caster, explicitly reject Foundry half-damage-on-success and defer the failure aftermath.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 minute; range self; components V; source duration 1 minute; no concentration marker; ritual available. One-minute casting or ritual mentally contacts a knowledgeable other-planar entity. Caster makes DC 15 Intelligence save. Success permits up to five questions before the one-minute duration ends; DM gives one-word answers, or a short phrase to avoid misleading wording. Failure deals 6d6 Psychic with no success damage and Incapacitates the caster until Long Rest; Greater Restoration also ends that effect. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Silent Image",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:silent%20image::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:silent%20image::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "I",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        },
+        {
+          "type": "check",
+          "key": "foundry:activity:1",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "illusion",
+        "code": "fifteen-foot-cube-pure-visual-no-other-senses",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "magic-action-move-within-range-natural-appearance",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "illusionDetection",
+        "code": "interaction-or-study-intelligence-investigation-see-through",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 317
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Make the genuine image utility deferred with area targeting; retain the real Study-check reference as an observer action, correct its action activation, and do not infer a skill from Foundry's malformed associated value.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/S/M; source duration 10 minute; concentration; no ritual marker. Create a purely visual image within 60 feet no larger than a 15-foot cube; no sound, smell or other senses. It lasts up to ten minutes of concentration. A later Magic action moves it within range and can adjust appearance to make movement natural. Physical interaction reveals the intangible image; another creature's Study action with Intelligence (Investigation) versus spell DC identifies it, allowing that creature to see through. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Vampiric Touch",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:vampiric%20touch::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:vampiric%20touch::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "N",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "attack",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "formula": "3d6",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "spellAttack",
+        "code": "melee-reachable-creature-hit-3d6-necrotic",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "damageLinkedHealing",
+        "code": "caster-half-necrotic-actually-dealt",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "repeat-each-caster-turn-magic-action-new-or-same-target",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-third-plus-1d6",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 337
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the genuine deferred melee attack and 3d6 formula; correct creature target and explicitly defer repeat actions plus healing derived from settled Necrotic damage.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range self; components V/S; source duration 1 minute; concentration; no ritual marker. At casting make a melee spell attack against one creature within reach; a hit deals 3d6 Necrotic and heals the caster for half the Necrotic damage actually dealt. For up to one minute of concentration, on each caster turn a Magic action can repeat the attack against the same or another creature. Healing depends on settled damage, not a separate independent dice roll. Upgrade boundary: Above slot 3, damage increases by 1d6 per slot level; the damage-dependent healing follows the actual result.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Summon Fiend",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:summon%20fiend::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:summon%20fiend::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 6,
+        "school": "C",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "summoning",
+        "code": "visible-unoccupied-fiendish-spirit-stat-block",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "demon-devil-or-yugoloth-at-casting",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "summonTurn",
+        "code": "after-caster-verbal-command-or-dodge",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "summon-zero-hp-or-spell-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "materialComponent",
+        "code": "bloody-vial-600gp-not-consumed",
+        "ref": "components/m",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "slot-level-in-referenced-spirit-stat-block",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 326
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the true selection model and actual provenance layers; defer profile choice, actor creation and slot-based stat-block details without inventing executable UUID grants.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 90 feet; components V/S/M; source duration 1 hour; concentration; no ritual marker. At casting choose Demon, Devil or Yugoloth. A corresponding fiendish spirit using the referenced stat block manifests in a visible unoccupied space within 90 feet. It is allied, shares caster initiative and acts immediately after the caster, obeys no-action verbal orders or otherwise Dodges/moves from danger. At zero HP or spell end it disappears; concentration lasts up to one hour. Require a bloody vial worth 600+ GP, not marked consumed. Upgrade boundary: Use actual slot level as the spirit stat block's spell level; external actor bonuses and actions remain deferred."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Mage Armor",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:mage%20armor::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:mage%20armor::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "A",
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targeting",
+        "code": "willing-touched-creature-not-wearing-armor",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "armorClass",
+        "code": "target-base-thirteen-plus-own-dex-modifier",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "eight-hour-or-earlier-donning-armor",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 293
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred creature utility; remove the empty effect placeholder and leave Foundry's AC-method override deferred rather than fabricating a global AC modifier.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/S/M; source duration 8 hour; no concentration marker; no ritual marker. Touch one willing creature currently wearing no armor. Its base AC becomes thirteen plus its own Dexterity modifier for eight hours, ending earlier when it dons armor. This is a target-specific base-AC method, not +13, an unconditional total AC overwrite, or a permanent caster bonus. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Control Weather",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:control%20weather::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:control%20weather::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 8,
+        "school": "T",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "minute",
+          "target": "area",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "environmentControl",
+        "code": "outdoors-five-mile-weather-indoors-ends",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "delayedTransition",
+        "code": "d4-times-ten-minutes-before-next-change",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "adjacent-stages-and-wind-direction-only",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "weatherTable",
+        "code": "precipitation-five-stages",
+        "ref": "entries/3/rows",
+        "deferred": true
+      },
+      {
+        "family": "weatherTable",
+        "code": "temperature-six-stages",
+        "ref": "entries/4/rows",
+        "deferred": true
+      },
+      {
+        "family": "weatherTable",
+        "code": "wind-five-stages",
+        "ref": "entries/5/rows",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "spell-end-gradual-return-to-normal",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 257
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine casting utility as deferred minute/area; remove the second Foundry activity's unsupported action cost for subsequent changes and record delay, stage tables and gradual normalization explicitly.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 10 minute; range 5 miles sphere; components V/S/M; source duration 8 hour; concentration; no ritual marker. Ten-minute outdoor casting controls weather within five miles for up to eight hours of concentration; going indoors ends it early. DM determines current conditions. Change precipitation, temperature and wind by one stage up or down in their respective tables, and optionally wind direction; each transition takes d4 times ten minutes before another change can be made. Precipitation progresses from clear through light cloud, overcast/fog, rain/hail/snow to extreme rain/hail/blizzard; temperature spans heat wave, hot, warm, cool, cold, freezing; wind spans calm, moderate, strong, gale, storm. On spell end weather gradually normalizes. The body supplies no action cost for subsequent condition changes. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Enlarge/Reduce",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:enlarge%2Freduce::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:enlarge%2Freduce::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 2,
+        "school": "T",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Artificer",
+            "source": "EFA"
+          },
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "other",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "exclusive-enlarge-or-reduce-creature-or-unworn-object",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "savingThrow",
+        "code": "unwilling-creature-constitution-success-no-effect",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "equipmentTransformation",
+        "code": "carried-gear-resizes-drop-or-post-projectile-reversion",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "sizeTransformation",
+        "code": "enlarge-one-category-strength-advantage-qualified-hit-1d4",
+        "ref": "entries/2/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "sizeTransformation",
+        "code": "reduce-one-category-strength-disadvantage-hit-minus-1d4-floor-one",
+        "ref": "entries/3/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 268
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred conditional save; remove broad melee/ranged damage changes that lack resized-weapon/Unarmed qualification and remove the empty Reduce stub. Record exclusive branches, minimum damage and gear reversion without global candidates.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S/M; source duration 1 minute; concentration; no ritual marker. Choose enlarging or reducing one visible creature or an unworn, uncarried object within 30 feet, for up to one minute of concentration. An unwilling creature may Constitution-save to avoid all effects. Carried/worn equipment resizes with a creature; dropped items revert immediately, thrown weapons/ammunition only after hit or miss. Enlarge raises size one category and gives Strength-check/save advantage plus 1d4 extra damage only on hits with enlarged weapons or Unarmed Strikes. Reduce lowers one category with Strength-check/save disadvantage and 1d4 less damage on those reduced weapon/Unarmed hits, with minimum one damage. Branches are mutually exclusive. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Wind Wall",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:wind%20wall::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:wind%20wall::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "V",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Ranger",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "formula": "4d8",
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "foundry:activity:1",
+          "activation": "action",
+          "target": "area",
+          "formula": "4d8",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "wallGeometry",
+        "code": "chosen-continuous-ground-path-fifty-fifteen-one-feet",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "on-appearance-only-strength-4d8-bludgeoning-half",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "windBarrier",
+        "code": "gases-small-fliers-gaseous-form-and-light-material",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "projectileInterception",
+        "code": "ordinary-projectiles-miss-large-boulders-exempt",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 341
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain both genuine deferred geometry/save references as alternatives with area targets; explicitly limit damage to wall appearance and discard absent slot scaling while documenting barrier exceptions.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 120 feet; components V/S/M; source duration 1 minute; concentration; no ritual marker. Choose a ground point within 120 feet and a continuous ground path up to fifty feet long, fifteen high and one thick, for up to one minute of concentration. Only when it appears, creatures in it Strength-save for 4d8 Bludgeoning or half. It excludes fog/smoke/gases, Small-or-smaller flying creatures or objects and creatures in Gaseous Form. Loose lightweight material is blown upward. Ordinary projectiles aimed through it miss automatically, while giant/siege boulders and similar projectiles are unaffected. Foundry straight and contiguous-segment templates are alternative depictions of the same wall. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Modify Memory",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:modify%20memory::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:modify%20memory::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "E",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Modify Memory target during description",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [],
+          "statuses": [
+            "charmed",
+            "incapacitated"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveCondition",
+        "code": "visible-wisdom-combat-advantage-charmed-incapacitated",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "damage-or-other-spell-targeting-aborts-all-modification",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "memoryAlteration",
+        "code": "experienced-ten-minute-event-four-modification-choices",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "delayedSettlement",
+        "code": "understood-description-finished-before-end-then-root",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "dmAdjudication",
+        "code": "implausible-memories-and-behavior-not-guaranteed",
+        "ref": "entries/3",
+        "deferred": true
+      },
+      {
+        "family": "spellInteraction",
+        "code": "remove-curse-or-greater-restoration-restores-memory",
+        "ref": "entries/4",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "event-age-seven-thirty-365-days-or-any-past",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 299
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the true deferred save and Charmed/Incapacitated template as a one-minute target charm; distinguish later memory settlement from charm expiry and preserve all four event-age upgrades.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S; source duration 1 minute; concentration; no ritual marker. One visible creature within 30 feet Wisdom-saves with advantage if fighting the caster. Failure Charms and Incapacitates it for up to one minute of concentration; it is unaware of surroundings but can hear the caster. Damage or another spell targeting it aborts the spell with no alteration. During the charm select an experienced event within the last 24 hours lasting at most ten minutes: erase, perfect recall, change details or substitute an event. The caster must finish a spoken description in a language the target understands before spell end; only then does the lasting memory take hold at spell end. The mind fills gaps; behavioral changes are not guaranteed and illogical memories may be dismissed by target/DM. Remove Curse or Greater Restoration restores true memory. Upgrade boundary: Slots 6/7/8/9 extend event age to seven days/thirty days/365 days/any prior time; event length remains at most ten minutes.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Thunderwave",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:thunderwave::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:thunderwave::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "V",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "caster-origin-cube-constitution-2d8-thunder-half",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "forcedMovement",
+        "code": "failed-save-creature-ten-feet-away-no-success-push",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "objectMovement",
+        "code": "entirely-inside-unsecured-objects-ten-foot-push",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "audibility",
+        "code": "boom-audible-300-feet",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-plus-1d8-damage-only",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 334
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the actual selection model; replace pending reasons with exact cube, creature save, object push, audibility and damage-only slot scaling.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 15 feet cube; components V/S; source duration instant; no concentration marker; no ritual marker. A fifteen-foot cube originating from the caster forces every creature to Constitution-save: failure deals 2d8 Thunder and pushes ten feet away; success takes half with no push. Unsecured objects wholly inside are separately pushed ten feet. The boom is audible within 300 feet. Upgrade boundary: Above slot 1 damage increases by 1d8 per slot level; push distance and cube size do not scale."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Glibness",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:glibness::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:glibness::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 8,
+        "school": "E",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Warlock",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "self",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "rollReplacement",
+        "code": "optional-charisma-check-die-fifteen-not-total",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "truthDetection",
+        "code": "magical-truth-test-reports-caster-truthful",
+        "ref": "entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 279
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred self utility; remove the empty effect placeholder and defer optional die replacement and truth-detection interaction without permanent Charisma modifiers.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range self; components V; source duration 1 hour; no concentration marker; no ritual marker. For one hour the caster may replace the number rolled on a Charisma check with fifteen, rather than modifying the check total or requiring replacement. Magic evaluating truthfulness reports the caster as truthful whatever is said. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Thunderous Smite",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:thunderous%20smite::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:thunderous%20smite::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "V",
+        "classes": [
+          {
+            "engName": "Paladin",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "damage",
+          "key": "foundry:activity:0",
+          "activation": "bonus",
+          "target": "other",
+          "formula": "2d6",
+          "deferred": true
+        },
+        {
+          "type": "save",
+          "key": "foundry:activity:1",
+          "activation": "none",
+          "target": "creature",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Thunderous Smite: creature failing Strength save",
+          "duration": {
+            "unit": "special"
+          },
+          "changes": [],
+          "statuses": [
+            "prone"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "castingTrigger",
+        "code": "bonus-immediately-after-melee-weapon-or-unarmed-hit-target",
+        "ref": "time/0/condition",
+        "deferred": true
+      },
+      {
+        "family": "attackRider",
+        "code": "hit-extra-2d6-thunder-independent-of-save",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveCondition",
+        "code": "creature-only-strength-failure-ten-foot-push-prone",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "audibility",
+        "code": "thunder-audible-300-feet",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-plus-1d6-damage-only",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "sourceIntegrity",
+        "code": "english-hit-target-versus-kiwee-creature-trigger",
+        "ref": "time/0/condition"
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 334
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain both genuine deferred activity keys and Prone template; correct hit damage to bonus activation and subsequent save to creature-only, keeping damage independent of save and no concentration.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 bonus; conditional trigger specified; range self; components V; source duration instant; no concentration marker; no ritual marker. Bonus Action immediately after a Melee weapon or Unarmed Strike hits a target adds 2d6 Thunder to that attack and makes thunder audible within 300 feet. Only if the target is a creature, Strength failure additionally pushes it ten feet away and makes it Prone; success avoids those riders but never reduces the hit damage. The English trigger permits a target rather than requiring the creature-only wording in Kiwee casting metadata. Upgrade boundary: Above slot 1 add 1d6 Thunder per slot level, without increasing push distance."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Light",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:light::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:light::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 0,
+        "school": "V",
+        "classes": [
+          {
+            "engName": "Artificer",
+            "source": "EFA"
+          },
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targeting",
+        "code": "large-or-smaller-object-not-other-person-worn-carried",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "illumination",
+        "code": "chosen-color-twenty-bright-plus-twenty-dim",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "opaque-cover-blocks-recast-ends-prior",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 292
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the true selection model; specify the actual object-owner eligibility and illumination/recast boundaries without importing earlier-edition saves or permanent light.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range touch; components V/M; source duration 1 hour; no concentration marker; no ritual marker. Touch a Large-or-smaller object not worn or carried by someone else; an object carried by the caster is not excluded. For one hour it emits bright light to twenty feet and dim light another twenty, in a chosen color. Opaque covering blocks illumination; recasting ends the previous instance. The supplied body has no unwilling-creature Dexterity-save mode or cantrip upgrade. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Project Image",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:project%20image::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:project%20image::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 7,
+        "school": "I",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "other",
+          "deferred": true
+        },
+        {
+          "type": "check",
+          "key": "foundry:activity:1",
+          "activation": "action",
+          "target": "other",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "illusionProjection",
+        "code": "previously-seen-place-500-miles-obstacles-ignored",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "remoteSenses",
+        "code": "caster-sees-hears-at-copy-position",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "magic-action-sixty-foot-movement-and-behavior",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "illusionDetection",
+        "code": "physical-interaction-or-study-investigation-see-through",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "any-image-damage-destroys-and-ends",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "materialComponent",
+        "code": "self-statuette-five-gp-not-consumed",
+        "ref": "components/m",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 309
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Mark the real projection utility deferred and preserve its observer Study-check reference with action activation; use the body Investigation requirement instead of malformed Foundry associated data, with no fabricated blindness or sensory-toggle cost.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 500 miles; components V/S/M; source duration 1 day; concentration; no ritual marker. An intangible look-and-sound copy of the caster appears at a previously seen place within 500 miles despite intervening obstacles. It lasts up to one day of concentration but any damage destroys it and ends the spell. Caster sees/hears from its position. A Magic action moves it up to sixty feet and directs gestures, speech and behavior, perfectly imitating mannerisms. Physical interaction exposes intangibility; an observer Study action with Intelligence (Investigation) versus spell DC reveals it, letting that observer see through and hear its noises as hollow. Require a self-statuette worth 5+ GP, not marked consumed. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Message",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:message::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:message::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 0,
+        "school": "T",
+        "classes": [
+          {
+            "engName": "Artificer",
+            "source": "EFA"
+          },
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "communication",
+        "code": "private-target-message-and-optional-private-reply",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "barrierTraversal",
+        "code": "familiar-target-known-beyond-solid-barrier",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "spellBlocking",
+        "code": "silence-foot-stone-metal-wood-or-thin-lead",
+        "ref": "entries/1",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 298
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Retain the actual selection model and Somatic/material metadata; explicitly record private communication, one-round duration and the 2024 barrier thicknesses without inventing a Verbal component.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 120 feet; components S/M; source duration 1 round; no concentration marker; no ritual marker. Point toward one creature within 120 feet and whisper a private message; only it hears, and it may whisper a private reply only the caster hears. Duration is one round. Solid barriers can be bypassed only for a familiar target known to be beyond them. Magical silence, one foot of stone/metal/wood or thin lead blocks it. The raw components are Somatic and copper wire, without a Verbal component, despite the described whisper. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Ray of Sickness",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:ray%20of%20sickness::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:ray%20of%20sickness::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "N",
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "attack",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "formula": "2d8",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "spellAttack",
+        "code": "ranged-creature-hit-2d8-poison",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "conditionLifecycle",
+        "code": "hit-poisoned-no-save-until-caster-next-turn-end",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-plus-1d8-damage-only",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 311
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred 2d8 attack with creature targeting; explicitly add the omitted Poisoned boundary as unsupported settlement, without an earlier-edition save or executable condition effect.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/S; source duration instant; no concentration marker; no ritual marker. Make a ranged spell attack against one creature within 60 feet. On hit it takes 2d8 Poison and is Poisoned through the end of the caster's next turn. No saving throw is supplied for the condition; its expiry is caster-relative. Upgrade boundary: Above slot 1 add 1d8 Poison per slot level; the condition timing does not increase.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Disintegrate",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:disintegrate::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:disintegrate::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 6,
+        "school": "T",
+        "classes": [
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      }
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targeting",
+        "code": "visible-creature-nonmagical-object-or-magical-force",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "saveDamage",
+        "code": "creature-dexterity-failure-10d6-plus40-force-success-none",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "disintegration",
+        "code": "damage-to-zero-creature-and-nonmagical-gear-dust",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "revivalRestriction",
+        "code": "only-true-resurrection-or-wish",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "objectDestruction",
+        "code": "large-or-smaller-whole-huge-plus-ten-foot-cube",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-sixth-plus-3d6-damage-only",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 263
+    },
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Preserve the actual selection model; defer distinct creature-save/destruction and automatic object/force branches with exact revival and scaling limits instead of inventing a damage executor.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/S/M; source duration instant; no concentration marker; no ritual marker. Choose a visible creature, nonmagical object or magical-force creation within 60 feet. A creature Dexterity failure takes 10d6+40 Force, success takes none. If that damage leaves it at zero HP, the creature and worn/carried nonmagical items become dust, with revival restricted to True Resurrection or Wish. A Large-or-smaller nonmagical object or force creation is automatically destroyed; for Huge-or-larger targets only a ten-foot-cube portion is destroyed. Upgrade boundary: Above slot 6 add 3d6 Force per slot level; the fixed forty and object geometry do not scale."
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Plant Growth",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:plant%20growth::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:plant%20growth::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 3,
+        "school": "T",
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Ranger",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        },
+        {
+          "type": "utility",
+          "key": "foundry:activity:1",
+          "activation": "hour",
+          "target": "area",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "action-overgrowth-or-eight-hour-enrichment",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "terrainTransformation",
+        "code": "normal-plants-hundred-foot-sphere-four-for-one-movement",
+        "ref": "entries/1/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "areaExclusion",
+        "code": "any-number-or-size-excluded-subareas",
+        "ref": "entries/1/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "cropEnrichment",
+        "code": "half-mile-365-days-double-food-once-per-year",
+        "ref": "entries/2/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 305
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Keep both genuine deferred branch references and action/hour activations; correct Enrichment to area targeting and explicitly retain distinct four-for-one movement and 365-day harvest boundaries.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action (Overgrowth) or 8 hour (Enrichment); range 150 feet; components V/S; source duration instant; no concentration marker; no ritual marker. Choose casting mode: one action for Overgrowth or eight hours for Enrichment, with a selected point within 150 feet. Overgrowth thickens normal plants in a 100-foot-radius sphere, imposing four feet of movement per foot traveled; any number of subareas of any size can be excluded. Enrichment affects plants within half a mile for 365 days, doubling harvested food; a plant can benefit from only one Plant Growth per year. This is actual movement cost, not a permanent Speed reduction or ordinary doubled difficult-terrain cost. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Dominate Person",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:dominate%20person::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:dominate%20person::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 5,
+        "school": "E",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Dominate Person: failed-save Humanoid",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [],
+          "statuses": [
+            "charmed"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "targeting",
+        "code": "visible-humanoid-wisdom-combat-advantage",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "damage-event-required-repeat-wisdom-success-ends",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "telepathicControl",
+        "code": "same-plane-caster-turn-no-action-orders-target-turn-obey",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "actionEconomy",
+        "code": "target-reaction-command-also-costs-caster-reaction",
+        "ref": "entries/2",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "sixth-ten-minutes-seventh-hour-eighth-plus-eight-hours",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 266
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred creature save and one-minute Charmed template; explicitly use English Humanoid eligibility, required damage saves, current command/Reaction costs and all duration upgrades.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/S; source duration 1 minute; concentration; no ritual marker. One visible Humanoid within 60 feet Wisdom-saves; it has advantage if caster or allies are fighting it. Failure Charms it for up to one minute of concentration. Each damage event requires a repeated Wisdom save, success ending the spell for that target. While on the same plane, a telepathic link allows no-action commands on caster turns; target obeys on its own turn, then acts freely with self-protection if an order is complete and no new one is supplied. Ordering a target Reaction also consumes the caster's Reaction. Kiwee's later Beast reference and optional damage-save wording do not replace the explicit English Humanoid and mandatory-save rules. Upgrade boundary: Slots 6/7/8+ allow concentration up to ten minutes/one hour/eight hours; no extra target or total-control action mode is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Sleep",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:sleep::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:sleep::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "E",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Sorcerer",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Wizard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "area",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Sleep stage one: through target next-turn end",
+          "duration": {
+            "unit": "special"
+          },
+          "changes": [],
+          "statuses": [
+            "incapacitated"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveCondition",
+        "code": "chosen-five-foot-sphere-first-wisdom-failure-incapacitated",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "stagedCondition",
+        "code": "target-next-turn-end-second-failure-unconscious",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "target-damage-or-five-foot-shake-action-ends",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "savingThrow",
+        "code": "nonsleepers-or-exhaustion-immune-automatic-success",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 317
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Preserve the genuine deferred area save and Incapacitated template only for stage one with exact turn-boundary duration; separately defer second-save Unconscious and wake triggers, without earlier-edition HP or upcast mechanics.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 60 feet; components V/S/M; source duration 1 minute; concentration; no ritual marker. Choose creatures in a five-foot-radius sphere centered within 60 feet. Initial Wisdom failure Incapacitates a target until the end of its next turn, when it must save again; only a second failure makes it Unconscious for the remaining spell duration. Each target's effect ends on damage or a creature within five feet using an action to shake it. Creatures that do not sleep or are immune to Exhaustion automatically succeed. Concentration lasts up to one minute. The supplied 2024 body has no HP pool, lowest-HP ordering or upcast paragraph. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Create or Destroy Water",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:create%20or%20destroy%20water::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:create%20or%20destroy%20water::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 1,
+        "school": "T",
+        "classes": [
+          {
+            "engName": "Cleric",
+            "source": "XPHB"
+          },
+          {
+            "engName": "Druid",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "utility",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "other",
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "choice",
+        "code": "exclusive-create-or-destroy-container-or-area",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "waterCreation",
+        "code": "clean-ten-gallons-open-container-or-rain-exposed-flames",
+        "ref": "entries/1/items/0/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "waterDestruction",
+        "code": "ten-gallons-open-container-or-cube-fog",
+        "ref": "entries/1/items/1/entries/0",
+        "deferred": true
+      },
+      {
+        "family": "slotScaling",
+        "code": "above-first-ten-gallons-or-five-foot-cube-side-per-level",
+        "ref": "entriesHigherLevel/0/entries/0",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 258
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the true deferred utility reference with a mixed target scope; defer the volume/geometry alternatives rather than converting Foundry rolls or template size into a global modifier.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S/M; source duration instant; no concentration marker; no ritual marker. Choose one operation within 30 feet: create up to ten gallons of clean water in an open container, or create rain in a thirty-foot cube to extinguish exposed flames; destroy up to ten gallons from an open container, or remove fog in a thirty-foot cube. The container and area alternatives are exclusive per casting; water/rain/fog and uncovered flames are distinct eligible targets. Upgrade boundary: Above slot 1 increase the selected water-volume mode by ten gallons per slot level, or increase the selected cube's side by five feet per slot level.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  },
+  {
+    "identity": {
+      "kind": "spell",
+      "source": "XPHB",
+      "engName": "Compulsion",
+      "packId": "kiwee",
+      "key": "kiwee:spell:xphb:compulsion::::::::"
+    },
+    "edition": "2024",
+    "entryIds": [
+      "kiwee:spell:xphb:compulsion::::::"
+    ],
+    "verdict": "unsupported",
+    "mechanics": {
+      "spellModel": {
+        "level": 4,
+        "school": "E",
+        "concentration": true,
+        "classes": [
+          {
+            "engName": "Bard",
+            "source": "XPHB"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "save",
+          "key": "foundry:activity:0",
+          "activation": "action",
+          "target": "creature",
+          "deferred": true
+        }
+      ],
+      "effects": [
+        {
+          "name": "Compulsion: failed-save target",
+          "duration": {
+            "unit": "minute",
+            "value": 1
+          },
+          "changes": [],
+          "statuses": [
+            "charmed"
+          ],
+          "deferred": true
+        }
+      ]
+    },
+    "unsupported": [
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-time-procedure-deferred",
+        "ref": "time",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-range-enforcement-deferred",
+        "ref": "range",
+        "deferred": true
+      },
+      {
+        "family": "spellCastingMetadata",
+        "code": "casting-components-enforcement-deferred",
+        "ref": "components",
+        "deferred": true
+      },
+      {
+        "family": "spellDuration",
+        "code": "cast-instance-duration-settlement-deferred",
+        "ref": "duration",
+        "deferred": true
+      },
+      {
+        "family": "saveCondition",
+        "code": "chosen-visible-creatures-wisdom-failure-charmed",
+        "ref": "entries/0",
+        "deferred": true
+      },
+      {
+        "family": "forcedMovement",
+        "code": "bonus-horizontal-direction-next-target-turn-safest-route",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "after-compelled-movement-required-repeat-save-success-end",
+        "ref": "entries/1",
+        "deferred": true
+      },
+      {
+        "family": "effectLifecycle",
+        "code": "cast-concentration-lifecycle-deferred",
+        "ref": "duration/0/concentration",
+        "deferred": true
+      }
+    ],
+    "reviewer": "model:Codex-annotation",
+    "reviewedAt": "2026-10-03",
+    "batch": "XPHB-spell-003",
+    "evidence": {
+      "page": 252
+    },
+    "overrides": [
+      "structured",
+      "foundry"
+    ],
+    "overrideReason": "Retain the genuine deferred creature save and one-minute Charmed template; specify Bonus Action direction control and mandatory after-movement resaves from English, without importing earlier-edition restrictions.",
+    "notes": "Partial: spell selection metadata is supported; casting and target-instance effects are deferred. Casting 1 action; range 30 feet; components V/S; source duration 1 minute; concentration; no ritual marker. Choose any visible creatures within 30 feet; Wisdom failure Charms each for up to one minute of concentration. During the spell a caster Bonus Action selects a horizontal direction; on each affected target's next turn it must use as much movement as possible that way by the safest route. After that compelled movement it must repeat Wisdom save, success ending its own effect. The English body requires the repeated save and supplies no hearing prerequisite, damage termination or higher-slot upgrade. Upgrade boundary: no higher-slot or cantrip-upgrade paragraph is supplied.",
+    "foundryFlags": [
+      "ignoreSrdEffects",
+      "ignoreSrdActivities"
+    ]
+  }
+]

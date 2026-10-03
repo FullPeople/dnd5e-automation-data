@@ -494,5 +494,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-spell-003",
+    "path": "spell/XPHB-spell-003.json",
+    "sha256": "4735d894d18f114c5b8465d792bff98e7ef5ab7c4655a9498a8d6c04ff402a83",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:spell:xphb:simulacrum::::::::",
+      "kiwee:spell:xphb:wish::::::::",
+      "kiwee:spell:xphb:banishing%20smite::::::::",
+      "kiwee:spell:xphb:hunter's%20mark::::::::",
+      "kiwee:spell:xphb:summon%20fey::::::::",
+      "kiwee:spell:xphb:contact%20other%20plane::::::::",
+      "kiwee:spell:xphb:modify%20memory::::::::",
+      "kiwee:spell:xphb:disintegrate::::::::",
+      "kiwee:spell:xphb:dominate%20person::::::::",
+      "kiwee:spell:xphb:sleep::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
