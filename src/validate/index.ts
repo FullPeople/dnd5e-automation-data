@@ -49,6 +49,11 @@ function recordChecks(record: AutomationRecord, index: Map<string, AutomationRec
   }
   formulas(mechanics, issues, `${path}/mechanics`);
   const resources = new Set<string>();
+  const scaleKeys = new Set<string>();
+  for (const [i, scale] of (mechanics?.scales || []).entries()) {
+    if (scaleKeys.has(scale.key)) issue(issues, 'duplicate-scale', `${path}/mechanics/scales/${i}`, 'Scale keys must be unique'); scaleKeys.add(scale.key);
+    if (scale.values.some((point, at) => at > 0 && point.level <= scale.values[at - 1].level)) issue(issues, 'scaling-order', `${path}/mechanics/scales/${i}/values`, 'Scale levels must be unique and ascending');
+  }
   for (const [i, resource] of (mechanics?.resources || []).entries()) {
     const key = resource.key.normalize('NFKC').trim().toLowerCase();
     if (resources.has(key)) issue(issues, 'duplicate-resource', `${path}/mechanics/resources/${i}`, 'Resource keys must be unique within an entry'); resources.add(key);

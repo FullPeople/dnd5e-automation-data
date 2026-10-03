@@ -1,0 +1,106 @@
+[
+  {
+    "ENG_name": "Boon of the Night Spirit",
+    "source": "XPHB",
+    "ignoreSrdActivities": true,
+    "ignoreSrdEffects": true,
+    "migrationVersion": 3,
+    "effects": [
+      {
+        "disabled": true,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "acid"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "bludgeoning"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "cold"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "fire"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "force"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "lightning"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "necrotic"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "piercing"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "poison"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "slashing"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "mode": "ADD",
+            "value": "thunder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ENG_name": "Helm of Awareness",
+    "source": "TCE",
+    "migrationVersion": 3,
+    "effects": [
+      {
+        "ENG_name": "Helm of Awareness",
+        "type": "enchantment",
+        "foundryId": "helmOfAwareness",
+        "changes": [
+          {
+            "key": "system.description.value",
+            "mode": "ADD"
+          }
+        ]
+      },
+      {
+        "ENG_name": "Helm of Awareness",
+        "transfer": true,
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "mode": "ADD",
+            "value": "surprised"
+          },
+          {
+            "key": "flags.dnd5e.initiativeAdv",
+            "mode": "OVERRIDE",
+            "value": "true"
+          }
+        ]
+      }
+    ]
+  }
+]

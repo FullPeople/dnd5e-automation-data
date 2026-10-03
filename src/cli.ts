@@ -19,7 +19,7 @@ try {
   }
   if (!['fetch', 'report', 'inventory','derive'].includes(command || '')) throw Error('Use fetch, report, inventory, derive or validate; --cache DIR --out DIR --offline --no-homebrew');
   const manifest = await fetchCorpus(cache, { offline: command === 'report' || args.includes('--offline'), homebrew: !args.includes('--no-homebrew') });
-  if(command==='derive') {const result=await deriveFiles(cache,out,manifest);console.log(JSON.stringify({phase:'G3-structured-draft',records:result.envelope.records.length,identityDiagnostics:result.diagnostics.length,completeAutomationClaim:false}));}
+  if(command==='derive') {const result=await deriveFiles(cache,out,manifest);console.log(JSON.stringify({phase:'G4-foundry-draft',records:result.envelope.records.length,identityDiagnostics:result.diagnostics.length,foundryRows:result.foundry.length,foundryMatched:result.foundry.filter(row=>row.matched).length,completeAutomationClaim:false}));}
   else if (command === 'fetch') console.log(JSON.stringify({ inputs: manifest.inputs.length, manifest: `${cache}/inputs-sha256.json` }));
   else { const report = await reportCorpus(cache, out, manifest); console.log(JSON.stringify(report.summary, null, 2)); }
 } catch (error: any) { console.error(error.message); process.exitCode = 1; }

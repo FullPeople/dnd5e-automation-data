@@ -225,7 +225,7 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 1000,
-          "pattern": "^(str|dex|con|int|wis|cha|ac|hp|initiative|proficiency|passive|criticalDice|size|cantrips|speed\\.(walk|fly|swim|climb|burrow|hover)|skill:[a-z][a-zA-Z-]*|save:(str|dex|con|int|wis|cha)|resist:[a-z]+|immune:[a-z]+|vulnerable:[a-z]+|conditionImmune:[a-z-]+|sense:[a-z]+|attack\\.(melee|ranged|spell)|damage\\.(melee|ranged|spell)|dc\\.spell)$"
+          "pattern": "^(str|dex|con|int|wis|cha|ac|hp|initiative|proficiency|passive|criticalDice|size|cantrips|speed\\.(walk|fly|swim|climb|burrow|hover)|skill:[a-z][a-zA-Z-]*|save:(str|dex|con|int|wis|cha)|resist:[a-z]+|immune:[a-z]+|vulnerable:[a-z]+|conditionImmune:[a-z-]+|sense:[a-z]+|attack\\.(melee|ranged|spell|spellMelee|spellRanged)|damage\\.(melee|ranged|spell|spellMelee|spellRanged)|dc\\.spell)$"
         },
         "op": {
           "enum": [
@@ -1288,27 +1288,66 @@
         "values": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "level": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 20
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 20
+                  },
+                  "value": {
+                    "type": "number",
+                    "minimum": -10000,
+                    "maximum": 10000
+                  }
+                },
+                "required": [
+                  "level",
+                  "value"
+                ],
+                "additionalProperties": false
               },
-              "value": {
-                "type": "number",
-                "minimum": -10000,
-                "maximum": 10000
+              {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 20
+                  },
+                  "dice": {
+                    "type": "object",
+                    "properties": {
+                      "count": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 100
+                      },
+                      "faces": {
+                        "type": "integer",
+                        "minimum": 2,
+                        "maximum": 1000
+                      }
+                    },
+                    "required": [
+                      "count",
+                      "faces"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "level",
+                  "dice"
+                ],
+                "additionalProperties": false
               }
-            },
-            "required": [
-              "level",
-              "value"
-            ],
-            "additionalProperties": false
+            ]
           },
           "minItems": 1,
-          "maxItems": 20
+          "maxItems": 21
         }
       },
       "required": [
@@ -1646,6 +1685,18 @@
           "minItems": 0,
           "maxItems": 1000
         },
+        "foundryFlags": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ignoreSrdEffects",
+              "ignoreSrdActivities",
+              "isIgnored"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
         "verdict": {
           "enum": [
             "automated",
@@ -1857,6 +1908,18 @@
           },
           "minItems": 0,
           "maxItems": 1000
+        },
+        "foundryFlags": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ignoreSrdEffects",
+              "ignoreSrdActivities",
+              "isIgnored"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 3
         },
         "verdict": {
           "enum": [

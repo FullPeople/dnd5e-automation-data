@@ -9,7 +9,7 @@ export function recovery(value: unknown): Recovery[] | undefined {
   if (plain(value)) { const rows: Recovery[] = []; for (const [period, n] of Object.entries(value)) { if (!['short','long','dawn','manual'].includes(period) || n !== 'all' && !integer(n)) return; rows.push({ period: period as Recovery['period'], amount: n }); } return rows; }
   if (Array.isArray(value)) {
     const rows: Recovery[] = []; for (const rule of value) {
-      const period = ({ sr:'short',lr:'long',dawn:'dawn',short:'short',long:'long',manual:'manual' } as Record<string,Recovery['period']>)[rule?.period];
+      const period = ({ sr:'short',lr:'long',dawn:'dawn','\u62c2\u6653':'dawn',short:'short',long:'long',manual:'manual' } as Record<string,Recovery['period']>)[rule?.period];
       const n = rule?.type === 'recoverAll' ? 'all' : amount(rule?.formula ?? rule?.amount);
       if (!period || !n) return; rows.push({ period, amount: n === 'all' ? 'all' : 'value' in n ? n.value : n.formula });
     } return rows;

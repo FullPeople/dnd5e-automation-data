@@ -40,6 +40,14 @@ export function materialize(files: CorpusBody[], aliases: IdentityAlias[] = []) 
     const prepared = prepareBody(merged);
     for (const kind of KINDS) for (const [at, raw] of (prepared[kind] || []).entries()) {
       const file = origins.get(merged[kind][at]) || '', inherited = kind === 'subrace' ? inheritSubrace(raw, prepared.race || []) : raw;
+      if(kind==='subrace') {
+        const parent=(prepared.race||[]).find((r:Raw)=>[r.name,r.ENG_name].includes(raw.raceName)&&r.source===(raw.raceSource||'PHB'));
+        if(parent)for(const field of ['skillProficiencies','toolProficiencies','languageProficiencies','weaponProficiencies','armorProficiencies'])if(!raw.overwrite?.[field]&&parent[field]?.length&&raw[field]?.length){
+          // Parent and child grants are cumulative. Alternatives inside each
+          // source stay independent rather than turning inheritance into OR.
+          (inherited._proficiencyGroups||={})[field]=[{origin:'parent',value:parent[field]},{origin:'child',value:raw[field]}];
+        }
+      }
       put(kind, inherited, namespace, file, 'source'); for (const version of expandVersions(inherited)) put(kind, version, namespace, file, 'version');
     }
     for (const raw of specificMagicItems(prepared)) put('item', raw, namespace, 'derived/magicvariant', 'specificMagicItem');

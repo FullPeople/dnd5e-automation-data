@@ -39,6 +39,7 @@ export function makeContext(rows: Material[]): DerivationContext {
       if (family === 'weapon' && key === '\u519b\u7528') return 'martial';
       if (family === 'skill' && SKILLS.includes(key.replace(/[^a-z]/g,''))) return key.replace(/[^a-z]/g,'');
       if (family === 'damage' && new Set(Object.values(damage)).has(key)) return key;
+      if (family === 'condition' && ['blinded','charmed','deafened','frightened','grappled','incapacitated','invisible','paralyzed','petrified','poisoned','prone','restrained','stunned','unconscious','exhaustion'].includes(key)) return key;
       if (family === 'armor' && ['light','medium','heavy','shield'].includes(key)) return key;
       if (family === 'weapon' && ['simple','martial','simple-melee','simple-ranged','martial-melee','martial-ranged','firearms'].includes(key)) return key;
       const category = family === 'skill' ? 'skill' : family === 'language' ? 'language' : family === 'condition' ? 'condition' : family === 'tool' || family === 'weapon' ? 'item' : undefined;

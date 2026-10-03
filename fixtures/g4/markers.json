@@ -1,0 +1,11 @@
+[
+  {
+    "ENG_name": "Channel Divinity",
+    "source": "PHB",
+    "className": "牧师",
+    "classSource": "PHB",
+    "level": 6,
+    "isIgnored": true,
+    "migrationVersion": 3
+  }
+]

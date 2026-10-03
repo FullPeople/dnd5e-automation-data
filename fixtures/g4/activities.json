@@ -1,0 +1,151 @@
+[
+  {
+    "ENG_name": "Nature's Veil",
+    "source": "TCE",
+    "className": "游侠",
+    "classSource": "PHB",
+    "level": 10,
+    "migrationVersion": 3,
+    "system": {
+      "uses.max": "@prof",
+      "uses.recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "utility",
+        "activation": {
+          "type": "bonus",
+          "value": 1
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1"
+            }
+          ]
+        },
+        "target": {
+          "affects": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ENG_name": "Arcane Vigor",
+    "source": "XPHB",
+    "migrationVersion": 3,
+    "activities": [
+      {
+        "ENG_name": "Expend d6 Hit Dice",
+        "type": "heal",
+        "activation": {
+          "type": ""
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "hitDice",
+              "value": "2",
+              "target": "d6",
+              "scaling": {
+                "mode": "amount",
+                "formula": "1"
+              }
+            }
+          ]
+        },
+        "healing": {
+          "number": 2,
+          "denomination": 6,
+          "bonus": "@mod",
+          "types": [
+            "治疗"
+          ],
+          "custom": {
+            "formula": "2d@attributes.hd.largestFace + @mod"
+          },
+          "scaling": {
+            "mode": "whole",
+            "number": 1
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ENG_name": "Blackrazor",
+    "source": "XDMG",
+    "migrationVersion": 3,
+    "effects": [
+      {
+        "ENG_name": "Condition Immunity and Blindsight",
+        "transfer": true,
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "mode": "ADD",
+            "value": "charmed"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "mode": "ADD",
+            "value": "frightened"
+          },
+          {
+            "key": "system.attributes.senses.blindsight",
+            "mode": "UPGRADE",
+            "value": 30
+          }
+        ]
+      }
+    ],
+    "activities": [
+      {
+        "type": "cast",
+        "activation": {
+          "type": "special"
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1"
+            }
+          ]
+        },
+        "uses": {
+          "recovery": [
+            {
+              "period": "拂晓",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "spell": {
+          "uuid": "@spell[加速术|xphb]",
+          "level": 3,
+          "properties": [
+            "声音",
+            "姿势",
+            "材质",
+            "专注"
+          ],
+          "spellbook": true
+        },
+        "duration": {
+          "units": "分钟",
+          "value": "1"
+        }
+      }
+    ]
+  }
+]
