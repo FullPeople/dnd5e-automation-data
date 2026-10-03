@@ -563,5 +563,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-classFeature-family-005",
+    "path": "classFeature/XPHB-classFeature-family-005.json",
+    "sha256": "23bc5e8668e4d3e7b9871f1989913346c85dbd7e0d5ee7c4175ef5e8514c90cf",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:xphb:action%20surge:xphb:fighter:::17:::",
+      "kiwee:classfeature:xphb:action%20surge:xphb:fighter:::2:::",
+      "kiwee:classfeature:xphb:fighting%20style:xphb:fighter:::1:::",
+      "kiwee:classfeature:xphb:extra%20attack:xphb:fighter:::5:::",
+      "kiwee:classfeature:xphb:indomitable:xphb:fighter:::9:::",
+      "kiwee:classfeature:xphb:second%20wind:xphb:fighter:::1:::",
+      "kiwee:classfeature:xphb:studied%20attacks:xphb:fighter:::13:::",
+      "kiwee:classfeature:xphb:tactical%20mind:xphb:fighter:::2:::",
+      "kiwee:classfeature:xphb:three%20extra%20attacks:xphb:fighter:::20:::",
+      "kiwee:classfeature:xphb:weapon%20mastery:xphb:fighter:::1:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
