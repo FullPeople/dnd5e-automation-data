@@ -196,5 +196,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XPHB-baseitem-001",
+    "path": "baseitem/XPHB-baseitem-001.json",
+    "sha256": "492d3ef8b5c5a944a682629b384c7e04bb5d3bee9bd52c6481b045ccfa5f8dc6",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:baseitem:xphb:alchemist's%20supplies::::::::",
+      "kiwee:baseitem:xphb:arrows%20(20)::::::::",
+      "kiwee:baseitem:xphb:blowgun::::::::",
+      "kiwee:baseitem:xphb:chain%20mail::::::::",
+      "kiwee:baseitem:xphb:crystal::::::::",
+      "kiwee:baseitem:xphb:firearm%20bullets%20(10)::::::::",
+      "kiwee:baseitem:xphb:half%20plate%20armor::::::::",
+      "kiwee:baseitem:xphb:heavy%20crossbow::::::::",
+      "kiwee:baseitem:xphb:jeweler's%20tools::::::::",
+      "kiwee:baseitem:xphb:lance::::::::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
