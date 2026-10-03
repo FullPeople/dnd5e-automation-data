@@ -11,10 +11,10 @@ F=S(maxLength=160)
 B={'type':'boolean'}
 amount={'oneOf':[O({'value':N()},['value']),O({'formula':F},['formula'])]}
 ability=E('str','dex','con','int','wis','cha')
-target=S(pattern=r'^(str|dex|con|int|wis|cha|ac|hp|initiative|proficiency|passive|criticalDice|speed\.(walk|fly|swim|climb|burrow|hover)|skill:[a-z][a-zA-Z-]*|save:(str|dex|con|int|wis|cha)|resist:[a-z]+|immune:[a-z]+|vulnerable:[a-z]+|conditionImmune:[a-z-]+|sense:[a-z]+|attack\.(melee|ranged|spell)|damage\.(melee|ranged|spell)|dc\.spell)$')
+target=S(pattern=r'^(str|dex|con|int|wis|cha|ac|hp|initiative|proficiency|passive|criticalDice|size|cantrips|speed\.(walk|fly|swim|climb|burrow|hover)|skill:[a-z][a-zA-Z-]*|save:(str|dex|con|int|wis|cha)|resist:[a-z]+|immune:[a-z]+|vulnerable:[a-z]+|conditionImmune:[a-z-]+|sense:[a-z]+|attack\.(melee|ranged|spell)|damage\.(melee|ranged|spell)|dc\.spell)$')
 scalar={'oneOf':[{'type':'number','minimum':-1000000,'maximum':1000000},B,S(maxLength=160)]}
 defs={
- 'identity':O({'kind':S(pattern=r'^[A-Za-z][A-Za-z0-9]*$'),'source':S(pattern=r'^[A-Z0-9][A-Z0-9_-]*$'),'engName':S(),'packId':S(pattern=r'^[a-zA-Z0-9_-]+$'),'classSource':S(),'classEngName':S(),'subclassSource':S(),'subclassEngShortName':S(),'raceSource':S(),'raceEngName':S(),'level':N(0,20),'extra':S(),'key':S(maxLength=6000)},['kind','source','engName','key']),
+ 'identity':O({'kind':S(pattern=r'^[A-Za-z][A-Za-z0-9]*$'),'source':S(pattern=r'^[A-Z0-9][A-Z0-9_:-]*$'),'engName':S(),'packId':S(pattern=r'^[a-zA-Z0-9_-]+$'),'classSource':S(),'classEngName':S(),'subclassSource':S(),'subclassEngShortName':S(),'raceSource':S(),'raceEngName':S(),'level':N(0,20),'extra':S(),'key':S(maxLength=6000)},['kind','source','engName','key']),
  'amount':amount,
  'condition':{'oneOf':[O({'all':A(R('condition'),1,50)},['all']),O({'any':A(R('condition'),1,50)},['any']),O({'not':R('condition')},['not']),O({'target':E('level','class.level','equipped','attuned','unarmored','shield','ability','choice','proficient'),'op':E('eq','gte','lte','includes'),'value':scalar},['target','op','value'])]},
  'modifier':O({'target':target,'op':E('add','set','min','max','upgrade'),'value':scalar,'formula':F,'condition':R('condition'),'stackGroup':S(maxLength=160),'priority':N(-1000,1000)},['target','op']),
@@ -33,13 +33,22 @@ defs={
  'unsupported':O({'code':S(maxLength=100,pattern=r'^[a-zA-Z0-9_.-]+$'),'family':S(maxLength=100,pattern=r'^[a-zA-Z0-9_.-]+$'),'ref':S(maxLength=6000),'deferred':B},['code','family']),
  'input':O({'url':S(pattern=r'^https://[^\s]+$'),'path':S(),'namespace':S(),'role':E('catalog','foundry','index','version'),'sha256':S(minLength=64,maxLength=64,pattern=r'^[a-f0-9]{64}$'),'bytes':N(1,33554432)},['url','path','namespace','role','sha256','bytes']),
 }
+
+# G3 structured-field representations: explicit ownership, choices and one-time equipment.
+defs['grant']['properties'].update({'scope':E('all','firstClass','multiclass'),'setKey':S(maxLength=160),'setOption':N(0,100),'amount':N(-10,20),'abilityChoiceKey':S(maxLength=160),'atSpellLevel':N(0,9),'canUseSlots':B,'usagePool':S(maxLength=160),'choiceProgression':A(O({'level':N(0,20),'count':N(0,100)},['level','count']),1,21)})
+defs['filter']['properties'].update({'featureType':A(S(),1,100)})
+defs['equipmentPart']=O({'identity':S(maxLength=6000),'category':E('weaponSimple','weaponMartial','focusSpellcastingHoly','focusSpellcastingArcane','focusSpellcastingDruidic'),'quantity':N(1,3000),'copper':N(0,100000000),'unresolved':{'const':True}},[])
+defs['equipmentOption']=O({'key':S(maxLength=100),'items':A(R('equipmentPart'),0,1000)},['key','items'])
+defs['startingEquipment']=O({'blocks':A(O({'key':S(maxLength=100),'options':A(R('equipmentOption'),1,100)},['key','options']),0,100),'scope':E('all','firstClass')},['blocks','scope'])
+defs['equipmentModel']['properties'].update({'weaponType':E('melee','ranged'),'spellFocus':E('holy','arcane','druid'),'firearm':B})
+
 defs['modifier']['oneOf']=[{'required':['value'],'not':{'required':['formula']}},{'required':['formula'],'not':{'required':['value']}}]
 defs['grant']['oneOf']=[{'required':['fixed'],'not':{'required':['choose']}},{'required':['choose'],'not':{'required':['fixed']}}]
 defs['grant']['properties']['choose']['oneOf']=[{'required':['from'],'not':{'required':['filter']}},{'required':['filter'],'not':{'required':['from']}}]
 defs['action']['allOf']=[{'if':{'properties':{'type':{'const':'cast'}},'required':['type']},'then':{'required':['spell']}}]
 defs['mechanics']=O({k:A(R(k),0,1000) for k in ['modifier','grant','resource','action','effect']})
 defs['mechanics']['properties']={k+'s':v for k,v in defs['mechanics']['properties'].items()}
-for k in ['classModel','equipmentModel','spellModel']:defs['mechanics']['properties'][k]=R(k)
+for k in ['classModel','equipmentModel','spellModel','startingEquipment']:defs['mechanics']['properties'][k]=R(k)
 defs['mechanics']['properties']['scales']=A(R('scale'),0,100)
 recordProps={'identity':R('identity'),'edition':E('2014','2024','both'),'entryIds':A(S(maxLength=6000),0,1000),'verdict':E('automated','noMechanics','needsAnnotation','unsupported'),'provenance':A(R('provenance'),1,100),'evidence':R('evidence'),'mechanics':R('mechanics'),'unsupported':A(R('unsupported'),0,1000),'reasonCode':E('narrative','placeholder','choiceOfOtherEntry','coveredByParent','tableOnly','asiPlaceholder'),'autoGenerated':{'const':True},'notes':{'type':'string','maxLength':2000}}
 defs['record']=O(recordProps,['identity','verdict','provenance','unsupported'])

@@ -1,0 +1,5756 @@
+{
+  "phase": "G3-structured-draft",
+  "completeAutomationClaim": false,
+  "versionLock": {
+    "kiweeChangelogVersion": "2.36.0",
+    "kiweeChangelogDate": "2026-09-21",
+    "fetchedAt": "2026-10-03T06:51:45.796Z",
+    "foundryMigrationVersion": [
+      3
+    ],
+    "toolVersion": "dnd5e-automation-data/0.1.0",
+    "inputs": [
+      {
+        "url": "https://5e.kiwee.top/data/actions.json",
+        "path": "data/actions.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "0d05d4638b5759613fa9dac6c8869db37443c1aaa24ecfdb8008bbff89c5bed7",
+        "bytes": 47896
+      },
+      {
+        "url": "https://5e.kiwee.top/data/backgrounds.json",
+        "path": "data/backgrounds.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "8f5b5c44ced42e9fce5e2cf4cba251a015e920eb4418fd51c0dc1a6844e4d9d2",
+        "bytes": 750845
+      },
+      {
+        "url": "https://5e.kiwee.top/data/changelog.json",
+        "path": "data/changelog.json",
+        "namespace": "kiwee",
+        "role": "version",
+        "sha256": "d8226e32f3603e375c828fb4f49327d3872f381bf7850a97b51e256acbd74fc9",
+        "bytes": 337795
+      },
+      {
+        "url": "https://5e.kiwee.top/data/charcreationoptions.json",
+        "path": "data/charcreationoptions.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "497e52550bfafa915ac76b277fc8409784a246659c5179c535397d399ca61cb2",
+        "bytes": 71297
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-artificer.json",
+        "path": "data/class/class-artificer.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "fe4f539a8ccfce0253eced67ba942b76ee0e641a31fce752a27cba19066e7182",
+        "bytes": 165289
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-barbarian.json",
+        "path": "data/class/class-barbarian.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "a5714f3a597da59bcdcc189b54a5b562b23dfac5fde44fdc83cf9a9e749d1815",
+        "bytes": 125399
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-bard.json",
+        "path": "data/class/class-bard.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "274fca35faf826145fbe4d779d0a15e98e9c14009ed5e1282103478d138c97fc",
+        "bytes": 144129
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-cleric.json",
+        "path": "data/class/class-cleric.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "949c918679e385384a4979398219165807332ff6ca400f39a87c6fe1779bc65a",
+        "bytes": 263834
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-druid.json",
+        "path": "data/class/class-druid.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "9d42e6d7fe4f5869d5fad647d20471d2d1801a0df2e882431649eac5f27f6079",
+        "bytes": 148460
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-fighter.json",
+        "path": "data/class/class-fighter.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "da2d63f3d4eb692db32f22b081dafecbc08394f27fbaeff7a51503824aefd1e0",
+        "bytes": 170179
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-monk.json",
+        "path": "data/class/class-monk.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "5e4737b7a790f84f850f50dccae255a12eeb40baa1edfe0c450c96e698697345",
+        "bytes": 152948
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-mystic.json",
+        "path": "data/class/class-mystic.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "d34a14dbff781b4544a7b6b874fa72b2aa6279b9ce44d4ebde744783bb5f3357",
+        "bytes": 51348
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-paladin.json",
+        "path": "data/class/class-paladin.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "da5e432ee7492b92d81ce32080355dab35ed4a69425c638691cc37a219597c51",
+        "bytes": 168186
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-ranger.json",
+        "path": "data/class/class-ranger.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "8e9bcffae0154e54527350bb9d6d1e1318ce6ece429a870454d62ef4913f75f7",
+        "bytes": 152703
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-rogue.json",
+        "path": "data/class/class-rogue.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "e8785be8502f507eba5bd026390f352ceb19d81be10e0bfbab62d6c34f1c268e",
+        "bytes": 151196
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-sidekick.json",
+        "path": "data/class/class-sidekick.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "b32d06244c186997c74b46c6d7183afccf287f0dfe30328875b831ff666e040b",
+        "bytes": 33025
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-sorcerer.json",
+        "path": "data/class/class-sorcerer.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "6f49351edabe1f4b7a269f13fce0fc8230c7e43dafcbbb5aa1bc6700fcfce087",
+        "bytes": 178613
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-warlock.json",
+        "path": "data/class/class-warlock.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "9f4fe85732ff89191c40cd8ced28f0fe8b62f0c13e4be5c998205cbda14328d3",
+        "bytes": 166421
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/class-wizard.json",
+        "path": "data/class/class-wizard.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "0fb00f638eef1f95948c1c035058afc67c10baf982255aebfc159830b635457a",
+        "bytes": 195059
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/foundry.json",
+        "path": "data/class/foundry.json",
+        "namespace": "kiwee",
+        "role": "foundry",
+        "sha256": "1894f7d8230b91e44ff055e8fa28186c1f97d392bebde09fbd8e17ed88f65340",
+        "bytes": 574619
+      },
+      {
+        "url": "https://5e.kiwee.top/data/class/index.json",
+        "path": "data/class/index.json",
+        "namespace": "kiwee",
+        "role": "index",
+        "sha256": "77b4e3c24ab8a0515948c258a7104f04bbe70e6a89a17714f2ee0bdfce23c2e8",
+        "bytes": 497
+      },
+      {
+        "url": "https://5e.kiwee.top/data/conditionsdiseases.json",
+        "path": "data/conditionsdiseases.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "c26d89a8ecec0769bdc0d2fd07f67d73c8ad519091505b911b560ad4f7b4d308",
+        "bytes": 70075
+      },
+      {
+        "url": "https://5e.kiwee.top/data/cultsboons.json",
+        "path": "data/cultsboons.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "9364cac57d9ea22e79849cfdeac3ca90de80cbf30d7e1ece5ca55016d368bfa2",
+        "bytes": 73732
+      },
+      {
+        "url": "https://5e.kiwee.top/data/feats.json",
+        "path": "data/feats.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "6712bbf38c5955415aa2b0b155d9ecbd13d8e1914d0a8f212ce44cce13866fbc",
+        "bytes": 426735
+      },
+      {
+        "url": "https://5e.kiwee.top/data/foundry-feats.json",
+        "path": "data/foundry-feats.json",
+        "namespace": "kiwee",
+        "role": "foundry",
+        "sha256": "13f5a2cd1256424b6ff08bd65cc6c6c933a5a469b4bfd8899fcbf1ccaf2ca9cc",
+        "bytes": 100853
+      },
+      {
+        "url": "https://5e.kiwee.top/data/foundry-items.json",
+        "path": "data/foundry-items.json",
+        "namespace": "kiwee",
+        "role": "foundry",
+        "sha256": "724d52fe0112bf180051f9f30284b7b74c4cfcde4157d5fd7fb49320a255e35c",
+        "bytes": 479956
+      },
+      {
+        "url": "https://5e.kiwee.top/data/foundry-optionalfeatures.json",
+        "path": "data/foundry-optionalfeatures.json",
+        "namespace": "kiwee",
+        "role": "foundry",
+        "sha256": "97b875c82fb482bedbf740fe4cb877600e160743de884edfed26a5444f975a20",
+        "bytes": 117018
+      },
+      {
+        "url": "https://5e.kiwee.top/data/foundry-races.json",
+        "path": "data/foundry-races.json",
+        "namespace": "kiwee",
+        "role": "foundry",
+        "sha256": "76a9c06e32c42882ddbad41faaed7149a2daa42930704cce0473579340eceba4",
+        "bytes": 87753
+      },
+      {
+        "url": "https://5e.kiwee.top/data/generated/gendata-spell-source-lookup.json",
+        "path": "data/generated/gendata-spell-source-lookup.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "8b78d1ce68d080a760b41bc65e846755c98fa1a3916b70d3d5d0dc8f5af1b9a9",
+        "bytes": 673279
+      },
+      {
+        "url": "https://5e.kiwee.top/data/generated/gendata-variantrules.json",
+        "path": "data/generated/gendata-variantrules.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "a1e8f65be9f17be8309498c4ef698c2c718e39465070515e5b05e7f983b9e5a3",
+        "bytes": 49970
+      },
+      {
+        "url": "https://5e.kiwee.top/data/items-base.json",
+        "path": "data/items-base.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "9f1346c69344d66088dbdb1c26ea5872102d318ac148805a8ae9b5fedc5fc94f",
+        "bytes": 197272
+      },
+      {
+        "url": "https://5e.kiwee.top/data/items.json",
+        "path": "data/items.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "3a4b176a3de1d6a02e8f35ca5c9171c99d174cbc22b7fce64b5ada98c982c1a3",
+        "bytes": 2951589
+      },
+      {
+        "url": "https://5e.kiwee.top/data/languages.json",
+        "path": "data/languages.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "de96885e0756d622dd6a4700c328618619f5f150b14bdf81e924d9bd09365a72",
+        "bytes": 68664
+      },
+      {
+        "url": "https://5e.kiwee.top/data/magicvariants.json",
+        "path": "data/magicvariants.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "cbe3067525b5a2b3c8af0a80f8c9eeb1fb70ea4f6e9bfbb6490291e9258410d9",
+        "bytes": 240345
+      },
+      {
+        "url": "https://5e.kiwee.top/data/optionalfeatures.json",
+        "path": "data/optionalfeatures.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "bcc6c1471b01566a8eb30213d253924b9471c9610d4a686995cb68433182e315",
+        "bytes": 161345
+      },
+      {
+        "url": "https://5e.kiwee.top/data/psionics.json",
+        "path": "data/psionics.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "ef4bc1bb23c232128a8a892582b095395fface0fb0fa73c39aef4436bf1c7e4c",
+        "bytes": 113252
+      },
+      {
+        "url": "https://5e.kiwee.top/data/races.json",
+        "path": "data/races.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "d60b2cde3733e363aa4d1bd0bb8465d79213d247948ff46561d883fc55c00df7",
+        "bytes": 603288
+      },
+      {
+        "url": "https://5e.kiwee.top/data/rewards.json",
+        "path": "data/rewards.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "c9404235b909e9c0eb265f46bc1631e5ddcb7c21c9c01d9004cc3bd999e622b6",
+        "bytes": 154502
+      },
+      {
+        "url": "https://5e.kiwee.top/data/senses.json",
+        "path": "data/senses.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "b489a9a27d5c4415e4ca99582a817b0d12784e3da9246b6cdde96ec605704a14",
+        "bytes": 5552
+      },
+      {
+        "url": "https://5e.kiwee.top/data/skills.json",
+        "path": "data/skills.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "28e9b8412ea3a9a4bd3f33439b48ad8d96b78feeb6175c948e4e8d519e3fd404",
+        "bytes": 13576
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/foundry.json",
+        "path": "data/spells/foundry.json",
+        "namespace": "kiwee",
+        "role": "foundry",
+        "sha256": "1b95d55564641c665c02132293a47da28665e610ce58416b2c704f6938980071",
+        "bytes": 465226
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/index.json",
+        "path": "data/spells/index.json",
+        "namespace": "kiwee",
+        "role": "index",
+        "sha256": "210f9924f3cb8caefb46af68c767103541f04ef01bb942740bcdd1553b70dd42",
+        "bytes": 511
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-aag.json",
+        "path": "data/spells/spells-aag.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "cfdb853570a9863618489f9d3720ca5012aec024d2e45efa2115c48c0b4524d8",
+        "bytes": 2102
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-ai.json",
+        "path": "data/spells/spells-ai.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "9b945d23bc3782bbe9261a90f981b48e774f547606cd40b43ddf4f7bdda1445b",
+        "bytes": 11962
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-aitfr-avt.json",
+        "path": "data/spells/spells-aitfr-avt.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "6c3fe6bd0dd1163472e74a421c193187437834780e48df41dbc4e90089fb1bcf",
+        "bytes": 4141
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-au.json",
+        "path": "data/spells/spells-au.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "f3c7b31db00ab7f988f64b772d8a49c1b1d6f9003006a0f48c9c0d67d098a42c",
+        "bytes": 48934
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-bmt.json",
+        "path": "data/spells/spells-bmt.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "ca1a053d7ca338045db9fc5cc08195b20d73fbd696617a31c5914475d3b6e3d3",
+        "bytes": 4266
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-efa.json",
+        "path": "data/spells/spells-efa.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "f6c3b216ef97034fd7c03f5df1f90492c25b936975707bb720549eb68e8a53fe",
+        "bytes": 1634
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-egw.json",
+        "path": "data/spells/spells-egw.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "51cb86f197f71f54d05fda48ba3928a48c8ab49bb9fff62ef1c71c212cabf22e",
+        "bytes": 23423
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-frhof.json",
+        "path": "data/spells/spells-frhof.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "4e45690227497aeb2695b491d59515b7a5f9ce90d03ce2e91a6b2742dd355042",
+        "bytes": 34373
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-ftd.json",
+        "path": "data/spells/spells-ftd.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "76da9a4dad76fa2e55045fa4777d16cb156d306910cb5e8e27351ac053a5564b",
+        "bytes": 12309
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-ggr.json",
+        "path": "data/spells/spells-ggr.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "ef6a18d3c9fd31848742b1ec2d7af4647b40254c18585b2911a47b84d7d45097",
+        "bytes": 1583
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-idrotf.json",
+        "path": "data/spells/spells-idrotf.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "5c4f5abf770fe4d9e6ac4ed6b504a609ec66d3fca5bdb66ca241a5c7391851ca",
+        "bytes": 2758
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-llk.json",
+        "path": "data/spells/spells-llk.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "319328e40ac99bbc4ed83f34886b54091fe2026f187e1049e4ef5c1c473893d3",
+        "bytes": 6157
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-phb.json",
+        "path": "data/spells/spells-phb.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "f0757303c7145a6c70763fa41d60ae28610d44f84a1eb52a4985973fbe94a60d",
+        "bytes": 648463
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-sato.json",
+        "path": "data/spells/spells-sato.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "ba97baa449d9b9734aa1e5fe2899f55c734eeaf4484ac500ef5fb01753dd3374",
+        "bytes": 2730
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-scc.json",
+        "path": "data/spells/spells-scc.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "24e7cc7b92aeecdf310c8751ba6c6f1a9dd5586c474693a9104a1ef4b3730c2f",
+        "bytes": 5716
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-tce.json",
+        "path": "data/spells/spells-tce.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "284eeaf4967b7870dac9d5a461cb37ac79ed19ccd838e6dff7361ec7609ea1d5",
+        "bytes": 34531
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-xge.json",
+        "path": "data/spells/spells-xge.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "462a3bd5a0e3e26d4aee31f98e4b24893a2a49070719d917a0f53e6c353e40e2",
+        "bytes": 166612
+      },
+      {
+        "url": "https://5e.kiwee.top/data/spells/spells-xphb.json",
+        "path": "data/spells/spells-xphb.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "a201ac4af9edfb48ad8bc717d5d1ba711f2367b9c8e897ff30dcdeb576beb96e",
+        "bytes": 624811
+      },
+      {
+        "url": "https://5e.kiwee.top/data/variantrules.json",
+        "path": "data/variantrules.json",
+        "namespace": "kiwee",
+        "role": "catalog",
+        "sha256": "7a74b7b55d76fd4ec00a713a07630b5ee14f6841a7512fd17afc40848a131e0a",
+        "bytes": 672013
+      },
+      {
+        "url": "https://homebrew.kiwee.top/_generated/index-sources.json",
+        "path": "_generated/index-sources.json",
+        "namespace": "kiwee-homebrew",
+        "role": "index",
+        "sha256": "338a5a75144937eefcbf9d9b6e280d03aa4b9d7673dc9532b9bb7ad7e44c80af",
+        "bytes": 3688
+      },
+      {
+        "url": "https://homebrew.kiwee.top/action/Sample%20-%20Giddy%3B%20%E7%86%84%E7%81%AD.json",
+        "path": "unresolved-71577a02e5f9bf681fd8",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "67d754a0bb8c2f5436ce9d0afb21a021498182fcf586eb0657840a9ee91de0f2",
+        "bytes": 686
+      },
+      {
+        "url": "https://homebrew.kiwee.top/adventure/Sample%20-%20Giddy%3B%20%E7%81%BE%E5%8E%84%E6%B4%9E%E7%A9%B4.json",
+        "path": "unresolved-60ca9269e7224179cf18",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "ae81622a491dd70ad631ed9f51ad276bfee3807996e53888d7b8a71a825a9f5f",
+        "bytes": 1680
+      },
+      {
+        "url": "https://homebrew.kiwee.top/background/Sample%20-%20Giddy%3B%20%E5%86%9C%E6%B0%91.json",
+        "path": "unresolved-6ea74610b2f241585700",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "d6e29b4ba6891c060bf4d79755a187ec7126857c20ca6f422c9c282089c64238",
+        "bytes": 6619
+      },
+      {
+        "url": "https://homebrew.kiwee.top/boon/Sample%20-%20Giddy%3B%20%E5%8F%AF%E7%96%91%E7%9A%84%E8%B5%A0%E7%A4%BC.json",
+        "path": "unresolved-af81bd5d3bd644a378ba",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "e30c4e9796f84c3caf2ab9ca2e417d59192bda6aeab7cc69a90ed0efd02b9b26",
+        "bytes": 2329
+      },
+      {
+        "url": "https://homebrew.kiwee.top/charoption/Sample%20-%20Giddy%3B%20%E7%A7%98%E5%AF%86%E5%AF%B9%E6%89%8B.json",
+        "path": "unresolved-ec89f8d4a2b915a2f4b1",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "4c5956e9ffb1906d5e6768d0e3aea52d3c4b69b9237e67bad0a36a79ef93ec23",
+        "bytes": 2616
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/AluStar%3B%20%E9%BE%99%E9%A9%AC%E8%BF%8E%E6%98%A5.json",
+        "path": "unresolved-434854616ea0b9c95ead",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "c5f3b5d413abc11d2a9f9c94df4d5bbe899db36dc5da325322605421d4eb3238",
+        "bytes": 19195
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/Benjamin%20Huffman%3B%20%E6%8B%B3%E6%96%97%E5%A3%ABPugilist%20-%202014.json",
+        "path": "unresolved-2b7ce6ddf29fdf2e4ef5",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "b293c0172364ff0781c27dd7678d7213e7c7519b1155bb202d4cf3bdbac75120",
+        "bytes": 146945
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/Benjamin%20Huffman%3B%20%E6%8B%B3%E6%96%97%E5%A3%ABPugilist%20-%202024.json",
+        "path": "unresolved-a531fb64090596a7d65f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "21644a1d4592929670f3381e1a0fb189234456f784d2703c4b0b1905366162eb",
+        "bytes": 161312
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/Mage%20Hand%20Press%3B%20%E9%93%B3%E5%A3%ABGunslinger.json",
+        "path": "unresolved-5154c290d185a415bead",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "2119d800f044899f4698ab2c5e207a97600d0a187e0bbf2d50fbbaad4a0d018c",
+        "bytes": 154974
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/MCDM%20Productions%3B%20%E9%82%AA%E7%8B%B1%E4%BD%BF%E4%BF%AE%E8%AE%A2%E7%89%88.json",
+        "path": "unresolved-f1d4e2d450029d26c101",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "809c571e9472977163c4f61ea053359c48294f13db83b4d8236b8a9cae57cdcb",
+        "bytes": 201218
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/Sam%20Grierson%3B%20%E5%8E%A8%E5%B8%88The%20Cook%20Class.json",
+        "path": "unresolved-d75b345d5f5e634012b0",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "cd9a8c58ecb2818a47d5cf937a808e4b9c98b2fcb04e9d280c08c9ba928365d8",
+        "bytes": 71986
+      },
+      {
+        "url": "https://homebrew.kiwee.top/class/SnowWolf%3B%20%E8%A1%80%E7%8C%8E%E6%89%8B%20(2024).json",
+        "path": "unresolved-875ec11327276710d973",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "a526ea4c21c4a167a48445844b590a90280ec74b7bb6295303d5387493fd1e0f",
+        "bytes": 88681
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/%E5%B0%8F%E9%B8%9F%3B%20%E5%90%91%E9%95%9C%E4%B8%AD%E7%9C%8B.json",
+        "path": "unresolved-f67381edac13d1d50880",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "05838cfd142c2a4f9f8ffa6de1eaad76ccb4c548358951ec4072460b7115676f",
+        "bytes": 49811
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/1985%20Games%3B%20%E8%83%A7%E5%BF%86%E5%B2%9B%EF%BC%9A%E8%92%BF%E9%87%8E%E7%89%A9%E8%AF%AD.json",
+        "path": "unresolved-bdff730be1ccf54ef21d",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "f10827c1e485665d3613e5ff31d56f4a6a4a7bf18275d8e3c54cfe4609627058",
+        "bytes": 2343015
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Avantris%3B%20%E6%AD%AA%E6%9B%B2%E4%B9%8B%E6%9C%88.json",
+        "path": "unresolved-18e4155b65e705c1a5d8",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "1d06f53b7e67269d293a45906b7ba9f11e23d7e61b4a2cb95689986bbdd85b7e",
+        "bytes": 4256737
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Chaosium%20Inc.%3B%20%E7%81%AB%E7%82%AC%E5%85%89%E4%B8%8B%E7%9A%84%E5%85%8B%E8%8B%8F%E9%B2%81.json",
+        "path": "unresolved-f384baebcd1cc3289156",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "b0a1cdf797d24fcdece2443b45cd8edf8083ab4cfcc8ae6c062af0499e7b18db",
+        "bytes": 452453
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Darrington%20Press%3B%20%E5%A1%94%E5%B0%94%E5%A4%9A%E9%9B%B7%E6%88%98%E5%BD%B9%E8%AE%BE%E5%AE%9A%E9%9B%86%E9%87%8D%E5%88%B6%E7%89%88.json",
+        "path": "unresolved-bdfdfb82fb007af54b95",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "37aa70387ccb1ecb763c3ffa57194ab3dc39e15d401f84a1e47ab77f75b57538",
+        "bytes": 1916365
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Ghostfire%20Gaming%3B%20%E5%A1%9E%E5%B7%B4%E6%96%AF%E8%92%82%E5%AE%89%C2%B7%E5%85%8B%E5%8A%B3%E7%9A%84%E5%BE%B7%E6%8B%89%E8%82%AF%E6%B5%B7%E5%A7%86%E6%8C%87%E5%8D%97.json",
+        "path": "unresolved-ab5b82909145f3871297",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "e57f55f19d4bbfdc901f13677fa3e885bd5518049d68df40785be0b91c307f46",
+        "bytes": 730095
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Ghostfire%20Gaming%3B%20%E5%BE%B7%E6%8B%89%E8%82%AF%E6%B5%B7%E5%A7%86%E4%B9%8B%E5%A2%9F.json",
+        "path": "unresolved-8310caf56dceb5b50f03",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "987c960fd99a061fbb282971dd5f1bf285c2056e7a9fb6fad3a0008545acf0d2",
+        "bytes": 2048492
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Ghostfire%20Gaming%3B%20%E5%BE%B7%E6%8B%89%E8%82%AF%E6%B5%B7%E5%A7%86%E7%9A%84%E6%80%AA%E7%89%A9.json",
+        "path": "unresolved-f4e960b3236ef61a16d6",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "79c0c0b7548103c9dd7a937310dd554d9c6aa5e2bbddafecf18a9273f987664d",
+        "bytes": 2887680
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Ghostfire%20Gaming%3B%20%E9%AC%BC%E9%AD%85%E5%B9%BD%E8%B0%B7%20-%20%E7%8E%A9%E5%AE%B6%E6%8C%87%E5%8D%97%20-%202024.json",
+        "path": "unresolved-5124d5a0c0161ced02b7",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "b8460911758fbd2679b6239c8c9cb5cdd5f47f6eb98c53e9dbb0848018c0f724",
+        "bytes": 1771322
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Griffin%20Macaulay%3B%20%E7%8B%AE%E9%B9%AB%E7%9A%84%E9%9E%8D%E4%B8%AD%E7%8F%8D%E5%AE%9D%E2%85%A1.json",
+        "path": "unresolved-122bcf38a9b3beb23703",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "6e4f46711d3c53f14d1f2bb33521b7a698954b056d57e44ae39f3a43cf812d59",
+        "bytes": 2741848
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Hit%20Point%20Press%3B%20%E8%B0%A6%E5%8D%91%E6%9E%97%E6%88%98%E5%BD%B9%E8%AE%BE%E5%AE%9A%E9%9B%86.json",
+        "path": "unresolved-eac98d193afdfefc6aea",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "5a0757d1f443c640428917a4bfd98dacbf2a830e3f61a3dbf497537c04154560",
+        "bytes": 1245673
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Hit%20Point%20Press%3B%20%E8%B0%A6%E5%8D%91%E6%9E%97%E6%95%85%E4%BA%8B%E9%9B%86.json",
+        "path": "unresolved-daf7b32d1947eef65b15",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "0303352b9f0492167a706e410819b9ac148a81fb1c4cc76e2eae4a8a10062131",
+        "bytes": 1479880
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/James%20Ohlen%3B%20%E5%8D%9A%E5%BE%B7%E4%B9%8B%E9%97%A8%E7%9A%84%E8%8B%B1%E9%9B%84%E4%BB%AC.json",
+        "path": "unresolved-6086d4f809db6b9337d6",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "bf0a68954a9c9c89f34cd75f7682d37ac86c171d0a641507dc49a28707027646",
+        "bytes": 673324
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Kobold%20Press%3B%20%E9%BB%AF%E6%BD%AE%E4%B9%8B%E4%B9%A6.json",
+        "path": "unresolved-aa30c18e3ea881133c9f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "51dadeb39d9fdab361e658f1ddda69772c361b98c1b4b6aa1cd1e1984acfea7b",
+        "bytes": 1373845
+      },
+      {
+        "url": "https://homebrew.kiwee.top/collection/Scichopath%3B%20%E5%AF%82%E9%9D%99%E6%8C%BD%E6%AD%8C.json",
+        "path": "unresolved-91ec301e0d287ebc02df",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "3d033e8c532e5018c0bf89a9658724b9bc51ec69a46f366750f913e945ab96cc",
+        "bytes": 96313
+      },
+      {
+        "url": "https://homebrew.kiwee.top/condition/Sample%20-%20Giddy%3B%20%E7%9D%80%E7%81%AB.json",
+        "path": "unresolved-80d29b3598893a00cd64",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "6c0ea497e71d033cc5f7500709645c061925da75b837022f0e3657c15a733904",
+        "bytes": 827
+      },
+      {
+        "url": "https://homebrew.kiwee.top/creature/Kobold%20Press%3B%20%E4%B8%87%E5%85%BD%E5%9B%BE%E5%BF%97.json",
+        "path": "unresolved-f6f5094f9b80978ed24d",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "42447d65a3e861857817b83777ea4347cc9836fdd2492282923e49d297c6489c",
+        "bytes": 2520737
+      },
+      {
+        "url": "https://homebrew.kiwee.top/creature/Kobold%20Press%3B%20%E4%B8%87%E5%85%BD%E5%9B%BE%E5%BF%97%202.json",
+        "path": "unresolved-5a672606e86918189515",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "de0f579751b1555954c2e62dd327f31cfeb2ebef16d0ae26b0c22b923f676b45",
+        "bytes": 2531236
+      },
+      {
+        "url": "https://homebrew.kiwee.top/creature/Kobold%20Press%3B%20%E4%B8%87%E5%85%BD%E5%9B%BE%E5%BF%97%203.json",
+        "path": "unresolved-ffd354ad589abd30546f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "59623a450bb296eefdec542a9d67b82a8e74c21fa3f591bda4267cc86bda5884",
+        "bytes": 2693809
+      },
+      {
+        "url": "https://homebrew.kiwee.top/creature/Kobold%20Press%3B%20%E4%B8%87%E5%85%BD%E5%9B%BE%E5%BF%971%EF%BC%882023%E7%89%88%EF%BC%89.json",
+        "path": "unresolved-723fb4cf320d5a079141",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "6d7d986dc5897a726c7c4e41bff0ff5891ecf1a770a82c6e911f4f9dc63eb8e5",
+        "bytes": 2614814
+      },
+      {
+        "url": "https://homebrew.kiwee.top/creature/MCDM%20Productions%3B%20%E5%87%A1%E4%BA%BA%EF%BC%8C%E5%BF%AB%E9%80%83%EF%BC%81.json",
+        "path": "unresolved-be56221efeebf93f87dd",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "88187082f1fe067a39953119a55b5ab110f7ad5f3fbd91de4d9a11d95e070329",
+        "bytes": 1982563
+      },
+      {
+        "url": "https://homebrew.kiwee.top/creature/Sample%20-%20Giddy%3B%20%E6%A9%A1%E6%9C%A8%E6%8A%95%E5%B0%84%E6%9C%BA.json",
+        "path": "unresolved-9b63a225b004d4dda38f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "a26f859c258c98535d30126096de4318f8cd5977340d0480d4a371898c3686f0",
+        "bytes": 5587
+      },
+      {
+        "url": "https://homebrew.kiwee.top/cult/Sample%20-%20Giddy%3B%20%E7%9C%9F%E5%AE%9E%E7%81%AB%E7%84%B0%E9%82%AA%E6%95%99.json",
+        "path": "unresolved-9a71ddd1a7e1158bf0b9",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "13135c31fff19a300bf2803dd025ee48194d4a8409f2078bd0e76edd928ad6b2",
+        "bytes": 1161
+      },
+      {
+        "url": "https://homebrew.kiwee.top/deity/Sample%20-%20Giddy%3B%20%E8%90%8E%E7%BC%A9.json",
+        "path": "unresolved-1334ac16432b04eedd48",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "8d847fa083c35a85a354c46814fbc85c6de64c26755bb9bbc5fc5e586ef9f2a9",
+        "bytes": 909
+      },
+      {
+        "url": "https://homebrew.kiwee.top/disease/Sample%20-%20Giddy%3B%20%E9%A2%A4%E6%8A%96%E7%97%87.json",
+        "path": "unresolved-cb38ca35b2575733fc59",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "afd690b164384427e0160e398a78a3abf654c1393703ebe4b3a1792da886458d",
+        "bytes": 1715
+      },
+      {
+        "url": "https://homebrew.kiwee.top/facility/Sample%20-%20Giddy%3B%20%E8%B6%8A%E9%87%8E%E5%9E%83%E5%9C%BE%E5%A0%86.json",
+        "path": "unresolved-b5af94b4791cd4454afb",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "0eb39aee7c4770fb09cf0dbba57fb38963c5f3411c02a4d41193e949abda3c1b",
+        "bytes": 1473
+      },
+      {
+        "url": "https://homebrew.kiwee.top/feat/Sample%20-%20Giddy%3B%20%E9%AD%94%E6%B3%95%E5%A4%A9%E8%B5%8B%EF%BC%8C%E9%9E%AD%E5%AD%90%E7%88%B1%E5%A5%BD%E8%80%85.json",
+        "path": "unresolved-f49c4b0c15bef2f52139",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "6890301e8122737cb574338603c8cb214c5cd0eab8bc2eaa453d0bf86dcee6c9",
+        "bytes": 2183
+      },
+      {
+        "url": "https://homebrew.kiwee.top/hazard/Sample%20-%20Giddy%3B%20%E6%B5%81%E6%B2%99.json",
+        "path": "unresolved-c2f7a350f73478dde61f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "63afea4b477608172f2c0242441795db15c3f9438424601ac2e9aac001f60a06",
+        "bytes": 1282
+      },
+      {
+        "url": "https://homebrew.kiwee.top/item/Sample%20-%20Giddy%3B%20%E9%92%A9%E7%88%AA%E5%B1%A0%E6%88%AE.json",
+        "path": "unresolved-ae89ff512185507647ef",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "630bd640bad509770a0deb54f4563e8a24783515013ae18e811977bf90ca3466",
+        "bytes": 4307
+      },
+      {
+        "url": "https://homebrew.kiwee.top/language/Sample%20-%20Giddy%3B%20%E6%97%97%E8%AF%AD.json",
+        "path": "unresolved-8b3bde0df42854d06b90",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "aa62bace7440761dc92f8cadcb09874f74d836db686cb0bbf81f7d28ec12f21f",
+        "bytes": 578
+      },
+      {
+        "url": "https://homebrew.kiwee.top/magicvariant/Sample%20-%20Giddy%3B%20%E6%AD%A6%E5%99%A8%20%2B4.json",
+        "path": "unresolved-83d699f93bb130aa1420",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "217806f54db0accfc6d7790f075aa9497b94bc2b5599888f25d1a255d29e41f8",
+        "bytes": 1498
+      },
+      {
+        "url": "https://homebrew.kiwee.top/object/Sample%20-%20Giddy%3B%20%E9%AB%98%E7%AD%89%E7%88%86%E7%82%B8%E7%89%A9.json",
+        "path": "unresolved-6c442372d91efbfcb6c9",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "bb2316584dbe6d31b8a2965992e208b7660c1576685c876b7cf35ecd5a207431",
+        "bytes": 1657
+      },
+      {
+        "url": "https://homebrew.kiwee.top/optionalfeature/Sample%20-%20Giddy%3B%20%E8%8B%A6%E7%97%9B%E6%A0%87%E8%AE%B0%EF%BC%8C%E8%BF%9C%E5%8F%A4%E6%95%8C%E6%84%8F.json",
+        "path": "unresolved-d99c86bbd5c8c3bb872f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "53a0ce261c49c301d4a9491c476592705ee834cd4d784514e8bc13b02be0acdd",
+        "bytes": 1463
+      },
+      {
+        "url": "https://homebrew.kiwee.top/psionic/Sample%20-%20Giddy%3B%20%E9%BB%91%E8%8E%89%E8%8E%89%E6%8A%80%E5%B7%A7.json",
+        "path": "unresolved-04235ecad437901cd68f",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "6a6738558a2bdcda9d113c11a20ef7bcec56cef828128a27832503ac0fc5b3e5",
+        "bytes": 1610
+      },
+      {
+        "url": "https://homebrew.kiwee.top/race/Sample%20-%20Giddy%3B%20%E8%A7%89%E9%86%92%E9%AA%B7%E9%AB%85.json",
+        "path": "unresolved-1ead877eb83436a6ef24",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "d329c126119e424a06d497143da456e16cbfa74e00b0f30f26a6c3b934215655",
+        "bytes": 2122
+      },
+      {
+        "url": "https://homebrew.kiwee.top/recipe/Sample%20-%20Giddy%3B%20%E5%90%90%E5%8F%B8%E4%B8%89%E6%98%8E%E6%B2%BB.json",
+        "path": "unresolved-8a8ac6bcf82e569161b1",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "04ebb7ee9db301e7c688b0cbc8b5203861d340158a53ff2b03ef06d5cac4547c",
+        "bytes": 1495
+      },
+      {
+        "url": "https://homebrew.kiwee.top/reward/Sample%20-%20Giddy%3B%20%E6%B4%BB%E5%8A%9B%E6%81%A9%E6%83%A0.json",
+        "path": "unresolved-2d009e31516d8a04d275",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "6adff6ef8932c406891983f8164713a774f87bee17bf26c2c30e9e378f18c245",
+        "bytes": 853
+      },
+      {
+        "url": "https://homebrew.kiwee.top/spell/Sample%20-%20Giddy%3B%20%E3%80%8A%E4%B9%8F%E5%91%B3%E5%B7%AB%E5%B8%88%E6%8C%87%E5%8D%97%E3%80%8B.json",
+        "path": "unresolved-fc9a6f1db4f82a49add6",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "0da4c74eb64038b4e11d337ca0c5721a89fecf6621f48c056d0bc998d98ec7f6",
+        "bytes": 1442
+      },
+      {
+        "url": "https://homebrew.kiwee.top/spell/Sample%20-%20Giddy%3B%20%E6%9D%82%E9%A1%B9%E6%97%81%E6%B3%A8.json",
+        "path": "unresolved-2371bf72f61d7570c8b4",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "1b16d11a02d4aab6228cd2b1c0b8e68898b1e947af5bb4e5e34734db2b3f2245",
+        "bytes": 3374
+      },
+      {
+        "url": "https://homebrew.kiwee.top/table/Sample%20-%20Giddy%3B%20%E8%B0%8B%E6%9D%80%E8%AF%81%E6%8D%AE.json",
+        "path": "unresolved-df11cd6dd59d91fff2f9",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "2cad52692613f85367e79f3426bae8554e9c583a200517290bbd0adb85f18ad3",
+        "bytes": 1523
+      },
+      {
+        "url": "https://homebrew.kiwee.top/trap/Sample%20-%20Giddy%3B%20%E9%AA%91%E4%B9%98%E7%9F%B3%E5%8C%96%E8%9C%A5%E8%9C%B4%E5%A4%B4%E9%83%A8.json",
+        "path": "unresolved-9b28b9b6c85b1ecfba44",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "f2dfc7c2b73b8f1d053a3c36a15633f4de0dd01350ba3cb5de8cd62c9055d479",
+        "bytes": 1410
+      },
+      {
+        "url": "https://homebrew.kiwee.top/variantrule/Sample%20-%20Giddy%3B%20%E6%88%BF%E8%A7%84.json",
+        "path": "unresolved-ab5f96c1cb59c98285f6",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "8825d270e0a9217367c1a822e10a1d79216c69ba31a7726e2cba58a68d611b71",
+        "bytes": 2153
+      },
+      {
+        "url": "https://homebrew.kiwee.top/vehicle/Sample%20-%20Giddy%3B%20%E7%A7%91%E6%8B%89%E7%A7%91%E5%B0%94.json",
+        "path": "unresolved-11acf8a6bf8b709f8619",
+        "namespace": "kiwee-homebrew",
+        "role": "catalog",
+        "sha256": "07db39227ea838a5b79f80b60898663e19b5efc42e830ca6a5608a991fff5f62",
+        "bytes": 1561
+      }
+    ]
+  },
+  "summary": {
+    "records": 18789,
+    "identityGaps": 3,
+    "duplicateConflicts": 2,
+    "byVerdict": {
+      "automated": 0,
+      "noMechanics": 0,
+      "needsAnnotation": 18789,
+      "unsupported": 0
+    }
+  },
+  "matrix": {
+    "kiwee-homebrew/GIDDYACTION": {
+      "action": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/CROOKEDMOON14": {
+      "background": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 97,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 97,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/CROOKEDMOON24": {
+      "background": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 14,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 14,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 104,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 104,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 97,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 97,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/CTHULHUTORCHLIGHT": {
+      "background": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 78,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 78,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/DUNGEONSDRAKKENHEIM": {
+      "background": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 37,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 37,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 14,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 14,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYBACKGROUND": {
+      "background": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GRIMHOLLOWPG24": {
+      "background": {
+        "total": 25,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 25,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 45,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 45,
+        "unsupported": 0
+      },
+      "charoption": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 22,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 22,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 42,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 42,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 61,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 61,
+        "unsupported": 0
+      },
+      "itemMastery": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 385,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 385,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 101,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 101,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 258,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 258,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/HOBG": {
+      "background": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/HUMBLEWOODCAMPAIGNSETTING": {
+      "background": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 31,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 31,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/OBOJIMATALLGRASS": {
+      "background": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 155,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 155,
+        "unsupported": 0
+      },
+      "condition": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 285,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 285,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 37,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 37,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "skill": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 50,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 50,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 11,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 11,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 73,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 73,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/TALDOREICAMPAIGNSETTINGREBORN": {
+      "background": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 96,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 96,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 76,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 76,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/HUMBLEWOODTALES": {
+      "baseitem": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 55,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 55,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/PUGILIST2024": {
+      "baseitem": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 28,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 28,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 33,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 33,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 36,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 36,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/STERLINGVERMIN": {
+      "baseitem": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 27,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 27,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 38,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 38,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 42,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 42,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/VALDAGUNSLINGER": {
+      "baseitem": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 24,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 24,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "itemMastery": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 36,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 36,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYBOON": {
+      "boon": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYCHAROPTION": {
+      "charoption": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/BLOODHUNTER2024": {
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 22,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 22,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 42,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 42,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 30,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 30,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/COOK": {
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 25,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 25,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GUIDEDRAKKENHEIM": {
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 54,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 54,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 162,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 162,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/ILLRIGGERREVISED": {
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 24,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 24,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 101,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 101,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 47,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 47,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/FLEEMORTALS": {
+      "condition": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 80,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 80,
+        "unsupported": 0
+      },
+      "psionic": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "sense": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYCONDITION": {
+      "condition": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GRIFFONSSADDLEBAG2": {
+      "condition": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 577,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 577,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 31,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 31,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 79,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 79,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/MONSTERSOFDRAKKENHEIM": {
+      "condition": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 251,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 251,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYDISEASE": {
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/TOB": {
+      "disease": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/TOB2": {
+      "disease": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 30,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 30,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/TOB3": {
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 31,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 31,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYFEAT": {
+      "feat": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/BOOKOFEBONTIDES": {
+      "item": {
+        "total": 71,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 71,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 14,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 14,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 65,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 65,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 60,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 60,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYITEM": {
+      "item": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYVARIANT": {
+      "item": {
+        "total": 25,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 25,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/LITM": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/TOB1-2023": {
+      "item": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYLANGUAGE": {
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYOPTIONALFEATURE": {
+      "optionalfeature": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYPSIONIC": {
+      "psionic": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYRACE": {
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYREWARD": {
+      "reward": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/DRAGONHORSE2026": {
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYSPELL": {
+      "spell": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYSPELLCOPY": {
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/STERLINGVERMIN:PATREON": {
+      "subclass": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 33,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 33,
+        "unsupported": 0
+      }
+    },
+    "kiwee-homebrew/GIDDYVARIANTRULE": {
+      "variantrule": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/DMG": {
+      "action": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 1071,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1071,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 46,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 46,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 44,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 44,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PHB": {
+      "action": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "background": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 91,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 91,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 254,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 254,
+        "unsupported": 0
+      },
+      "condition": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 42,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 42,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 238,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 238,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 82,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 82,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "sense": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "skill": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 361,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 361,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 80,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 80,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 302,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 302,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 25,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 25,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      }
+    },
+    "kiwee/XGE": {
+      "action": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 154,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 154,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 22,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 22,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 95,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 95,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 62,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 62,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 228,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 228,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 22,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 22,
+        "unsupported": 0
+      }
+    },
+    "kiwee/XPHB": {
+      "action": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "background": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 94,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 94,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 283,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 283,
+        "unsupported": 0
+      },
+      "condition": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 80,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 80,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 123,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 123,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "itemMastery": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 23,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 23,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 58,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 58,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 34,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 34,
+        "unsupported": 0
+      },
+      "sense": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "skill": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 391,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 391,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 48,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 48,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 309,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 309,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 117,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 117,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AAG": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/ABH": {
+      "background": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AI": {
+      "background": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 137,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 137,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AU": {
+      "background": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 29,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 29,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 115,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 115,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 11,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 11,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 33,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 33,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 58,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 58,
+        "unsupported": 0
+      }
+    },
+    "kiwee/BGDIA": {
+      "background": {
+        "total": 14,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 14,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 111,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 111,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      }
+    },
+    "kiwee/BGG": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 14,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 14,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 56,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 56,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      }
+    },
+    "kiwee/BMT": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 377,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 377,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/DSOTDQ": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      }
+    },
+    "kiwee/EFA": {
+      "background": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 28,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 28,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 124,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 124,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 41,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 41,
+        "unsupported": 0
+      }
+    },
+    "kiwee/EGW": {
+      "background": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "charoption": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 316,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 316,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 24,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 24,
+        "unsupported": 0
+      }
+    },
+    "kiwee/ERLW": {
+      "background": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 179,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 179,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      }
+    },
+    "kiwee/FRHOF": {
+      "background": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 34,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 34,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 24,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 24,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 56,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 56,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/GGR": {
+      "background": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 58,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 58,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/GOS": {
+      "background": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      }
+    },
+    "kiwee/LFL": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      }
+    },
+    "kiwee/MOT": {
+      "background": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "charoption": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 60,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 60,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PSA": {
+      "background": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 37,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 37,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PSI": {
+      "background": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/RHW": {
+      "background": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 11,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 11,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 44,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 44,
+        "unsupported": 0
+      }
+    },
+    "kiwee/SATO": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/SCAG": {
+      "background": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 47,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 47,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/SCC": {
+      "background": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      }
+    },
+    "kiwee/TOA": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "baseitem": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      }
+    },
+    "kiwee/VRGR": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "charoption": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/WBTW": {
+      "background": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/OOTA": {
+      "baseitem": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "charoption": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/XDMG": {
+      "baseitem": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 2167,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2167,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 28,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 28,
+        "unsupported": 0
+      },
+      "itemProperty": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "itemType": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 82,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 82,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 19,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 19,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      }
+    },
+    "kiwee/MTF": {
+      "boon": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 16,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 16,
+        "unsupported": 0
+      }
+    },
+    "kiwee/HOTDQ": {
+      "charoption": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/IDROTF": {
+      "charoption": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 31,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 31,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/TCE": {
+      "class": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 98,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 98,
+        "unsupported": 0
+      },
+      "feat": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 84,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 84,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "optionalfeature": {
+        "total": 47,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 47,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 60,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 60,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 260,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 260,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/UATHEMYSTICCLASS": {
+      "class": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "classFeature": {
+        "total": 23,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 23,
+        "unsupported": 0
+      },
+      "psionic": {
+        "total": 52,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 52,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 36,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 36,
+        "unsupported": 0
+      }
+    },
+    "kiwee/CM": {
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/FRAIF": {
+      "disease": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/OOW": {
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/TFTYP": {
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 23,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 23,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/WDMM": {
+      "disease": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      }
+    },
+    "kiwee/FTD": {
+      "feat": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 435,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 435,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 18,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 18,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 7,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 7,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 12,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 12,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PSK": {
+      "feat": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subclass": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subclassFeature": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PSX": {
+      "feat": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "item": {
+        "total": 50,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 50,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AITFR-AVT": {
+      "item": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AITFR-THP": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AUD": {
+      "item": {
+        "total": 62,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 62,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AZFYT": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/BAM": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/COA": {
+      "item": {
+        "total": 103,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 103,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/COS": {
+      "item": {
+        "total": 14,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 14,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 17,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 17,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/CRCOTN": {
+      "item": {
+        "total": 129,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 129,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 9,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 9,
+        "unsupported": 0
+      }
+    },
+    "kiwee/DC": {
+      "item": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/DITLCOT": {
+      "item": {
+        "total": 11,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 11,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/EET": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/HAT-LMI": {
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      }
+    },
+    "kiwee/HFTT": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/HOTB": {
+      "item": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/IMR": {
+      "item": {
+        "total": 11,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 11,
+        "unsupported": 0
+      }
+    },
+    "kiwee/JTTRC": {
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      }
+    },
+    "kiwee/KFTGV": {
+      "item": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/LLK": {
+      "item": {
+        "total": 46,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 46,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "spell": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/LMOP": {
+      "item": {
+        "total": 5,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 5,
+        "unsupported": 0
+      }
+    },
+    "kiwee/LOX": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/MCV2DC": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/MM": {
+      "item": {
+        "total": 370,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 370,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 21,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 21,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "sense": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/NF": {
+      "item": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      }
+    },
+    "kiwee/NRH-AT": {
+      "item": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/NRH-TLT": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/OGA": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PABTSO": {
+      "item": {
+        "total": 23,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 23,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "reward": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/POTA": {
+      "item": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/QFTIS": {
+      "item": {
+        "total": 11,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 11,
+        "unsupported": 0
+      }
+    },
+    "kiwee/RMBRE": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/ROT": {
+      "item": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/ROTOS": {
+      "item": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/SDW": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/SKT": {
+      "item": {
+        "total": 20,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 20,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/TTP": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/UTHFTLH": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/VEOR": {
+      "item": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      }
+    },
+    "kiwee/VGM": {
+      "item": {
+        "total": 26,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 26,
+        "unsupported": 0
+      },
+      "itemGroup": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      },
+      "magicvariant": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 13,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 13,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/WDH": {
+      "item": {
+        "total": 28,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 28,
+        "unsupported": 0
+      }
+    },
+    "kiwee/WTTHC": {
+      "item": {
+        "total": 8,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 8,
+        "unsupported": 0
+      }
+    },
+    "kiwee/XMM": {
+      "item": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "language": {
+        "total": 15,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 15,
+        "unsupported": 0
+      }
+    },
+    "kiwee/XMTS": {
+      "item": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PSD": {
+      "language": {
+        "total": 3,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 3,
+        "unsupported": 0
+      },
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/AWM": {
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/EEPC": {
+      "race": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/LR": {
+      "race": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/MPMM": {
+      "race": {
+        "total": 40,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 40,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 4,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 4,
+        "unsupported": 0
+      }
+    },
+    "kiwee/PSZ": {
+      "race": {
+        "total": 6,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 6,
+        "unsupported": 0
+      },
+      "subrace": {
+        "total": 10,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 10,
+        "unsupported": 0
+      }
+    },
+    "kiwee/DIP": {
+      "reward": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/DRDE": {
+      "reward": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/HFSTCM": {
+      "reward": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/TOFW": {
+      "reward": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/TOR": {
+      "reward": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/VNOTEE": {
+      "reward": {
+        "total": 2,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 2,
+        "unsupported": 0
+      }
+    },
+    "kiwee/ESK": {
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    },
+    "kiwee/XSCREEN": {
+      "variantrule": {
+        "total": 1,
+        "automated": 0,
+        "noMechanics": 0,
+        "needsAnnotation": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  "unsupportedByFamily": {
+    "proficiency": 365,
+    "startingEquipment": 170,
+    "weapon": 429,
+    "structuredField": 7145,
+    "equipment": 322,
+    "ability": 199,
+    "featureProgression": 24,
+    "multiclassing": 18,
+    "classTable": 43,
+    "additionalSpells": 187,
+    "attunement": 925,
+    "equipmentGrant": 161,
+    "charges": 111,
+    "defenses": 62,
+    "normalization": 1,
+    "movement": 235,
+    "checks": 4,
+    "inheritance": 8,
+    "equipmentBundle": 171,
+    "scripts": 104,
+    "resources": 271,
+    "size": 62,
+    "spellCastingMetadata": 1394,
+    "spellDuration": 1393,
+    "spellMetadata": 1,
+    "featGrant": 5,
+    "inlineChoice": 3
+  },
+  "diagnostics": [
+    {
+      "key": "kiwee-homebrew:subclassfeature:dragonhorse2026:channel%20divinity%3A%20harness%20divine%20power:xphb:paladin:dragonhorse2026:oath%20of%20iron%20cavalry:3:::",
+      "code": "duplicate-conflict",
+      "files": [
+        "unresolved-434854616ea0b9c95ead"
+      ]
+    },
+    {
+      "key": "kiwee-homebrew:optionalfeature:grimhollowpg24:darkvision::::::::",
+      "code": "duplicate-conflict",
+      "files": [
+        "unresolved-5124d5a0c0161ced02b7"
+      ]
+    },
+    {
+      "key": "kiwee-homebrew:item:dragonhorse2026:unresolved-8978a0fdd57ca5e587b6::::::::",
+      "code": "identity-unresolved",
+      "files": [
+        "unresolved-434854616ea0b9c95ead"
+      ]
+    },
+    {
+      "key": "kiwee-homebrew:item:dragonhorse2026:unresolved-034af83a87f9f05bc979::::::::",
+      "code": "identity-unresolved",
+      "files": [
+        "unresolved-434854616ea0b9c95ead"
+      ]
+    },
+    {
+      "key": "kiwee-homebrew:item:dragonhorse2026:unresolved-e0de80a622456bb3e72d::::::::",
+      "code": "identity-unresolved",
+      "files": [
+        "unresolved-434854616ea0b9c95ead"
+      ]
+    }
+  ],
+  "replay": [
+    {
+      "path": "automation.json",
+      "sha256": "0df504955a6af281867ebdb49b0808e8cd0b28b8cac2d0828ec6235ec8092f93",
+      "bytes": 22728711
+    },
+    {
+      "path": "coverage-report.json",
+      "sha256": "93183e7f7410a259f6d35769bc8923bc7e9f6e95e3ebbc4dae6202b534186422",
+      "bytes": 11886986
+    },
+    {
+      "path": "coverage-report.md",
+      "sha256": "0777c5dd5521196ac260f2f4356141e0836599a6c42428c580e80d5620b3e953",
+      "bytes": 42328
+    },
+    {
+      "path": "derivation-diagnostics.json",
+      "sha256": "ab0185b70e16b34fb24019bc8318f869c0158e3983ba537cf6fe4eea9fe3fb36",
+      "bytes": 18940
+    }
+  ],
+  "coreSummary": {
+    "PHB": {
+      "total": 1519,
+      "needsAnnotation": 1519
+    },
+    "XPHB": {
+      "total": 1448,
+      "needsAnnotation": 1448
+    },
+    "DMG": {
+      "total": 1171,
+      "needsAnnotation": 1171
+    },
+    "XDMG": {
+      "total": 2258,
+      "needsAnnotation": 2258
+    }
+  }
+}

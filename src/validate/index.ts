@@ -63,6 +63,8 @@ function recordChecks(record: AutomationRecord, index: Map<string, AutomationRec
     if (recordEdition(record) && recordEdition(target) && recordEdition(record) !== recordEdition(target)) issue(issues, 'edition-reference', location, 'A reference crosses the 2014 and 2024 boundary');
   };
   for (const [i, grant] of (mechanics?.grants || []).entries()) {
+    const progression=grant.choiceProgression?.map(point=>point.level)||[];
+    if(progression.some((level,index)=>index>0&&level<=progression[index-1]))issue(issues,'scaling-order',`${path}/mechanics/grants/${i}/choiceProgression`,'Choice quotas must use unique ascending levels, never additive duplicate grants');
     if (grant.choose?.weights && grant.choose.weights.length !== grant.choose.count) issue(issues, 'choice-weights', `${path}/mechanics/grants/${i}`, 'Weighted choices need one weight per choice');
     if (grant.choose?.from && (new Set(grant.choose.from).size !== grant.choose.from.length || grant.choose.count > grant.choose.from.length)) issue(issues, 'choice-count', `${path}/mechanics/grants/${i}`, 'Choice options must be distinct and satisfy the count');
     if (grant.type === 'spell') {

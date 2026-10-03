@@ -1,0 +1,82 @@
+[
+  {
+    "ENG_name": "Acolyte",
+    "source": "PHB",
+    "skillProficiencies": [
+      {
+        "insight": true,
+        "religion": true
+      }
+    ],
+    "languageProficiencies": [
+      {
+        "anyStandard": 2
+      }
+    ]
+  },
+  {
+    "ENG_name": "Fighter",
+    "source": "XPHB",
+    "proficiency": [
+      "str",
+      "con"
+    ],
+    "startingProficiencies": {
+      "skills": [
+        {
+          "choose": {
+            "from": [
+              "acrobatics",
+              "animal handling",
+              "athletics",
+              "history",
+              "insight",
+              "intimidation",
+              "persuasion",
+              "perception",
+              "survival"
+            ],
+            "count": 2
+          }
+        }
+      ],
+      "weapons": [
+        "简易",
+        "军用"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ],
+      "armorProficiencies": [
+        {
+          "light": true,
+          "medium": true,
+          "heavy": true,
+          "shield": true
+        }
+      ]
+    },
+    "multiclassing": {
+      "proficienciesGained": {
+        "weapons": [
+          "军用"
+        ],
+        "armor": [
+          "light",
+          "medium",
+          "shield"
+        ],
+        "armorProficiencies": [
+          {
+            "light": true,
+            "medium": true,
+            "shield": true
+          }
+        ]
+      }
+    }
+  }
+]

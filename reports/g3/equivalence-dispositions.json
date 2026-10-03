@@ -1,0 +1,21 @@
+[
+  {
+    "identity": "kiwee:subclassfeature:xphb:combat%20superiority:xphb:fighter:xphb:battle%20master:3:::",
+    "family": "resources",
+    "difference": "Foundry dice-pool count is newly derived; dice-roll expression remains explicitly unsupported",
+    "decision": "Implement the typed counter and keep the roll-expression gap visible; do not infer a usable empty system.uses counter"
+  },
+  {
+    "identity": "kiwee:class:xphb:cleric::::::::",
+    "family": "startingEquipment",
+    "path": "startingEquipment/defaultData/0/A",
+    "upstream": [
+      7000
+    ],
+    "legacy": [
+      700
+    ],
+    "difference": "The Web normalizer currently corrects a currency amount from labelled GP prose",
+    "decision": "Preserve the previously validated numeric correction in a reviewed data annotation; do not port prose inference into the protocol executor"
+  }
+]

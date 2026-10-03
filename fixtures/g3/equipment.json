@@ -1,0 +1,34 @@
+[
+  {
+    "ENG_name": "Plate Armor",
+    "source": "PHB",
+    "type": "HA",
+    "ac": 18,
+    "strength": "15",
+    "stealth": true,
+    "weight": 65,
+    "value": 150000
+  },
+  {
+    "ENG_name": "Shield",
+    "source": "PHB",
+    "type": "S",
+    "ac": 2,
+    "weight": 6,
+    "value": 1000
+  },
+  {
+    "ENG_name": "Longsword",
+    "source": "PHB",
+    "type": "M",
+    "weaponCategory": "martial",
+    "property": [
+      "V"
+    ],
+    "dmg1": "1d8",
+    "dmg2": "1d10",
+    "dmgType": "S",
+    "weight": 3,
+    "value": 1500
+  }
+]
