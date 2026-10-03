@@ -333,5 +333,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-classFeature-placeholder-001",
+    "path": "classFeature/PHB-classFeature-placeholder-001.json",
+    "sha256": "ac23d2d9026cfd29a45f8750813a70a7e1afdf631fb18e65ee9470b0af26f539",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:phb:martial%20archetype%20feature:phb:fighter:::7:::",
+      "kiwee:classfeature:phb:ranger%20archetype%20feature:phb:ranger:::7:::",
+      "kiwee:classfeature:phb:arcane%20tradition%20feature:phb:wizard:::10:::",
+      "kiwee:classfeature:phb:druid%20circle%20feature:phb:druid:::10:::",
+      "kiwee:classfeature:phb:roguish%20archetype%20feature:phb:rogue:::17:::",
+      "kiwee:classfeature:phb:sorcerous%20origin%20feature:phb:sorcerer:::18:::",
+      "kiwee:classfeature:phb:bard%20college%20feature:phb:bard:::6:::",
+      "kiwee:classfeature:phb:sacred%20oath%20feature:phb:paladin:::7:::",
+      "kiwee:classfeature:phb:path%20feature:phb:barbarian:::10:::",
+      "kiwee:classfeature:phb:otherworldly%20patron%20feature:phb:warlock:::6:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]

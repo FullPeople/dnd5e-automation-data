@@ -1,0 +1,886 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Martial Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:martial%20archetype%20feature:phb:fighter:::7:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:martial%20archetype%20feature:phb:%E6%88%98%E5%A3%AB:::7:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 72
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ranger Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ranger%20archetype%20feature:phb:ranger:::7:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ranger%20archetype%20feature:phb:%E6%B8%B8%E4%BE%A0:::7:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 89
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Arcane Tradition feature",
+      "classSource": "PHB",
+      "classEngName": "Wizard",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:arcane%20tradition%20feature:phb:wizard:::10:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:arcane%20tradition%20feature:phb:%E6%B3%95%E5%B8%88:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 112
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Druid Circle feature",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:druid%20circle%20feature:phb:druid:::10:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:druid%20circle%20feature:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 64
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Roguish Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:roguish%20archetype%20feature:phb:rogue:::17:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:roguish%20archetype%20feature:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::17:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 94
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Sorcerous Origin feature",
+      "classSource": "PHB",
+      "classEngName": "Sorcerer",
+      "level": 18,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:sorcerous%20origin%20feature:phb:sorcerer:::18:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:sorcerous%20origin%20feature:phb:%E6%9C%AF%E5%A3%AB:::18:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 99
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Bard College feature",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:bard%20college%20feature:phb:bard:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:bard%20college%20feature:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 51
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Sacred Oath feature",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 7,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:sacred%20oath%20feature:phb:paladin:::7:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:sacred%20oath%20feature:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::7:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 82
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Martial Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:martial%20archetype%20feature:phb:fighter:::10:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:martial%20archetype%20feature:phb:%E6%88%98%E5%A3%AB:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 72
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Martial Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 18,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:martial%20archetype%20feature:phb:fighter:::18:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:martial%20archetype%20feature:phb:%E6%88%98%E5%A3%AB:::18:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 72
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Path feature",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:path%20feature:phb:barbarian:::10:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:path%20feature:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 46
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Sorcerous Origin feature",
+      "classSource": "PHB",
+      "classEngName": "Sorcerer",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:sorcerous%20origin%20feature:phb:sorcerer:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:sorcerous%20origin%20feature:phb:%E6%9C%AF%E5%A3%AB:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 99
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Divine Domain feature",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 2,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:divine%20domain%20feature:phb:cleric:::2:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:divine%20domain%20feature:phb:%E7%89%A7%E5%B8%88:::2:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 56
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Arcane Tradition feature",
+      "classSource": "PHB",
+      "classEngName": "Wizard",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:arcane%20tradition%20feature:phb:wizard:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:arcane%20tradition%20feature:phb:%E6%B3%95%E5%B8%88:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 112
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ranger Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 11,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ranger%20archetype%20feature:phb:ranger:::11:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ranger%20archetype%20feature:phb:%E6%B8%B8%E4%BE%A0:::11:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 89
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Druid Circle feature",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:druid%20circle%20feature:phb:druid:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:druid%20circle%20feature:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 64
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Otherworldly Patron feature",
+      "classSource": "PHB",
+      "classEngName": "Warlock",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:otherworldly%20patron%20feature:phb:warlock:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:otherworldly%20patron%20feature:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 105
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Roguish Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 9,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:roguish%20archetype%20feature:phb:rogue:::9:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:roguish%20archetype%20feature:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::9:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 94
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Sorcerous Origin feature",
+      "classSource": "PHB",
+      "classEngName": "Sorcerer",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:sorcerous%20origin%20feature:phb:sorcerer:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:sorcerous%20origin%20feature:phb:%E6%9C%AF%E5%A3%AB:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 99
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Sacred Oath feature",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:sacred%20oath%20feature:phb:paladin:::15:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:sacred%20oath%20feature:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::15:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 82
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Druid Circle feature",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:druid%20circle%20feature:phb:druid:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:druid%20circle%20feature:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 64
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Sacred Oath feature",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 20,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:sacred%20oath%20feature:phb:paladin:::20:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:sacred%20oath%20feature:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::20:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 82
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Arcane Tradition feature",
+      "classSource": "PHB",
+      "classEngName": "Wizard",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:arcane%20tradition%20feature:phb:wizard:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:arcane%20tradition%20feature:phb:%E6%B3%95%E5%B8%88:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 112
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Divine Domain feature",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:divine%20domain%20feature:phb:cleric:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:divine%20domain%20feature:phb:%E7%89%A7%E5%B8%88:::8:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 56
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ranger Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ranger%20archetype%20feature:phb:ranger:::15:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ranger%20archetype%20feature:phb:%E6%B8%B8%E4%BE%A0:::15:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 89
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Roguish Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 13,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:roguish%20archetype%20feature:phb:rogue:::13:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:roguish%20archetype%20feature:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::13:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 94
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Otherworldly Patron feature",
+      "classSource": "PHB",
+      "classEngName": "Warlock",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:otherworldly%20patron%20feature:phb:warlock:::10:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:otherworldly%20patron%20feature:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::10:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 105
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Path Feature",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:path%20feature:phb:barbarian:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:path%20feature:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 46
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Divine Domain feature",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:divine%20domain%20feature:phb:cleric:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:divine%20domain%20feature:phb:%E7%89%A7%E5%B8%88:::6:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 56
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Bard College feature",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:bard%20college%20feature:phb:bard:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:bard%20college%20feature:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 51
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Path feature",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:path%20feature:phb:barbarian:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:path%20feature:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 46
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Otherworldly Patron feature",
+      "classSource": "PHB",
+      "classEngName": "Warlock",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:otherworldly%20patron%20feature:phb:warlock:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:otherworldly%20patron%20feature:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::14:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 105
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Divine Domain feature",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 17,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:divine%20domain%20feature:phb:cleric:::17:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:divine%20domain%20feature:phb:%E7%89%A7%E5%B8%88:::17:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 56
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Martial Archetype feature",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 15,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:martial%20archetype%20feature:phb:fighter:::15:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:martial%20archetype%20feature:phb:%E6%88%98%E5%A3%AB:::15:"
+    ],
+    "verdict": "noMechanics",
+    "reasonCode": "placeholder",
+    "unsupported": [],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-placeholder-001",
+    "evidence": {
+      "page": 72
+    },
+    "notes": "Complete source has one pointer sentence to the already selected subclass feature at this class level, with no numeric, resource, grant, choice quota or stat mechanism. Actual subclassFeature records own the rules and remain separately reviewed; the pointer is not an automatic grant."
+  }
+]
