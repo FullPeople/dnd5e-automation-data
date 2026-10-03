@@ -356,5 +356,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "XDMG-item-001",
+    "path": "item/XDMG-item-001.json",
+    "sha256": "6d1f8cdcc53a1f87af181d2de1ddc5bcb2cc7fe381bf703ff01820f7b003564c",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:item:xdmg:sword%20of%20kas::::::::",
+      "kiwee:item:xdmg:periapt%20of%20proof%20against%20poison::::::::",
+      "kiwee:item:xdmg:staff%20of%20withering::::::::",
+      "kiwee:item:xdmg:revolver%20(enspelled%20weapon%20(level%208))::::::::xdmg%7Crevolver%7Cxdmg%7Censpelled%20weapon%20(level%208)",
+      "kiwee:item:xdmg:scroll%20of%20protection%20(undead)::::::::",
+      "kiwee:item:xdmg:alchemy%20jug::::::::",
+      "kiwee:item:xdmg:sickle%20(nine%20lives%20stealer)::::::::xphb%7Csickle%7Cxdmg%7Cnine%20lives%20stealer",
+      "kiwee:item:xdmg:breastplate%20(mariner's%20armor)::::::::xphb%7Cbreastplate%7Cxdmg%7Cmariner's%20armor",
+      "kiwee:item:xdmg:potion%20of%20speed::::::::",
+      "kiwee:item:xdmg:light%20repeating%20crossbow%20(nine%20lives%20stealer)::::::::oota%7Clight%20repeating%20crossbow%7Cxdmg%7Cnine%20lives%20stealer"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]
