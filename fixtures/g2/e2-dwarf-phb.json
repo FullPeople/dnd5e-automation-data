@@ -1,0 +1,45 @@
+{
+  "identity": {
+    "kind": "race",
+    "source": "PHB",
+    "engName": "Dwarf",
+    "packId": "kiwee",
+    "key": "kiwee:race:phb:dwarf::::::::"
+  },
+  "edition": "2014",
+  "verdict": "automated",
+  "provenance": [
+    {
+      "layer": "structured",
+      "ref": "data/races.json#/race/33"
+    }
+  ],
+  "evidence": {
+    "page": 18
+  },
+  "mechanics": {
+    "modifiers": [
+      {
+        "target": "sense:darkvision",
+        "op": "max",
+        "value": 60
+      },
+      {
+        "target": "resist:poison",
+        "op": "set",
+        "value": true
+      },
+      {
+        "target": "speed.walk",
+        "op": "set",
+        "value": 25
+      },
+      {
+        "target": "con",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  "unsupported": []
+}

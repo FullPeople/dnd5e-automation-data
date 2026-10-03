@@ -1,0 +1,82 @@
+{
+  "identity": {
+    "kind": "feat",
+    "source": "XPHB",
+    "engName": "Magic Initiate; Cleric",
+    "packId": "kiwee",
+    "key": "kiwee:feat:xphb:magic%20initiate%3B%20cleric::::::::"
+  },
+  "edition": "2024",
+  "verdict": "automated",
+  "provenance": [
+    {
+      "layer": "structured",
+      "ref": "data/feats.json#/feat/176/_versions/0"
+    },
+    {
+      "layer": "structured",
+      "ref": "data/class/class-cleric.json#/class/1"
+    },
+    {
+      "layer": "rulePack",
+      "ref": "../dnd-automation-web/docs/AUTOMATION-EXECUTION-PLAN.md:773"
+    }
+  ],
+  "evidence": {
+    "page": 201
+  },
+  "mechanics": {
+    "grants": [
+      {
+        "type": "spell",
+        "choose": {
+          "count": 2,
+          "filter": {
+            "level": 0,
+            "class": "Cleric",
+            "classSource": "XPHB"
+          }
+        },
+        "usage": "free",
+        "ability": {
+          "choose": [
+            "int",
+            "wis",
+            "cha"
+          ]
+        }
+      },
+      {
+        "type": "spell",
+        "choose": {
+          "count": 1,
+          "filter": {
+            "level": 1,
+            "class": "Cleric",
+            "classSource": "XPHB"
+          }
+        },
+        "usage": "slotOrUses",
+        "uses": {
+          "max": {
+            "formula": "1"
+          },
+          "recovery": [
+            {
+              "period": "long",
+              "amount": "all"
+            }
+          ]
+        },
+        "ability": {
+          "choose": [
+            "int",
+            "wis",
+            "cha"
+          ]
+        }
+      }
+    ]
+  },
+  "unsupported": []
+}
