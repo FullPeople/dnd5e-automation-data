@@ -113,5 +113,28 @@
     ],
     "mechanicErrors": 0,
     "decision": "accepted"
+  },
+  {
+    "schemaVersion": 1,
+    "batch": "PHB-classFeature-asi-001",
+    "path": "classFeature/PHB-classFeature-asi-001.json",
+    "sha256": "31ddbb21bba2de11d70ba950e8ccca0c43a592cfe7c740c770a8bb67e9a85b93",
+    "inputLock": "f0bd87826cc219b1ddb7dd838a5539d16d98a129ca1331f6a2e8381a7333017f",
+    "reviewedBy": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "sampleKeys": [
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:barbarian:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:bard:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:cleric:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:druid:::16:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::14:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:monk:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:paladin:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:ranger:::16:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::12:::",
+      "kiwee:classfeature:phb:ability%20score%20improvement:phb:sorcerer:::16:::"
+    ],
+    "mechanicErrors": 0,
+    "decision": "accepted"
   }
 ]

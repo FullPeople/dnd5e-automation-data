@@ -1,0 +1,2302 @@
+[
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:barbarian:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Barbarian level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:barbarian:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Barbarian level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:barbarian:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Barbarian level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:barbarian:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Barbarian level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Barbarian",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:barbarian:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 46,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Barbarian level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:bard:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 51,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Bard level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:bard:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 51,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Bard level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:bard:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 51,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Bard level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:bard:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 51,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Bard level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Bard",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:bard:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 51,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Bard level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:cleric:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 56,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Cleric level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:cleric:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 56,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Cleric level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:cleric:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 56,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Cleric level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:cleric:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 56,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Cleric level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Cleric",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:cleric:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 56,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Cleric level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:druid:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 64,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Druid level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:druid:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 64,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Druid level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:druid:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 64,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Druid level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:druid:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 64,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Druid level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Druid",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:druid:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 64,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Druid level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 14,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::14:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::14:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 14, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 6,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::6:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::6:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 6, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Fighter",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:fighter:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 72,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Fighter level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Monk",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:monk:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 76,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Monk level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Monk",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:monk:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 76,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Monk level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Monk",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:monk:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 76,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Monk level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Monk",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:monk:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 76,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Monk level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Monk",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:monk:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 76,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Monk level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:paladin:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 82,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Paladin level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:paladin:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 82,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Paladin level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:paladin:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 82,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Paladin level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:paladin:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 82,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Paladin level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Paladin",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:paladin:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 82,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Paladin level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:ranger:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 89,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Ranger level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:ranger:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 89,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Ranger level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:ranger:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 89,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Ranger level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:ranger:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 89,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Ranger level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Ranger",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:ranger:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 89,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Ranger level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 10,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::10:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::10:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 94,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Rogue level 10, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 94,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Rogue level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 94,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Rogue level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 19,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::19:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::19:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 94,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Rogue level 19, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 4,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::4:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::4:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 94,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Rogue level 4, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Rogue",
+      "level": 8,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:rogue:::8:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::8:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 94,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Rogue level 8, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Sorcerer",
+      "level": 12,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:sorcerer:::12:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::12:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 99,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Sorcerer level 12, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  },
+  {
+    "identity": {
+      "kind": "classFeature",
+      "source": "PHB",
+      "engName": "Ability Score Improvement",
+      "classSource": "PHB",
+      "classEngName": "Sorcerer",
+      "level": 16,
+      "packId": "kiwee",
+      "key": "kiwee:classfeature:phb:ability%20score%20improvement:phb:sorcerer:::16:::"
+    },
+    "edition": "2014",
+    "entryIds": [
+      "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::16:"
+    ],
+    "verdict": "unsupported",
+    "overrides": [
+      "structured"
+    ],
+    "overrideReason": "Identify the exact allocation alternatives, feature-specific score ceiling and optional DM-approved feat substitution without introducing an uncapped automatic ability grant.",
+    "unsupported": [
+      {
+        "family": "abilityAllocation",
+        "code": "one-plus2-or-two-distinct-plus1-choice-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "abilityScoreCeiling",
+        "code": "feature-specific-score20-cap-unrepresented",
+        "ref": "entries/0"
+      },
+      {
+        "family": "featSubstitution",
+        "code": "dm-approved-alternative-feat-selection-unrepresented",
+        "ref": "entries/1"
+      }
+    ],
+    "reviewer": "model:Codex-main",
+    "reviewedAt": "2026-10-03",
+    "batch": "PHB-classFeature-asi-001",
+    "evidence": {
+      "page": 99,
+      "quote": "you can't increase an ability score above 20 using this feature."
+    },
+    "notes": "At Sorcerer level 16, choose one score +2 or two distinct scores +1, with score ceiling 20 for this feature. DM-permitted feat replacement instead, not additionally. Current abilityScore grants cannot enforce this feature-specific ceiling; no unsafe unconditional increase is declared."
+  }
+]
