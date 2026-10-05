@@ -14,6 +14,11 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test public progress export (six regression tests)
+        run: python -B -m unittest discover -s scripts -p test_export_progress_status.py -v
       - run: npm ci
       - run: npm test
       - run: npm run build
