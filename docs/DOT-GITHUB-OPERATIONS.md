@@ -1,0 +1,17 @@
+# dot: GitHub operations and Data to Web release boundary
+
+Allowed repositories are FullPeople/DND-card-web (source main, server target card, Environment production-card), FullPeople/obr-suite (source dev, server target suite-dev, Environment production-suite-dev), and FullPeople/dnd5e-automation-data (source main, authoritative public progress export). FUS and other server targets are excluded.
+
+Use the existing ChatGPT/Codex GitHub integration authenticated as FullPeople. Do not copy local authentication into a cloud task or create another PAT or SSH identity. Pull/read exact refs, push isolated preparation branches normally, and merge reviewed PRs only after their checks pass, with an expected head SHA. Never force-push, bypass branch protection, or approve an Environment deployment for the user.
+
+Data has no direct server deployment target. Its existing .github/workflows/build.yml validates code and, on workflow_dispatch, generates and validates IR plus Actions artifacts. Preserve both validate and pipeline jobs. No deployment SSH key belongs in this repository.
+
+The existing Web integration consumes reports/progress/automation-rule-status.json. Web's generated copy is docs/data/automation-rule-status.json, with docs/data/automation-rule-status.lock.json pinning the complete Data export commit, source commit, IR hash and artifact SHA256. The current accepted export revision is 52ddf4267ef8168f3904a418d1542dc63d9996e9; the bytes hash to 7ee119297b4a93c1193f52e35c3fa8dc5e819dabd71ee508de5747848c68759a. This publishes progress information; it does not prove whole-rule execution or current production usability.
+
+A future Data release must pass full Data CI, commit the immutable validated public export, then propose a Web adoption PR using tools/importAutomationRuleStatus.mjs with the verified export commit and branch. Web verifies the committed blob before changing its generated copy/lock, reruns all Web gates, and only then requests its fixed server publisher through production-card. If Suite is included, pin the exact accepted Web source and run all Suite/cross-window/resource gates before its separate Environment approval. Do not adopt a different Data revision merely because documentation changed.
+
+Current stage: one real read-only Suite SSH/OIDC preflight has succeeded; Web final-SHA CI/preflight is pending. No production write grant, continuous deployment trigger, Data server account or Data SSH credential has been created. The new account only exposes a fixed read-only entry. Candidate production artifact validation, a reviewed fixed production/rollback adapter and explicit production-target/trigger confirmation remain required.
+
+The installed platform connection already covers all repositories; this task has not changed its global selection. The operational allowlist above is fixed for this project, and server authorization is independently enforced. Read/write/PR operations and the first deployment trigger must be tested through dot's actual existing platform authentication. Available connector tools do not currently expose first workflow_dispatch; Actions rerun alone does not certify first dispatch. A credential-free fixed IssueOps adapter may be prepared for separate review if dot's cloud interface cannot dispatch directly. Do not silently enable issue/push-based production triggers.
+
+Read-only checks and source operation receipts are evidence of their specific path, not a declaration that automatic production deployment is complete.
