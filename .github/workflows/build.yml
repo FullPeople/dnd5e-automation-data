@@ -20,6 +20,17 @@ jobs:
       - name: Test public progress export (six regression tests)
         run: python -B -m unittest discover -s scripts -p test_export_progress_status.py -v
       - run: npm ci
+      - name: Read audited consumer revision
+        id: consumer
+        run: node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync("reports/progress/runtime-coverage.json"));if(!/^[a-f0-9]{40}$/.test(r.consumer.revision))throw Error("Invalid consumer revision");fs.appendFileSync(process.env.GITHUB_OUTPUT,"revision="+r.consumer.revision+"\n")'
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: ${{ steps.consumer.outputs.revision }}
+          path: .cache/web-consumer
+          persist-credentials: false
+      - name: Test coverage against real pinned consumer functions
+        run: node --experimental-strip-types scripts/test_runtime_probe.ts .cache/web-consumer
       - run: npm test
       - run: npm run build
   pipeline:
