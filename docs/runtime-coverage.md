@@ -36,7 +36,7 @@ The count covers the observed supported behavior and does not certify complete
 semantics, encounter settlement, or every possible condition of each rule.
 
 CI runs the six existing Python export regressions, validates the whole public
-ledger and source aggregates, and runs seven positive/negative scenarios against
+ledger and source aggregates, and runs eight positive/negative scenarios against
 the exact pinned consumer code. CI does not claim to replay the private cache.
 The Web build must match every audited consumer module hash and verify the
 committed Data blob before displaying the new count.

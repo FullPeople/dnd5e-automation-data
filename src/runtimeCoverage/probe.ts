@@ -14,10 +14,18 @@ export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:an
   const base=api.newCharacter(edition);base.id='audit';base.automation=api.newAutomationState();base.profile.enabledSources=sources;base.profile.optional.multiclass=true;
   base.training={armor:'轻甲、中甲、重甲、盾牌',weapons:'简易武器、军用武器'};
   for(const parent of parents)base.selections.push({id:'parent:'+parent.id,entry:parent,level,quantity:1,equipped:false});
-  api.syncAutoResources(base);
+  if(parents.length){
+   api.syncFeatures(base,catalog);
+   // The candidate may already be a declared class grant. Compare one owned
+   // occurrence, removing its descendants rather than counting duplicate copies.
+   const removed=new Set(base.selections.filter((s:any)=>s.entry.id===entry.id).map((s:any)=>s.id));
+   for(let changed=true;changed;){changed=false;for(const s of base.selections)if(s.parentId&&removed.has(s.parentId)&&!removed.has(s.id)){removed.add(s.id);changed=true;}}
+   base.selections=base.selections.filter((s:any)=>!removed.has(s.id));
+  }
+  api.syncAutoResources(base);if(parents.length)api.syncSourceSpells(base,catalog);
   const card=structuredClone(base),owner={id:'candidate',entry,level,quantity:1,equipped:entry.kind==='item',attuned:true};card.selections.push(owner);
   if(!api.selectionAllowed(card,entry))continue;
-  if(root)api.syncFeatures(card,catalog);api.syncAutoResources(card);if(entry.raw.additionalSpells!=null||root)api.syncSourceSpells(card,catalog);
+  if(root||parents.length)api.syncFeatures(card,catalog);api.syncAutoResources(card);if(entry.raw.additionalSpells!=null||root||parents.length)api.syncSourceSpells(card,catalog);
   const before=stats(api.evaluate(base)),after=stats(api.evaluate(card));
   if(changed(before,after))return {kind:'calculated-sheet',level,edition,before,after};
   const rb=resources(base),ra=resources(card);if(changed(rb,ra))return {kind:'calculated-resource',level,edition,before:rb,after:ra};

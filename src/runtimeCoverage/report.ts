@@ -12,7 +12,7 @@ export function validateCoverage(value:unknown):CoverageReport {
  const require=(fact:unknown,message:string)=>{if(!fact)throw Error('Invalid runtime coverage: '+message);};
  require(v?.schemaVersion===1&&Number.isFinite(Date.parse(v.updatedAt))&&v.definition==='at least one current calculation or usable choice; remaining effects are manual','identity/definition');
  require(v.consumer?.repository==='FullPeople/DND-card-web'&&sha(v.consumer.revision,40)&&sha(v.snapshotSha256),'version identity');
- require(Array.isArray(v.consumer.modules)&&v.consumer.modules.length>0&&v.consumer.modules.every(m=>/^src\/[\w./-]+\.(ts|json)$/.test(m.path)&&!m.path.split('/').includes('..')&&sha(m.sha256))&&new Set(v.consumer.modules.map(m=>m.path)).size===v.consumer.modules.length,'consumer modules');
+ require(Array.isArray(v.consumer.modules)&&v.consumer.modules.length>0&&v.consumer.modules.every(m=>/^src\/[\w./-]+\.(tsx?|json)$/.test(m.path)&&!m.path.split('/').includes('..')&&sha(m.sha256))&&new Set(v.consumer.modules.map(m=>m.path)).size===v.consumer.modules.length,'consumer modules');
  require(Array.isArray(v.inputs)&&v.inputs.length>0&&v.inputs.every(i=>/^https:\/\/(5e|homebrew)\.kiwee\.top\//.test(i.url)&&sha(i.sha256))&&new Set(v.inputs.map(i=>i.url)).size===v.inputs.length,'existing input hashes');
  require(['total','reviewed','implemented','unresolved','unavailable'].every(k=>n(v[k as keyof CoverageReport]))&&v.reviewed<=v.total&&v.implemented<=v.total,'counts');
  require(Array.isArray(v.records)&&v.records.length===v.total&&new Set(v.records.map(r=>r.id)).size===v.total,'one record per identity');
