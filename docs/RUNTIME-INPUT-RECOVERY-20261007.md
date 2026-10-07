@@ -8,4 +8,6 @@ The producer now includes `src/ui/Overview.tsx` among the observed UI modules. A
 
 Validation: complete audit, 229 original input checks, 49 actual consumer modules, eight real-function probe scenarios and six public-export regression tests. The test/build logs and cache inventory are retained in the isolated integration evidence directory. Source-only fixtures do not establish acceptance in a real Owlbear room or on a physical device.
 
+Local Data tests also pass: 318 Vitest cases and 14 Node cases, plus TypeScript build. Eleven existing historical G3 equivalence cases require the immutable older Web baseline and are conditional; they do not replace this batch's complete consumer audit. First-run Windows failures were retained. The fixes use `fileURLToPath` for source roots and `pathToFileURL` for dynamic imports, invoke the same Node CLI directly, and exercise real directory junctions on Windows and file symlinks on Linux. No hash check or negative-path test is skipped.
+
 Recovery: retain the preceding Data commit 9acd4d5e7c5bed9cf34150db4319a7aeec6751e8 and the Web runtime lock pointing to 0ac0520dae0a81ad15be0c53eac395d21a70230f. Revert this batch as a coordinated Data/Web change; an old ledger is intentionally rejected by the new consumer bytes until its matching Web source is restored.
