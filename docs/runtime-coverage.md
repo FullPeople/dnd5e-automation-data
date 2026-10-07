@@ -36,7 +36,13 @@ The count covers the observed supported behavior and does not certify complete
 semantics, encounter settlement, or every possible condition of each rule.
 
 CI runs the six existing Python export regressions, validates the whole public
-ledger and source aggregates, and runs eight positive/negative scenarios against
-the exact pinned consumer code. CI does not claim to replay the private cache.
+ledger and source aggregates, and verifies the exact checked-out revision and
+every audited module's working bytes and Git blob before running eight
+positive/negative scenarios against the pinned consumer code. The byte checker
+rejects missing files, symlinks, unsafe/duplicate paths and modified working
+files; it neither writes the ledger nor needs the original input cache.
+Run it locally with `node --experimental-strip-types
+scripts/verify_runtime_consumer.ts /path/to/pinned-web`.
+CI does not claim to replay the private cache.
 The Web build must match every audited consumer module hash and verify the
 committed Data blob before displaying the new count.
