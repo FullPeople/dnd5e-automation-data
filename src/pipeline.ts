@@ -2,6 +2,7 @@ import {readFile,mkdir,writeFile,mkdtemp,rename,rm} from 'node:fs/promises';
 import {resolve,dirname,join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {deriveFiles} from './derive/index.ts';
 import {fetchCorpus} from './fetch/index.ts';
 import {applyOverlays,readOverlayBatches} from './overlay/index.ts';
@@ -18,7 +19,7 @@ export async function pipeline(options:{cache:string;out:string;overlay:string;o
  try{
   const derived=await deriveFiles(options.cache,stage,manifest),batches=await readOverlayBatches(options.overlay),applied=applyOverlays(derived.envelope,batches);
   const envelope=applied.envelope;
-  let sourceCommit='unpublished';try{sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:resolve(new URL('..',import.meta.url).pathname),encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
+  let sourceCommit='unpublished';try{sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:fileURLToPath(new URL('..',import.meta.url)),encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
   const sourceUrl=`https://github.com/FullPeople/dnd5e-automation-data/raw/${sourceCommit}/overlay/`;
   for(const batch of batches)envelope.versionLock.inputs.push({namespace:'automation-overlay',path:`overlay/${batch.review.path}`,role:'catalog',url:sourceUrl+batch.review.path,sha256:batch.review.sha256,bytes:batch.byteCount!});
   try{const bytes=await readFile(join(options.overlay,'reviews.json'));envelope.versionLock.inputs.push({namespace:'automation-overlay',path:'overlay/reviews.json',role:'index',url:sourceUrl+'reviews.json',sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length});}catch(error:any){if(error.code!=='ENOENT')throw error;}

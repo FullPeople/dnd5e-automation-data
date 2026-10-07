@@ -29,6 +29,8 @@ jobs:
           ref: ${{ steps.consumer.outputs.revision }}
           path: .cache/web-consumer
           persist-credentials: false
+      - name: Verify audited consumer revision and actual module bytes
+        run: node --experimental-strip-types scripts/verify_runtime_consumer.ts .cache/web-consumer
       - name: Test coverage against real pinned consumer functions
         run: node --experimental-strip-types scripts/test_runtime_probe.ts .cache/web-consumer
       - run: npm test
