@@ -5,6 +5,20 @@ const sourceCache=new WeakMap<any[],any[]>();
 const stats=(d:any)=>({abilities:d.abilities,ac:d.ac,maxHp:d.maxHp,speed:d.speed,initiative:d.initiative,passive:d.passive,skills:Object.fromEntries(Object.entries(d.skills).map(([k,v]:any)=>[k,[v.value,v.proficient,v.expertise]])),saves:d.saves});
 const resources=(c:any)=>Object.fromEntries(Object.entries(c.runtime.resources).filter(([,r]:any)=>r.automatic||r.featureGrant).map(([k,r]:any)=>[k,r.max]));
 const changed=(a:unknown,b:unknown)=>JSON.stringify(a)!==JSON.stringify(b);
+/** Dedup may move a source feature's filter to its explicitly declared class
+ * progression. Attribute only the canonical alias of this candidate filter;
+ * unrelated choices on the parent class are never witnesses for this record.
+ */
+export function candidateWitnessChoices(card:any,choices:any[]){
+ const candidate=card.selections.find((s:any)=>s.id==='candidate'),parent=candidate?.parentId&&card.selections.find((s:any)=>s.id===candidate.parentId);
+ const ref=candidate?.grantKey?.startsWith('ref:')?candidate.grantKey.slice(4):undefined;
+ const at=ref?Number(ref.split('|')[3]):NaN;
+ const declared=Array.isArray(parent?.entry.raw.classFeatures)&&parent.entry.raw.classFeatures.some((raw:any)=>(typeof raw==='string'?raw:raw?.classFeature)===ref);
+ const exactParent=!!candidate&&candidate.entry.kind==='feature'&&candidate.entry.raw._category==='classFeature'&&parent?.entry.kind==='class'&&declared&&
+  Number.isInteger(at)&&at>=1&&at<=20&&Number.isInteger(parent.level)&&parent.level>=at&&parent.level<=20&&candidate.entry.raw.level===at&&
+  candidate.entry.source===parent.entry.source&&(candidate.entry.raw.classSource||'PHB')===parent.entry.source&&[parent.entry.name,parent.entry.english].includes(candidate.entry.raw.className);
+ return choices.filter(q=>q.ownerId==='candidate'||exactParent&&q.ownerId===parent.id&&q.sourceProgression==='feat'&&Array.isArray(q.duplicateChoiceIds)&&q.duplicateChoiceIds.some((id:any)=>typeof id==='string'&&id.startsWith('candidate:filter:')));
+}
 export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:any[]):RuntimeWitness|null {
  let sources=sourceCache.get(catalog);if(!sources){sources=[...new Set(catalog.map(e=>e.source))];sourceCache.set(catalog,sources);}
  const root=['class','subclass','race','background'].includes(entry.kind);
@@ -40,7 +54,7 @@ export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:an
    api.syncSourceSpells(trial,catalog);const delivered=trial.selections.filter((s:any)=>s.parentId==='candidate'&&s.grantKey?.startsWith('source-spell:'));
    if(delivered.length)return {kind:'source-spell-choice',level,edition,before:[],after:delivered.map((s:any)=>s.entry.id).sort()};
   }
-  for(const choice of api.sheetChoices(card,catalog).filter((q:any)=>q.ownerId==='candidate'&&!q.restricted)){
+  for(const choice of candidateWitnessChoices(card,api.sheetChoices(card,catalog)).filter((q:any)=>!q.restricted)){
    for(const option of choice.options.filter((o:any)=>!o.unavailable)){
     const trial=structuredClone(card);try{
      if(choice.channel==='equipment')api.claimStartingEquipment(trial,choice.id,option.value,catalog);
