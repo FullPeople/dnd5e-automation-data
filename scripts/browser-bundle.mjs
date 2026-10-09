@@ -22,7 +22,7 @@ async function compiled(exports){
  const names=match[1].split(',').map(name=>name.trim());if(names.some(name=>!Object.hasOwn(exports,name)))throw Error('Unexpected compiled validator export');
  return code.slice(0,match.index)+`\nreturn {${names.join(',')}};\n`;
 }
-const withoutImports=text=>text.replace(/^import[^\n]*;\n/gm,'');
+const withoutImports=text=>text.replace(/^import[^\r\n]*;\r?\n/gm,'');
 const identity=await readFile(join(root,'src/identity.ts'),'utf8'),protocol=withoutImports(await readFile(join(root,'src/protocol.ts'),'utf8')),formula=await readFile(join(root,'src/validate/formula.ts'),'utf8');
 let semantic=await readFile(join(root,'src/validate/index.ts'),'utf8');
 const start=semantic.indexOf('// Conditional required checks'),end=semantic.indexOf('const bodyFields');if(start<0||end<start)throw Error('Semantic adapter anchor changed');
