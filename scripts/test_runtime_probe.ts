@@ -4,6 +4,7 @@ import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import {probeEntry} from '../src/runtimeCoverage/probe.ts';
+import {Worker} from 'node:worker_threads';
 const web=process.argv[2];if(!web)throw Error('Supply pinned Web checkout');mkdirSync('.cache',{recursive:true});
 const path=resolve('.cache/probe-test.mjs');await buildConsumerAdapter(web,path,false);const api=await import(pathToFileURL(path).href);
 const entry=(id:string,kind:string,raw:any,entries:any[]=[])=>({id,kind,name:id,english:id,source:'PHB',packId:'authored',revision:'fixture',edition:'2014',raw,entries});
@@ -28,4 +29,10 @@ const emptyChild=entry('empty-child','subclass',{className:'Parent',classSource:
 const contextual=[...catalog,parent,parentFeature,emptyChild];
 const calibration=api.newCharacter('2014');calibration.profile.enabledSources=['PHB'];calibration.automation=api.newAutomationState();calibration.selections=[{id:'parent',entry:parent,level:1,quantity:1,equipped:false}];api.syncFeatures(calibration,contextual);api.syncAutoResources(calibration);assert.ok(Object.values(calibration.runtime.resources).some((r:any)=>r.featureGrant&&r.max===3),'The parent context must actually contain an automatic feature resource');
 assert.equal(probeEntry(api,emptyChild,contextual,[parent]),null);
+const worker=new Worker(new URL('../src/runtimeCoverage/worker.ts',import.meta.url),{workerData:{adapter:path,catalog:contextual},execArgv:['--experimental-strip-types']});
+try{for(const [index,item] of contextual.entries()){
+ const parents=item===emptyChild?[parent]:[],expected=probeEntry(api,item,contextual,parents);
+ const actual=await new Promise<any>((resolve,reject)=>{worker.once('message',resolve);worker.once('error',reject);worker.postMessage({index,entry:item.id,parents:parents.map(row=>row.id)});});
+ assert.equal(actual.error,undefined);assert.equal(actual.index,index);assert.deepEqual(actual.witness,expected,'Parallel probes must return the exact real-consumer witness.');
+}}finally{await worker.terminate();}
 console.log('Runtime probe: 8 real-consumer positive/negative scenarios passed.');

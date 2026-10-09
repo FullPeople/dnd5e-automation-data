@@ -3,6 +3,7 @@ import {join,resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {Worker} from 'node:worker_threads';
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import {context,identity as provisional} from '../src/inventory/identity.ts';
 import {createIdentity} from '../src/identity.ts';
@@ -32,14 +33,26 @@ add(equipment,'combined-existing-cache','kiwee');add(equipment,'combined-existin
 const entries=[...catalog.values()],byIdentity=new Map<string,any>();
 for(const e of entries){const pending=provisional(e.raw._category,e.raw,ctx,e.packId);const alias:any=aliasMap.get(pending.key);if(alias)pending.engName=alias.engName;if(pending.unresolved.some((field:string)=>field!=='engName'||!alias))continue;const {key,unresolved,...fields}=pending;try{byIdentity.set(createIdentity({...fields,packId:e.packId}).key,e);}catch{}}
 const matched=snapshot.records.filter((r:any)=>byIdentity.has(r.id));console.log(JSON.stringify({catalog:entries.length,total:snapshot.records.length,matched:matched.length,unmatched:snapshot.records.filter((r:any)=>!byIdentity.has(r.id)).map((r:any)=>({id:r.id,kind:r.identity.kind})).slice(0,12)}));
+const parallel=Number(process.env.RUNTIME_COVERAGE_WORKERS||1);
+if(!Number.isInteger(parallel)||parallel<1||parallel>4)throw Error('Runtime coverage workers must be 1..4');
+let witnesses:(ReturnType<typeof probeEntry>)[]|undefined;
+if(parallel>1){
+ const workers=Array.from({length:parallel},()=>new Worker(new URL('../src/runtimeCoverage/worker.ts',import.meta.url),{workerData:{adapter,catalog:entries},execArgv:['--experimental-strip-types']}));
+ witnesses=new Array(snapshot.records.length);let next=0,done=0;
+ try{await Promise.all(workers.map(worker=>new Promise<void>((resolve,reject)=>{
+  const send=()=>{if(next===snapshot.records.length){resolve();return;}const index=next++,row=snapshot.records[index],e=byIdentity.get(row.id),parent=e?.raw.className&&entries.find(p=>p.kind==='class'&&p.source===(e.raw.classSource||'PHB')&&[p.name,p.english].includes(e.raw.className));worker.postMessage({index,entry:e?.id,parents:parent?[parent.id]:[]});};
+  worker.on('error',reject);worker.on('exit',code=>{if(code!==0)reject(Error('Runtime coverage worker exited '+code));});
+  worker.on('message',({index,witness,error})=>{if(error){reject(Error(error));return;}witnesses![index]=witness;if(++done%1000===0)console.log('parallel completed',done);send();});send();
+ })));}finally{await Promise.all(workers.map(worker=>worker.terminate()));}
+}
 const records=[];let at=0;
-for(const row of snapshot.records){const e=byIdentity.get(row.id),parents:any[]=[];if(e?.raw.className){const parent=entries.find(p=>p.kind==='class'&&p.source===(e.raw.classSource||'PHB')&&[p.name,p.english].includes(e.raw.className));if(parent)parents.push(parent);}
- const witness=e?probeEntry(api,e,entries,parents):null;records.push({id:row.id,source:row.source,reviewed:row.reviewed,status:e?(witness?'implemented':'manual'):'unavailable',...(witness?{witness}:{})});if(++at%1000===0)console.log(at,records.filter(r=>r.status==='implemented').length);
+for(const row of snapshot.records){if(process.env.RUNTIME_COVERAGE_TRACE)console.error(JSON.stringify({at:at+1,id:row.id}));const e=byIdentity.get(row.id),parents:any[]=[];if(e?.raw.className){const parent=entries.find(p=>p.kind==='class'&&p.source===(e.raw.classSource||'PHB')&&[p.name,p.english].includes(e.raw.className));if(parent)parents.push(parent);}
+ const witness=witnesses?witnesses[at]:e?probeEntry(api,e,entries,parents):null;records.push({id:row.id,source:row.source,reviewed:row.reviewed,status:e?(witness?'implemented':'manual'):'unavailable',...(witness?{witness}:{})});if(++at%1000===0)console.log(at,records.filter(r=>r.status==='implemented').length);
 }
 const sha=(v:Buffer|string)=>createHash('sha256').update(v).digest('hex');
 const sources=snapshot.sources.map((s:any)=>{const rows=records.filter(r=>r.source===s.id);return {...s,total:rows.length,reviewed:rows.filter(r=>r.reviewed).length,implemented:rows.filter(r=>r.status==='implemented').length,unresolved:rows.filter(r=>r.status==='unresolved').length};}).filter((s:any)=>s.total);
 const modules=Object.keys(bundle.metafile!.inputs).map(p=>resolve(p)).filter(p=>p.replaceAll('\\','/').startsWith(resolve(webRoot).replaceAll('\\','/')+'/src/')).map(p=>({path:p.slice(resolve(webRoot).length+1).replaceAll('\\','/'),sha256:sha(readFileSync(p))})).sort((a,b)=>a.path.localeCompare(b.path));
-for(const path of ['src/ui/App.tsx','src/ui/AutomationPanel.tsx','src/ui/ChoiceWorkspace.tsx','src/ui/Overview.tsx','src/ui/SheetChoicesContext.ts','src/ui/SourceSpellControls.tsx'])if(!modules.some(m=>m.path===path))modules.push({path,sha256:sha(readFileSync(join(webRoot,path)))});
+for(const path of ['src/ui/App.tsx','src/ui/AutomationPanel.tsx','src/ui/ChoiceWorkspace.tsx','src/ui/Overview.tsx','src/ui/SheetChoicesContext.ts','src/ui/SourceSpellControls.tsx','src/ui/ClassChoiceRecords.tsx','src/ui/FeaturePanel.tsx','src/ui/choiceCatalog.ts','src/ui/entryDragIntent.ts','src/core/validation.ts','src/core/quickbar.ts','src/core/resourceWidgets.ts','src/core/automation/classChoiceEvidence.json'])if(!modules.some(m=>m.path===path))modules.push({path,sha256:sha(readFileSync(join(webRoot,path)))});
 for(const module of modules){const blob=execFileSync('git',['--no-replace-objects','cat-file','blob','HEAD:'+module.path],{cwd:webRoot,maxBuffer:16*1024*1024});if(sha(blob)!==module.sha256)throw Error('Consumer runtime differs from its declared commit: '+module.path);}
 modules.sort((a,b)=>a.path.localeCompare(b.path));
 const report={schemaVersion:1,definition:'at least one current calculation or usable choice; remaining effects are manual',updatedAt:new Date().toISOString(),consumer:{repository:'FullPeople/DND-card-web',revision:execFileSync('git',['rev-parse','HEAD'],{cwd:webRoot,encoding:'utf8'}).trim(),modules},snapshotSha256:sha(snapshotBytes),inputs:index.rows.map((r:any)=>({url:r.url,sha256:r.sha256})),total:records.length,reviewed:records.filter(r=>r.reviewed).length,implemented:records.filter(r=>r.status==='implemented').length,unresolved:records.filter(r=>r.status==='unresolved').length,unavailable:records.filter(r=>r.status==='unavailable').length,sources,records};
