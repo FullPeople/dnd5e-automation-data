@@ -1054,13 +1054,14 @@ function classes(row, ctx, out) {
       return;
     }
     for (const [index, part] of value.entries()) {
-      if (!Array.isArray(part?.featureType) || !part.featureType.length || part.featureType.some((v) => typeof v !== "string" || containsCjk(v)) || !plain(part.progression)) {
+      if (!Array.isArray(part?.featureType) || !part.featureType.length || part.featureType.some((v) => typeof v !== "string" || containsCjk(v)) || !(plain(part.progression) || Array.isArray(part.progression) && part.progression.length === 20)) {
         unsupported(out, "featureProgression", "optional-progression-shape", field);
         continue;
       }
       const progression = [];
       let invalid = false;
-      for (const [level, n] of Object.entries(part.progression)) {
+      const entries = Array.isArray(part.progression) ? Array.from(part.progression, (n, i) => [String(i + 1), n]) : Object.entries(part.progression);
+      for (const [level, n] of entries) {
         if (!integer(n, 0, 100) || level !== "*" && !integer(Number(level), 1, 20)) {
           unsupported(out, "featureProgression", "optional-progression-shape", field);
           invalid = true;
