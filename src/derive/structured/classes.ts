@@ -77,5 +77,24 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
       else unsupported(out,'featGrant','feat-grant-shape',field);
     }
   });
+  fields(raw,out,['featProgression'],(field,value)=>{
+    if (!['class','subclass'].includes(row.identity.kind)||!Array.isArray(value)) {unsupported(out,'featGrant','feat-progression-shape',field);return;}
+    for (const [index,part] of value.entries()) {
+      if (!plain(part)||Object.keys(part).some(key=>!['name','ENG_name','category','progression'].includes(key))||!Array.isArray(part.category)||!part.category.length||part.category.length>100||Array.from(part.category).some(token=>typeof token!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(token))||!plain(part.progression)) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
+      const points=Object.entries(part.progression);
+      if (!points.length||points.some(([level,count])=>!/^(?:[1-9]|1[0-9]|20)$/.test(level)||!integer(count,0,100))) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
+      if (!points.some(([,count])=>count>0)) continue;
+      if (!['2014','2024'].includes(row.edition||'')) {unsupported(out,'featGrant','feat-progression-edition',field);continue;}
+      const candidates=[...new Set(ctx.rows.filter(candidate=>candidate.identity.kind==='feat'&&candidate.namespace===row.namespace&&(candidate.edition===row.edition||candidate.edition==='both')&&part.category.includes(candidate.raw.category)).map(candidate=>candidate.identity.key))].sort();
+      if (!candidates.length||candidates.length>1000||points.some(([,count])=>count>candidates.length)) {unsupported(out,'featGrant','feat-progression-catalogue',field);continue;}
+      for (const [level,count] of points.sort((a,b)=>Number(a[0])-Number(b[0]))) if (count>0) {
+        // These are independent grants at the declared levels, not running totals.
+        grant(out,{type:'feat',key:`featProgression:${index}:${level}`,atLevel:Number(level),choose:{count,from:candidates.slice()}});
+        // Source categories and quotas do not prove prerequisites or all allowed
+        // alternatives (e.g. a category label can be narrower than the full rule).
+        unsupported(out,'featGrant','feat-progression-eligibility',field);
+      }
+    }
+  });
   if (Object.keys(model).length) out.mechanics.classModel=model;
 }

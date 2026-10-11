@@ -541,7 +541,7 @@ function createIdentity(input) {
 var CORE_KINDS = ["class", "subclass", "classFeature", "subclassFeature", "race", "subrace", "background", "feat", "optionalfeature", "spell", "item", "baseitem", "magicvariant"];
 var EXTRA_KINDS = ["charoption", "reward", "psionic", "boon", "condition", "disease", "action", "sense", "skill", "language", "itemMastery", "itemProperty", "itemType", "itemGroup", "variantrule"];
 var KINDS = [...CORE_KINDS, ...EXTRA_KINDS];
-var STRUCTURED_FIELDS = ["ability", "skillProficiencies", "toolProficiencies", "languageProficiencies", "weaponProficiencies", "armorProficiencies", "savingThrowProficiencies", "skillToolLanguageProficiencies", "expertise", "resist", "immune", "conditionImmune", "vulnerable", "speed", "size", "darkvision", "senses", "additionalSpells", "resources", "resource", "uses", "consumes", "cantripBonus", "optionalfeatureProgression", "feats", "hd", "proficiency", "startingProficiencies", "multiclassing", "casterProgression", "cantripProgression", "cantripChange", "preparedSpells", "preparedSpellsProgression", "preparedSpellsChange", "spellsKnownProgression", "spellsKnownProgressionFixed", "classTableGroups", "subclassTableGroups", "spellcastingAbility", "startingEquipment", "ac", "bonusAc", "strength", "stealth", "dmg1", "dmg2", "dmgType", "property", "weaponCategory", "bonusWeapon", "bonusWeaponAttack", "bonusWeaponDamage", "bonusSpellAttack", "bonusSpellSaveDc", "bonusSavingThrow", "bonusAbilityCheck", "bonusProficiencyBonus", "reqAttune", "charges", "recharge", "rechargeAmount", "modifySpeed", "grantsProficiency", "grantsLanguage", "level", "school", "time", "range", "components", "duration", "scfType", "mastery", "weight", "value"];
+var STRUCTURED_FIELDS = ["ability", "skillProficiencies", "toolProficiencies", "languageProficiencies", "weaponProficiencies", "armorProficiencies", "savingThrowProficiencies", "skillToolLanguageProficiencies", "expertise", "resist", "immune", "conditionImmune", "vulnerable", "speed", "size", "darkvision", "senses", "additionalSpells", "resources", "resource", "uses", "consumes", "cantripBonus", "optionalfeatureProgression", "featProgression", "feats", "hd", "proficiency", "startingProficiencies", "multiclassing", "casterProgression", "cantripProgression", "cantripChange", "preparedSpells", "preparedSpellsProgression", "preparedSpellsChange", "spellsKnownProgression", "spellsKnownProgressionFixed", "classTableGroups", "subclassTableGroups", "spellcastingAbility", "startingEquipment", "ac", "bonusAc", "strength", "stealth", "dmg1", "dmg2", "dmgType", "property", "weaponCategory", "bonusWeapon", "bonusWeaponAttack", "bonusWeaponDamage", "bonusSpellAttack", "bonusSpellSaveDc", "bonusSavingThrow", "bonusAbilityCheck", "bonusProficiencyBonus", "reqAttune", "charges", "recharge", "rechargeAmount", "modifySpeed", "grantsProficiency", "grantsLanguage", "level", "school", "time", "range", "components", "duration", "scfType", "mastery", "weight", "value"];
 var FOUNDRY_PATHS = ["data/class/foundry.json", "data/foundry-feats.json", "data/foundry-items.json", "data/foundry-races.json", "data/foundry-optionalfeatures.json", "data/spells/foundry.json"];
 var STATIC_PATHS = ["data/races.json", "data/backgrounds.json", "data/feats.json", "data/items-base.json", "data/items.json", "data/magicvariants.json", "data/optionalfeatures.json", "data/charcreationoptions.json", "data/rewards.json", "data/psionics.json", "data/cultsboons.json", "data/conditionsdiseases.json", "data/actions.json", "data/senses.json", "data/skills.json", "data/languages.json", "data/variantrules.json", "data/generated/gendata-variantrules.json", "data/generated/gendata-spell-source-lookup.json"];
 
@@ -1086,6 +1086,37 @@ function classes(row, ctx, out) {
         else if (target2) grant(out, { type: "feat", fixed: [target2.identity.key], referenceAliases: { [target2.identity.key]: encodeURIComponent(ref) }, key: `feats:${index}` });
         else unsupported(out, "featGrant", "unresolved-feat", field);
       } else unsupported(out, "featGrant", "feat-grant-shape", field);
+    }
+  });
+  fields(raw, out, ["featProgression"], (field, value) => {
+    if (!["class", "subclass"].includes(row.identity.kind) || !Array.isArray(value)) {
+      unsupported(out, "featGrant", "feat-progression-shape", field);
+      return;
+    }
+    for (const [index, part] of value.entries()) {
+      if (!plain(part) || Object.keys(part).some((key) => !["name", "ENG_name", "category", "progression"].includes(key)) || !Array.isArray(part.category) || !part.category.length || part.category.length > 100 || Array.from(part.category).some((token) => typeof token !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(token)) || !plain(part.progression)) {
+        unsupported(out, "featGrant", "feat-progression-shape", field);
+        continue;
+      }
+      const points = Object.entries(part.progression);
+      if (!points.length || points.some(([level, count]) => !/^(?:[1-9]|1[0-9]|20)$/.test(level) || !integer(count, 0, 100))) {
+        unsupported(out, "featGrant", "feat-progression-shape", field);
+        continue;
+      }
+      if (!points.some(([, count]) => count > 0)) continue;
+      if (!["2014", "2024"].includes(row.edition || "")) {
+        unsupported(out, "featGrant", "feat-progression-edition", field);
+        continue;
+      }
+      const candidates = [...new Set(ctx.rows.filter((candidate) => candidate.identity.kind === "feat" && candidate.namespace === row.namespace && (candidate.edition === row.edition || candidate.edition === "both") && part.category.includes(candidate.raw.category)).map((candidate) => candidate.identity.key))].sort();
+      if (!candidates.length || candidates.length > 1e3 || points.some(([, count]) => count > candidates.length)) {
+        unsupported(out, "featGrant", "feat-progression-catalogue", field);
+        continue;
+      }
+      for (const [level, count] of points.sort((a, b) => Number(a[0]) - Number(b[0]))) if (count > 0) {
+        grant(out, { type: "feat", key: `featProgression:${index}:${level}`, atLevel: Number(level), choose: { count, from: candidates.slice() } });
+        unsupported(out, "featGrant", "feat-progression-eligibility", field);
+      }
     }
   });
   if (Object.keys(model).length) out.mechanics.classModel = model;
