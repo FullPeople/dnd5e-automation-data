@@ -80,7 +80,8 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
   fields(raw,out,['featProgression'],(field,value)=>{
     if (!['class','subclass'].includes(row.identity.kind)||!Array.isArray(value)) {unsupported(out,'featGrant','feat-progression-shape',field);return;}
     for (const [index,part] of value.entries()) {
-      if (!plain(part)||Object.keys(part).some(key=>!['name','ENG_name','category','progression'].includes(key))||!Array.isArray(part.category)||!part.category.length||part.category.length>100||Array.from(part.category).some(token=>typeof token!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(token))||!plain(part.progression)) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
+      // 5etools-utils 0.17.20 defines only FS:P/FS:R as qualified feat categories.
+      if (!plain(part)||Object.keys(part).some(key=>!['name','ENG_name','category','progression'].includes(key))||!Array.isArray(part.category)||!part.category.length||part.category.length>100||Array.from(part.category).some(token=>typeof token!=='string'||!(/^[A-Za-z0-9_-]{1,100}$/.test(token)||token==='FS:P'||token==='FS:R'))||!plain(part.progression)) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
       const points=Object.entries(part.progression);
       if (!points.length||points.some(([level,count])=>!/^(?:[1-9]|1[0-9]|20)$/.test(level)||!integer(count,0,100))) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
       if (!points.some(([,count])=>count>0)) continue;

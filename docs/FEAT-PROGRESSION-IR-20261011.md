@@ -52,7 +52,8 @@ private review material are committed.
 ## Mapping and rejection boundaries
 
 The field is registered for inventory and explicit diagnostics. Class/subclass
-groups with recognized metadata, identifier-only categories, canonical integer
+groups with recognized metadata, bounded category identifiers (plus the two
+qualified tokens documented in the follow-up), canonical integer
 level keys 1 through 20 and safe integer counts 0 through 100 can declare
 independent grants. A quota at a later level is another grant, not a running
 total or a replacement for the previous one. Zero counts emit no grant.
@@ -107,3 +108,7 @@ migration to undo. Next is independent review of this partial Data capability;
 full eligibility review and any consumer adoption require their own evidence.
 Record push CI for the exact branch HEAD separately from PR CI, which checks a
 synthetic merge checkout.
+
+Follow-up: [qualified categories and current-main combination receipt](FEAT-QUALIFIED-CATEGORIES-20261012.md)
+adds only the schema-defined `FS:P` / `FS:R` tokens to the category predicate;
+all qualification and annotation boundaries above remain in force.
