@@ -541,7 +541,7 @@ function createIdentity(input) {
 var CORE_KINDS = ["class", "subclass", "classFeature", "subclassFeature", "race", "subrace", "background", "feat", "optionalfeature", "spell", "item", "baseitem", "magicvariant"];
 var EXTRA_KINDS = ["charoption", "reward", "psionic", "boon", "condition", "disease", "action", "sense", "skill", "language", "itemMastery", "itemProperty", "itemType", "itemGroup", "variantrule"];
 var KINDS = [...CORE_KINDS, ...EXTRA_KINDS];
-var STRUCTURED_FIELDS = ["ability", "skillProficiencies", "toolProficiencies", "languageProficiencies", "weaponProficiencies", "armorProficiencies", "savingThrowProficiencies", "skillToolLanguageProficiencies", "expertise", "resist", "immune", "conditionImmune", "vulnerable", "speed", "size", "darkvision", "senses", "additionalSpells", "resources", "resource", "uses", "consumes", "cantripBonus", "optionalfeatureProgression", "feats", "hd", "proficiency", "startingProficiencies", "multiclassing", "casterProgression", "cantripProgression", "cantripChange", "preparedSpells", "preparedSpellsProgression", "preparedSpellsChange", "spellsKnownProgression", "spellsKnownProgressionFixed", "classTableGroups", "subclassTableGroups", "spellcastingAbility", "startingEquipment", "ac", "bonusAc", "strength", "stealth", "dmg1", "dmg2", "dmgType", "property", "weaponCategory", "bonusWeapon", "bonusWeaponAttack", "bonusWeaponDamage", "bonusSpellAttack", "bonusSpellSaveDc", "bonusSavingThrow", "bonusAbilityCheck", "bonusProficiencyBonus", "reqAttune", "charges", "recharge", "rechargeAmount", "modifySpeed", "grantsProficiency", "grantsLanguage", "level", "school", "time", "range", "components", "duration", "scfType", "mastery", "weight", "value"];
+var STRUCTURED_FIELDS = ["ability", "skillProficiencies", "toolProficiencies", "languageProficiencies", "weaponProficiencies", "armorProficiencies", "savingThrowProficiencies", "skillToolLanguageProficiencies", "expertise", "resist", "immune", "conditionImmune", "vulnerable", "speed", "size", "darkvision", "senses", "additionalSpells", "resources", "resource", "uses", "consumes", "cantripBonus", "optionalfeatureProgression", "featProgression", "feats", "hd", "proficiency", "startingProficiencies", "multiclassing", "casterProgression", "cantripProgression", "cantripChange", "preparedSpells", "preparedSpellsProgression", "preparedSpellsChange", "spellsKnownProgression", "spellsKnownProgressionFixed", "classTableGroups", "subclassTableGroups", "spellcastingAbility", "startingEquipment", "ac", "bonusAc", "strength", "stealth", "dmg1", "dmg2", "dmgType", "property", "weaponCategory", "bonusWeapon", "bonusWeaponAttack", "bonusWeaponDamage", "bonusSpellAttack", "bonusSpellSaveDc", "bonusSavingThrow", "bonusAbilityCheck", "bonusProficiencyBonus", "reqAttune", "charges", "recharge", "rechargeAmount", "modifySpeed", "grantsProficiency", "grantsLanguage", "level", "school", "time", "range", "components", "duration", "scfType", "mastery", "weight", "value"];
 var FOUNDRY_PATHS = ["data/class/foundry.json", "data/foundry-feats.json", "data/foundry-items.json", "data/foundry-races.json", "data/foundry-optionalfeatures.json", "data/spells/foundry.json"];
 var STATIC_PATHS = ["data/races.json", "data/backgrounds.json", "data/feats.json", "data/items-base.json", "data/items.json", "data/magicvariants.json", "data/optionalfeatures.json", "data/charcreationoptions.json", "data/rewards.json", "data/psionics.json", "data/cultsboons.json", "data/conditionsdiseases.json", "data/actions.json", "data/senses.json", "data/skills.json", "data/languages.json", "data/variantrules.json", "data/generated/gendata-variantrules.json", "data/generated/gendata-spell-source-lookup.json"];
 
@@ -1032,7 +1032,7 @@ function classes(row, ctx, out) {
         continue;
       }
       const p = uid.split("|"), sub = field === "subclassFeatures", source = sub ? p[6] || p[4] || "PHB" : p[4] || p[2] || "PHB", level = Number(p[sub ? 5 : 3]);
-      const candidates = ctx.rows.filter((candidate) => candidate.identity.kind === (sub ? "subclassFeature" : "classFeature") && candidate.identity.source.toLowerCase() === source.toLowerCase() && candidate.identity.level === level && [candidate.raw.name, candidate.raw.ENG_name].includes(p[0]) && [candidate.raw.className, candidate.identity.classEngName].includes(p[1]) && candidate.identity.classSource?.toLowerCase() === (p[2] || "PHB").toLowerCase() && (!sub || [candidate.raw.subclassShortName, candidate.identity.subclassEngShortName].includes(p[3])));
+      const candidates = ctx.rows.filter((candidate) => candidate.identity.kind === (sub ? "subclassFeature" : "classFeature") && candidate.identity.source.toLowerCase() === source.toLowerCase() && candidate.identity.level === level && [candidate.raw.name, candidate.raw.ENG_name].includes(p[0]) && [candidate.raw.className, candidate.identity.classEngName].includes(p[1]) && candidate.identity.classSource?.toLowerCase() === (p[2] || "PHB").toLowerCase() && (!sub || candidate.identity.subclassSource?.toLowerCase() === (p[4] || "PHB").toLowerCase() && [candidate.raw.subclassShortName, candidate.identity.subclassEngShortName].includes(p[3])));
       if (candidates.length === 1 && row.edition && candidates[0].edition && row.edition !== candidates[0].edition) {
         unsupported(out, "featureProgression", "cross-edition-feature-ref", field);
         continue;
@@ -1054,13 +1054,14 @@ function classes(row, ctx, out) {
       return;
     }
     for (const [index, part] of value.entries()) {
-      if (!Array.isArray(part?.featureType) || !part.featureType.length || part.featureType.some((v) => typeof v !== "string" || containsCjk(v)) || !plain(part.progression)) {
+      if (!Array.isArray(part?.featureType) || !part.featureType.length || part.featureType.some((v) => typeof v !== "string" || containsCjk(v)) || !(plain(part.progression) || Array.isArray(part.progression) && part.progression.length === 20)) {
         unsupported(out, "featureProgression", "optional-progression-shape", field);
         continue;
       }
       const progression = [];
       let invalid = false;
-      for (const [level, n] of Object.entries(part.progression)) {
+      const entries = Array.isArray(part.progression) ? Array.from(part.progression, (n, i) => [String(i + 1), n]) : Object.entries(part.progression);
+      for (const [level, n] of entries) {
         if (!integer(n, 0, 100) || level !== "*" && !integer(Number(level), 1, 20)) {
           unsupported(out, "featureProgression", "optional-progression-shape", field);
           invalid = true;
@@ -1086,6 +1087,37 @@ function classes(row, ctx, out) {
         else if (target2) grant(out, { type: "feat", fixed: [target2.identity.key], referenceAliases: { [target2.identity.key]: encodeURIComponent(ref) }, key: `feats:${index}` });
         else unsupported(out, "featGrant", "unresolved-feat", field);
       } else unsupported(out, "featGrant", "feat-grant-shape", field);
+    }
+  });
+  fields(raw, out, ["featProgression"], (field, value) => {
+    if (!["class", "subclass"].includes(row.identity.kind) || !Array.isArray(value)) {
+      unsupported(out, "featGrant", "feat-progression-shape", field);
+      return;
+    }
+    for (const [index, part] of value.entries()) {
+      if (!plain(part) || Object.keys(part).some((key) => !["name", "ENG_name", "category", "progression"].includes(key)) || !Array.isArray(part.category) || !part.category.length || part.category.length > 100 || Array.from(part.category).some((token) => typeof token !== "string" || !(/^[A-Za-z0-9_-]{1,100}$/.test(token) || token === "FS:P" || token === "FS:R")) || !plain(part.progression)) {
+        unsupported(out, "featGrant", "feat-progression-shape", field);
+        continue;
+      }
+      const points = Object.entries(part.progression);
+      if (!points.length || points.some(([level, count]) => !/^(?:[1-9]|1[0-9]|20)$/.test(level) || !integer(count, 0, 100))) {
+        unsupported(out, "featGrant", "feat-progression-shape", field);
+        continue;
+      }
+      if (!points.some(([, count]) => count > 0)) continue;
+      if (!["2014", "2024"].includes(row.edition || "")) {
+        unsupported(out, "featGrant", "feat-progression-edition", field);
+        continue;
+      }
+      const candidates = [...new Set(ctx.rows.filter((candidate) => candidate.identity.kind === "feat" && candidate.namespace === row.namespace && (candidate.edition === row.edition || candidate.edition === "both") && part.category.includes(candidate.raw.category)).map((candidate) => candidate.identity.key))].sort();
+      if (!candidates.length || candidates.length > 1e3 || points.some(([, count]) => count > candidates.length)) {
+        unsupported(out, "featGrant", "feat-progression-catalogue", field);
+        continue;
+      }
+      for (const [level, count] of points.sort((a, b) => Number(a[0]) - Number(b[0]))) if (count > 0) {
+        grant(out, { type: "feat", key: `featProgression:${index}:${level}`, atLevel: Number(level), choose: { count, from: candidates.slice() } });
+        unsupported(out, "featGrant", "feat-progression-eligibility", field);
+      }
     }
   });
   if (Object.keys(model).length) out.mechanics.classModel = model;
@@ -1439,7 +1471,7 @@ function choices(row, ctx, out) {
         }
         const targets = node.entries.map((part) => {
           const ref = part?.classFeature || part?.subclassFeature || part?.optionalfeature, target2 = typeof ref === "string" ? ctx.resolve(ref, "feature", ref.includes("|") ? void 0 : row.identity.source) : void 0;
-          return target2 && (!row.edition || !target2.edition || row.edition === target2.edition) ? target2.identity.key : void 0;
+          return target2 && (!row.edition || !target2.edition || row.edition === "both" || target2.edition === "both" || row.edition === target2.edition) ? target2.identity.key : void 0;
         });
         if (targets.length < count || targets.some((target2) => !target2) || new Set(targets).size !== targets.length) {
           unsupported(out, "inlineChoice", "unresolved-inline-choice", here);
@@ -30503,7 +30535,10 @@ var fullSchemas = /* @__PURE__ */ (() => {
   return { envelopeSchema, overlaysSchema };
 })();
 var bodyFields = /* @__PURE__ */ new Set(["entries", "entriesHigherLevel", "additionalEntries", "description", "description.value", "fluff", "text"]);
-var editionForSource = (source) => ["PHB", "DMG", "MM"].includes(source) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(source) ? "2024" : void 0;
+var editionForSource = (source) => {
+  const normalizedSource = source.trim().toUpperCase();
+  return ["PHB", "DMG", "MM"].includes(normalizedSource) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(normalizedSource) ? "2024" : void 0;
+};
 var recordEdition = (record) => record.edition === "both" ? void 0 : record.edition || editionForSource(record.identity.source);
 function scan(value, issues, path = "", depth = 0) {
   if (depth > 48) {

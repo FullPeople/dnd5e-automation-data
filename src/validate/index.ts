@@ -11,7 +11,10 @@ const ajv = new Ajv2020({ allErrors: true, strict: true, strictRequired: false }
 const envelopeSchema = ajv.compile(automationSchema), overlaysSchema = ajv.compile(overlaySchema);
 const recordSchema=ajv.compile({$schema:automationSchema.$schema,$ref:'#/$defs/record',$defs:automationSchema.$defs});
 const bodyFields = new Set(['entries', 'entriesHigherLevel', 'additionalEntries', 'description', 'description.value', 'fluff', 'text']);
-const editionForSource = (source: string): string | undefined => ['PHB', 'DMG', 'MM'].includes(source) ? '2014' : ['XPHB', 'XDMG', 'XMM'].includes(source) ? '2024' : undefined;
+const editionForSource = (source: string): string | undefined => {
+  const normalizedSource = source.trim().toUpperCase();
+  return ['PHB', 'DMG', 'MM'].includes(normalizedSource) ? '2014' : ['XPHB', 'XDMG', 'XMM'].includes(normalizedSource) ? '2024' : undefined;
+};
 export const recordEdition = (record: AutomationRecord): string | undefined => record.edition === 'both' ? undefined : record.edition || editionForSource(record.identity.source);
 function scan(value: unknown, issues: ValidationIssue[], path = '', depth = 0): void {
   if (depth > 48) { issues.push({ code: 'depth', path, message: 'Input nesting exceeds the validation limit' }); return; }

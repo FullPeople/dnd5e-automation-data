@@ -47,7 +47,7 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
       const uid=typeof ref==='string'?ref:ref?.[field==='classFeatures'?'classFeature':'subclassFeature'];
       if (typeof uid!=='string') { unsupported(out,'featureProgression','feature-ref-shape',field);continue; }
       const p=uid.split('|'),sub=field==='subclassFeatures',source=sub?p[6]||p[4]||'PHB':p[4]||p[2]||'PHB',level=Number(p[sub?5:3]);
-      const candidates=ctx.rows.filter(candidate=>candidate.identity.kind===(sub?'subclassFeature':'classFeature')&&candidate.identity.source.toLowerCase()===source.toLowerCase()&&candidate.identity.level===level&&[candidate.raw.name,candidate.raw.ENG_name].includes(p[0])&&[candidate.raw.className,candidate.identity.classEngName].includes(p[1])&&candidate.identity.classSource?.toLowerCase()===(p[2]||'PHB').toLowerCase()&&(!sub||[candidate.raw.subclassShortName,candidate.identity.subclassEngShortName].includes(p[3])));
+      const candidates=ctx.rows.filter(candidate=>candidate.identity.kind===(sub?'subclassFeature':'classFeature')&&candidate.identity.source.toLowerCase()===source.toLowerCase()&&candidate.identity.level===level&&[candidate.raw.name,candidate.raw.ENG_name].includes(p[0])&&[candidate.raw.className,candidate.identity.classEngName].includes(p[1])&&candidate.identity.classSource?.toLowerCase()===(p[2]||'PHB').toLowerCase()&&(!sub||candidate.identity.subclassSource?.toLowerCase()===(p[4]||'PHB').toLowerCase()&&[candidate.raw.subclassShortName,candidate.identity.subclassEngShortName].includes(p[3])));
       if(candidates.length===1&&row.edition&&candidates[0].edition&&row.edition!==candidates[0].edition){unsupported(out,'featureProgression','cross-edition-feature-ref',field);continue;}
       if (candidates.length===1) {resolved.push(candidates[0].identity.key);(model.referenceAliases||={})[candidates[0].identity.key]=encodeURIComponent(uid);}else unsupported(out,'featureProgression','unresolved-feature-ref',field);
     }
@@ -57,10 +57,14 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
   fields(raw,out,['optionalfeatureProgression'],(field,value)=>{
     if (!Array.isArray(value)) {unsupported(out,'featureProgression','optional-progression-shape',field);return;}
     for (const [index,part] of value.entries()) {
-      if (!Array.isArray(part?.featureType)||!part.featureType.length||part.featureType.some((v:any)=>typeof v!=='string'||containsCjk(v))||!plain(part.progression)) {unsupported(out,'featureProgression','optional-progression-shape',field);continue;}
+      // A shorter array has no declared quota after its end; sparse IR would carry
+      // the last value forward. Only complete level-1 through level-20 arrays map.
+      if (!Array.isArray(part?.featureType)||!part.featureType.length||part.featureType.some((v:any)=>typeof v!=='string'||containsCjk(v))||!(plain(part.progression)||Array.isArray(part.progression)&&part.progression.length===20)) {unsupported(out,'featureProgression','optional-progression-shape',field);continue;}
       const progression:{level:number;count:number}[]=[];
       let invalid=false;
-      for (const [level,n] of Object.entries(part.progression)) {
+      // Array.from visits holes as undefined so an incomplete group is rejected.
+      const entries=Array.isArray(part.progression)?Array.from(part.progression,(n,i)=>[String(i+1),n] as const):Object.entries(part.progression);
+      for (const [level,n] of entries) {
         if (!integer(n,0,100)||level!=='*'&&!integer(Number(level),1,20)) {unsupported(out,'featureProgression','optional-progression-shape',field);invalid=true;continue;}
         progression.push({level:level==='*'?0:Number(level),count:n});
       }
@@ -75,6 +79,26 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
       if (ref==='any'&&integer(n,1,100)) grant(out,{type:'feat',choose:{count:n,filter:{kind:'feat'}},key:`feats:${index}`});
       else if (n===true) {const target=ctx.resolve(ref,'feat',ref.includes('|')?undefined:row.identity.source);if(target&&row.edition&&row.edition!=='both'&&target.edition&&target.edition!=='both'&&row.edition!==target.edition)unsupported(out,'featGrant','edition-reference',field);else if(target)grant(out,{type:'feat',fixed:[target.identity.key],referenceAliases:{[target.identity.key]:encodeURIComponent(ref)},key:`feats:${index}`});else unsupported(out,'featGrant','unresolved-feat',field);}
       else unsupported(out,'featGrant','feat-grant-shape',field);
+    }
+  });
+  fields(raw,out,['featProgression'],(field,value)=>{
+    if (!['class','subclass'].includes(row.identity.kind)||!Array.isArray(value)) {unsupported(out,'featGrant','feat-progression-shape',field);return;}
+    for (const [index,part] of value.entries()) {
+      // 5etools-utils 0.17.20 defines only FS:P/FS:R as qualified feat categories.
+      if (!plain(part)||Object.keys(part).some(key=>!['name','ENG_name','category','progression'].includes(key))||!Array.isArray(part.category)||!part.category.length||part.category.length>100||Array.from(part.category).some(token=>typeof token!=='string'||!(/^[A-Za-z0-9_-]{1,100}$/.test(token)||token==='FS:P'||token==='FS:R'))||!plain(part.progression)) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
+      const points=Object.entries(part.progression);
+      if (!points.length||points.some(([level,count])=>!/^(?:[1-9]|1[0-9]|20)$/.test(level)||!integer(count,0,100))) {unsupported(out,'featGrant','feat-progression-shape',field);continue;}
+      if (!points.some(([,count])=>count>0)) continue;
+      if (!['2014','2024'].includes(row.edition||'')) {unsupported(out,'featGrant','feat-progression-edition',field);continue;}
+      const candidates=[...new Set(ctx.rows.filter(candidate=>candidate.identity.kind==='feat'&&candidate.namespace===row.namespace&&(candidate.edition===row.edition||candidate.edition==='both')&&part.category.includes(candidate.raw.category)).map(candidate=>candidate.identity.key))].sort();
+      if (!candidates.length||candidates.length>1000||points.some(([,count])=>count>candidates.length)) {unsupported(out,'featGrant','feat-progression-catalogue',field);continue;}
+      for (const [level,count] of points.sort((a,b)=>Number(a[0])-Number(b[0]))) if (count>0) {
+        // These are independent grants at the declared levels, not running totals.
+        grant(out,{type:'feat',key:`featProgression:${index}:${level}`,atLevel:Number(level),choose:{count,from:candidates.slice()}});
+        // Source categories and quotas do not prove prerequisites or all allowed
+        // alternatives (e.g. a category label can be narrower than the full rule).
+        unsupported(out,'featGrant','feat-progression-eligibility',field);
+      }
     }
   });
   if (Object.keys(model).length) out.mechanics.classModel=model;
