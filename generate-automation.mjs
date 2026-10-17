@@ -30535,7 +30535,10 @@ var fullSchemas = /* @__PURE__ */ (() => {
   return { envelopeSchema, overlaysSchema };
 })();
 var bodyFields = /* @__PURE__ */ new Set(["entries", "entriesHigherLevel", "additionalEntries", "description", "description.value", "fluff", "text"]);
-var editionForSource = (source) => ["PHB", "DMG", "MM"].includes(source) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(source) ? "2024" : void 0;
+var editionForSource = (source) => {
+  const normalizedSource = source.trim().toUpperCase();
+  return ["PHB", "DMG", "MM"].includes(normalizedSource) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(normalizedSource) ? "2024" : void 0;
+};
 var recordEdition = (record) => record.edition === "both" ? void 0 : record.edition || editionForSource(record.identity.source);
 function scan(value, issues, path = "", depth = 0) {
   if (depth > 48) {
