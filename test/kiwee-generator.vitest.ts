@@ -1,5 +1,5 @@
 import {beforeAll,afterAll,it,expect} from 'vitest';
-import {mkdtempSync,mkdirSync,writeFileSync,readFileSync,readdirSync,rmSync,symlinkSync,unlinkSync} from 'node:fs';
+import {mkdtempSync,mkdirSync,writeFileSync,readFileSync,readdirSync,rmSync,symlinkSync,unlinkSync,cpSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {tmpdir} from 'node:os';
 import {join,dirname} from 'node:path';
@@ -37,11 +37,11 @@ it('rejects traversing indices before changing prior output or unrelated generat
 it('rejects a source symlink outside data and malformed local JSON without replacing prior output',()=>{
  const file=join(data,'feats.json'),bytes=readFileSync(file),before=readFileSync(join(out,'gendata-automation-manifest.json'));
  if(process.platform==='win32'){
-  const directory=join(data,'class'),index=readFileSync(join(directory,'index.json')),entry=readFileSync(join(directory,'class-synthetic.json')),outside=join(work,'outside');
-  mkdirSync(outside);writeFileSync(join(outside,'index.json'),index);writeFileSync(join(outside,'class-synthetic.json'),entry);
+  const directory=join(data,'class'),outside=join(work,'outside');
+  cpSync(directory,outside,{recursive:true});
   rmSync(directory,{recursive:true});symlinkSync(outside,directory,'junction');
   expect(()=>run()).toThrow('Input escapes the data directory');expect(readFileSync(join(out,'gendata-automation-manifest.json'))).toEqual(before);
-  unlinkSync(directory);mkdirSync(directory);writeFileSync(join(directory,'index.json'),index);writeFileSync(join(directory,'class-synthetic.json'),entry);
+  unlinkSync(directory);cpSync(outside,directory,{recursive:true});
  }else{
   const outside=join(work,'outside.json');writeFileSync(outside,bytes);rmSync(file);symlinkSync(outside,file,'file');
   expect(()=>run()).toThrow();expect(readFileSync(join(out,'gendata-automation-manifest.json'))).toEqual(before);rmSync(file);
