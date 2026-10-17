@@ -57,10 +57,14 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
   fields(raw,out,['optionalfeatureProgression'],(field,value)=>{
     if (!Array.isArray(value)) {unsupported(out,'featureProgression','optional-progression-shape',field);return;}
     for (const [index,part] of value.entries()) {
-      if (!Array.isArray(part?.featureType)||!part.featureType.length||part.featureType.some((v:any)=>typeof v!=='string'||containsCjk(v))||!plain(part.progression)) {unsupported(out,'featureProgression','optional-progression-shape',field);continue;}
+      // A shorter array has no declared quota after its end; sparse IR would carry
+      // the last value forward. Only complete level-1 through level-20 arrays map.
+      if (!Array.isArray(part?.featureType)||!part.featureType.length||part.featureType.some((v:any)=>typeof v!=='string'||containsCjk(v))||!(plain(part.progression)||Array.isArray(part.progression)&&part.progression.length===20)) {unsupported(out,'featureProgression','optional-progression-shape',field);continue;}
       const progression:{level:number;count:number}[]=[];
       let invalid=false;
-      for (const [level,n] of Object.entries(part.progression)) {
+      // Array.from visits holes as undefined so an incomplete group is rejected.
+      const entries=Array.isArray(part.progression)?Array.from(part.progression,(n,i)=>[String(i+1),n] as const):Object.entries(part.progression);
+      for (const [level,n] of entries) {
         if (!integer(n,0,100)||level!=='*'&&!integer(Number(level),1,20)) {unsupported(out,'featureProgression','optional-progression-shape',field);invalid=true;continue;}
         progression.push({level:level==='*'?0:Number(level),count:n});
       }
