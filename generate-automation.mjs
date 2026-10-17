@@ -1471,7 +1471,7 @@ function choices(row, ctx, out) {
         }
         const targets = node.entries.map((part) => {
           const ref = part?.classFeature || part?.subclassFeature || part?.optionalfeature, target2 = typeof ref === "string" ? ctx.resolve(ref, "feature", ref.includes("|") ? void 0 : row.identity.source) : void 0;
-          return target2 && (!row.edition || !target2.edition || row.edition === target2.edition) ? target2.identity.key : void 0;
+          return target2 && (!row.edition || !target2.edition || row.edition === "both" || target2.edition === "both" || row.edition === target2.edition) ? target2.identity.key : void 0;
         });
         if (targets.length < count || targets.some((target2) => !target2) || new Set(targets).size !== targets.length) {
           unsupported(out, "inlineChoice", "unresolved-inline-choice", here);
