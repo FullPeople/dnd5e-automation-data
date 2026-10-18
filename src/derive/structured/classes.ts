@@ -69,6 +69,8 @@ export function classes(row: Material, ctx: DerivationContext, out: Result): voi
         progression.push({level:level==='*'?0:Number(level),count:n});
       }
       progression.sort((a,b)=>a.level-b.level);
+      // Distinct object keys may normalize to the same class level.
+      if(progression.some((point,index)=>index>0&&point.level===progression[index-1].level)){unsupported(out,'featureProgression','optional-progression-shape',field);invalid=true;}
       const first=progression.find(point=>point.count>0);
       if(!invalid&&first)grant(out,{type:'feature',choose:{count:first.count,filter:{kind:'optionalfeature',featureType:part.featureType}},key:`optionalfeature:${index}`,atLevel:first.level,choiceProgression:progression});
     }
