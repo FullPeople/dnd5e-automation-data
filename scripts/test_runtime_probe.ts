@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import {probeEntry} from '../src/runtimeCoverage/probe.ts';
 import {Worker} from 'node:worker_threads';
+import {runRuntimeProbePool} from '../src/runtimeCoverage/pool.ts';
 const web=process.argv[2];if(!web)throw Error('Supply pinned Web checkout');mkdirSync('.cache',{recursive:true});
 const path=resolve('.cache/probe-test.mjs');await buildConsumerAdapter(web,path,false);const api=await import(pathToFileURL(path).href);
 const entry=(id:string,kind:string,raw:any,entries:any[]=[])=>({id,kind,name:id,english:id,source:'PHB',packId:'authored',revision:'fixture',edition:'2014',raw,entries});
@@ -35,4 +36,9 @@ try{for(const [index,item] of contextual.entries()){
  const actual=await new Promise<any>((resolve,reject)=>{worker.once('message',resolve);worker.once('error',reject);worker.postMessage({index,entry:item.id,parents:parents.map(row=>row.id)});});
  assert.equal(actual.error,undefined);assert.equal(actual.index,index);assert.deepEqual(actual.witness,expected,'Parallel probes must return the exact real-consumer witness.');
 }}finally{await worker.terminate();}
-console.log('Runtime probe: 8 real-consumer positive/negative scenarios passed.');
+for(const options of [{workers:1,recycleAfter:2},{workers:2,recycleAfter:1}]){
+ const jobs=contextual.map((item,index)=>({index,entry:item.id,parents:item===emptyChild?[parent.id]:[]}));
+ const results=await runRuntimeProbePool(path,contextual,jobs,options);
+ for(const [index,item] of contextual.entries())assert.deepEqual(results.get(index),probeEntry(api,item,contextual,item===emptyChild?[parent]:[]),'Recycled probes must equal the serial real-consumer witness.');
+}
+console.log('Runtime probe: 8 real-consumer positive/negative scenarios passed; recycled one/two-worker results equal serial results.');
