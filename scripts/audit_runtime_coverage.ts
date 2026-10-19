@@ -7,6 +7,7 @@ import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import {context,identity as provisional} from '../src/inventory/identity.ts';
 import {createIdentity} from '../src/identity.ts';
 import {runRuntimeProbePool} from '../src/runtimeCoverage/pool.ts';
+import {openRuntimeProbeCheckpoint} from '../src/runtimeCoverage/checkpoint.ts';
 import {materialize} from '../src/derive/catalogue.ts';
 import {validateCoverage} from '../src/runtimeCoverage/report.ts';
 const [webRoot,inputRoot,output='.cache/runtime-coverage.json']=process.argv.slice(2);if(!webRoot||!inputRoot)throw Error('Usage: audit_runtime_coverage.ts WEB_ROOT EXISTING_CACHE_DIRECTORY OUTPUT');
@@ -35,8 +36,16 @@ const matched=snapshot.records.filter((r:any)=>byIdentity.has(r.id));console.log
 const parallel=Number(process.env.RUNTIME_COVERAGE_WORKERS||1);
 if(!Number.isInteger(parallel)||parallel<1||parallel>4)throw Error('Runtime coverage workers must be 1..4');
 const jobs=snapshot.records.map((row:any,index:number)=>{const e=byIdentity.get(row.id),parent=e?.raw.className&&entries.find(p=>p.kind==='class'&&p.source===(e.raw.classSource||'PHB')&&[p.name,p.english].includes(e.raw.className));return {index,entry:e?.id,parents:parent?[parent.id]:[]};});
-let done=0;
-const witnesses=await runRuntimeProbePool(adapter,entries,jobs,{workers:parallel,recycleAfter:250,onResult:()=>{if(++done%1000===0)console.log('parallel completed',done);}});
+const producerRevision=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+execFileSync('git',['diff','--quiet','HEAD','--','src','scripts','aliases']);
+const binding=createHash('sha256').update(JSON.stringify({producerRevision,consumerRevision:execFileSync('git',['rev-parse','HEAD'],{cwd:webRoot,encoding:'utf8'}).trim(),adapterSha256:createHash('sha256').update(readFileSync(adapter)).digest('hex'),snapshotSha256:createHash('sha256').update(snapshotBytes).digest('hex'),inputs:index.rows.map((r:any)=>({url:r.url,sha256:r.sha256})),jobs})).digest('hex');
+const checkpoint=openRuntimeProbeCheckpoint(output+'.receipts.jsonl',binding,jobs.map(job=>job.index));
+let done=checkpoint.completed.size;console.log(JSON.stringify({resumed:done,total:jobs.length,binding}));
+const witnesses=checkpoint.completed;
+try{await runRuntimeProbePool(adapter,entries,jobs.filter(job=>!witnesses.has(job.index)),{workers:parallel,recycleAfter:100,onResult:result=>{checkpoint.append(result);if(++done%1000===0)console.log('parallel completed',done);}});}finally{checkpoint.close();}
+if(witnesses.size!==jobs.length)throw Error('Incomplete runtime replay receipts');
+if(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim()!==producerRevision)throw Error('Producer commit changed during replay');
+execFileSync('git',['diff','--quiet','HEAD','--','src','scripts','aliases']);
 const records=[];let at=0;
 for(const row of snapshot.records){if(process.env.RUNTIME_COVERAGE_TRACE)console.error(JSON.stringify({at:at+1,id:row.id}));const e=byIdentity.get(row.id),parents:any[]=[];if(e?.raw.className){const parent=entries.find(p=>p.kind==='class'&&p.source===(e.raw.classSource||'PHB')&&[p.name,p.english].includes(e.raw.className));if(parent)parents.push(parent);}
  const witness=witnesses.get(at);records.push({id:row.id,source:row.source,reviewed:row.reviewed,status:e?(witness?'implemented':'manual'):'unavailable',...(witness?{witness}:{})});if(++at%1000===0)console.log(at,records.filter(r=>r.status==='implemented').length);
