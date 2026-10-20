@@ -5,9 +5,9 @@ const sourceCache=new WeakMap<any[],any[]>();
 const stats=(d:any)=>({abilities:d.abilities,ac:d.ac,maxHp:d.maxHp,speed:d.speed,initiative:d.initiative,passive:d.passive,skills:Object.fromEntries(Object.entries(d.skills).map(([k,v]:any)=>[k,[v.value,v.proficient,v.expertise]])),saves:d.saves});
 const resources=(c:any)=>Object.fromEntries(Object.entries(c.runtime.resources).filter(([,r]:any)=>r.automatic||r.featureGrant).map(([k,r]:any)=>[k,r.max]));
 const changed=(a:unknown,b:unknown)=>JSON.stringify(a)!==JSON.stringify(b);
-/** Dedup may move a source feature's filter to its explicitly declared class
- * progression. Attribute only the canonical alias of this candidate filter;
- * unrelated choices on the parent class are never witnesses for this record.
+/** A source filter or typed directory can move to its declared class quota.
+ * Attribute only exact aliases of this owned candidate; unrelated choices on
+ * the parent class are never witnesses for this record.
  */
 export function candidateWitnessChoices(card:any,choices:any[]){
  const candidate=card.selections.find((s:any)=>s.id==='candidate'),parent=candidate?.parentId&&card.selections.find((s:any)=>s.id===candidate.parentId);
@@ -17,7 +17,24 @@ export function candidateWitnessChoices(card:any,choices:any[]){
  const exactParent=!!candidate&&candidate.entry.kind==='feature'&&candidate.entry.raw._category==='classFeature'&&parent?.entry.kind==='class'&&declared&&
   Number.isInteger(at)&&at>=1&&at<=20&&Number.isInteger(parent.level)&&parent.level>=at&&parent.level<=20&&candidate.entry.raw.level===at&&
   candidate.entry.source===parent.entry.source&&(candidate.entry.raw.classSource||'PHB')===parent.entry.source&&[parent.entry.name,parent.entry.english].includes(candidate.entry.raw.className);
- return choices.filter(q=>q.ownerId==='candidate'||exactParent&&q.ownerId===parent.id&&q.sourceProgression==='feat'&&Array.isArray(q.duplicateChoiceIds)&&q.duplicateChoiceIds.some((id:any)=>typeof id==='string'&&id.startsWith('candidate:filter:')));
+ const optionalAliases=new Set<string>();
+ if(exactParent){
+  const walk=(nodes:any,path:string,depth=0)=>{if(depth>12||!Array.isArray(nodes))return;nodes.forEach((node:any,index:number)=>{
+   const here=`${path}:${index}`;
+   if(node?.type==='options'){
+    if(Number.isSafeInteger(node.count)&&node.count>=1&&node.count<=100&&Array.isArray(node.entries)&&node.entries.length&&node.entries.every((item:any)=>{
+     if(item?.type!=='refOptionalfeature'||typeof item.optionalfeature!=='string')return false;
+     const parts=item.optionalfeature.split('|');return parts.length===2&&!!parts[0].trim()&&parts[1].trim().toUpperCase()===candidate.entry.source.toUpperCase();
+    }))optionalAliases.add(`candidate:text-option:${here}`);
+    return;
+   }
+   if(node?.entries)walk(node.entries,here,depth+1);if(node?.items)walk(node.items,`${here}:items`,depth+1);
+  });};walk(candidate.entry.entries,'entries');
+ }
+ return choices.filter(q=>q.ownerId==='candidate'||exactParent&&q.ownerId===parent.id&&Array.isArray(q.duplicateChoiceIds)&&(
+  q.sourceProgression==='feat'&&q.duplicateChoiceIds.some((id:any)=>typeof id==='string'&&id.startsWith('candidate:filter:'))||
+  q.sourceProgression==='optional'&&q.channel==='content'&&q.catalogKind==='feature'&&q.support?.rule==='verified'&&q.support.execution==='record-only'&&Number.isSafeInteger(q.count)&&q.count>0&&q.duplicateChoiceIds.some((id:any)=>optionalAliases.has(id))
+ ));
 }
 export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:any[]):RuntimeWitness|null {
  let sources=sourceCache.get(catalog);if(!sources){sources=[...new Set(catalog.map(e=>e.source))];sourceCache.set(catalog,sources);}
