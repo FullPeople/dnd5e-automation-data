@@ -1,0 +1,46 @@
+/** Actual frozen-source lifecycle check. Never writes source bodies or cards. */
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
+const [web,inputs,output]=process.argv.slice(2);
+if(!web||!inputs||!output)throw Error('Usage: test_asi_consumer.ts WEB_CHECKOUT FROZEN_INPUT_DIRECTORY RECEIPT_JSON');
+mkdirSync('.cache',{recursive:true});
+const adapter=resolve('.cache/asi-lifecycle.mjs'),bundle=await buildConsumerAdapter(web,adapter);
+const sha=(value:string|Buffer)=>createHash('sha256').update(value).digest('hex');
+const git=(...args:string[])=>execFileSync('git',['--no-replace-objects',...args],{cwd:web,maxBuffer:16*1024*1024});
+const revision=git('rev-parse','HEAD').toString().trim(),root=resolve(web).replaceAll('\\','/');
+const modules=Object.keys(bundle.metafile!.inputs).map(path=>resolve(path).replaceAll('\\','/')).filter(path=>path.startsWith(root+'/src/')).map(path=>{
+ const relative=path.slice(root.length+1),bytes=readFileSync(path);assert.equal(sha(bytes),sha(git('cat-file','blob','HEAD:'+relative)),relative);return {path:relative,sha256:sha(bytes)};
+}).sort((a,b)=>a.path.localeCompare(b.path));assert.ok(modules.length);
+const api=await import(pathToFileURL(adapter).href),index=JSON.parse(readFileSync(join(inputs,'index.json'),'utf8'));
+const rows=['/data/feats.json','/data/class/class-fighter.json'].map(suffix=>{
+ const row=index.rows.find((row:any)=>row.url.endsWith(suffix));assert.ok(row);
+ const body=JSON.parse(readFileSync(join(inputs,row.path),'utf8'));assert.equal(sha(JSON.stringify(body)),row.sha256);return {...row,body};
+});
+const entries=rows.flatMap(row=>api.normalizeCatalogData(row.body,row.sha256,'kiwee'));
+const fighter=entries.find((e:any)=>e.kind==='class'&&e.english==='Fighter'&&e.source==='XPHB'),asi=entries.find((e:any)=>e.kind==='feat'&&e.english==='Ability Score Improvement'&&e.source==='XPHB');
+assert.ok(fighter&&asi);
+const c=api.newCharacter('2024');c.automation=api.newAutomationState();c.abilities.str=16;c.abilities.dex=13;c.notes='Authored manual note';c.runtime.hp=3;
+c.selections=[{id:'owner',entry:fighter,level:4,quantity:1,equipped:false}];api.syncFeatures(c,entries);
+const grant=api.sheetChoices(c,entries).find((q:any)=>q.id.includes(':class-typed-feat:'));assert.ok(grant);
+api.chooseSheetOption(c,grant.id,asi.id,entries);api.syncFeatures(c,entries);
+const allocation=api.sheetChoices(c,entries).find((q:any)=>q.id.endsWith(':feat-abilities'));assert.equal(allocation?.options.length,21);
+const base=JSON.stringify(c.abilities),runtime=JSON.stringify(c.runtime),checks:string[]=[];
+assert.equal(api.evaluate(c).abilities.str,16);checks.push('selection-does-not-infer-an-allocation');
+api.chooseSheetOption(c,allocation.id,'str:2',entries);assert.equal(api.evaluate(c).abilities.str,18);assert.equal(api.evaluate(c).modifiers.str,4);checks.push('confirmed-plus-two-calculates-score-and-modifier');
+const reopened=JSON.parse(JSON.stringify(c));assert.equal(api.syncFeatures(reopened,[]),false);assert.equal(api.evaluate(reopened).abilities.str,18);assert.deepEqual(api.sheetChoices(reopened,[]).find((q:any)=>q.id===allocation.id).selected,['str:2']);checks.push('saved-reopen-offline-retains-one-increase');
+api.chooseSheetOption(c,allocation.id,'str:1|dex:1',entries);assert.equal(api.evaluate(c).abilities.str,17);assert.equal(api.evaluate(c).abilities.dex,14);checks.push('replacement-removes-previous-allocation');
+api.chooseSheetOption(c,allocation.id,'str:1|dex:1',entries);assert.equal(api.evaluate(c).abilities.str,16);checks.push('cancellation-removes-the-increase');
+api.chooseSheetOption(c,allocation.id,'str:2',entries);c.selections[0].level=3;api.syncFeatures(c,entries);assert.equal(api.evaluate(c).abilities.str,16);assert.deepEqual(c.answers[allocation.id],['str:2']);c.selections[0].level=4;api.syncFeatures(c,entries);assert.equal(api.evaluate(c).abilities.str,18);checks.push('downgrade-and-restore-retain-answer-and-identity');
+const alternative=api.sheetChoices(c,entries).find((q:any)=>q.id===grant.id).options.find((o:any)=>o.value!==asi.id&&!o.unavailable);assert.ok(alternative);
+api.chooseSheetOption(c,grant.id,alternative.value,entries);api.syncFeatures(c,entries);assert.equal(api.evaluate(c).abilities.str,16);api.chooseSheetOption(c,grant.id,asi.id,entries);api.syncFeatures(c,entries);assert.equal(api.evaluate(c).abilities.str,18);checks.push('alternative-feat-and-restore-leave-no-residue');
+const sources=[...c.profile.enabledSources];c.profile.enabledSources=[];assert.equal(api.evaluate(c).abilities.str,16);c.profile.enabledSources=sources;assert.equal(api.evaluate(c).abilities.str,18);checks.push('source-disable-and-restore-retain-answer');
+assert.equal(JSON.stringify(c.abilities),base);assert.equal(JSON.stringify(c.runtime),runtime);assert.equal(c.notes,'Authored manual note');checks.push('manual-scores-notes-and-resource-balances-unchanged');
+const old=JSON.parse(JSON.stringify(c));delete old.answers[allocation.id];old.abilities.str=18;assert.equal(api.evaluate(old).abilities.str,18);checks.push('old-manual-card-is-inert-without-new-answer');
+c.abilities.str=19;assert.equal(api.evaluate(c).abilities.str,20);c.abilities.str=22;assert.equal(api.evaluate(c).abilities.str,22);checks.push('cap-twenty-never-reduces-higher-manual-score');
+const receipt={schemaVersion:1,consumer:{repository:'FullPeople/DND-card-web',revision,modules},inputs:rows.map(({url,sha256})=>({url,sha256})),checks,passed:checks.length,wholeRuleComplete:false,playerDataRead:false,rawInputPublished:false};
+writeFileSync(output,JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({passed:checks.length,consumer:receipt.consumer.revision,output}));

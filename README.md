@@ -1,5 +1,9 @@
 # dnd5e-automation-data
 
+Player-facing batches, remaining mechanisms and next checkpoints are tracked in
+[the rule automation checklist](docs/RULE-AUTOMATION-CHECKLIST.md). Pipeline-stage
+completion never means every rule is fully automated.
+
 Independent D&D Card automation IR producer and validator (Node 22.12+).
 G1–G5 are complete; the browser gate passed independent review at Web commit
 `a804d3be3a16558c874db43ce6e2332a2950ad8b`. G6 reviewed annotation is in progress.

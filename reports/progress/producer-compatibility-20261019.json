@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "baseline": "398c4f2af5db767aa951145cd742c03b627f7321",
+  "candidate": "bcc823ebaecff423803d6524a3f0f8ed1d7ca946",
+  "inputs": 229,
+  "inputsSha256": "c32dc7d8000a47bf3b5b6d00022f968e87d02bc3bcce54b4d7986ee5bc245d7e",
+  "identities": 18789,
+  "changed": 0,
+  "records": [],
+  "rawInputPublished": false
+}

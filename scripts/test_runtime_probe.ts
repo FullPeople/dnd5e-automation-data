@@ -1,10 +1,14 @@
-import {mkdirSync} from 'node:fs';
+import {mkdirSync,mkdtempSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
 import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import {probeEntry} from '../src/runtimeCoverage/probe.ts';
 import {Worker} from 'node:worker_threads';
+import {runRuntimeProbePool} from '../src/runtimeCoverage/pool.ts';
+import {openRuntimeProbeCheckpoint} from '../src/runtimeCoverage/checkpoint.ts';
 const web=process.argv[2];if(!web)throw Error('Supply pinned Web checkout');mkdirSync('.cache',{recursive:true});
 const path=resolve('.cache/probe-test.mjs');await buildConsumerAdapter(web,path,false);const api=await import(pathToFileURL(path).href);
 const entry=(id:string,kind:string,raw:any,entries:any[]=[])=>({id,kind,name:id,english:id,source:'PHB',packId:'authored',revision:'fixture',edition:'2014',raw,entries});
@@ -35,4 +39,20 @@ try{for(const [index,item] of contextual.entries()){
  const actual=await new Promise<any>((resolve,reject)=>{worker.once('message',resolve);worker.once('error',reject);worker.postMessage({index,entry:item.id,parents:parents.map(row=>row.id)});});
  assert.equal(actual.error,undefined);assert.equal(actual.index,index);assert.deepEqual(actual.witness,expected,'Parallel probes must return the exact real-consumer witness.');
 }}finally{await worker.terminate();}
-console.log('Runtime probe: 8 real-consumer positive/negative scenarios passed.');
+for(const options of [{workers:1,recycleAfter:2},{workers:2,recycleAfter:1}]){
+ const jobs=contextual.map((item,index)=>({index,entry:item.id,parents:item===emptyChild?[parent.id]:[]}));
+ const results=await runRuntimeProbePool(path,contextual,jobs,options);
+ for(const [index,item] of contextual.entries())assert.deepEqual(results.get(index),probeEntry(api,item,contextual,item===emptyChild?[parent]:[]),'Recycled probes must equal the serial real-consumer witness.');
+}
+console.log('Runtime probe: 8 real-consumer positive/negative scenarios passed; recycled one/two-worker results equal serial results.');
+const checkpointRoot=mkdtempSync(join(tmpdir(),'real-probe-checkpoint-'));
+try{
+ const jobs=contextual.map((item,index)=>({index,entry:item.id,parents:item===emptyChild?[parent.id]:[]})),file=join(checkpointRoot,'receipts.jsonl');
+ const first=openRuntimeProbeCheckpoint(file,'authored-real-consumer',jobs.map(job=>job.index));
+ try{await runRuntimeProbePool(path,contextual,jobs.slice(0,4),{workers:1,recycleAfter:2,onResult:result=>first.append(result)});}finally{first.close();}
+ const resumed=openRuntimeProbeCheckpoint(file,'authored-real-consumer',jobs.map(job=>job.index));assert.equal(resumed.completed.size,4);
+ try{await runRuntimeProbePool(path,contextual,jobs.filter(job=>!resumed.completed.has(job.index)),{workers:2,recycleAfter:2,onResult:result=>resumed.append(result)});
+  for(const [index,item] of contextual.entries())assert.deepEqual(resumed.completed.get(index),probeEntry(api,item,contextual,item===emptyChild?[parent]:[]),'Interrupted/resumed receipts must equal fresh serial observations.');
+ }finally{resumed.close();}
+ console.log('Runtime checkpoint: interrupted and resumed real-consumer results equal serial results.');
+}finally{rmSync(checkpointRoot,{recursive:true,force:true});}
