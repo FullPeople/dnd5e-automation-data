@@ -10,7 +10,11 @@ export function choices(row:Material,ctx:DerivationContext,out:Result):void {
       if(node.type==='options') {
         const count=node.count===undefined?1:node.count;
         if(!integer(count,1,100)||!Array.isArray(node.entries)){unsupported(out,'inlineChoice','inline-choice-shape',here);return;}
-        const targets=node.entries.map((part:any)=>{const ref=part?.classFeature||part?.subclassFeature||part?.optionalfeature,target=typeof ref==='string'?ctx.resolve(ref,'feature',ref.includes('|')?undefined:row.identity.source):undefined;return target&&(!row.edition||!target.edition||row.edition==='both'||target.edition==='both'||row.edition===target.edition)?target.identity.key:undefined;});
+        const targets=node.entries.map((part:any)=>{
+          const kind=part?.classFeature?'classFeature':part?.subclassFeature?'subclassFeature':'optionalfeature';
+          const ref=part?.[kind],target=typeof ref==='string'?ctx.resolve(ref,kind,ref.includes('|')?undefined:row.identity.source):undefined;
+          return target&&target.identity.kind===kind&&(!row.edition||!target.edition||row.edition==='both'||target.edition==='both'||row.edition===target.edition)?target.identity.key:undefined;
+        });
         if(targets.length<count||targets.some((target:any)=>!target)||new Set(targets).size!==targets.length){unsupported(out,'inlineChoice','unresolved-inline-choice',here);return;}
         grant(out,{type:'feature',choose:{count,from:targets as string[]},key:`text-option:${here}`});return;
       }

@@ -1,0 +1,68 @@
+import { expect, test } from 'vitest';
+import { createIdentity } from '../src/identity.ts';
+import { deriveStructured } from '../src/derive/structured/index.ts';
+import { makeContext } from '../src/derive/structured/common.ts';
+import { validateAutomation } from '../src/validate/index.ts';
+import type { Material } from '../src/derive/catalogue.ts';
+import type { AutomationEnvelope } from '../src/protocol.ts';
+
+const kinds = ['classFeature', 'subclassFeature', 'optionalfeature'] as const;
+type Kind = typeof kinds[number];
+const feature = (kind: Kind, name = 'Synthetic Option', packId = 'kiwee'): Material => ({
+  identity: createIdentity({ kind, packId, source: 'PHB', engName: name,
+    ...(kind !== 'optionalfeature' ? { classSource: 'PHB', classEngName: 'Synthetic Class', level: 3 } : {}),
+    ...(kind === 'subclassFeature' ? { subclassSource: 'PHB', subclassEngShortName: 'Synthetic Subclass' } : {}) }),
+  raw: { name, ENG_name: name, source: 'PHB', className: 'Synthetic Class', subclassShortName: 'Synthetic Subclass' },
+  edition: '2014', namespace: packId, files: ['data/synthetic.json'], expansion: 'source',
+});
+const reference = (row: Material) => row.identity.kind === 'classFeature' ? `${row.raw.name}|Synthetic Class|PHB|3|PHB`
+  : row.identity.kind === 'subclassFeature' ? `${row.raw.name}|Synthetic Class|PHB|Synthetic Subclass|PHB|3|PHB` : `${row.raw.name}|PHB`;
+const node = (kind: Kind, ref: string) => ({ type: `ref${kind[0].toUpperCase()}${kind.slice(1)}`, [kind]: ref });
+const owner = (entries: unknown[]): Material => ({ ...feature('classFeature', 'Synthetic Choice'), raw: { entries: [{ type: 'options', count: 1, entries }] } });
+const derive = (row: Material, targets: Material[]) => deriveStructured(row, makeContext([row, ...targets]));
+const unresolved = (out: ReturnType<typeof derive>) => {
+  expect(out.mechanics.grants).toBeUndefined();
+  expect(out.unsupported).toEqual([{ family: 'inlineChoice', code: 'unresolved-inline-choice', ref: 'entries:0' }]);
+};
+
+test.each(kinds.flatMap(declared => kinds.map(actual => ({ declared, actual }))))('$declared references resolve only $actual when the kinds agree', ({ declared, actual }) => {
+  const target = feature(actual);
+  const ref = declared === 'optionalfeature' ? `${target.raw.name}|PHB` : reference(target);
+  const out = derive(owner([node(declared, ref)]), [target]);
+  if (declared !== actual) unresolved(out);
+  else {
+    expect(out.unsupported).toEqual([]);
+    expect(out.mechanics.grants).toEqual([{ type: 'feature', key: 'text-option:entries:0', choose: { count: 1, from: [target.identity.key] } }]);
+  }
+});
+
+test.each(['Synthetic Option|PHB', 'Synthetic Option'])('a declared optional feature is not ambiguous with same-name class/subclass features: %s', ref => {
+  const target = feature('optionalfeature'), shadows = [feature('classFeature'), feature('subclassFeature')];
+  const out = derive(owner([{ optionalfeature: ref }]), [...shadows, target]);
+  expect(out.unsupported).toEqual([]);
+  expect(out.mechanics.grants?.[0]?.choose?.from).toEqual([target.identity.key]);
+});
+
+test('a genuinely ambiguous reference within the declared kind stays unresolved', () => {
+  unresolved(derive(owner([node('optionalfeature', 'Synthetic Option|PHB')]), [feature('optionalfeature'), feature('optionalfeature', 'Synthetic Option', 'otherpack')]));
+});
+
+test('one wrong-kind reference rejects the complete group beside a valid typed option', () => {
+  const valid = feature('optionalfeature', 'Synthetic Valid'), wrong = feature('classFeature', 'Synthetic Missing Optional');
+  unresolved(derive(owner([node('optionalfeature', reference(valid)), node('optionalfeature', `${wrong.raw.name}|PHB`)]), [valid, wrong]));
+});
+
+test('the typed identity remains a valid immutable pending declaration, without granting character effects', () => {
+  const target = feature('optionalfeature'), shadow = feature('classFeature'), row = owner([node('optionalfeature', reference(target))]);
+  const before = structuredClone([row, target, shadow]);
+  const freeze = (value: any): void => { if (value && typeof value === 'object') { Object.values(value).forEach(freeze); Object.freeze(value); } };
+  freeze(row); freeze(target); freeze(shadow);
+  const out = derive(row, [shadow, target]);
+  expect(out.mechanics.grants?.[0]?.choose?.from).toEqual([target.identity.key]);
+  expect(out.mechanics.modifiers).toBeUndefined();
+  const envelope: AutomationEnvelope = { schemaVersion: 1, protocol: 3,
+    versionLock: { kiweeChangelogVersion: 'synthetic', kiweeChangelogDate: '2026-10-19', fetchedAt: '2026-10-19T00:00:00Z', foundryMigrationVersion: [3], toolVersion: 'synthetic', inputs: [{ url: 'https://example.org/synthetic.json', path: 'synthetic.json', namespace: 'kiwee', role: 'catalog', sha256: 'a'.repeat(64), bytes: 1 }] },
+    records: [row, target, shadow].map(material => ({ identity: material.identity, edition: material.edition, verdict: 'needsAnnotation', autoGenerated: true, provenance: [{ layer: 'structured', ref: 'data/synthetic.json' }], ...(material === row ? { mechanics: out.mechanics, unsupported: out.unsupported } : { unsupported: [] }) })) };
+  expect(() => validateAutomation(envelope)).not.toThrow();
+  expect([row, target, shadow]).toEqual(before);
+});

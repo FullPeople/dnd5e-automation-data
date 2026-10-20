@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "consumer": {
+    "repository": "FullPeople/DND-card-web",
+    "revision": "fd6b8cb09a79dba12e39a426f31fd4885c4f3d47",
+    "modules": [
+      {
+        "path": "src/cloud/api.ts",
+        "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+      },
+      {
+        "path": "src/cloud/authorizationLease.ts",
+        "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+      },
+      {
+        "path": "src/cloud/room.ts",
+        "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+      },
+      {
+        "path": "src/cloud/sync.ts",
+        "sha256": "9df6503cd7ae2e4888fc81e89245fcc0b291727c7f743714b9e99e54802d07d5"
+      },
+      {
+        "path": "src/core/automation/active.ts",
+        "sha256": "50b92cb03f42e6b3d3487e41b9a1270e159fb8b069697f1f50318de86d04eb99"
+      },
+      {
+        "path": "src/core/automation/backgroundAbilities.ts",
+        "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+      },
+      {
+        "path": "src/core/automation/choices.ts",
+        "sha256": "e954265e26ed4008666fe42fadffe7832f23f0e8a6634e51a45d7eaa2c6d9bd3"
+      },
+      {
+        "path": "src/core/automation/classChoiceEvidence.json",
+        "sha256": "8422cd17aa4697607bef06516b05036a29ee9421ab468cac15337f7070b3a5fb"
+      },
+      {
+        "path": "src/core/automation/classChoiceSourceGrant.ts",
+        "sha256": "3eeb060d54b5db8c352906eccde88589fd2748640bca17d211f2de4ae62bb385"
+      },
+      {
+        "path": "src/core/automation/classChoiceSupport.ts",
+        "sha256": "0a0c92a65254a3b63481f1475406206b4298717506862b03d1d97ae991579306"
+      },
+      {
+        "path": "src/core/automation/classSpellChoices.ts",
+        "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+      },
+      {
+        "path": "src/core/automation/equipment.ts",
+        "sha256": "5366e18efa18be89c066aa7ea7d22750c9397dc38a1ccf79ee25f1abc69eaa17"
+      },
+      {
+        "path": "src/core/automation/featAbilities.ts",
+        "sha256": "e33045446eadce5bad33fc094eb6c3f18417d3200d8e62503a4531f7b190be72"
+      },
+      {
+        "path": "src/core/automation/featureArmor.ts",
+        "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+      },
+      {
+        "path": "src/core/automation/featureResources.ts",
+        "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+      },
+      {
+        "path": "src/core/automation/sourceClassChoices.ts",
+        "sha256": "94d9921f093ff5d6deb2524735468116f9a1e300c9312c92096a1902a6151f6e"
+      },
+      {
+        "path": "src/core/automation/sourceEquipment.ts",
+        "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+      },
+      {
+        "path": "src/core/automation/sourceResourcePools.ts",
+        "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+      },
+      {
+        "path": "src/core/automation/sourceSpellPlan.ts",
+        "sha256": "bad8f9ed9c527b4928d9a16c0494026e1b34cd3c07a834f2ac8c72c30c2d83f8"
+      },
+      {
+        "path": "src/core/automation/sourceSpells.ts",
+        "sha256": "bc4f3a245f8a33d7dc5cbe6e7cb7e2477aacd865465720a819a8d8e71b582e4e"
+      },
+      {
+        "path": "src/core/automation/sourceSpellState.ts",
+        "sha256": "4f4efa38bb71171a9ab714521b86930a100579c47acc2242c49117727326f169"
+      },
+      {
+        "path": "src/core/automation/state.ts",
+        "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+      },
+      {
+        "path": "src/core/automation/training.ts",
+        "sha256": "d49949c9e7caafb7261dbe65bf8ff306e1b3299056f911ccbdad10baaf27239f"
+      },
+      {
+        "path": "src/core/automation/weapons.ts",
+        "sha256": "87a2ff6203cfe6809d2caf2909d3e88e7281395de93e7ea8c451bcbf13fca0f4"
+      },
+      {
+        "path": "src/core/characterDetails.ts",
+        "sha256": "df89b94dbe44a87127d670c43f2a5d59aa1591933bc69b6aa40ed62ca5f7ad16"
+      },
+      {
+        "path": "src/core/engine.ts",
+        "sha256": "6eb851288f9f22d7238c88d95d95891ad2ec2ea062c6a2b1cbb3554106073ca0"
+      },
+      {
+        "path": "src/core/entryNameIndex.ts",
+        "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+      },
+      {
+        "path": "src/core/entryReferences.ts",
+        "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+      },
+      {
+        "path": "src/core/featureOwnership.ts",
+        "sha256": "4f7814394725d2f30fa66a91f3b3084c06df27f00159953111e67de3bfb049af"
+      },
+      {
+        "path": "src/core/hitPoints.ts",
+        "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+      },
+      {
+        "path": "src/core/model.ts",
+        "sha256": "2040ac38cac6258aa3096f887801bdc3d6420f7e79dd1bff60ebdcab8e861bfc"
+      },
+      {
+        "path": "src/core/numericExpression.ts",
+        "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+      },
+      {
+        "path": "src/core/preparation.ts",
+        "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+      },
+      {
+        "path": "src/core/proficiencyText.ts",
+        "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+      },
+      {
+        "path": "src/core/racialAbilities.ts",
+        "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+      },
+      {
+        "path": "src/core/resources.ts",
+        "sha256": "01ca53c0159d8a4102a099e9ad0eedd59d6223aaabff8662ad349f1fc84ba81f"
+      },
+      {
+        "path": "src/core/sheet.ts",
+        "sha256": "381848187afcaad6df7246ef24bcc7c20e756f807abc66b8c07159973765d4a2"
+      },
+      {
+        "path": "src/core/sourceCorrections.ts",
+        "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+      },
+      {
+        "path": "src/core/spellCapacity.ts",
+        "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+      },
+      {
+        "path": "src/core/spellcastingRules.ts",
+        "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+      },
+      {
+        "path": "src/core/spellResourceKeys.ts",
+        "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+      },
+      {
+        "path": "src/core/spells.ts",
+        "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+      },
+      {
+        "path": "src/core/spellWorkspace.ts",
+        "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+      },
+      {
+        "path": "src/data/adapt.ts",
+        "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+      },
+      {
+        "path": "src/data/catalog.ts",
+        "sha256": "b8724cc1f8f3797af00057b3dc45aa337a9125bdbed2648ad2a9188c24fd99d6"
+      },
+      {
+        "path": "src/data/catalogNormalizer.ts",
+        "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+      },
+      {
+        "path": "src/data/catalogSnapshot.ts",
+        "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+      },
+      {
+        "path": "src/data/catalogSource.ts",
+        "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+      },
+      {
+        "path": "src/data/catalogTransport.ts",
+        "sha256": "c367bde9fb8637ddaff275ea4e9776134ceaad70b238b8aa71ac3fda3f9b0d1f"
+      },
+      {
+        "path": "src/data/expand.ts",
+        "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+      },
+      {
+        "path": "src/data/homebrew.ts",
+        "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+      },
+      {
+        "path": "src/data/weaponTraining.ts",
+        "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+      },
+      {
+        "path": "src/platform/buildMode.ts",
+        "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+      },
+      {
+        "path": "src/platform/requestTimeout.ts",
+        "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+      },
+      {
+        "path": "src/platform/storage.ts",
+        "sha256": "935bf891c6295923ac163f7a48a0299efc1d65230906852e8b773a452b227386"
+      },
+      {
+        "path": "src/platform/workbenchMode.ts",
+        "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+      },
+      {
+        "path": "src/platform/workspaceIdentity.ts",
+        "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+      },
+      {
+        "path": "src/platform/workspaceNamespace.ts",
+        "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "url": "https://5e.kiwee.top/data/feats.json",
+      "sha256": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6"
+    },
+    {
+      "url": "https://5e.kiwee.top/data/class/class-fighter.json",
+      "sha256": "a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509"
+    }
+  ],
+  "checks": [
+    "selection-does-not-infer-an-allocation",
+    "confirmed-plus-two-calculates-score-and-modifier",
+    "saved-reopen-offline-retains-one-increase",
+    "replacement-removes-previous-allocation",
+    "cancellation-removes-the-increase",
+    "downgrade-and-restore-retain-answer-and-identity",
+    "alternative-feat-and-restore-leave-no-residue",
+    "source-disable-and-restore-retain-answer",
+    "manual-scores-notes-and-resource-balances-unchanged",
+    "old-manual-card-is-inert-without-new-answer",
+    "cap-twenty-never-reduces-higher-manual-score"
+  ],
+  "passed": 11,
+  "wholeRuleComplete": false,
+  "playerDataRead": false,
+  "rawInputPublished": false
+}
