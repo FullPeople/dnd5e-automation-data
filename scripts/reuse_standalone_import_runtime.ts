@@ -32,7 +32,7 @@ const runtimePaths=Object.keys(adapter.metafile!.inputs).map(p=>resolve(p)).filt
 for(const path of runtimePaths){const old=original.consumer.modules.find(m=>m.path===path);if(!old||hash(readFileSync(join(webRoot,path)))!==old.sha256)throw Error('Real runtime dependency changed; full replay required: '+path);}
 const views=await build({stdin:{contents:`export {standaloneCardViews,prepareStandaloneCards} from ${JSON.stringify(resolve(webRoot,'src/platform/standaloneCardViews.ts').replaceAll('\\','/'))}`,resolveDir:resolve(webRoot),loader:'ts'},bundle:true,platform:'node',format:'esm',outfile:resolve('.cache/reuse-303-views.mjs'),metafile:true,define:{'import.meta.env.MODE':'"standalone"','import.meta.env.DEV':'false'}});
 const viewPaths=Object.keys(views.metafile!.inputs).map(p=>resolve(p)).filter(p=>p.replaceAll('\\','/').startsWith(resolve(webRoot).replaceAll('\\','/')+'/src/')).map(p=>p.slice(resolve(webRoot).length+1).replaceAll('\\','/')).sort();
-const addedViews=['src/platform/standaloneCardViews.ts'];
+const addedViews=['src/platform/standaloneCardViews.ts','src/platform/cardViewReconciliation.ts'];
 for(const path of viewPaths){if(addedViews.includes(path))continue;if(hash(readFileSync(join(webRoot,path)))!==hash(git(webRoot,'cat-file','blob',baselineWeb+':'+path)))throw Error('View dependency changed beyond pure import preparation: '+path);}
 const paths=[...new Set([...original.consumer.modules.map(m=>m.path),...viewPaths])].sort();
 const modules=paths.map(path=>({path,sha256:hash(readFileSync(join(webRoot,path)))}));
