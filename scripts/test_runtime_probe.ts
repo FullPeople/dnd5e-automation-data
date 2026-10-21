@@ -33,18 +33,29 @@ const emptyChild=entry('empty-child','subclass',{className:'Parent',classSource:
 const contextual=[...catalog,parent,parentFeature,emptyChild];
 const calibration=api.newCharacter('2014');calibration.profile.enabledSources=['PHB'];calibration.automation=api.newAutomationState();calibration.selections=[{id:'parent',entry:parent,level:1,quantity:1,equipped:false}];api.syncFeatures(calibration,contextual);api.syncAutoResources(calibration);assert.ok(Object.values(calibration.runtime.resources).some((r:any)=>r.featureGrant&&r.max===3),'The parent context must actually contain an automatic feature resource');
 assert.equal(probeEntry(api,emptyChild,contextual,[parent]),null);
+// Original prose and candidates; reviewed identities establish the directory
+// link. The witness must execute the consumer's canonical recorded choice.
+const modern=(id:string,kind:string,name:string,english:string,raw:any,entries:any[]=[])=>({...entry(id,kind,raw,entries),name,english,source:'XPHB',edition:'2024'});
+const optionalEntries=Array.from({length:28},(_,i)=>modern(`authored-option:${i}`,'feature',`Authored option ${i}`,`Authored option ${i}`,{_category:'optionalfeature',featureType:['EI']}));
+const optionalRef='Authored directory|魔契师|XPHB|1';
+const optionalParent=modern('authored-optional-parent','class','魔契师','Warlock',{_category:'class',classFeatures:[optionalRef],optionalfeatureProgression:[{name:'Authored learned quota',featureType:['EI'],progression:[1,3,3,3,5,5,6,6,7,7,7,8,8,8,9,9,9,10,10,10]}]});
+const optionalDirectory=modern('authored-optional-directory','feature','Authored directory','Eldritch Invocation Options',{_category:'classFeature',className:'魔契师',classSource:'XPHB',level:1},['Authored directory text.',{type:'options',count:1,entries:optionalEntries.map(e=>({type:'refOptionalfeature',optionalfeature:`${e.name}|XPHB`}))}]);
+const optionalCatalog=[optionalParent,optionalDirectory,...optionalEntries],optionalWitness=probeEntry(api,optionalDirectory,optionalCatalog,[optionalParent]);
+assert.equal(optionalWitness?.kind,'choice:content');assert.deepEqual((optionalWitness?.after as any).delivered,[]);assert.equal((optionalWitness?.after as any).selected.length,1);
+const optionalResults=await runRuntimeProbePool(path,optionalCatalog,Array.from({length:4},(_,index)=>({index,entry:optionalDirectory.id,parents:[optionalParent.id]})),{workers:4,recycleAfter:1});
+for(const witness of optionalResults.values())assert.deepEqual(witness,optionalWitness,'Four workers must execute the same exact canonical optional witness as the serial real consumer.');
 const worker=new Worker(new URL('../src/runtimeCoverage/worker.ts',import.meta.url),{workerData:{adapter:path,catalog:contextual},execArgv:['--experimental-strip-types']});
 try{for(const [index,item] of contextual.entries()){
  const parents=item===emptyChild?[parent]:[],expected=probeEntry(api,item,contextual,parents);
  const actual=await new Promise<any>((resolve,reject)=>{worker.once('message',resolve);worker.once('error',reject);worker.postMessage({index,entry:item.id,parents:parents.map(row=>row.id)});});
  assert.equal(actual.error,undefined);assert.equal(actual.index,index);assert.deepEqual(actual.witness,expected,'Parallel probes must return the exact real-consumer witness.');
 }}finally{await worker.terminate();}
-for(const options of [{workers:1,recycleAfter:2},{workers:2,recycleAfter:1}]){
+for(const options of [{workers:1,recycleAfter:2},{workers:2,recycleAfter:1},{workers:4,recycleAfter:1}]){
  const jobs=contextual.map((item,index)=>({index,entry:item.id,parents:item===emptyChild?[parent.id]:[]}));
  const results=await runRuntimeProbePool(path,contextual,jobs,options);
  for(const [index,item] of contextual.entries())assert.deepEqual(results.get(index),probeEntry(api,item,contextual,item===emptyChild?[parent]:[]),'Recycled probes must equal the serial real-consumer witness.');
 }
-console.log('Runtime probe: 8 real-consumer positive/negative scenarios passed; recycled one/two-worker results equal serial results.');
+console.log('Runtime probe: 9 real-consumer positive/negative scenarios passed; canonical optional and recycled one/two/four-worker results equal serial results.');
 const checkpointRoot=mkdtempSync(join(tmpdir(),'real-probe-checkpoint-'));
 try{
  const jobs=contextual.map((item,index)=>({index,entry:item.id,parents:item===emptyChild?[parent.id]:[]})),file=join(checkpointRoot,'receipts.jsonl');

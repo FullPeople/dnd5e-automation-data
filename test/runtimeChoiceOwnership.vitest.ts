@@ -10,3 +10,13 @@ it.each(['no parent','manual grant','wrong source','wrong class','wrong level','
  expect(candidateWitnessChoices(card,[own,choice])).toEqual([own]);
 });
 it('uses an explicit object classFeature reference without broadening attribution',()=>{const card=setup();(card.selections[0].entry.raw as any).classFeatures=[{classFeature:ref}];expect(candidateWitnessChoices(card,[canonical,unrelated])).toEqual([canonical]);});
+
+function optionalSetup(){const card=setup();(card.selections[1].entry as any).entries=['Authored directory.',{type:'options',count:1,entries:[{type:'refOptionalfeature',optionalfeature:'Authored option|XPHB'}]}];return card;}
+const optional={id:'learned',ownerId:'parent',sourceProgression:'optional',channel:'content',catalogKind:'feature',count:3,support:{rule:'verified',execution:'record-only'},duplicateChoiceIds:['candidate:text-option:entries:1']};
+it('attributes the exact typed directory alias to its reviewed canonical optional learning choice',()=>{expect(candidateWitnessChoices(optionalSetup(),[optional,canonical,unrelated])).toEqual([optional,canonical]);});
+it.each(['wrong owner','wrong alias','wrong path','wrong node','non-typed reference','wrong reference source','unverified rule','wrong execution','wrong channel','wrong kind','zero quota','no parent','manual grant','future grant','wrong class','wrong source','undeclared reference'] as const)('rejects unrelated optional witness: %s',mode=>{
+ const card=optionalSetup(),candidate:any=card.selections[1],parent:any=card.selections[0],choice:any=structuredClone(optional);
+ if(mode==='wrong owner')choice.ownerId='another';if(mode==='wrong alias')choice.duplicateChoiceIds=['another:text-option:entries:1'];if(mode==='wrong path')choice.duplicateChoiceIds=['candidate:text-option:entries:0'];if(mode==='wrong node')candidate.entry.entries[1].type='entries';if(mode==='non-typed reference')candidate.entry.entries[1].entries=[{name:'Authored inline option'}];if(mode==='wrong reference source')candidate.entry.entries[1].entries[0].optionalfeature='Authored option|PHB';if(mode==='unverified rule')choice.support.rule='source-declared';if(mode==='wrong execution')choice.support.execution='existing-grants';if(mode==='wrong channel')choice.channel='skills';if(mode==='wrong kind')choice.catalogKind='feat';if(mode==='zero quota')choice.count=0;
+ if(mode==='no parent')delete candidate.parentId;if(mode==='manual grant')delete candidate.grantKey;if(mode==='future grant')parent.level=18;if(mode==='wrong class')candidate.entry.raw.className='Another Class';if(mode==='wrong source')candidate.entry.source='PHB';if(mode==='undeclared reference')parent.entry.raw.classFeatures=[];
+ expect(candidateWitnessChoices(card,[own,choice,unrelated])).toEqual([own]);
+});
