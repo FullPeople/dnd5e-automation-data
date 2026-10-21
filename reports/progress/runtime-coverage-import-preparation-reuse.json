@@ -4,20 +4,21 @@
   "baselineDataRevision": "f374806ba54158d74b3868cdf67431f3f962a790",
   "baselineArtifactSha256": "f8eff279c9708e73c3579f2aeaa0d4cc8fa91c4fb4fd70af7188fa2007e51590",
   "baselineConsumerRevision": "744c7b12d45b18ba20b15ce9279ee9b717c34c5a",
-  "verifiedAt": "2026-10-21T05:54:28.859Z",
+  "verifiedAt": "2026-10-21T06:05:14.090Z",
   "fullReplayRun": false,
   "unchangedRuntimeModules": 58,
   "unchangedFrozenInputs": 229,
   "recordsAndWitnessesUnchanged": true,
   "viewParityCards": 3,
   "scope": "Unchanged real calculations and choices reused; import read-view preparation checked separately; no browser/cloud acceptance claim",
-  "currentConsumer": "cf44531c5f2e78df7dea340916b070c9c446304c",
-  "boundModules": 77,
+  "currentConsumer": "abdbd7ff0892efce23a9adb0db95334f06ddf138",
+  "boundModules": 80,
   "changedPreviousConsumerModules": [
     "src/ui/App.tsx"
   ],
   "newViewModules": [
-    "src/platform/standaloneCardViews.ts"
+    "src/platform/standaloneCardViews.ts",
+    "src/platform/cardViewReconciliation.ts"
   ],
   "baselineReplayUpdatedAt": "2026-10-20T01:22:55.779Z",
   "records": 18789,
