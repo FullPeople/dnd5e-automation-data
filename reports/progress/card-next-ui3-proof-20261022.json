@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "ui-progress-binding-only-no-additional-full-replay",
+  "consumer": "1854c84e0f99f394e76fdc30b164888d894c31de",
+  "pairedReportSha256": "d33f0fceaa279a98a27c70ec9ff2b2e3335c990f2ed6e3a1051900dc6a5014e1",
+  "pairedReportBytes": 7554617,
+  "boundModules": 119,
+  "preservedPreviousModules": 116,
+  "actualAdapterDependencies": 59,
+  "actualAdapterDependencyBytesUnchanged": true,
+  "recordsAndWitnessesUnchanged": true,
+  "records": 18789,
+  "inputs": 229,
+  "mechanismVerifiedRecords": 6537,
+  "reviewedRecords": 4561,
+  "previousDataRevision": "68f9860d66b340f920f81900a70612b5e1537787",
+  "previousPairedReportSha256": "368e136986ab238bed2835432a027b7bfc98262a02ae33138d6b2c5a908af37c",
+  "originalFullReportPath": "reports/progress/runtime-coverage-full-20261022.json",
+  "originalFullReportSha256": "ab2d1a1a8b8dc7ac131acaea2b7bad4a43bfc25fc9236202287924d956ba24bc",
+  "fullReplayProducer": "c766977d78c99a2e971a9ede15ff169a61a21719",
+  "fullReplayConsumer": "504e5f04d417e810f36ef560d83163f87784a70a",
+  "fullReplayUpdatedAt": "2026-10-22T09:36:21.396Z",
+  "uiBindingReason": "Instance-scoped catalog-progress leaf and idempotent source metadata context. No rule or actual adapter dependency changed.",
+  "historicalGateCountsPreserved": [
+    85,
+    101,
+    116
+  ],
+  "addedGatePaths": [
+    "src/ui/CatalogLoadStatus.tsx",
+    "src/ui/SourceName.tsx",
+    "src/ui/catalogProgress.ts"
+  ],
+  "actualExternalDependencies": 1,
+  "privateBindingProofSha256": "53d29ae4e35a65f90c022950b46517555dfe8a8fe5a7d2484a8a2eebc5ac967e"
+}
