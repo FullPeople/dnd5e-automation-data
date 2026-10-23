@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T15:58:47.040982+00:00",
+  "updatedAt": "2026-10-23T17:25:47.956Z",
   "definition": "Bounded explicit class-granted ASI mechanism; not complete corpus or release coverage",
   "scope": {
     "sources": [
@@ -18,7 +18,7 @@
     "currentReleaseAvailable": null
   },
   "candidateConsumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
-  "status": "candidate-stage-calibration-pending",
+  "status": "candidate-browser-acceptance-pending",
   "mechanism": "Explicit per-owned-grant +2 or split +1, derived not manual-base mutation, cap20",
   "directed": {
     "passed": 113,
@@ -57,6 +57,26 @@
     "Legacy source-disabled upgrade cannot replace archived original grant",
     "Cyclic ancestry is not consumed by automatic source reconciliation"
   ],
-  "stageReplay": "Pending accurate frozen consumer replay; previous stage report remains bound to previous source",
-  "workflow": "Local exact-source 27-step proof passed on source-equivalent candidate; final remote revision binding pending"
+  "stageReplay": {
+    "consumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
+    "producerRevision": "e0b0c2e380d1d4ed3f250bf9a43d817a7439dc66",
+    "sha256": "c42e168432e78c644cd7e2f8dcf2bcb358a8ec64475de4842d7748651431287a",
+    "total": 18789,
+    "inputs": 229,
+    "modules": 168,
+    "startedAt": "2026-10-23T16:00:53Z",
+    "interruptedAt": "2026-10-23T16:40:39Z",
+    "resumedAt": "2026-10-23T16:45:06Z",
+    "resumedReceipts": 15269,
+    "completedAt": "2026-10-23T17:25:47.956Z",
+    "boundary": "At least one calculation/choice witness is not whole-rule or released coverage"
+  },
+  "workflow": {
+    "passed": 27,
+    "failed": 0,
+    "consumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
+    "producerRevision": "e0b0c2e380d1d4ed3f250bf9a43d817a7439dc66",
+    "report": "asi-workflow.json",
+    "boundary": "Exact frozen-source synthetic workflow; actual browser remains pending"
+  }
 }
