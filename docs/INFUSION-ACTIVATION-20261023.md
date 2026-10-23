@@ -11,3 +11,9 @@
 运行机制发生变化，所以执行一次完整真实回放。脚本保留全部旧消费者模块门禁并加入新灌注 UI，不移除原 159 项绑定。单项机制见证计数仍是“至少一项”，本批新能力可以发生在原本已有学习记录见证的同一身份上，不等于新增整个规则的完成数。
 
 尚未验证：真实生产发布、外部持有人转移、死亡后失效时序、完整物品注法容量替换生命周期。新候选仅推送供审阅，不合并、不部署，也不修改正式玩家数据或权限。
+
+## 远端候选验证（2026-10-23）
+
+配对 Web [PR #103](https://github.com/FullPeople/DND-card-web/pull/103) 的提交 `60b714dfdc6c4cb0a88a37a9e06e7abb39ff1b25` 已在独立检出重新执行十步真实输入能力回放并通过。回执为 `reports/progress/capabilities/tce-enhanced-defense.json`，包含消费模块 SHA256 和明确的手工边界；不是浏览器或整条规则完成证明。
+
+[Data CI 39929554562](https://github.com/FullPeople/dnd5e-automation-data/actions/runs/39929554562) 在 `c16f15d5ad7ffa686a8596afea5ed1b068a7ce2f` 上通过 511 个 Vitest 测试（11 跳过）、14 个 Node 测试与构建。其通用消费探针仍绑定旧 ledger，不能当新注法证明。Web CI 的31个注法测试与类型检查通过，正式构建因新机制尚未完成 runtime ledger 刷新而拦截，浏览器步骤跳过。先前本地负载下的两个5秒超时保留，不修改阈值。
