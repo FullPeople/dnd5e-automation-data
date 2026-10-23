@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T10:08:34.169Z",
+  "updatedAt": "2026-10-23T11:07:45.495Z",
   "scope": "Only 32 PHB optionalfeature entries tagged EI in one frozen input; excludes other sources, editions and feats. Not the all-rules denominator.",
   "source": {
     "url": "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/optionalfeatures.json",
@@ -16,7 +16,7 @@
     "currentReleaseAvailable": null,
     "candidateMergedOrDeployed": 0
   },
-  "validationBoundary": "Exact pushed aggregate has 357 directed passes and 2 unrelated existing conditional skips; all five required frozen inputs verified. Browser execution and refreshed runtime ledger pending. No whole-rule or current-publication certification.",
+  "validationBoundary": "Exact pushed aggregate has 357 directed passes and 2 unrelated existing conditional skips; all five required frozen inputs verified. Full 18789-entry / 229-input runtime replay completed with 164 source-module gates, preserving all prior159. Browser execution remains pending; no whole-rule or current-publication certification.",
   "sharedBoundary": "Only actual source-owned class learning; manual innate remains check. Replacement timing remains manual. Suspended, forgotten, replaced and level-down child trees retain manual data and spent balances, including when automation is off.",
   "entries": [
     {
@@ -287,5 +287,6 @@
       "wholeRuleValidated": false,
       "currentReleaseAvailable": null
     }
-  ]
+  ],
+  "runtimeReport": "reports/progress/runtime-coverage.json"
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T10:08:34.163Z",
+  "updatedAt": "2026-10-23T11:07:45.495Z",
   "scope": "Only the 16 TCE optionalfeature entries tagged AI in one frozen input; excludes other editions/sources and Replicate Magic Item option expansion. This is not the all-rules denominator.",
   "source": {
     "url": "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/optionalfeatures.json",
@@ -14,7 +14,7 @@
     "currentReleaseAvailable": null,
     "candidateMergedOrDeployed": 0
   },
-  "validationBoundary": "Exact pushed aggregate has 357 directed passes and 2 unrelated existing conditional skips; all five required frozen inputs verified. Browser execution and refreshed runtime ledger pending. No whole-rule or current-publication certification.",
+  "validationBoundary": "Exact pushed aggregate has 357 directed passes and 2 unrelated existing conditional skips; all five required frozen inputs verified. Full 18789-entry / 229-input runtime replay completed with 164 source-module gates, preserving all prior159. Browser execution remains pending; no whole-rule or current-publication certification.",
   "entries": [
     {
       "reference": "Arcane Propulsion Armor|TCE",
@@ -198,5 +198,6 @@
     }
   ],
   "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
-  "ci": "https://github.com/FullPeople/DND-card-web/actions/runs/39936545202"
+  "ci": "https://github.com/FullPeople/DND-card-web/actions/runs/39936545202",
+  "runtimeReport": "reports/progress/runtime-coverage.json"
 }
