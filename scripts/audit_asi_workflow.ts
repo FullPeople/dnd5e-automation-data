@@ -1,0 +1,37 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {build} from 'esbuild';
+
+const [webRoot,inputRoot,output='.cache/asi-workflow.json']=process.argv.slice(2);
+if(!webRoot||!inputRoot)throw Error('Usage: audit_asi_workflow.ts WEB_ROOT FROZEN_INPUT_ROOT OUTPUT');
+const git=(...args:string[])=>execFileSync('git',args,{cwd:webRoot,encoding:'utf8'}).trim();
+git('diff','--quiet','HEAD','--','src');
+const consumerRevision=git('rev-parse','HEAD'),index=JSON.parse(readFileSync(join(inputRoot,'index.json'),'utf8'));
+const hashes:Record<string,string>={'class/class-fighter.json':'a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509','feats.json':'0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6'};
+const input=(path:string)=>{const row=index.rows.find((r:any)=>r.url===`https://5e.kiwee.top/data/${path}`);if(!row)throw Error('Missing frozen input '+path);const body=JSON.parse(readFileSync(join(inputRoot,row.path),'utf8')),hash=createHash('sha256').update(JSON.stringify(body)).digest('hex');if(hash!==row.sha256||hash!==hashes[path])throw Error('Input mismatch '+path);return body;};
+mkdirSync('.cache',{recursive:true});const adapter=resolve('.cache/asi-workflow-consumer.mjs');
+const exports:Record<string,string[]>={'src/core/model.ts':['newCharacter'],'src/core/automation/state.ts':['newAutomationState'],'src/data/catalog.ts':['normalizeData'],'src/core/sheet.ts':['syncFeatures'],'src/core/automation/choices.ts':['sheetChoices','setSheetChoiceSlot','syncChoiceContent'],'src/core/automation/asi.ts':['setAsiAllocation'],'src/core/engine.ts':['evaluate'],'src/core/validation.ts':['validateCharacter']};
+await build({stdin:{contents:Object.entries(exports).map(([p,n])=>`export {${n.join(',')}} from ${JSON.stringify(resolve(webRoot,p))};`).join('\n'),resolveDir:resolve(webRoot),loader:'ts'},bundle:true,platform:'node',format:'esm',outfile:adapter,define:{'import.meta.env.MODE':'"standalone"','import.meta.env.DEV':'false'}});
+const api=await import(pathToFileURL(adapter).href),entries=api.normalizeData({...input('class/class-fighter.json'),...input('feats.json')},'frozen-asi-proof');
+const c=api.newCharacter('2024');c.automation=api.newAutomationState();c.abilities.str=16;c.abilities.dex=14;c.notes='Authored manual-protection probe';c.runtime.hp=3;
+c.selections=[{id:'proof-fighter',entry:entries.find((r:any)=>r.kind==='class'&&r.english==='Fighter'&&r.source==='XPHB'),level:6,quantity:1,equipped:false}];
+api.syncFeatures(c,entries);const choices=api.sheetChoices(c,entries).filter((r:any)=>r.id.includes(':class-typed-feat:')),feat=entries.find((r:any)=>r.kind==='feat'&&r.english==='Ability Score Improvement'&&r.source==='XPHB');
+if(choices.length!==2||!feat)throw Error('Expected real Fighter level 4/6 grants');
+for(const choice of choices)api.setSheetChoiceSlot(c,choice.id,0,feat.id,entries);api.syncChoiceContent(c,entries);
+const before={abilities:JSON.stringify(c.abilities),notes:c.notes,hp:c.runtime.hp},steps:any[]=[];
+function check(label:string,card:any,str:number,dex:number){const d=api.evaluate(card);if(d.abilities.str!==str||d.abilities.dex!==dex)throw Error(label+' incorrect projected scores');if(JSON.stringify(card.abilities)!==before.abilities||card.notes!==before.notes||card.runtime.hp!==before.hp)throw Error(label+' manual data changed');steps.push({label,passed:true,str,dex,manualDataPreserved:true});}
+check('Selected ASI stays manual before explicit allocation',c,16,14);
+api.setAsiAllocation(c,choices[0].id,{str:2});check('First grant +2',c,18,14);
+api.setAsiAllocation(c,choices[1].id,{str:1,dex:1});check('Second independent split',c,19,15);
+const reopened=api.validateCharacter(JSON.parse(JSON.stringify(c)));api.syncFeatures(reopened,[]);check('Serialized reopen without catalog',reopened,19,15);
+reopened.automation.enabled=false;check('Automation disabled',reopened,16,14);reopened.automation.enabled=true;check('Automation restored without duplicate',reopened,19,15);
+const enabled=[...reopened.profile.enabledSources];reopened.profile.enabledSources=[];check('Source disabled',reopened,16,14);reopened.profile.enabledSources=enabled;check('Source restored',reopened,19,15);
+reopened.selections.find((r:any)=>r.id==='proof-fighter').level=4;api.syncFeatures(reopened,[]);check('Level downgrade suspends second grant',reopened,18,14);
+reopened.selections.find((r:any)=>r.id==='proof-fighter').level=6;api.syncFeatures(reopened,[]);check('Level restore keeps prior intent',reopened,19,15);
+api.setAsiAllocation(reopened,choices[0].id,null);check('Withdraw first only',reopened,17,15);api.setAsiAllocation(reopened,choices[1].id,null);check('Withdraw remaining allocation',reopened,16,14);
+if(git('rev-parse','HEAD')!==consumerRevision)throw Error('Consumer commit changed');git('diff','--quiet','HEAD','--','src');
+const report={schemaVersion:1,updatedAt:new Date().toISOString(),consumerRevision,source:'Ability Score Improvement|XPHB',inputs:hashes,steps,definition:'Exact-source synthetic workflow proof, not real-browser or publication certification',browser:'pending',currentReleaseAvailable:null};
+writeFileSync(output,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({output,consumerRevision,passed:steps.length,failed:0}));
