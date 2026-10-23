@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "retained-card-ui-binding-only-no-additional-full-replay",
+  "round": 6,
+  "consumer": "da5d4f552a22ebd3335fe4ddf25a3f3bdab62b0f",
+  "pairedReportSha256": "510308d7749f570852bda0b54d85f2e84ef7d25b6791e075b6c8616f1bd0975f",
+  "pairedReportBytes": 7707326,
+  "boundModules": 157,
+  "preservedPreviousModules": 157,
+  "actualAdapterDependencies": 59,
+  "actualExternalDependencies": 1,
+  "actualAdapterDependencyBytesUnchanged": true,
+  "recordsAndWitnessesUnchanged": true,
+  "records": 18789,
+  "inputs": 229,
+  "mechanismVerifiedRecords": 6537,
+  "reviewedRecords": 4561,
+  "previousDataRevision": "456679e1d3aea76125ec2bc934ab4718e80c7738",
+  "previousPairedReportSha256": "ec7e0e516b0de7fb079cc325677497f55494b647bf74591deafe88431ed687b1",
+  "fullReplayProducer": "c766977d78c99a2e971a9ede15ff169a61a21719",
+  "fullReplayConsumer": "504e5f04d417e810f36ef560d83163f87784a70a",
+  "fullReplayUpdatedAt": "2026-10-22T09:36:21.396Z",
+  "originalFullReportPath": "reports/progress/runtime-coverage-full-20261022.json",
+  "originalFullReportSha256": "ab2d1a1a8b8dc7ac131acaea2b7bad4a43bfc25fc9236202287924d956ba24bc",
+  "historicalGateCountsPreserved": [
+    85,
+    101,
+    116,
+    119,
+    157
+  ],
+  "previousUI5FullProvenancePreserved": true,
+  "originalVerifierProofSha256": "61e2d1ab58151108bee2ae6269b71b72e0d5ef373f936578899b259060a15253",
+  "previousPrivateProofSha256": "21fcdf0d040247829477e9bcb783e2b40425a65f47d8273ef62a929e585f8d54",
+  "addedGatePaths": [],
+  "changedConsumerPaths": [
+    "src/ui/Portrait.tsx",
+    "src/ui/RetainedCardVisibility.ts",
+    "src/ui/StockBoard.tsx"
+  ],
+  "verifiedFollowUp": {
+    "from": "34bacdebd1053c1249964839e4d154cb5a6a93d9",
+    "to": "da5d4f552a22ebd3335fe4ddf25a3f3bdab62b0f",
+    "changedRuntimeDependencies": 0,
+    "reviewedSourcePaths": [
+      "src/ui/CharacterTabs.tsx",
+      "src/ui/Portrait.tsx",
+      "src/ui/RetainedCardVisibility.ts",
+      "src/ui/RetainedSheetContexts.tsx",
+      "src/ui/StockBoard.tsx"
+    ],
+    "actualSourceDependencies": 59,
+    "externalDependencies": 1,
+    "exactFinalAdapterSha256": "858f0f2907793ae41909447a12de019590e14f0e28fd161cdba6e1b302ba2713",
+    "frozenInputsRechecked": 229
+  },
+  "uiBindingReason": "Retain bounded card DOM and owner contexts; off-main-thread optional catalog cache I/O; dismiss inactive owner portals; preserve immutable runtime adapter and all save/conflict guards."
+}
