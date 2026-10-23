@@ -9,8 +9,8 @@ const [webRoot,inputRoot,output='.cache/asi-workflow.json']=process.argv.slice(2
 if(!webRoot||!inputRoot)throw Error('Usage: audit_asi_workflow.ts WEB_ROOT FROZEN_INPUT_ROOT OUTPUT');
 const git=(...args:string[])=>execFileSync('git',args,{cwd:webRoot,encoding:'utf8'}).trim();
 git('diff','--quiet','HEAD','--','src');
-const consumerRevision=git('rev-parse','HEAD'),index=JSON.parse(readFileSync(join(inputRoot,'index.json'),'utf8'));
-const hashes:Record<string,string>={'class/class-fighter.json':'a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509','feats.json':'0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6'};
+const consumerRevision=git('rev-parse','HEAD'),producerRevision=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),index=JSON.parse(readFileSync(join(inputRoot,'index.json'),'utf8'));
+const hashes:Record<string,string>={'class/class-artificer.json':'c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7','class/class-fighter.json':'a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509','feats.json':'0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6'};
 const input=(path:string)=>{const row=index.rows.find((r:any)=>r.url===`https://5e.kiwee.top/data/${path}`);if(!row)throw Error('Missing frozen input '+path);const body=JSON.parse(readFileSync(join(inputRoot,row.path),'utf8')),hash=createHash('sha256').update(JSON.stringify(body)).digest('hex');if(hash!==row.sha256||hash!==hashes[path])throw Error('Input mismatch '+path);return body;};
 mkdirSync('.cache',{recursive:true});const adapter=resolve('.cache/asi-workflow-consumer.mjs');
 const exports:Record<string,string[]>={'src/core/model.ts':['newCharacter'],'src/core/automation/state.ts':['newAutomationState'],'src/data/catalog.ts':['normalizeData'],'src/core/sheet.ts':['syncFeatures'],'src/core/automation/choices.ts':['sheetChoices','setSheetChoiceSlot','syncChoiceContent'],'src/core/automation/asi.ts':['setAsiAllocation'],'src/core/engine.ts':['evaluate'],'src/core/validation.ts':['validateCharacter']};
@@ -31,7 +31,22 @@ reopened.automation.enabled=false;check('Automation disabled',reopened,16,14);re
 const enabled=[...reopened.profile.enabledSources];reopened.profile.enabledSources=[];check('Source disabled',reopened,16,14);reopened.profile.enabledSources=enabled;check('Source restored',reopened,19,15);
 reopened.selections.find((r:any)=>r.id==='proof-fighter').level=4;api.syncFeatures(reopened,[]);check('Level downgrade suspends second grant',reopened,18,14);
 reopened.selections.find((r:any)=>r.id==='proof-fighter').level=6;api.syncFeatures(reopened,[]);check('Level restore keeps prior intent',reopened,19,15);
+const replacement=api.sheetChoices(reopened,entries).find((r:any)=>r.id===choices[0].id)?.options.find((r:any)=>r.entry?.kind==='feat'&&r.entry.id!==feat.id&&!r.unavailable);if(!replacement)throw Error('Expected eligible real replacement feat');
+api.setSheetChoiceSlot(reopened,choices[0].id,0,replacement.value,entries);api.syncChoiceContent(reopened,entries);check('Replace first ASI with an eligible source feat',reopened,17,15);
+api.setSheetChoiceSlot(reopened,choices[0].id,0,feat.id,entries);api.syncChoiceContent(reopened,entries);check('Restore archived ASI without duplicate allocation',reopened,19,15);
 api.setAsiAllocation(reopened,choices[0].id,null);check('Withdraw first only',reopened,17,15);api.setAsiAllocation(reopened,choices[1].id,null);check('Withdraw remaining allocation',reopened,16,14);
+for(const [file,english,source,level] of [['class/class-fighter.json','Fighter','PHB',6],['class/class-artificer.json','Artificer','TCE',4]] as const){
+ const catalog=api.normalizeData({...input(file),...input('feats.json')},'frozen-legacy-asi-proof'),card=api.newCharacter('2014');card.automation=api.newAutomationState();card.profile.enabledSources=['PHB','TCE'];card.abilities.str=16;card.abilities.dex=14;card.notes=before.notes;card.runtime.hp=before.hp;
+ card.selections=[{id:'legacy-owner',entry:catalog.find((r:any)=>r.kind==='class'&&r.english===english&&r.source===source),level,quantity:1,equipped:false}];api.syncFeatures(card,catalog);
+ const grants=api.sheetChoices(card,catalog).filter((r:any)=>r.id.includes(':class-legacy-feat:'));if(grants.length!==(level===6?2:1))throw Error('Unexpected legacy grants '+source);
+ for(const grant of grants){const plan=grant.options.find((r:any)=>r.entry.raw._classAbilityRecord);if(!plan)throw Error('Missing explicit legacy plan');api.setSheetChoiceSlot(card,grant.id,0,plan.value,catalog);}api.syncChoiceContent(card,catalog);
+ check(source+' legacy selected plan does not change base',card,16,14);api.setAsiAllocation(card,grants[0].id,{str:2});check(source+' legacy explicit first allocation',card,18,14);
+ if(grants.length===2){api.setAsiAllocation(card,grants[1].id,{dex:1,con:1});check(source+' repeated independent allocation',card,18,15);}
+ const restored=api.validateCharacter(JSON.parse(JSON.stringify(card)));api.syncFeatures(restored,[]);check(source+' legacy save/reopen offline',restored,18,grants.length===2?15:14);
+ restored.selections.find((r:any)=>r.id==='legacy-owner').level=3;api.syncFeatures(restored,[]);check(source+' legacy downgrade suspends contributions',restored,16,14);
+ restored.selections.find((r:any)=>r.id==='legacy-owner').level=level;api.syncFeatures(restored,[]);check(source+' legacy offline restore retains allocations',restored,18,grants.length===2?15:14);
+ for(const grant of grants)api.setAsiAllocation(restored,grant.id,null);check(source+' legacy withdrawal preserves manual scores',restored,16,14);
+}
 if(git('rev-parse','HEAD')!==consumerRevision)throw Error('Consumer commit changed');git('diff','--quiet','HEAD','--','src');
-const report={schemaVersion:1,updatedAt:new Date().toISOString(),consumerRevision,source:'Ability Score Improvement|XPHB',inputs:hashes,steps,definition:'Exact-source synthetic workflow proof, not real-browser or publication certification',browser:'pending',currentReleaseAvailable:null};
+const report={schemaVersion:1,updatedAt:new Date().toISOString(),consumerRevision,producerRevision,source:['Ability Score Improvement|XPHB','Ability Score Improvement class grants|PHB','Ability Score Improvement class grants|TCE'],inputs:hashes,steps,definition:'Exact-source synthetic workflow proof, not real-browser or publication certification',browser:'pending',currentReleaseAvailable:null};
 writeFileSync(output,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({output,consumerRevision,passed:steps.length,failed:0}));
