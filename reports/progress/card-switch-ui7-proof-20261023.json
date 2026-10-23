@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "kind": "retained-card-portal-ui-binding-only-no-additional-full-replay",
+  "round": 7,
+  "consumer": "b08b0faaa05e7a9db743f7f3b362dc392785853d",
+  "pairedReportSha256": "f4035b7bb990b3bdf5e0e5d71e605ccea30f7d1923a3a0aa911d1517921150e6",
+  "pairedReportBytes": 7767956,
+  "boundModules": 159,
+  "preservedPreviousModules": 157,
+  "addedGatePaths": [
+    "src/ui/HitDiceResources.tsx",
+    "src/ui/ResourceWidgets.tsx"
+  ],
+  "changedConsumerPaths": [
+    "src/ui/HitDiceResources.tsx",
+    "src/ui/ResourceWidgets.tsx",
+    "src/ui/SpellsPage.tsx"
+  ],
+  "releaseMetadataSources": [
+    "src/platform/announcement.ts",
+    "src/platform/releaseNotes.ts"
+  ],
+  "actualAdapterDependencies": 59,
+  "actualExternalDependencies": 1,
+  "actualAdapterDependencyBytesUnchanged": true,
+  "adapterComparison": {
+    "rawSha256": "b537d2807f8dade6b10028bf97294877ca536b83e89b8a440b21322fad7db387",
+    "sealedFinalSha256": "858f0f2907793ae41909447a12de019590e14f0e28fd161cdba6e1b302ba2713",
+    "normalizedSha256": "858f0f2907793ae41909447a12de019590e14f0e28fd161cdba6e1b302ba2713",
+    "generatedSourceLabelCommentsChanged": 50,
+    "executableBytesAndDependenciesUnchanged": true
+  },
+  "recordsAndWitnessesUnchanged": true,
+  "records": 18789,
+  "inputs": 229,
+  "mechanismVerifiedRecords": 6537,
+  "reviewedRecords": 4561,
+  "previousDataRevision": "daaa77daf62cd2100dcd5bea09626af9156085d3",
+  "previousPairedReportSha256": "510308d7749f570852bda0b54d85f2e84ef7d25b6791e075b6c8616f1bd0975f",
+  "previousUI6FullProvenancePreserved": true,
+  "originalVerifierProofSha256": "61e2d1ab58151108bee2ae6269b71b72e0d5ef373f936578899b259060a15253",
+  "originalFullReportSha256": "ab2d1a1a8b8dc7ac131acaea2b7bad4a43bfc25fc9236202287924d956ba24bc",
+  "fullReplayUpdatedAt": "2026-10-22T09:36:21.396Z",
+  "uiBindingReason": "Dismiss inactive-owner spell menus, spell detail, hit-die and quickbar resource portals; retain bounded DOM, resources, save queue and conflict protection."
+}
