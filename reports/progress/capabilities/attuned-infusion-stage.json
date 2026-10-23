@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23T18:32:24.685554+00:00",
+  "status": "candidate-directed-verified-stage-replay-and-browser-pending",
+  "definition": "Three bounded TCE infusion mechanisms, not whole-rule or release coverage",
+  "scope": {
+    "totalInThisSelectedScope": 3,
+    "reviewed": 3,
+    "partialMechanismsImplemented": 3,
+    "wholeRulesImplementedAndValidated": 0,
+    "currentReleaseAvailable": null
+  },
+  "rules": [
+    "Repeating Shot|TCE",
+    "Repulsion Shield|TCE",
+    "Resistant Armor|TCE"
+  ],
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "directed": {
+    "passed": 209,
+    "skipped": 0,
+    "files": 8,
+    "candidateConsumerRevision": "d637eb6e22ead4803566581f7e5b46bd8e25a823"
+  },
+  "sourceWorkflow": {
+    "passed": 23,
+    "skipped": 0,
+    "candidateConsumerRevision": "d637eb6e22ead4803566581f7e5b46bd8e25a823"
+  },
+  "browser": {
+    "discovered": 4,
+    "executed": 0,
+    "status": "pending"
+  },
+  "runtimeCoverage": {
+    "status": "previous ASI ledger retained; new stage calibration pending"
+  },
+  "manualBoundaries": [
+    "Loading and ammunition",
+    "Shield charges, dawn recovery, reaction and forced movement",
+    "Actual damage reduction and defense interactions",
+    "Long-rest touching and death-expiry timing"
+  ]
+}
