@@ -4,7 +4,7 @@
   "definition": "One bounded infusion mechanism and its local persisted workflow; not a full rule or live release completion claim",
   "consumer": {
     "repository": "FullPeople/DND-card-web",
-    "revision": "60b714dfdc6c4cb0a88a37a9e06e7abb39ff1b25",
+    "revision": "9f027e82f30176958343de6f9217d81828ae33e5",
     "modules": [
       {
         "path": "src/cloud/api.ts",
@@ -36,7 +36,7 @@
       },
       {
         "path": "src/core/automation/choices.ts",
-        "sha256": "bfe0cddbef90002040d1ea3b26852d0f82123b2f78fe707714bf4513120473b2"
+        "sha256": "af3b3a8f26f41bc1937e0ab9b33d64ac6e17488d570d849973a923c907585783"
       },
       {
         "path": "src/core/automation/classChoiceEvidence.json",
@@ -44,7 +44,7 @@
       },
       {
         "path": "src/core/automation/classChoiceSourceGrant.ts",
-        "sha256": "3eeb060d54b5db8c352906eccde88589fd2748640bca17d211f2de4ae62bb385"
+        "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
       },
       {
         "path": "src/core/automation/classChoiceSupport.ts",
@@ -68,11 +68,19 @@
       },
       {
         "path": "src/core/automation/infusionEvidence.json",
-        "sha256": "61c3d00f4a4f909b12b80c975213f9bff5fdf7df6881ada65ccb0cd5bc71e498"
+        "sha256": "1981f56b18c673b75d3c8c84a586d9ca9b66d4656db494d547be9e4d8d8fa740"
       },
       {
         "path": "src/core/automation/infusions.ts",
-        "sha256": "7194b5e544baadb1c5fc61dcea586f96337e070396a73b6d4d8958109bccf025"
+        "sha256": "f6d529ef70555414a46a40536af7e1d839eed53ac81f256e22df295ec1ff5ce0"
+      },
+      {
+        "path": "src/core/automation/invocationEvidence.json",
+        "sha256": "848b36eb36cc5152ed6bf84082d13cbb00f4fb33221645e504226132039975c6"
+      },
+      {
+        "path": "src/core/automation/invocations.ts",
+        "sha256": "c43d44ea4c8e7b58d99c45bbac40b8263f51027bac9e3d698a167dabdbc6d9b4"
       },
       {
         "path": "src/core/automation/rest.ts",
@@ -80,7 +88,7 @@
       },
       {
         "path": "src/core/automation/sourceClassChoices.ts",
-        "sha256": "a6e3bd594d17e0d6ac640adb7ed209a55b6e9af302e7647ac499b478b772bf40"
+        "sha256": "a2143ff33cedb7f705346e2dd2d6aa0b8ff62fecd0442b95d591bc80416193eb"
       },
       {
         "path": "src/core/automation/sourceEquipment.ts",
@@ -92,7 +100,7 @@
       },
       {
         "path": "src/core/automation/sourceSpellPlan.ts",
-        "sha256": "bad8f9ed9c527b4928d9a16c0494026e1b34cd3c07a834f2ac8c72c30c2d83f8"
+        "sha256": "adce7f6952605c960149c76ba0691ccdc11cfed453ed545f2dab654d0376dd85"
       },
       {
         "path": "src/core/automation/sourceSpellState.ts",
@@ -112,7 +120,7 @@
       },
       {
         "path": "src/core/characterDetails.ts",
-        "sha256": "df89b94dbe44a87127d670c43f2a5d59aa1591933bc69b6aa40ed62ca5f7ad16"
+        "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
       },
       {
         "path": "src/core/currency.ts",
@@ -120,7 +128,7 @@
       },
       {
         "path": "src/core/engine.ts",
-        "sha256": "13c89e82da45e1057cb2fd0a40fe01cbaabf45a3ab176898d7256b01a67f5264"
+        "sha256": "1a7c7186d6f35c1fed86b6410e35f9a43bf0b3bb027fb3e8075b38330f2f5c90"
       },
       {
         "path": "src/core/entryNameIndex.ts",
@@ -132,7 +140,7 @@
       },
       {
         "path": "src/core/featureOwnership.ts",
-        "sha256": "4f7814394725d2f30fa66a91f3b3084c06df27f00159953111e67de3bfb049af"
+        "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
       },
       {
         "path": "src/core/hitPoints.ts",
@@ -204,7 +212,7 @@
       },
       {
         "path": "src/core/validation.ts",
-        "sha256": "a4649cc2a3836cef4f1a21ba68ca418da900c26cc00a368a5a2f3fd9b690d5a8"
+        "sha256": "6409ae8e5620e6922a9e9e93b937e328f6b2e3e1f02a9ef704399c35f7ef7831"
       },
       {
         "path": "src/data/adapt.ts",

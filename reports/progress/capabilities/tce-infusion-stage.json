@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23T10:08:34.163Z",
+  "scope": "Only the 16 TCE optionalfeature entries tagged AI in one frozen input; excludes other editions/sources and Replicate Magic Item option expansion. This is not the all-rules denominator.",
+  "source": {
+    "url": "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/optionalfeatures.json",
+    "canonicalSha256": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844"
+  },
+  "summary": {
+    "indexedEntries": 16,
+    "boundedMechanismSourceReviewed": 4,
+    "partialMechanismTested": 4,
+    "wholeRuleValidated": 0,
+    "currentReleaseAvailable": null,
+    "candidateMergedOrDeployed": 0
+  },
+  "validationBoundary": "Exact pushed aggregate has 357 directed passes and 2 unrelated existing conditional skips; all five required frozen inputs verified. Browser execution and refreshed runtime ledger pending. No whole-rule or current-publication certification.",
+  "entries": [
+    {
+      "reference": "Arcane Propulsion Armor|TCE",
+      "page": 20,
+      "entrySha256": "399b67e9a24cd6e2be152869e5863f2c4683ef5672e95dfdb96122ee8ec20786",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Armor of Magical Strength|TCE",
+      "page": 20,
+      "entrySha256": "27233a6f8e4bc27c3bdaf2483e2516b8c1440d25e40bf82c5a9d2b019d71d799",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Boots of the Winding Path|TCE",
+      "page": 21,
+      "entrySha256": "40cf4b238c3fee392257260feca76a8cb4a7676f8c8235f31f5be02d62a77ebe",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Enhanced Arcane Focus|TCE",
+      "page": 21,
+      "entrySha256": "74a9b4756537cb2a3dc3eddd2da7311fcee4a0703e7550dde24d3705c4df851d",
+      "status": "partial-mechanism-tested",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null,
+      "testedMechanisms": [
+        "explicit owned PHB rod/staff/wand binding",
+        "requires equipped, attuned and explicit held confirmation",
+        "all spell attack consumers +1 / artificer class level10 +2; no DC or damage",
+        "persist/reopen, target replacement, native/legacy backup, manual spell values preserved"
+      ],
+      "manualOrUnsupported": [
+        "half cover",
+        "hand and attunement totals",
+        "external equipment restoration can retain old held intent; manually reconfirm",
+        "long rest, touch, death lifecycle"
+      ],
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104"
+    },
+    {
+      "reference": "Enhanced Defense|TCE",
+      "page": 21,
+      "entrySha256": "c3ff5aa7aefeb54b8e2d0454d042aa6b89937d5a454af67eec7d9363084015b0",
+      "status": "partial-mechanism-tested",
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104",
+      "testedMechanisms": [
+        "explicit eligible-item activation",
+        "worn target AC +1 / artificer level10 +2",
+        "save/reopen, replace/withdraw, forgetting cleanup, manual-data protection"
+      ],
+      "manualOrUnsupported": [
+        "long rest and touch eligibility",
+        "death expiry",
+        "external recipient",
+        "2024 shield combination"
+      ],
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Enhanced Weapon|TCE",
+      "page": 21,
+      "entrySha256": "689d4e421ac5d106c43c8e90cd9b25b6a568e67c778a1a97e6d33ef34e7baddd",
+      "status": "partial-mechanism-tested",
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104",
+      "testedMechanisms": [
+        "eligible owned simple/martial weapon target",
+        "derived attack/damage +1 / artificer level10 +2",
+        "save/reopen, replace/withdraw, forgetting cleanup, manual-data protection"
+      ],
+      "manualOrUnsupported": [
+        "magical resistance/immunity interaction",
+        "no-damage or SCF dual-purpose targets",
+        "long rest, touch and death lifecycle"
+      ],
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Helm of Awareness|TCE",
+      "page": 21,
+      "entrySha256": "bc373de580359428c0fbb7be536a30c9723dec1ed9d59b7cfcd30df9edd94fef",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Homunculus Servant|TCE",
+      "page": 21,
+      "entrySha256": "eeb3e146a8fd23628928aba904d8f19239b7a59d98ba5b10850c735a16910af9",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Mind Sharpener|TCE",
+      "page": 22,
+      "entrySha256": "d8a1185d43052a39b5ddd0ae50758fb34acbc7bd9765474898957305c3591f84",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Radiant Weapon|TCE",
+      "page": 22,
+      "entrySha256": "fe3bd279c34d94541e26a8b3fbb113f0154194fd09b5d2942a4de4656832301e",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Repeating Shot|TCE",
+      "page": 22,
+      "entrySha256": "2c0d16d8243af25a3845ae161a9be7f0cfcb195cb80ac7f9aafe9d8bfd56dde7",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Replicate Magic Item|TCE",
+      "page": 22,
+      "entrySha256": "50135903c1be38c2c2c612190b9d8ffed35502f2e2e248cd647146b4db639824",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Repulsion Shield|TCE",
+      "page": 23,
+      "entrySha256": "28ec9c4a9c276621b12dd971841d6837b5d2bfc3132d286b6e51d1acd885f64b",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Resistant Armor|TCE",
+      "page": 23,
+      "entrySha256": "338fac5826a0f5823dd84c16ab1a8856af870ec37c0b3d01e0c2b431326fc61e",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Returning Weapon|TCE",
+      "page": 23,
+      "entrySha256": "9b06dce9d856241dbc2fb57fe7b95a4945abee3cee21f969a102540fd83a4aa7",
+      "status": "partial-mechanism-tested",
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104",
+      "testedMechanisms": [
+        "eligible owned thrown weapon target",
+        "fixed derived attack/damage +1",
+        "save/reopen, replace/withdraw, shared capacity and manual-data protection"
+      ],
+      "manualOrUnsupported": [
+        "return-to-hand action and timing",
+        "magical resistance/immunity interaction",
+        "Net/no-damage target",
+        "long rest, touch and death lifecycle"
+      ],
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Spell-Refueling Ring|TCE",
+      "page": 23,
+      "entrySha256": "5ad5a802bbd8769717ecf6d54990a953bab9b1a0777abbf5be4ed71f6a180ce4",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    }
+  ],
+  "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+  "ci": "https://github.com/FullPeople/DND-card-web/actions/runs/39936545202"
+}
