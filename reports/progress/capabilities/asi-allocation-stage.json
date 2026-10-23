@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T17:25:47.956Z",
+  "updatedAt": "2026-10-23T18:01:19.160Z",
   "definition": "Bounded explicit class-granted ASI mechanism; not complete corpus or release coverage",
   "scope": {
     "sources": [
@@ -18,7 +18,7 @@
     "currentReleaseAvailable": null
   },
   "candidateConsumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
-  "status": "candidate-browser-acceptance-pending",
+  "status": "candidate-bounded-mechanism-validated-not-released",
   "mechanism": "Explicit per-owned-grant +2 or split +1, derived not manual-base mutation, cap20",
   "directed": {
     "passed": 113,
@@ -27,7 +27,31 @@
   },
   "browser": {
     "discovered": 10,
-    "executed": 0
+    "executed": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "runUrl": "https://github.com/FullPeople/DND-card-web/actions/runs/39998022074",
+    "jobId": 120566528571,
+    "artifactId": 12521083196,
+    "artifactSha256": "852b7bbc493b35fa417eba0a748223bb2e66cf1a05df948990fe965521106fd1",
+    "desktopViewport": [
+      1512,
+      982
+    ],
+    "narrowViewport": [
+      390,
+      844
+    ],
+    "fixtures": "Original synthetic source-qualified metadata, no publisher prose or private cards",
+    "initialFailure": {
+      "run": 39996347929,
+      "passed": 2,
+      "failed": 8,
+      "resolution": "Test-only correction: same-edition import skips review; reopen completed class choices with actual class context menu",
+      "assertionsPreserved": true,
+      "sourceChanged": false
+    }
   },
   "sourceHashes": {
     "feats.json": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6",
@@ -78,5 +102,25 @@
     "producerRevision": "e0b0c2e380d1d4ed3f250bf9a43d817a7439dc66",
     "report": "asi-workflow.json",
     "boundary": "Exact frozen-source synthetic workflow; actual browser remains pending"
+  },
+  "validatedConsumerRevision": "deb4d2f5c1f731e44487f3bc9539a029bb36d668",
+  "defaultWebUnitSuite": {
+    "consumerRevision": "085e6494becb1bbddd2562ff8b14f431aa3e896c",
+    "passed": 2094,
+    "skipped": 115,
+    "boundary": "Default suite conditional external fixtures are absent; dedicated ASI suite executes all fourteen required source inputs"
+  },
+  "dataCi": {
+    "revision": "0a48be450a79854aad160625d8c99784b9553182",
+    "runUrl": "https://github.com/FullPeople/dnd5e-automation-data/actions/runs/39996619281",
+    "status": "success",
+    "passed": 511,
+    "skipped": 11,
+    "nodeTests": 14
+  },
+  "mechanismAcceptance": {
+    "explicitAllocationPersistenceReplacementRollbackManualProtection": true,
+    "wholeRuleAutomationClaimed": false,
+    "released": false
   }
 }
