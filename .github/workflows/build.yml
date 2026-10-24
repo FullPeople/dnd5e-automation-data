@@ -91,6 +91,8 @@ jobs:
           writeFileSync('.cache/invocation-inputs/index.json',JSON.stringify({rows}));
           NODE
           node --experimental-strip-types scripts/audit_invocation_spells.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-spells.json
+      - name: Replay three reviewed level-9 PHB invocation workflows
+        run: node --experimental-strip-types scripts/audit_invocation_level9.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-level9.json
       - run: npm test
       - run: npm run build
   pipeline:
