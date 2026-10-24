@@ -33,6 +33,112 @@ jobs:
         run: node --experimental-strip-types scripts/verify_runtime_consumer.ts .cache/web-consumer
       - name: Test coverage against real pinned consumer functions
         run: node --experimental-strip-types scripts/test_runtime_probe.ts .cache/web-consumer
+      - name: Install locked audited consumer dependencies for full persistence imports
+        run: npm ci --prefix .cache/web-consumer
+      - name: Replay explicit ASI workflows against the audited consumer
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/asi-inputs
+          for path in class/class-fighter.json class/class-artificer.json feats.json; do
+            revision=e2623b204ddbdf2bcfa8317acfc962de89c676e2
+            if [ "$path" = feats.json ]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 3000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/$revision/data/$path" \
+              --output ".cache/asi-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-fighter.json','class/class-artificer.json','feats.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/asi-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/asi-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_asi_workflow.ts .cache/web-consumer .cache/asi-inputs .cache/asi-workflow.json
+      - name: Replay three explicit attuned TCE infusion workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/attuned-inputs
+          for path in class/class-artificer.json optionalfeatures.json items-base.json; do
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 3000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/$path" \
+              --output ".cache/attuned-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-artificer.json','optionalfeatures.json','items-base.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/attuned-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/attuned-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_attuned_infusions.ts .cache/web-consumer .cache/attuned-inputs .cache/attuned-workflow.json
+      - name: Replay exact TCE infusion charge and dawn recovery workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/infusion-charge-inputs
+          for path in class/class-artificer.json optionalfeatures.json items.json items-base.json; do
+            revision=e2623b204ddbdf2bcfa8317acfc962de89c676e2
+            if [ "$path" = items.json ]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 15000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/$revision/data/$path" \
+              --output ".cache/infusion-charge-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-artificer.json','optionalfeatures.json','items.json','items-base.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/infusion-charge-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/infusion-charge-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_infusion_charges.ts .cache/web-consumer .cache/infusion-charge-inputs .cache/infusion-charges.json
+      - name: Replay exact Radiant Weapon and Spell-Refueling Ring workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/radiant-refueling-inputs
+          for path in class/class-artificer.json class/class-warlock.json optionalfeatures.json items.json items-base.json spells/spells-phb.json; do
+            revision=e2623b204ddbdf2bcfa8317acfc962de89c676e2
+            if [ "$path" = items.json ]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 15000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/$revision/data/$path" \
+              --output ".cache/radiant-refueling-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-artificer.json','class/class-warlock.json','optionalfeatures.json','items.json','items-base.json','spells/spells-phb.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/radiant-refueling-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/radiant-refueling-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_radiant_refueling.ts .cache/web-consumer .cache/radiant-refueling-inputs .cache/radiant-refueling.json
+      - name: Replay three reviewed PHB invocation spell workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/invocation-inputs
+          for path in optionalfeatures.json class/class-warlock.json spells/spells-phb.json; do
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 3000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/$path" \
+              --output ".cache/invocation-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['optionalfeatures.json','class/class-warlock.json','spells/spells-phb.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/invocation-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/invocation-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_invocation_spells.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-spells.json
+      - name: Replay three reviewed level-9 PHB invocation workflows
+        run: node --experimental-strip-types scripts/audit_invocation_level9.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-level9.json
+      - name: Replay seven reviewed PHB invocation dual-payment workflows
+        run: node --experimental-strip-types scripts/audit_invocation_dual_payment.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-dual-payment.json
+      - name: Replay three reviewed remaining PHB at-will invocation workflows
+        run: node --experimental-strip-types scripts/audit_invocation_atwill.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-atwill.json
+      - name: Replay exact PHB Beguiling Influence qualification and skill preservation
+        run: node --experimental-strip-types scripts/audit_invocation_skill_guard.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-skill-guard.json
       - run: npm test
       - run: npm run build
   pipeline:

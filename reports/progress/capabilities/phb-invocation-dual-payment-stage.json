@@ -1,0 +1,3630 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T14:40:50.351Z",
+  "consumerRevision": "9fc6b72bd3b2d515dccc3354fac677e84637d5e4",
+  "consumerSourceTree": "8831a954c2d8db21fb51c158ecffa1bab104127e",
+  "producerRevision": "42e107a396a169c00cab2dabcc5f4e668b77e0b3",
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "inputs": {
+    "optionalfeatures.json": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "spells/spells-phb.json": "e1f2221020cfb5d31995c99b78dc09435c9962476ef1cef81b52399e6df0263d"
+  },
+  "entryHashes": {
+    "Bane|PHB": "57bbf3771331106e6ceef509dcfb78440825cefe0ce2f1e044f20794468e6bff",
+    "Thief of Five Fates|PHB": "e9d5064cb44797e36af3981434ebab5e1883c74b6867ee63fe2f8c1f6abdbd10",
+    "Slow|PHB": "1fdf4f4f0cde450e6e6546ae92fbd6d6fefca4e81422d655aebbc53a12d003eb",
+    "Mire the Mind|PHB": "88afa2a72c37e4f983fd3b41981119f7088d3d42c16977b77f95eeef5eb047cf",
+    "Bestow Curse|PHB": "29d6907015769a875d5d44d39f64b4a896b2eeb2abeaff01e9b0ec39f811d709",
+    "Sign of Ill Omen|PHB": "df0504d6ffd05ee46396de3b464bbe03ae43f0a9633691e00085a5efa0c03c2e",
+    "Compulsion|PHB": "187f36ef68dfcb15d15cae952b059f2faac44d1d18f047f2d6134a3f42c04bef",
+    "Bewitching Whispers|PHB": "2b01c6f5c3a0936f16b08008047c4c7bea593977dacbeb0d2a352d08a4e9cccb",
+    "Confusion|PHB": "7fd08189f91cfa1bbaa0daf89590cb8fac75a9befde8e9c60327f7fa91ac2a6d",
+    "Dreadful Word|PHB": "ae980c2360187ded3bf6e2cdc6125d30a07edca6c269667049469cb30085296b",
+    "Polymorph|PHB": "ed1eee19e5d34fa9cafd8786b9ccd3945dc1a1480d7af6a706593ecdeeb8229b",
+    "Sculptor of Flesh|PHB": "77e71d1e54204e58582f77d9f347de1db27f0862cdd7b7da0b474728fd0c959a",
+    "Conjure Elemental|PHB": "1db2f2b5485076fdc6fd8c4514940abe55e47fdae6d92700167fc19c7823fea4",
+    "Minions of Chaos|PHB": "c5cc2ec5af6403af7a472b069b1d47d35bffe3010c652e72197e84d9664a0f58",
+    "Warlock|PHB": "179a4e48b79fef7ae2244e88e614d04a0828caca4a854b6f65de61b6df802385",
+    "Eldritch Invocations|Warlock|PHB|2": "a482142444ed3639690525945c024d4b2476ac84bbe5e981ef3f7f0d323eaa8f",
+    "Pact Magic|Warlock|PHB|1": "da68ce072732185a89c9b7d4354f20eb1a92717c87cf267e2af39f55b64bfd3a"
+  },
+  "rules": [
+    {
+      "reference": "Thief of Five Fates|PHB",
+      "spellReference": "Bane|PHB",
+      "spellLevel": 1,
+      "minimumWarlockLevel": 2,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    },
+    {
+      "reference": "Mire the Mind|PHB",
+      "spellReference": "Slow|PHB",
+      "spellLevel": 3,
+      "minimumWarlockLevel": 5,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    },
+    {
+      "reference": "Sign of Ill Omen|PHB",
+      "spellReference": "Bestow Curse|PHB",
+      "spellLevel": 3,
+      "minimumWarlockLevel": 5,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    },
+    {
+      "reference": "Bewitching Whispers|PHB",
+      "spellReference": "Compulsion|PHB",
+      "spellLevel": 4,
+      "minimumWarlockLevel": 7,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    },
+    {
+      "reference": "Dreadful Word|PHB",
+      "spellReference": "Confusion|PHB",
+      "spellLevel": 4,
+      "minimumWarlockLevel": 7,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    },
+    {
+      "reference": "Sculptor of Flesh|PHB",
+      "spellReference": "Polymorph|PHB",
+      "spellLevel": 4,
+      "minimumWarlockLevel": 7,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    },
+    {
+      "reference": "Minions of Chaos|PHB",
+      "spellReference": "Conjure Elemental|PHB",
+      "spellLevel": 5,
+      "minimumWarlockLevel": 9,
+      "usage": "one invocation use plus one authentic Warlock pact slot",
+      "recovery": "explicit confirmed long-rest invocation-only restore"
+    }
+  ],
+  "steps": [
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Unlearned option and same-name manual spell cannot acquire joint payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total character level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Explicit class learning grants one exact spell with an independently owned long-rest use",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Opening and canceling cast or restore confirmation makes no writes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Free, source-only, ordinary-slot and pact-slot-only casts all reject transactionally",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject missing invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject exhausted invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject negative invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject fractional invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject overfull invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject wrong invocation maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject unlimited invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject unowned manual invocation counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject foreign invocation counter owner without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject missing pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject exhausted pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject negative pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject fractional pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject overfull pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject wrong pact maximum without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject unlimited pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject manual pact counter without spending the other resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "A forged different-level pact key cannot replace the actual current slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Stale revision, stale sequence and unfamiliar action ledger never debit either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "A pending cast is stale after a resource edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "A pending cast is stale after a class-level edit even without a revision or sequence change",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject unknown canonical invocation name before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject different normalized invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject different raw invocation source before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject different invocation edition before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject an additional unknown prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject changed exact class prerequisite before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject a copied invocation before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject an unresolved invocation parent before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject unknown additional mechanical payload before and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject unknown canonical spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject wrong raw spell identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject wrong spell parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject wrong invocation parent with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject missing saved learning answer with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject non-PHB Warlock owner with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject forged Warlock English identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject missing Pact Magic parent feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject manual same-name Pact Magic feature with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject changed Pact Magic identity with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject changed caster progression with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reject multiple pact casters with no partial payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "First cast atomically spends one invocation use plus one authentic pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "A second cast is denied even with ordinary and pact spell slots left",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Saved dual receipt and both balances survive native export and reopen without repair",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown canonical invocation name",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after different normalized invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after different raw invocation source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after different invocation edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after an additional unknown prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after changed exact class prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after a copied invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after an unresolved invocation parent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Exhausted invocation cannot be restored after unknown additional mechanical payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Native import rejects malformed dual-resource receipts without mutating the live card",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Short-rest planning and request do not restore a long-rest invocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Long-rest planning is read-only and excludes all pact slots and manual resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Repeated offline synchronization preserves the exhausted use and pact slot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Automation off blocks casts and restores without discarding saved learning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Automation re-enable after reopen does not replenish either resource",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Source disable immediately denies restoration then archives only the owned grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Reopen while source-disabled preserves archive, balances and intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Source restore offline preserves the exact identities without granting new uses",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Class downgrade rejects stale cast and restore before reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Native reopen below the gate preserves the archive and spent state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Restoring the qualified class level recovers the same IDs but no resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Replacement revokes old cast and restoration without refunding either payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Relearning a replaced invocation offline does not reset its one-use budget",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Explicit withdrawal rejects actions while preserving the manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Relearning a withdrawn invocation reuses its spent ledger without duplication",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Explicit confirmed long-rest restore replenishes only this invocation, never pact slots or HP",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Old cast requests and reused action IDs cannot debit after a newer restore",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "A second explicitly restored cast records two debits and persists both at zero",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Class deletion removes automatic grants but keeps authored same-name spell and balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 2 pays an authentic 1-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 3 pays an authentic 2-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 5 pays an authentic 3-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 7 pays an authentic 4-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 9 pays an authentic 5-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 11 pays an authentic 5-level slot from a capacity-3 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Warlock 20 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Warlock 5 pays an authentic 3-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Warlock 5 pays an authentic 3-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Warlock 7 pays an authentic 4-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Warlock 7 pays an authentic 4-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Warlock 7 pays an authentic 4-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Warlock 9 pays an authentic 5-level slot from a capacity-2 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Warlock 17 pays an authentic 5-level slot from a capacity-4 pool, with native receipt roundtrip",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Seven independent PHB invocation pools",
+      "label": "Real Warlock 15 learns seven grants, spends three authentic slots, preserves four independent budgets, rejects a fourth cast atomically and restores only one invocation through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Withdrawal and relearning through a different imported entry ID preserve the same canonical consumed pool through native persistence",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Thief of Five Fates|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mire the Mind|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sign of Ill Omen|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Bewitching Whispers|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Dreadful Word|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Sculptor of Flesh|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Minions of Chaos|PHB",
+      "label": "Same-name manual invocation and pre-existing same-key authored balance survive sync, reopen and class removal, never adopted for joint payment or recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Bounded exact-source consumer API workflow proof; not complete class/spell automation, browser coverage, storage failure certification or release certification",
+  "manualBoundaries": [
+    "Targets, components including materials, casting time, saves, concentration, duration, upcast effects and all actual spell effects remain manual",
+    "Polymorph statistics and form choice, summoning selection/control and concentration-loss consequences remain manual",
+    "Only the explicitly selected invocation use is restored; pact slots still use the existing resource editor; no general rest UI is enabled or certified",
+    "Invocation replacement timing and unknown prerequisites are not automatically authorized",
+    "Native export/import proves the card schema and saved ledger roundtrip, not a database failure, server authority or multiplayer delivery guarantee"
+  ],
+  "browser": "not-run",
+  "currentReleaseAvailable": null
+}

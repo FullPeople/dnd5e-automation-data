@@ -1,0 +1,620 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T13:39:15.016Z",
+  "consumerRevision": "d8ea910289992b5694318d69573b45a79ba85592",
+  "producerRevision": "c892a993a83f4cf4e60c13044280a0aa1a8b51df",
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "inputs": {
+    "optionalfeatures.json": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "spells/spells-phb.json": "e1f2221020cfb5d31995c99b78dc09435c9962476ef1cef81b52399e6df0263d"
+  },
+  "entryHashes": {
+    "Jump|PHB": "2f1c2076ab1d4ba28dd9c672e4f6ff0b7f243824c78d823e512eb3d1b3c980e7",
+    "Otherworldly Leap|PHB": "e0b80fb0d7c63b199d7041924c7eeff175952e0faa85c089af855df7dc88a5d7",
+    "Levitate|PHB": "41aabebdc8dfe0367e0ebe0e0648a1450f2b390ef299a993f68a368564fb77b9",
+    "Ascendant Step|PHB": "efc917bafee5bef8afb9a9fd78cd5e2a40da7bfa62059a5a98127a8d2f8a244a",
+    "Speak with Dead|PHB": "64c53e065e36e4e6f6ac016e759b1d27568bd7707382a1e5548088a32618fcc7",
+    "Whispers of the Grave|PHB": "9764be33324ce89d932f4f26abe3b25241da9251b8ed698214f1a55d300ea101",
+    "Warlock|PHB": "179a4e48b79fef7ae2244e88e614d04a0828caca4a854b6f65de61b6df802385",
+    "Eldritch Invocations|Warlock|PHB|2": "a482142444ed3639690525945c024d4b2476ac84bbe5e981ef3f7f0d323eaa8f"
+  },
+  "rules": [
+    "Otherworldly Leap|PHB",
+    "Ascendant Step|PHB",
+    "Whispers of the Grave|PHB"
+  ],
+  "steps": [
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Warlock 8 cannot learn even with total character level 9",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Repeated free casts preserve spell slots, pact slots and manual counters",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject unknown English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject different normalized source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject different raw source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject additional prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject different class prerequisite source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject changed level prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject copied record before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reject unresolved parent before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Changing invocation parent rejects stale free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Changing the owner away from PHB Warlock rejects free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Manual same-name invocation stays manual and cannot inherit the class free grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Warlock 9 to 8 rejects stale payment before sync and archives within-capacity selection",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Native reopen at Warlock 8 retains archived intent without a free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Warlock 9 restore after native reopen recovers the same owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Otherworldly Leap|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Warlock 8 cannot learn even with total character level 9",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Repeated free casts preserve spell slots, pact slots and manual counters",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject unknown English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject different normalized source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject different raw source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject additional prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject different class prerequisite source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject changed level prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject copied record before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reject unresolved parent before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Changing invocation parent rejects stale free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Changing the owner away from PHB Warlock rejects free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Manual same-name invocation stays manual and cannot inherit the class free grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Warlock 9 to 8 rejects stale payment before sync and archives within-capacity selection",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Native reopen at Warlock 8 retains archived intent without a free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Warlock 9 restore after native reopen recovers the same owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Ascendant Step|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Warlock 8 cannot learn even with total character level 9",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Repeated free casts preserve spell slots, pact slots and manual counters",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject unknown English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject different normalized source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject different raw source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject additional prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject different class prerequisite source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject changed level prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject copied record before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reject unresolved parent before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Changing invocation parent rejects stale free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Changing the owner away from PHB Warlock rejects free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Manual same-name invocation stays manual and cannot inherit the class free grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Warlock 9 to 8 rejects stale payment before sync and archives within-capacity selection",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Native reopen at Warlock 8 retains archived intent without a free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Warlock 9 restore after native reopen recovers the same owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Whispers of the Grave|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "PHB level-9 invocation prerequisite",
+      "label": "First three slots simultaneously reject at 8 before sync, archive and reopen at 8, restore exact IDs at 9 without quota masking",
+      "passed": true,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Bounded exact-source consumer API workflow proof; not complete class/spell automation, browser coverage or release certification",
+  "manualBoundaries": [
+    "Otherworldly Leap: self-only targeting and material-component exemption are stated boundaries; jump distance, movement and duration remain manual",
+    "Ascendant Step: self-only targeting and material-component exemption are stated boundaries; vertical movement, concentration, duration and descent remain manual",
+    "Whispers of the Grave: material components are still required; corpse eligibility, ten-day restriction, questions, answers and duration remain manual",
+    "Invocation replacement timing and DM eligibility adjudication are not automatically authorized"
+  ],
+  "browser": "not-run",
+  "currentReleaseAvailable": null
+}
