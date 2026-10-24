@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T03:06:30.900Z",
+  "status": "candidate-bounded-mechanism-validated-not-released",
+  "definition": "Three bounded TCE infusion mechanisms, not whole-rule or release coverage",
+  "scope": {
+    "totalInThisSelectedScope": 3,
+    "reviewed": 3,
+    "partialMechanismsImplemented": 3,
+    "wholeRulesImplementedAndValidated": 0,
+    "currentReleaseAvailable": null
+  },
+  "rules": [
+    "Repeating Shot|TCE",
+    "Repulsion Shield|TCE",
+    "Resistant Armor|TCE"
+  ],
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "directed": {
+    "passed": 213,
+    "skipped": 0,
+    "files": 8,
+    "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e"
+  },
+  "sourceWorkflow": {
+    "passed": 23,
+    "skipped": 0,
+    "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e"
+  },
+  "browser": {
+    "discovered": 22,
+    "executed": 22,
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "newCases": 4,
+    "previousRegressionCases": 18,
+    "status": "passed",
+    "runUrl": "https://github.com/FullPeople/DND-card-web/actions/runs/40056571661",
+    "jobId": 120760746022,
+    "artifactId": 12546131040,
+    "artifactSha256": "20f6b0a4f3cd52569daa30009809eb10f4f0e2278f0eb426116d802fec6ae7e2",
+    "fixtures": "Original synthetic source-qualified metadata, no publisher prose or private cards",
+    "initialFailures": [
+      {
+        "run": 40054678889,
+        "passed": 19,
+        "failed": 3
+      },
+      {
+        "run": 40055475406,
+        "passed": 18,
+        "failed": 4
+      },
+      {
+        "run": 40056025593,
+        "passed": 21,
+        "failed": 1
+      }
+    ],
+    "resolution": "Test-only corrections: actual narrow navigation/reopen, intentional snapshot/catalog identity mapping, six padded known slots, explicit forgetting removes binding; runtime source unchanged"
+  },
+  "runtimeCoverage": {
+    "status": "completed",
+    "total": 18789,
+    "inputs": 229,
+    "modules": 168,
+    "reviewed": 4561,
+    "atLeastOneMechanismWitness": 6537,
+    "sha256": "fa5bb1655173c39a2c901f6abbd5e60b09bbde698536dbcb4f965168ee283aa4",
+    "binding": "f7e6a58b66803f61b8f1f86442a2506a45bebe6f5ead2e07f1517215677ea196",
+    "resumedFrom": 4795,
+    "resumedAt": "2026-10-23T20:19:33Z"
+  },
+  "manualBoundaries": [
+    "Loading and ammunition",
+    "Shield charges, dawn recovery, reaction and forced movement",
+    "Actual damage reduction and defense interactions",
+    "Long-rest touching and death-expiry timing"
+  ],
+  "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e",
+  "producerRevision": "7d5dbd401aef191ac6395777f79d0424b57aaec2",
+  "remoteDirected": {
+    "passed": 430,
+    "skipped": 2,
+    "files": 27,
+    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/40056571661",
+    "boundary": "Two existing conditional skips; frozen three-rule cases executed"
+  },
+  "validatedWebHead": "0a77f521ef5fdb860c3e2606c1a707b3939e0766",
+  "fullUnit": {
+    "passed": 2163,
+    "skipped": 119,
+    "filesPassed": 237,
+    "filesSkipped": 5,
+    "jobId": 120761078269,
+    "head": "0a77f521ef5fdb860c3e2606c1a707b3939e0766",
+    "skipBoundary": "Default full suite without external source fixture environment; dedicated source workflow separately executed"
+  }
+}
