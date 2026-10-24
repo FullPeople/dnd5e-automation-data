@@ -93,6 +93,26 @@ jobs:
           writeFileSync('.cache/infusion-charge-inputs/index.json',JSON.stringify({rows}));
           NODE
           node --experimental-strip-types scripts/audit_infusion_charges.ts .cache/web-consumer .cache/infusion-charge-inputs .cache/infusion-charges.json
+      - name: Replay exact Radiant Weapon and Spell-Refueling Ring workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/radiant-refueling-inputs
+          for path in class/class-artificer.json class/class-warlock.json optionalfeatures.json items.json items-base.json spells/spells-phb.json; do
+            revision=e2623b204ddbdf2bcfa8317acfc962de89c676e2
+            if [ "$path" = items.json ]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 15000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/$revision/data/$path" \
+              --output ".cache/radiant-refueling-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-artificer.json','class/class-warlock.json','optionalfeatures.json','items.json','items-base.json','spells/spells-phb.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/radiant-refueling-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/radiant-refueling-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_radiant_refueling.ts .cache/web-consumer .cache/radiant-refueling-inputs .cache/radiant-refueling.json
       - name: Replay three reviewed PHB invocation spell workflows
         shell: bash
         run: |

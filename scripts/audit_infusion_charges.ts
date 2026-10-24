@@ -11,6 +11,7 @@ const [webRoot,inputRoot,output='.cache/infusion-charges.json']=process.argv.sli
 if(!webRoot||!inputRoot)throw Error('Usage: audit_infusion_charges.ts WEB_ROOT FROZEN_INPUT_ROOT [OUTPUT]');
 const sourceRevision='e2623b204ddbdf2bcfa8317acfc962de89c676e2';
 const expectedInputs:Record<string,string>={
+ 'class/class-warlock.json':'34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4',
  'optionalfeatures.json':'031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844',
  'class/class-artificer.json':'c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7',
  'items.json':'883f7bb4df2eb35fb37e7caa3a8765e0209014caa360d1c0358daa6f4b2da488',
