@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23T18:01:19.160Z",
+  "definition": "Bounded explicit class-granted ASI mechanism; not complete corpus or release coverage",
+  "scope": {
+    "sources": [
+      "PHB",
+      "TCE",
+      "XPHB"
+    ],
+    "totalInThisSelectedScope": 69,
+    "scopeDefinition": "68 reviewed legacy class-feature grant profiles plus one reviewed XPHB feat identity, not a corpus denominator",
+    "legacyGrantProfiles": 68,
+    "legacyClassOwners": 13,
+    "reviewed": 69,
+    "partialMechanismsImplemented": 69,
+    "wholeRulesImplementedAndValidated": 0,
+    "currentReleaseAvailable": null
+  },
+  "candidateConsumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
+  "status": "candidate-bounded-mechanism-validated-not-released",
+  "mechanism": "Explicit per-owned-grant +2 or split +1, derived not manual-base mutation, cap20",
+  "directed": {
+    "passed": 113,
+    "skipped": 3,
+    "skipBoundary": "Existing external-fixture conditional tests; new frozen ASI source case executed"
+  },
+  "browser": {
+    "discovered": 10,
+    "executed": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "runUrl": "https://github.com/FullPeople/DND-card-web/actions/runs/39998022074",
+    "jobId": 120566528571,
+    "artifactId": 12521083196,
+    "artifactSha256": "852b7bbc493b35fa417eba0a748223bb2e66cf1a05df948990fe965521106fd1",
+    "desktopViewport": [
+      1512,
+      982
+    ],
+    "narrowViewport": [
+      390,
+      844
+    ],
+    "fixtures": "Original synthetic source-qualified metadata, no publisher prose or private cards",
+    "initialFailure": {
+      "run": 39996347929,
+      "passed": 2,
+      "failed": 8,
+      "resolution": "Test-only correction: same-edition import skips review; reopen completed class choices with actual class context menu",
+      "assertionsPreserved": true,
+      "sourceChanged": false
+    }
+  },
+  "sourceHashes": {
+    "feats.json": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6",
+    "class/class-fighter.json": "a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509",
+    "class/class-artificer.json": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7",
+    "class/class-barbarian.json": "23e2316b63e09a716519833a477f3452ec3ce229bd32c72374eb0c6673e5cb6f",
+    "class/class-bard.json": "ac95dc8f1d795c0764ae6314e846d8efdcbbb4b42a8c721551265467885ed31c",
+    "class/class-cleric.json": "011edfef6c76cd0f70143d83db3b5e8b9b0d31ca1557b4c0954bedc619615344",
+    "class/class-druid.json": "71fca887392f6653f41d5900066cbe6fa1cac0280bb908257075925311e1ec2c",
+    "class/class-monk.json": "17f8612781788c6b614fdafb81711cb537e0bdb8bec5d1da2f32864d6ec28dcb",
+    "class/class-paladin.json": "aa125ed2f15782924cf4d48677e1ff64c934076bbc4f66fa65f21ba797007b2e",
+    "class/class-ranger.json": "a0e58735bc5f1ef9b260b88cf2c9778ffc0d367c0b132e72fadc95baf198310a",
+    "class/class-rogue.json": "b5c62a8c5356438a09bc64bc96b71968fa3766d46102a0a1de11713e5ee0d251",
+    "class/class-sorcerer.json": "cc1c7c87b28903114e98310b00f6c820541a6f3458bd67e6badb79b014e4c670",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "class/class-wizard.json": "7533f3fb7bab70cd2d2f2b5dfb7e259dc66a2bfee24ee6ad3809042e53ba8a03"
+  },
+  "manualBoundaries": [
+    "Optional legacy replacement feat effects",
+    "TCE sidekicks and unreviewed source profiles",
+    "Background and arbitrary feat ability fields",
+    "Previously manually applied score increases require explicit confirmation, not automatic migration"
+  ],
+  "publication": "Not merged or deployed",
+  "resolvedAcceptanceFailures": [
+    "XPHB offline level restore now recovers original saved source declaration",
+    "Legacy source-disabled upgrade cannot replace archived original grant",
+    "Cyclic ancestry is not consumed by automatic source reconciliation"
+  ],
+  "stageReplay": {
+    "consumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
+    "producerRevision": "e0b0c2e380d1d4ed3f250bf9a43d817a7439dc66",
+    "sha256": "c42e168432e78c644cd7e2f8dcf2bcb358a8ec64475de4842d7748651431287a",
+    "total": 18789,
+    "inputs": 229,
+    "modules": 168,
+    "startedAt": "2026-10-23T16:00:53Z",
+    "interruptedAt": "2026-10-23T16:40:39Z",
+    "resumedAt": "2026-10-23T16:45:06Z",
+    "resumedReceipts": 15269,
+    "completedAt": "2026-10-23T17:25:47.956Z",
+    "boundary": "At least one calculation/choice witness is not whole-rule or released coverage"
+  },
+  "workflow": {
+    "passed": 27,
+    "failed": 0,
+    "consumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
+    "producerRevision": "e0b0c2e380d1d4ed3f250bf9a43d817a7439dc66",
+    "report": "asi-workflow.json",
+    "boundary": "Exact frozen-source synthetic workflow; actual browser remains pending"
+  },
+  "validatedConsumerRevision": "deb4d2f5c1f731e44487f3bc9539a029bb36d668",
+  "defaultWebUnitSuite": {
+    "consumerRevision": "085e6494becb1bbddd2562ff8b14f431aa3e896c",
+    "passed": 2094,
+    "skipped": 115,
+    "boundary": "Default suite conditional external fixtures are absent; dedicated ASI suite executes all fourteen required source inputs"
+  },
+  "dataCi": {
+    "revision": "0a48be450a79854aad160625d8c99784b9553182",
+    "runUrl": "https://github.com/FullPeople/dnd5e-automation-data/actions/runs/39996619281",
+    "status": "success",
+    "passed": 511,
+    "skipped": 11,
+    "nodeTests": 14
+  },
+  "mechanismAcceptance": {
+    "explicitAllocationPersistenceReplacementRollbackManualProtection": true,
+    "wholeRuleAutomationClaimed": false,
+    "released": false
+  }
+}

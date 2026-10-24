@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T18:50:02.651Z",
+  "consumerRevision": "c9eba913c536542d53792763994009a0d39bc215",
+  "consumerSourceTree": "48ac56b4d80be04303dcdf80f75b138a1da10fe0",
+  "consumerModules": [
+    {
+      "path": "src/cloud/api.ts",
+      "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+    },
+    {
+      "path": "src/cloud/authorizationLease.ts",
+      "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+    },
+    {
+      "path": "src/cloud/room.ts",
+      "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+    },
+    {
+      "path": "src/cloud/sync.ts",
+      "sha256": "d3d615662a746ec99e2ded054b0df0f644285b33cf2c551b69a9d3743896c147"
+    },
+    {
+      "path": "src/core/automation/actions.ts",
+      "sha256": "e4b9d522d395cd3040fe15aec7a47237cab7880d897e2c281dee6d8e461d5a22"
+    },
+    {
+      "path": "src/core/automation/active.ts",
+      "sha256": "50b92cb03f42e6b3d3487e41b9a1270e159fb8b069697f1f50318de86d04eb99"
+    },
+    {
+      "path": "src/core/automation/asi.ts",
+      "sha256": "82d740d3ec2062ac6c29132f99bd736af9690c864b1312463cc966e4738baa99"
+    },
+    {
+      "path": "src/core/automation/asiEvidence.json",
+      "sha256": "a2b00af4db460bcada383cfcde1ef071f344ec6ee4a7acd6882fc4239a3c6968"
+    },
+    {
+      "path": "src/core/automation/backgroundAbilities.ts",
+      "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+    },
+    {
+      "path": "src/core/automation/choices.ts",
+      "sha256": "af3b3a8f26f41bc1937e0ab9b33d64ac6e17488d570d849973a923c907585783"
+    },
+    {
+      "path": "src/core/automation/classChoiceEvidence.json",
+      "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+    },
+    {
+      "path": "src/core/automation/classChoiceSourceGrant.ts",
+      "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+    },
+    {
+      "path": "src/core/automation/classChoiceSupport.ts",
+      "sha256": "a9cb80658fcd81eaca01c58b13095022f86f9577a175acd2f767de13a8beea26"
+    },
+    {
+      "path": "src/core/automation/classSpellChoices.ts",
+      "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+    },
+    {
+      "path": "src/core/automation/equipment.ts",
+      "sha256": "5366e18efa18be89c066aa7ea7d22750c9397dc38a1ccf79ee25f1abc69eaa17"
+    },
+    {
+      "path": "src/core/automation/featureArmor.ts",
+      "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+    },
+    {
+      "path": "src/core/automation/featureResources.ts",
+      "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+    },
+    {
+      "path": "src/core/automation/infusionCharges.ts",
+      "sha256": "1f4452caebb2464b3e249c2459aaf6b568bbf6bc86d9a5cc767fdc12ab144952"
+    },
+    {
+      "path": "src/core/automation/infusionEvidence.json",
+      "sha256": "21bf6eff1dcdaf712c672cda27437cf9e7610a9d4ce557a369799a4b343ea998"
+    },
+    {
+      "path": "src/core/automation/infusions.ts",
+      "sha256": "c1d3b56a5b07928def58f100800c7d06c7e723ea5d823bcf7f792cb6987d6982"
+    },
+    {
+      "path": "src/core/automation/invocationAtWillEvidence.json",
+      "sha256": "eba1cd137511d6804e17eeecef1be80c7ebd564eb54aae7b1b071ec97376e4f8"
+    },
+    {
+      "path": "src/core/automation/invocationDualEvidence.json",
+      "sha256": "5446130c185b9b4d7badb182ce1368fd0c074069885141458cf886c8fdc71d02"
+    },
+    {
+      "path": "src/core/automation/invocationEvidence.json",
+      "sha256": "6a143e3d18a100e2096b38bb5f3d0d09beeefd5d1f4ebf0720f6ade6288ea5f0"
+    },
+    {
+      "path": "src/core/automation/invocations.ts",
+      "sha256": "f1873dc472c90d797f4a639e68fbf5616762f44c9e3afec7dc85a79fb146f010"
+    },
+    {
+      "path": "src/core/automation/legacyAsiEvidence.json",
+      "sha256": "b665bc43dd08554e694abd9e4e0c1c5238b2b1ec9891b457232cba09f6f916fe"
+    },
+    {
+      "path": "src/core/automation/rest.ts",
+      "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+    },
+    {
+      "path": "src/core/automation/sourceClassChoices.ts",
+      "sha256": "b4f56b8800adb75f924e5563622042cbe617aab6a162396cbab3946f7effea57"
+    },
+    {
+      "path": "src/core/automation/sourceEquipment.ts",
+      "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+    },
+    {
+      "path": "src/core/automation/sourceResourcePools.ts",
+      "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+    },
+    {
+      "path": "src/core/automation/sourceSpellPlan.ts",
+      "sha256": "2831cd4118814a00e869935d7727a2ce4551f4bf55cdd2c9c9ff67205482da48"
+    },
+    {
+      "path": "src/core/automation/sourceSpellState.ts",
+      "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
+    },
+    {
+      "path": "src/core/automation/state.ts",
+      "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+    },
+    {
+      "path": "src/core/automation/training.ts",
+      "sha256": "d49949c9e7caafb7261dbe65bf8ff306e1b3299056f911ccbdad10baaf27239f"
+    },
+    {
+      "path": "src/core/automation/weapons.ts",
+      "sha256": "71b09e2b81b6315a87877683fc59c40cd56d76e0dd9238ccf599dbde21f14d4a"
+    },
+    {
+      "path": "src/core/bookRituals.ts",
+      "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+    },
+    {
+      "path": "src/core/characterDetails.ts",
+      "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/currency.ts",
+      "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "6ff1f449f2e1c983d5d639ae3ec62bca9f5087c79804f1f139a65c32c3c44a5e"
+    },
+    {
+      "path": "src/core/entryNameIndex.ts",
+      "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+    },
+    {
+      "path": "src/core/entryReferences.ts",
+      "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+    },
+    {
+      "path": "src/core/export.ts",
+      "sha256": "d0e8842b37a3bae479a36ed4bc6726c28b952da51ea9a443ea172f05b4e8b2cf"
+    },
+    {
+      "path": "src/core/featureOwnership.ts",
+      "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+    },
+    {
+      "path": "src/core/hitPoints.ts",
+      "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+    },
+    {
+      "path": "src/core/inlineTags.ts",
+      "sha256": "c64b8685c6584b8a5abc653a772ba1a061293852f0c5ca9d7a2d697216eb6786"
+    },
+    {
+      "path": "src/core/legacyTraining.ts",
+      "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+    },
+    {
+      "path": "src/core/model.ts",
+      "sha256": "0cb7fdeadf170ebb400262b950d6b534d2a75ed6ec41e86259f8d6faeb34c9db"
+    },
+    {
+      "path": "src/core/numericExpression.ts",
+      "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+    },
+    {
+      "path": "src/core/palette.ts",
+      "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+    },
+    {
+      "path": "src/core/preparation.ts",
+      "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+    },
+    {
+      "path": "src/core/proficiencyText.ts",
+      "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+    },
+    {
+      "path": "src/core/racialAbilities.ts",
+      "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+    },
+    {
+      "path": "src/core/resources.ts",
+      "sha256": "01ca53c0159d8a4102a099e9ad0eedd59d6223aaabff8662ad349f1fc84ba81f"
+    },
+    {
+      "path": "src/core/resourceWidgets.ts",
+      "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+    },
+    {
+      "path": "src/core/sheet.ts",
+      "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
+    },
+    {
+      "path": "src/core/sourceCorrections.ts",
+      "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/spellCapacity.ts",
+      "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+    },
+    {
+      "path": "src/core/spellcastingRules.ts",
+      "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+    },
+    {
+      "path": "src/core/spellResourceKeys.ts",
+      "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+    },
+    {
+      "path": "src/core/spells.ts",
+      "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+    },
+    {
+      "path": "src/core/spellWorkspace.ts",
+      "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "sha256": "dddecfee3b2a4411764f8d3c1db0c1f8c2354fff1b46c5751e1a96585e6997f8"
+    },
+    {
+      "path": "src/core/weaponAttacks.ts",
+      "sha256": "9681b217186c314bd917c870f4ad93f3615c3b93f2b87fb6894814434b0cc6a5"
+    },
+    {
+      "path": "src/data/adapt.ts",
+      "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+    },
+    {
+      "path": "src/data/catalog.ts",
+      "sha256": "612e37083e84549bb36d93d3a7d9fdb452a29a5ddda7ff75786c71f26002ba60"
+    },
+    {
+      "path": "src/data/catalogNormalizer.ts",
+      "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+    },
+    {
+      "path": "src/data/catalogSnapshot.ts",
+      "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+    },
+    {
+      "path": "src/data/catalogSource.ts",
+      "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+    },
+    {
+      "path": "src/data/catalogTransport.ts",
+      "sha256": "f713ee0c9adf9c070626b1b71d11a0bc1a17a3afcfa0b8032fcae72b98a5916b"
+    },
+    {
+      "path": "src/data/expand.ts",
+      "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+    },
+    {
+      "path": "src/data/homebrew.ts",
+      "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+    },
+    {
+      "path": "src/data/homebrewRecovery.ts",
+      "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
+    },
+    {
+      "path": "src/data/weaponTraining.ts",
+      "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+    },
+    {
+      "path": "src/platform/buildMode.ts",
+      "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+    },
+    {
+      "path": "src/platform/requestTimeout.ts",
+      "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+    },
+    {
+      "path": "src/platform/storage.ts",
+      "sha256": "eeb31b10ca86d6015d96372db413119dda7cc9a307307b73e4e309a01b266533"
+    },
+    {
+      "path": "src/platform/workbenchMode.ts",
+      "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+    },
+    {
+      "path": "src/platform/workspaceDatabase.ts",
+      "sha256": "7cc88eb29692a271270b8f8f5760ac9044eef55a877f219ab997feba58306df2"
+    },
+    {
+      "path": "src/platform/workspaceIdentity.ts",
+      "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+    },
+    {
+      "path": "src/platform/workspaceNamespace.ts",
+      "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+    }
+  ],
+  "producerRevision": "c0c54bcd563a93871441b40608c75f0fbc46babb",
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "inputs": {
+    "optionalfeatures.json": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844",
+    "class/class-artificer.json": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7",
+    "items.json": "883f7bb4df2eb35fb37e7caa3a8765e0209014caa360d1c0358daa6f4b2da488",
+    "items-base.json": "8933a3e70e47aa4fd6196bd7f1f2e3a57d6d8dbe7e781d37bb6a0519d7c4ffff"
+  },
+  "entryHashes": {
+    "Repulsion Shield|TCE": "28ec9c4a9c276621b12dd971841d6837b5d2bfc3132d286b6e51d1acd885f64b",
+    "Mind Sharpener|TCE": "d8a1185d43052a39b5ddd0ae50758fb34acbc7bd9765474898957305c3591f84",
+    "Robes|PHB": "6bfbf76315967903d54c62cd91771b280d4e3063c737fc9e2d9835450831ada9",
+    "Shield|PHB": "b83f2a31bea90264a7897c65cea8573da00915f5fef7db19308b2c960c378985",
+    "Infuse Item|Artificer|TCE|2": "5ea883f06ec7afaba3f78859d665806f32edba0d95c42d2dc35dc2675765b457",
+    "Artificer|TCE": "2c4248ad45438e0dd27a57a7a274c15756308e8e23c410b0f0f58bc7eadfc5e1"
+  },
+  "rules": [
+    {
+      "reference": "Repulsion Shield|TCE",
+      "owner": "Artificer|TCE",
+      "mechanism": "armor-bonus",
+      "itemTypes": [
+        "S"
+      ],
+      "minLevel": 6,
+      "requiresAttunement": true,
+      "requiresHeld": true,
+      "bonus": 1,
+      "charges": {
+        "max": 4,
+        "use": 1,
+        "recovery": "dawn-1d4"
+      }
+    },
+    {
+      "reference": "Mind Sharpener|TCE",
+      "owner": "Artificer|TCE",
+      "mechanism": "concentration-reaction",
+      "itemTypes": [
+        "LA",
+        "MA",
+        "HA",
+        "G"
+      ],
+      "targetReferences": [
+        "Robes|PHB"
+      ],
+      "minLevel": 2,
+      "bonus": 0,
+      "charges": {
+        "max": 4,
+        "use": 1,
+        "recovery": "dawn-1d4"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "label": "Learning creates no binding or implicit full charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Existing Repulsion binding has no automatic full balance",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit initial balance 0 is accepted once",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit initial balance 1 is accepted once",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit initial balance 2 is accepted once",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit initial balance 3 is accepted once",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit initial balance 4 is accepted once",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Invalid initial balance -1 writes nothing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Invalid initial balance 5 writes nothing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Invalid initial balance 1.5 writes nothing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Invalid initial balance null writes nothing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Invalid initial balance 4 writes nothing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Fixed reaction cost one and duplicate request are idempotent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Use rejects missing trigger without writing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Use rejects missing reaction without writing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Use rejects false trigger without writing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Use rejects false reaction without writing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Zero balance underflow rejects without a receipt or write",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn restores actual d4 result 1",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn restores actual d4 result 2",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn restores actual d4 result 3",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn restores actual d4 result 4",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn caps recovery at four instead of overfilling",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn rejects invalid actual roll 0",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn rejects invalid actual roll 5",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn rejects invalid actual roll 1.5",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn rejects invalid actual roll null",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn rejects invalid actual roll 4",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Dawn requires explicit confirmation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Unknown short-rest charge action cannot grant recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Unknown long-rest charge action cannot grant recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Unknown reset charge action cannot grant recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Unknown refill charge action cannot grant recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Repulsion use needs equipped while dawn does not",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Repulsion use needs attuned while dawn does not",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Repulsion use needs held while dawn does not",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind uses worn exact PHB Robes without attunement or holding and adds no AC",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind also accepts worn armor without attunement and adds no AC",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind requires wearing for use but not for dawn",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind rejects display-name-only robes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind rejects XPHB robes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind rejects generic gear",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind rejects magic robes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind rejects stacked robes",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Mind rejects shield for Mind",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Renaming display labels preserves canonical infusion and target identity",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Artificer level rather than total level gates Repulsion",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Downgrade below Infuse Item level suspends Mind",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current source disabled fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current automation disabled fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current wrong optionalfeature source fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current unreviewed source feature fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current wrong class identity fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current unknown binding version fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Current duplicate target binding fails closed without losing history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical class raw ENG_name tampering cannot authorize reaction charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical class raw source tampering cannot authorize reaction charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical feature raw ENG_name tampering cannot authorize reaction charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical feature raw source tampering cannot authorize reaction charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical infusion raw ENG_name tampering cannot authorize reaction charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical infusion raw source tampering cannot authorize reaction charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical Repulsion Shield target raw ENG_name mismatch cannot authorize charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical Repulsion Shield target raw source mismatch cannot authorize charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical Mind Sharpener target raw ENG_name mismatch cannot authorize charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical Mind Sharpener target raw source mismatch cannot authorize charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Over-capacity bindings suspend charges without deleting intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "One-item conflict cannot overwrite another binding or history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "A to B to A preserves each target balance without automatic creation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Forgetting and relearning cannot wash spent charge history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Source and automation disable then reopen preserve spent history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Canonical keys survive imported entry ID aliases without replenishing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Distinct class instances use distinct history keys",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "A different real Artificer class instance cannot inherit or erase old history",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Conflicting worn shields suspend reaction use but not dawn recovery",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Identical card data with a different character ID rejects the original request",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Stale request basis rejects after target rebind without writing",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Stale charge sequence rejects after another successful action",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Unknown charge store version remains preserved and unavailable",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Actual short rest does not restore dawn charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Actual long rest does not restore dawn charges",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Generic resource edits cannot change separately owned charge balances",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Malformed owned invalid maximum is never adopted or overwritten",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Malformed owned unlimited record is never adopted or overwritten",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Malformed owned wrong ownership is never adopted or overwritten",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Malformed owned invalid balance is never adopted or overwritten",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Tampered request revision rejects without a write",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Tampered request basis rejects without a write",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Tampered request key rejects without a write",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Duplicate ID with changed action is rejected rather than reused",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Native and linked exports preserve exact independent charge store",
+      "passed": true,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Bounded exact-source current-consumer API proof for Repulsion Shield and Mind Sharpener charge ownership, use and dawn recovery; not all infusion rules, browser coverage, old-consumer compatibility or release certification",
+  "manualBoundaries": [
+    "Trigger occurrence and reaction availability are confirmed by the user, not simulated.",
+    "Dawn occurrence and the actual 1d4 result are user-confirmed, not inferred from rests or wall time.",
+    "Repulsion opponent movement, concentration outcomes, external wearers, transfer, death and long-rest infusion lifecycle remain manual.",
+    "Native and linked export/import prove these current consumer paths only; browser storage, server recovery, multiplayer delivery and old consumer roundtrips require separate evidence.",
+    "Plain unlinked Owlbear export is lossy and is not a charge-history backup."
+  ],
+  "browser": "not-run",
+  "oldConsumerCompatibility": "not-claimed",
+  "fullRuntimeReplay": "not-run",
+  "currentReleaseAvailable": null
+}
