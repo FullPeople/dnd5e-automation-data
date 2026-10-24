@@ -55,6 +55,26 @@ jobs:
           writeFileSync('.cache/asi-inputs/index.json',JSON.stringify({rows}));
           NODE
           node --experimental-strip-types scripts/audit_asi_workflow.ts .cache/web-consumer .cache/asi-inputs .cache/asi-workflow.json
+      - name: Replay exact reviewed PHB2014 passive feat workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/passive-feat-inputs
+          for path in class/class-artificer.json class/class-barbarian.json class/class-bard.json class/class-cleric.json class/class-druid.json class/class-fighter.json class/class-monk.json class/class-paladin.json class/class-ranger.json class/class-rogue.json class/class-sorcerer.json class/class-warlock.json class/class-wizard.json feats.json variantrules.json; do
+            revision=e2623b204ddbdf2bcfa8317acfc962de89c676e2
+            if [ "$path" = feats.json ]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 3000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/$revision/data/$path" \
+              --output ".cache/passive-feat-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-artificer.json','class/class-barbarian.json','class/class-bard.json','class/class-cleric.json','class/class-druid.json','class/class-fighter.json','class/class-monk.json','class/class-paladin.json','class/class-ranger.json','class/class-rogue.json','class/class-sorcerer.json','class/class-warlock.json','class/class-wizard.json','feats.json','variantrules.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/passive-feat-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/passive-feat-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_reviewed_passive_feats.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-passive-feats.json
       - name: Replay three explicit attuned TCE infusion workflows
         shell: bash
         run: |
