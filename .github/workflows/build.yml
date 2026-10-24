@@ -55,6 +55,24 @@ jobs:
           writeFileSync('.cache/asi-inputs/index.json',JSON.stringify({rows}));
           NODE
           node --experimental-strip-types scripts/audit_asi_workflow.ts .cache/web-consumer .cache/asi-inputs .cache/asi-workflow.json
+      - name: Replay three explicit attuned TCE infusion workflows
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cache/attuned-inputs
+          for path in class/class-artificer.json optionalfeatures.json items-base.json; do
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 3000000 --proto '=https' \
+              "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/$path" \
+              --output ".cache/attuned-inputs/$(basename "$path")"
+          done
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const paths=['class/class-artificer.json','optionalfeatures.json','items-base.json'];
+          const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/attuned-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
+          writeFileSync('.cache/attuned-inputs/index.json',JSON.stringify({rows}));
+          NODE
+          node --experimental-strip-types scripts/audit_attuned_infusions.ts .cache/web-consumer .cache/attuned-inputs .cache/attuned-workflow.json
       - run: npm test
       - run: npm run build
   pipeline:

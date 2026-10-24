@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T18:32:24.685554+00:00",
-  "status": "candidate-directed-verified-stage-replay-and-browser-pending",
+  "updatedAt": "2026-10-23T21:09:28.168Z",
+  "status": "candidate-stage-replay-verified-browser-pending",
   "definition": "Three bounded TCE infusion mechanisms, not whole-rule or release coverage",
   "scope": {
     "totalInThisSelectedScope": 3,
@@ -17,15 +17,15 @@
   ],
   "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
   "directed": {
-    "passed": 209,
+    "passed": 213,
     "skipped": 0,
     "files": 8,
-    "candidateConsumerRevision": "d637eb6e22ead4803566581f7e5b46bd8e25a823"
+    "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e"
   },
   "sourceWorkflow": {
     "passed": 23,
     "skipped": 0,
-    "candidateConsumerRevision": "d637eb6e22ead4803566581f7e5b46bd8e25a823"
+    "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e"
   },
   "browser": {
     "discovered": 4,
@@ -33,12 +33,29 @@
     "status": "pending"
   },
   "runtimeCoverage": {
-    "status": "previous ASI ledger retained; new stage calibration pending"
+    "status": "completed",
+    "total": 18789,
+    "inputs": 229,
+    "modules": 168,
+    "reviewed": 4561,
+    "atLeastOneMechanismWitness": 6537,
+    "sha256": "fa5bb1655173c39a2c901f6abbd5e60b09bbde698536dbcb4f965168ee283aa4",
+    "binding": "f7e6a58b66803f61b8f1f86442a2506a45bebe6f5ead2e07f1517215677ea196",
+    "resumedFrom": 4795,
+    "resumedAt": "2026-10-23T20:19:33Z"
   },
   "manualBoundaries": [
     "Loading and ammunition",
     "Shield charges, dawn recovery, reaction and forced movement",
     "Actual damage reduction and defense interactions",
     "Long-rest touching and death-expiry timing"
-  ]
+  ],
+  "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e",
+  "producerRevision": "7d5dbd401aef191ac6395777f79d0424b57aaec2",
+  "remoteDirected": {
+    "passed": 430,
+    "skipped": 2,
+    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/40004423447",
+    "boundary": "Pre-existing conditional skips; initial build correctly blocked stale ASI ledger"
+  }
 }
