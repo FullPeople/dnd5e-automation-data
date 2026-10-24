@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T21:09:28.168Z",
-  "status": "candidate-stage-replay-verified-browser-pending",
+  "updatedAt": "2026-10-24T03:06:30.900Z",
+  "status": "candidate-bounded-mechanism-validated-not-released",
   "definition": "Three bounded TCE infusion mechanisms, not whole-rule or release coverage",
   "scope": {
     "totalInThisSelectedScope": 3,
@@ -28,9 +28,37 @@
     "candidateConsumerRevision": "72335d195cc5639ca1055a1ac2af0a1a356c787e"
   },
   "browser": {
-    "discovered": 4,
-    "executed": 0,
-    "status": "pending"
+    "discovered": 22,
+    "executed": 22,
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "newCases": 4,
+    "previousRegressionCases": 18,
+    "status": "passed",
+    "runUrl": "https://github.com/FullPeople/DND-card-web/actions/runs/40056571661",
+    "jobId": 120760746022,
+    "artifactId": 12546131040,
+    "artifactSha256": "20f6b0a4f3cd52569daa30009809eb10f4f0e2278f0eb426116d802fec6ae7e2",
+    "fixtures": "Original synthetic source-qualified metadata, no publisher prose or private cards",
+    "initialFailures": [
+      {
+        "run": 40054678889,
+        "passed": 19,
+        "failed": 3
+      },
+      {
+        "run": 40055475406,
+        "passed": 18,
+        "failed": 4
+      },
+      {
+        "run": 40056025593,
+        "passed": 21,
+        "failed": 1
+      }
+    ],
+    "resolution": "Test-only corrections: actual narrow navigation/reopen, intentional snapshot/catalog identity mapping, six padded known slots, explicit forgetting removes binding; runtime source unchanged"
   },
   "runtimeCoverage": {
     "status": "completed",
@@ -55,7 +83,18 @@
   "remoteDirected": {
     "passed": 430,
     "skipped": 2,
-    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/40004423447",
-    "boundary": "Pre-existing conditional skips; initial build correctly blocked stale ASI ledger"
+    "files": 27,
+    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/40056571661",
+    "boundary": "Two existing conditional skips; frozen three-rule cases executed"
+  },
+  "validatedWebHead": "0a77f521ef5fdb860c3e2606c1a707b3939e0766",
+  "fullUnit": {
+    "passed": 2163,
+    "skipped": 119,
+    "filesPassed": 237,
+    "filesSkipped": 5,
+    "jobId": 120761078269,
+    "head": "0a77f521ef5fdb860c3e2606c1a707b3939e0766",
+    "skipBoundary": "Default full suite without external source fixture environment; dedicated source workflow separately executed"
   }
 }
