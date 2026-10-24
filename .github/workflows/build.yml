@@ -97,6 +97,8 @@ jobs:
         run: node --experimental-strip-types scripts/audit_invocation_dual_payment.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-dual-payment.json
       - name: Replay three reviewed remaining PHB at-will invocation workflows
         run: node --experimental-strip-types scripts/audit_invocation_atwill.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-atwill.json
+      - name: Replay exact PHB Beguiling Influence qualification and skill preservation
+        run: node --experimental-strip-types scripts/audit_invocation_skill_guard.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-skill-guard.json
       - run: npm test
       - run: npm run build
   pipeline:
