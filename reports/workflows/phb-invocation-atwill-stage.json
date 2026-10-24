@@ -1,0 +1,1039 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T16:31:58.436Z",
+  "consumerRevision": "f9963a2b7aa01b10173513f119ab0248f0cbd77a",
+  "consumerSourceTree": "256af1522a93e0b1ae5cfde5afde13cf1996fdf1",
+  "producerRevision": "4868f1b93f5f27ee56c750f23043f0ec4501d75b",
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "inputs": {
+    "optionalfeatures.json": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "spells/spells-phb.json": "e1f2221020cfb5d31995c99b78dc09435c9962476ef1cef81b52399e6df0263d"
+  },
+  "entryHashes": {
+    "Fiendish Vigor|PHB": "2ee65d3e6f574dbf89909617ee0401a97ca2cd209b4054e385e69f9bf12a4a47",
+    "False Life|PHB": "05126f60c10a2a74bb62a6df5f1ccb86b28a28b5fbb9277f59dbaeecff2fd745",
+    "Master of Myriad Forms|PHB": "1b140781b1dae4ddd4117ee454984e7156ed8ef767330c7f8a2b58e232b950bb",
+    "Alter Self|PHB": "ecc05d8ae14df11abbdf8e468666f813cebd1c9b9f9478c5d52058ecdde677d3",
+    "Visions of Distant Realms|PHB": "757d3105f2fa1ec7a2f94ef3413389f4adf0c806deb938909012c68b61567200",
+    "Arcane Eye|PHB": "08bc21c42b722e8185524b350534af02631f6f42f4a9c72ce15a9837197e242d",
+    "Warlock|PHB": "179a4e48b79fef7ae2244e88e614d04a0828caca4a854b6f65de61b6df802385",
+    "Eldritch Invocations|Warlock|PHB|2": "a482142444ed3639690525945c024d4b2476ac84bbe5e981ef3f7f0d323eaa8f"
+  },
+  "rules": [
+    {
+      "reference": "Fiendish Vigor|PHB",
+      "spellReference": "False Life|PHB",
+      "spellLevel": 1,
+      "minimumWarlockLevel": 2,
+      "selfOnly": true,
+      "materials": "waived"
+    },
+    {
+      "reference": "Master of Myriad Forms|PHB",
+      "spellReference": "Alter Self|PHB",
+      "spellLevel": 2,
+      "minimumWarlockLevel": 15,
+      "selfOnly": true,
+      "materials": "absent"
+    },
+    {
+      "reference": "Visions of Distant Realms|PHB",
+      "spellReference": "Arcane Eye|PHB",
+      "spellLevel": 4,
+      "minimumWarlockLevel": 15,
+      "selfOnly": false,
+      "materials": "required"
+    }
+  ],
+  "steps": [
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total multiclass level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Repeated free casts preserve all slots, counters, authored HP and temporary HP without projecting spell effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Real native roundtrip retains the action receipt and rejects replayed or colliding requests",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell raw English identity cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell normalized source cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell raw source cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell spell level cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell cross-edition identity cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell raw edition cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell copy declaration cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Forged spell extra effect cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject unknown English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject different normalized source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject different raw source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject additional prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject different class prerequisite source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject changed level prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject changed raw English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject different edition before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject extra automatic effects before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject extra automatic choices before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject changed additional spell declaration before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject copied record before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reject unresolved parent before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Changing invocation parent rejects stale free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Changing the owner away from PHB Warlock rejects free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed raw class English identity blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed raw class source blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed source feature raw English identity blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed source feature raw source blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed source feature kind blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed source feature raw edition blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed source feature effects blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Unreviewed source feature choices blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Manual same-name invocation stays manual and cannot inherit the class free grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Dropping below the exact Warlock level rejects stale payment before sync and archives the selection",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Native reopen below the class gate retains archived intent without free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Qualified Warlock level restores the same owned spell after native reopen",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Fiendish Vigor|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total multiclass level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Repeated free casts preserve all slots, counters, authored HP and temporary HP without projecting spell effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Real native roundtrip retains the action receipt and rejects replayed or colliding requests",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell raw English identity cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell normalized source cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell raw source cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell spell level cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell cross-edition identity cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell raw edition cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell copy declaration cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Forged spell extra effect cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject unknown English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject different normalized source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject different raw source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject additional prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject different class prerequisite source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject changed level prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject changed raw English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject different edition before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject extra automatic effects before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject extra automatic choices before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject changed additional spell declaration before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject copied record before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reject unresolved parent before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Changing invocation parent rejects stale free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Changing the owner away from PHB Warlock rejects free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed raw class English identity blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed raw class source blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed source feature raw English identity blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed source feature raw source blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed source feature kind blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed source feature raw edition blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed source feature effects blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Unreviewed source feature choices blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Manual same-name invocation stays manual and cannot inherit the class free grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Dropping below the exact Warlock level rejects stale payment before sync and archives the selection",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Native reopen below the class gate retains archived intent without free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Qualified Warlock level restores the same owned spell after native reopen",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Master of Myriad Forms|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "One lower Warlock level cannot learn, regardless of total multiclass level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Repeated free casts preserve all slots, counters, authored HP and temporary HP without projecting spell effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Real native roundtrip retains the action receipt and rejects replayed or colliding requests",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell raw English identity cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell normalized source cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell raw source cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell spell level cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell cross-edition identity cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell raw edition cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell copy declaration cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Forged spell extra effect cannot retain free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject unknown English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject different normalized source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject different raw source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject additional prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject different class prerequisite source before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject changed level prerequisite before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject changed raw English identity before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject different edition before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject extra automatic effects before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject extra automatic choices before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject changed additional spell declaration before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject copied record before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reject unresolved parent before sync and after reconciliation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Changing invocation parent rejects stale free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Changing the owner away from PHB Warlock rejects free casting",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed raw class English identity blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed raw class source blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed source feature raw English identity blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed source feature raw source blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed source feature kind blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed source feature raw edition blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed source feature effects blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Unreviewed source feature choices blocks stale free actions",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Manual same-name invocation stays manual and cannot inherit the class free grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Dropping below the exact Warlock level rejects stale payment before sync and archives the selection",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Native reopen below the class gate retains archived intent without free payment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Qualified Warlock level restores the same owned spell after native reopen",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Visions of Distant Realms|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "PHB remaining at-will invocation class gates",
+      "label": "First three slots simultaneously preserve Fiendish Vigor at Warlock 14, suspend only level-15 spells before sync, archive and reopen at 14, restore exact IDs at 15 without quota masking",
+      "passed": true,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Bounded exact-source consumer API workflow proof; not complete class/spell automation, browser coverage or release certification",
+  "manualBoundaries": [
+    "Fiendish Vigor: first-level self-only cast with material exemption; V/S, rolling and applying temporary HP, duration and replacement remain manual; repeated casts never set or stack temporary HP",
+    "Master of Myriad Forms: self-only Alter Self with V/S and no material component; form choice, aquatic adaptation, appearance, natural weapons, attacks, concentration and duration remain manual",
+    "Visions of Distant Realms: Arcane Eye is not self-only and V/S/M are retained; eye placement, vision, movement, concentration and duration remain manual",
+    "Invocation replacement timing and DM eligibility adjudication are not automatically authorized",
+    "Native export/import proves character schema and saved grant roundtrip, not browser storage, failure recovery, server authority or multiplayer delivery"
+  ],
+  "browser": "not-run",
+  "currentReleaseAvailable": null
+}

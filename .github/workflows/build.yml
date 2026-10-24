@@ -95,6 +95,8 @@ jobs:
         run: node --experimental-strip-types scripts/audit_invocation_level9.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-level9.json
       - name: Replay seven reviewed PHB invocation dual-payment workflows
         run: node --experimental-strip-types scripts/audit_invocation_dual_payment.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-dual-payment.json
+      - name: Replay three reviewed remaining PHB at-will invocation workflows
+        run: node --experimental-strip-types scripts/audit_invocation_atwill.ts .cache/web-consumer .cache/invocation-inputs .cache/invocation-atwill.json
       - run: npm test
       - run: npm run build
   pipeline:
