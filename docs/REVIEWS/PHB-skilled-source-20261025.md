@@ -58,6 +58,14 @@ Run the targeted audit after committing current consumer src and producer script
 
 The optional old root must point to exact clean52d5be10. Without it, the script uses the already present local Git object via git archive into a private cache, not a fresh clone. All tests and current/browser results must bind their actual final source revision. A passing API report is not browser acceptance, remote CI success or a publication receipt.
 
+### Actual App catalog seed boundary
+
+The earlier226-step checkpoint below normalized the frozen publisher rows but did not include the loader's project-authored equipment-training seed. That omission failed to expose the actual App's land/water vehicle option conflict. It is not evidence that those browser options were usable.
+
+The extended audit now bundles the actual `EQUIPMENT_TRAINING_ENTRIES` and `cardCatalogEntries` exports. It checks all57 reviewed choices against the App assembly of these bounded frozen sources plus the authored seed and size entries. This is not the full18,789-record corpus replay. Only the two exact PHB2014 v2 land/water handles are recognized; XPHB, broad groups, weapons, armor, air vehicles and individual cart/boat items do not gain reviewed Skilled identities. Corrupted handle identity, raw metadata, effects, choices or dependencies stay blocked in either catalog order.
+
+Both the historic `reviewed-skilled:PHB:…` IDs and the actual `dnd-card.weapon-training:2014:…` IDs must suspend the entire saved three-choice grant and recover after re-enabling. The checks include native reopen, unchanged confirmation, manual tools absent/empty/authored, manual skill contributions and other protected card state. The seed and assembled catalog must remain unchanged. These additions need a fresh clean-source replay after the consumer and proof script are frozen; the historical count below is not the extended audit's result.
+
 ## Executed source checkpoint
 
 The targeted original-source/API audit passed226/226 steps, with0 failed and0 skipped, against Web `114174013b0c3c55afb445b4cd44de2a9f5d5f09`, src tree `8edaa9060b43ca982a59d5f99c5f22ee8678180d`, using producer `c3f1bf12990aea73222e7575d7629de65c75d299`. It used its own private bundle/cache, not the global full-corpus adapter. The local checkpoint report is retained only in the private execution cache. It is not the final remote-stage receipt: after the parent publishes the exact source commits, the226-step workflow must run again against those exact commits for final report pairing. The local producer revision remains the exact proof-script execution revision, not a later summary-only commit.
