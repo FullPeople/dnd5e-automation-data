@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T06:17:35.165Z",
-  "consumerRevision": "def2e57db717f2eebbb361259f7b18dec4d3e1da",
-  "consumerSourceTree": "8edaa9060b43ca982a59d5f99c5f22ee8678180d",
+  "updatedAt": "2026-10-25T07:19:50.817Z",
+  "consumerRevision": "fb8676136eddde1506bad9756c41ab869e1270a0",
+  "consumerSourceTree": "bbc6761e1bba50cba06315c2f8cb31c457cb5c63",
   "consumerModules": [
     {
       "path": "src/cloud/api.ts",
@@ -142,7 +142,7 @@
     },
     {
       "path": "src/core/automation/reviewedSkilled.ts",
-      "sha256": "ce81423ca2409891b712a90a9c587b3cfaa78aa145c21f8826bc653eff88dba2"
+      "sha256": "43f2d69e557329b889fe2d0f69e6c1e232743fc59a23a29d71c4b7a486755949"
     },
     {
       "path": "src/core/automation/reviewedSkilledEvidence.json",
@@ -193,8 +193,20 @@
       "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
     },
     {
+      "path": "src/core/cardMigrationIssues.ts",
+      "sha256": "83db4860fd29b0335ae4c315c16c41a9708749bf9012e9186fee80068b1a05bd"
+    },
+    {
+      "path": "src/core/castingSnapshot.ts",
+      "sha256": "135b682315b5dba826d448e3099cf2936f1816804dfb2c2580645a463e8bbc25"
+    },
+    {
       "path": "src/core/characterDetails.ts",
       "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/classMigrationQuery.ts",
+      "sha256": "1a392ab5ee84877b4a20086eb28e99301ad3e07fd30190461d128fa58aeb1aae"
     },
     {
       "path": "src/core/currency.ts",
@@ -265,12 +277,24 @@
       "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
     },
     {
+      "path": "src/core/runtimeCharacterEdit.ts",
+      "sha256": "2228a38d43790e662daa62b16d838e9717b19bcde94b80b218b0acd4ae52716f"
+    },
+    {
       "path": "src/core/sheet.ts",
       "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
     },
     {
+      "path": "src/core/siteSources.ts",
+      "sha256": "57f7cc99458a0114a1b6a46a7f8af934baee7be588d695227c1c27d5bd670e7f"
+    },
+    {
       "path": "src/core/sourceCorrections.ts",
       "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/sourceDefaults.ts",
+      "sha256": "3eecd2210657c8ce12dd6e7b97ec5b478e80b9f3276941b06dfe8156f160f93a"
     },
     {
       "path": "src/core/spellCapacity.ts",
@@ -341,6 +365,10 @@
       "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
     },
     {
+      "path": "src/data/sizes.ts",
+      "sha256": "e73485b1746fb61651122985684c6c5a81418fda1087767a4a0a6327dd7b6f69"
+    },
+    {
       "path": "src/data/weaponTraining.ts",
       "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
     },
@@ -349,8 +377,36 @@
       "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
     },
     {
+      "path": "src/platform/cardViewReconciliation.ts",
+      "sha256": "a1e355acc8d95152876204c15ffde072e208cf3397bcd59c5b7042c80b78b5fc"
+    },
+    {
+      "path": "src/platform/catalogReferenceIndex.ts",
+      "sha256": "3b08edaca82608f5ded9c7cf8104634710404f542db892b80dccad8f4452341b"
+    },
+    {
+      "path": "src/platform/choiceReview.ts",
+      "sha256": "bbc61abafae0d85535c6714bf09bb2e87f475d6b6224ad27ddf4be3b3978b7aa"
+    },
+    {
       "path": "src/platform/requestTimeout.ts",
       "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+    },
+    {
+      "path": "src/platform/settledSnapshotCheck.ts",
+      "sha256": "296bcebd9ababdfc50250be558cc0ade1369f43bfaee368dc3a43274db07517c"
+    },
+    {
+      "path": "src/platform/snapshotMemo.ts",
+      "sha256": "3a51316be1a50bc2b9152f4688f95eef25e8304699f1a9226442c2c0a484ce94"
+    },
+    {
+      "path": "src/platform/standaloneCardViews.ts",
+      "sha256": "58e89c91474098444af45a5c340d05f0b994613048c6726b4f52f7802a1c7a35"
+    },
+    {
+      "path": "src/platform/standaloneCatalogPublication.ts",
+      "sha256": "09f5869cd7277f893ea0ea8c0c696ab2bfe62a2b232cd08e69a6f8af7da4d495"
     },
     {
       "path": "src/platform/storage.ts",
@@ -373,8 +429,8 @@
       "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
     }
   ],
-  "producerRevision": "7ef606533e3287cf5c0d85d08afb19b0a2944114",
-  "producerScriptSha256": "8ff20b3218c46718bf10766b28e33a9c058e369b2a1bd9d5339159fd633f36fb",
+  "producerRevision": "63badaaa6b21fb6b7c09e238c91daec39d86a62a",
+  "producerScriptSha256": "807a5ada2c640230375f8505b8b7ea2389b437b3f3a6507105b005c4e6c1068b",
   "retrievalRevisions": {
     "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
     "class/class-barbarian.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
@@ -2453,6 +2509,22 @@
       "key": "water-vehicles"
     }
   ],
+  "appCatalog": {
+    "assembly": "actual cardCatalogEntries with equipment-training seed and bounded frozen normalized sources",
+    "normalizedEntries": 5631,
+    "appEntries": 5677,
+    "equipmentTrainingEntries": 34,
+    "vehicleHandles": [
+      {
+        "reference": "Vehicles (Land)|PHB",
+        "entryId": "dnd-card.weapon-training:2014:land-vehicles"
+      },
+      {
+        "reference": "Vehicles (Water)|PHB",
+        "entryId": "dnd-card.weapon-training:2014:water-vehicles"
+      }
+    ]
+  },
   "oldConsumerBoundary": {
     "revision": "52d5be10e161464d5e0846d1dc2202ea1169754b",
     "nativeRoundtripPreservesOpaqueIntent": true,
@@ -2827,6 +2899,231 @@
     {
       "mechanism": "candidate-domain",
       "label": "Exactly18 skills and39 tool kinds, not two independent three-item quotas",
+      "passed": true
+    },
+    {
+      "mechanism": "app-catalog",
+      "label": "Actual App catalog assembly including equipment-training seed keeps all57 reviewed choices",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Actual Vehicles (Land)|PHB handle permits exact duplicates, not individual vehicles or group expansion",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB ID corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB kind corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB pack corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB revision corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB English identity corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB source corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB edition corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB page corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB raw category corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB training domain corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB authorship corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB raw injection corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB effects corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB choices corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Land)|PHB dependencies corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Land)|PHB disabled via reviewed-skilled:PHB:land-vehicles, manual tools undefined, suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Land)|PHB disabled via reviewed-skilled:PHB:land-vehicles, manual tools \"\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Land)|PHB disabled via reviewed-skilled:PHB:land-vehicles, manual tools \"authored tools\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Land)|PHB disabled via dnd-card.weapon-training:2014:land-vehicles, manual tools undefined, suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Land)|PHB disabled via dnd-card.weapon-training:2014:land-vehicles, manual tools \"\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Land)|PHB disabled via dnd-card.weapon-training:2014:land-vehicles, manual tools \"authored tools\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Actual Vehicles (Water)|PHB handle permits exact duplicates, not individual vehicles or group expansion",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB ID corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB kind corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB pack corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB revision corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB English identity corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB source corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB edition corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB page corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB raw category corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB training domain corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB authorship corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB raw injection corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB effects corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB choices corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-identity",
+      "label": "Vehicles (Water)|PHB dependencies corruption remains blocked in either catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Water)|PHB disabled via reviewed-skilled:PHB:water-vehicles, manual tools undefined, suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Water)|PHB disabled via reviewed-skilled:PHB:water-vehicles, manual tools \"\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Water)|PHB disabled via reviewed-skilled:PHB:water-vehicles, manual tools \"authored tools\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Water)|PHB disabled via dnd-card.weapon-training:2014:water-vehicles, manual tools undefined, suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Water)|PHB disabled via dnd-card.weapon-training:2014:water-vehicles, manual tools \"\", suspends and recovers without losing confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "vehicle-availability",
+      "label": "Vehicles (Water)|PHB disabled via dnd-card.weapon-training:2014:water-vehicles, manual tools \"authored tools\", suspends and recovers without losing confirmation",
       "passed": true
     },
     {

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T06:18:59.423Z",
-  "consumerRevision": "def2e57db717f2eebbb361259f7b18dec4d3e1da",
-  "consumerSourceTree": "8edaa9060b43ca982a59d5f99c5f22ee8678180d",
+  "updatedAt": "2026-10-25T07:20:01.968Z",
+  "consumerRevision": "fb8676136eddde1506bad9756c41ab869e1270a0",
+  "consumerSourceTree": "bbc6761e1bba50cba06315c2f8cb31c457cb5c63",
   "consumerModules": [
     {
       "path": "src/cloud/api.ts",
@@ -142,7 +142,7 @@
     },
     {
       "path": "src/core/automation/reviewedSkilled.ts",
-      "sha256": "ce81423ca2409891b712a90a9c587b3cfaa78aa145c21f8826bc653eff88dba2"
+      "sha256": "43f2d69e557329b889fe2d0f69e6c1e232743fc59a23a29d71c4b7a486755949"
     },
     {
       "path": "src/core/automation/reviewedSkilledEvidence.json",
@@ -369,7 +369,7 @@
       "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
     }
   ],
-  "producerRevision": "7ef606533e3287cf5c0d85d08afb19b0a2944114",
+  "producerRevision": "63badaaa6b21fb6b7c09e238c91daec39d86a62a",
   "producerScriptSha256": "638880ab38b966fe12e1f1e2ccadb931360ac1dfc9b2f232c40b5e66603e9657",
   "retrievalRevisions": {
     "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
