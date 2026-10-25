@@ -1,0 +1,3992 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-25T06:17:35.165Z",
+  "consumerRevision": "def2e57db717f2eebbb361259f7b18dec4d3e1da",
+  "consumerSourceTree": "8edaa9060b43ca982a59d5f99c5f22ee8678180d",
+  "consumerModules": [
+    {
+      "path": "src/cloud/api.ts",
+      "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+    },
+    {
+      "path": "src/cloud/authorizationLease.ts",
+      "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+    },
+    {
+      "path": "src/cloud/room.ts",
+      "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+    },
+    {
+      "path": "src/cloud/sync.ts",
+      "sha256": "d3d615662a746ec99e2ded054b0df0f644285b33cf2c551b69a9d3743896c147"
+    },
+    {
+      "path": "src/core/automation/abilityAdvancements.ts",
+      "sha256": "545f9e4f7986fef6fa7cf6cfe103274c541ed90947ea0300fca7d59737bfe039"
+    },
+    {
+      "path": "src/core/automation/actions.ts",
+      "sha256": "e4b9d522d395cd3040fe15aec7a47237cab7880d897e2c281dee6d8e461d5a22"
+    },
+    {
+      "path": "src/core/automation/active.ts",
+      "sha256": "0e553cee1963cadc09f368ac72c8ba3bf0cf946d3a9ed0a96daedc62b863f343"
+    },
+    {
+      "path": "src/core/automation/asi.ts",
+      "sha256": "09930141615f39fed9fcde9704f07561f535fcf1685dd61d6ce22ab28144d1e1"
+    },
+    {
+      "path": "src/core/automation/asiEvidence.json",
+      "sha256": "a2b00af4db460bcada383cfcde1ef071f344ec6ee4a7acd6882fc4239a3c6968"
+    },
+    {
+      "path": "src/core/automation/backgroundAbilities.ts",
+      "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+    },
+    {
+      "path": "src/core/automation/baseAbilities.ts",
+      "sha256": "a5bf1a5839ac9cc0baa942d9c26dee796ee6e7e0a4f08ddbd8ad945d8cbe6274"
+    },
+    {
+      "path": "src/core/automation/choices.ts",
+      "sha256": "4fb32284f97836e18f6cd2ee3a3cee113ca0778c0d4e1dc276dfe7ca7286b12c"
+    },
+    {
+      "path": "src/core/automation/classChoiceEvidence.json",
+      "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+    },
+    {
+      "path": "src/core/automation/classChoiceSourceGrant.ts",
+      "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+    },
+    {
+      "path": "src/core/automation/classChoiceSupport.ts",
+      "sha256": "1f9fdf075864b804e2c8ec567671918269608b0ad88e37a6d1cad9d7dabbdea8"
+    },
+    {
+      "path": "src/core/automation/classSpellChoices.ts",
+      "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+    },
+    {
+      "path": "src/core/automation/equipment.ts",
+      "sha256": "eca0e61970e136246ea8523e5e8b79c4f23c2403863e977e11fddc33f7ee5b65"
+    },
+    {
+      "path": "src/core/automation/featureArmor.ts",
+      "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+    },
+    {
+      "path": "src/core/automation/featureResources.ts",
+      "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+    },
+    {
+      "path": "src/core/automation/infusionCharges.ts",
+      "sha256": "646436e80c689add94bba84e16ea009d26a375401d89ac70e960f61687888de9"
+    },
+    {
+      "path": "src/core/automation/infusionEvidence.json",
+      "sha256": "282a577c5c0a717fd4ee9a0e24ec60696f81818fc94e04bd65e3b5a736f5b9ff"
+    },
+    {
+      "path": "src/core/automation/infusions.ts",
+      "sha256": "095f098c1bcb0f7eb30b1b13480fcf931c71ab55a92c20c3bca4358245176471"
+    },
+    {
+      "path": "src/core/automation/invocationAtWillEvidence.json",
+      "sha256": "eba1cd137511d6804e17eeecef1be80c7ebd564eb54aae7b1b071ec97376e4f8"
+    },
+    {
+      "path": "src/core/automation/invocationDualEvidence.json",
+      "sha256": "5446130c185b9b4d7badb182ce1368fd0c074069885141458cf886c8fdc71d02"
+    },
+    {
+      "path": "src/core/automation/invocationEvidence.json",
+      "sha256": "6a143e3d18a100e2096b38bb5f3d0d09beeefd5d1f4ebf0720f6ade6288ea5f0"
+    },
+    {
+      "path": "src/core/automation/invocations.ts",
+      "sha256": "f1873dc472c90d797f4a639e68fbf5616762f44c9e3afec7dc85a79fb146f010"
+    },
+    {
+      "path": "src/core/automation/legacyAsiEvidence.json",
+      "sha256": "b665bc43dd08554e694abd9e4e0c1c5238b2b1ec9891b457232cba09f6f916fe"
+    },
+    {
+      "path": "src/core/automation/modernArmorTrainingEvidence.json",
+      "sha256": "042272849cd21ee5549a5c3385f01d0a6df3cbe1a5d20127b045539d8a636c90"
+    },
+    {
+      "path": "src/core/automation/refuelingRing.ts",
+      "sha256": "1edc59218356a6062d046676e8861176d30c93c7ce39371abaeca54ac7873f7a"
+    },
+    {
+      "path": "src/core/automation/refuelingSlotResolver.ts",
+      "sha256": "2e261aca5ca6a9b4371b79937675521e788b85c89efc2fcb478da60d85b3ab68"
+    },
+    {
+      "path": "src/core/automation/rest.ts",
+      "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatEvidence.json",
+      "sha256": "3771c726324b9bab21b6bdb4e244db276b6ca23ea00d795119fd913c9d59944e"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatIdentity.ts",
+      "sha256": "3791e79b338b1430309d7a553c679edb10b221cc2722416c1c6cb73e4178768e"
+    },
+    {
+      "path": "src/core/automation/reviewedFeats.ts",
+      "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilled.ts",
+      "sha256": "ce81423ca2409891b712a90a9c587b3cfaa78aa145c21f8826bc653eff88dba2"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilledEvidence.json",
+      "sha256": "ab397763ebf45a34da3e5e418c2794df65cfe6b3ccbcf9055b250bb0072e17af"
+    },
+    {
+      "path": "src/core/automation/reviewedWeaponEvidence.json",
+      "sha256": "543f18f2404fe7619809b734de77de8b02645828a75a6fe72ed42945ae0c031f"
+    },
+    {
+      "path": "src/core/automation/reviewedWeapons.ts",
+      "sha256": "1c08ded5e19c2b1b2b0c7e17744c60c594f6ab40cce8be539531dc583238636c"
+    },
+    {
+      "path": "src/core/automation/sourceClassChoices.ts",
+      "sha256": "e6a519c3fa0712e640e77a254f51f56cd78b25b20e11fbd7f23ee0bd9d49369a"
+    },
+    {
+      "path": "src/core/automation/sourceEquipment.ts",
+      "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+    },
+    {
+      "path": "src/core/automation/sourceResourcePools.ts",
+      "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+    },
+    {
+      "path": "src/core/automation/sourceSpellPlan.ts",
+      "sha256": "2831cd4118814a00e869935d7727a2ce4551f4bf55cdd2c9c9ff67205482da48"
+    },
+    {
+      "path": "src/core/automation/sourceSpellState.ts",
+      "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
+    },
+    {
+      "path": "src/core/automation/state.ts",
+      "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+    },
+    {
+      "path": "src/core/automation/training.ts",
+      "sha256": "97fa4568fe1207b6526ae75a1c58eedc4f4c31afb1c947bb6edef51a9e519c79"
+    },
+    {
+      "path": "src/core/automation/weapons.ts",
+      "sha256": "54a6df05b6349b87bc701537fa874847ee4d3fa8486fe72ca56879d1e8302dc0"
+    },
+    {
+      "path": "src/core/bookRituals.ts",
+      "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+    },
+    {
+      "path": "src/core/characterDetails.ts",
+      "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/currency.ts",
+      "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "2d9d42ab519a2c1e3cf346947bc87b5b91f0442a2f6e6ae41b0f48ffe71d0211"
+    },
+    {
+      "path": "src/core/entryNameIndex.ts",
+      "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+    },
+    {
+      "path": "src/core/entryReferences.ts",
+      "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+    },
+    {
+      "path": "src/core/export.ts",
+      "sha256": "d0e8842b37a3bae479a36ed4bc6726c28b952da51ea9a443ea172f05b4e8b2cf"
+    },
+    {
+      "path": "src/core/featureOwnership.ts",
+      "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+    },
+    {
+      "path": "src/core/hitPoints.ts",
+      "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+    },
+    {
+      "path": "src/core/inlineTags.ts",
+      "sha256": "c64b8685c6584b8a5abc653a772ba1a061293852f0c5ca9d7a2d697216eb6786"
+    },
+    {
+      "path": "src/core/legacyTraining.ts",
+      "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+    },
+    {
+      "path": "src/core/model.ts",
+      "sha256": "f65a7b5c23e05798dadfb219936ceb75c259e9b2ca353fabb3d845e2ba351378"
+    },
+    {
+      "path": "src/core/numericExpression.ts",
+      "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+    },
+    {
+      "path": "src/core/palette.ts",
+      "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+    },
+    {
+      "path": "src/core/preparation.ts",
+      "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+    },
+    {
+      "path": "src/core/proficiencyText.ts",
+      "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+    },
+    {
+      "path": "src/core/racialAbilities.ts",
+      "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+    },
+    {
+      "path": "src/core/resources.ts",
+      "sha256": "35e793da45ee20d1dc60bdc231679cdd1bd601b68c4a1ffe27750f4a2102723d"
+    },
+    {
+      "path": "src/core/resourceWidgets.ts",
+      "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+    },
+    {
+      "path": "src/core/sheet.ts",
+      "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
+    },
+    {
+      "path": "src/core/sourceCorrections.ts",
+      "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/spellCapacity.ts",
+      "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+    },
+    {
+      "path": "src/core/spellcastingRules.ts",
+      "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+    },
+    {
+      "path": "src/core/spellResourceKeys.ts",
+      "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+    },
+    {
+      "path": "src/core/spells.ts",
+      "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+    },
+    {
+      "path": "src/core/spellWorkspace.ts",
+      "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+    },
+    {
+      "path": "src/core/transfers.ts",
+      "sha256": "649efa119abd3e0019b7c9b0d3530a3ebc93766cd4029150f2f99600e048c854"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "sha256": "8f5d0e1d865dfd2825fa0fba5e735db66fba84cb3aa5826ed94a5e2f9e4e933c"
+    },
+    {
+      "path": "src/core/weaponAttacks.ts",
+      "sha256": "9681b217186c314bd917c870f4ad93f3615c3b93f2b87fb6894814434b0cc6a5"
+    },
+    {
+      "path": "src/data/adapt.ts",
+      "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+    },
+    {
+      "path": "src/data/catalog.ts",
+      "sha256": "612e37083e84549bb36d93d3a7d9fdb452a29a5ddda7ff75786c71f26002ba60"
+    },
+    {
+      "path": "src/data/catalogNormalizer.ts",
+      "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+    },
+    {
+      "path": "src/data/catalogSnapshot.ts",
+      "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+    },
+    {
+      "path": "src/data/catalogSource.ts",
+      "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+    },
+    {
+      "path": "src/data/catalogTransport.ts",
+      "sha256": "f713ee0c9adf9c070626b1b71d11a0bc1a17a3afcfa0b8032fcae72b98a5916b"
+    },
+    {
+      "path": "src/data/expand.ts",
+      "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+    },
+    {
+      "path": "src/data/homebrew.ts",
+      "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+    },
+    {
+      "path": "src/data/homebrewRecovery.ts",
+      "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
+    },
+    {
+      "path": "src/data/weaponTraining.ts",
+      "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+    },
+    {
+      "path": "src/platform/buildMode.ts",
+      "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+    },
+    {
+      "path": "src/platform/requestTimeout.ts",
+      "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+    },
+    {
+      "path": "src/platform/storage.ts",
+      "sha256": "eeb31b10ca86d6015d96372db413119dda7cc9a307307b73e4e309a01b266533"
+    },
+    {
+      "path": "src/platform/workbenchMode.ts",
+      "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+    },
+    {
+      "path": "src/platform/workspaceDatabase.ts",
+      "sha256": "7cc88eb29692a271270b8f8f5760ac9044eef55a877f219ab997feba58306df2"
+    },
+    {
+      "path": "src/platform/workspaceIdentity.ts",
+      "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+    },
+    {
+      "path": "src/platform/workspaceNamespace.ts",
+      "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+    }
+  ],
+  "producerRevision": "7ef606533e3287cf5c0d85d08afb19b0a2944114",
+  "producerScriptSha256": "8ff20b3218c46718bf10766b28e33a9c058e369b2a1bd9d5339159fd633f36fb",
+  "retrievalRevisions": {
+    "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-barbarian.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-bard.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-cleric.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-druid.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-fighter.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-monk.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-paladin.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-ranger.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-rogue.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-sorcerer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-warlock.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-wizard.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "feats.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "items.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "items-base.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "skills.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "generated/gendata-tables.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "variantrules.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2"
+  },
+  "inputs": {
+    "class/class-artificer.json": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7",
+    "class/class-barbarian.json": "23e2316b63e09a716519833a477f3452ec3ce229bd32c72374eb0c6673e5cb6f",
+    "class/class-bard.json": "ac95dc8f1d795c0764ae6314e846d8efdcbbb4b42a8c721551265467885ed31c",
+    "class/class-cleric.json": "011edfef6c76cd0f70143d83db3b5e8b9b0d31ca1557b4c0954bedc619615344",
+    "class/class-druid.json": "71fca887392f6653f41d5900066cbe6fa1cac0280bb908257075925311e1ec2c",
+    "class/class-fighter.json": "a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509",
+    "class/class-monk.json": "17f8612781788c6b614fdafb81711cb537e0bdb8bec5d1da2f32864d6ec28dcb",
+    "class/class-paladin.json": "aa125ed2f15782924cf4d48677e1ff64c934076bbc4f66fa65f21ba797007b2e",
+    "class/class-ranger.json": "a0e58735bc5f1ef9b260b88cf2c9778ffc0d367c0b132e72fadc95baf198310a",
+    "class/class-rogue.json": "b5c62a8c5356438a09bc64bc96b71968fa3766d46102a0a1de11713e5ee0d251",
+    "class/class-sorcerer.json": "cc1c7c87b28903114e98310b00f6c820541a6f3458bd67e6badb79b014e4c670",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "class/class-wizard.json": "7533f3fb7bab70cd2d2f2b5dfb7e259dc66a2bfee24ee6ad3809042e53ba8a03",
+    "feats.json": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6",
+    "items.json": "883f7bb4df2eb35fb37e7caa3a8765e0209014caa360d1c0358daa6f4b2da488",
+    "items-base.json": "8933a3e70e47aa4fd6196bd7f1f2e3a57d6d8dbe7e781d37bb6a0519d7c4ffff",
+    "skills.json": "313019e6987bffdcdb4c74bdd05edd475c6f33410637f7b42f85760c5beb8941",
+    "generated/gendata-tables.json": "904e726f5b361f20456f2f2569f52bc82607ff0285d393e60d6cc947497806cf",
+    "variantrules.json": "21eef107d25cf438eb85894387fb6f834478d80bc467791c54fe66db9e498c44"
+  },
+  "entryHashes": {
+    "feat": "6050748f7163ce8110abcc187db99a03f2d2acb5309afbd08e4a9e80b89a3bd7",
+    "modern": "faa26042d1d46973ada61d0ff1421b80622ee33c4072df316da8beccc385b9a3",
+    "default": "75b2156dacae2a779a04406c4f12fe1feb5541631d463f22c3ccaab53dc50269",
+    "tools": "b9a6b73ae9591063611bd752b9c0c8c9a0e172c61b18479ccf10f14d73ff3234",
+    "skills": "11c9ab01a028d562939f7d68f89fbe4626441432af5962850787746770a2df5f"
+  },
+  "legacyClassSlots": [
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|4",
+      "level": 4,
+      "entryHash": "15ab494332298be52b81a227d8996ef555e215cbea744aef97bbf67ec62445bf"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|8",
+      "level": 8,
+      "entryHash": "d8d3746d7b102afa1163cc6a5ad93afd4df5a49ddf7fe8ad25e2476970453756"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|12",
+      "level": 12,
+      "entryHash": "5055f6ee30ef606a7adb7b124bc308370891192174895ca16a51a3a8c1d10e78"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|16",
+      "level": 16,
+      "entryHash": "1fd5d443928b6f4f9eb61d1fbbe3a2cb9b89b75284bd09ecc696d5d785593afc"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|19",
+      "level": 19,
+      "entryHash": "2747b932a5b7d86cbbbb0a89e2041294f762802a79118118ed876543c8a6f100"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||4",
+      "level": 4,
+      "entryHash": "31c3ad6efd15b57d4c4b29540fd926b70343c4cd53c7f0951cb963c02f540517"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||8",
+      "level": 8,
+      "entryHash": "17e5368c82ee23cbab1dca513f3f6b94460ff75ac315db81d05e228cd9f0dc4a"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||12",
+      "level": 12,
+      "entryHash": "520341c206d11194d62e892d753bcc8f3a2f4428d94f93fa11a53fc4ca901766"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||16",
+      "level": 16,
+      "entryHash": "8003514f72b34e137fdbd55240c8ad897cd2a07459eb5b113de8fd2baf551280"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||19",
+      "level": 19,
+      "entryHash": "e9e23bbae288bbadd648364a267ed46b5798e0166fc8a735dc7c52ca1cda7dcd"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||4",
+      "level": 4,
+      "entryHash": "fb7a6129b1a5db145a692bc5667ba17ed55ee2b36aa1dfe3ddb8e2e01b8f84df"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||8",
+      "level": 8,
+      "entryHash": "ab1cca974e404072dd7b53198cc2d18dc5993bdd08da8439bea02de18aaacc3a"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||12",
+      "level": 12,
+      "entryHash": "700dd64dc6c9d5dd68035ad7e520e8dc98e80d50618e4e7475536f6e393b2ff3"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||16",
+      "level": 16,
+      "entryHash": "069d5d0c6ed5c90a494a27ebc7553bc66c895767ea5d7d6d032e4b59451c1671"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||19",
+      "level": 19,
+      "entryHash": "c2422715c96b73bf81ad5cc4ef96e608c03bbf5074f7b8e8918b2dd5cfe6c09f"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||4",
+      "level": 4,
+      "entryHash": "7d19c66cea4163aadcd77e26e36a2221b2d30f37b416cfa34c3654a86f1168a9"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||8",
+      "level": 8,
+      "entryHash": "c57aa8d55099122f5971b72d1c757df9cfd5febed15fddf9140efe3f0d13a50b"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||12",
+      "level": 12,
+      "entryHash": "7dd65ad1d4d0b5523625e58e0d3966430474370a3fcd71dbaf9ceae0dd8f1272"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||16",
+      "level": 16,
+      "entryHash": "8038c4fd88b829ce94750d8911a815ae0a82e192295fad09acab3a452882c957"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||19",
+      "level": 19,
+      "entryHash": "27d2bede74614e75ece8965c4c7ec146ff2e907f2be77a87a3e0457a65724222"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||4",
+      "level": 4,
+      "entryHash": "d2f5332541bef50045b682d305de6ec8a6047a3303be2f562175e61b9b977d24"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||8",
+      "level": 8,
+      "entryHash": "70be5556318982a89d7a11189d4b310b30b4e84b500e2b6eb37cf4ed605cab5e"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||12",
+      "level": 12,
+      "entryHash": "17590280165ce2dec4c5d6ff73ed424d12a9d47ad17f697336a02a80b8466734"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||16",
+      "level": 16,
+      "entryHash": "fc0e2b88c7406888977d5df71b698f56f3fce70372423d4442a45944cd886a34"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||19",
+      "level": 19,
+      "entryHash": "22cc85ba08053fd53dbd1149e665584eddacfa0ff48600997caa8a19e9403e6d"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||4",
+      "level": 4,
+      "entryHash": "ac086cf1ef21ef5c45f58ad3ed451817e5741b8dc11b20986cabbd34058fa0ca"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||6",
+      "level": 6,
+      "entryHash": "5ac3697b8daa222bcfb3bd43ba2da7e262891b24f6f92088f507f790f79c55f1"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||8",
+      "level": 8,
+      "entryHash": "780568025cbeaca1f8c1d043359a3d697784039a8c20580724983731bb7dd682"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||12",
+      "level": 12,
+      "entryHash": "768c71236814a3b29af268dbaee15b368a46b229cf2f426510863102a826bd6c"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||14",
+      "level": 14,
+      "entryHash": "5786ad6e646bc0482d6b30dc24eb11239ee78dedda2fa41cb8595cada87c3637"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||16",
+      "level": 16,
+      "entryHash": "1d157529596a6d3df93c36596e72e80eb6445a67560b9b5ee561dd7e4e827a21"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||19",
+      "level": 19,
+      "entryHash": "35f0ca60360ca35348af23a26e3e63f87f7d8ac1b897cf70aed24105405c23d7"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||4",
+      "level": 4,
+      "entryHash": "5f91234176ec752a363b98dc16525d34d8eef8dad21909b0ca17e5fbe49590de"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||8",
+      "level": 8,
+      "entryHash": "2cec09000acfd439937d5362b10f89f253eacbdcb8c2ab40146924dce3b3f8ba"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||12",
+      "level": 12,
+      "entryHash": "0036039fe65729211663fde5a04f9fb6cdd9e28dee8e46e60ed5f6f5dcad70c9"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||16",
+      "level": 16,
+      "entryHash": "4ff774d519461f35304647e4aef2b358e1df0ed64c68c58f13b995f017bcfd88"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||19",
+      "level": 19,
+      "entryHash": "3a392751771a09443584dc9626b8b3e008ecffd14bcb7f362117f3bc6254094c"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||4",
+      "level": 4,
+      "entryHash": "3902e26b5cd452368cca4319022bf2779ac0da02e7bc1832e261954c38def7cd"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||8",
+      "level": 8,
+      "entryHash": "26d79d89c1412e51460aa8f352e92c7e334809521344e597e484136db0b2575c"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||12",
+      "level": 12,
+      "entryHash": "ea4e9eb2017dc2ec7abe91783e815721f24af7b952504196b7b85ef85f6c01bb"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||16",
+      "level": 16,
+      "entryHash": "3e59e0659534e3ef55cefb4f8f275fcf42b76d4421e236e911c38bb56426fb6f"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||19",
+      "level": 19,
+      "entryHash": "cc0570d39a8b52cafee6351e1657ba83dc1b1623ec945c0b9b4c3a07d84afcd8"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||4",
+      "level": 4,
+      "entryHash": "5f359b870d1e8aa2dd0073f6949498aef31761dbf138fa4157ad3f2f68d98301"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||8",
+      "level": 8,
+      "entryHash": "7ce8d081930df98cb809a158feabfe79ac7aaf0ff1ea34daabc784928e6929c6"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||12",
+      "level": 12,
+      "entryHash": "741836e102c86d6e9578409e79e1eb7a5743068e68c8eab60b44351621f4df60"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||16",
+      "level": 16,
+      "entryHash": "ea2ecc290466d6648ff5f10c2f522b2caca3e6e15651ab64dae4ec016098f6f7"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||19",
+      "level": 19,
+      "entryHash": "d25024429c91923b824e14ee1d7eaba2eb82d24e4b6a5289a18af9f3ef23b152"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||4",
+      "level": 4,
+      "entryHash": "6f0bcb9e25c8d1ce4b23ee9f9ff71d68f7de1b4660f82386a1aee1028e5c1660"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||8",
+      "level": 8,
+      "entryHash": "85720074ddbb7b1e33057e35997eca6c33ce43127062384a1dac7c145bf749ab"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||10",
+      "level": 10,
+      "entryHash": "49624b617a2a33442981af56e2e3e5a5a2b02d9c7ae2b5c5683e8d9a3e034232"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||12",
+      "level": 12,
+      "entryHash": "a094e506678810be56035b3cac4cb7664fdcded8a079f16c2d556424b60ca25c"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||16",
+      "level": 16,
+      "entryHash": "d9a1fe450c05d6a66f10c1299f0361e448e5ac9ef64be2e1d85d15d0fb591c9d"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||19",
+      "level": 19,
+      "entryHash": "3cc59ffd5abdb4e4ffedec0b2ac98cefa5903a0e6f7514ca9c78a91a9b0461de"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||4",
+      "level": 4,
+      "entryHash": "92d03c1a3bf08f5ad688ce12eac9615ead66535f13bbf9d0b215fd99b93c6427"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||8",
+      "level": 8,
+      "entryHash": "25b093303b5322d7cb1ca2171a46cc677bda00bbeb72e9959a710ea6f3ee83b8"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||12",
+      "level": 12,
+      "entryHash": "260beb8a1b9cfe3977f459afc135c7fff23812f4302ae3ad6609b0f27fd1efa3"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||16",
+      "level": 16,
+      "entryHash": "96ddb77c51948b141dcdb478e026e856d140765acef3212d14b5c7a72b583e48"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||19",
+      "level": 19,
+      "entryHash": "c6236582a930473870340f1cb97927180d682429085c4072fc96c3dd254d563b"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||4",
+      "level": 4,
+      "entryHash": "3eb9619ba558ce55f8a58174dd4aad9a42fe69fc0a543f4720bd3d93eb632ee5"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||8",
+      "level": 8,
+      "entryHash": "66a664a14752cd91c96d7f3c21c4b2d29ec42adcd2c51fac4c3446dd99a68446"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||12",
+      "level": 12,
+      "entryHash": "62a78a0e6f97a054b8bd51b3c3909e13fbec0f3a0a803fbce2a244ed82560d1c"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||16",
+      "level": 16,
+      "entryHash": "5e47ffad882bc03369337e1cb8fe14fef134e1b4265af50d5462aa817ed968ad"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||19",
+      "level": 19,
+      "entryHash": "674e3aea6b8fdb9a4bb6776b4e029acc613fbca5fcd76483e7ecb727a177d445"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||4",
+      "level": 4,
+      "entryHash": "d52bd6af091b578219c80f36b031cbda61a9a021c09bebbef42da895824fe1b4"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||8",
+      "level": 8,
+      "entryHash": "2762e9bcc5aa1985189b743312468166703728ebd11b825df09452665f657988"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||12",
+      "level": 12,
+      "entryHash": "9d5c4b1ef05b52a3fe38c8435acf253de713a828158f7542a6b26083c594a30a"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||16",
+      "level": 16,
+      "entryHash": "c3658786e7219043469fd6e64f1149c6dfbcb49280b8797bb3782f9067ff73cc"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||19",
+      "level": 19,
+      "entryHash": "7f1eba99c34b672dd8d4b00e3c9bf69b97e1d72d60796ee59a0134f1c621db45"
+    }
+  ],
+  "candidateGroups": {
+    "AT": 17,
+    "INS": 10,
+    "GS": 4,
+    "T": 6
+  },
+  "feat": {
+    "entryId": "kiwee:feat:phb:skilled::::::",
+    "entryHash": "6050748f7163ce8110abcc187db99a03f2d2acb5309afbd08e4a9e80b89a3bd7",
+    "reference": "Skilled|PHB",
+    "english": "Skilled",
+    "page": 170,
+    "rawKeys": [
+      "ENG_name",
+      "name",
+      "source",
+      "page",
+      "reprintedAs",
+      "skillToolLanguageProficiencies",
+      "entries",
+      "translator"
+    ],
+    "mechanics": {
+      "skillToolLanguageProficiencies": [
+        {
+          "choose": [
+            {
+              "from": [
+                "任意技能",
+                "任意工具"
+              ],
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "skills": [
+    {
+      "reference": "acrobatics",
+      "english": "Acrobatics",
+      "name": "特技",
+      "page": 176,
+      "entryId": "kiwee:rule:phb:acrobatics:::::::skill",
+      "entryHash": "8ca32b64f30bb2b8ab2c4564827711691f4db1f2c3dc53ec2e8e0145e9f7ba3e",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "dex"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "animalHandling",
+      "english": "Animal Handling",
+      "name": "驯兽",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:animal%20handling:::::::skill",
+      "entryHash": "64edc7cd9cd44d1414a7fcd13709bf4806f4daecac410d3ff1a2d6518844ae21",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "wis"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "arcana",
+      "english": "Arcana",
+      "name": "奥秘",
+      "page": 177,
+      "entryId": "kiwee:rule:phb:arcana:::::::skill",
+      "entryHash": "476e3200e969ad709c046bcb65c96af2cbf91b6eaf190e1330f0248430eeada8",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "int"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "athletics",
+      "english": "Athletics",
+      "name": "运动",
+      "page": 175,
+      "entryId": "kiwee:rule:phb:athletics:::::::skill",
+      "entryHash": "bcc1907431ee4a1906218c4c464c9841335ee2aee571383dfd153ffd318837ee",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "str"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "deception",
+      "english": "Deception",
+      "name": "欺瞒",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:deception:::::::skill",
+      "entryHash": "ddf5a235155b72507c8e6135937bc4f9f268e11815eeb00378bd1185fd64b32d",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "cha"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "history",
+      "english": "History",
+      "name": "历史",
+      "page": 177,
+      "entryId": "kiwee:rule:phb:history:::::::skill",
+      "entryHash": "3f6103d27363ff7b59bdc5b36144281d939b943266180704e8af508051ac34c9",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "int"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "insight",
+      "english": "Insight",
+      "name": "洞悉",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:insight:::::::skill",
+      "entryHash": "a41a2b1729f75540024bbc4b337b3320e32aea7a4a53489b1e0b5f8e5070c61e",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "wis"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "intimidation",
+      "english": "Intimidation",
+      "name": "威吓",
+      "page": 179,
+      "entryId": "kiwee:rule:phb:intimidation:::::::skill",
+      "entryHash": "a9ce376e19d35ca098c7be425e7ca6f44629c98469f89262f91cfacfbd9167eb",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "cha"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "investigation",
+      "english": "Investigation",
+      "name": "调查",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:investigation:::::::skill",
+      "entryHash": "5915454863649f5f793a61418155e2855cbd0769e5530de14d9c3c07e9b1e375",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "int"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "medicine",
+      "english": "Medicine",
+      "name": "医药",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:medicine:::::::skill",
+      "entryHash": "26cbb49ffb3f641e0b24ab69da89020e5c436f1f70f0380c0272f59ad7ee531b",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "wis"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "nature",
+      "english": "Nature",
+      "name": "自然",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:nature:::::::skill",
+      "entryHash": "a8707f8629513d8c065ea9e4f2690400724e135000dc90db8ee5e4d26608bab2",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "int"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "perception",
+      "english": "Perception",
+      "name": "察觉",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:perception:::::::skill",
+      "entryHash": "060fc6677cc3153be884a2756af73f62258b03b10167b0d0021310851e97526c",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "wis"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "performance",
+      "english": "Performance",
+      "name": "表演",
+      "page": 179,
+      "entryId": "kiwee:rule:phb:performance:::::::skill",
+      "entryHash": "fafc3968477e47d9c61bf77eca7d99dee37fcc332ae1d9a33926b48749545694",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "cha"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "persuasion",
+      "english": "Persuasion",
+      "name": "游说",
+      "page": 179,
+      "entryId": "kiwee:rule:phb:persuasion:::::::skill",
+      "entryHash": "d5c98ff4544176b41898d4aa0593fc74a1587bd021a1120b44ddb0f69ad892a3",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "cha"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "religion",
+      "english": "Religion",
+      "name": "宗教",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:religion:::::::skill",
+      "entryHash": "8d928d69b55dc1a1bbc0d257de046ba22f47671539558ec0c79d94abd58ae526",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "int"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "sleightOfHand",
+      "english": "Sleight of Hand",
+      "name": "巧手",
+      "page": 177,
+      "entryId": "kiwee:rule:phb:sleight%20of%20hand:::::::skill",
+      "entryHash": "af110b4b63488d1f608c2a6d2a114f59e203278a1a5b217bd3cfab8b0bb765cb",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "dex"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "stealth",
+      "english": "Stealth",
+      "name": "隐匿",
+      "page": 177,
+      "entryId": "kiwee:rule:phb:stealth:::::::skill",
+      "entryHash": "e2db551a74512d011cec77a3d281d3f130852cbd13011df556259defd7886ffc",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "dex"
+      },
+      "category": "skill"
+    },
+    {
+      "reference": "survival",
+      "english": "Survival",
+      "name": "求生",
+      "page": 178,
+      "entryId": "kiwee:rule:phb:survival:::::::skill",
+      "entryHash": "96702e7698e9771af1f8687b65a20364f57a00f305fa338ed761543a4dba023b",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "ability",
+        "entries",
+        "translator"
+      ],
+      "mechanics": {
+        "ability": "wis"
+      },
+      "category": "skill"
+    }
+  ],
+  "tools": [
+    {
+      "reference": "Alchemist's Supplies|PHB",
+      "english": "Alchemist's Supplies",
+      "name": "炼金工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:alchemist's%20supplies::::::",
+      "entryHash": "4dd1b27022f8813541c0c8faaf5f775b06ee03ea97df28114f3ac169c091a1fd",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 8,
+        "value": 5000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Bagpipes|PHB",
+      "english": "Bagpipes",
+      "name": "风笛",
+      "page": 154,
+      "entryId": "kiwee:item:phb:bagpipes::::::",
+      "entryHash": "5e44b93b785206afac053a81d2b13c415c35bb2cc38341d184aa78a37053ff06",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 6,
+        "value": 3000
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Brewer's Supplies|PHB",
+      "english": "Brewer's Supplies",
+      "name": "酿酒工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:brewer's%20supplies::::::",
+      "entryHash": "1b20016d759f77999d880a4771ba43971a8862acd7a60c32f932c22964d8c364",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 9,
+        "value": 2000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Calligrapher's Supplies|PHB",
+      "english": "Calligrapher's Supplies",
+      "name": "书法工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:calligrapher's%20supplies::::::",
+      "entryHash": "fb236a954fa497de621dfb30d43b9727b32e92e80126cd9dea429aca31500a24",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 1000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Carpenter's Tools|PHB",
+      "english": "Carpenter's Tools",
+      "name": "木匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:carpenter's%20tools::::::",
+      "entryHash": "8b10a8b9e16f5b54b22aea535699360ddbfec960763a3e5330596adc133d5aff",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 6,
+        "value": 800
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Cartographer's Tools|PHB",
+      "english": "Cartographer's Tools",
+      "name": "制图工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:cartographer's%20tools::::::",
+      "entryHash": "1d873f82e4ddffacfefe0a74f707d8ac5a3f2bca2fa181349fc04c66b5317fc2",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 6,
+        "value": 1500
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Cobbler's Tools|PHB",
+      "english": "Cobbler's Tools",
+      "name": "鞋匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:cobbler's%20tools::::::",
+      "entryHash": "5ec78cdf915f457033db15a2d26384bb8c8706063d51b44b281c04264c30022e",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 500
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Cook's Utensils|PHB",
+      "english": "Cook's Utensils",
+      "name": "厨师工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:cook's%20utensils::::::",
+      "entryHash": "60e5977440997a250301ebc91c4dd7302d7074279ad161ac3d83557e716755c8",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 8,
+        "value": 100
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Drum|PHB",
+      "english": "Drum",
+      "name": "鼓",
+      "page": 154,
+      "entryId": "kiwee:item:phb:drum::::::",
+      "entryHash": "000b83c8b7bdf4359d85243c1d927314d7e60bb89e38c040994d70bb1fadb1d7",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 3,
+        "value": 600
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Dulcimer|PHB",
+      "english": "Dulcimer",
+      "name": "扬琴",
+      "page": 154,
+      "entryId": "kiwee:item:phb:dulcimer::::::",
+      "entryHash": "66366cb575930f2993db97498ef257d47602b32346f254968811ec4f20d58d13",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 10,
+        "value": 2500
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Flute|PHB",
+      "english": "Flute",
+      "name": "长笛",
+      "page": 154,
+      "entryId": "kiwee:item:phb:flute::::::",
+      "entryHash": "3d78618cafb450ece1690e8897dbc8e4e681dbc49641e9ad90b3e1139c7dedb1",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 1,
+        "value": 200
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Glassblower's Tools|PHB",
+      "english": "Glassblower's Tools",
+      "name": "玻璃匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:glassblower's%20tools::::::",
+      "entryHash": "8efa61c4a684d41357d728770e077ada991d88dbcdce7d08e664b7fed2f457c5",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 3000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Horn|PHB",
+      "english": "Horn",
+      "name": "号角",
+      "page": 154,
+      "entryId": "kiwee:item:phb:horn::::::",
+      "entryHash": "1c1e542b506a829604bd664b603439533e49ec59fe9d3bf44e1f2e78f296e896",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 2,
+        "value": 300
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Jeweler's Tools|PHB",
+      "english": "Jeweler's Tools",
+      "name": "珠宝匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:jeweler's%20tools::::::",
+      "entryHash": "09dbc1bb1f2186ecaa436d43cd443335bd58b3ed4c403c8426a9cacc260f418f",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 2,
+        "value": 2500
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Leatherworker's Tools|PHB",
+      "english": "Leatherworker's Tools",
+      "name": "皮匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:leatherworker's%20tools::::::",
+      "entryHash": "32c7ab8234facd5ad62a2f13a5cfcfb3636f3e78a97bd49aff252cc412708421",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 500
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Lute|PHB",
+      "english": "Lute",
+      "name": "鲁特琴",
+      "page": 154,
+      "entryId": "kiwee:item:phb:lute::::::",
+      "entryHash": "b900cbbaa80e0fc837583367df624b8a1dc35ec9963d8024923962e91f4f0606",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 2,
+        "value": 3500
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Lyre|PHB",
+      "english": "Lyre",
+      "name": "里拉琴",
+      "page": 154,
+      "entryId": "kiwee:item:phb:lyre::::::",
+      "entryHash": "dc913d631432983248cd5348cd84e20df958cfa2ee5367770d4c8d1707488261",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 2,
+        "value": 3000
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Mason's Tools|PHB",
+      "english": "Mason's Tools",
+      "name": "石匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:mason's%20tools::::::",
+      "entryHash": "7102a58c2eb896d19c6391dee72dd461ca7226008b0fec15fea0a17a116e0b71",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 8,
+        "value": 1000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Painter's Supplies|PHB",
+      "english": "Painter's Supplies",
+      "name": "画家工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:painter's%20supplies::::::",
+      "entryHash": "83eae9470eddb9799e6529c057e77921e1f50fc90a4aac99809a472ee2171230",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 1000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Pan Flute|PHB",
+      "english": "Pan Flute",
+      "name": "排箫",
+      "page": 154,
+      "entryId": "kiwee:item:phb:pan%20flute::::::",
+      "entryHash": "2be9f8c00e9b518ad458d0e95f4216997764dbc2248bccd339b6228365a520b8",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 2,
+        "value": 1200
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Potter's Tools|PHB",
+      "english": "Potter's Tools",
+      "name": "陶匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:potter's%20tools::::::",
+      "entryHash": "2e074dd46205b4b4ae4a8e22b8ae06a59d3ec9e66605543d14a7fc8b9d858fcf",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 3,
+        "value": 1000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Shawm|PHB",
+      "english": "Shawm",
+      "name": "芦笛",
+      "page": 154,
+      "entryId": "kiwee:item:phb:shawm::::::",
+      "entryHash": "a60788238253a55bcfa066967fbd7a4c6e5b70dd6304ceea5f632fad89c58ffb",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 1,
+        "value": 200
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Smith's Tools|PHB",
+      "english": "Smith's Tools",
+      "name": "铁匠工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:smith's%20tools::::::",
+      "entryHash": "f0e4b09e24cd46c02151be90421f9fba57e96e5b7066bda64cd437133651e28a",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 8,
+        "value": 2000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Tinker's Tools|PHB",
+      "english": "Tinker's Tools",
+      "name": "修补工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:tinker's%20tools::::::",
+      "entryHash": "daa3058f1cd0471fe4142bcb2edeb62843bee9111485121fa91b8423ac7b0e73",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 10,
+        "value": 5000
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Viol|PHB",
+      "english": "Viol",
+      "name": "提琴",
+      "page": 154,
+      "entryId": "kiwee:item:phb:viol::::::",
+      "entryHash": "1a008742d9e24b3fd86475a5a715083bff57094a8944aa69e7aacaa87c0bb94d",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "edition",
+        "rarity",
+        "weight",
+        "value"
+      ],
+      "mechanics": {
+        "type": "INS",
+        "rarity": "none",
+        "weight": 1,
+        "value": 3000
+      },
+      "category": "baseitem",
+      "rawEdition": "classic"
+    },
+    {
+      "reference": "Weaver's Tools|PHB",
+      "english": "Weaver's Tools",
+      "name": "织布工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:weaver's%20tools::::::",
+      "entryHash": "c72eedda99754a5c54e9ae60e8b838d1c15de8d281ecacd39e96c1c25e31c664",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 100
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Woodcarver's Tools|PHB",
+      "english": "Woodcarver's Tools",
+      "name": "木雕工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:woodcarver's%20tools::::::",
+      "entryHash": "54c9a66190b512c533c895ef5df953872b89541e0ae31e382563ea03406f6fbf",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "AT",
+        "rarity": "none",
+        "weight": 5,
+        "value": 100
+      },
+      "category": "baseitem"
+    },
+    {
+      "reference": "Dice Set|PHB",
+      "english": "Dice Set",
+      "name": "骰子组",
+      "page": 154,
+      "entryId": "kiwee:item:phb:dice%20set::::::",
+      "entryHash": "5ae79c5acbf50d7c4195adc3b4282423bc89cf705ba01b0fe6ea4458dee236e6",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "reprintedAs",
+        "rarity",
+        "value",
+        "translator"
+      ],
+      "mechanics": {
+        "type": "GS",
+        "rarity": "none",
+        "value": 10
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Disguise Kit|PHB",
+      "english": "Disguise Kit",
+      "name": "易容工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:disguise%20kit::::::",
+      "entryHash": "29f6aad9607b0274175c9a16462f4b47d1da042e9a60e8008a342fbe80027cb0",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "entries",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "T",
+        "rarity": "none",
+        "weight": 3,
+        "value": 2500
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Dragonchess Set|PHB",
+      "english": "Dragonchess Set",
+      "name": "龙棋组",
+      "page": 154,
+      "entryId": "kiwee:item:phb:dragonchess%20set::::::",
+      "entryHash": "28e4e703896040f3dfbc7b9724d5f78a5fa02c317520261fc23ae9879a0e9646",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "translator"
+      ],
+      "mechanics": {
+        "type": "GS",
+        "rarity": "none",
+        "weight": 0.5,
+        "value": 100
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Forgery Kit|PHB",
+      "english": "Forgery Kit",
+      "name": "文书伪造工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:forgery%20kit::::::",
+      "entryHash": "201c193074a7ef5d417d29e11d01d9b534a21b9da3bcc78d273549e1778228d1",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "entries",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "T",
+        "rarity": "none",
+        "weight": 5,
+        "value": 1500
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Herbalism Kit|PHB",
+      "english": "Herbalism Kit",
+      "name": "草药工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:herbalism%20kit::::::",
+      "entryHash": "d2ec551c6273d6af0db5d3b983b7b35f64171601d08f11e7663bd0d61593f3ad",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "entries",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "T",
+        "rarity": "none",
+        "weight": 3,
+        "value": 500
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Navigator's Tools|PHB",
+      "english": "Navigator's Tools",
+      "name": "领航工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:navigator's%20tools::::::",
+      "entryHash": "12e693c80dfb79d32c8c79ba667d0c54ddb3d7efa98493e0ba3d90f624fe0734",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "entries",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "T",
+        "rarity": "none",
+        "weight": 2,
+        "value": 2500
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Playing Card Set|PHB",
+      "english": "Playing Card Set",
+      "name": "整副纸牌",
+      "page": 154,
+      "entryId": "kiwee:item:phb:playing%20card%20set::::::",
+      "entryHash": "1226b7acd675e843fbda69fd989f16ee691c59e20ca5a18aa8e23f4372413c34",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "value",
+        "translator"
+      ],
+      "mechanics": {
+        "type": "GS",
+        "rarity": "none",
+        "value": 50
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Poisoner's Kit|PHB",
+      "english": "Poisoner's Kit",
+      "name": "毒药工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:poisoner's%20kit::::::",
+      "entryHash": "60ee5b454a4f52fe27b11387c1dc16db39be2de43b0bdcff28e038d878ba12c0",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "entries",
+        "additionalEntries"
+      ],
+      "mechanics": {
+        "type": "T",
+        "rarity": "none",
+        "weight": 2,
+        "value": 5000
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Thieves' Tools|PHB",
+      "english": "Thieves' Tools",
+      "name": "盗贼工具",
+      "page": 154,
+      "entryId": "kiwee:item:phb:thieves'%20tools::::::",
+      "entryHash": "f650903c1be950c0fe447322b6b09b7f8cc8b906d4038c19a4dfa5b37fe40d46",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "srd",
+        "basicRules",
+        "additionalSources",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "weight",
+        "value",
+        "entries",
+        "additionalEntries",
+        "hasFluffImages"
+      ],
+      "mechanics": {
+        "type": "T",
+        "rarity": "none",
+        "weight": 1,
+        "value": 2500
+      },
+      "category": "item"
+    },
+    {
+      "reference": "Three-Dragon Ante Set|PHB",
+      "english": "Three-Dragon Ante Set",
+      "name": "整副三龙牌",
+      "page": 154,
+      "entryId": "kiwee:item:phb:three-dragon%20ante%20set::::::",
+      "entryHash": "10dd9caffb31eeb533f4f5cdd8845ec609b22322d3b234f3146e601d025ff601",
+      "rawKeys": [
+        "ENG_name",
+        "name",
+        "type",
+        "source",
+        "page",
+        "basicRules",
+        "referenceSources",
+        "reprintedAs",
+        "rarity",
+        "value",
+        "translator"
+      ],
+      "mechanics": {
+        "type": "GS",
+        "rarity": "none",
+        "value": 100
+      },
+      "category": "item"
+    }
+  ],
+  "vehicles": [
+    {
+      "reference": "Vehicles (Land)|PHB",
+      "name": "陆上载具",
+      "key": "land-vehicles"
+    },
+    {
+      "reference": "Vehicles (Water)|PHB",
+      "name": "水上载具",
+      "key": "water-vehicles"
+    }
+  ],
+  "oldConsumerBoundary": {
+    "revision": "52d5be10e161464d5e0846d1dc2202ea1169754b",
+    "nativeRoundtripPreservesOpaqueIntent": true,
+    "doesNotApplySkilled": true,
+    "parentChangeSuspendsOnReturn": true,
+    "clearReselectRetainsStaleConsent": true,
+    "safeEditingCompatibility": false
+  },
+  "oldConsumerModules": [
+    {
+      "path": "src/cloud/api.ts",
+      "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+    },
+    {
+      "path": "src/cloud/authorizationLease.ts",
+      "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+    },
+    {
+      "path": "src/cloud/room.ts",
+      "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+    },
+    {
+      "path": "src/cloud/sync.ts",
+      "sha256": "d3d615662a746ec99e2ded054b0df0f644285b33cf2c551b69a9d3743896c147"
+    },
+    {
+      "path": "src/core/automation/abilityAdvancements.ts",
+      "sha256": "545f9e4f7986fef6fa7cf6cfe103274c541ed90947ea0300fca7d59737bfe039"
+    },
+    {
+      "path": "src/core/automation/actions.ts",
+      "sha256": "e4b9d522d395cd3040fe15aec7a47237cab7880d897e2c281dee6d8e461d5a22"
+    },
+    {
+      "path": "src/core/automation/active.ts",
+      "sha256": "0e553cee1963cadc09f368ac72c8ba3bf0cf946d3a9ed0a96daedc62b863f343"
+    },
+    {
+      "path": "src/core/automation/asi.ts",
+      "sha256": "32b5130a62d8b57233d396ba69cc3b8a5379c2eb38a919a1e97d63edbb9c0fea"
+    },
+    {
+      "path": "src/core/automation/asiEvidence.json",
+      "sha256": "a2b00af4db460bcada383cfcde1ef071f344ec6ee4a7acd6882fc4239a3c6968"
+    },
+    {
+      "path": "src/core/automation/backgroundAbilities.ts",
+      "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+    },
+    {
+      "path": "src/core/automation/baseAbilities.ts",
+      "sha256": "30b1930cdd8e839b324578d5074145b6d4486b85ed6727cdf633ebb2617a5d6a"
+    },
+    {
+      "path": "src/core/automation/choices.ts",
+      "sha256": "f60a9efd82bc14cf8f8ec0e775908f23ab2fb2be3bfc56209dce335ed954ddbb"
+    },
+    {
+      "path": "src/core/automation/classChoiceEvidence.json",
+      "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+    },
+    {
+      "path": "src/core/automation/classChoiceSourceGrant.ts",
+      "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+    },
+    {
+      "path": "src/core/automation/classChoiceSupport.ts",
+      "sha256": "1f9fdf075864b804e2c8ec567671918269608b0ad88e37a6d1cad9d7dabbdea8"
+    },
+    {
+      "path": "src/core/automation/classSpellChoices.ts",
+      "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+    },
+    {
+      "path": "src/core/automation/equipment.ts",
+      "sha256": "eca0e61970e136246ea8523e5e8b79c4f23c2403863e977e11fddc33f7ee5b65"
+    },
+    {
+      "path": "src/core/automation/featureArmor.ts",
+      "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+    },
+    {
+      "path": "src/core/automation/featureResources.ts",
+      "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+    },
+    {
+      "path": "src/core/automation/infusionCharges.ts",
+      "sha256": "646436e80c689add94bba84e16ea009d26a375401d89ac70e960f61687888de9"
+    },
+    {
+      "path": "src/core/automation/infusionEvidence.json",
+      "sha256": "282a577c5c0a717fd4ee9a0e24ec60696f81818fc94e04bd65e3b5a736f5b9ff"
+    },
+    {
+      "path": "src/core/automation/infusions.ts",
+      "sha256": "095f098c1bcb0f7eb30b1b13480fcf931c71ab55a92c20c3bca4358245176471"
+    },
+    {
+      "path": "src/core/automation/invocationAtWillEvidence.json",
+      "sha256": "eba1cd137511d6804e17eeecef1be80c7ebd564eb54aae7b1b071ec97376e4f8"
+    },
+    {
+      "path": "src/core/automation/invocationDualEvidence.json",
+      "sha256": "5446130c185b9b4d7badb182ce1368fd0c074069885141458cf886c8fdc71d02"
+    },
+    {
+      "path": "src/core/automation/invocationEvidence.json",
+      "sha256": "6a143e3d18a100e2096b38bb5f3d0d09beeefd5d1f4ebf0720f6ade6288ea5f0"
+    },
+    {
+      "path": "src/core/automation/invocations.ts",
+      "sha256": "f1873dc472c90d797f4a639e68fbf5616762f44c9e3afec7dc85a79fb146f010"
+    },
+    {
+      "path": "src/core/automation/legacyAsiEvidence.json",
+      "sha256": "b665bc43dd08554e694abd9e4e0c1c5238b2b1ec9891b457232cba09f6f916fe"
+    },
+    {
+      "path": "src/core/automation/modernArmorTrainingEvidence.json",
+      "sha256": "042272849cd21ee5549a5c3385f01d0a6df3cbe1a5d20127b045539d8a636c90"
+    },
+    {
+      "path": "src/core/automation/refuelingRing.ts",
+      "sha256": "1edc59218356a6062d046676e8861176d30c93c7ce39371abaeca54ac7873f7a"
+    },
+    {
+      "path": "src/core/automation/refuelingSlotResolver.ts",
+      "sha256": "2e261aca5ca6a9b4371b79937675521e788b85c89efc2fcb478da60d85b3ab68"
+    },
+    {
+      "path": "src/core/automation/rest.ts",
+      "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatEvidence.json",
+      "sha256": "3771c726324b9bab21b6bdb4e244db276b6ca23ea00d795119fd913c9d59944e"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatIdentity.ts",
+      "sha256": "2e5da4c5f4b0c8bec22d7591a2ab9d8befc8def954828ae795a9beda5633d559"
+    },
+    {
+      "path": "src/core/automation/reviewedFeats.ts",
+      "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedWeaponEvidence.json",
+      "sha256": "543f18f2404fe7619809b734de77de8b02645828a75a6fe72ed42945ae0c031f"
+    },
+    {
+      "path": "src/core/automation/reviewedWeapons.ts",
+      "sha256": "1c08ded5e19c2b1b2b0c7e17744c60c594f6ab40cce8be539531dc583238636c"
+    },
+    {
+      "path": "src/core/automation/sourceClassChoices.ts",
+      "sha256": "e6a519c3fa0712e640e77a254f51f56cd78b25b20e11fbd7f23ee0bd9d49369a"
+    },
+    {
+      "path": "src/core/automation/sourceEquipment.ts",
+      "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+    },
+    {
+      "path": "src/core/automation/sourceResourcePools.ts",
+      "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+    },
+    {
+      "path": "src/core/automation/sourceSpellPlan.ts",
+      "sha256": "2831cd4118814a00e869935d7727a2ce4551f4bf55cdd2c9c9ff67205482da48"
+    },
+    {
+      "path": "src/core/automation/sourceSpellState.ts",
+      "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
+    },
+    {
+      "path": "src/core/automation/state.ts",
+      "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+    },
+    {
+      "path": "src/core/automation/training.ts",
+      "sha256": "b68ceb45af704eafdd1c2a291577081bc890b9fd8f09b693cdaf8dca03d456c4"
+    },
+    {
+      "path": "src/core/automation/weapons.ts",
+      "sha256": "54a6df05b6349b87bc701537fa874847ee4d3fa8486fe72ca56879d1e8302dc0"
+    },
+    {
+      "path": "src/core/bookRituals.ts",
+      "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+    },
+    {
+      "path": "src/core/characterDetails.ts",
+      "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/currency.ts",
+      "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "80daa4fa3253195cce29c3f02dc5f674f9e480602da9dd8823af87383e12e6b7"
+    },
+    {
+      "path": "src/core/entryNameIndex.ts",
+      "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+    },
+    {
+      "path": "src/core/entryReferences.ts",
+      "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+    },
+    {
+      "path": "src/core/export.ts",
+      "sha256": "d0e8842b37a3bae479a36ed4bc6726c28b952da51ea9a443ea172f05b4e8b2cf"
+    },
+    {
+      "path": "src/core/featureOwnership.ts",
+      "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+    },
+    {
+      "path": "src/core/hitPoints.ts",
+      "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+    },
+    {
+      "path": "src/core/inlineTags.ts",
+      "sha256": "c64b8685c6584b8a5abc653a772ba1a061293852f0c5ca9d7a2d697216eb6786"
+    },
+    {
+      "path": "src/core/legacyTraining.ts",
+      "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+    },
+    {
+      "path": "src/core/model.ts",
+      "sha256": "8d6ebfbd1f2c4f2be834e0c48de5ac2770ff7ef78b6fe737d60fdcb9c529bfd1"
+    },
+    {
+      "path": "src/core/numericExpression.ts",
+      "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+    },
+    {
+      "path": "src/core/palette.ts",
+      "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+    },
+    {
+      "path": "src/core/preparation.ts",
+      "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+    },
+    {
+      "path": "src/core/proficiencyText.ts",
+      "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+    },
+    {
+      "path": "src/core/racialAbilities.ts",
+      "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+    },
+    {
+      "path": "src/core/resources.ts",
+      "sha256": "35e793da45ee20d1dc60bdc231679cdd1bd601b68c4a1ffe27750f4a2102723d"
+    },
+    {
+      "path": "src/core/resourceWidgets.ts",
+      "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+    },
+    {
+      "path": "src/core/sheet.ts",
+      "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
+    },
+    {
+      "path": "src/core/sourceCorrections.ts",
+      "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/spellCapacity.ts",
+      "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+    },
+    {
+      "path": "src/core/spellcastingRules.ts",
+      "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+    },
+    {
+      "path": "src/core/spellResourceKeys.ts",
+      "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+    },
+    {
+      "path": "src/core/spells.ts",
+      "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+    },
+    {
+      "path": "src/core/spellWorkspace.ts",
+      "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+    },
+    {
+      "path": "src/core/transfers.ts",
+      "sha256": "649efa119abd3e0019b7c9b0d3530a3ebc93766cd4029150f2f99600e048c854"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "sha256": "9c123c2fccc32f5c62b856df2d803c4562a686de0ddc8e637663817bb7e095ab"
+    },
+    {
+      "path": "src/core/weaponAttacks.ts",
+      "sha256": "9681b217186c314bd917c870f4ad93f3615c3b93f2b87fb6894814434b0cc6a5"
+    },
+    {
+      "path": "src/data/adapt.ts",
+      "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+    },
+    {
+      "path": "src/data/catalog.ts",
+      "sha256": "612e37083e84549bb36d93d3a7d9fdb452a29a5ddda7ff75786c71f26002ba60"
+    },
+    {
+      "path": "src/data/catalogNormalizer.ts",
+      "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+    },
+    {
+      "path": "src/data/catalogSnapshot.ts",
+      "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+    },
+    {
+      "path": "src/data/catalogSource.ts",
+      "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+    },
+    {
+      "path": "src/data/catalogTransport.ts",
+      "sha256": "f713ee0c9adf9c070626b1b71d11a0bc1a17a3afcfa0b8032fcae72b98a5916b"
+    },
+    {
+      "path": "src/data/expand.ts",
+      "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+    },
+    {
+      "path": "src/data/homebrew.ts",
+      "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+    },
+    {
+      "path": "src/data/homebrewRecovery.ts",
+      "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
+    },
+    {
+      "path": "src/data/weaponTraining.ts",
+      "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+    },
+    {
+      "path": "src/platform/buildMode.ts",
+      "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+    },
+    {
+      "path": "src/platform/requestTimeout.ts",
+      "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+    },
+    {
+      "path": "src/platform/storage.ts",
+      "sha256": "eeb31b10ca86d6015d96372db413119dda7cc9a307307b73e4e309a01b266533"
+    },
+    {
+      "path": "src/platform/workbenchMode.ts",
+      "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+    },
+    {
+      "path": "src/platform/workspaceDatabase.ts",
+      "sha256": "7cc88eb29692a271270b8f8f5760ac9044eef55a877f219ab997feba58306df2"
+    },
+    {
+      "path": "src/platform/workspaceIdentity.ts",
+      "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+    },
+    {
+      "path": "src/platform/workspaceNamespace.ts",
+      "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+    }
+  ],
+  "steps": [
+    {
+      "mechanism": "candidate-domain",
+      "label": "Exactly18 skills and39 tool kinds, not two independent three-item quotas",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level6 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level14 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level10 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level4 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level8 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level12 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level16 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level19 ASI applies and revokes one shared three-choice grant",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-quota",
+      "label": "Legal skill/tool mix skill+skill+skill grants exactly three kinds",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-quota",
+      "label": "Legal skill/tool mix skill+skill+tool grants exactly three kinds",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-quota",
+      "label": "Legal skill/tool mix skill+tool+tool grants exactly three kinds",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-quota",
+      "label": "Legal skill/tool mix tool+tool+tool grants exactly three kinds",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Acrobatics|PHB grants exactly one PB to actual acrobatics",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Animal Handling|PHB grants exactly one PB to actual animalHandling",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Arcana|PHB grants exactly one PB to actual arcana",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Athletics|PHB grants exactly one PB to actual athletics",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Deception|PHB grants exactly one PB to actual deception",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real History|PHB grants exactly one PB to actual history",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Insight|PHB grants exactly one PB to actual insight",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Intimidation|PHB grants exactly one PB to actual intimidation",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Investigation|PHB grants exactly one PB to actual investigation",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Medicine|PHB grants exactly one PB to actual medicine",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Nature|PHB grants exactly one PB to actual nature",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Perception|PHB grants exactly one PB to actual perception",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Performance|PHB grants exactly one PB to actual performance",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Persuasion|PHB grants exactly one PB to actual persuasion",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Religion|PHB grants exactly one PB to actual religion",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Sleight of Hand|PHB grants exactly one PB to actual sleightOfHand",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Stealth|PHB grants exactly one PB to actual stealth",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-skill",
+      "label": "Real Survival|PHB grants exactly one PB to actual survival",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Alchemist's Supplies|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Bagpipes|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Brewer's Supplies|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Calligrapher's Supplies|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Carpenter's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Cartographer's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Cobbler's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Cook's Utensils|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Drum|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Dulcimer|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Flute|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Glassblower's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Horn|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Jeweler's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Leatherworker's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Lute|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Lyre|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Mason's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Painter's Supplies|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Pan Flute|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Potter's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Shawm|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Smith's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Tinker's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Viol|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Weaver's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Woodcarver's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Dice Set|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Disguise Kit|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Dragonchess Set|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Forgery Kit|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Herbalism Kit|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Navigator's Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Playing Card Set|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Poisoner's Kit|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Thieves' Tools|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Three-Dragon Ante Set|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Vehicles (Land)|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "individual-tool",
+      "label": "Reviewed Vehicles (Water)|PHB grants proficiency without creating an inventory item",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically []",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\"},{\"kind\":\"skill\",\"reference\":\"stealth\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"skill\",\"reference\":\"arcana\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Water)|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"察觉\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"PERCEPTION\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"盗贼工具|PHB\"},{\"kind\":\"skill\",\"reference\":\"perception\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"tool\",\"reference\":\"thieves' tools|phb\"},{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\"},{\"kind\":\"tool\",\"reference\":\"Cart|PHB\"},{\"kind\":\"tool\",\"reference\":\"Wagon|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Artisan's Tools|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Gaming Set|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Musical Instrument|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Shawm|SCAG\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Longsword|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Plate Armor|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Air)|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Elvish|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"perception\"},{\"kind\":\"skill\",\"reference\":\"stealth\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|XPHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"language\",\"reference\":\"Common\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota-identity",
+      "label": "Invalid mixed choice rejects atomically [{\"kind\":\"skill\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\"},{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\"}]",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Intent cannot carry unreviewed fields {\"confirmed\":false}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Intent cannot carry unreviewed fields {}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Intent cannot carry unreviewed fields {\"bonus\":99}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Intent cannot carry unreviewed fields {\"choices\":[{\"kind\":\"skill\",\"reference\":\"perception\",\"effects\":[]},{\"kind\":\"tool\",\"reference\":\"Thieves' Tools|PHB\",\"effects\":[]},{\"kind\":\"tool\",\"reference\":\"Vehicles (Land)|PHB\",\"effects\":[]}]}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Intent cannot carry unreviewed fields {\"kind\":\"linguist\"}",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Native single-card export restores confirmed choices without catalog",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Linked Owlbear native payload restores confirmed choices without catalog",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Collection export and actual atomic transfer importer preserve owned Skilled intent",
+      "passed": true
+    },
+    {
+      "mechanism": "export-boundary",
+      "label": "Thin legacy Owlbear projection does not claim tool payload or native consent",
+      "passed": true
+    },
+    {
+      "mechanism": "replacement",
+      "label": "Changing one choice withdraws only removed owned proficiency",
+      "passed": true
+    },
+    {
+      "mechanism": "idempotency",
+      "label": "Repeated explicit confirmation has one binding and no extra PB",
+      "passed": true
+    },
+    {
+      "mechanism": "parent-replacement",
+      "label": "Tough removes only Skilled consent; reselect requires explicit confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "parent-replacement",
+      "label": "ability-plan removes only Skilled consent; reselect requires explicit confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "parent-replacement",
+      "label": "clear removes only Skilled consent; reselect requires explicit confirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "automation suspends all three derived grants while preserving intent",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "source suspends all three derived grants while preserving intent",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "optional feats suspends all three derived grants while preserving intent",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "individual skill suspends all three derived grants while preserving intent",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "individual tool suspends all three derived grants while preserving intent",
+      "passed": true
+    },
+    {
+      "mechanism": "level-transition",
+      "label": "Wizard4 to3 to4 offline recovery retains intent without stacking",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill",
+      "label": "Existing true skill contribution remains authoritative and never doubles PB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill",
+      "label": "Existing false skill contribution remains authoritative and never doubles PB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill",
+      "label": "Existing expertise skill contribution remains authoritative and never doubles PB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill",
+      "label": "Existing source skill contribution remains authoritative and never doubles PB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill",
+      "label": "Existing override skill contribution remains authoritative and never doubles PB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill",
+      "label": "Existing bonus skill contribution remains authoritative and never doubles PB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-tools",
+      "label": "Explicit manual tools \"\" overrides display without suppressing skill half",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-tools",
+      "label": "Explicit manual tools \"authored tools\" overrides display without suppressing skill half",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-tools",
+      "label": "Explicit manual tools \"Thieves' Tools|PHB\" overrides display without suppressing skill half",
+      "passed": true
+    },
+    {
+      "mechanism": "repeatability",
+      "label": "Second PHB Skilled ASI is rejected while XPHB identity stays separate",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw source cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized source cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw name cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized name cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "page cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw page cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw edition cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized edition cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw category cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "copy directive cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "effects cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "choice injection cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "shared quota cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "language expansion cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "repeatable cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "empty prose cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "mechanical injection cannot forge a reviewed PHB feat",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-alias",
+      "label": "Legitimate imported instance alias cannot bypass canonical rule disablement",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-alias",
+      "label": "Two owned ASI claims cannot stack or retain one active grant via alias identity",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "source conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "kind conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "raw category conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "ID conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "edition conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "effects conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "mechanics conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "tool-identity",
+      "label": "copy conflicting catalog row cannot make a reviewed selectable tool",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "missing owner makes saved grant inactive without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "missing ASI makes saved grant inactive without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "cyclic ancestry makes saved grant inactive without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "owner raw name makes saved grant inactive without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "duplicate consent makes saved grant inactive without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "manual same feat makes saved grant inactive without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Tough effects and owned state survive independent Skilled confirmation and withdrawal",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Resilient effects and owned state survive independent Skilled confirmation and withdrawal",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Lightly Armored effects and owned state survive independent Skilled confirmation and withdrawal",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Moderately Armored effects and owned state survive independent Skilled confirmation and withdrawal",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Heavily Armored effects and owned state survive independent Skilled confirmation and withdrawal",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Weapon Master effects and owned state survive independent Skilled confirmation and withdrawal",
+      "passed": true
+    },
+    {
+      "mechanism": "future-store",
+      "label": "Unknown Skilled version remains opaque/inactive without disabling existing Tough",
+      "passed": true
+    },
+    {
+      "mechanism": "generic-boundary",
+      "label": "Generic mixed proficiency IR stays unsupported for both frozen Skilled and arbitrary records",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer",
+      "label": "Actual old native reader/export retains new field without understanding its effect",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer",
+      "label": "Old parent replacement remains safely inactive when returned with a different answer",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer-boundary",
+      "label": "Old clear-and-reselect cannot attest fresh consent: record known unsafe editing boundary",
+      "passed": true
+    }
+  ],
+  "definition": "Bounded PHB2014 Skilled source-and-real-class-ASI API proof. It does not establish all-tool support, generic mixed grants, browser correctness, server persistence or publication.",
+  "status": {
+    "source": "verified-against-frozen-data",
+    "mechanisms": "partial",
+    "fullRuleAutomation": false,
+    "reviewedFeats": 1,
+    "legacyClassSlots": 68,
+    "canonicalSkills": 18,
+    "canonicalTools": 39,
+    "browser": "not-run",
+    "fullRuntimeReplay": "not-run",
+    "oldConsumerCompatibility": "opaque-roundtrip-only-old-editing-unsafe",
+    "currentReleaseAvailable": null
+  },
+  "boundaries": [
+    "Exactly18 PHB skills,37 concrete PHB tools and2 vehicle proficiency kinds; group entries, individual carts/boats, air vehicles and unreviewed SCAG/magic domains are not silently granted. Unsupported does not mean RAW forbidden.",
+    "All selections share one count3 and require explicit current intent. Existing proficiency is legal, does not double PB or convert to expertise, and does not produce automatic replacement choices.",
+    "Source hashes bind this source audit; runtime mechanical identity checks do not cryptographically authenticate imported publisher prose.",
+    "No creation of tool inventory, crafting, tool attack rolls, vehicle control subsystem, language grants or Linguist ability/cipher logic.",
+    "Manual tools including an empty string remain authoritative; skill contribution is independent. HP, resources, attributes, manual overrides and old reviewed-feat domains remain untouched.",
+    "Independent version1 domain preserves prior reviewedFeats v1. Actual old consumer retains opaque new intent but can preserve stale intent after clear/reselect; old-client editing is not safe compatibility. Withdraw and reconfirm in a new client after such editing.",
+    "Native single/collection and linked native payload are verified at the API layer. Thin legacy Owlbear tool arrays remain empty. Actual browser storage, cloud delivery and deployment are separate gates.",
+    "Generic mixed-proficiency-choice remains unsupported in Data IR. No old full corpus replay or altered denominator is claimed."
+  ],
+  "publicReference": {
+    "url": "https://www.dndbeyond.com/sources/dnd/basic-rules-2014/equipment",
+    "reviewedAt": "2026-10-25",
+    "sections": [
+      "Tools",
+      "Other Tools",
+      "Vehicle Proficiency"
+    ],
+    "summary": "Each specific artisan tool, game set and instrument has separate proficiency; vehicle proficiency is a land or water kind. Tool checks are not tied to a fixed ability."
+  }
+}
