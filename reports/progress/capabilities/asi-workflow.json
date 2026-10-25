@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23T16:00:51.721Z",
+  "consumerRevision": "0f8530e1293d232bf1f20fd9be7d8dd07c9284f2",
+  "producerRevision": "e0b0c2e380d1d4ed3f250bf9a43d817a7439dc66",
+  "source": [
+    "Ability Score Improvement|XPHB",
+    "Ability Score Improvement class grants|PHB",
+    "Ability Score Improvement class grants|TCE"
+  ],
+  "inputs": {
+    "class/class-artificer.json": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7",
+    "class/class-fighter.json": "a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509",
+    "feats.json": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6"
+  },
+  "steps": [
+    {
+      "label": "Selected ASI stays manual before explicit allocation",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "First grant +2",
+      "passed": true,
+      "str": 18,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Second independent split",
+      "passed": true,
+      "str": 19,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Serialized reopen without catalog",
+      "passed": true,
+      "str": 19,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Automation disabled",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Automation restored without duplicate",
+      "passed": true,
+      "str": 19,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Source disabled",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Source restored",
+      "passed": true,
+      "str": 19,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Level downgrade suspends second grant",
+      "passed": true,
+      "str": 18,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Level restore keeps prior intent",
+      "passed": true,
+      "str": 19,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Replace first ASI with an eligible source feat",
+      "passed": true,
+      "str": 17,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Restore archived ASI without duplicate allocation",
+      "passed": true,
+      "str": 19,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Withdraw first only",
+      "passed": true,
+      "str": 17,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Withdraw remaining allocation",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB legacy selected plan does not change base",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB legacy explicit first allocation",
+      "passed": true,
+      "str": 18,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB repeated independent allocation",
+      "passed": true,
+      "str": 18,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB legacy save/reopen offline",
+      "passed": true,
+      "str": 18,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB legacy downgrade suspends contributions",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB legacy offline restore retains allocations",
+      "passed": true,
+      "str": 18,
+      "dex": 15,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "PHB legacy withdrawal preserves manual scores",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "TCE legacy selected plan does not change base",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "TCE legacy explicit first allocation",
+      "passed": true,
+      "str": 18,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "TCE legacy save/reopen offline",
+      "passed": true,
+      "str": 18,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "TCE legacy downgrade suspends contributions",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "TCE legacy offline restore retains allocations",
+      "passed": true,
+      "str": 18,
+      "dex": 14,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "TCE legacy withdrawal preserves manual scores",
+      "passed": true,
+      "str": 16,
+      "dex": 14,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Exact-source synthetic workflow proof, not real-browser or publication certification",
+  "browser": "pending",
+  "currentReleaseAvailable": null
+}

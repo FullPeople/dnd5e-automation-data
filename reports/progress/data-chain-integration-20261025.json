@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "kind": "accepted-data-chain-integration-with-separate-historical-ui8-gates",
+  "repository": "FullPeople/dnd5e-automation-data",
+  "acceptedPullRequests": [
+    {
+      "number": 58,
+      "head": "136553b4008dd941653c5550a632dd034403cf07"
+    },
+    {
+      "number": 59,
+      "head": "d41e07081f1b2e7f20e46bdc11732b798936998e"
+    },
+    {
+      "number": 60,
+      "head": "1c6eb5f366ce1fdbb7a9fc2a44222bce4cd91bb7"
+    },
+    {
+      "number": 61,
+      "head": "c43d0b6ba8525a7578597e05bced812e94d46f27"
+    },
+    {
+      "number": 62,
+      "head": "7539ea0a6647c9b91b19793b7b074d057f65648e"
+    },
+    {
+      "number": 63,
+      "head": "782f8ca1c8978f8f9fe028913efdd543258208fc"
+    },
+    {
+      "number": 64,
+      "head": "816b12dbd4d3733e83baf7f9190cb8b016883de3"
+    },
+    {
+      "number": 65,
+      "head": "9a7e7a3cd391a5dcfa53adb8dfc6d61135544cc2"
+    },
+    {
+      "number": 66,
+      "head": "c51dad51e02dc9cfecf5c8e0190b1166f8e033ac"
+    },
+    {
+      "number": 67,
+      "head": "c077fbd7984f5731bba6d90026848aee519f7bc2"
+    },
+    {
+      "number": 68,
+      "head": "6d3146ba04e542ea79ba6ec8ba0e92661e31c6d8"
+    },
+    {
+      "number": 69,
+      "head": "6fa33744c13243ad13f5937193fc3522d38ad87c"
+    },
+    {
+      "number": 70,
+      "head": "4af8999023b61263b78388d21f66be46cf05922e"
+    }
+  ],
+  "excludedPullRequests": [
+    5,
+    71,
+    73
+  ],
+  "priorMain": {
+    "revision": "598655132018b44b45b77a4b5db4b5bebdb0f296",
+    "reportPath": "reports/progress/runtime-coverage.json",
+    "reportSha256": "1dd8e0ca0943e3f5a16296ee23a59ec2334dfe64410382544905d145e5e47ec5",
+    "reportBytes": 7836085,
+    "consumerRevision": "1d79842fc07181686a684401f7f292947d06345b",
+    "consumerModules": 169,
+    "proofPath": "reports/progress/runtime-coverage-ui8-proof.json",
+    "proofSha256": "428e9aa942845bed29d22ad24440edde0639bb28937f972934c9d3be55dcae0d"
+  },
+  "acceptedTip": {
+    "revision": "4af8999023b61263b78388d21f66be46cf05922e",
+    "reportPath": "reports/progress/runtime-coverage.json",
+    "reportSha256": "f38d74c288ca922ffa20f71f80e836a517443ebc300ab6782e6aa0af75b0fe69",
+    "reportBytes": 4368381,
+    "consumerRevision": "1a6319a9c48c734e7fec04c538d64f7aa9d151b2",
+    "consumerModules": 192,
+    "reportCopiedWithoutChanges": true
+  },
+  "historicalGatesCheckedSeparately": [
+    "src/ui/BookReader.tsx",
+    "src/ui/ClearableSearch.tsx",
+    "src/ui/GlobalSearch.tsx",
+    "src/ui/LibraryDocument.tsx",
+    "src/ui/WikiLayout.tsx",
+    "src/ui/WikiSplitter.tsx",
+    "src/ui/WorkspaceSplitter.tsx",
+    "src/ui/pointerDrag.ts",
+    "src/ui/useEntrySearch.ts",
+    "src/wiki/WikiApp.tsx"
+  ],
+  "boundary": "The active report retains the exact completed Data70 replay and its immutable consumer. The prior main UI8 report, fullReplay and uiRebind lineage remain at the recorded immutable Data revision and all 169 module gates are verified separately in CI. Neither report is relabeled as a combined Web build, a new full replay, whole-rule completion or a deployment. No Web branch, player data, permissions or publication is changed."
+}

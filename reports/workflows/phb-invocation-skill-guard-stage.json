@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T17:29:14.322Z",
+  "consumerRevision": "70a9d58cdc4d7148a458704f4425de4b4cb91129",
+  "consumerSourceTree": "d46ba1f5e1bab07e5d434a7343a866ab8494b257",
+  "producerRevision": "588378ad34910a345a383eac3691a05a337a8060",
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "inputs": {
+    "optionalfeatures.json": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "spells/spells-phb.json": "e1f2221020cfb5d31995c99b78dc09435c9962476ef1cef81b52399e6df0263d"
+  },
+  "entryHashes": {
+    "Beguiling Influence|PHB": "133c935633e85c878481a634c8064e96b41a8842c378c91a489f58ea3d407702",
+    "Warlock|PHB": "179a4e48b79fef7ae2244e88e614d04a0828caca4a854b6f65de61b6df802385",
+    "Eldritch Invocations|Warlock|PHB|2": "a482142444ed3639690525945c024d4b2476ac84bbe5e981ef3f7f0d323eaa8f"
+  },
+  "rules": [
+    {
+      "reference": "Beguiling Influence|PHB",
+      "skills": [
+        "deception",
+        "persuasion"
+      ],
+      "grantsExpertise": false,
+      "minimumWarlockLevel": 2
+    }
+  ],
+  "steps": [
+    {
+      "label": "Unlearned exact option grants nothing during pure evaluation or choice planning",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit class choice grants only deception and persuasion once, without expertise",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Native reopen and repeated offline sync retain exact learned identity and manual state",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source raw English identity only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source raw source only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source raw edition",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source raw copy",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source normalized kind",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source raw category",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source declared effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source declared choices",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source injected raw skills",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source injected raw effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source injected raw choices",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source raw level",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source normalized source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source normalized identity",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source owner link",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source grant key",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source dismissed by owner",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class raw English identity only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class raw source only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class normalized source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class raw copy",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class progression",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class declared source references",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class missing ancestor",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class self-cycle",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class and source cycle",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: class and learned invocation cycle",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation parent link",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation raw source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation normalized source",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation raw English identity only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation normalized identity",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation raw copy",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation normalized kind",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation raw category",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation declared effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation declared choices",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation injected raw effects",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation erased identities with retained snapshot",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation prerequisite",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation extra skill payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation missing skill payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation added spell payload",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: answer removed directly",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: answer moved beyond class capacity",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source disabled",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: owner entry disabled",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: source entry disabled",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: invocation entry disabled",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: automation disabled",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Immediate revocation, native reopen and offline reconciliation: Warlock level one",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Compound source identity and progression tamper stays denied without trusting snapshots",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Compound erased source and invocation identity cannot escape retained automatic provenance",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Legitimate source restoration after archived native reopen reuses exact ID",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Legitimate level restoration after archived native reopen reuses exact ID",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Legitimate automation restoration after archived native reopen reuses exact ID",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Correcting raw source identity before sync restores qualification without rewriting choices",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Repairing retained source identity after archive and native reopen restores the same grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Authored same-skill proficiency survives revoke, archive and native import without stacking",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Authored same-skill expertise survives revoke, archive and native import without stacking",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Authored same-skill both survives revoke, archive and native import without stacking",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Saved generic skill and custom answers cannot inject extra proficiency or retain revoked grants",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Manual same-name invocation is retained but never launders class proficiency authority",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Unrelated manual skill features keep their own training through invocation revocation",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Answers and snapshots alone remain intent until explicit legitimate sync",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Raw parent tamper cannot be laundered by refreshing choice snapshots or native export",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Replacing learned skills revokes only source proficiency and restoration reuses identity",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Explicit withdrawal, reopen and relearning preserve authored data and exact grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "label": "Removing the Warlock source removes its learned skills without modifying manual training",
+      "passed": true,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Bounded exact-source consumer API proof for PHB Beguiling Influence qualification and authored-data preservation; not all skills, invocations, classes, browser coverage or release certification",
+  "manualBoundaries": [
+    "Invocation replacement timing and DM eligibility remain manual.",
+    "Skill rolls, outcomes and expertise remain manually authored.",
+    "Native export/import verifies schema and current derived qualification, not browser storage, account authority, server recovery or multiplayer delivery."
+  ],
+  "browser": "not-run",
+  "currentReleaseAvailable": null
+}

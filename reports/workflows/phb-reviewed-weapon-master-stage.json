@@ -1,0 +1,2743 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-25T04:50:39.424Z",
+  "consumerRevision": "1a6319a9c48c734e7fec04c538d64f7aa9d151b2",
+  "consumerSourceTree": "4d40c102e1ecd0617c39dd9b33d711d34e9c5103",
+  "consumerModules": [
+    {
+      "path": "src/cloud/api.ts",
+      "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+    },
+    {
+      "path": "src/cloud/authorizationLease.ts",
+      "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+    },
+    {
+      "path": "src/cloud/room.ts",
+      "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+    },
+    {
+      "path": "src/cloud/sync.ts",
+      "sha256": "d3d615662a746ec99e2ded054b0df0f644285b33cf2c551b69a9d3743896c147"
+    },
+    {
+      "path": "src/core/automation/abilityAdvancements.ts",
+      "sha256": "545f9e4f7986fef6fa7cf6cfe103274c541ed90947ea0300fca7d59737bfe039"
+    },
+    {
+      "path": "src/core/automation/actions.ts",
+      "sha256": "e4b9d522d395cd3040fe15aec7a47237cab7880d897e2c281dee6d8e461d5a22"
+    },
+    {
+      "path": "src/core/automation/active.ts",
+      "sha256": "0e553cee1963cadc09f368ac72c8ba3bf0cf946d3a9ed0a96daedc62b863f343"
+    },
+    {
+      "path": "src/core/automation/asi.ts",
+      "sha256": "32b5130a62d8b57233d396ba69cc3b8a5379c2eb38a919a1e97d63edbb9c0fea"
+    },
+    {
+      "path": "src/core/automation/asiEvidence.json",
+      "sha256": "a2b00af4db460bcada383cfcde1ef071f344ec6ee4a7acd6882fc4239a3c6968"
+    },
+    {
+      "path": "src/core/automation/backgroundAbilities.ts",
+      "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+    },
+    {
+      "path": "src/core/automation/baseAbilities.ts",
+      "sha256": "30b1930cdd8e839b324578d5074145b6d4486b85ed6727cdf633ebb2617a5d6a"
+    },
+    {
+      "path": "src/core/automation/choices.ts",
+      "sha256": "f60a9efd82bc14cf8f8ec0e775908f23ab2fb2be3bfc56209dce335ed954ddbb"
+    },
+    {
+      "path": "src/core/automation/classChoiceEvidence.json",
+      "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+    },
+    {
+      "path": "src/core/automation/classChoiceSourceGrant.ts",
+      "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+    },
+    {
+      "path": "src/core/automation/classChoiceSupport.ts",
+      "sha256": "1f9fdf075864b804e2c8ec567671918269608b0ad88e37a6d1cad9d7dabbdea8"
+    },
+    {
+      "path": "src/core/automation/classSpellChoices.ts",
+      "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+    },
+    {
+      "path": "src/core/automation/equipment.ts",
+      "sha256": "eca0e61970e136246ea8523e5e8b79c4f23c2403863e977e11fddc33f7ee5b65"
+    },
+    {
+      "path": "src/core/automation/featureArmor.ts",
+      "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+    },
+    {
+      "path": "src/core/automation/featureResources.ts",
+      "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+    },
+    {
+      "path": "src/core/automation/infusionCharges.ts",
+      "sha256": "646436e80c689add94bba84e16ea009d26a375401d89ac70e960f61687888de9"
+    },
+    {
+      "path": "src/core/automation/infusionEvidence.json",
+      "sha256": "282a577c5c0a717fd4ee9a0e24ec60696f81818fc94e04bd65e3b5a736f5b9ff"
+    },
+    {
+      "path": "src/core/automation/infusions.ts",
+      "sha256": "095f098c1bcb0f7eb30b1b13480fcf931c71ab55a92c20c3bca4358245176471"
+    },
+    {
+      "path": "src/core/automation/invocationAtWillEvidence.json",
+      "sha256": "eba1cd137511d6804e17eeecef1be80c7ebd564eb54aae7b1b071ec97376e4f8"
+    },
+    {
+      "path": "src/core/automation/invocationDualEvidence.json",
+      "sha256": "5446130c185b9b4d7badb182ce1368fd0c074069885141458cf886c8fdc71d02"
+    },
+    {
+      "path": "src/core/automation/invocationEvidence.json",
+      "sha256": "6a143e3d18a100e2096b38bb5f3d0d09beeefd5d1f4ebf0720f6ade6288ea5f0"
+    },
+    {
+      "path": "src/core/automation/invocations.ts",
+      "sha256": "f1873dc472c90d797f4a639e68fbf5616762f44c9e3afec7dc85a79fb146f010"
+    },
+    {
+      "path": "src/core/automation/legacyAsiEvidence.json",
+      "sha256": "b665bc43dd08554e694abd9e4e0c1c5238b2b1ec9891b457232cba09f6f916fe"
+    },
+    {
+      "path": "src/core/automation/modernArmorTrainingEvidence.json",
+      "sha256": "042272849cd21ee5549a5c3385f01d0a6df3cbe1a5d20127b045539d8a636c90"
+    },
+    {
+      "path": "src/core/automation/refuelingRing.ts",
+      "sha256": "1edc59218356a6062d046676e8861176d30c93c7ce39371abaeca54ac7873f7a"
+    },
+    {
+      "path": "src/core/automation/refuelingSlotResolver.ts",
+      "sha256": "2e261aca5ca6a9b4371b79937675521e788b85c89efc2fcb478da60d85b3ab68"
+    },
+    {
+      "path": "src/core/automation/rest.ts",
+      "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatEvidence.json",
+      "sha256": "3771c726324b9bab21b6bdb4e244db276b6ca23ea00d795119fd913c9d59944e"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatIdentity.ts",
+      "sha256": "2e5da4c5f4b0c8bec22d7591a2ab9d8befc8def954828ae795a9beda5633d559"
+    },
+    {
+      "path": "src/core/automation/reviewedFeats.ts",
+      "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedWeaponEvidence.json",
+      "sha256": "543f18f2404fe7619809b734de77de8b02645828a75a6fe72ed42945ae0c031f"
+    },
+    {
+      "path": "src/core/automation/reviewedWeapons.ts",
+      "sha256": "1c08ded5e19c2b1b2b0c7e17744c60c594f6ab40cce8be539531dc583238636c"
+    },
+    {
+      "path": "src/core/automation/sourceClassChoices.ts",
+      "sha256": "e6a519c3fa0712e640e77a254f51f56cd78b25b20e11fbd7f23ee0bd9d49369a"
+    },
+    {
+      "path": "src/core/automation/sourceEquipment.ts",
+      "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+    },
+    {
+      "path": "src/core/automation/sourceResourcePools.ts",
+      "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+    },
+    {
+      "path": "src/core/automation/sourceSpellPlan.ts",
+      "sha256": "2831cd4118814a00e869935d7727a2ce4551f4bf55cdd2c9c9ff67205482da48"
+    },
+    {
+      "path": "src/core/automation/sourceSpellState.ts",
+      "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
+    },
+    {
+      "path": "src/core/automation/state.ts",
+      "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+    },
+    {
+      "path": "src/core/automation/training.ts",
+      "sha256": "b68ceb45af704eafdd1c2a291577081bc890b9fd8f09b693cdaf8dca03d456c4"
+    },
+    {
+      "path": "src/core/automation/weapons.ts",
+      "sha256": "54a6df05b6349b87bc701537fa874847ee4d3fa8486fe72ca56879d1e8302dc0"
+    },
+    {
+      "path": "src/core/bookRituals.ts",
+      "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+    },
+    {
+      "path": "src/core/characterDetails.ts",
+      "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/currency.ts",
+      "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "80daa4fa3253195cce29c3f02dc5f674f9e480602da9dd8823af87383e12e6b7"
+    },
+    {
+      "path": "src/core/entryNameIndex.ts",
+      "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+    },
+    {
+      "path": "src/core/entryReferences.ts",
+      "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+    },
+    {
+      "path": "src/core/export.ts",
+      "sha256": "d0e8842b37a3bae479a36ed4bc6726c28b952da51ea9a443ea172f05b4e8b2cf"
+    },
+    {
+      "path": "src/core/featureOwnership.ts",
+      "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+    },
+    {
+      "path": "src/core/hitPoints.ts",
+      "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+    },
+    {
+      "path": "src/core/inlineTags.ts",
+      "sha256": "c64b8685c6584b8a5abc653a772ba1a061293852f0c5ca9d7a2d697216eb6786"
+    },
+    {
+      "path": "src/core/legacyTraining.ts",
+      "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+    },
+    {
+      "path": "src/core/model.ts",
+      "sha256": "8d6ebfbd1f2c4f2be834e0c48de5ac2770ff7ef78b6fe737d60fdcb9c529bfd1"
+    },
+    {
+      "path": "src/core/numericExpression.ts",
+      "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+    },
+    {
+      "path": "src/core/palette.ts",
+      "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+    },
+    {
+      "path": "src/core/preparation.ts",
+      "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+    },
+    {
+      "path": "src/core/proficiencyText.ts",
+      "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+    },
+    {
+      "path": "src/core/racialAbilities.ts",
+      "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+    },
+    {
+      "path": "src/core/resources.ts",
+      "sha256": "35e793da45ee20d1dc60bdc231679cdd1bd601b68c4a1ffe27750f4a2102723d"
+    },
+    {
+      "path": "src/core/resourceWidgets.ts",
+      "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+    },
+    {
+      "path": "src/core/sheet.ts",
+      "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
+    },
+    {
+      "path": "src/core/sourceCorrections.ts",
+      "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/spellCapacity.ts",
+      "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+    },
+    {
+      "path": "src/core/spellcastingRules.ts",
+      "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+    },
+    {
+      "path": "src/core/spellResourceKeys.ts",
+      "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+    },
+    {
+      "path": "src/core/spells.ts",
+      "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+    },
+    {
+      "path": "src/core/spellWorkspace.ts",
+      "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "sha256": "9c123c2fccc32f5c62b856df2d803c4562a686de0ddc8e637663817bb7e095ab"
+    },
+    {
+      "path": "src/core/weaponAttacks.ts",
+      "sha256": "9681b217186c314bd917c870f4ad93f3615c3b93f2b87fb6894814434b0cc6a5"
+    },
+    {
+      "path": "src/data/adapt.ts",
+      "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+    },
+    {
+      "path": "src/data/catalog.ts",
+      "sha256": "612e37083e84549bb36d93d3a7d9fdb452a29a5ddda7ff75786c71f26002ba60"
+    },
+    {
+      "path": "src/data/catalogNormalizer.ts",
+      "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+    },
+    {
+      "path": "src/data/catalogSnapshot.ts",
+      "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+    },
+    {
+      "path": "src/data/catalogSource.ts",
+      "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+    },
+    {
+      "path": "src/data/catalogTransport.ts",
+      "sha256": "f713ee0c9adf9c070626b1b71d11a0bc1a17a3afcfa0b8032fcae72b98a5916b"
+    },
+    {
+      "path": "src/data/expand.ts",
+      "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+    },
+    {
+      "path": "src/data/homebrew.ts",
+      "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+    },
+    {
+      "path": "src/data/homebrewRecovery.ts",
+      "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
+    },
+    {
+      "path": "src/data/weaponTraining.ts",
+      "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+    },
+    {
+      "path": "src/platform/buildMode.ts",
+      "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+    },
+    {
+      "path": "src/platform/requestTimeout.ts",
+      "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+    },
+    {
+      "path": "src/platform/storage.ts",
+      "sha256": "eeb31b10ca86d6015d96372db413119dda7cc9a307307b73e4e309a01b266533"
+    },
+    {
+      "path": "src/platform/workbenchMode.ts",
+      "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+    },
+    {
+      "path": "src/platform/workspaceDatabase.ts",
+      "sha256": "7cc88eb29692a271270b8f8f5760ac9044eef55a877f219ab997feba58306df2"
+    },
+    {
+      "path": "src/platform/workspaceIdentity.ts",
+      "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+    },
+    {
+      "path": "src/platform/workspaceNamespace.ts",
+      "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+    }
+  ],
+  "producerRevision": "c29286e17e5b6f3895731760f5d596a0b0ef7ef9",
+  "producerScriptSha256": "c7ebd6674305f63c90d926b81884c2caa300a74cf5ce1bf8f87adcad912ac0ea",
+  "retrievalRevisions": {
+    "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-barbarian.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-bard.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-cleric.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-druid.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-fighter.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-monk.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-paladin.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-ranger.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-rogue.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-sorcerer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-warlock.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-wizard.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "feats.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "magicvariants.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "items.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "items-base.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "variantrules.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2"
+  },
+  "inputs": {
+    "class/class-artificer.json": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7",
+    "class/class-barbarian.json": "23e2316b63e09a716519833a477f3452ec3ce229bd32c72374eb0c6673e5cb6f",
+    "class/class-bard.json": "ac95dc8f1d795c0764ae6314e846d8efdcbbb4b42a8c721551265467885ed31c",
+    "class/class-cleric.json": "011edfef6c76cd0f70143d83db3b5e8b9b0d31ca1557b4c0954bedc619615344",
+    "class/class-druid.json": "71fca887392f6653f41d5900066cbe6fa1cac0280bb908257075925311e1ec2c",
+    "class/class-fighter.json": "a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509",
+    "class/class-monk.json": "17f8612781788c6b614fdafb81711cb537e0bdb8bec5d1da2f32864d6ec28dcb",
+    "class/class-paladin.json": "aa125ed2f15782924cf4d48677e1ff64c934076bbc4f66fa65f21ba797007b2e",
+    "class/class-ranger.json": "a0e58735bc5f1ef9b260b88cf2c9778ffc0d367c0b132e72fadc95baf198310a",
+    "class/class-rogue.json": "b5c62a8c5356438a09bc64bc96b71968fa3766d46102a0a1de11713e5ee0d251",
+    "class/class-sorcerer.json": "cc1c7c87b28903114e98310b00f6c820541a6f3458bd67e6badb79b014e4c670",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "class/class-wizard.json": "7533f3fb7bab70cd2d2f2b5dfb7e259dc66a2bfee24ee6ad3809042e53ba8a03",
+    "feats.json": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6",
+    "magicvariants.json": "4a4b0f3c8b268d8b134386f16e705df9b14d60419b2f2fa160da45b78bd4967d",
+    "items.json": "883f7bb4df2eb35fb37e7caa3a8765e0209014caa360d1c0358daa6f4b2da488",
+    "items-base.json": "8933a3e70e47aa4fd6196bd7f1f2e3a57d6d8dbe7e781d37bb6a0519d7c4ffff",
+    "variantrules.json": "21eef107d25cf438eb85894387fb6f834478d80bc467791c54fe66db9e498c44"
+  },
+  "entryHashes": {
+    "Weapon Master|PHB": "058b1e469d74445bb81c838588ef6452732d7ac1e4a3a1eefbc6d274d9d19008",
+    "Feats|PHB": "75b2156dacae2a779a04406c4f12fe1feb5541631d463f22c3ccaab53dc50269"
+  },
+  "upstreamContracts": {
+    "repository": "tjliqy/5etools-cn",
+    "revision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "cap": {
+      "path": "js/render.js",
+      "gitBlobSha": "fd559e0baad858c2bc59a813603a55e41972a1f4",
+      "lines": [
+        7093,
+        7123
+      ],
+      "semantics": "missing ability max defaults to20",
+      "publisherFeatProse": "not independently accessible in this audit"
+    },
+    "mundane": {
+      "path": "js/render.js",
+      "gitBlobSha": "fd559e0baad858c2bc59a813603a55e41972a1f4",
+      "lines": [
+        13745
+      ],
+      "semantics": "rarity none or unknown counts as mundane"
+    },
+    "filter": {
+      "path": "js/filter-items.js",
+      "gitBlobSha": "1be153e23086198a26a441902a5b5eaa98f2a043",
+      "lines": [
+        398,
+        400
+      ],
+      "semantics": "mundane label is 寻常, not raw feat 平凡的"
+    },
+    "categories": {
+      "path": "js/parser.js",
+      "gitBlobSha": "6ff93e4c461362abe7d7c11557eb9049f00d744d",
+      "lines": [
+        2105,
+        2112
+      ],
+      "semantics": "simple=简易, martial=军用; raw feat 寻常武器 is translation drift"
+    },
+    "sourceDates": {
+      "path": "js/parser.js",
+      "gitBlobSha": "6ff93e4c461362abe7d7c11557eb9049f00d744d",
+      "dates": {
+        "OotA": "2015-09-15",
+        "ToA": "2017-09-19",
+        "ERLW": "2019-11-19",
+        "DSotDQ": "2022-11-22"
+      },
+      "lines": [
+        3953,
+        3959,
+        3993,
+        4035
+      ]
+    },
+    "license": {
+      "path": "LICENSE.md",
+      "gitBlobSha": "5fc90b54c6dc961c0e1fef50e567e8c081ec6f6c",
+      "declaredCode": "MIT",
+      "declaredLocalizedData": "CC-BY-NC-SA-4.0",
+      "publisherRights": "not independently established; no original prose or snapshots distributed"
+    }
+  },
+  "legacyClassSlots": [
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|4",
+      "level": 4,
+      "entryHash": "15ab494332298be52b81a227d8996ef555e215cbea744aef97bbf67ec62445bf"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|8",
+      "level": 8,
+      "entryHash": "d8d3746d7b102afa1163cc6a5ad93afd4df5a49ddf7fe8ad25e2476970453756"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|12",
+      "level": 12,
+      "entryHash": "5055f6ee30ef606a7adb7b124bc308370891192174895ca16a51a3a8c1d10e78"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|16",
+      "level": 16,
+      "entryHash": "1fd5d443928b6f4f9eb61d1fbbe3a2cb9b89b75284bd09ecc696d5d785593afc"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|19",
+      "level": 19,
+      "entryHash": "2747b932a5b7d86cbbbb0a89e2041294f762802a79118118ed876543c8a6f100"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||4",
+      "level": 4,
+      "entryHash": "31c3ad6efd15b57d4c4b29540fd926b70343c4cd53c7f0951cb963c02f540517"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||8",
+      "level": 8,
+      "entryHash": "17e5368c82ee23cbab1dca513f3f6b94460ff75ac315db81d05e228cd9f0dc4a"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||12",
+      "level": 12,
+      "entryHash": "520341c206d11194d62e892d753bcc8f3a2f4428d94f93fa11a53fc4ca901766"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||16",
+      "level": 16,
+      "entryHash": "8003514f72b34e137fdbd55240c8ad897cd2a07459eb5b113de8fd2baf551280"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||19",
+      "level": 19,
+      "entryHash": "e9e23bbae288bbadd648364a267ed46b5798e0166fc8a735dc7c52ca1cda7dcd"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||4",
+      "level": 4,
+      "entryHash": "fb7a6129b1a5db145a692bc5667ba17ed55ee2b36aa1dfe3ddb8e2e01b8f84df"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||8",
+      "level": 8,
+      "entryHash": "ab1cca974e404072dd7b53198cc2d18dc5993bdd08da8439bea02de18aaacc3a"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||12",
+      "level": 12,
+      "entryHash": "700dd64dc6c9d5dd68035ad7e520e8dc98e80d50618e4e7475536f6e393b2ff3"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||16",
+      "level": 16,
+      "entryHash": "069d5d0c6ed5c90a494a27ebc7553bc66c895767ea5d7d6d032e4b59451c1671"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||19",
+      "level": 19,
+      "entryHash": "c2422715c96b73bf81ad5cc4ef96e608c03bbf5074f7b8e8918b2dd5cfe6c09f"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||4",
+      "level": 4,
+      "entryHash": "7d19c66cea4163aadcd77e26e36a2221b2d30f37b416cfa34c3654a86f1168a9"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||8",
+      "level": 8,
+      "entryHash": "c57aa8d55099122f5971b72d1c757df9cfd5febed15fddf9140efe3f0d13a50b"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||12",
+      "level": 12,
+      "entryHash": "7dd65ad1d4d0b5523625e58e0d3966430474370a3fcd71dbaf9ceae0dd8f1272"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||16",
+      "level": 16,
+      "entryHash": "8038c4fd88b829ce94750d8911a815ae0a82e192295fad09acab3a452882c957"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||19",
+      "level": 19,
+      "entryHash": "27d2bede74614e75ece8965c4c7ec146ff2e907f2be77a87a3e0457a65724222"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||4",
+      "level": 4,
+      "entryHash": "d2f5332541bef50045b682d305de6ec8a6047a3303be2f562175e61b9b977d24"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||8",
+      "level": 8,
+      "entryHash": "70be5556318982a89d7a11189d4b310b30b4e84b500e2b6eb37cf4ed605cab5e"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||12",
+      "level": 12,
+      "entryHash": "17590280165ce2dec4c5d6ff73ed424d12a9d47ad17f697336a02a80b8466734"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||16",
+      "level": 16,
+      "entryHash": "fc0e2b88c7406888977d5df71b698f56f3fce70372423d4442a45944cd886a34"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||19",
+      "level": 19,
+      "entryHash": "22cc85ba08053fd53dbd1149e665584eddacfa0ff48600997caa8a19e9403e6d"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||4",
+      "level": 4,
+      "entryHash": "ac086cf1ef21ef5c45f58ad3ed451817e5741b8dc11b20986cabbd34058fa0ca"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||6",
+      "level": 6,
+      "entryHash": "5ac3697b8daa222bcfb3bd43ba2da7e262891b24f6f92088f507f790f79c55f1"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||8",
+      "level": 8,
+      "entryHash": "780568025cbeaca1f8c1d043359a3d697784039a8c20580724983731bb7dd682"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||12",
+      "level": 12,
+      "entryHash": "768c71236814a3b29af268dbaee15b368a46b229cf2f426510863102a826bd6c"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||14",
+      "level": 14,
+      "entryHash": "5786ad6e646bc0482d6b30dc24eb11239ee78dedda2fa41cb8595cada87c3637"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||16",
+      "level": 16,
+      "entryHash": "1d157529596a6d3df93c36596e72e80eb6445a67560b9b5ee561dd7e4e827a21"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||19",
+      "level": 19,
+      "entryHash": "35f0ca60360ca35348af23a26e3e63f87f7d8ac1b897cf70aed24105405c23d7"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||4",
+      "level": 4,
+      "entryHash": "5f91234176ec752a363b98dc16525d34d8eef8dad21909b0ca17e5fbe49590de"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||8",
+      "level": 8,
+      "entryHash": "2cec09000acfd439937d5362b10f89f253eacbdcb8c2ab40146924dce3b3f8ba"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||12",
+      "level": 12,
+      "entryHash": "0036039fe65729211663fde5a04f9fb6cdd9e28dee8e46e60ed5f6f5dcad70c9"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||16",
+      "level": 16,
+      "entryHash": "4ff774d519461f35304647e4aef2b358e1df0ed64c68c58f13b995f017bcfd88"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||19",
+      "level": 19,
+      "entryHash": "3a392751771a09443584dc9626b8b3e008ecffd14bcb7f362117f3bc6254094c"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||4",
+      "level": 4,
+      "entryHash": "3902e26b5cd452368cca4319022bf2779ac0da02e7bc1832e261954c38def7cd"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||8",
+      "level": 8,
+      "entryHash": "26d79d89c1412e51460aa8f352e92c7e334809521344e597e484136db0b2575c"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||12",
+      "level": 12,
+      "entryHash": "ea4e9eb2017dc2ec7abe91783e815721f24af7b952504196b7b85ef85f6c01bb"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||16",
+      "level": 16,
+      "entryHash": "3e59e0659534e3ef55cefb4f8f275fcf42b76d4421e236e911c38bb56426fb6f"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||19",
+      "level": 19,
+      "entryHash": "cc0570d39a8b52cafee6351e1657ba83dc1b1623ec945c0b9b4c3a07d84afcd8"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||4",
+      "level": 4,
+      "entryHash": "5f359b870d1e8aa2dd0073f6949498aef31761dbf138fa4157ad3f2f68d98301"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||8",
+      "level": 8,
+      "entryHash": "7ce8d081930df98cb809a158feabfe79ac7aaf0ff1ea34daabc784928e6929c6"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||12",
+      "level": 12,
+      "entryHash": "741836e102c86d6e9578409e79e1eb7a5743068e68c8eab60b44351621f4df60"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||16",
+      "level": 16,
+      "entryHash": "ea2ecc290466d6648ff5f10c2f522b2caca3e6e15651ab64dae4ec016098f6f7"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||19",
+      "level": 19,
+      "entryHash": "d25024429c91923b824e14ee1d7eaba2eb82d24e4b6a5289a18af9f3ef23b152"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||4",
+      "level": 4,
+      "entryHash": "6f0bcb9e25c8d1ce4b23ee9f9ff71d68f7de1b4660f82386a1aee1028e5c1660"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||8",
+      "level": 8,
+      "entryHash": "85720074ddbb7b1e33057e35997eca6c33ce43127062384a1dac7c145bf749ab"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||10",
+      "level": 10,
+      "entryHash": "49624b617a2a33442981af56e2e3e5a5a2b02d9c7ae2b5c5683e8d9a3e034232"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||12",
+      "level": 12,
+      "entryHash": "a094e506678810be56035b3cac4cb7664fdcded8a079f16c2d556424b60ca25c"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||16",
+      "level": 16,
+      "entryHash": "d9a1fe450c05d6a66f10c1299f0361e448e5ac9ef64be2e1d85d15d0fb591c9d"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||19",
+      "level": 19,
+      "entryHash": "3cc59ffd5abdb4e4ffedec0b2ac98cefa5903a0e6f7514ca9c78a91a9b0461de"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||4",
+      "level": 4,
+      "entryHash": "92d03c1a3bf08f5ad688ce12eac9615ead66535f13bbf9d0b215fd99b93c6427"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||8",
+      "level": 8,
+      "entryHash": "25b093303b5322d7cb1ca2171a46cc677bda00bbeb72e9959a710ea6f3ee83b8"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||12",
+      "level": 12,
+      "entryHash": "260beb8a1b9cfe3977f459afc135c7fff23812f4302ae3ad6609b0f27fd1efa3"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||16",
+      "level": 16,
+      "entryHash": "96ddb77c51948b141dcdb478e026e856d140765acef3212d14b5c7a72b583e48"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||19",
+      "level": 19,
+      "entryHash": "c6236582a930473870340f1cb97927180d682429085c4072fc96c3dd254d563b"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||4",
+      "level": 4,
+      "entryHash": "3eb9619ba558ce55f8a58174dd4aad9a42fe69fc0a543f4720bd3d93eb632ee5"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||8",
+      "level": 8,
+      "entryHash": "66a664a14752cd91c96d7f3c21c4b2d29ec42adcd2c51fac4c3446dd99a68446"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||12",
+      "level": 12,
+      "entryHash": "62a78a0e6f97a054b8bd51b3c3909e13fbec0f3a0a803fbce2a244ed82560d1c"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||16",
+      "level": 16,
+      "entryHash": "5e47ffad882bc03369337e1cb8fe14fef134e1b4265af50d5462aa817ed968ad"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||19",
+      "level": 19,
+      "entryHash": "674e3aea6b8fdb9a4bb6776b4e029acc613fbca5fcd76483e7ecb727a177d445"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||4",
+      "level": 4,
+      "entryHash": "d52bd6af091b578219c80f36b031cbda61a9a021c09bebbef42da895824fe1b4"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||8",
+      "level": 8,
+      "entryHash": "2762e9bcc5aa1985189b743312468166703728ebd11b825df09452665f657988"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||12",
+      "level": 12,
+      "entryHash": "9d5c4b1ef05b52a3fe38c8435acf253de713a828158f7542a6b26083c594a30a"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||16",
+      "level": 16,
+      "entryHash": "c3658786e7219043469fd6e64f1149c6dfbcb49280b8797bb3782f9067ff73cc"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||19",
+      "level": 19,
+      "entryHash": "7f1eba99c34b672dd8d4b00e3c9bf69b97e1d72d60796ee59a0134f1c621db45"
+    }
+  ],
+  "rules": [
+    {
+      "kind": "weapon-master",
+      "reference": "Weapon Master|PHB",
+      "english": "Weapon Master",
+      "page": 170,
+      "entryHash": "058b1e469d74445bb81c838588ef6452732d7ac1e4a3a1eefbc6d274d9d19008",
+      "abilityBonus": 1,
+      "cap": 20,
+      "abilities": [
+        "str",
+        "dex"
+      ],
+      "weaponCount": 4,
+      "weaponFilter": "type=军用武器;寻常武器|miscellaneous=平凡的"
+    }
+  ],
+  "candidateGroups": {
+    "PHB": 37,
+    "DMG": 10,
+    "ERLW": 1,
+    "DSotDQ": 1,
+    "ToA": 1,
+    "OotA": 2
+  },
+  "candidates": [
+    {
+      "reference": "Antimatter Rifle|DMG",
+      "english": "Antimatter Rifle",
+      "name": "反物质步枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "ca66f57091042e13195010a686fc1deab9f52d948561138f20abb858b7bdbeeb"
+    },
+    {
+      "reference": "Automatic Pistol|DMG",
+      "english": "Automatic Pistol",
+      "name": "自动手枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "88b783abc4d67575d26a36ed346ac594d81d226ea49fce4415fb4aaa1c55d634"
+    },
+    {
+      "reference": "Automatic Rifle|DMG",
+      "english": "Automatic Rifle",
+      "name": "自动步枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "440eb27e3edfea3b27fba213a8baf885132c575ff0f3164b2ec42e8ee79217b9"
+    },
+    {
+      "reference": "Battleaxe|PHB",
+      "english": "Battleaxe",
+      "name": "战斧",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "21e744833e49794599baeef2fb684e333ef501296f1b6e8e3c00b28925896ac6"
+    },
+    {
+      "reference": "Blowgun|PHB",
+      "english": "Blowgun",
+      "name": "吹箭筒",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "22dbe1a540a768a36f426243f1589c3ba9376e8b4a1654cabce4786294d43954"
+    },
+    {
+      "reference": "Club|PHB",
+      "english": "Club",
+      "name": "短棒",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "f23359b2b16c561d4a04dae491ec9d30e917a14c8b9240723c0611016f444408"
+    },
+    {
+      "reference": "Dagger|PHB",
+      "english": "Dagger",
+      "name": "匕首",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "48e6e038cc958eb78dafd17c80a560b85be258ab39394f3b4dbbb80ca2256806"
+    },
+    {
+      "reference": "Dart|PHB",
+      "english": "Dart",
+      "name": "飞镖",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "simple",
+      "entryHash": "e705d7b86a4b92a787cf804576cde4868ad042872af9c0d122b6f582128112b4"
+    },
+    {
+      "reference": "Double-Bladed Scimitar|ERLW",
+      "english": "Double-Bladed Scimitar",
+      "name": "双刃弯刀",
+      "source": "ERLW",
+      "rawSource": "ERLW",
+      "page": 21,
+      "rawEdition": null,
+      "normalizedEdition": "both",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "4184982c46aef0925adc9bb5d9d027bf3ab9eb9daa3c1e0570815cad4240b949"
+    },
+    {
+      "reference": "Flail|PHB",
+      "english": "Flail",
+      "name": "链枷",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "4c7df1f4a1b111abbf90617174962efa2c879f90ea691d5ce5916a496bd55c06"
+    },
+    {
+      "reference": "Glaive|PHB",
+      "english": "Glaive",
+      "name": "长柄刀",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "cf775d31b026d68cfd678a919fbbc6eaed41b42647e4bbd3e79e24edf9205161"
+    },
+    {
+      "reference": "Greataxe|PHB",
+      "english": "Greataxe",
+      "name": "巨斧",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "b99eb82877b9c84c241bd82b36fa4b22ebde417162820179386237306398cec9"
+    },
+    {
+      "reference": "Greatclub|PHB",
+      "english": "Greatclub",
+      "name": "巨棒",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "d2f925cbd7b9f3f373b71af15fa50d692adeda7b4ffee3702ead7d3f6062d042"
+    },
+    {
+      "reference": "Greatsword|PHB",
+      "english": "Greatsword",
+      "name": "巨剑",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "5bfd0cc65a9ff1fd9c0e5300f068c9f36a570189385b8cc520c366b7245deebc"
+    },
+    {
+      "reference": "Halberd|PHB",
+      "english": "Halberd",
+      "name": "长戟",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "d8df3ed19b711a8c3d40e4682f5991ab238ec9011bf6301e246d756d0aac1eb0"
+    },
+    {
+      "reference": "Hand Crossbow|PHB",
+      "english": "Hand Crossbow",
+      "name": "手弩",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "a40157c97b6745d15744d79cf0ede85c4ae64f216452b86ae974b090c85ca1d9"
+    },
+    {
+      "reference": "Handaxe|PHB",
+      "english": "Handaxe",
+      "name": "手斧",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "4ad148583192ba82f07fc76b0ea7401e629e46f07cae4a81a07878ce9275286e"
+    },
+    {
+      "reference": "Heavy Crossbow|PHB",
+      "english": "Heavy Crossbow",
+      "name": "重弩",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "ce54ad45ff4cb1ec2ed9f396234df0d048ecae1ce784f3be12ff6f273cd482ac"
+    },
+    {
+      "reference": "Hooked Shortspear|OOTA",
+      "english": "Hooked Shortspear",
+      "name": "钩矛",
+      "source": "OOTA",
+      "rawSource": "OotA",
+      "page": 224,
+      "rawEdition": null,
+      "normalizedEdition": "both",
+      "rarity": "unknown",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "091371f1ba974f8654158df64fb574bc3b5bad9792f34a258f6807ed1b264a05"
+    },
+    {
+      "reference": "Hoopak|DSOTDQ",
+      "english": "Hoopak",
+      "name": "胡帕克杖",
+      "source": "DSOTDQ",
+      "rawSource": "DSotDQ",
+      "page": 188,
+      "rawEdition": null,
+      "normalizedEdition": "both",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "fd1e5108fe0e8d734eaf2d08899ea6d6dd9c07102b1a96820cb70b4bcb9f6795"
+    },
+    {
+      "reference": "Hunting Rifle|DMG",
+      "english": "Hunting Rifle",
+      "name": "狩猎步枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "911cc2f6d08bef787c413d31376cf00cf72b7e5156d8bdbfc8864cc600b2f8b0"
+    },
+    {
+      "reference": "Javelin|PHB",
+      "english": "Javelin",
+      "name": "标枪",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "3de27bc60ab68e68b47c9cf845a659d106fbc5c40884d7be17917c101bc7997d"
+    },
+    {
+      "reference": "Lance|PHB",
+      "english": "Lance",
+      "name": "骑枪",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "f118a29311e5f32aaaaad2ece666b7e113135af3acc41a693c344c4a5ed84249"
+    },
+    {
+      "reference": "Laser Pistol|DMG",
+      "english": "Laser Pistol",
+      "name": "激光手枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "32c85aab9bc590b26206b483114c81bef64281cbef8144ac0f934690bb0c20ea"
+    },
+    {
+      "reference": "Laser Rifle|DMG",
+      "english": "Laser Rifle",
+      "name": "激光步枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "bdd7a57f60fdbb6e1e4dc18b96ff8afb081249090350a13a72a3c06277d560db"
+    },
+    {
+      "reference": "Light Crossbow|PHB",
+      "english": "Light Crossbow",
+      "name": "轻弩",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "simple",
+      "entryHash": "7f2d2cfa2bdd44aec67999c6932a9f839c4cdcf4d9abf0b2d361cdd919e6eeef"
+    },
+    {
+      "reference": "Light Hammer|PHB",
+      "english": "Light Hammer",
+      "name": "轻锤",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "f636c7d79cb2299d9ecfed4c42206b70a6593de02ee95f5e5a57278054dc80e5"
+    },
+    {
+      "reference": "Light Repeating Crossbow|OOTA",
+      "english": "Light Repeating Crossbow",
+      "name": "轻型连弩",
+      "source": "OOTA",
+      "rawSource": "OotA",
+      "page": 224,
+      "rawEdition": null,
+      "normalizedEdition": "both",
+      "rarity": "unknown",
+      "type": "R",
+      "weaponCategory": "simple",
+      "entryHash": "7e18ab5ef61fd9d833c98b6d62007ad43ff50032693970606158c18188b4d8e4"
+    },
+    {
+      "reference": "Longbow|PHB",
+      "english": "Longbow",
+      "name": "长弓",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "996e146e9c76f2d7b199068006e647343a6aa70cd9a9c13df92cbc02f350bd33"
+    },
+    {
+      "reference": "Longsword|PHB",
+      "english": "Longsword",
+      "name": "长剑",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "fd0e16bd81174ad800a4bf843e1df94176989d7099a271b4ae889ca16d4ad984"
+    },
+    {
+      "reference": "Mace|PHB",
+      "english": "Mace",
+      "name": "硬头锤",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "6d00ce9a734af3117bc94dec0b217c21631a63cc4199cc2a3fdc38d583fcc2be"
+    },
+    {
+      "reference": "Maul|PHB",
+      "english": "Maul",
+      "name": "巨锤",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "91629227c2e66b9ae2e5b05fe207ca56fbaf122b1f773fc16acfd26346746c9f"
+    },
+    {
+      "reference": "Morningstar|PHB",
+      "english": "Morningstar",
+      "name": "钉头锤",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "b96c53eac2c6acee104ffd433f226ab63211de186dbededa53079a1fb8546b18"
+    },
+    {
+      "reference": "Musket|DMG",
+      "english": "Musket",
+      "name": "滑膛枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "d82053f0ddaf1e82413bfd56f9c320437b43f4e686d8b6ae0ecedf7b9a7930f0"
+    },
+    {
+      "reference": "Net|PHB",
+      "english": "Net",
+      "name": "捕网",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "09d08d0e539af5a802df3c525c0d2771043605fe59c75253957fb74860781115"
+    },
+    {
+      "reference": "Pike|PHB",
+      "english": "Pike",
+      "name": "长矛",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "ddda86a876a138378fe40c06640797243239b5b381a6220736bd391b3a728337"
+    },
+    {
+      "reference": "Pistol|DMG",
+      "english": "Pistol",
+      "name": "手枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "2aa32893aff1e9bf128c5c575aaba9bc841583c5ade5deef541d78d57f973ba2"
+    },
+    {
+      "reference": "Quarterstaff|PHB",
+      "english": "Quarterstaff",
+      "name": "长棍",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "1972e2395cd228b66938919f20a5bdbcad65335596bae1e179778627975ce52e"
+    },
+    {
+      "reference": "Rapier|PHB",
+      "english": "Rapier",
+      "name": "刺剑",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "76d191ac6d9efaa9b395cb6605f121a88a1c778635ad09bf940ac2bbff39cafa"
+    },
+    {
+      "reference": "Revolver|DMG",
+      "english": "Revolver",
+      "name": "左轮枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "bd3bcc20a5cee26ba30cca63ec6bb8f6190263efe0c84c8ba2862272c1234cda"
+    },
+    {
+      "reference": "Scimitar|PHB",
+      "english": "Scimitar",
+      "name": "弯刀",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "b2a6ffbf4ff0d5933cf01ba31d3dbb2a90b8142c5bb68eecf61a9ec45c88b4a7"
+    },
+    {
+      "reference": "Shortbow|PHB",
+      "english": "Shortbow",
+      "name": "短弓",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "simple",
+      "entryHash": "e9290ef239a9602a6770a84b3c348e8ff71193f8faf3e35e23b411a8aa003f63"
+    },
+    {
+      "reference": "Shortsword|PHB",
+      "english": "Shortsword",
+      "name": "短剑",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "f9e7537f7d0a815e561e3abc3ee4e0f04d06b3c364290f25a147266a2ef4408a"
+    },
+    {
+      "reference": "Shotgun|DMG",
+      "english": "Shotgun",
+      "name": "霰弹枪",
+      "source": "DMG",
+      "rawSource": "DMG",
+      "page": 268,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "martial",
+      "entryHash": "aa8eeca09abd398a6046e58037792d9578bf120f6e2b5f3b5de06c36b4373b90"
+    },
+    {
+      "reference": "Sickle|PHB",
+      "english": "Sickle",
+      "name": "镰刀",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "4716b334119d52ead694606acbdec2c180999b3c180051cfb664358b7e2346bb"
+    },
+    {
+      "reference": "Sling|PHB",
+      "english": "Sling",
+      "name": "投石索",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "R",
+      "weaponCategory": "simple",
+      "entryHash": "52e590777069a88d381cd2e9308792ed228cd67954760c53648cc11e2e96993f"
+    },
+    {
+      "reference": "Spear|PHB",
+      "english": "Spear",
+      "name": "矛",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "3a9c0134349f0ca5b0185cbe058f819b397ca1d43e7a75c4b81b246e9e370cbc"
+    },
+    {
+      "reference": "Trident|PHB",
+      "english": "Trident",
+      "name": "三叉戟",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "16f183a3bd516e35ab07b8a36ee4431f7b6ddb6287b8b55cdf9a9324be068adb"
+    },
+    {
+      "reference": "War Pick|PHB",
+      "english": "War Pick",
+      "name": "战镐",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "4c50a4e56040c7636bf7fab2a5f715c637db90c1647487f11624d9e60fe393d0"
+    },
+    {
+      "reference": "Warhammer|PHB",
+      "english": "Warhammer",
+      "name": "战锤",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "86028a60b9a117f1fccf31c54ece3cec73812f9129b883466609c5cd42ffe2d2"
+    },
+    {
+      "reference": "Whip|PHB",
+      "english": "Whip",
+      "name": "鞭子",
+      "source": "PHB",
+      "rawSource": "PHB",
+      "page": 149,
+      "rawEdition": "classic",
+      "normalizedEdition": "2014",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "martial",
+      "entryHash": "fc1de78072c3efd59be02e50b2d99af0cd0cefcacf92aa6329c04a08f08b5375"
+    },
+    {
+      "reference": "Yklwa|TOA",
+      "english": "Yklwa",
+      "name": "伊库瓦短矛",
+      "source": "TOA",
+      "rawSource": "ToA",
+      "page": 32,
+      "rawEdition": null,
+      "normalizedEdition": "both",
+      "rarity": "none",
+      "type": "M",
+      "weaponCategory": "simple",
+      "entryHash": "f15ef035de651935ee1b35f5045072f1f13d8dd5228c98454fc8aa6057f06502"
+    }
+  ],
+  "firearms": [
+    "Antimatter Rifle|DMG",
+    "Automatic Pistol|DMG",
+    "Automatic Rifle|DMG",
+    "Hunting Rifle|DMG",
+    "Laser Pistol|DMG",
+    "Laser Rifle|DMG",
+    "Musket|DMG",
+    "Pistol|DMG",
+    "Revolver|DMG",
+    "Shotgun|DMG"
+  ],
+  "unreviewedItemDomain": [
+    {
+      "english": "Iron Ball",
+      "source": "IDRotF",
+      "entryHash": "9322e62fc78a20017c92f71767cd6dc41613c6e5ced61bc61533c8d71442d3c0",
+      "reason": "Game-specific item outside reviewed baseitem kinds; proficiency semantics not generalized"
+    },
+    {
+      "english": "Oversized Longbow",
+      "source": "WDH",
+      "entryHash": "39455108356be700b1c40c91ede7eb4924a725a0c676907a0f41bdc42b8356d4",
+      "reason": "Unique item outside reviewed baseitem kinds with STR18 and size restrictions; not generalized"
+    },
+    {
+      "english": "Psychic Blade",
+      "source": "XPHB",
+      "entryHash": "5e26e335bad615b2b261a1a7c13a58c45324f962f0fadd267c350ae2fa548284",
+      "reason": "2024 feature weapon, not a reviewed2014 base kind"
+    }
+  ],
+  "steps": [
+    {
+      "mechanism": "candidate-domain",
+      "label": "Enabled reviewed sources offer exactly52 canonical kinds including damage-less Net and five unchanged both-edition entries",
+      "passed": true
+    },
+    {
+      "mechanism": "candidate-source",
+      "label": "DMG is independently gated; its candidates do not borrow PHB availability",
+      "passed": true
+    },
+    {
+      "mechanism": "candidate-source",
+      "label": "ERLW is independently gated; its candidates do not borrow PHB availability",
+      "passed": true
+    },
+    {
+      "mechanism": "candidate-source",
+      "label": "DSOTDQ is independently gated; its candidates do not borrow PHB availability",
+      "passed": true
+    },
+    {
+      "mechanism": "candidate-source",
+      "label": "TOA is independently gated; its candidates do not borrow PHB availability",
+      "passed": true
+    },
+    {
+      "mechanism": "candidate-source",
+      "label": "OOTA is independently gated; its candidates do not borrow PHB availability",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Artificer|TCE level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Barbarian|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Bard|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Cleric|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Druid|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 6 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 14 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Fighter|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Monk|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Paladin|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Ranger|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level 10 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Rogue|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Sorcerer|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Warlock|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level 4 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level 8 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level 12 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level 16 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Real Wizard|PHB level 19 ASI alternative explicitly applies and revokes Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "consent",
+      "label": "Explicit str plus four distinct kinds is pure and never creates weapon items",
+      "passed": true
+    },
+    {
+      "mechanism": "consent",
+      "label": "Explicit dex plus four distinct kinds is pure and never creates weapon items",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Native save/reopen restores owned weapon intent without catalog",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Linked save/reopen restores owned weapon intent without catalog",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice []",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Longsword|PHB\",\"Longbow|PHB\",\"Spear|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Longsword|PHB\",\"Longbow|PHB\",\"Spear|PHB\",\"Net|PHB\",\"Dagger|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Longsword|PHB\",\"Longsword|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Longsword|PHB\",\"长剑|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"longsword|phb\",\"Longbow|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Longsword|XPHB\",\"Longbow|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Longsword\",\"Longbow|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Moonblade|DMG\",\"Longbow|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "quota",
+      "label": "Reject invalid four-kind choice [\"Custom Weapon|PHB\",\"Longbow|PHB\",\"Spear|PHB\",\"Net|PHB\"]",
+      "passed": true
+    },
+    {
+      "mechanism": "consent",
+      "label": "Reject absent/false authored-score exclusion undefined",
+      "passed": true
+    },
+    {
+      "mechanism": "consent",
+      "label": "Reject absent/false authored-score exclusion false",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability con",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability int",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability wis",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability cha",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability luck",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability ",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability null",
+      "passed": true
+    },
+    {
+      "mechanism": "ability",
+      "label": "Reject unsupported ability 13",
+      "passed": true
+    },
+    {
+      "mechanism": "cap",
+      "label": "Base 19 respects cap20 without lowering authored score",
+      "passed": true
+    },
+    {
+      "mechanism": "cap",
+      "label": "Base 20 respects cap20 without lowering authored score",
+      "passed": true
+    },
+    {
+      "mechanism": "cap",
+      "label": "Base 22 respects cap20 without lowering authored score",
+      "passed": true
+    },
+    {
+      "mechanism": "cap",
+      "label": "Raising authored score to20 suspends both effects and lowering to19 restores once",
+      "passed": true
+    },
+    {
+      "mechanism": "repeatability",
+      "label": "Second real ASI cannot acquire the same nonrepeatable feat",
+      "passed": true
+    },
+    {
+      "mechanism": "replacement",
+      "label": "Replacing the four owned weapon kinds withdraws removed training without adding a second grant",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Unknown or malformed intent fields reject atomically {\"bonus\":99}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Unknown or malformed intent fields reject atomically {\"grantProficiency\":true}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Unknown or malformed intent fields reject atomically {\"weapons\":{\"first\":\"Longsword|PHB\"}}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Unknown or malformed intent fields reject atomically {\"confirmedDmFirearmsAllowed\":\"yes\"}",
+      "passed": true
+    },
+    {
+      "mechanism": "replacement",
+      "label": "Replacing Weapon Master with Tough and back withdraws old training and consent",
+      "passed": true
+    },
+    {
+      "mechanism": "withdrawal",
+      "label": "Clearing answer and reselecting never silently restores withdrawn consent",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "Disabling automation preserves inactive intent across reopen and restores once",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "Disabling PHB source preserves inactive intent across reopen and restores once",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "Disabling feat optional rule preserves inactive intent across reopen and restores once",
+      "passed": true
+    },
+    {
+      "mechanism": "supplement-source",
+      "label": "Reviewed Double-Bladed Scimitar|ERLW retains both edition and follows its exact source across reopen",
+      "passed": true
+    },
+    {
+      "mechanism": "supplement-source",
+      "label": "Reviewed Hoopak|DSOTDQ retains both edition and follows its exact source across reopen",
+      "passed": true
+    },
+    {
+      "mechanism": "supplement-source",
+      "label": "Reviewed Yklwa|TOA retains both edition and follows its exact source across reopen",
+      "passed": true
+    },
+    {
+      "mechanism": "supplement-source",
+      "label": "Reviewed Hooked Shortspear|OOTA retains both edition and follows its exact source across reopen",
+      "passed": true
+    },
+    {
+      "mechanism": "supplement-source",
+      "label": "Reviewed Light Repeating Crossbow|OOTA retains both edition and follows its exact source across reopen",
+      "passed": true
+    },
+    {
+      "mechanism": "availability",
+      "label": "Downgrade and offline restoration preserve owned intent without stacking",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-protection",
+      "label": "Explicit weapon override \"\" remains authoritative",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-protection",
+      "label": "Explicit weapon override \"manual weapons\" remains authoritative",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-protection",
+      "label": "Explicit weapon override \"martial\" remains authoritative",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-protection",
+      "label": "Explicit weapon override \"Longsword|PHB\" remains authoritative",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-protection",
+      "label": "Deleting versus clearing manual override is distinct",
+      "passed": true
+    },
+    {
+      "mechanism": "actual-attacks",
+      "label": "Longsword all actual attack modes gain exactly one PB and no extra damage",
+      "passed": true
+    },
+    {
+      "mechanism": "actual-attacks",
+      "label": "Longbow all actual attack modes gain exactly one PB and no extra damage",
+      "passed": true
+    },
+    {
+      "mechanism": "actual-attacks",
+      "label": "Spear all actual attack modes gain exactly one PB and no extra damage",
+      "passed": true
+    },
+    {
+      "mechanism": "net",
+      "label": "Damage-less Net gains training and removes missing-proficiency warning without inventing damage",
+      "passed": true
+    },
+    {
+      "mechanism": "existing-training",
+      "label": "Already-proficient fighter can choose all four kinds and never receives double PB",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Real Moonblade|DMG inherits exact localized Longsword|PHB training but is not a candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Wrong or missing explicit baseItem source cannot borrow PHB kind proficiency",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Real generated Double-Bladed Scimitar (+1 Weapon)|DMG inherits its both-edition ERLW kind",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Real generated Hooked Shortspear (+1 Weapon)|DMG inherits its both-edition OotA kind",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Real generated Hoopak (+1 Weapon)|DMG inherits its both-edition DSotDQ kind",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Real generated Light Repeating Crossbow (+1 Weapon)|DMG inherits its both-edition OotA kind",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item",
+      "label": "Real generated Yklwa (+1 Weapon)|DMG inherits its both-edition ToA kind",
+      "passed": true
+    },
+    {
+      "mechanism": "domain-boundary",
+      "label": "Iron Ball|IDRotF matches raw category but does not silently become a reviewed kind",
+      "passed": true
+    },
+    {
+      "mechanism": "domain-boundary",
+      "label": "Oversized Longbow|WDH matches raw category but does not silently become a reviewed kind",
+      "passed": true
+    },
+    {
+      "mechanism": "domain-boundary",
+      "label": "Psychic Blade|XPHB matches raw category but does not silently become a reviewed kind",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item-forgery",
+      "label": "XDMG source over forged both edition cannot borrow PHB base-item proficiency or actual attackPB",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item-forgery",
+      "label": "XPHB source over forged both edition cannot borrow PHB base-item proficiency or actual attackPB",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item-forgery",
+      "label": "one raw edition over forged both edition cannot borrow PHB base-item proficiency or actual attackPB",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item-forgery",
+      "label": "unknown raw edition over forged both edition cannot borrow PHB base-item proficiency or actual attackPB",
+      "passed": true
+    },
+    {
+      "mechanism": "base-item-forgery",
+      "label": "modern type namespace over forged legacy identity cannot borrow PHB base-item proficiency or actual attackPB",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-attack",
+      "label": "Handwritten attack formula remains untouched and never gets a derived duplicate",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-cap",
+      "label": "Earlier Weapon Master and later ASI share cap20",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-cap",
+      "label": "Earlier capped ASI rejects later Weapon Master without mutation",
+      "passed": true
+    },
+    {
+      "mechanism": "shared-cap",
+      "label": "Confirming earlier Weapon Master cannot disable already active later ASI",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "CUSTOM source cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "XPHB source cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw source cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw English identity cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized English identity cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "copy directive cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "unresolved parent cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw category cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw page cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized page cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "missing source body cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "empty source body cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "arbitrary injected field cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "generic effect injection cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "generic choice injection cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "changed ability amount cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "extra ability cap cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "changed weapon quota cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "changed weapon filter cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "repeatable injected cannot acquire reviewed authorization",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "source cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "raw source cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "edition cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "raw edition cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "custom pack cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "custom identity cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "wrong kind cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "not base item cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "magic rarity cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "magic base cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "unknown mechanical field cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "effect injection cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "choice injection cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "dependency injection cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "copy directive cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "removed firearm flag cannot forge a canonical candidate",
+      "passed": true
+    },
+    {
+      "mechanism": "weapon-identity",
+      "label": "Conflicting duplicate alias cannot win by catalog order",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "missing owner suspends saved effect visibly",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "missing ASI feature suspends saved effect visibly",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "cyclic ancestry suspends saved effect visibly",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "changed raw owner identity suspends saved effect visibly",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-feat",
+      "label": "Manually dragged same PHB feat does not authorize or double an owned grant",
+      "passed": true
+    },
+    {
+      "mechanism": "adversarial-import",
+      "label": "Imported duplicate weapon consent remains ambiguous and inactive",
+      "passed": true
+    },
+    {
+      "mechanism": "adversarial-import",
+      "label": "Unknown future weapon state stays preserved and inactive without disabling old feats",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Existing Tough retains v1 state and effects alongside independent Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Existing Resilient retains v1 state and effects alongside independent Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Existing Lightly Armored retains v1 state and effects alongside independent Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Existing Moderately Armored retains v1 state and effects alongside independent Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "legacy-isolation",
+      "label": "Existing Heavily Armored retains v1 state and effects alongside independent Weapon Master",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Antimatter Rifle|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Automatic Pistol|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Automatic Rifle|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Hunting Rifle|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Laser Pistol|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Laser Rifle|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Musket|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Pistol|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Revolver|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "Shotgun|DMG needs explicit DM permission beyond an enabled DMG source",
+      "passed": true
+    },
+    {
+      "mechanism": "dm-firearms-consent",
+      "label": "DM consent cannot override disabled individual firearm source",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-isolation",
+      "label": "Same-name Weapon Master|XPHB remains separate, without gaining four-kind proficiency",
+      "passed": true
+    }
+  ],
+  "definition": "Bounded PHB2014 Weapon Master original-source semantic-domain and legal-class-choice API proof; not a literal translated filter execution, full corpus replay, browser certification or publication claim",
+  "status": {
+    "source": "verified-against-frozen-data-and-rendering-contract",
+    "mechanisms": "partial",
+    "fullRuleAutomation": false,
+    "reviewedFeats": 1,
+    "legacyClassSlots": 68,
+    "canonicalWeaponKinds": 52,
+    "browser": "not-run",
+    "fullRuntimeReplay": "not-run",
+    "oldConsumerCompatibility": "not-claimed",
+    "currentReleaseAvailable": null
+  },
+  "boundaries": [
+    "Only one independently reviewed PHB2014 feat selected through68 authentic original PHB/TCE class ASI slots. No manual feat-drag ability grant, arbitrary both-edition item, reprinted2024 alias or generic fromFilter execution.",
+    "The translated filter labels have drifted. The domain is independently reviewed category and mundane semantics with52 exact identities; OotA unknown-rarity kinds are mundane under the upstream predicate. Five supplement kinds remain normalized both, not relabeled2014.",
+    "Ten exact firearm identities additionally require an explicit player record of DM permission. This UI confirmation is a conservative product boundary, not a claim the rule text requires a checkbox; enablingDMG alone is not permission.",
+    "Ability cap20 comes from the upstream renderer default, not a raw max field or independently retrieved WotC page. Four distinct kinds are required; existing proficiency is legal and cannot doublePB.",
+    "Original hashes bind this audit; runtime eligibility checks reviewed canonical identity and mechanical/structural shape, not cryptographic authentication of arbitrary imported publisher prose.",
+    "Effects are derived and source-owned. Authored scores, declarations including empty strings, inventory, hand-written attack formulas and current resources remain untouched.",
+    "Damage-less Net can grant proficiency but its special no-damage attack still requires manual handling. No ammunition, reload, burst-fire, disadvantage or special-property automation is claimed.",
+    "The52 reviewed baseitem kinds are not the entire raw filter domain: Iron Ball and Oversized Longbow item semantics remain unsupported; Psychic Blade is a separate2024 feature item.",
+    "Magic weapons are not candidates; exact source-qualified baseItem inheritance feeds actual attack proficiency without creating inventory.",
+    "Independent Weapon Master state preserves existing reviewedFeats v1; old consumers do not understand the new effect or its clear/reselect lifecycle. Retaining an opaque field is not safe roundtrip/rollback compatibility, which is not claimed.",
+    "Native/linked imports establish current consumer persistence only. Browser storage, earlier clients, server delivery and deployment require separate evidence."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23T15:11:13.053Z",
+  "definition": "Candidate bounded-mechanism workflow evidence; no full-rule or live-release certification",
+  "sourceConsumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+  "testedDeliveryRevision": "87396a8babed8d2cd30d2eb6a6ca074b7c4fc3ca",
+  "identicalProductSourceTree": "0a948a6bd7685847fe966a2c5239b14f220415dc",
+  "runtimeReportRevision": "573f1fe4061b2279cc893a7080120f34eb3401af",
+  "runtimeReportSha256": "ebb99a8696b9c930988f8287e9332cc6b1799b1f2afd33481d8fcb09236bedba",
+  "browser": {
+    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/39974063901",
+    "job": 120483964552,
+    "files": 5,
+    "passed": 18,
+    "skipped": 0,
+    "durationMinutes": 2.6,
+    "viewports": [
+      "desktop 1512x982",
+      "narrow 390x844"
+    ]
+  },
+  "directedTests": {
+    "passed": 357,
+    "skipped": 2,
+    "skipBoundary": "Existing external Fighter/choice-resource fixtures not supplied to this specific group; all five new capability inputs are hash-verified and run"
+  },
+  "wholeRepositoryUnitTests": {
+    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/39974063810",
+    "job": 120484668638,
+    "passed": 2020,
+    "skipped": 101,
+    "boundary": "Existing environment-conditional fixtures; dedicated frozen-input group separately executes this batch source tests"
+  },
+  "typecheck": "passed",
+  "formalStandaloneBuild": "passed",
+  "playerCapabilities": [
+    "TCE Enhanced Defense explicit activation and AC",
+    "TCE Enhanced Weapon explicit target and attack/damage",
+    "TCE Returning Weapon fixed attack/damage and target",
+    "TCE Enhanced Arcane Focus explicit held state and spell attack",
+    "PHB Beguiling Influence learned skill proficiencies",
+    "PHB Eldritch Sight learned at-will payment qualification",
+    "PHB Armor of Shadows learned at-will self-cast qualification"
+  ],
+  "workflows": [
+    "selection and explicit activation",
+    "derived effects displayed in actual App",
+    "save and reopen",
+    "replace and withdraw or forget",
+    "manual fields and spent resources preserved",
+    "restricted source and read-only tab guards"
+  ],
+  "manualBoundaries": [
+    "Infusion rest/touch/death timing and external recipient",
+    "Returning movement and magical resistance/immunity",
+    "Hands and attunement totals; focus half-cover",
+    "External re-equip can retain old held intent: manually reconfirm",
+    "Detect Magic target/concentration/duration/detection outcome",
+    "Mage Armor self/unarmored checks/AC/duration",
+    "Invocation replacement timing"
+  ],
+  "publication": "unverified",
+  "mergedOrDeployed": false
+}
