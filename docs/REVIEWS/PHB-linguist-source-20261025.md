@@ -50,7 +50,7 @@ The independent compact evidence additionally stores `legacyClassInputs`, the ex
 
 Legitimate imported owner and ASI entry-ID aliases remain usable only when their original source identity and reviewed pack still authenticate. The bounded proof includes a positive alias confirmation/native-reopen case, then all four **canonical and instance** owner/ASI disable-and-restore combinations. Either form of disable must suspend both fixed INT and all three languages, retain the same confirmation and manual/resource snapshots through reopen, and recover only when re-enabled. A duplicate or alias may not evade a canonical availability restriction.
 
-A `custom-pack` owner or ASI lookalike cannot acquire or execute the new Linguist grant merely by copying a PHB/TCE display name or raw shape. Four negative cases cover owner/ASI with canonical/alias IDs; rejection must leave the card, saved confirmation and manual/resource snapshots unchanged. This strengthens this bounded mechanism's source gate without rewriting generic legacy ASI eligibility or declaring all imported class records authentic. These new source-alias cases remain pending the parent-run final clean-source audit; their presence in the script is not execution evidence.
+A `custom-pack` owner or ASI lookalike cannot acquire or execute the new Linguist grant merely by copying a PHB/TCE display name or raw shape. Four negative cases cover owner/ASI with canonical/alias IDs; rejection must leave the card, saved confirmation and manual/resource snapshots unchanged. This strengthens this bounded mechanism's source gate without rewriting generic legacy ASI eligibility or declaring all imported class records authentic. These source-alias cases are included in the final692-step exact-source audit recorded below; their implementation alone was not treated as execution evidence.
 
 ## Ownership, ability order and preservation
 
@@ -92,4 +92,47 @@ Before the first source commit, Data full tests passed918 Vitest /11 existing co
 
 ## First exact source-audit failure retained
 
-The first clean audit against Web `f3f98ebbea70f15e31949cb3dd199a7620308d78` / producer `39cf0ba019abc4ee60e3346b555ed05dca2b7e77` failed an import-order fixture that copied an independent card's randomly generated source selection ID. The product correctly kept that foreign confirmation inert, preserving the already-valid ASI result INT20. The audit now explicitly asserts that negative boundary, then constructs the intended imported state using the target card's actual source/choice IDs and retains the original INT19 / later-ASI-inactive / three-language assertions, including native reopen. No product source, identity gate, numeric expectation or assertion was weakened. Offline binding/regression95/95 and script syntax/diff checks passed. Original audit and narrow reproduction logs are retained privately. No corpus replay had started; the corrected producer still needs a clean official audit.
+The first clean audit against Web `f3f98ebbea70f15e31949cb3dd199a7620308d78` / producer `39cf0ba019abc4ee60e3346b555ed05dca2b7e77` failed an import-order fixture that copied an independent card's randomly generated source selection ID. The product correctly kept that foreign confirmation inert, preserving the already-valid ASI result INT20. The audit now explicitly asserts that negative boundary, then constructs the intended imported state using the target card's actual source/choice IDs and retains the original INT19 / later-ASI-inactive / three-language assertions, including native reopen. No product source, identity gate, numeric expectation or assertion was weakened. Offline binding/regression95/95 and script syntax/diff checks passed. Original audit and narrow reproduction logs are retained privately. At that failure checkpoint no corpus replay had started, and the corrected producer still needed a clean official audit. The later results below do not erase this initial failure.
+
+
+## Corrected exact-source proof and genuine ownership repair
+
+The corrected producer exposed a second, genuine product issue: re-confirming a duplicated or stale source claim could filter away the ambiguity and silently reactivate the grant. This is distinct from the first audit fixture's foreign-selection-ID error. The retained `reviewed-linguist-workflow-corrected.log` records the missing expected rejection. Web `dd83d6ff915ab1e1f1ac133373bd304c7e903430` adds a narrow new-domain check: duplicate claims and a saved claim belonging to another source instance require explicit withdrawal/cleanup before a fresh confirmation. It does not weaken source ownership or reinterpret the old unknown-domain editing boundary.
+
+At2026-10-25T09:15:27.205Z the official bounded source/API audit passed **692/692**, with **0 failures and0 skips**, against:
+
+- Consumer Web `dd83d6ff915ab1e1f1ac133373bd304c7e903430`, source tree `b1095fa3401b0052131d635425739cc3782bf59c`.
+- Producer Data `4f9b0453d1bf07af297b25db3093e8d2c1b75e44`.
+- Proof-script SHA256 `7d5928a8822e100f07e591148f880f877fb896ba7f042d17f8cd5d27826d3516`.
+- Receipt SHA256 `0231c562b1180983a3e456cfc3c4c8fa8af24c2d81278a64eb4deedeec381fba` (`reviewed-linguist-workflow-remote.json`, retained privately).
+
+A separate read-only pairing check rehashed all108 bundled current consumer modules against both the working bytes and that exact committed source:0 mismatches. It also matched the producer script's working and committed bytes to the receipt hash. The receipt independently binds70 actual old78e1 consumer modules. A read-only cross-check of all five bounded receipts matched their five committed producer-script hashes, the same consumer/producer metadata, all108 unique current consumer modules and160 old committed-module bindings across Linguist/Skilled, with0 mismatches. This is an exact-commit local source/API receipt despite the historical `remote` filename; it is not a remote Actions success or browser acceptance.
+
+The bounded assembled catalog contains2,935 normalized entries and2,981 App entries, including the actual34 equipment-training seed entries, all201 mixed-source language records and exactly18 reviewed language kinds. The actual snapshot-cache reload, all68 genuine legacy source slots, canonical/instance owner and ASI availability, custom-pack rejection, exact restricted-language permissions, cap+0 behavior, preservation and native import/export checks are included. Actual old78e1 roundtrip retains the opaque new domain but cannot execute it; old clear/reselect retains stale consent. **safeEditingCompatibility remains false.**
+
+The four neighboring bounded audits also passed on exactly the same consumer/producer pair:
+
+| Bounded audit | Passed | Failed | Skipped |
+| --- | ---: | ---: | ---: |
+| Skilled |271 |0 |0 |
+| Weapon Master |209 |0 |0 |
+| Armor feats |503 |0 |0 |
+| Passive feats |235 |0 |0 |
+
+Skilled's first same-source attempt encountered only an existing private PID-cache `node_modules` symlink (`EEXIST`). Its original log/cache were retained; isolating the private cache and retrying the same source and arguments passed271/271 at2026-10-25T09:22:02.754Z. No product code or assertion changed for that cache retry.
+
+An independent offline Data regression run after this proof passed **919 Vitest tests**, with **11 existing conditional skips** (30 files passed,1 skipped), plus **14/14 Node tests** and **6/6 Python tests**. The source-project compiler exited successfully. These counts do not turn the conditional skips into executed passes, and the source compiler is not a claim that the standalone audit script is included in its src-only project.
+
+## Pairing still in progress at the09:22 documentation checkpoint
+
+The one authorized full-corpus replay started2026-10-25 at09:21:40UTC and was still running at this checkpoint. No full-replay completion/counts or final114 actual App/browser passes are claimed here. The checked-in historical runtime report still names Web `fb8676136eddde1506bad9756c41ab869e1270a0`; it is not silently relabeled as the new Linguist receipt. Final Data/Web report locks and exact-head CI must be paired to the completed new replay before acceptance.
+
+Cipher actions remain manual; language support is only the PHB18 subdomain. The old Aarakocra witness remains historical and is not migrated or used as evidence of the new owned workflow. No generic language capability, whole-inventory denominator, global schema/server change, safe old-client editing, final browser acceptance, merge or deployment is asserted by these source/API passes.
+
+## Sole full-corpus replay completed; final remote gates pending
+
+The corrected frozen-source replay completed at2026-10-25T09:42:01.036Z, consumer Web `dd83d6ff915ab1e1f1ac133373bd304c7e903430`, producer Data `4f9b0453d1bf07af297b25db3093e8d2c1b75e44`:200 module gates (all196 prior paths retained),229 unchanged frozen inputs,18,789 unchanged rule identities,4,561 reviewed,6,534 with at least one partial mechanism witness,522 unavailable and0 unresolved. SHA256 `888fc094405f0d295903345361c297c7ce452844f6c18036827767e0b5f85d42`; exact Git blob `7126bea71fa1645031ce30784ff46bfc7f3dc5be`.
+
+Exactly one record changes: PHB2014 Linguist's historical generic level1 language-choice witness selected an Aarakocra|MM rule and delivered no language rows. That standalone/unowned route is not the new genuine class-ASI workflow or the reviewed PHB18 language domain, and is no longer counted as implemented:6,535 becomes6,534. The full original before/after record is retained privately; no identity, review flag, denominator, input hash, source count rule or unrelated witness was rewritten. The explicit canonical PHB Linguist workflow is separately proven by the692 source/API checks, not by relabeling that old witness. Cipher and special-language behaviors remain manual as scoped.
+
+The committed report and five workflow stage receipts are metadata/mechanical evidence only; they contain no frozen source prose or private player cards. Final paired-tree offline checks, both exact-head Data CI events and Web's114 actual App cases remain to be verified. The stacked draft depends on the accepted Skilled branch rather than current main; no merge or deployment is performed. This section supersedes only the preceding in-progress checkpoint, preserving its first failures and limitations.

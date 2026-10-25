@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T07:20:04.409Z",
-  "consumerRevision": "fb8676136eddde1506bad9756c41ab869e1270a0",
-  "consumerSourceTree": "bbc6761e1bba50cba06315c2f8cb31c457cb5c63",
+  "updatedAt": "2026-10-25T09:15:09.219Z",
+  "consumerRevision": "dd83d6ff915ab1e1f1ac133373bd304c7e903430",
+  "consumerSourceTree": "b1095fa3401b0052131d635425739cc3782bf59c",
   "consumerModules": [
     {
       "path": "src/cloud/api.ts",
@@ -22,7 +22,7 @@
     },
     {
       "path": "src/core/automation/abilityAdvancements.ts",
-      "sha256": "545f9e4f7986fef6fa7cf6cfe103274c541ed90947ea0300fca7d59737bfe039"
+      "sha256": "3c285e27d996783fc7870a525990aaecfb6e9db5ac879b5ddd5a9ace3eeb13d8"
     },
     {
       "path": "src/core/automation/actions.ts",
@@ -34,7 +34,7 @@
     },
     {
       "path": "src/core/automation/asi.ts",
-      "sha256": "09930141615f39fed9fcde9704f07561f535fcf1685dd61d6ce22ab28144d1e1"
+      "sha256": "1b48b47ca57660fabdec8a2b2d458089d78ac9ae5c40f56eb183022ee4286769"
     },
     {
       "path": "src/core/automation/asiEvidence.json",
@@ -46,11 +46,11 @@
     },
     {
       "path": "src/core/automation/baseAbilities.ts",
-      "sha256": "a5bf1a5839ac9cc0baa942d9c26dee796ee6e7e0a4f08ddbd8ad945d8cbe6274"
+      "sha256": "37b9ddc46d39647daa18e1a38c1b107cf34a53c4b83113f867a06864004b90ce"
     },
     {
       "path": "src/core/automation/choices.ts",
-      "sha256": "4fb32284f97836e18f6cd2ee3a3cee113ca0778c0d4e1dc276dfe7ca7286b12c"
+      "sha256": "b25b073f8caa4390ebad7d8a84c2917e24c36b82af2f4bdf946fe5a9a56352e5"
     },
     {
       "path": "src/core/automation/classChoiceEvidence.json",
@@ -134,11 +134,19 @@
     },
     {
       "path": "src/core/automation/reviewedFeatIdentity.ts",
-      "sha256": "3791e79b338b1430309d7a553c679edb10b221cc2722416c1c6cb73e4178768e"
+      "sha256": "1f8d40fa73dd720cae6e89740ba7ecc136a46f69ee9578036ad881bed6cebcc6"
     },
     {
       "path": "src/core/automation/reviewedFeats.ts",
       "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguist.ts",
+      "sha256": "f7c045b6f95162671555402127e0e4baf1141c53145e950474936ac6bc340346"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguistEvidence.json",
+      "sha256": "059d3f9549ea81abec759c047d5a39e7fa96deaa80341535a0a7b9c3625896ae"
     },
     {
       "path": "src/core/automation/reviewedSkilled.ts",
@@ -182,7 +190,7 @@
     },
     {
       "path": "src/core/automation/training.ts",
-      "sha256": "97fa4568fe1207b6526ae75a1c58eedc4f4c31afb1c947bb6edef51a9e519c79"
+      "sha256": "e41916d9fdb4adbdd2ee35d6b2bd131b21ad3f28537718bf65b81740ba0bec69"
     },
     {
       "path": "src/core/automation/weapons.ts",
@@ -202,7 +210,7 @@
     },
     {
       "path": "src/core/engine.ts",
-      "sha256": "2d9d42ab519a2c1e3cf346947bc87b5b91f0442a2f6e6ae41b0f48ffe71d0211"
+      "sha256": "f19ed99f904dd8dcd0c9dfa2c113ba9a6ab3bf257ed0b32175edb189ae4dd9ff"
     },
     {
       "path": "src/core/entryNameIndex.ts",
@@ -234,7 +242,7 @@
     },
     {
       "path": "src/core/model.ts",
-      "sha256": "f65a7b5c23e05798dadfb219936ceb75c259e9b2ca353fabb3d845e2ba351378"
+      "sha256": "e06ad2c8054871356f49c105d25b5cb5823206b65909e96de1c52b4622ff3d0c"
     },
     {
       "path": "src/core/numericExpression.ts",
@@ -294,7 +302,7 @@
     },
     {
       "path": "src/core/validation.ts",
-      "sha256": "8f5d0e1d865dfd2825fa0fba5e735db66fba84cb3aa5826ed94a5e2f9e4e933c"
+      "sha256": "974e33b92434fabc382dbd8bb6280ab732065f8739ce5a349dd43f47a0e68b64"
     },
     {
       "path": "src/core/weaponAttacks.ts",
@@ -369,7 +377,7 @@
       "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
     }
   ],
-  "producerRevision": "63badaaa6b21fb6b7c09e238c91daec39d86a62a",
+  "producerRevision": "4f9b0453d1bf07af297b25db3093e8d2c1b75e44",
   "producerScriptSha256": "850b8af3f7fa61c15b02d1a62f24f5862c8a5830af2520d2eb732d5eeaebc80a",
   "retrievalRevisions": {
     "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
