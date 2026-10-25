@@ -60,17 +60,17 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p .cache/passive-feat-inputs
-          for path in class/class-artificer.json class/class-barbarian.json class/class-bard.json class/class-cleric.json class/class-druid.json class/class-fighter.json class/class-monk.json class/class-paladin.json class/class-ranger.json class/class-rogue.json class/class-sorcerer.json class/class-warlock.json class/class-wizard.json feats.json variantrules.json items-base.json items.json magicvariants.json; do
+          for path in class/class-artificer.json class/class-barbarian.json class/class-bard.json class/class-cleric.json class/class-druid.json class/class-fighter.json class/class-monk.json class/class-paladin.json class/class-ranger.json class/class-rogue.json class/class-sorcerer.json class/class-warlock.json class/class-wizard.json feats.json variantrules.json items-base.json items.json magicvariants.json skills.json generated/gendata-tables.json; do
             revision=e2623b204ddbdf2bcfa8317acfc962de89c676e2
-            if [[ "$path" = feats.json || "$path" = items.json || "$path" = magicvariants.json ]]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
-            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 3000000 --proto '=https' \
+            if [[ "$path" = feats.json || "$path" = items.json || "$path" = magicvariants.json || "$path" = generated/gendata-tables.json ]]; then revision=5cc0bbe2c2b241a334e731af4448bdba2168e8bd; fi
+            curl --disable --fail --silent --show-error --max-time 60 --max-filesize 8000000 --proto '=https' \
               "https://raw.githubusercontent.com/tjliqy/5etools-cn/$revision/data/$path" \
               --output ".cache/passive-feat-inputs/$(basename "$path")"
           done
           node --input-type=module <<'NODE'
           import {readFileSync,writeFileSync} from 'node:fs';
           import {createHash} from 'node:crypto';
-          const paths=['class/class-artificer.json','class/class-barbarian.json','class/class-bard.json','class/class-cleric.json','class/class-druid.json','class/class-fighter.json','class/class-monk.json','class/class-paladin.json','class/class-ranger.json','class/class-rogue.json','class/class-sorcerer.json','class/class-warlock.json','class/class-wizard.json','feats.json','variantrules.json','items-base.json','items.json','magicvariants.json'];
+          const paths=['class/class-artificer.json','class/class-barbarian.json','class/class-bard.json','class/class-cleric.json','class/class-druid.json','class/class-fighter.json','class/class-monk.json','class/class-paladin.json','class/class-ranger.json','class/class-rogue.json','class/class-sorcerer.json','class/class-warlock.json','class/class-wizard.json','feats.json','variantrules.json','items-base.json','items.json','magicvariants.json','skills.json','generated/gendata-tables.json'];
           const rows=paths.map(path=>{const filename=path.split('/').at(-1),body=JSON.parse(readFileSync('.cache/passive-feat-inputs/'+filename,'utf8'));return {url:'https://5e.kiwee.top/data/'+path,path:filename,sha256:createHash('sha256').update(JSON.stringify(body)).digest('hex')};});
           writeFileSync('.cache/passive-feat-inputs/index.json',JSON.stringify({rows}));
           NODE
@@ -79,6 +79,16 @@ jobs:
         run: node --experimental-strip-types scripts/audit_reviewed_armor_feats.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-armor-feats.json
       - name: Replay exact reviewed PHB2014 Weapon Master workflow
         run: node --experimental-strip-types scripts/audit_reviewed_weapon_master.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-weapon-master.json
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 52d5be10e161464d5e0846d1dc2202ea1169754b
+          path: .cache/web-skilled-old-consumer
+          persist-credentials: false
+      - name: Share current locked dependencies with pinned old consumer proof
+        run: ln -s "$PWD/.cache/web-consumer/node_modules" .cache/web-skilled-old-consumer/node_modules
+      - name: Replay exact reviewed PHB2014 Skilled workflow and bounded old-client behavior
+        run: node --experimental-strip-types scripts/audit_reviewed_skilled.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-skilled.json .cache/web-skilled-old-consumer
       - name: Replay three explicit attuned TCE infusion workflows
         shell: bash
         run: |
