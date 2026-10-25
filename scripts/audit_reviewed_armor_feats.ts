@@ -29,6 +29,11 @@ const expectedInputs:Record<string,string>={
 };
 const retrievalRevisions=Object.fromEntries(Object.keys(expectedInputs).map(path=>[path,path==='feats.json'?'5cc0bbe2c2b241a334e731af4448bdba2168e8bd':'e2623b204ddbdf2bcfa8317acfc962de89c676e2']));
 const expectedEntries:Record<string,string>={
+ 'Lightly Armored|XPHB':'423fb6efa58add6c891b114c273e96e135977ab6f06d9db8daa7c70d2a6a10d9',
+ 'Moderately Armored|XPHB':'b86f5aeef2bc39ce9b9d03e863b8d4fd10097b6273b9afbf37e62e1954ed1c35',
+ 'Heavily Armored|XPHB':'6ef86668d2f7d2d91d829769f34758fbecb3e52b0487445378ce595524b569af',
+ 'Tough|XPHB':'6ca1a61e752edcf90a71ce4ab05d89e198e25ab763739560201766bca99d7e5c',
+ 'Resilient|XPHB':'62d27d34751547ff77699a7802b68a27f56e2fa0cbaedb6395e0f571385792f8',
  'Lightly Armored|PHB':'5e87f09b022c56e00d9283ce52708ee38059e7349d815443d3bb2c5da5a41a42',
  'Moderately Armored|PHB':'98b557e88aeeb29328dddf9924ddce14a695945979de06cd766ed7cb119708fa',
  'Heavily Armored|PHB':'5a822e4ac8cba9147dfa9b28f0a6a5ccf80dcd4f30c047e879af62c4ec15d297',
@@ -61,6 +66,11 @@ const reviewedRules=[
 // All three frozen entries omit max. The same pinned renderer defaults omitted
 // max to 20 for fixed and choose.from abilities. No publisher prose is stored.
 const abilityCapSupport={repository:'tjliqy/5etools-cn',revision:'5cc0bbe2c2b241a334e731af4448bdba2168e8bd',path:'js/render.js',gitBlobSha:'fd559e0baad858c2bc59a813603a55e41972a1f4',lines:[7093,7123],function:'Renderer.feat._mergeAbilityIncrease_getText',semantics:'abilityObj.max defaults to20; fixed and choose.from branches use that cap',url:'https://github.com/tjliqy/5etools-cn/blob/5cc0bbe2c2b241a334e731af4448bdba2168e8bd/js/render.js#L7093-L7123',publisherFeatProse:'not independently accessible in this audit'};
+const retainedModernRules=[
+ {reference:'Lightly Armored|XPHB',english:'Lightly Armored',page:205,entryHash:expectedEntries['Lightly Armored|XPHB'],minimumLevel:4,abilities:['str','dex'],armorTraining:['light','shield'],typedChoiceSupported:true},
+ {reference:'Moderately Armored|XPHB',english:'Moderately Armored',page:205,entryHash:expectedEntries['Moderately Armored|XPHB'],minimumLevel:4,abilities:['str','dex'],armorTraining:['medium'],requiredArmor:'light',typedChoiceSupported:false},
+ {reference:'Heavily Armored|XPHB',english:'Heavily Armored',page:204,entryHash:expectedEntries['Heavily Armored|XPHB'],minimumLevel:4,abilities:['con','str'],armorTraining:['heavy'],requiredArmor:'medium',typedChoiceSupported:false},
+];
 const evidence=JSON.parse(readFileSync(join(webRoot,'src/core/automation/reviewedFeatEvidence.json'),'utf8'));
 assert.equal(evidence.schemaVersion,1,'Consumer reviewed evidence version');assert.equal(evidence.mechanism,'explicit-owned-legacy-passive-feat','Consumer reviewed mechanism');
 assert.equal(evidence.source,'PHB','Consumer PHB source');assert.equal(evidence.edition,'2014','Consumer original edition');
@@ -68,6 +78,12 @@ assert.deepEqual(evidence.inputs,Object.fromEntries(['feats.json','variantrules.
 assert.deepEqual(evidence.retrievalRevisions,Object.fromEntries(['feats.json','variantrules.json'].map(path=>[path,retrievalRevisions[path]])),'Consumer independently verified retrieval revisions');
 assert.deepEqual(evidence.supportingEntryHashes,Object.fromEntries(['Feats|PHB','Multiclassing|PHB'].map(key=>[key,expectedEntries[key]])),'Consumer repeatability and total-level source hashes');
 assert.deepEqual(evidence.rules,[...previousRules,...reviewedRules],'Consumer reviewed armor feat mechanics');
+const modernEvidence=JSON.parse(readFileSync(join(webRoot,'src/core/automation/modernArmorTrainingEvidence.json'),'utf8'));
+assert.equal(modernEvidence.schemaVersion,1,'Retained XPHB training evidence version');
+assert.equal(modernEvidence.mechanism,'preserve-existing-modern-armor-training','Retained XPHB training mechanism');
+assert.equal(modernEvidence.source,'XPHB','Retained XPHB source');assert.equal(modernEvidence.edition,'2024','Retained XPHB edition');
+assert.deepEqual(modernEvidence.input,{path:'feats.json',sha256:expectedInputs['feats.json'],retrievalRevision:retrievalRevisions['feats.json']},'Retained XPHB canonical input');
+assert.deepEqual(modernEvidence.rules,retainedModernRules,'Retained XPHB training mechanics only');
 const indexPath=join(inputRoot,'index.json');assert(existsSync(indexPath),'Frozen input manifest is required');
 const index=JSON.parse(readFileSync(indexPath,'utf8')),inputs:Record<string,string>={},inputFiles:Record<string,string>={[indexPath]:bytesHash(indexPath)};
 function input(path:string){
@@ -80,13 +96,21 @@ function input(path:string){
 const bodies=Object.fromEntries(Object.keys(expectedInputs).map(path=>[path,input(path)])),sourceBefore=hash(bodies);
 const exact=(rows:any[],english:string,source:string)=>{const matches=rows.filter(row=>row.ENG_name===english&&row.source===source);assert.equal(matches.length,1,'Unique original '+english+'|'+source);return matches[0];};
 const feats=bodies['feats.json'].feat,variants=bodies['variantrules.json'].variantrule,entryHashes:Record<string,string>={};
-for(const [key,rows] of [['Lightly Armored|PHB',feats],['Moderately Armored|PHB',feats],['Heavily Armored|PHB',feats],['Tough|PHB',feats],['Resilient|PHB',feats],['Feats|PHB',variants],['Multiclassing|PHB',variants],['Fighter|PHB',bodies['class/class-fighter.json'].class],['Artificer|TCE',bodies['class/class-artificer.json'].class]] as const){const [name,source]=key.split('|');entryHashes[key]=hash(exact(rows,name,source));assert.equal(entryHashes[key],expectedEntries[key],'Independent original entry hash '+key);}
+for(const [key,rows] of [['Lightly Armored|XPHB',feats],['Moderately Armored|XPHB',feats],['Heavily Armored|XPHB',feats],['Tough|XPHB',feats],['Resilient|XPHB',feats],['Lightly Armored|PHB',feats],['Moderately Armored|PHB',feats],['Heavily Armored|PHB',feats],['Tough|PHB',feats],['Resilient|PHB',feats],['Feats|PHB',variants],['Multiclassing|PHB',variants],['Fighter|PHB',bodies['class/class-fighter.json'].class],['Artificer|TCE',bodies['class/class-artificer.json'].class]] as const){const [name,source]=key.split('|');entryHashes[key]=hash(exact(rows,name,source));assert.equal(entryHashes[key],expectedEntries[key],'Independent original entry hash '+key);}
 for(const rule of reviewedRules){
  const raw=exact(feats,rule.english,'PHB');assert.equal(raw.page,rule.page);assert.equal(raw.repeatable,undefined,'PHB default once-per-feat');
  assert.deepEqual(raw.ability,rule.kind==='heavily-armored'?[{str:1}]:[{choose:{from:['str','dex'],amount:1}}],'Exact canonical ability shape');
  assert.deepEqual(raw.armorProficiencies,[Object.fromEntries(rule.armorTraining.map(key=>[key,true]))],'Exact canonical training shape');
  assert.deepEqual(raw.prerequisite,rule.requiredArmor?[{proficiency:[{armor:rule.requiredArmor}]}]:undefined,'Exact canonical proficiency prerequisite');
  assert.equal(raw.ability[0].max,undefined,'Cap comes from pinned upstream default, not an invented raw field');
+}
+for(const rule of retainedModernRules){
+ const raw=exact(feats,rule.english,'XPHB');assert.equal(raw.page,rule.page);assert.equal(raw.category,'G');
+ assert.deepEqual(raw.ability,[{choose:{from:rule.abilities}}],'Retained XPHB exact ability shape is identity only, not new ability automation');
+ assert.deepEqual(raw.armorProficiencies,[Object.fromEntries(rule.armorTraining.map(key=>[key,true]))],'Retained XPHB exact training');
+ assert.deepEqual(raw.prerequisite,[{level:4,...(rule.requiredArmor?{proficiency:[{armor:rule.requiredArmor}]}:{})}],'Retained XPHB exact prerequisites');
+ assert.equal(raw.reprintedAs,undefined);assert.equal(raw.repeatable,undefined);assert.equal(raw.entries.length,2);
+ assert.equal(raw.entries[1].ENG_name,'Armor Training');assert.equal(raw.entries[1].type,'entries');assert.equal(raw.entries[1].entries.length,1);
 }
 const featRuleText=JSON.stringify(exact(variants,'Feats','PHB').entries);
 assert(featRuleText.includes('每个专长只可被选用一次'),'Pinned PHB default nonrepeatability');
@@ -110,8 +134,9 @@ assert.equal(createHash('sha256').update(execFileSync('git',['cat-file','blob',`
 mkdirSync('.cache',{recursive:true});const adapter=resolve('.cache/reviewed-armor-feats-consumer.mjs');
 const exports:Record<string,string[]>={
  'src/core/model.ts':['newCharacter'],'src/core/automation/state.ts':['newAutomationState'],'src/data/catalog.ts':['normalizeData'],
- 'src/core/sheet.ts':['syncFeatures','removeSelection'],'src/core/automation/choices.ts':['sheetChoices','setSheetChoiceSlot'],
+ 'src/core/sheet.ts':['syncFeatures','removeSelection'],'src/core/automation/choices.ts':['sheetChoices','setSheetChoiceSlot','syncChoiceContent'],
  'src/core/automation/reviewedFeats.ts':['reviewedFeatRule','reviewedFeatStatus','setReviewedFeatIntent'],
+ 'src/core/automation/reviewedFeatIdentity.ts':['retainedModernArmorRule'],
  'src/core/proficiencyText.ts':['equipmentTraining'],'src/core/automation/training.ts':['effectiveTrainingDeclarations'],'src/core/automation/equipment.ts':['armorTraining'],
  'src/core/automation/asi.ts':['setAsiAllocation'],'src/core/engine.ts':['evaluate'],
  'src/core/export.ts':['exportCharacter','exportLinkedOwlbear'],'src/core/validation.ts':['readCharacter','validateCharacter','importOwlbear'],
@@ -142,7 +167,7 @@ function status(c:any,id:string,e:any){const before=JSON.stringify(c),s=api.revi
 function reject(c:any,fn:()=>void){const before=JSON.stringify(c);assert.throws(fn);assert.equal(JSON.stringify(c),before,'Rejected mutation is atomic');}
 function reopen(c:any,linked=false){const before=JSON.stringify(c),payload=json(linked?api.exportLinkedOwlbear(c,evaluate(c)):api.exportCharacter(c)),inputBefore=JSON.stringify(payload),loaded=linked?{character:api.importOwlbear(payload),repaired:[]}:api.readCharacter(payload);assert.deepEqual(loaded.repaired,[],'No roundtrip repair');assert.equal(JSON.stringify(c),before,'Export is pure');assert.equal(JSON.stringify(payload),inputBefore,'Import is pure');assert.deepEqual(loaded.character.reviewedFeats,c.reviewedFeats,'Explicit intent persists');assert.deepEqual(preserve(loaded.character),preserve(c),'Manual data roundtrip unchanged');return loaded.character;}
 function check(mechanism:string,label:string,fn:()=>void){try{fn();}catch(error){throw Error(label,{cause:error});}steps.push({mechanism,label,passed:true});}
-function equip(c:any,name:string){const row={id:'equipment-probe',entry:structuredClone(find('item',name)),level:1,quantity:1,equipped:true};c.selections.push(row);return row;}
+function equip(c:any,name:string,source='PHB'){const row={id:'equipment-probe',entry:structuredClone(find('item',name,source)),level:1,quantity:1,equipped:true};c.selections.push(row);return row;}
 for(const profile of profiles)for(const e of armors)check(ruleFor(e).kind,`Real ${profile.owner} level ${profile.level} ASI alternative explicitly applies and revokes ${e.english}`,()=>{
  const [name,source]=profile.owner.split('|'),c=baseCard(profile.level,name,source),ability=abilityFor(e);
  // An authored declaration is a legitimate prerequisite. It stays authoritative,
@@ -243,15 +268,87 @@ check('adversarial-import','A no-level child of a real future Wizard ASI cannot 
 check('adversarial-import','Cyclic authentic owner ancestry is inactive consistently in status, evaluation and both training APIs',()=>{const c=baseCard(),id=activate(c,light),binding=c.reviewedFeats.bindings[0];c.selections.find((row:any)=>row.id==='proof-owner').parentId=binding.selectionId;const saved=json(c.reviewedFeats),before=JSON.stringify(c);assert.equal(status(c,id,light).active,false);assert.equal(evaluate(c).abilities.dex,13);assert.deepEqual(training(c),[]);assert.deepEqual(c.reviewedFeats,saved);assert.equal(JSON.stringify(c),before);});
 check('adversarial-import','An unrelated cyclic injected ability effect cannot corrupt cap eligibility or training projection',()=>{const c=baseCard(),id=activate(c,light),injected=structuredClone(light);injected.kind='feature';injected.effects=[{op:'add',target:'dex',value:10}];c.selections.push({id:'cycle-a',parentId:'cycle-b',entry:injected,level:1,quantity:1,equipped:false},{id:'cycle-b',parentId:'cycle-a',entry:structuredClone(injected),level:1,quantity:1,equipped:false});const before=JSON.stringify(c);assert.equal(status(c,id,light).active,true);assert.equal(evaluate(c).abilities.dex,14);assert.deepEqual(training(c),['light']);assert.equal(JSON.stringify(c),before);});
 for(const e of armors)for(const kind of ['feature','race','item'])check('adversarial-import',`Retyping ${e.english} as ${kind} cannot bypass explicit training consent`,()=>{const c=baseCard(),entry=structuredClone(e),manual=preserve(c);entry.kind=kind;c.selections.push({id:'retyped-armor-feat',entry,level:1,quantity:1,equipped:true});const before=JSON.stringify(c);assert.equal(api.reviewedFeatRule(entry),undefined);assert.deepEqual(training(c),[]);assert.equal(evaluate(c).abilities.dex,13);assert.equal(evaluate(c).abilities.str,13);assert.equal(JSON.stringify(c),before);assert.deepEqual(preserve(c),manual);});
+// Preserve old XPHB training only. These cases are separate from the204 PHB
+// source-slot paths and do not claim new XPHB ability, HP or saving automation.
+const modernArmors=retainedModernRules.map(rule=>find('feat',rule.english,'XPHB'));
+function modernCard(e:any,level=4){
+ const c=api.newCharacter('2024');c.automation=api.newAutomationState();c.profile.enabledSources=['PHB','XPHB'];c.abilities.str=13;c.abilities.dex=13;
+ c.notes='Retained modern training compatibility probe';c.runtime.hp=2;c.runtime.tempHp=1;c.runtime.resources={'manual-modern':{current:1,max:7}};
+ const owner=e.english==='Moderately Armored'?'Bard':e.english==='Heavily Armored'?'Cleric':'Wizard';
+ c.selections=[{id:'modern-owner',entry:structuredClone(find('class',owner,'XPHB')),level,quantity:1,equipped:false}];api.syncFeatures(c,entries);return c;
+}
+const modernChoice=(c:any)=>{const row=api.sheetChoices(c,entries).find((r:any)=>r.id.includes(':class-typed-feat:')&&r.grantLevel===4);assert(row,'Real XPHB4 ASI choice');return row;};
+function importedModern(c:any,e:any){c.selections.push({id:'retained-modern-record',entry:structuredClone(e),level:4,quantity:1,equipped:e.kind==='item'});}
+for(const e of modernArmors)check('retained-modern-training',`Existing lawful level4 ${e.english}|XPHB keeps training and equipment warning behavior without PHB abilities`,()=>{
+ let c=modernCard(e);const item=equip(c,e.english==='Lightly Armored'?'Shield':e.english==='Moderately Armored'?'Breastplate':'Chain Mail','XPHB'),before=evaluate(c),manual=preserve(c),row=modernChoice(c),rule=retainedModernRules.find(r=>r.english===e.english)!;
+ assert(before.issues.some((i:any)=>i.id===`armor-training:${item.id}`));assert.equal(api.reviewedFeatRule(e),undefined);assert(api.retainedModernArmorRule(e));
+ if(e.english==='Lightly Armored'){
+  assert.equal(row.options.find((o:any)=>o.value===e.id)?.unavailable,undefined,'Previously supported real Wizard ASI4 path');
+  api.setSheetChoiceSlot(c,row.id,0,e.id,entries);api.syncChoiceContent(c,entries);
+  assert.equal(c.selections.filter((s:any)=>s.entry.id===e.id&&s.grantKey?.startsWith('choice:')).length,1,'One actual materialized class-choice grant');
+ }else{
+  assert(row.options.find((o:any)=>o.value===e.id)?.unavailable,'Existing typed acquisition boundary remains unsupported');
+  reject(c,()=>api.setSheetChoiceSlot(c,row.id,0,e.id,entries));importedModern(c,e);
+ }
+ const after=evaluate(c);for(const type of rule.armorTraining)assert(training(c).includes(type));assert(!after.issues.some((i:any)=>i.id===`armor-training:${item.id}`));
+ assert.deepEqual(after.abilities,before.abilities);assert.equal(after.maxHp,before.maxHp);assert.deepEqual(after.saves,before.saves);assert.equal(after.ac,e.english==='Lightly Armored'?before.ac+2:before.ac);
+ reject(c,()=>api.setReviewedFeatIntent(c,row.id,e.id,{kind:rule.english.toLowerCase().replace(' ','-'),ability:'str',confirmedManualAbilityExcluded:true}));
+ assert.deepEqual(preserve(c),manual);const expectedTraining=training(c);c=reopen(c);assert.deepEqual(training(c),expectedTraining);assert.deepEqual(evaluate(c).abilities,before.abilities);assert.deepEqual(preserve(c),manual);
+});
+for(const e of modernArmors)check('retained-modern-training',`${e.english}|XPHB unlawful level1 probe no longer authorizes training`,()=>{const c=modernCard(e,1),before=training(c);importedModern(c,e);assert.deepEqual(training(c),before);assert.equal(evaluate(c).abilities.str,13);assert.equal(evaluate(c).abilities.dex,13);});
+for(const e of modernArmors)check('retained-modern-training',`${e.english}|XPHB manual empty training override remains authoritative`,()=>{const c=modernCard(e);importedModern(c,e);c.training={armor:''};const manual=preserve(c);assert.deepEqual(training(c),[]);assert.deepEqual(preserve(c),manual);});
+for(const e of modernArmors)check('retained-modern-training',`${e.english}|XPHB level loss/restoration preserves recorded content without changing abilities`,()=>{const c=modernCard(e),baseline=training(c);importedModern(c,e);const entry=json(c.selections.find((s:any)=>s.id==='retained-modern-record')),expected=training(c);c.selections.find((s:any)=>s.id==='modern-owner').level=3;assert.deepEqual(training(c),baseline);assert.deepEqual(c.selections.find((s:any)=>s.id==='retained-modern-record'),entry);c.selections.find((s:any)=>s.id==='modern-owner').level=4;assert.deepEqual(training(c),expected);assert.equal(evaluate(c).abilities.str,13);assert.equal(evaluate(c).abilities.dex,13);});
+for(const e of [modernArmors[1],modernArmors[2]])check('retained-modern-training',`${e.english}|XPHB missing actual prerequisite never receives retained training`,()=>{const c=modernCard(modernArmors[0]);importedModern(c,e);assert.deepEqual(training(c),[]);assert.equal(evaluate(c).abilities.str,13);});
+check('retained-modern-training','An existing modern manual training record with no acquisition time cannot qualify an earlier PHB ASI',()=>{const c=baseCard(8);c.profile.enabledSources=['PHB','TCE','XPHB'];importedModern(c,modernArmors[0]);const row=choice(c,4);reject(c,()=>api.setSheetChoiceSlot(c,row.id,0,moderate.id,entries));assert.equal(status(c,row.id,moderate).active,false);});
+for(const e of armors)for(const [label,edit] of [
+ ['normalized source',(entry:any)=>{entry.source='XPHB';}],
+ ['raw source',(entry:any)=>{entry.raw.source='XPHB';}],
+ ['both sources and edition',(entry:any)=>{entry.source='XPHB';entry.raw.source='XPHB';entry.edition='2024';}],
+ ['new source plus feature kind',(entry:any)=>{entry.source='XPHB';entry.raw.source='XPHB';entry.edition='2024';entry.kind='feature';}],
+ ['new source plus race kind',(entry:any)=>{entry.source='XPHB';entry.raw.source='XPHB';entry.edition='2024';entry.kind='race';}],
+ ['new source plus equipped item kind',(entry:any)=>{entry.source='XPHB';entry.raw.source='XPHB';entry.edition='2024';entry.kind='item';}],
+ ['new page/category without new mechanics',(entry:any)=>{entry.source='XPHB';entry.raw.source='XPHB';entry.edition='2024';entry.page=entry.raw.page=entry.english==='Heavily Armored'?204:205;entry.raw.category='G';}],
+] as const)check('cross-edition-forgery',`PHB ${e.english} relabeled ${label} cannot acquire the XPHB compatibility exemption`,()=>{const c=modernCard(modernArmors[0]),entry=structuredClone(e),manual=preserve(c);edit(entry);assert.equal(api.retainedModernArmorRule(entry),undefined);importedModern(c,entry);const before=JSON.stringify(c);assert.deepEqual(training(c),[]);assert.equal(evaluate(c).abilities.str,13);assert.equal(evaluate(c).abilities.dex,13);assert.equal(JSON.stringify(c),before);assert.deepEqual(preserve(c),manual);});
+for(const e of modernArmors)for(const [label,edit] of [
+ ['different kind',(entry:any)=>{entry.kind='race';}],
+ ['different edition',(entry:any)=>{entry.edition='2014';}],
+ ['normalized source',(entry:any)=>{entry.source='PHB';}],
+ ['raw source',(entry:any)=>{entry.raw.source='PHB';}],
+ ['raw page',(entry:any)=>{entry.raw.page=167;}],
+ ['category',(entry:any)=>{entry.raw.category='O';}],
+ ['missing level prerequisite',(entry:any)=>{delete entry.raw.prerequisite[0].level;}],
+ ['unknown ability max',(entry:any)=>{entry.raw.ability[0].max=30;}],
+ ['wrong ability list',(entry:any)=>{entry.raw.ability[0].choose.from=['str','dex','con'];}],
+ ['extra training',(entry:any)=>{entry.raw.armorProficiencies=[{light:true,medium:true,heavy:true,shield:true}];}],
+ ['unknown raw field',(entry:any)=>{entry.raw.unreviewed=true;}],
+ ['generic effect',(entry:any)=>{entry.effects=[{op:'add',target:'str',value:10}];}],
+ ['unknown choice',(entry:any)=>{entry.choices=[{id:'unreviewed',count:1,options:['str']}];}],
+ ['copied source',(entry:any)=>{entry.raw._copy={name:entry.name,source:'XPHB'};}],
+] as const)check('cross-edition-forgery',`XPHB ${e.english} ${label} cannot retain canonical training authorization`,()=>{const c=modernCard(modernArmors[0]),entry=structuredClone(e);edit(entry);assert.equal(api.retainedModernArmorRule(entry),undefined);importedModern(c,entry);const before=JSON.stringify(c);assert.deepEqual(training(c),[]);assert.equal(evaluate(c).abilities.str,13);assert.equal(evaluate(c).abilities.dex,13);assert.equal(JSON.stringify(c),before);});
+check('cross-edition-forgery','An imported fake typed Moderate grant cannot borrow future raw training to open an unsupported modern acquisition',()=>{
+ const c=modernCard(modernArmors[0],8),early=modernChoice(c),owner=c.selections.find((row:any)=>row.id==='modern-owner');
+ api.setSheetChoiceSlot(c,early.id,0,modernArmors[0].id,entries);api.syncChoiceContent(c,entries);
+ const grant=c.selections.find((row:any)=>row.entry.id===modernArmors[0].id&&row.grantKey?.startsWith('choice:'));assert(grant);
+ grant.entry=structuredClone(modernArmors[1]);grant.grantKey=`choice:${early.id}:${modernArmors[1].id}`;c.answers[early.id]=[modernArmors[1].id];
+ const ref=`Adversarial Later Training|${owner.entry.raw.name}|XPHB|6`;owner.entry.raw.classFeatures.push(ref);
+ const entry=structuredClone(modernArmors[0]);entry.id='adversarial-modern-future';entry.kind='feature';entry.name=entry.english='Adversarial Later Training';entry.entries=[];entry.raw={name:entry.name,ENG_name:entry.english,source:'XPHB',_category:'classFeature',className:owner.entry.raw.name,classSource:'XPHB',level:6,armorProficiencies:[{light:true}]};
+ c.selections.push({id:'adversarial-modern-future',entry,level:6,quantity:1,equipped:false,parentId:owner.id,grantKey:`ref:${ref}`});
+ const before=JSON.stringify(c);assert(!training(c).includes('medium'),'Unsupported typed acquisition cannot regain training through a future prerequisite');
+ const later=api.sheetChoices(c,entries).find((row:any)=>row.id.includes(':class-typed-feat:')&&row.grantLevel===8);assert(later);
+ const featureId=later.id.split(':class-typed-feat:')[1],feature=c.selections.find((row:any)=>row.entry.id===featureId);assert(feature);
+ const prior=api.effectiveTrainingDeclarations(c,c.selections,'armor',{level:8,choiceId:later.id,selectionId:feature.id});assert(!prior.some((value:string)=>api.equipmentTraining(value)?.[0]==='medium'));
+ assert.equal(evaluate(c).abilities.dex,13);assert.equal(JSON.stringify(c),before);
+});
+for(const name of ['Tough','Resilient'])check('cross-edition-isolation',`${name}|XPHB remains separate from every PHB explicit adapter and gains no unintended new effect`,()=>{const e=find('feat',name,'XPHB'),c=modernCard(modernArmors[0]),before=evaluate(c),oldTraining=training(c);assert.equal(api.reviewedFeatRule(e),undefined);assert.equal(api.retainedModernArmorRule(e),undefined);importedModern(c,e);const after=evaluate(c);assert.deepEqual(after.abilities,before.abilities);assert.equal(after.maxHp,before.maxHp);assert.deepEqual(after.saves,before.saves);assert.deepEqual(training(c),oldTraining);reject(c,()=>api.setReviewedFeatIntent(c,modernChoice(c).id,e.id,name==='Tough'?{kind:'tough',confirmedManualHpExcluded:true}:{kind:'resilient',ability:'dex',confirmedManualAbilityExcluded:true}));});
 assert.equal(hash(bodies),sourceBefore,'Workflow preserves frozen source objects');assert.equal(hash(entries),catalogBefore,'Workflow preserves normalized catalog');
 for(const [path,before] of Object.entries(inputFiles))assert.equal(bytesHash(path),before,'Frozen file changed during proof');
 assert.equal(git('rev-parse','HEAD'),consumerRevision,'Consumer revision changed during proof');assertCleanSource();assert.equal(git('rev-parse','HEAD:src'),consumerSourceTree,'Consumer source tree changed during proof');
 assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),producerRevision,'Producer revision changed during proof');assertProducerClean();assert.equal(bytesHash(producerScript),producerScriptSha256,'Proof script changed during replay');
 const modules=Object.keys(bundle.metafile!.inputs).map(path=>resolve(path)).filter(path=>path.startsWith(resolve(webRoot)+'/src/')).map(path=>({path:path.slice(resolve(webRoot).length+1),sha256:bytesHash(path)})).sort((a,b)=>a.path.localeCompare(b.path));
 for(const row of modules)assert.equal(createHash('sha256').update(execFileSync('git',['cat-file','blob',`${consumerRevision}:${row.path}`],{cwd:webRoot,maxBuffer:16*1024*1024})).digest('hex'),row.sha256,'Bundled consumer bytes equal committed source');
-const report={schemaVersion:1,updatedAt:new Date().toISOString(),consumerRevision,consumerSourceTree,consumerModules:modules,producerRevision,producerScriptSha256,retrievalRevisions,inputs,entryHashes,abilityCapSupport,legacyClassSlots:profiles,rules:reviewedRules,steps,
+const report={schemaVersion:1,updatedAt:new Date().toISOString(),consumerRevision,consumerSourceTree,consumerModules:modules,producerRevision,producerScriptSha256,retrievalRevisions,inputs,entryHashes,abilityCapSupport,legacyClassSlots:profiles,rules:reviewedRules,retainedModernTraining:retainedModernRules,steps,
  definition:'Bounded PHB2014 Lightly, Moderately and Heavily Armored original-source legal-class-choice API proof; not a full corpus replay, browser certification or publication claim',
- status:{source:'verified-against-frozen-data-and-rendering-contract',mechanisms:'partial',fullRuleAutomation:false,reviewedArmorFeats:3,legacyClassSlots:profiles.length,browser:'not-run',fullRuntimeReplay:'not-run',oldConsumerCompatibility:'not-claimed',currentReleaseAvailable:null},
+ status:{source:'verified-against-frozen-data-and-rendering-contract',mechanisms:'partial',fullRuleAutomation:false,reviewedArmorFeats:3,retainedModernTrainingCompatibility:3,legacyClassSlots:profiles.length,browser:'not-run',fullRuntimeReplay:'not-run',oldConsumerCompatibility:'not-claimed',currentReleaseAvailable:null},
  boundaries:['Only three independently reviewed PHB2014 armor feats selected through68 PHB/TCE legacy class ASI alternative slots are eligible. Manual dragging cannot grant an owned ASI ability increment; XPHB, custom and unsupported source shapes do not authorize these adapters.',
  'Original entry hashes bind this source audit. Runtime authorization checks exact reviewed canonical mechanical/structural shape, not arbitrary imported prose cryptographically.',
  'The frozen ability objects omit a max field. Cap20 is corroborated by the pinned upstream renderer default, not a nonexistent raw field or an independently retrieved WotC feat page.',
@@ -259,5 +356,6 @@ const report={schemaVersion:1,updatedAt:new Date().toISOString(),consumerRevisio
  'Earlier active grants may qualify later armor prerequisites. Self, future, duplicate, inactive and unsupported grants cannot supply prerequisite training; lost prerequisites retain inactive intent.',
  'The204 paired grant paths establish original class-source ownership, not204 completed rules or any corpus-completion percentage.',
  'Training informs prerequisites, displayed declarations and equipment warnings. It does not grant extra2014 shield AC or automate casting restrictions, disadvantage, heavy-armor strength/speed or equip lifecycle.',
+ 'Exact XPHB4 training compatibility is separate: only Lightly had a supported typed ASI path; Moderately and Heavily retain existing lawful imported/manual training without opening their previously unsupported typed acquisition. No XPHB ability, HP or saving automation is claimed. Invalid level1 probes are not lawful source evidence.',
  'Native and linked imports exercise current consumer persistence only. Browser storage, older clients, server delivery, multiplayer recovery and deployment require separate evidence.']};
 mkdirSync(dirname(output),{recursive:true});writeFileSync(output,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({output,consumerRevision,consumerSourceTree,producerRevision,passed:steps.length,failed:0,skipped:0}));
