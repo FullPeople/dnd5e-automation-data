@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "capability": "tce-enhanced-defense-activation-v1",
+  "definition": "One bounded infusion mechanism and its local persisted workflow; not a full rule or live release completion claim",
+  "consumer": {
+    "repository": "FullPeople/DND-card-web",
+    "revision": "9f027e82f30176958343de6f9217d81828ae33e5",
+    "modules": [
+      {
+        "path": "src/cloud/api.ts",
+        "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+      },
+      {
+        "path": "src/cloud/authorizationLease.ts",
+        "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+      },
+      {
+        "path": "src/cloud/room.ts",
+        "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+      },
+      {
+        "path": "src/cloud/sync.ts",
+        "sha256": "d3d615662a746ec99e2ded054b0df0f644285b33cf2c551b69a9d3743896c147"
+      },
+      {
+        "path": "src/core/automation/actions.ts",
+        "sha256": "c4d608b4b81cf0c5bcda2aff18c3f5a6a7d46e95b96fd989dee4846d1d4e6a62"
+      },
+      {
+        "path": "src/core/automation/active.ts",
+        "sha256": "50b92cb03f42e6b3d3487e41b9a1270e159fb8b069697f1f50318de86d04eb99"
+      },
+      {
+        "path": "src/core/automation/backgroundAbilities.ts",
+        "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+      },
+      {
+        "path": "src/core/automation/choices.ts",
+        "sha256": "af3b3a8f26f41bc1937e0ab9b33d64ac6e17488d570d849973a923c907585783"
+      },
+      {
+        "path": "src/core/automation/classChoiceEvidence.json",
+        "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+      },
+      {
+        "path": "src/core/automation/classChoiceSourceGrant.ts",
+        "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+      },
+      {
+        "path": "src/core/automation/classChoiceSupport.ts",
+        "sha256": "0a0c92a65254a3b63481f1475406206b4298717506862b03d1d97ae991579306"
+      },
+      {
+        "path": "src/core/automation/classSpellChoices.ts",
+        "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+      },
+      {
+        "path": "src/core/automation/equipment.ts",
+        "sha256": "5366e18efa18be89c066aa7ea7d22750c9397dc38a1ccf79ee25f1abc69eaa17"
+      },
+      {
+        "path": "src/core/automation/featureArmor.ts",
+        "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+      },
+      {
+        "path": "src/core/automation/featureResources.ts",
+        "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+      },
+      {
+        "path": "src/core/automation/infusionEvidence.json",
+        "sha256": "1981f56b18c673b75d3c8c84a586d9ca9b66d4656db494d547be9e4d8d8fa740"
+      },
+      {
+        "path": "src/core/automation/infusions.ts",
+        "sha256": "f6d529ef70555414a46a40536af7e1d839eed53ac81f256e22df295ec1ff5ce0"
+      },
+      {
+        "path": "src/core/automation/invocationEvidence.json",
+        "sha256": "848b36eb36cc5152ed6bf84082d13cbb00f4fb33221645e504226132039975c6"
+      },
+      {
+        "path": "src/core/automation/invocations.ts",
+        "sha256": "c43d44ea4c8e7b58d99c45bbac40b8263f51027bac9e3d698a167dabdbc6d9b4"
+      },
+      {
+        "path": "src/core/automation/rest.ts",
+        "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+      },
+      {
+        "path": "src/core/automation/sourceClassChoices.ts",
+        "sha256": "a2143ff33cedb7f705346e2dd2d6aa0b8ff62fecd0442b95d591bc80416193eb"
+      },
+      {
+        "path": "src/core/automation/sourceEquipment.ts",
+        "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+      },
+      {
+        "path": "src/core/automation/sourceResourcePools.ts",
+        "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+      },
+      {
+        "path": "src/core/automation/sourceSpellPlan.ts",
+        "sha256": "adce7f6952605c960149c76ba0691ccdc11cfed453ed545f2dab654d0376dd85"
+      },
+      {
+        "path": "src/core/automation/sourceSpellState.ts",
+        "sha256": "4f4efa38bb71171a9ab714521b86930a100579c47acc2242c49117727326f169"
+      },
+      {
+        "path": "src/core/automation/state.ts",
+        "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+      },
+      {
+        "path": "src/core/automation/training.ts",
+        "sha256": "d49949c9e7caafb7261dbe65bf8ff306e1b3299056f911ccbdad10baaf27239f"
+      },
+      {
+        "path": "src/core/bookRituals.ts",
+        "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+      },
+      {
+        "path": "src/core/characterDetails.ts",
+        "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+      },
+      {
+        "path": "src/core/currency.ts",
+        "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+      },
+      {
+        "path": "src/core/engine.ts",
+        "sha256": "1a7c7186d6f35c1fed86b6410e35f9a43bf0b3bb027fb3e8075b38330f2f5c90"
+      },
+      {
+        "path": "src/core/entryNameIndex.ts",
+        "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+      },
+      {
+        "path": "src/core/entryReferences.ts",
+        "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+      },
+      {
+        "path": "src/core/featureOwnership.ts",
+        "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+      },
+      {
+        "path": "src/core/hitPoints.ts",
+        "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+      },
+      {
+        "path": "src/core/legacyTraining.ts",
+        "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+      },
+      {
+        "path": "src/core/model.ts",
+        "sha256": "7e93eee4306f742ca0ef8499104d88c86d1a3c37e9581c431dc0c9c41c03fb0e"
+      },
+      {
+        "path": "src/core/numericExpression.ts",
+        "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+      },
+      {
+        "path": "src/core/palette.ts",
+        "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+      },
+      {
+        "path": "src/core/preparation.ts",
+        "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+      },
+      {
+        "path": "src/core/proficiencyText.ts",
+        "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+      },
+      {
+        "path": "src/core/racialAbilities.ts",
+        "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+      },
+      {
+        "path": "src/core/resources.ts",
+        "sha256": "01ca53c0159d8a4102a099e9ad0eedd59d6223aaabff8662ad349f1fc84ba81f"
+      },
+      {
+        "path": "src/core/resourceWidgets.ts",
+        "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+      },
+      {
+        "path": "src/core/sheet.ts",
+        "sha256": "381848187afcaad6df7246ef24bcc7c20e756f807abc66b8c07159973765d4a2"
+      },
+      {
+        "path": "src/core/sourceCorrections.ts",
+        "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+      },
+      {
+        "path": "src/core/spellCapacity.ts",
+        "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+      },
+      {
+        "path": "src/core/spellcastingRules.ts",
+        "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+      },
+      {
+        "path": "src/core/spellResourceKeys.ts",
+        "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+      },
+      {
+        "path": "src/core/spells.ts",
+        "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+      },
+      {
+        "path": "src/core/spellWorkspace.ts",
+        "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+      },
+      {
+        "path": "src/core/validation.ts",
+        "sha256": "6409ae8e5620e6922a9e9e93b937e328f6b2e3e1f02a9ef704399c35f7ef7831"
+      },
+      {
+        "path": "src/data/adapt.ts",
+        "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+      },
+      {
+        "path": "src/data/catalog.ts",
+        "sha256": "612e37083e84549bb36d93d3a7d9fdb452a29a5ddda7ff75786c71f26002ba60"
+      },
+      {
+        "path": "src/data/catalogNormalizer.ts",
+        "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+      },
+      {
+        "path": "src/data/catalogSnapshot.ts",
+        "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+      },
+      {
+        "path": "src/data/catalogSource.ts",
+        "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+      },
+      {
+        "path": "src/data/catalogTransport.ts",
+        "sha256": "f713ee0c9adf9c070626b1b71d11a0bc1a17a3afcfa0b8032fcae72b98a5916b"
+      },
+      {
+        "path": "src/data/expand.ts",
+        "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+      },
+      {
+        "path": "src/data/homebrew.ts",
+        "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+      },
+      {
+        "path": "src/data/homebrewRecovery.ts",
+        "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
+      },
+      {
+        "path": "src/data/weaponTraining.ts",
+        "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+      },
+      {
+        "path": "src/platform/buildMode.ts",
+        "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+      },
+      {
+        "path": "src/platform/requestTimeout.ts",
+        "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+      },
+      {
+        "path": "src/platform/storage.ts",
+        "sha256": "eeb31b10ca86d6015d96372db413119dda7cc9a307307b73e4e309a01b266533"
+      },
+      {
+        "path": "src/platform/workbenchMode.ts",
+        "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+      },
+      {
+        "path": "src/platform/workspaceDatabase.ts",
+        "sha256": "7cc88eb29692a271270b8f8f5760ac9044eef55a877f219ab997feba58306df2"
+      },
+      {
+        "path": "src/platform/workspaceIdentity.ts",
+        "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+      },
+      {
+        "path": "src/platform/workspaceNamespace.ts",
+        "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+      }
+    ]
+  },
+  "source": {
+    "repository": "tjliqy/5etools-cn",
+    "revision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "inputs": [
+      {
+        "path": "data/optionalfeatures.json",
+        "sha256": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844"
+      },
+      {
+        "path": "data/class/class-artificer.json",
+        "sha256": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7"
+      }
+    ]
+  },
+  "ruleIdentity": "optionalfeature|TCE|Enhanced Defense",
+  "mechanisms": [
+    "explicit learned-item binding",
+    "armor/shield AC +1",
+    "artificer level 10 AC +2",
+    "save/reopen",
+    "replace/withdraw",
+    "source suspension",
+    "manual data protection"
+  ],
+  "receipts": [
+    {
+      "step": "learned-only",
+      "ac": 14
+    },
+    {
+      "step": "activated-armor",
+      "ac": 15
+    },
+    {
+      "step": "save-reopen",
+      "ac": 15
+    },
+    {
+      "step": "artificer-level-10",
+      "ac": 16
+    },
+    {
+      "step": "replace-with-unworn-shield",
+      "ac": 14
+    },
+    {
+      "step": "wield-shield",
+      "ac": 18
+    },
+    {
+      "step": "source-disabled",
+      "ac": 16
+    },
+    {
+      "step": "source-restored",
+      "ac": 18
+    },
+    {
+      "step": "manual-magic-edit-protected",
+      "ac": 19
+    },
+    {
+      "step": "withdraw-retains-manual-magic",
+      "ac": 19
+    }
+  ],
+  "notVerified": [
+    "external recipient transfer",
+    "death-duration lifecycle",
+    "full Infuse Item capacity and replacement lifecycle",
+    "production deployment"
+  ],
+  "publication": "unverified"
+}

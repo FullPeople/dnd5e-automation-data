@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24T03:36:46.886Z",
+  "consumerRevision": "bbf9df7c588a24c50b7faaf39ec938eec658cdf5",
+  "producerRevision": "1c6b16493d09d1b4ccfbcbf4736772ba46b325cd",
+  "sourceRevision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+  "inputs": {
+    "optionalfeatures.json": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "spells/spells-phb.json": "e1f2221020cfb5d31995c99b78dc09435c9962476ef1cef81b52399e6df0263d"
+  },
+  "entryHashes": {
+    "Beast Speech|PHB": "516c62ba6c799d5deff83c6a33b8714cdbe14b4f3a961904a919f84d8842e978",
+    "Mask of Many Faces|PHB": "095dc9175d7ee1545f0fe86977960bd95ba5b02e4e3cbd6811583dbe16e9e28e",
+    "Misty Visions|PHB": "9be6539a0fddc9781839a5c1cd03d8ffeb9838c7f1444907ab9b63ee0f4fd247",
+    "Warlock|PHB": "179a4e48b79fef7ae2244e88e614d04a0828caca4a854b6f65de61b6df802385",
+    "Eldritch Invocations|Warlock|PHB|2": "a482142444ed3639690525945c024d4b2476ac84bbe5e981ef3f7f0d323eaa8f"
+  },
+  "rules": [
+    "Beast Speech|PHB",
+    "Mask of Many Faces|PHB",
+    "Misty Visions|PHB"
+  ],
+  "steps": [
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Repeated free casts preserve spell slots, pact slots and manual counters",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Level downgrade suspends learned spell without deleting the answer",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Level restore after native reopen recovers the same owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Beast Speech|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Repeated free casts preserve spell slots, pact slots and manual counters",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Level downgrade suspends learned spell without deleting the answer",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Level restore after native reopen recovers the same owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Mask of Many Faces|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Unlearned options and same-name manual spell create no automatic grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Explicit class learning grants only the matching free spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Repeated free casts preserve spell slots, pact slots and manual counters",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Unrequested paid-slot casting and source-use recovery are rejected",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Forged canonical spell identity cannot retain a stale free-payment grant",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Changing the spell parent immediately revokes stale free-payment eligibility",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Native save/reopen and repeated offline sync retain exact grant identities",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Automation off immediately blocks free casting without touching saved intent",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Automation on restores one grant without catalog or replenishment",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Source disable immediately rejects payment and archives owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Reopen while source-disabled preserves archive and consumed resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Source restore offline reuses exact saved grant and spell IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Level downgrade suspends learned spell without deleting the answer",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Level restore after native reopen recovers the same owned spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Replacing learned invocation revokes old free payment only",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Relearning after replacement restores archived identities without catalog",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Explicit withdrawal revokes casting but retains manual same-name spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Relearning after withdrawal does not duplicate or replenish resources",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "Misty Visions|PHB",
+      "label": "Deleting the class removes its grants but leaves independent manual spell",
+      "passed": true,
+      "manualDataPreserved": true
+    },
+    {
+      "rule": "PHB invocation progression",
+      "label": "Three simultaneous learned spells: level 5 to 4 parks only the third; offline reopen and level 5 restore all exact IDs",
+      "passed": true,
+      "manualDataPreserved": true
+    }
+  ],
+  "definition": "Bounded exact-source consumer API workflow proof; not complete class/spell automation, browser coverage or release certification",
+  "manualBoundaries": [
+    "Beast Speech: animal targeting, understanding, conversation content and duration remain manual",
+    "Mask of Many Faces: chosen appearance, physical inspection, Investigation checks and duration remain manual",
+    "Misty Visions: material-component exemption is a stated boundary; illusion placement, manipulation, interactions, Investigation checks, concentration and duration remain manual",
+    "Invocation replacement timing and DM eligibility adjudication are not automatically authorized"
+  ],
+  "browser": "not-run",
+  "currentReleaseAvailable": null
+}

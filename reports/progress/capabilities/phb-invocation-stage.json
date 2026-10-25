@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23T15:11:13.053Z",
+  "scope": "Only 32 PHB optionalfeature entries tagged EI in one frozen input; excludes other sources, editions and feats. Not the all-rules denominator.",
+  "source": {
+    "url": "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/optionalfeatures.json",
+    "canonicalSha256": "031970dfac1770a548549bd30535319c2493c47ebeaedfdb6a601651bbfc3844"
+  },
+  "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+  "ci": "https://github.com/FullPeople/DND-card-web/actions/runs/39936545202",
+  "summary": {
+    "indexedEntries": 32,
+    "boundedMechanismSourceReviewed": 3,
+    "partialMechanismTested": 3,
+    "wholeRuleValidated": 0,
+    "currentReleaseAvailable": null,
+    "candidateMergedOrDeployed": 0
+  },
+  "validationBoundary": "Full 18,789-entry / 229-input replay completed on 9f027e82 with 164 module gates preserving all prior 159. Exact delivery 87396a8 has identical product sources and passed 18 actual desktop/narrow App flows, 357 directed tests (2 unrelated existing conditional skips), typecheck and formal build. These bounded workflow proofs are not whole-rule or current-publication certification.",
+  "sharedBoundary": "Only actual source-owned class learning; manual innate remains check. Replacement timing remains manual. Suspended, forgotten, replaced and level-down child trees retain manual data and spent balances, including when automation is off.",
+  "entries": [
+    {
+      "reference": "Agonizing Blast|PHB",
+      "page": 110,
+      "entrySha256": "49bf5b59f612deaf6f9c7f037e07d800434587a2750e588d03114bf9cc878ed7",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Armor of Shadows|PHB",
+      "page": 110,
+      "entrySha256": "7a3becaab182c000b06f7e5d2de3a73b9ff512ebd27bccbce1f9385df93b2e31",
+      "status": "partial-mechanism-tested",
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104",
+      "testedMechanism": "spell",
+      "boundary": "仅对自身，可不消耗法术位和材料成分随意施展法师护甲；自身目标、未穿甲条件、AC 和持续时间仍手动处理，不自动加护甲。",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Ascendant Step|PHB",
+      "page": 110,
+      "entrySha256": "efc917bafee5bef8afb9a9fd78cd5e2a40da7bfa62059a5a98127a8d2f8a244a",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Beast Speech|PHB",
+      "page": 110,
+      "entrySha256": "516c62ba6c799d5deff83c6a33b8714cdbe14b4f3a961904a919f84d8842e978",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Beguiling Influence|PHB",
+      "page": 110,
+      "entrySha256": "133c935633e85c878481a634c8064e96b41a8842c378c91a489f58ea3d407702",
+      "status": "partial-mechanism-tested",
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104",
+      "testedMechanism": "skills",
+      "boundary": "自动授予欺瞒和游说熟练，不叠加专精；手工熟练记录保留。",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Bewitching Whispers|PHB",
+      "page": 110,
+      "entrySha256": "2b01c6f5c3a0936f16b08008047c4c7bea593977dacbeb0d2a352d08a4e9cccb",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Book of Ancient Secrets|PHB",
+      "page": 110,
+      "entrySha256": "4a8d77ce0224da4e52c4e885cba349e30612fba0f4c29783eeeda60824656ca6",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Chains of Carceri|PHB",
+      "page": 110,
+      "entrySha256": "40e8b3ca544694d6047162dd59dd95e3ba736041349b73fe88bfd7d96796c0d2",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Devil's Sight|PHB",
+      "page": 110,
+      "entrySha256": "e02795502357fadae7c4da7daa3765968e1d12c90ce598a224f9927402ba20b1",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Dreadful Word|PHB",
+      "page": 110,
+      "entrySha256": "ae980c2360187ded3bf6e2cdc6125d30a07edca6c269667049469cb30085296b",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Eldritch Sight|PHB",
+      "page": 110,
+      "entrySha256": "2dd0748004d8a592d4650c565d8a6eb31c14ec41df4b198a30fc961dba78967c",
+      "status": "partial-mechanism-tested",
+      "consumerRevision": "9f027e82f30176958343de6f9217d81828ae33e5",
+      "pr": "https://github.com/FullPeople/DND-card-web/pull/104",
+      "testedMechanism": "spell",
+      "boundary": "可不消耗法术位随意施展侦测魔法；目标、专注、持续时间与侦测结果仍手动处理。",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Eldritch Spear|PHB",
+      "page": 111,
+      "entrySha256": "3416acce851c7744b4cd94beba84a61c512b45d4589e67657055238266f2484b",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Eyes of the Rune Keeper|PHB",
+      "page": 111,
+      "entrySha256": "e9e45192b991152b44695a733ce2bdfb19cbbc99fa13e5046338bb3f7484a0ba",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Fiendish Vigor|PHB",
+      "page": 111,
+      "entrySha256": "2ee65d3e6f574dbf89909617ee0401a97ca2cd209b4054e385e69f9bf12a4a47",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Gaze of Two Minds|PHB",
+      "page": 111,
+      "entrySha256": "cb133192d591ae4c599bc3ee7a6ef16cb8d16f8194f2fbe85167b673181d5478",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Lifedrinker|PHB",
+      "page": 111,
+      "entrySha256": "fb2c876c602fb773e68e5caf0e0520597a784b65fd482e1faab53067814c4195",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Mask of Many Faces|PHB",
+      "page": 111,
+      "entrySha256": "095dc9175d7ee1545f0fe86977960bd95ba5b02e4e3cbd6811583dbe16e9e28e",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Master of Myriad Forms|PHB",
+      "page": 111,
+      "entrySha256": "1b140781b1dae4ddd4117ee454984e7156ed8ef767330c7f8a2b58e232b950bb",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Minions of Chaos|PHB",
+      "page": 111,
+      "entrySha256": "c5cc2ec5af6403af7a472b069b1d47d35bffe3010c652e72197e84d9664a0f58",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Mire the Mind|PHB",
+      "page": 111,
+      "entrySha256": "88afa2a72c37e4f983fd3b41981119f7088d3d42c16977b77f95eeef5eb047cf",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Misty Visions|PHB",
+      "page": 111,
+      "entrySha256": "9be6539a0fddc9781839a5c1cd03d8ffeb9838c7f1444907ab9b63ee0f4fd247",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "One with Shadows|PHB",
+      "page": 111,
+      "entrySha256": "135fc4a1fb90fb7adb7d035435f3d469fe1601216cb8f392589def6c8f2ad074",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Otherworldly Leap|PHB",
+      "page": 111,
+      "entrySha256": "e0b80fb0d7c63b199d7041924c7eeff175952e0faa85c089af855df7dc88a5d7",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Repelling Blast|PHB",
+      "page": 111,
+      "entrySha256": "060882cf9f907f02645051ff89c1c9b7b126ce36174553f705dbb814e585f04f",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Sculptor of Flesh|PHB",
+      "page": 111,
+      "entrySha256": "77e71d1e54204e58582f77d9f347de1db27f0862cdd7b7da0b474728fd0c959a",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Sign of Ill Omen|PHB",
+      "page": 111,
+      "entrySha256": "df0504d6ffd05ee46396de3b464bbe03ae43f0a9633691e00085a5efa0c03c2e",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Thief of Five Fates|PHB",
+      "page": 111,
+      "entrySha256": "e9d5064cb44797e36af3981434ebab5e1883c74b6867ee63fe2f8c1f6abdbd10",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Thirsting Blade|PHB",
+      "page": 111,
+      "entrySha256": "c610edad1950b5f8ea18dc31acb56317ecfe623c29a0c3455453d3a36266a9d9",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Visions of Distant Realms|PHB",
+      "page": 111,
+      "entrySha256": "757d3105f2fa1ec7a2f94ef3413389f4adf0c806deb938909012c68b61567200",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Voice of the Chain Master|PHB",
+      "page": 111,
+      "entrySha256": "62985aae1345617f2ed4a555a40ea10cf80c6af533a88b602c5d0c20ed7c84e3",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Whispers of the Grave|PHB",
+      "page": 111,
+      "entrySha256": "9764be33324ce89d932f4f26abe3b25241da9251b8ed698214f1a55d300ea101",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    },
+    {
+      "reference": "Witch Sight|PHB",
+      "page": 111,
+      "entrySha256": "684718ec62defd76df6b2f5a99fbbd384b1f193bd4dd702dc926f1522ebf673e",
+      "status": "pending-review",
+      "wholeRuleValidated": false,
+      "currentReleaseAvailable": null
+    }
+  ],
+  "runtimeReport": "reports/progress/runtime-coverage.json",
+  "browserAcceptance": {
+    "deliveryRevision": "87396a8babed8d2cd30d2eb6a6ca074b7c4fc3ca",
+    "run": "https://github.com/FullPeople/DND-card-web/actions/runs/39974063901",
+    "passed": 18,
+    "skipped": 0,
+    "scope": "Combined four-infusion / three-invocation authored App flows at desktop and 390px narrow viewports; not private player data or live deployment"
+  }
+}

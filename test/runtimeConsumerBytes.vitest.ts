@@ -35,4 +35,17 @@ describe('CI verifies the actual pinned consumer bytes',()=>{
  });
  it('rejects duplicate and unsafe module paths before executing a probe',()=>{report.consumer.modules.push({...report.consumer.modules[0]});expect(()=>verifyConsumerBytes(report,web)).toThrow('consumer modules');report.consumer.modules.pop();report.consumer.modules[0].path='src/../external.ts';expect(()=>verifyConsumerBytes(report,web)).toThrow('consumer modules');report.consumer.modules[0].path='src/./probe.ts';expect(()=>verifyConsumerBytes(report,web)).toThrow('Unsafe');});
  it('rejects a directory nested inside another checkout as the root',()=>{expect(()=>verifyConsumerBytes(report,join(web,'src'))).toThrow('checkout root');});
+ for(const corruption of ['working bytes','forged working hash','missing file'])it(`rejects ${corruption} for the explicit TrainingChips preservation gate`,()=>{
+  const path='src/ui/TrainingChips.tsx',file=join(web,path),original='export const TrainingChips = () => null;\n';
+  mkdirSync(join(web,'src/ui'));writeFileSync(file,original);
+  execFileSync('git',['add',path],{cwd:web,stdio:'pipe'});
+  execFileSync('git',['-c','user.name=Consumer verification fixture','-c','user.email=fixture@example.invalid','commit','-qm','Bind UI preservation gate'],{cwd:web,stdio:'pipe'});
+  report.consumer.revision=execFileSync('git',['rev-parse','HEAD'],{cwd:web,encoding:'utf8'}).trim();
+  const module={path,sha256:sha(original)};report.consumer.modules.push(module);
+  if(corruption==='missing file'){rmSync(file);expect(()=>verifyConsumerBytes(report,web)).toThrow('ENOENT');return;}
+  const changed='export const TrainingChips = () => "changed";\n';writeFileSync(file,changed);
+  if(corruption==='forged working hash'){module.sha256=sha(changed);expect(()=>verifyConsumerBytes(report,web)).toThrow('committed bytes');}
+  else expect(()=>verifyConsumerBytes(report,web)).toThrow('working bytes');
+ });
+
 });
