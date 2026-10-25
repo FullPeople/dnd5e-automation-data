@@ -4,7 +4,7 @@
   "updatedAt": "2026-10-22T09:36:21.396Z",
   "consumer": {
     "repository": "FullPeople/DND-card-web",
-    "revision": "94508ce92cefd0ba7f728aca030dbf50307864f9",
+    "revision": "1d79842fc07181686a684401f7f292947d06345b",
     "modules": [
       {
         "path": "src/cloud/CardStack.tsx",
@@ -680,7 +680,7 @@
       },
       {
         "path": "src/wiki/WikiApp.tsx",
-        "sha256": "00cbd104cccfab938390db6f021c48aeb32f222596d2d46bc6f8e837222df806"
+        "sha256": "26ea0198ee4cee96caa131bdbc9ffb354a0075690e1f32c396d76e9bebce09ae"
       }
     ]
   },
@@ -301144,9 +301144,9 @@
   },
   "uiRebind": {
     "kind": "consumer-binding-only-no-second-full-replay",
-    "at": "2026-10-25T06:17:32.196Z",
+    "at": "2026-10-25T06:23:32.406Z",
     "from": "b08b0faaa05e7a9db743f7f3b362dc392785853d",
-    "to": "94508ce92cefd0ba7f728aca030dbf50307864f9",
+    "to": "1d79842fc07181686a684401f7f292947d06345b",
     "actualDependenciesSha256": "0bbda0d618e431e680ad5c97137731060f034fe65807bba34c832fcb8e49a364",
     "actualSourceDependenciesUnchanged": true,
     "baseline305": "d4f82004ae0fe5b69b68705158c0e53ebccd3afa",
@@ -307421,6 +307421,12 @@
       "normalizedSha256": "858f0f2907793ae41909447a12de019590e14f0e28fd161cdba6e1b302ba2713",
       "generatedSourceLabelCommentsChanged": 50,
       "executableBytesAndDependenciesUnchanged": true
+    },
+    "supersededLocalBinding": {
+      "dataRevision": "169525a9c589fa35feaea42d9da4648589c9b4b6",
+      "consumer": "94508ce92cefd0ba7f728aca030dbf50307864f9",
+      "reportSha256": "47ca9f1c035dc356d46f29c30ea575d34393fa5704d1891801e0e208a973f08f",
+      "preservedAllLocalGatePaths": 169
     },
     "styleSources": [
       {
