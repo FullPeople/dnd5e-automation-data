@@ -180,7 +180,7 @@ jobs:
           node --input-type=module <<'NODE'
           import {readFileSync,appendFileSync} from 'node:fs';
           const r=JSON.parse(readFileSync('reports/progress/data-chain-integration-20261025.json','utf8'));
-          for(const [key,value] of Object.entries({data:r.priorMain.revision,consumer:r.priorMain.consumerRevision})){
+          for(const [key,value] of Object.entries({data:r.priorMain.revision,consumer:r.priorMain.consumerRevision,acceptedData:r.acceptedTip.revision})){
             if(!/^[a-f0-9]{40}$/.test(value))throw Error('Invalid preserved revision');
             appendFileSync(process.env.GITHUB_OUTPUT,key+'='+value+'\n');
           }
@@ -196,6 +196,11 @@ jobs:
           ref: ${{ steps.lineage.outputs.consumer }}
           path: .cache/ui8-consumer
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.lineage.outputs.acceptedData }}
+          path: .cache/accepted-data
+          persist-credentials: false
       - name: Verify both report hashes and preserved UI8 proof
         run: |
           node --input-type=module <<'NODE'
@@ -203,7 +208,7 @@ jobs:
           import {createHash} from 'node:crypto';
           const r=JSON.parse(readFileSync('reports/progress/data-chain-integration-20261025.json','utf8'));
           const check=(path,expected)=>{const hash=createHash('sha256').update(readFileSync(path)).digest('hex');if(hash!==expected)throw Error('Evidence hash mismatch: '+path);};
-          check(r.acceptedTip.reportPath,r.acceptedTip.reportSha256);
+          check('.cache/accepted-data/'+r.acceptedTip.reportPath,r.acceptedTip.reportSha256);
           check('.cache/ui8-data/'+r.priorMain.reportPath,r.priorMain.reportSha256);
           check('.cache/ui8-data/'+r.priorMain.proofPath,r.priorMain.proofSha256);
           check(r.priorMain.proofPath,r.priorMain.proofSha256);
