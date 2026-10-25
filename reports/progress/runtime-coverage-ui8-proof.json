@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "interaction-sprint-ui-binding-only-no-additional-full-replay",
+  "round": 8,
+  "consumer": "1d79842fc07181686a684401f7f292947d06345b",
+  "pairedReportSha256": "1dd8e0ca0943e3f5a16296ee23a59ec2334dfe64410382544905d145e5e47ec5",
+  "pairedReportBytes": 7836085,
+  "boundModules": 169,
+  "preservedPreviousModules": 159,
+  "addedGatePaths": [
+    "src/ui/BookReader.tsx",
+    "src/ui/ClearableSearch.tsx",
+    "src/ui/GlobalSearch.tsx",
+    "src/ui/LibraryDocument.tsx",
+    "src/ui/WikiLayout.tsx",
+    "src/ui/WikiSplitter.tsx",
+    "src/ui/WorkspaceSplitter.tsx",
+    "src/ui/pointerDrag.ts",
+    "src/ui/useEntrySearch.ts",
+    "src/wiki/WikiApp.tsx"
+  ],
+  "changedConsumerPaths": [
+    "src/ui/BookReader.tsx",
+    "src/ui/CharacterTabs.tsx",
+    "src/ui/ClearableSearch.tsx",
+    "src/ui/GlobalSearch.tsx",
+    "src/ui/LibraryDocument.tsx",
+    "src/ui/LibraryFilters.tsx",
+    "src/ui/NumberInput.tsx",
+    "src/ui/PaperFrame.tsx",
+    "src/ui/ValueTrace.tsx",
+    "src/ui/VirtualList.tsx",
+    "src/ui/WikiLayout.tsx",
+    "src/ui/WikiSplitter.tsx",
+    "src/ui/WorkspaceSplitter.tsx",
+    "src/ui/pointerDrag.ts",
+    "src/ui/useEntrySearch.ts",
+    "src/wiki/WikiApp.tsx"
+  ],
+  "styleSources": [
+    {
+      "path": "src/ui/libraryRefine.css",
+      "sha256": "c584b605da76c2b3a520e761c7874dc8c48cd2c9fe9fb831b6e608d494165def",
+      "bytes": 24019
+    }
+  ],
+  "actualAdapterDependencies": 59,
+  "actualExternalDependencies": 1,
+  "actualAdapterDependencyBytesUnchanged": true,
+  "adapterComparison": {
+    "rawSha256": "8c76828dc9c78a784d050892c2ab73ea504df6688722deb90a7a6e1ccbc97298",
+    "sealedFinalSha256": "858f0f2907793ae41909447a12de019590e14f0e28fd161cdba6e1b302ba2713",
+    "normalizedSha256": "858f0f2907793ae41909447a12de019590e14f0e28fd161cdba6e1b302ba2713",
+    "generatedSourceLabelCommentsChanged": 50,
+    "executableBytesAndDependenciesUnchanged": true
+  },
+  "recordsAndWitnessesUnchanged": true,
+  "records": 18789,
+  "inputs": 229,
+  "inputManifestAndRawCanonicalBytesVerified": true,
+  "mechanismVerifiedRecords": 6537,
+  "reviewedRecords": 4561,
+  "previousDataRevision": "2d549d7bfd3a2c9870c4aeeadb5ebf1a6852a83c",
+  "previousPairedReportSha256": "f4035b7bb990b3bdf5e0e5d71e605ccea30f7d1923a3a0aa911d1517921150e6",
+  "previousUI7FullProvenancePreserved": true,
+  "originalVerifierProofSha256": "61e2d1ab58151108bee2ae6269b71b72e0d5ef373f936578899b259060a15253",
+  "originalFullReportSha256": "ab2d1a1a8b8dc7ac131acaea2b7bad4a43bfc25fc9236202287924d956ba24bc",
+  "fullReplayUpdatedAt": "2026-10-22T09:36:21.396Z",
+  "scriptSha256": "ce59be95e45932b14491eb6c23b18d5be4203d6b006a8021c512f06ca3e9458d",
+  "consumerWorkingAndCommittedBytesVerified": true,
+  "uiBindingReason": "Improve numeric editing, retained-card ownership, pointer interactions, virtual lists, Wiki search/filter/document rendering and reading scroll persistence without changing rule evaluation or source data.",
+  "supersededLocalBinding": {
+    "dataRevision": "169525a9c589fa35feaea42d9da4648589c9b4b6",
+    "consumer": "94508ce92cefd0ba7f728aca030dbf50307864f9",
+    "reportSha256": "47ca9f1c035dc356d46f29c30ea575d34393fa5704d1891801e0e208a973f08f",
+    "preservedAllLocalGatePaths": 169
+  }
+}
