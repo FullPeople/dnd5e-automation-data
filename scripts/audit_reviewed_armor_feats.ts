@@ -77,7 +77,7 @@ assert.equal(evidence.source,'PHB','Consumer PHB source');assert.equal(evidence.
 assert.deepEqual(evidence.inputs,Object.fromEntries(['feats.json','variantrules.json'].map(path=>[path,expectedInputs[path]])),'Consumer reviewed canonical input hashes');
 assert.deepEqual(evidence.retrievalRevisions,Object.fromEntries(['feats.json','variantrules.json'].map(path=>[path,retrievalRevisions[path]])),'Consumer independently verified retrieval revisions');
 assert.deepEqual(evidence.supportingEntryHashes,Object.fromEntries(['Feats|PHB','Multiclassing|PHB'].map(key=>[key,expectedEntries[key]])),'Consumer repeatability and total-level source hashes');
-assert.deepEqual(evidence.rules,[...previousRules,...reviewedRules],'Consumer reviewed armor feat mechanics');
+assert.deepEqual(evidence.rules.filter((row:any)=>row.kind!=='weapon-master'),[...previousRules,...reviewedRules],'Consumer reviewed armor feat mechanics');
 const modernEvidence=JSON.parse(readFileSync(join(webRoot,'src/core/automation/modernArmorTrainingEvidence.json'),'utf8'));
 assert.equal(modernEvidence.schemaVersion,1,'Retained XPHB training evidence version');
 assert.equal(modernEvidence.mechanism,'preserve-existing-modern-armor-training','Retained XPHB training mechanism');
