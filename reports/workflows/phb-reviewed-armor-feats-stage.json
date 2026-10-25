@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T02:57:12.674Z",
-  "consumerRevision": "00b5be642ec17879ab697179938a4b3e341c4813",
-  "consumerSourceTree": "a166aaddca3cf0f3d6d3c1a376a720e78b63943f",
+  "updatedAt": "2026-10-25T04:51:19.329Z",
+  "consumerRevision": "1a6319a9c48c734e7fec04c538d64f7aa9d151b2",
+  "consumerSourceTree": "4d40c102e1ecd0617c39dd9b33d711d34e9c5103",
   "consumerModules": [
     {
       "path": "src/cloud/api.ts",
@@ -22,7 +22,7 @@
     },
     {
       "path": "src/core/automation/abilityAdvancements.ts",
-      "sha256": "c2228171ebdd26d2e88599d99a411c2fb64c61af95e99568f7714c9e6ce04d25"
+      "sha256": "545f9e4f7986fef6fa7cf6cfe103274c541ed90947ea0300fca7d59737bfe039"
     },
     {
       "path": "src/core/automation/actions.ts",
@@ -34,7 +34,7 @@
     },
     {
       "path": "src/core/automation/asi.ts",
-      "sha256": "44bf8cd4c35424682d89b7c1810fd86f52143e49d63172238a1bf56ba616d1e3"
+      "sha256": "32b5130a62d8b57233d396ba69cc3b8a5379c2eb38a919a1e97d63edbb9c0fea"
     },
     {
       "path": "src/core/automation/asiEvidence.json",
@@ -46,11 +46,11 @@
     },
     {
       "path": "src/core/automation/baseAbilities.ts",
-      "sha256": "8c0612d1516be8718e9f926dc093ca5a3aceeb31c817f4ff9007553b3ff14141"
+      "sha256": "30b1930cdd8e839b324578d5074145b6d4486b85ed6727cdf633ebb2617a5d6a"
     },
     {
       "path": "src/core/automation/choices.ts",
-      "sha256": "707033565dc527a845aa4c4a0dae5786d14a803769333cb5d3eec27bd8fca39f"
+      "sha256": "f60a9efd82bc14cf8f8ec0e775908f23ab2fb2be3bfc56209dce335ed954ddbb"
     },
     {
       "path": "src/core/automation/classChoiceEvidence.json",
@@ -130,15 +130,23 @@
     },
     {
       "path": "src/core/automation/reviewedFeatEvidence.json",
-      "sha256": "6b7bf567aefb7356b7e89e58b095f5537ac2d88d05087d00539e768622ba412c"
+      "sha256": "3771c726324b9bab21b6bdb4e244db276b6ca23ea00d795119fd913c9d59944e"
     },
     {
       "path": "src/core/automation/reviewedFeatIdentity.ts",
-      "sha256": "073f008f53629200c56e21c6e1ca73e5508db4480ddf2ac757f00173b9137663"
+      "sha256": "2e5da4c5f4b0c8bec22d7591a2ab9d8befc8def954828ae795a9beda5633d559"
     },
     {
       "path": "src/core/automation/reviewedFeats.ts",
-      "sha256": "046f5722731ec94b72e64282e92d22de46d5586a6fe42fedf6a14bfb806a8ab4"
+      "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedWeaponEvidence.json",
+      "sha256": "543f18f2404fe7619809b734de77de8b02645828a75a6fe72ed42945ae0c031f"
+    },
+    {
+      "path": "src/core/automation/reviewedWeapons.ts",
+      "sha256": "1c08ded5e19c2b1b2b0c7e17744c60c594f6ab40cce8be539531dc583238636c"
     },
     {
       "path": "src/core/automation/sourceClassChoices.ts",
@@ -166,11 +174,11 @@
     },
     {
       "path": "src/core/automation/training.ts",
-      "sha256": "ea16aec54c0affa435dabb5513cdc78b89e2af65c46aef852fe36b205f3e35db"
+      "sha256": "b68ceb45af704eafdd1c2a291577081bc890b9fd8f09b693cdaf8dca03d456c4"
     },
     {
       "path": "src/core/automation/weapons.ts",
-      "sha256": "71b09e2b81b6315a87877683fc59c40cd56d76e0dd9238ccf599dbde21f14d4a"
+      "sha256": "54a6df05b6349b87bc701537fa874847ee4d3fa8486fe72ca56879d1e8302dc0"
     },
     {
       "path": "src/core/bookRituals.ts",
@@ -186,7 +194,7 @@
     },
     {
       "path": "src/core/engine.ts",
-      "sha256": "61f1a44aa56d5d4f0d474302284b92d821d8b638723cfb4fd2a9591e9d3b86fb"
+      "sha256": "80daa4fa3253195cce29c3f02dc5f674f9e480602da9dd8823af87383e12e6b7"
     },
     {
       "path": "src/core/entryNameIndex.ts",
@@ -218,7 +226,7 @@
     },
     {
       "path": "src/core/model.ts",
-      "sha256": "6212ae878d45bd5c0f37080015ec7570c12d30c189884e730ac8beabc02d1a42"
+      "sha256": "8d6ebfbd1f2c4f2be834e0c48de5ac2770ff7ef78b6fe737d60fdcb9c529bfd1"
     },
     {
       "path": "src/core/numericExpression.ts",
@@ -278,7 +286,7 @@
     },
     {
       "path": "src/core/validation.ts",
-      "sha256": "0c1cf63ed6bd27cc15e403453de2226c6bd7c3291e1c18fe3c852fd1540c94cb"
+      "sha256": "9c123c2fccc32f5c62b856df2d803c4562a686de0ddc8e637663817bb7e095ab"
     },
     {
       "path": "src/core/weaponAttacks.ts",
@@ -353,8 +361,8 @@
       "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
     }
   ],
-  "producerRevision": "fa85faec7468406303b10be79c4c6b3e0259ec1f",
-  "producerScriptSha256": "efe54d288ad019e13097c5a91f175fc82a5e8c00da863b379222be6e22f6e594",
+  "producerRevision": "c29286e17e5b6f3895731760f5d596a0b0ef7ef9",
+  "producerScriptSha256": "850b8af3f7fa61c15b02d1a62f24f5862c8a5830af2520d2eb732d5eeaebc80a",
   "retrievalRevisions": {
     "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
     "class/class-barbarian.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
