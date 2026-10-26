@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T04:51:19.329Z",
-  "consumerRevision": "1a6319a9c48c734e7fec04c538d64f7aa9d151b2",
-  "consumerSourceTree": "4d40c102e1ecd0617c39dd9b33d711d34e9c5103",
+  "updatedAt": "2026-10-25T09:15:09.219Z",
+  "consumerRevision": "dd83d6ff915ab1e1f1ac133373bd304c7e903430",
+  "consumerSourceTree": "b1095fa3401b0052131d635425739cc3782bf59c",
   "consumerModules": [
     {
       "path": "src/cloud/api.ts",
@@ -22,7 +22,7 @@
     },
     {
       "path": "src/core/automation/abilityAdvancements.ts",
-      "sha256": "545f9e4f7986fef6fa7cf6cfe103274c541ed90947ea0300fca7d59737bfe039"
+      "sha256": "3c285e27d996783fc7870a525990aaecfb6e9db5ac879b5ddd5a9ace3eeb13d8"
     },
     {
       "path": "src/core/automation/actions.ts",
@@ -34,7 +34,7 @@
     },
     {
       "path": "src/core/automation/asi.ts",
-      "sha256": "32b5130a62d8b57233d396ba69cc3b8a5379c2eb38a919a1e97d63edbb9c0fea"
+      "sha256": "1b48b47ca57660fabdec8a2b2d458089d78ac9ae5c40f56eb183022ee4286769"
     },
     {
       "path": "src/core/automation/asiEvidence.json",
@@ -46,11 +46,11 @@
     },
     {
       "path": "src/core/automation/baseAbilities.ts",
-      "sha256": "30b1930cdd8e839b324578d5074145b6d4486b85ed6727cdf633ebb2617a5d6a"
+      "sha256": "37b9ddc46d39647daa18e1a38c1b107cf34a53c4b83113f867a06864004b90ce"
     },
     {
       "path": "src/core/automation/choices.ts",
-      "sha256": "f60a9efd82bc14cf8f8ec0e775908f23ab2fb2be3bfc56209dce335ed954ddbb"
+      "sha256": "b25b073f8caa4390ebad7d8a84c2917e24c36b82af2f4bdf946fe5a9a56352e5"
     },
     {
       "path": "src/core/automation/classChoiceEvidence.json",
@@ -134,11 +134,27 @@
     },
     {
       "path": "src/core/automation/reviewedFeatIdentity.ts",
-      "sha256": "2e5da4c5f4b0c8bec22d7591a2ab9d8befc8def954828ae795a9beda5633d559"
+      "sha256": "1f8d40fa73dd720cae6e89740ba7ecc136a46f69ee9578036ad881bed6cebcc6"
     },
     {
       "path": "src/core/automation/reviewedFeats.ts",
       "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguist.ts",
+      "sha256": "f7c045b6f95162671555402127e0e4baf1141c53145e950474936ac6bc340346"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguistEvidence.json",
+      "sha256": "059d3f9549ea81abec759c047d5a39e7fa96deaa80341535a0a7b9c3625896ae"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilled.ts",
+      "sha256": "43f2d69e557329b889fe2d0f69e6c1e232743fc59a23a29d71c4b7a486755949"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilledEvidence.json",
+      "sha256": "ab397763ebf45a34da3e5e418c2794df65cfe6b3ccbcf9055b250bb0072e17af"
     },
     {
       "path": "src/core/automation/reviewedWeaponEvidence.json",
@@ -174,7 +190,7 @@
     },
     {
       "path": "src/core/automation/training.ts",
-      "sha256": "b68ceb45af704eafdd1c2a291577081bc890b9fd8f09b693cdaf8dca03d456c4"
+      "sha256": "e41916d9fdb4adbdd2ee35d6b2bd131b21ad3f28537718bf65b81740ba0bec69"
     },
     {
       "path": "src/core/automation/weapons.ts",
@@ -194,7 +210,7 @@
     },
     {
       "path": "src/core/engine.ts",
-      "sha256": "80daa4fa3253195cce29c3f02dc5f674f9e480602da9dd8823af87383e12e6b7"
+      "sha256": "f19ed99f904dd8dcd0c9dfa2c113ba9a6ab3bf257ed0b32175edb189ae4dd9ff"
     },
     {
       "path": "src/core/entryNameIndex.ts",
@@ -226,7 +242,7 @@
     },
     {
       "path": "src/core/model.ts",
-      "sha256": "8d6ebfbd1f2c4f2be834e0c48de5ac2770ff7ef78b6fe737d60fdcb9c529bfd1"
+      "sha256": "e06ad2c8054871356f49c105d25b5cb5823206b65909e96de1c52b4622ff3d0c"
     },
     {
       "path": "src/core/numericExpression.ts",
@@ -286,7 +302,7 @@
     },
     {
       "path": "src/core/validation.ts",
-      "sha256": "9c123c2fccc32f5c62b856df2d803c4562a686de0ddc8e637663817bb7e095ab"
+      "sha256": "974e33b92434fabc382dbd8bb6280ab732065f8739ce5a349dd43f47a0e68b64"
     },
     {
       "path": "src/core/weaponAttacks.ts",
@@ -361,7 +377,7 @@
       "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
     }
   ],
-  "producerRevision": "c29286e17e5b6f3895731760f5d596a0b0ef7ef9",
+  "producerRevision": "4f9b0453d1bf07af297b25db3093e8d2c1b75e44",
   "producerScriptSha256": "850b8af3f7fa61c15b02d1a62f24f5862c8a5830af2520d2eb732d5eeaebc80a",
   "retrievalRevisions": {
     "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
