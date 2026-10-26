@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 1,
+  "kind": "accepted-rules-integrated-with-main307",
+  "priorMain": {
+    "web": "30f44b41efb0d530121ef8f72426b1dd523ddd26",
+    "data": "3fd5382a302213a13a6ed843f21d67348268fef2"
+  },
+  "acceptedPullRequests": {
+    "web": [
+      {
+        "number": 104,
+        "head": "87396a8babed8d2cd30d2eb6a6ca074b7c4fc3ca"
+      },
+      {
+        "number": 105,
+        "head": "deb4d2f5c1f731e44487f3bc9539a029bb36d668"
+      },
+      {
+        "number": 106,
+        "head": "0a77f521ef5fdb860c3e2606c1a707b3939e0766"
+      },
+      {
+        "number": 107,
+        "head": "9f1f6cd81aef176b87433e5aa44c4144ea4cf0c8"
+      },
+      {
+        "number": 108,
+        "head": "b8e15eac300637fa4aa49135974546f8622de888"
+      },
+      {
+        "number": 109,
+        "head": "e99900198c3daa06176c1f233e4490b40439f821"
+      },
+      {
+        "number": 110,
+        "head": "2391c981469d4a339557560c47aaac39d7a7a906"
+      },
+      {
+        "number": 111,
+        "head": "22b423a8f6030686f4fb7ad4814445d645f3ca8a"
+      },
+      {
+        "number": 112,
+        "head": "2f8bb8938c55a0f1a937efe95bdbf30222680f86"
+      },
+      {
+        "number": 113,
+        "head": "a5cdee8682a4b96fe77f946a55e95d76250c7118"
+      },
+      {
+        "number": 114,
+        "head": "22501964f77edea053f5fd782a6b197a911d016e"
+      },
+      {
+        "number": 115,
+        "head": "d3540abcf9f9600cdb683433e7b05a767a1dd0a8"
+      },
+      {
+        "number": 116,
+        "head": "52d5be10e161464d5e0846d1dc2202ea1169754b"
+      },
+      {
+        "number": 117,
+        "head": "78e1fac62bddc52e36d5ad7a2cc4d18e8f0acc0e"
+      },
+      {
+        "number": 119,
+        "head": "0478305fb20ddc9b65538fc50d5740d622c1589c"
+      }
+    ],
+    "data": [
+      {
+        "number": 71,
+        "head": "2076f849bc9f8d6d4639c0796d026ec96744bf8f"
+      },
+      {
+        "number": 73,
+        "head": "af9334b7eb271d39a29c81d943c7156018920a27"
+      }
+    ]
+  },
+  "alreadyIntegratedDataPullRequests": [
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    74,
+    75
+  ],
+  "consumerRevision": "fbf068a3ffebf46d94dc21e20a5f31776ccf98c0",
+  "consumerSourceTree": "ecfd3d140c6f0ff67af697b9e41580d83e996c89",
+  "producerRevision": "276041652f7f859f48ec357047084c1aa347b463",
+  "consumerRuleTree": "1498689a7ad0ad318576743da60c2feb8f9f5995",
+  "consumerDataTree": "4acbdb8fed149884e3d017f57206e06129d2dc07",
+  "consumerDependencyLockSha256": "217685a4362e524bea866f7172872f1d4b4f3afbc08d20501862f248f7a5be41",
+  "producerSourceTree": "7f56ceffe7b7cde6e07fae9e0ef11ec66be540f8",
+  "producerScriptsTree": "b8fd2e610f56891f6b81af3d8d5108fa7671c689",
+  "producerDependencyLockSha256": "a92f3cb812676b4c7be27ec589fd0c7489402578b5c524873f38c10e9f1c587a",
+  "main307SourcePreservation": [
+    {
+      "path": "src/platform/announcement.ts",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/platform/releaseNotes.ts",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/BookReader.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/CharacterTabs.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/ClearableSearch.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/GlobalSearch.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/LibraryDocument.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/LibraryFilters.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/NumberInput.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/PaperFrame.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/ValueTrace.tsx",
+      "main307RetainedByteForByte": false
+    },
+    {
+      "path": "src/ui/VirtualList.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/WikiLayout.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/WikiSplitter.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/WorkspaceSplitter.tsx",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/libraryRefine.css",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/pointerDrag.ts",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/ui/useEntrySearch.ts",
+      "main307RetainedByteForByte": true
+    },
+    {
+      "path": "src/wiki/WikiApp.tsx",
+      "main307RetainedByteForByte": true
+    }
+  ],
+  "reportPath": "reports/progress/runtime-coverage.json",
+  "reportSha256": "5aca6a7cc3cab0baad36d6861ab9bc282d8927f936cea4753528ed5d47e8e8d7",
+  "reportBytes": 4370323,
+  "completedAt": "2026-10-26T06:43:29.292Z",
+  "previousAcceptedReport": {
+    "dataRevision": "af9334b7eb271d39a29c81d943c7156018920a27",
+    "sha256": "888fc094405f0d295903345361c297c7ce452844f6c18036827767e0b5f85d42"
+  },
+  "modules": 210,
+  "preservedMain307Gates": 169,
+  "preservedAcceptedGates": 200,
+  "requiredGatePaths": [
+    "src/cloud/CardStack.tsx",
+    "src/cloud/CloudCardControl.tsx",
+    "src/cloud/CloudSave.tsx",
+    "src/cloud/QQLogin.tsx",
+    "src/cloud/api.ts",
+    "src/cloud/authorizationLease.ts",
+    "src/cloud/room.ts",
+    "src/cloud/sync.ts",
+    "src/core/automation/abilityAdvancements.ts",
+    "src/core/automation/actions.ts",
+    "src/core/automation/active.ts",
+    "src/core/automation/asi.ts",
+    "src/core/automation/asiEvidence.json",
+    "src/core/automation/backgroundAbilities.ts",
+    "src/core/automation/baseAbilities.ts",
+    "src/core/automation/choices.ts",
+    "src/core/automation/classChoiceEvidence.json",
+    "src/core/automation/classChoiceSourceGrant.ts",
+    "src/core/automation/classChoiceSupport.ts",
+    "src/core/automation/classSpellChoices.ts",
+    "src/core/automation/equipment.ts",
+    "src/core/automation/featureArmor.ts",
+    "src/core/automation/featureResources.ts",
+    "src/core/automation/infusionCharges.ts",
+    "src/core/automation/infusionEvidence.json",
+    "src/core/automation/infusions.ts",
+    "src/core/automation/invocationAtWillEvidence.json",
+    "src/core/automation/invocationDualEvidence.json",
+    "src/core/automation/invocationEvidence.json",
+    "src/core/automation/invocations.ts",
+    "src/core/automation/legacyAsiEvidence.json",
+    "src/core/automation/modernArmorTrainingEvidence.json",
+    "src/core/automation/refuelingRing.ts",
+    "src/core/automation/refuelingSlotResolver.ts",
+    "src/core/automation/reviewedFeatEvidence.json",
+    "src/core/automation/reviewedFeatIdentity.ts",
+    "src/core/automation/reviewedFeats.ts",
+    "src/core/automation/reviewedLinguist.ts",
+    "src/core/automation/reviewedLinguistEvidence.json",
+    "src/core/automation/reviewedSkilled.ts",
+    "src/core/automation/reviewedSkilledEvidence.json",
+    "src/core/automation/reviewedWeaponEvidence.json",
+    "src/core/automation/reviewedWeapons.ts",
+    "src/core/automation/sourceClassChoices.ts",
+    "src/core/automation/sourceEquipment.ts",
+    "src/core/automation/sourceResourcePools.ts",
+    "src/core/automation/sourceSpellPlan.ts",
+    "src/core/automation/sourceSpellState.ts",
+    "src/core/automation/sourceSpells.ts",
+    "src/core/automation/state.ts",
+    "src/core/automation/training.ts",
+    "src/core/automation/weapons.ts",
+    "src/core/cardMigrationIssues.ts",
+    "src/core/castingSnapshot.ts",
+    "src/core/characterDetails.ts",
+    "src/core/classMigrationQuery.ts",
+    "src/core/displayCharacterEdit.ts",
+    "src/core/engine.ts",
+    "src/core/entryNameIndex.ts",
+    "src/core/entryReferences.ts",
+    "src/core/featureOwnership.ts",
+    "src/core/hitPoints.ts",
+    "src/core/model.ts",
+    "src/core/numericExpression.ts",
+    "src/core/preparation.ts",
+    "src/core/proficiencyText.ts",
+    "src/core/quickbar.ts",
+    "src/core/racialAbilities.ts",
+    "src/core/resourceWidgets.ts",
+    "src/core/resources.ts",
+    "src/core/runtimeCharacterEdit.ts",
+    "src/core/sheet.ts",
+    "src/core/siteSources.ts",
+    "src/core/sourceCorrections.ts",
+    "src/core/spellCapacity.ts",
+    "src/core/spellResourceKeys.ts",
+    "src/core/spellWorkspace.ts",
+    "src/core/spellcastingRules.ts",
+    "src/core/spells.ts",
+    "src/core/validation.ts",
+    "src/data/adapt.ts",
+    "src/data/catalog.ts",
+    "src/data/catalogNormalizer.ts",
+    "src/data/catalogReader.ts",
+    "src/data/catalogReader.worker.ts",
+    "src/data/catalogReaderProtocol.ts",
+    "src/data/catalogSnapshot.ts",
+    "src/data/catalogSource.ts",
+    "src/data/catalogTransport.ts",
+    "src/data/expand.ts",
+    "src/data/homebrew.ts",
+    "src/data/homebrewRecovery.ts",
+    "src/data/weaponTraining.ts",
+    "src/platform/activeSheet.ts",
+    "src/platform/buildMode.ts",
+    "src/platform/cardViewReconciliation.ts",
+    "src/platform/catalogReferenceIndex.ts",
+    "src/platform/characterPaletteSettings.ts",
+    "src/platform/choiceReview.ts",
+    "src/platform/paletteSettings.ts",
+    "src/platform/requestTimeout.ts",
+    "src/platform/settledSnapshotCheck.ts",
+    "src/platform/sheetImage.ts",
+    "src/platform/sheetSpellScroll.ts",
+    "src/platform/snapshotMemo.ts",
+    "src/platform/standaloneCardViews.ts",
+    "src/platform/standaloneCatalogPublication.ts",
+    "src/platform/storage.ts",
+    "src/platform/workbenchMode.ts",
+    "src/platform/workspaceDatabase.ts",
+    "src/platform/workspaceIdentity.ts",
+    "src/platform/workspaceNamespace.ts",
+    "src/standalone/LocalDice.tsx",
+    "src/ui/AdaptiveCardAtmosphere.tsx",
+    "src/ui/AdaptivePaperLayers.tsx",
+    "src/ui/Announcement.tsx",
+    "src/ui/App.tsx",
+    "src/ui/AsiAllocationControl.tsx",
+    "src/ui/AutoSheetName.tsx",
+    "src/ui/AutomationPanel.tsx",
+    "src/ui/BookReader.tsx",
+    "src/ui/CardDecoration.tsx",
+    "src/ui/CatalogLoadStatus.tsx",
+    "src/ui/CharacterTabs.tsx",
+    "src/ui/ChoiceWorkspace.tsx",
+    "src/ui/ChoiceWorkspaceContext.ts",
+    "src/ui/ClassChoiceRecords.tsx",
+    "src/ui/ClearableSearch.tsx",
+    "src/ui/CloudRoomControl.tsx",
+    "src/ui/CustomCopyDrop.tsx",
+    "src/ui/CustomFieldHelp.tsx",
+    "src/ui/DragEntry.tsx",
+    "src/ui/Entries.tsx",
+    "src/ui/EntryApplyAction.tsx",
+    "src/ui/FeaturePanel.tsx",
+    "src/ui/GlobalSearch.tsx",
+    "src/ui/HitDiceResources.tsx",
+    "src/ui/IdentityToken.tsx",
+    "src/ui/InfusionChargeControl.tsx",
+    "src/ui/InfusionControl.tsx",
+    "src/ui/InteractionFeedback.tsx",
+    "src/ui/KeywordPreview.tsx",
+    "src/ui/LibraryDocument.tsx",
+    "src/ui/LibraryFilters.tsx",
+    "src/ui/LinguistControl.tsx",
+    "src/ui/MobilePlayActions.tsx",
+    "src/ui/NumberInput.tsx",
+    "src/ui/Overview.tsx",
+    "src/ui/OverviewChoiceOverlay.tsx",
+    "src/ui/OverviewConditions.tsx",
+    "src/ui/OverviewResourceDashboard.tsx",
+    "src/ui/PaletteButton.tsx",
+    "src/ui/PaletteDrawer.tsx",
+    "src/ui/PaperFrame.tsx",
+    "src/ui/PlayerPermissionButton.tsx",
+    "src/ui/PlayerViewer.tsx",
+    "src/ui/Portrait.tsx",
+    "src/ui/Reference.tsx",
+    "src/ui/RefuelingRingControl.tsx",
+    "src/ui/ResourceWidgets.tsx",
+    "src/ui/RetainedCardSheet.tsx",
+    "src/ui/RetainedCardVisibility.ts",
+    "src/ui/RetainedSheetAnimations.tsx",
+    "src/ui/RetainedSheetContexts.tsx",
+    "src/ui/ReviewedFeatControl.tsx",
+    "src/ui/RoomCardControl.tsx",
+    "src/ui/ScopedPaletteDrawer.tsx",
+    "src/ui/ScreenAbilities.tsx",
+    "src/ui/SheetCell.tsx",
+    "src/ui/SheetChoicesContext.ts",
+    "src/ui/SkilledControl.tsx",
+    "src/ui/SourceName.tsx",
+    "src/ui/SourceSettings.tsx",
+    "src/ui/SourceSpellActions.tsx",
+    "src/ui/SourceSpellControls.tsx",
+    "src/ui/SpellActionFeedback.tsx",
+    "src/ui/SpellsPage.tsx",
+    "src/ui/StockBoard.tsx",
+    "src/ui/StockFrameArt.tsx",
+    "src/ui/TrainingChips.tsx",
+    "src/ui/ValueTrace.tsx",
+    "src/ui/VirtualList.tsx",
+    "src/ui/WeaponMasterControl.tsx",
+    "src/ui/WikiLayout.tsx",
+    "src/ui/WikiSplitter.tsx",
+    "src/ui/WorkbenchQQAccount.tsx",
+    "src/ui/WorkspaceSplitter.tsx",
+    "src/ui/cardDecorationSignature.ts",
+    "src/ui/cardPalettePresets.ts",
+    "src/ui/catalogProgress.ts",
+    "src/ui/catalogTrainingIndex.ts",
+    "src/ui/choiceCatalog.ts",
+    "src/ui/entryDragIntent.ts",
+    "src/ui/infusionChargePresentation.ts",
+    "src/ui/infusionChargeSubmission.ts",
+    "src/ui/linguistLanguageDisplay.ts",
+    "src/ui/pointerDrag.ts",
+    "src/ui/refuelingRingPresentation.ts",
+    "src/ui/refuelingRingSubmission.ts",
+    "src/ui/scopedSheetContext.ts",
+    "src/ui/sheetDisplay.ts",
+    "src/ui/skillChoiceWarnings.ts",
+    "src/ui/skilledToolDisplay.ts",
+    "src/ui/surfaceMotion.ts",
+    "src/ui/tooltipWheel.ts",
+    "src/ui/useEntrySearch.ts",
+    "src/ui/useOwnerReadAction.ts",
+    "src/ui/useSheetZoom.ts",
+    "src/ui/useSurfaceMotion.ts",
+    "src/wiki/WikiApp.tsx"
+  ],
+  "inputs": 229,
+  "identities": 18789,
+  "reviewed": 4561,
+  "partialMechanismWitnesses": 6534,
+  "unavailable": 522,
+  "unresolved": 0,
+  "changedRuntimeRecordsFromAcceptedTip": 0,
+  "inputHashesAndInventoryUnchanged": true,
+  "data74And75HistoricalEvidenceUnchanged": true,
+  "replayExecution": {
+    "singleCheckpointBinding": "6da18b241aeec4f1c6579c11b703d4eeb033b89e69ba40058efc4ded8347e473",
+    "initialWorkers": 4,
+    "resumedWorkers": 2,
+    "interruptionReason": "local memory pressure",
+    "completeReceiptsRetained": true,
+    "assertionsAndThresholdsUnchanged": true
+  },
+  "excludedOperations": [
+    "Observant branch or later PR",
+    "Web103 diagnostic PR operations (its existing ancestor commits remain in the accepted chain)",
+    "Data5",
+    "branch deletion",
+    "deployment",
+    "permissions or credential changes"
+  ],
+  "boundary": "Counts describe at least one witnessed mechanism, not whole-rule completion or production acceptance. Current real-input workflows, old-consumer gates and desktop/narrow UI acceptance are independently checked on the integration PR. No source prose, player cards or raw input snapshots are included."
+}
