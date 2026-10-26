@@ -123,6 +123,19 @@ jobs:
             "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/book/book-phb.json" \
             --output .cache/passive-feat-inputs/book-phb-e262.original.json
           node --experimental-strip-types scripts/audit_reviewed_observant.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-observant.json .cache/web-observant-old-consumer .cache/passive-feat-inputs/render.js .cache/passive-feat-inputs/book-phb-e262.original.json
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 8e48bbbe801b21a57fbb9072b4d4c324379448ea
+          path: .cache/web-alert-old-consumer
+          persist-credentials: false
+      - name: Share current locked dependencies with pinned pre-Alert consumer proof
+        run: ln -s "$PWD/.cache/web-consumer/node_modules" .cache/web-alert-old-consumer/node_modules
+      - name: Verify PHB2014 Alert targeted21 source/API and unsafe old-client boundaries (not full229)
+        # Final acceptance separately requires ALERT_FULL_CATALOG=1 with the original229
+        # private directory, cold/cache/App assemblies and all68 canonical real ASI slots.
+        # This CI stage does not fetch/evaluate the18789-record corpus or claim that full pass.
+        run: node --experimental-strip-types scripts/audit_reviewed_alert.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-alert.json .cache/web-alert-old-consumer
       - name: Replay three explicit attuned TCE infusion workflows
         shell: bash
         run: |
