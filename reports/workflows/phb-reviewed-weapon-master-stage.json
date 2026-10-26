@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T09:14:51.411Z",
-  "consumerRevision": "dd83d6ff915ab1e1f1ac133373bd304c7e903430",
-  "consumerSourceTree": "b1095fa3401b0052131d635425739cc3782bf59c",
+  "updatedAt": "2026-10-26T05:13:12.978Z",
+  "consumerRevision": "a340189f98c1dcfb3cf726d1e848a36eb4052a5e",
+  "consumerSourceTree": "ae3ae366ea3e70d096426410b5badc711164353e",
   "consumerModules": [
     {
       "path": "src/cloud/api.ts",
@@ -22,7 +22,7 @@
     },
     {
       "path": "src/core/automation/abilityAdvancements.ts",
-      "sha256": "3c285e27d996783fc7870a525990aaecfb6e9db5ac879b5ddd5a9ace3eeb13d8"
+      "sha256": "c1ddf9f00a095707b3c317675d7a4d0d7d8c9fd1e0a303dee4445447fbf48713"
     },
     {
       "path": "src/core/automation/actions.ts",
@@ -34,7 +34,7 @@
     },
     {
       "path": "src/core/automation/asi.ts",
-      "sha256": "1b48b47ca57660fabdec8a2b2d458089d78ac9ae5c40f56eb183022ee4286769"
+      "sha256": "379ecebac65f96deff06ecaaf61667355a945bfa7c09573f4f301f0f889c234d"
     },
     {
       "path": "src/core/automation/asiEvidence.json",
@@ -46,11 +46,11 @@
     },
     {
       "path": "src/core/automation/baseAbilities.ts",
-      "sha256": "37b9ddc46d39647daa18e1a38c1b107cf34a53c4b83113f867a06864004b90ce"
+      "sha256": "e310d3f11058a41f7a3f7f25d7404b4402f9c3653d35bf80902b0f74f0a77dc0"
     },
     {
       "path": "src/core/automation/choices.ts",
-      "sha256": "b25b073f8caa4390ebad7d8a84c2917e24c36b82af2f4bdf946fe5a9a56352e5"
+      "sha256": "a2642a5a3c31d839dd979eccf875f14f597bad803dfc84086bf1f772de0b3aa0"
     },
     {
       "path": "src/core/automation/classChoiceEvidence.json",
@@ -134,7 +134,7 @@
     },
     {
       "path": "src/core/automation/reviewedFeatIdentity.ts",
-      "sha256": "1f8d40fa73dd720cae6e89740ba7ecc136a46f69ee9578036ad881bed6cebcc6"
+      "sha256": "625c8be9322cca165de748175263e336556fc2b931fce29c529dcb2fd7c0b9e1"
     },
     {
       "path": "src/core/automation/reviewedFeats.ts",
@@ -142,11 +142,23 @@
     },
     {
       "path": "src/core/automation/reviewedLinguist.ts",
-      "sha256": "f7c045b6f95162671555402127e0e4baf1141c53145e950474936ac6bc340346"
+      "sha256": "501479b6fc54361f6b59c9a487c92ce2960612a7381d8b2f717e78754d3abee9"
     },
     {
       "path": "src/core/automation/reviewedLinguistEvidence.json",
       "sha256": "059d3f9549ea81abec759c047d5a39e7fa96deaa80341535a0a7b9c3625896ae"
+    },
+    {
+      "path": "src/core/automation/reviewedObservant.ts",
+      "sha256": "06bc0487f579be031bed9f45e542e674172dd11b966487e3ec592b170898b0ae"
+    },
+    {
+      "path": "src/core/automation/reviewedObservantEvidence.json",
+      "sha256": "34f0d8c3e2ac8c701cfdd28f54a2a6e66f6f0a86fb360a76d5ebddea1d655e15"
+    },
+    {
+      "path": "src/core/automation/reviewedObservantSource.ts",
+      "sha256": "f239b343f5acece427c61abe65b6f00f1f23680a01a4892dc38396311ffa648a"
     },
     {
       "path": "src/core/automation/reviewedSkilled.ts",
@@ -185,12 +197,16 @@
       "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
     },
     {
+      "path": "src/core/automation/sourceTextSha256.ts",
+      "sha256": "4afe6511c0903dca71e91cf9a8f7d9ae9ea2821126c1a9f489ec578d1a08b52f"
+    },
+    {
       "path": "src/core/automation/state.ts",
       "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
     },
     {
       "path": "src/core/automation/training.ts",
-      "sha256": "e41916d9fdb4adbdd2ee35d6b2bd131b21ad3f28537718bf65b81740ba0bec69"
+      "sha256": "abbd6f5b0cea066336b235a56f7c4239d1db223dab37b4a089aa54db8857a758"
     },
     {
       "path": "src/core/automation/weapons.ts",
@@ -210,7 +226,7 @@
     },
     {
       "path": "src/core/engine.ts",
-      "sha256": "f19ed99f904dd8dcd0c9dfa2c113ba9a6ab3bf257ed0b32175edb189ae4dd9ff"
+      "sha256": "6ca92394642fc20346439252e5465c1bbb2e56188f3a2b90cc867cbcf198e636"
     },
     {
       "path": "src/core/entryNameIndex.ts",
@@ -222,7 +238,7 @@
     },
     {
       "path": "src/core/export.ts",
-      "sha256": "d0e8842b37a3bae479a36ed4bc6726c28b952da51ea9a443ea172f05b4e8b2cf"
+      "sha256": "4928ca1a19e07e69864e4a8022bae9c2868412ad046654d044a67fe20ca684ae"
     },
     {
       "path": "src/core/featureOwnership.ts",
@@ -242,7 +258,7 @@
     },
     {
       "path": "src/core/model.ts",
-      "sha256": "e06ad2c8054871356f49c105d25b5cb5823206b65909e96de1c52b4622ff3d0c"
+      "sha256": "2d46fe2be15a34760478d1d41ac2aa048d5c0b23f779ff549c09b4e9634e91af"
     },
     {
       "path": "src/core/numericExpression.ts",
@@ -302,7 +318,7 @@
     },
     {
       "path": "src/core/validation.ts",
-      "sha256": "974e33b92434fabc382dbd8bb6280ab732065f8739ce5a349dd43f47a0e68b64"
+      "sha256": "36fe1254f12230921342b79164b4220fb5e27c4cc9aaa203d022e70441f67ac5"
     },
     {
       "path": "src/core/weaponAttacks.ts",
@@ -377,7 +393,7 @@
       "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
     }
   ],
-  "producerRevision": "4f9b0453d1bf07af297b25db3093e8d2c1b75e44",
+  "producerRevision": "3a5b8ec12d11692cf375f12de1c4f141a008414f",
   "producerScriptSha256": "c7ebd6674305f63c90d926b81884c2caa300a74cf5ce1bf8f87adcad912ac0ea",
   "retrievalRevisions": {
     "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",

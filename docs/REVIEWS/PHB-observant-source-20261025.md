@@ -1,3 +1,27 @@
+# 2026-10-26 · Source-bound Observant pairing checkpoint — draft, not merged or deployed
+
+Product source Web `a340189f98c1dcfb3cf726d1e848a36eb4052a5e` (`src` tree `ae3ae366ea3e70d096426410b5badc711164353e`); proof/replay producer Data `3a5b8ec12d11692cf375f12de1c4f141a008414f`. This independent chain is stacked on accepted Linguist Web `0478305fb20ddc9b65538fc50d5740d622c1589c` / Data `af9334b7eb271d39a29c81d943c7156018920a27`, not unrelated current main.
+
+## Verified source and replay evidence
+
+The official clean-source Observant proof passed **262/262**, zero failures/skips, with all229 unchanged inputs constructing the actual29,505-entry App catalog, both editions,68 authentic legacy class-ASI identities, canonical/instance/alias/pack gates and the actual old0478 boundary. The separate exact PHB175 baseline remains outside the229-file corpus. Its CSS source is separately hash-bound, not relabeled as a runtime rule module. Neighboring source proofs passed Linguist692 / Skilled271 / Weapon209 / Armor503 / Passive235, zero failures/skips.
+
+The **sole** necessary complete replay finished `2026-10-26T05:36:23.058Z`: **208 module gates**, retaining all200 previous paths; **229 unchanged inputs /18,789 unchanged identities**,4,561 reviewed,6,534 partial witnesses,522 unavailable,0 unresolved. **Zero record changes** from the accepted Linguist report: review flags, statuses, witnesses and source totals remain identical. New player support is established by the dedicated source/API and UI gates, not by inflating generic witnesses. Report SHA256 `9a07d4498bf4fa933dd3b5e0a17b4ea3b80279b1cc983c8c73a4d37e5a2c95cb`; exact Git blob `b90f6bd65910bb5db6608cc5adfa5077d1303f4e`.
+
+## Preserved corrective failures and limits
+
+The first official audit rejected a forged snapshot key/entry-ID mismatch that incorrectly exposed baseline Investigation14 while bonuses were inactive. Three red regressions now pass. The next audit exposed a recognized forged Observant nonarray-effects payload entering the separate generic armor pass; four red regressions now pass. Both identity corrections preserve genuine XPHB's existing generic behavior, legitimate aliases, source/level suspension and manual data/resources. The combined targeted group passed285/285, compiler clean; adjacent armor17 passed/1 existing conditional skip. No assertion or source-identity requirement was relaxed.
+
+Post-pairing local Data gates passed **955 Vitest /11 existing conditional skips**,14 Node,6 Python and compiler; all208 exact committed consumer module hashes verified.
+
+Exact-head aggregate CI and **124 actual App cases (62 desktop +62 narrow)** are separate required gates; source/API checks alone do not claim browser, cloud-account or production acceptance. Conditional skips are never executed passes. The complete local producer results and final remote results are identified in the PR's technical summary, not inferred from historical notes below.
+
+Support is bounded to reviewed PHB2014 Observant: explicitly chosen INT/WIS+1 cap20 and two independent passive5 bonuses. Lip-reading, language/visibility conditions and situational advantage/disadvantage remain manual. Manual absolute Perception totals and existing sheet offsets retain ownership; no new saved Investigation override or bridge protocol is added. Old0478 preserves opaque intent but is **not safe for editing**: stale clear/reselect consent and downgrade source-identity loss require withdrawal/review/reconfirmation on a supporting client. Partial witnesses are not whole-rule completion. No merge, deployment, server change or other-owner mainline adoption is claimed.
+
+---
+
+The following initial authoring/development notes are historical and do not override the exact source/replay checkpoint above.
+
 # PHB2014 Observant: bounded owned ability/two-passive proof
 
 This batch addresses only an explicitly confirmed PHB2014 Observant obtained through an authenticated legacy class ASI: INT or WIS +1 with default cap20, plus distinct passive Perception and Investigation +5 bonuses. Lip-reading, its language/visibility conditions and situational passive advantage/disadvantage remain manual. This is not complete automation of Observant, modern Observant, generic passive checks or external-sheet protocols. No merge, deployment or publication is authorized by this document.
