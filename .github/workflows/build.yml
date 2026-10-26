@@ -29,6 +29,24 @@ jobs:
           ref: ${{ steps.consumer.outputs.revision }}
           path: .cache/web-consumer
           persist-credentials: false
+      - name: Fetch immutable historical consumer objects before bounded proofs
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Separate old checkouts do not populate this shallow consumer's object database.
+          consumer_head="$(git --no-replace-objects -C .cache/web-consumer rev-parse HEAD)"
+          while read -r revision source_tree; do
+            [[ "$revision" =~ ^[a-f0-9]{40}$ && "$source_tree" =~ ^[a-f0-9]{40}$ ]]
+            git --no-replace-objects -C .cache/web-consumer fetch --no-tags --depth=1 --no-write-fetch-head origin "$revision"
+            test "$(git --no-replace-objects -C .cache/web-consumer rev-parse "$revision^{commit}")" = "$revision"
+            test "$(git --no-replace-objects -C .cache/web-consumer rev-parse "$revision:src")" = "$source_tree"
+          done <<'HISTORICAL_CONSUMERS'
+          52d5be10e161464d5e0846d1dc2202ea1169754b 4d40c102e1ecd0617c39dd9b33d711d34e9c5103
+          78e1fac62bddc52e36d5ad7a2cc4d18e8f0acc0e bbc6761e1bba50cba06315c2f8cb31c457cb5c63
+          0478305fb20ddc9b65538fc50d5740d622c1589c b1095fa3401b0052131d635425739cc3782bf59c
+          8e48bbbe801b21a57fbb9072b4d4c324379448ea ae3ae366ea3e70d096426410b5badc711164353e
+          HISTORICAL_CONSUMERS
+          test "$(git --no-replace-objects -C .cache/web-consumer rev-parse HEAD)" = "$consumer_head"
       - name: Verify audited consumer revision and actual module bytes
         run: node --experimental-strip-types scripts/verify_runtime_consumer.ts .cache/web-consumer
       - name: Test coverage against real pinned consumer functions
