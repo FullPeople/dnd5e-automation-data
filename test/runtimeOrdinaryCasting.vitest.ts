@@ -1,9 +1,19 @@
+import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {cpSync,mkdtempSync,readFileSync,statSync,rmSync,writeFileSync,existsSync,symlinkSync,realpathSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {afterAll,beforeAll,describe,expect,it} from 'vitest';
+// A self-contained platform:node bundle must be tested by actual Node, not
+// re-transformed by the Vitest host. Success or any other import error fails.
+const assertNativeMissingRuntimeExport=(file:string,name:string)=>{
+ const expected='Missing ordinary casting runtime export: '+name;
+ const script=`try{await import(${JSON.stringify(pathToFileURL(file).href)});process.stdout.write('IMPORT_SUCCEEDED');process.exitCode=0;}catch(error){if(error instanceof Error&&error.message===${JSON.stringify(expected)}){process.stderr.write(error.message);process.exitCode=23;}else{process.stderr.write('UNEXPECTED_IMPORT_ERROR');process.exitCode=24;}}`;
+ const result=spawnSync(process.execPath,['--input-type=module','-e',script],{encoding:'utf8',timeout:3500});
+ expect(result.error).toBeUndefined();expect(result.status).toBe(23);expect(result.stdout).toBe('');expect(result.stderr).toBe(expected);
+};
+
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import {probeEntry,type RuntimeAdapter} from '../src/runtimeCoverage/probe.ts';
 import {probeOrdinaryCasting} from '../src/runtimeCoverage/ordinaryProbe.ts';
@@ -121,6 +131,6 @@ describe.skipIf(!opted)('ordinary casting real-source transaction bridge, not sp
   const broken=join(scratch,'erased-runtime');cpSync(join(current,'src'),join(broken,'src'),{recursive:true});symlinkSync(realpathSync(join(current,'node_modules')),join(broken,'node_modules'),'dir');
   const file=join(broken,'src/core/validation.ts');writeFileSync(file,readFileSync(file,'utf8').replace('export function readCharacter(','function readCharacter(')+'\nexport type readCharacter={unusable:true};\n');
   const output=join(scratch,'erased-adapter.mjs');await buildConsumerAdapter(broken,output);
-  await expect(import(pathToFileURL(output).href)).rejects.toThrow('Missing ordinary casting runtime export: readCharacter');
+  assertNativeMissingRuntimeExport(output,'readCharacter');
  });
 });

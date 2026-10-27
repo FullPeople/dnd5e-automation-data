@@ -1,9 +1,19 @@
+import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {cpSync,existsSync,mkdtempSync,readFileSync,realpathSync,statSync,rmSync,symlinkSync,writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {afterAll,beforeAll,describe,expect,it} from 'vitest';
+// A self-contained platform:node bundle must be tested by actual Node, not
+// re-transformed by the Vitest host. Success or any other import error fails.
+const assertNativeMissingRuntimeExport=(file:string,name:string)=>{
+ const expected='Missing ordinary casting runtime export: '+name;
+ const script=`try{await import(${JSON.stringify(pathToFileURL(file).href)});process.stdout.write('IMPORT_SUCCEEDED');process.exitCode=0;}catch(error){if(error instanceof Error&&error.message===${JSON.stringify(expected)}){process.stderr.write(error.message);process.exitCode=23;}else{process.stderr.write('UNEXPECTED_IMPORT_ERROR');process.exitCode=24;}}`;
+ const result=spawnSync(process.execPath,['--input-type=module','-e',script],{encoding:'utf8',timeout:3500});
+ expect(result.error).toBeUndefined();expect(result.status).toBe(23);expect(result.stdout).toBe('');expect(result.stderr).toBe(expected);
+};
+
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 import type {RuntimeAdapter} from '../src/runtimeCoverage/probe.ts';
 import {probeLimitedSourceUses} from '../src/runtimeCoverage/limitedProbe.ts';
@@ -83,6 +93,6 @@ describe.skipIf(!opted)('real source-owned finite acquisition and cast accountin
  });
  it.each(['limitedSourceUseOffers','performLimitedSourceUseAction','removeSelection'] as const)('present missing %s is fatal, not an unsupported-old fallback',name=>{expect(()=>probeLimitedSourceUses({...api,[name]:undefined},unique(entries),entries)).toThrow('Missing limited source runtime export: '+name);});
  it('a type-only mandatory export must fail usable bundle import rather than disappear silently',async()=>{
-  await expect(import(pathToFileURL(erasedOutput).href)).rejects.toThrow('assertLimitedSourceResourceEdit');
+  assertNativeMissingRuntimeExport(erasedOutput,'assertLimitedSourceResourceEdit');
  });
 });
