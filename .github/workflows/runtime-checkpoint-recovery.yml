@@ -89,7 +89,8 @@ jobs:
         run: |
           node ../web-rules-rebuild-attuned-charge-debits/tools/fetchReviewedAlertCorpus.mjs \
             --report reports/progress/runtime-coverage.json \
-            --output .cache/runtime-recovery-original-inputs
+            --output .cache/runtime-recovery-original-inputs \
+            --receipt .cache/runtime-checkpoint-recovery/input-materialization-receipt.json
       - name: Verify every input and the exact adapter before any probes
         working-directory: data-rules-rebuild-attuned-charge-debits
         env:
