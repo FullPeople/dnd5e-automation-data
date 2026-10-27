@@ -71,7 +71,7 @@ jobs:
           mkdirSync('.cache/runtime-checkpoint-recovery', {recursive: true});
           copyFileSync('../recovery-orchestration/' + m.seed.path, '.cache/runtime-checkpoint-recovery/runtime-coverage.json.receipts.jsonl');
           const checkpoint = openRuntimeProbeCheckpoint('.cache/runtime-checkpoint-recovery/runtime-coverage.json.receipts.jsonl', m.binding, Array.from({length: m.totalJobs}, (_, i) => i));
-          if (checkpoint.completed.size !== 17485 || [...checkpoint.completed.keys()].some((index, i) => index !== i)) throw Error('Seed indices or unique witness count differs');
+          if (checkpoint.completed.size !== 17485 || [...checkpoint.completed.keys()].sort((a, b) => a - b).some((index, i) => index !== i)) throw Error('Seed indices or unique witness count differs');
           checkpoint.close();
           writeFileSync('.cache/runtime-checkpoint-recovery/provenance.json', JSON.stringify({schemaVersion: 1, binding: m.binding, producer: m.producer.revision, consumer: m.consumer.revision, completedWitnessRows: 17485, missingJobs: 1304, workers: 1, timeoutMinutes: 120, seedSha256: m.seed.sha256, previousExecutorTerminal: 'UNKNOWN', acceptance: false}, null, 2) + '\n');
           console.log('Verified 17,485 complete witnesses; exactly 1,304 jobs remain. No probes have run.');
