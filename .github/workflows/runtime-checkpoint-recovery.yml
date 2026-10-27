@@ -1,0 +1,167 @@
+name: Frozen runtime checkpoint recovery
+
+on:
+  push:
+    branches:
+      - codex/cloud-rules-attuned-replay-recovery-20261027
+    paths:
+      - .github/workflows/runtime-checkpoint-recovery.yml
+      - reports/recovery/runtime-coverage-0940.seed.jsonl
+      - reports/recovery/runtime-coverage-0940.manifest.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: runtime-checkpoint-0940-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover-missing-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Read the recovery seed and manifest
+        uses: actions/checkout@v4
+        with:
+          path: recovery-orchestration
+          persist-credentials: false
+      - name: Check out the unchanged frozen producer
+        uses: actions/checkout@v4
+        with:
+          ref: 00c8d4fc4c441879f52b52f0719346b1f48f3cf1
+          path: data-rules-rebuild-attuned-charge-debits
+          persist-credentials: false
+      - name: Check out the unchanged frozen consumer
+        uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 4069886e1bfcab2fb7e2958eca8919601a13dd62
+          path: web-rules-rebuild-attuned-charge-debits
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            data-rules-rebuild-attuned-charge-debits/package-lock.json
+            web-rules-rebuild-attuned-charge-debits/package-lock.json
+      - name: Validate the closed seed and exact frozen source identities
+        working-directory: data-rules-rebuild-attuned-charge-debits
+        run: |
+          node --experimental-strip-types --input-type=module <<'JS'
+          import {readFileSync, copyFileSync, mkdirSync, writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          import {execFileSync} from 'node:child_process';
+          import {openRuntimeProbeCheckpoint} from './src/runtimeCoverage/checkpoint.ts';
+          const hash = value => createHash('sha256').update(value).digest('hex');
+          const manifestBytes = readFileSync('../recovery-orchestration/reports/recovery/runtime-coverage-0940.manifest.json');
+          if (hash(manifestBytes) !== '91c043fcc722ec384ad41df8961ddaa415f32e98793d47fe75eba5018daa6ee1') throw Error('Recovery manifest changed');
+          const m = JSON.parse(manifestBytes);
+          if (m.binding !== '0940a06ce7a04d3752388903049d59d1d70825b640ba9519ca40795f6e172f59' || m.completedWitnessRows !== 17485 || m.missingJobs !== 1304 || m.totalJobs !== 18789 || m.execution.workers !== 1) throw Error('Unexpected recovery recipe');
+          const git = (cwd, ...args) => execFileSync('git', args, {cwd, encoding: 'utf8'}).trim();
+          for (const source of [m.producer, m.consumer]) {
+            const cwd = '../' + source.checkoutDirectory;
+            if (git(cwd, 'rev-parse', 'HEAD') !== source.revision || git(cwd, 'rev-parse', 'HEAD^{tree}') !== source.tree || git(cwd, 'rev-parse', 'HEAD:src') !== source.src || hash(readFileSync(cwd + '/package-lock.json')) !== source.packageLockSha256) throw Error('Frozen source or lock differs');
+            execFileSync('git', ['diff', '--quiet', 'HEAD', '--', 'src', 'scripts', 'aliases'], {cwd});
+          }
+          if (hash(readFileSync('reports/progress/automation-rule-status.json')) !== m.snapshotSha256 || hash(readFileSync('reports/progress/runtime-coverage.json')) !== m.baselineReportSha256) throw Error('Frozen review or baseline report differs');
+          const seed = readFileSync('../recovery-orchestration/' + m.seed.path);
+          if (seed.length !== 6144320 || hash(seed) !== '409a76e890658803e6bf8fcd47f4ea8429c0a7fc56608763a92974b1a73b1f38') throw Error('Seed bytes differ');
+          mkdirSync('.cache/runtime-checkpoint-recovery', {recursive: true});
+          copyFileSync('../recovery-orchestration/' + m.seed.path, '.cache/runtime-checkpoint-recovery/runtime-coverage.json.receipts.jsonl');
+          const checkpoint = openRuntimeProbeCheckpoint('.cache/runtime-checkpoint-recovery/runtime-coverage.json.receipts.jsonl', m.binding, Array.from({length: m.totalJobs}, (_, i) => i));
+          if (checkpoint.completed.size !== 17485 || [...checkpoint.completed.keys()].some((index, i) => index !== i)) throw Error('Seed indices or unique witness count differs');
+          checkpoint.close();
+          writeFileSync('.cache/runtime-checkpoint-recovery/provenance.json', JSON.stringify({schemaVersion: 1, binding: m.binding, producer: m.producer.revision, consumer: m.consumer.revision, completedWitnessRows: 17485, missingJobs: 1304, workers: 1, timeoutMinutes: 120, seedSha256: m.seed.sha256, previousExecutorTerminal: 'UNKNOWN', acceptance: false}, null, 2) + '\n');
+          console.log('Verified 17,485 complete witnesses; exactly 1,304 jobs remain. No probes have run.');
+          JS
+      - name: Install only the existing locked dependencies
+        run: |
+          npm ci --prefix data-rules-rebuild-attuned-charge-debits
+          mkdir web
+          cp web-rules-rebuild-attuned-charge-debits/package.json web/package.json
+          cp web-rules-rebuild-attuned-charge-debits/package-lock.json web/package-lock.json
+          npm ci --prefix web
+          ln -s ../web/node_modules web-rules-rebuild-attuned-charge-debits/node_modules
+      - name: Materialize the same 229 hash-pinned original inputs
+        working-directory: data-rules-rebuild-attuned-charge-debits
+        run: |
+          node ../web-rules-rebuild-attuned-charge-debits/tools/fetchReviewedAlertCorpus.mjs \
+            --report reports/progress/runtime-coverage.json \
+            --output .cache/runtime-recovery-original-inputs
+      - name: Verify every input and the exact adapter before any probes
+        working-directory: data-rules-rebuild-attuned-charge-debits
+        env:
+          NODE_OPTIONS: --import=file://${{ github.workspace }}/web-rules-rebuild-attuned-charge-debits/tests/helpers/offlineCatalogFetchPreload.mjs
+        run: |
+          node --experimental-strip-types --input-type=module <<'JS'
+          import {readFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          import {buildConsumerAdapter} from './src/runtimeCoverage/adapter.ts';
+          const hash = value => createHash('sha256').update(value).digest('hex');
+          const m = JSON.parse(readFileSync('../recovery-orchestration/reports/recovery/runtime-coverage-0940.manifest.json'));
+          const root = '.cache/runtime-recovery-original-inputs';
+          const index = JSON.parse(readFileSync(root + '/index.json'));
+          if (m.inputs.length !== 229 || JSON.stringify(index.rows.map(({url, sha256}) => ({url, sha256}))) !== JSON.stringify(m.inputs)) throw Error('Original 229-input identity/order differs');
+          for (const row of index.rows) {
+            const body = JSON.parse(readFileSync(root + '/' + row.path));
+            if (hash(JSON.stringify(body)) !== row.sha256) throw Error('Original input hash differs: ' + row.url);
+          }
+          if (hash(readFileSync('../web/node_modules/idb/build/index.js')) !== m.dependencyLayout.bundledIdbModuleSha256) throw Error('Bundled dependency bytes differ');
+          await buildConsumerAdapter('../web-rules-rebuild-attuned-charge-debits', '.cache/consumer.mjs');
+          if (hash(readFileSync('.cache/consumer.mjs')) !== 'bb1bf062af93b69483379adfc646d5d5b0b183055d6226f106fa83b078a32865') throw Error('Exact frozen adapter bytes differ; no fallback or probes allowed');
+          console.log('All 229 original hashes and adapter bytes match. The frozen checkpoint parser will recheck binding 0940 before probing.');
+          JS
+      - name: Resume only the missing jobs using the unchanged frozen producer
+        id: audit
+        working-directory: data-rules-rebuild-attuned-charge-debits
+        env:
+          RUNTIME_COVERAGE_WORKERS: '1'
+          NODE_OPTIONS: --import=file://${{ github.workspace }}/web-rules-rebuild-attuned-charge-debits/tests/helpers/offlineCatalogFetchPreload.mjs
+        run: |
+          node --experimental-strip-types scripts/audit_runtime_coverage.ts \
+            ../web-rules-rebuild-attuned-charge-debits \
+            .cache/runtime-recovery-original-inputs \
+            .cache/runtime-checkpoint-recovery/runtime-coverage.json
+      - name: Record technical outcome without implying acceptance
+        if: always()
+        working-directory: data-rules-rebuild-attuned-charge-debits
+        env:
+          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
+        run: |
+          node --input-type=module <<'JS'
+          import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const root = '.cache/runtime-checkpoint-recovery';
+          mkdirSync(root, {recursive: true});
+          const receipt = root + '/runtime-coverage.json.receipts.jsonl';
+          const bytes = existsSync(receipt) ? readFileSync(receipt) : null;
+          const lastNewline = bytes ? bytes.lastIndexOf(10) : -1;
+          const lines = lastNewline >= 0 ? bytes.subarray(0, lastNewline).toString('utf8').split('\n') : [];
+          const seen = new Set();
+          const completeRows = lines.slice(1).filter(line => {
+            try {
+              const row = JSON.parse(line);
+              const digest = createHash('sha256').update(JSON.stringify({index: row.index, witness: row.witness})).digest('hex');
+              if (!Number.isInteger(row.index) || row.index < 0 || row.index >= 18789 || seen.has(row.index) || row.sha256 !== digest) return false;
+              seen.add(row.index);
+              return true;
+            } catch {return false;}
+          }).length;
+          const outcome = {schemaVersion: 1, auditOutcome: process.env.AUDIT_OUTCOME || 'not-run', completeWitnessRows: completeRows, totalJobs: 18789, reportExists: existsSync(root + '/runtime-coverage.json'), receiptSha256: bytes ? createHash('sha256').update(bytes).digest('hex') : null, acceptance: false, automaticRetry: false, previousExecutorTerminal: 'UNKNOWN'};
+          writeFileSync(root + '/outcome.json', JSON.stringify(outcome, null, 2) + '\n');
+          console.log(JSON.stringify(outcome));
+          JS
+      - name: Preserve technical report and receipt chain only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-checkpoint-0940-${{ github.sha }}
+          path: |
+            data-rules-rebuild-attuned-charge-debits/.cache/runtime-checkpoint-recovery/runtime-coverage.json
+            data-rules-rebuild-attuned-charge-debits/.cache/runtime-checkpoint-recovery/runtime-coverage.json.receipts.jsonl
+            data-rules-rebuild-attuned-charge-debits/.cache/runtime-checkpoint-recovery/provenance.json
+            data-rules-rebuild-attuned-charge-debits/.cache/runtime-checkpoint-recovery/outcome.json
+          if-no-files-found: error
+          retention-days: 30
