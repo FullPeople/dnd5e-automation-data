@@ -21,14 +21,38 @@ export function probeItemChargeAccounting(api:RuntimeAdapter,entry:any,catalog:a
   if(action.requiredCardEdition&&action.requiredCardEdition!==edition)continue;
   const c=api.newCharacter(edition);c.id='item-charge-audit';c.automation=api.newAutomationState();c.profile.enabledSources=[...new Set([entry.source,...(entry.dependencies||[]),...(action.requiredSources||[])])];
   c.name='Authored charge accounting character';c.notes='Authored immutable manual sentinel';c.baseHp=20;c.runtime.hp=7;c.runtime.resources['item-charge-manual']={name:'Authored spent manual counter',max:7,current:2,locked:true};
-  const owner={id:'item-charge-audit-owner',entry:structuredClone(entry),level:1,quantity:1,equipped:action.equipmentRequired===true};c.selections.push(owner);
+  const owner:{id:string;entry:any;level:number;quantity:number;equipped:boolean;attuned?:boolean}={id:'item-charge-audit-owner',entry:structuredClone(entry),level:1,quantity:1,equipped:action.equipmentRequired===true};c.selections.push(owner);
   if(!api.selectionAllowed(c,entry))continue;api.syncAutoResources(c);api.syncSourceSpells(c,catalog);
+  if(rule.requiresAttunement===true){
+   // This is an explicit disposable audit context, never an attunement grant.
+   // The current actor must first reject both absent and false manual marks.
+   owner.equipped=true;let marksDenied=true;
+   for(const mark of [undefined,false]){
+    if(mark===undefined)delete owner.attuned;else owner.attuned=mark;
+    const held=observe(c,()=>api.itemChargeOffers(c,authority)).filter((o:any)=>o.ownerId===owner.id);
+    if(held.length!==1||held[0].requiresAttunement!==true||held[0].canAcquire||held[0].canDebit||held[0].initialized||c.runtime.itemChargeDebits!==undefined||c.runtime.resources[held[0].key]){marksDenied=false;break;}
+    const acquire=observe(c,()=>api.itemChargeRequest(c,owner.id,'item-charge-audit-unattuned-acquire',{kind:'acquire',knownRemaining:knownInitial,confirmedGenuineItem:true,confirmedKnownBalance:true}));
+    const debit=observe(c,()=>api.itemChargeRequest(c,owner.id,'item-charge-audit-unattuned-debit',{kind:'debit',actionKey:action.key}));
+    if(!rejected(c,()=>api.performItemChargeAction(c,acquire,authority))||!rejected(c,()=>api.performItemChargeAction(c,debit,authority))){marksDenied=false;break;}
+   }
+   if(!marksDenied)continue;
+   owner.equipped=true;owner.attuned=true;
+  }
   const offers=observe(c,()=>api.itemChargeOffers(c,authority)).filter((o:any)=>o.ownerId===owner.id),offer=offers[0];
   if(offers.length!==1||!offer.canAcquire||offer.initialized||c.runtime.itemChargeDebits!==undefined||c.runtime.resources[offer.key]||offer.capacity!==rule.capacity||offer.cost!==action.cost||offer.actionKey!==action.key||offer.minAfter!==minimumAfter)continue;
   const before={entryId:entry.id,initialized:offer.initialized,resourcePresent:!!c.runtime.resources[offer.key]},manualBefore=manual(c,offer.key),cardBefore=structuredClone(c),sequence=c.runtime.itemChargeDebits?.sequence??0;
   const acquire=observe(c,()=>api.itemChargeRequest(c,owner.id,'item-charge-audit-acquire',{kind:'acquire',knownRemaining:knownInitial,confirmedGenuineItem:true,confirmedKnownBalance:true})),acquired=api.performItemChargeAction(c,acquire,authority),state=c.runtime.itemChargeDebits,record=state?.records?.[0],resource=c.runtime.resources[offer.key];
   if(acquired?.status!=='applied'||acquired.receipt?.id!==acquire.id||acquired.receipt.key!==offer.key||acquired.receipt.kind!=='acquire'||acquired.receipt.sequence!==sequence||acquired.receipt.before!==0||acquired.receipt.after!==knownInitial||state?.sequence!==sequence+1||state.records.length!==1||!same(state.last,acquired.receipt)||record?.ownerId!==owner.id||record.entryId!==entry.id||record.canonicalEntryId!==rule.id||record.snapshotSha256!==rule.fullNormalizedSnapshotSha256||record.capacity!==rule.capacity||record.initial!==knownInitial||record.spent!==0||record.withdrawn!==false||record.events.length!==1||!same(record.events[0],{id:acquire.id,kind:'acquire',before:0,after:knownInitial,sequence})||resource?.max!==rule.capacity||resource.current!==knownInitial||resource.itemChargeDebitGrant?.key!==offer.key||api.ownedItemChargeResource(c,offer.key)!==true)continue;
   const expectedAcquire=structuredClone(cardBefore);expectedAcquire.runtime.itemChargeDebits=structuredClone(state);expectedAcquire.runtime.resources[offer.key]=structuredClone(resource);if(!same(c,expectedAcquire)||!same(manual(c,offer.key),manualBefore))continue;
+  if(rule.requiresAttunement===true){
+   let liveMarksDenied=true;
+   for(const mark of ['equipped','attuned']){
+    const paused=structuredClone(c),pausedOwner=paused.selections.find((o:any)=>o.id===owner.id);if(!pausedOwner){liveMarksDenied=false;break;}pausedOwner[mark]=false;
+    const held=observe(paused,()=>api.itemChargeOffers(paused,authority)).find((o:any)=>o.ownerId===owner.id),request=observe(paused,()=>api.itemChargeRequest(paused,owner.id,'item-charge-audit-live-mark-loss',{kind:'debit',actionKey:action.key}));
+    if(held?.requiresAttunement!==true||held.canDebit||!rejected(paused,()=>api.performItemChargeAction(paused,request,authority))){liveMarksDenied=false;break;}
+   }
+   if(!liveMarksDenied)continue;
+  }
   let duplicateUnchanged=observe(c,()=>api.performItemChargeAction(c,acquire,authority))?.status==='duplicate';if(!duplicateUnchanged)continue;
   const live=observe(c,()=>api.itemChargeOffers(c,authority)).find((o:any)=>o.ownerId===owner.id);
   if(!live?.canDebit||live.actionKey!==action.key||live.cost!==1||live.minAfter!==minimumAfter||live.remaining!==knownInitial||live.capacity!==rule.capacity)continue;

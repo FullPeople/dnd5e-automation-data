@@ -81,6 +81,8 @@ const groupedResourceSources=[
  'src/ui/SpellActionFeedback.tsx',
  'src/ui/SpellsPage.tsx',
  'src/core/automation/itemChargeDebitEvidence.json',
+ 'src/core/automation/attunedItemChargeDebitEvidence.json',
+ 'src/core/automation/itemChargeCatalogFormsEvidence.json',
  'src/core/automation/itemChargeDebitSource.ts',
  'src/core/automation/itemChargeDebits.ts',
  'src/core/automation/limitedSourceUseEvidence.json',
