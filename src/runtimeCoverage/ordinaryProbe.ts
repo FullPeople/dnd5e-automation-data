@@ -6,7 +6,7 @@ const immutableClasses=new WeakMap<RuntimeAdapter,WeakMap<any[],any[]>>();
 /** Only immutable catalog authentication is cached, never character state. */
 export function ordinaryProbeClasses(api:RuntimeAdapter,catalog:any[]):any[]{
  let catalogs=immutableClasses.get(api);if(!catalogs){catalogs=new WeakMap();immutableClasses.set(api,catalogs);}
- let classes=catalogs.get(catalog);if(!classes){classes=catalog.filter(entry=>entry?.kind==='class'&&api.ordinaryCastingRule(entry));catalogs.set(catalog,classes);}return classes;
+ let classes=catalogs.get(catalog);if(!classes){classes=catalog.filter(entry=>entry?.kind==='class'&&entry.packId==='kiwee'&&api.ordinaryCastingRule(entry));catalogs.set(catalog,classes);}return classes;
 }
 const observe=(read:()=>any,c:any)=>{const before=JSON.stringify(c),result=read();if(JSON.stringify(c)!==before)throw Error('Ordinary casting observation mutated its disposable character');return result;};
 const authority={canEdit:true,gm:false};
@@ -28,6 +28,12 @@ export function probeOrdinaryCasting(api:RuntimeAdapter,entry:any,catalog:any[])
   c.runtime.resources['ordinary-audit-manual']={name:'authored spent manual counter',max:7,current:2,locked:true};
   const owner={id:'ordinary-audit-owner',entry:structuredClone(cls),level:20,quantity:1,equipped:false};c.selections.push(owner);
   if(!api.selectionAllowed(c,entry)||!api.selectionAllowed(c,cls))continue;
+  // The actual ordinary actor supports direct native base-class routes only.
+  // Reject an impossible immutable list/level before scanning the full catalog;
+  // this is a fresh pure observation, not cached live permission. Every survivor
+  // still repeats the complete synchronized readiness/payment/native workflow.
+  const preflight=observe(()=>api.casterProfiles(c),c).filter((p:any)=>p.owner.id===owner.id&&p.casting.id===owner.id&&['full','half','1/2','artificer','third','1/3','pact'].includes(p.casting.entry.raw.casterProgression)&&p.maxLevel>=entry.raw.level&&api.ordinaryDirectBaseClassList(entry,p));
+  if(preflight.length!==1)continue;
   api.syncFeatures(c,catalog);api.syncAutoResources(c);
   const profiles=observe(()=>api.casterProfiles(c),c).filter((p:any)=>p.owner.id===owner.id&&api.ordinaryCastingRule(p.casting.entry)&&p.maxLevel>=entry.raw.level&&api.ordinaryDirectBaseClassList(entry,p));
   if(profiles.length!==1)continue;const profile=profiles[0];

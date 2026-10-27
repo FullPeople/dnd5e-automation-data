@@ -21,6 +21,14 @@ function ordinaryTransaction(w:NonNullable<CoverageReport['records'][number]['wi
   ?b.remaining===0&&a.castLevel===0&&a.casts===1&&a.resourceDebit===0&&a.exhausted===false
   :Number(b.remaining)>0&&a.casts===b.remaining&&a.resourceDebit===a.casts&&a.exhausted===true;
 }
+function limitedTransaction(w:NonNullable<CoverageReport['records'][number]['witness']>):boolean {
+ const object=(v:unknown):v is Record<string,unknown>=>!!v&&typeof v==='object'&&!Array.isArray(v);
+ const keys=(v:Record<string,unknown>,expected:string[])=>Object.keys(v).length===expected.length&&expected.every(k=>Object.hasOwn(v,k));
+ const id=(v:unknown)=>typeof v==='string'&&v.length>0&&v.length<2000;
+ const b=w.before,a=w.after;
+ if(!object(b)||!object(a)||!keys(b,['entryId','initialized','resourcePresent'])||!keys(a,['entryId','spellId','capacity','knownInitial','casts','resourceDebit','remaining','limitedSequenceDelta','actionSequenceDelta','explicitAcquisition','perCastConfirmed','duplicateUnchanged','exhausted','restNoRefill','genericEditsNoRefill','nativePreserved','ownerRevocationPreserved','manualPreserved']))return false;
+ return id(b.entryId)&&a.entryId===b.entryId&&id(a.spellId)&&b.initialized===false&&b.resourcePresent===false&&Number.isSafeInteger(a.capacity)&&Number(a.capacity)>=1&&Number(a.capacity)<=100&&a.knownInitial===1&&a.casts===1&&a.resourceDebit===1&&a.remaining===0&&a.limitedSequenceDelta===2&&a.actionSequenceDelta===1&&['explicitAcquisition','perCastConfirmed','duplicateUnchanged','exhausted','restNoRefill','genericEditsNoRefill','nativePreserved','ownerRevocationPreserved','manualPreserved'].every(key=>a[key]===true);
+}
 export function validateCoverage(value:unknown):CoverageReport {
  const v=value as CoverageReport;
  const require=(fact:unknown,message:string)=>{if(!fact)throw Error('Invalid runtime coverage: '+message);};
@@ -34,8 +42,9 @@ export function validateCoverage(value:unknown):CoverageReport {
   require(typeof r.id==='string'&&r.id.length<2000&&typeof r.source==='string'&&typeof r.reviewed==='boolean'&&['implemented','manual','unresolved','unavailable'].includes(r.status),'record');
   const w=r.witness;
   if(r.status==='implemented'){
-   require(w&&/^(ordinary-source-cast|calculated-(sheet|resource|weapon|speed|equipment-context|training)|source-spell-(grant|choice)|choice:(skills|tools|languages|content|equipment|abilities|spells))$/.test(w.kind)&&Number.isInteger(w.level)&&w.level>=1&&w.level<=20&&['2014','2024'].includes(w.edition)&&w.before!==undefined&&w.after!==undefined&&JSON.stringify(w.before)!==JSON.stringify(w.after),'observed calculation/choice');
+   require(w&&/^(limited-source-cast|ordinary-source-cast|calculated-(sheet|resource|weapon|speed|equipment-context|training)|source-spell-(grant|choice)|choice:(skills|tools|languages|content|equipment|abilities|spells))$/.test(w.kind)&&Number.isInteger(w.level)&&w.level>=1&&w.level<=20&&['2014','2024'].includes(w.edition)&&w.before!==undefined&&w.after!==undefined&&JSON.stringify(w.before)!==JSON.stringify(w.after),'observed calculation/choice');
    if(w?.kind==='ordinary-source-cast')require(ordinaryTransaction(w),'ordinary transaction');
+   if(w?.kind==='limited-source-cast')require(limitedTransaction(w),'limited transaction');
   }
   else require(w===undefined,'unverified record cannot have a positive witness');
  }
