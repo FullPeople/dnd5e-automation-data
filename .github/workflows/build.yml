@@ -45,6 +45,7 @@ jobs:
           78e1fac62bddc52e36d5ad7a2cc4d18e8f0acc0e bbc6761e1bba50cba06315c2f8cb31c457cb5c63
           0478305fb20ddc9b65538fc50d5740d622c1589c b1095fa3401b0052131d635425739cc3782bf59c
           8e48bbbe801b21a57fbb9072b4d4c324379448ea ae3ae366ea3e70d096426410b5badc711164353e
+          bfdc77419b37773a1e762ab096898690e4d0fe0d 3637581a13ac843f65dbb5ea282716757e536a5b
           HISTORICAL_CONSUMERS
           test "$(git --no-replace-objects -C .cache/web-consumer rev-parse HEAD)" = "$consumer_head"
       - name: Verify audited consumer revision and actual module bytes
@@ -154,6 +155,37 @@ jobs:
         # private directory, cold/cache/App assemblies and all68 canonical real ASI slots.
         # This CI stage does not fetch/evaluate the18789-record corpus or claim that full pass.
         run: node --experimental-strip-types scripts/audit_reviewed_alert.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-alert.json .cache/web-alert-old-consumer
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: bfdc77419b37773a1e762ab096898690e4d0fe0d
+          path: .cache/web-ordinary-old-consumer
+          persist-credentials: false
+      - name: Share locked dependencies with exact pre-ordinary capability boundary
+        run: ln -s "$PWD/.cache/web-consumer/node_modules" .cache/web-ordinary-old-consumer/node_modules
+      - name: Test actual ordinary casting transactions against exact sources and old capability absence
+        shell: bash
+        env:
+          RUNTIME_ORDINARY_SOURCE_TESTS: '1'
+          RUNTIME_ORDINARY_CONSUMER_ROOT: ${{ github.workspace }}/.cache/web-consumer
+          RUNTIME_ORDINARY_OLD_CONSUMER_ROOT: ${{ github.workspace }}/.cache/web-ordinary-old-consumer
+          ORDINARY_CASTING_FROZEN_DIR: ${{ github.workspace }}/.cache/ordinary-frozen
+        run: |
+          set -euo pipefail
+          test "$(git --no-replace-objects -C .cache/web-ordinary-old-consumer rev-parse HEAD)" = bfdc77419b37773a1e762ab096898690e4d0fe0d
+          test "$(git --no-replace-objects -C .cache/web-ordinary-old-consumer rev-parse HEAD:src)" = 3637581a13ac843f65dbb5ea282716757e536a5b
+          # Reuse the unchanged strict229 materializer and metadata-only source map.
+          # No raw source bodies are published; this is not a full corpus replay.
+          printf '%s\n' \
+            '13efb98da23086fb877e178b9f73a96deef9168da4425896695ee2c482afe2ad  .cache/web-consumer/tools/fetchReviewedAlertCorpus.mjs' \
+            '71c389aefe85d09d23808eb364a0225b775dd2780f1d2200a54c43f51c81754b  .cache/web-consumer/tools/reviewedAlertCorpusSources.json' \
+            | sha256sum --check --strict
+          node .cache/web-consumer/tools/fetchReviewedAlertCorpus.mjs \
+            --report reports/progress/runtime-coverage.json \
+            --output "$ORDINARY_CASTING_FROZEN_DIR" \
+            --receipt .cache/ordinary-full-source-verification.json \
+            --cache .cache/passive-feat-inputs
+          node node_modules/vitest/vitest.mjs run test/runtimeOrdinaryCasting.vitest.ts
       - name: Replay three explicit attuned TCE infusion workflows
         shell: bash
         run: |
