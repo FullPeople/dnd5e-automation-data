@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "kind": "closed-sixteen-family-source-mounted-contract",
+  "kind": "closed-eighteen-family-source-mounted-contract",
   "producer": {
-    "baseline": "8c080c6abd839e50c605f3745f53130e18a3ad25",
+    "baseline": "e899f8efa6f2a2fb8461996f20e610717bd57796",
     "sourceTree": "2fcacf10f269e0f3a2427c5be618d55f1fc1c233",
     "files": {
       "package.json": "cbe1b37d3c088094a7bb6dad69ab14555a6338029f54409f5c965d60879383b2",
@@ -19,10 +19,10 @@
     "originalReportConsumer": "b05e77ef248325e116a68106cfa140483138d858"
   },
   "web": {
-    "revision": "f96632b1ae40b898ebd250c166da70ddaeb9380a",
+    "revision": "b416732093ad17d3f5ef269379fbaab1b4499021",
     "trees": {
-      "src": "4361ba2d60d57096a95d26013eec3bf177639ee4",
-      "tests": "77e60bcc5b2fdf52b97350d81d5a9e0c9b142464",
+      "src": "40f49d70e326e11dba2d69e8aa4b606a5d3d5181",
+      "tests": "57257e4b830bf4ac32d046f4e32731a4392bf4c0",
       "tools": "960985bf93e5edb987909304404826765b35bdb1",
       ".github": "bd8cfa4bbb64d1697ee697674cb362cb3a18d3a6"
     },
@@ -91,6 +91,14 @@
         "sha256": "0ad06a9cc0f2ef894f6d602e7fe639c4ef00db9444c92a45cff2400357e09183",
         "bytes": 17485
       },
+      "src/core/automation/racialNaturalArmor.ts": {
+        "sha256": "32f030aba258d2e722735690c00afe806b87c493884061a2ee26d9549f79114e",
+        "bytes": 10054
+      },
+      "src/core/automation/racialNaturalArmorEvidence.json": {
+        "sha256": "264b9d4833add7426fc126fe50a508a19eb7a8566834cea81d31a9a27b73a76c",
+        "bytes": 31274
+      },
       "src/core/automation/racialResistanceEvidence.json": {
         "sha256": "368a9dfba6d8f07040bca391162d7a185643dfd6d8b49e0966f05d1142c09f80",
         "bytes": 117054
@@ -103,6 +111,14 @@
         "sha256": "cd4c97112cf13706662b632c627e0539ea151915f819f0807fe8b4324b43fe72",
         "bytes": 14668
       },
+      "src/core/automation/sourceLevelHp.ts": {
+        "sha256": "404b5748681fad02abbb5c1235fe143c54862a1ef8eab41fcbe0feef4acc23ce",
+        "bytes": 26871
+      },
+      "src/core/automation/sourceLevelHpEvidence.json": {
+        "sha256": "8e5dfe2b7181af58d87adf82f9e3bcc8b10f61453bd5cb0eda41b09571ecce50",
+        "bytes": 66201
+      },
       "src/core/automation/variantItemResistanceBonusEvidence.json": {
         "sha256": "32416295c147afe8e38ce0c59c5af7519ca111296d892667fc5d6585f7c5b1d3",
         "bytes": 1442248
@@ -110,6 +126,10 @@
       "src/core/carrying.ts": {
         "sha256": "5283922afccc6a10520065860f2480defa5a7b06bf9c802e0da76b6730a32e10",
         "bytes": 1806
+      },
+      "src/core/engine.ts": {
+        "sha256": "2404d728ddad01feec7ad320210f653b789549f4239608d0d47c4bd8ded3e121",
+        "bytes": 24822
       },
       "src/core/spellWorkspace.ts": {
         "sha256": "eb05cef375f5b50ec01cc08349ed6424e8b67e9f673740593cfbaae79cf09038",
@@ -119,9 +139,17 @@
         "sha256": "4439d7a2f1075655f48c3da592e0430a09214b300ed2c2272ccdaffd5a3ba0e6",
         "bytes": 5102
       },
+      "src/ui/AutomationPanel.tsx": {
+        "sha256": "525ae59222672888fc66059d4992a18beded4b023817f534f50b9f24dc6dce77",
+        "bytes": 9709
+      },
       "src/ui/InventoryMarks.tsx": {
         "sha256": "888f46f9d5a2ceef82d6ac18509eb0fec4c4205409cc8bd656641e144fd17f73",
         "bytes": 3839
+      },
+      "src/ui/SourceLevelHpControl.tsx": {
+        "sha256": "193060b64363038dba7eaad5029fe27bb153c65a8f3226e8b93a718605e19b00",
+        "bytes": 8723
       },
       "tests/charged-item-spell-guards.test.ts": {
         "sha256": "5ae443d3e7efa77ea0f1e1a252e456f8c365416a9e0b362354948b7d2360297a",
@@ -307,6 +335,10 @@
         "sha256": "3c98a31a4bd9c8e3a43a40923b2c1f57b2d4249e6f195127be8ad465b6226f52",
         "bytes": 2754
       },
+      "tests/helpers/naturalArmorEquipmentSourceFixture.ts": {
+        "sha256": "5726bddcadea7759755e17603230b05500e8eb4b15b9bc971cff6d2ec0455fdb",
+        "bytes": 5559
+      },
       "tests/helpers/nonunitItemChargeFlowFixture.ts": {
         "sha256": "354de5736489cf337733d3109bdbe84d92c20e114cd6c127b31ef51ece078cbb",
         "bytes": 998
@@ -363,6 +395,14 @@
         "sha256": "89805ab78965caac73cf2e88b25d1b6c072a9902276366e8c57f9459d29cd800",
         "bytes": 7115
       },
+      "tests/helpers/racialNaturalArmorFlowFixture.ts": {
+        "sha256": "d84e788b0161060f1ec0e17ce521b634c2313627057372b75e7145c2af086e0d",
+        "bytes": 1904
+      },
+      "tests/helpers/racialNaturalArmorSourceFixture.ts": {
+        "sha256": "9da716e0d0101683c7875e522764e079137c36ae9703d74cfd14c5f8b77ec575",
+        "bytes": 16334
+      },
       "tests/helpers/racialResistanceFlowFixture.ts": {
         "sha256": "d030e2bc38d10cfb3975d710abe6c39e557770b415af2b495d30d74a89795d44",
         "bytes": 1507
@@ -394,6 +434,14 @@
       "tests/helpers/shieldTrainingFixture.ts": {
         "sha256": "79703fde75dbbba3dd1226ccf9be61f8d567b4743130a4221f32d4036c571131",
         "bytes": 861
+      },
+      "tests/helpers/sourceLevelHpFlowFixture.ts": {
+        "sha256": "f677eccb3efa2e3a89d2dd688e640d3a07e31a198e59ca1523e4b68901b50844",
+        "bytes": 3274
+      },
+      "tests/helpers/sourceLevelHpSourceFixture.ts": {
+        "sha256": "f8ca904a1258def84abbc3972e42ad94dc0525038fe19d01143d878655678a6f",
+        "bytes": 22553
       },
       "tests/helpers/variantItemResistanceBonusFlowFixture.ts": {
         "sha256": "9ca4f3113940dcfa56d9e26effbd994a76fa3e27cbeefc64fb7ad3d927bc6d02",
@@ -667,6 +715,34 @@
         "sha256": "65302ced9a93d8eb9810ba8856356321f1ad5b556087f681afb43e756addffa0",
         "bytes": 9179
       },
+      "tests/racial-natural-armor-baseline.test.ts": {
+        "sha256": "14ac97166441f9062e75bc1f7506c03a4f7574016b918581f0b3e2172a8613ad",
+        "bytes": 2044
+      },
+      "tests/racial-natural-armor-interactions.test.ts": {
+        "sha256": "7fd049d87826543da58bb4e7c093974bc02c4e77dc039871e6211121ef0fe03e",
+        "bytes": 7881
+      },
+      "tests/racial-natural-armor-legacy-boundary.test.ts": {
+        "sha256": "152fa6605934a5480f50ff8d5f0f59082c5154e9fa016cb948b3b3db48cfeb50",
+        "bytes": 2828
+      },
+      "tests/racial-natural-armor-projection.test.ts": {
+        "sha256": "a6ac3253f8b76b27a1c3192e0de42b8311de04cf180e6dabd2aa9610c5f89af9",
+        "bytes": 11520
+      },
+      "tests/racial-natural-armor-source.test.ts": {
+        "sha256": "20b864448028494494b6a480acc887109749add2ef8b1d62f28cfa262f0d5fa7",
+        "bytes": 8070
+      },
+      "tests/racial-natural-armor-ui.test.ts": {
+        "sha256": "beefdd86ff84b01c178769fe873a2b4d31cadfb5c52a77e27e450fc8d5c73712",
+        "bytes": 6181
+      },
+      "tests/racial-natural-armor-workflow.test.ts": {
+        "sha256": "eab429248943cb707cce67f0e620247f92bb44ad760407bfacac45c0f3ef3f49",
+        "bytes": 7410
+      },
       "tests/racial-resistance-baseline.test.ts": {
         "sha256": "40cc883cb718ca0c9bbfa7f81c3d7867a6dc5bd3bc12e5cba70904a30118f322",
         "bytes": 1010
@@ -714,6 +790,34 @@
       "tests/relative-racial-movement-workflow.test.ts": {
         "sha256": "5023cf81fddb9be5302b50154b528db12219839122901b936f4c19b6c92dd5bb",
         "bytes": 4309
+      },
+      "tests/source-level-hp-baseline.test.ts": {
+        "sha256": "a9afb4f832a3cb84d80c158a4142a8b6f6bb79d5efc1dee9bd33ccf063c4fd6e",
+        "bytes": 2046
+      },
+      "tests/source-level-hp-core.test.ts": {
+        "sha256": "bf0fc8db61968769c284b38ec6e494b503d707302fd8dcaf612fbb4c43b9d6cb",
+        "bytes": 15499
+      },
+      "tests/source-level-hp-interactions.test.ts": {
+        "sha256": "162bf59cdc06548eb4f906d72c93d62e1fa4fa50a08dee9d1315ae906b8deeec",
+        "bytes": 9673
+      },
+      "tests/source-level-hp-legacy-boundary.test.ts": {
+        "sha256": "cbcde009df541308917917480e0a1bf0fcf06d11d3ebb9b78578ce3845afabe7",
+        "bytes": 5602
+      },
+      "tests/source-level-hp-source.test.ts": {
+        "sha256": "8d160d074c3179a84a43ad0a7bf26361236d34f851a00c2e4b9d557b66ceb598",
+        "bytes": 7595
+      },
+      "tests/source-level-hp-ui.test.ts": {
+        "sha256": "8418b941b2b826324b27f0dac6be16eded50cd3c426b42456faa3f79d7949fc8",
+        "bytes": 7573
+      },
+      "tests/source-level-hp-workflow.test.ts": {
+        "sha256": "feb1fbda86e491c726915b6ef02014ea276a125d524dd21db10b553e2623e9cc",
+        "bytes": 10353
       },
       "tests/variant-item-resistance-bonus-baseline.test.ts": {
         "sha256": "9e72768e3b4a6a867e38e1ca9e1b6995dff81336dd50b2accfd6221518ce2d13",
@@ -827,7 +931,9 @@
     "src/core/automation/classMovementEvidence.json",
     "src/core/automation/racialResistanceEvidence.json",
     "src/core/automation/inheritedRacialResistanceEvidence.json",
-    "src/core/automation/racialCarryingEvidence.json"
+    "src/core/automation/racialCarryingEvidence.json",
+    "src/core/automation/racialNaturalArmorEvidence.json",
+    "src/core/automation/sourceLevelHpEvidence.json"
   ],
   "inputs": [
     {
@@ -1015,7 +1121,7 @@
       "sha256": "0593dd1ff41efae5fe35732dac306d6af94f3393f8224493e1368bb7924b3b5a",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "class/Benjamin Huffman; 拳斗士Pugilist - 2014.json",
+      "path": "class/Benjamin Huffman; \u62f3\u6597\u58ebPugilist - 2014.json",
       "gitBlobSha1": "9ddf59786ef0d391ff570bf70e55adb180488140",
       "sourceBytes": 146945,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/class/Benjamin%20Huffman%3B%20%E6%8B%B3%E6%96%97%E5%A3%ABPugilist%20-%202014.json"
@@ -1025,7 +1131,7 @@
       "sha256": "d53f251428233b1b8852e3044093348909b8be0ebafad30196e594a43de9a007",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/1985 Games; 胧忆岛：蒿野物语.json",
+      "path": "collection/1985 Games; \u80e7\u5fc6\u5c9b\uff1a\u84bf\u91ce\u7269\u8bed.json",
       "gitBlobSha1": "453e5cd2c3c8fe14592d7b4a382d248a3772204f",
       "sourceBytes": 2343015,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/1985%20Games%3B%20%E8%83%A7%E5%BF%86%E5%B2%9B%EF%BC%9A%E8%92%BF%E9%87%8E%E7%89%A9%E8%AF%AD.json"
@@ -1035,7 +1141,7 @@
       "sha256": "300d3b501af0bfde6f26c7044fa2086c5a47f46f843e57b5466f32297a4586e4",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Avantris; 歪曲之月.json",
+      "path": "collection/Avantris; \u6b6a\u66f2\u4e4b\u6708.json",
       "gitBlobSha1": "060b85bd4fd53a11b9218025643d42990fdffd03",
       "sourceBytes": 4256737,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Avantris%3B%20%E6%AD%AA%E6%9B%B2%E4%B9%8B%E6%9C%88.json"
@@ -1045,7 +1151,7 @@
       "sha256": "9b5b07f9bdce7a1825beaabfed186e225c855511dd65d650dc4a3ad2d9b39b44",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Darrington Press; 塔尔多雷战役设定集重制版.json",
+      "path": "collection/Darrington Press; \u5854\u5c14\u591a\u96f7\u6218\u5f79\u8bbe\u5b9a\u96c6\u91cd\u5236\u7248.json",
       "gitBlobSha1": "cc18e626970de6679885ca93c2b6d7939f0841d1",
       "sourceBytes": 1916365,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Darrington%20Press%3B%20%E5%A1%94%E5%B0%94%E5%A4%9A%E9%9B%B7%E6%88%98%E5%BD%B9%E8%AE%BE%E5%AE%9A%E9%9B%86%E9%87%8D%E5%88%B6%E7%89%88.json"
@@ -1055,7 +1161,7 @@
       "sha256": "3a0ebbb8eda1d4f327d64801ea55972d342b280c08821914a8f642e630a6e98e",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Griffin Macaulay; 狮鹫的鞍中珍宝Ⅱ.json",
+      "path": "collection/Griffin Macaulay; \u72ee\u9e6b\u7684\u978d\u4e2d\u73cd\u5b9d\u2161.json",
       "gitBlobSha1": "813c9a7b08d5243e8d061fdd5f3d41baa77e43e4",
       "sourceBytes": 2741848,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Griffin%20Macaulay%3B%20%E7%8B%AE%E9%B9%AB%E7%9A%84%E9%9E%8D%E4%B8%AD%E7%8F%8D%E5%AE%9D%E2%85%A1.json"
@@ -1065,7 +1171,7 @@
       "sha256": "1bef02d5e1e90cc94515734ac352c1f888e69ab059c01858abe5d6f43709422f",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Hit Point Press; 谦卑林战役设定集.json",
+      "path": "collection/Hit Point Press; \u8c26\u5351\u6797\u6218\u5f79\u8bbe\u5b9a\u96c6.json",
       "gitBlobSha1": "fb94685bdf80cfd090155dd600b47605ee54bdd6",
       "sourceBytes": 1245673,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Hit%20Point%20Press%3B%20%E8%B0%A6%E5%8D%91%E6%9E%97%E6%88%98%E5%BD%B9%E8%AE%BE%E5%AE%9A%E9%9B%86.json"
@@ -1075,7 +1181,7 @@
       "sha256": "58226d6315b3e17c0c9746dba4b248b1d620b11fa21b12cf9e6d3b151873de4d",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Hit Point Press; 谦卑林故事集.json",
+      "path": "collection/Hit Point Press; \u8c26\u5351\u6797\u6545\u4e8b\u96c6.json",
       "gitBlobSha1": "126c5403b1927cc6c5e5259446b64c790f2d97da",
       "sourceBytes": 1479880,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Hit%20Point%20Press%3B%20%E8%B0%A6%E5%8D%91%E6%9E%97%E6%95%85%E4%BA%8B%E9%9B%86.json"
@@ -1085,7 +1191,7 @@
       "sha256": "c598cb6c84cb81354ebb600c8b5ecfbde8303a189705f400370db22e3b125c73",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "race/Sample - Giddy; 觉醒骷髅.json",
+      "path": "race/Sample - Giddy; \u89c9\u9192\u9ab7\u9ac5.json",
       "gitBlobSha1": "1509d8703bfe6a922d90333e63d1a398a60b6e4a",
       "sourceBytes": 2122,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/race/Sample%20-%20Giddy%3B%20%E8%A7%89%E9%86%92%E9%AA%B7%E9%AB%85.json"
@@ -3455,16 +3561,193 @@
           }
         }
       ]
+    },
+    {
+      "id": "racial-natural-armor",
+      "cases": 34,
+      "suites": 7,
+      "files": [
+        {
+          "path": "tests/racial-natural-armor-source.test.ts",
+          "category": "source",
+          "cases": 5,
+          "identityMultiset": {
+            "465b0b76f995f2963233fae555a13162ce7674333f328a50344a3350d9e1e74a": 1,
+            "578dda74ceb040285278446858663ac547e6912bfdcc3603b7b60c7e7986e8bf": 1,
+            "5a43c9c66354e69fd3cdf2e1f106a46d4b64fbf3111667f767e6675370f979a6": 1,
+            "831fe5d1dddda42eba2b78c7312c1dac816dd9f70d720570f822b42c43438dce": 1,
+            "af9e0d387589a9a7a1cab1db0b073556e817b3990bbe499f2c7bad42ec397edf": 1
+          }
+        },
+        {
+          "path": "tests/racial-natural-armor-baseline.test.ts",
+          "category": "baseline",
+          "cases": 11,
+          "identityMultiset": {
+            "2620bfdc43ffbdb1af3ff91ab27175d697a35a7808d0deac188a384e6cd851de": 1,
+            "2f591ceaad4191f477778fe678fbe16a852f3cbc6ce5deb9cf20017d96de3561": 1,
+            "67e1b371f5c9986309049643c049ffa38aa900a370a99d30e04cf4455d2b2b50": 1,
+            "6a5330fc2c24c129548fd77814990a35b624d6869aba055f93dc60babc4994cd": 1,
+            "815e16ef4745be971551372b64370933f697dc945a20471226df715b5bbd4b29": 1,
+            "8237f1fe10a46eba6ebae40cb1f19c4920808c0f65969ce424a1127e520b0929": 1,
+            "8fcdd829fc028f06f79d2c20e2b9308576d02647ef3647e4209a2999135e2323": 1,
+            "c6d7ac2e77a705572b00b55ccfa129861247f0bff80c0e9f2ac1a08a1a2d1fb3": 1,
+            "cdd2e8fd54ca2a3b6d8b0b6974f6ba2aadacf4d334a744705f08ae197673f622": 1,
+            "d31db907b9de778c10512162b60eb7d33ab5baa5c858961dcf73049dc8bacbcb": 1,
+            "fb41b92072ac5f957a7247db35fc898897356d3f13712e3ccb16406761ade0a6": 1
+          }
+        },
+        {
+          "path": "tests/racial-natural-armor-projection.test.ts",
+          "category": "guards",
+          "cases": 9,
+          "identityMultiset": {
+            "0f2895730609b13691987d7d3d2bcc660da4ae349aa2ab91455171617ce983b3": 1,
+            "1b679c24cfffd88c97ba7aefb43d3ea00d39c7b3f63f9f452cee0bc83afb4389": 1,
+            "2e50f41195a592160d6b2fd71d5d1304e7fa8f31fd2ac5d74cc4893510c6f527": 1,
+            "5d32ac2460168819fbfbea347122d31ab306a122cccb416f584953d7175aca33": 1,
+            "7bc26b864a11ef75f8fd6608c82e09f914cc081d633ea41b4955492a88ae5f3b": 1,
+            "8c5c12dfba7cca65ce055c7dab3a23b8790bf8ec29b6c19750e777026ffe7ac2": 1,
+            "8c93b537953c16c6c3620ad416eb23203c39543ac6b2216860a62eebfd9fff72": 1,
+            "d2b218e3331b13106fbe6974488ef0b8176b79fbbd59cac79b8ec8bffea2e672": 1,
+            "e619fb372993428616f74c7f68401d65b0583a3ba96864f0cf6606c729894c06": 1
+          }
+        },
+        {
+          "path": "tests/racial-natural-armor-workflow.test.ts",
+          "category": "workflow",
+          "cases": 3,
+          "identityMultiset": {
+            "5f47b5736cff98436f95c442ddbe93c5ee5a11b6dc5238822b189f31ab8d6813": 1,
+            "7f2c447129122f54a12a1bd14870a6a17423fa15d8490abacfc2b928ba575d7c": 1,
+            "8da249dbc690588afadcf0f39ddf2c9c55cc1038c674d2ace96a4c9b750f7d1a": 1
+          }
+        },
+        {
+          "path": "tests/racial-natural-armor-ui.test.ts",
+          "category": "ssr",
+          "cases": 2,
+          "identityMultiset": {
+            "b6f03d5a156be34ee4178858bab26aa175ccdc92da3fe0e4b50ef3fd3b235af0": 1,
+            "fd8484042e5a25b5900cf350c3f135c37197ba25e26b28c17ec73b3a2579202e": 1
+          }
+        },
+        {
+          "path": "tests/racial-natural-armor-legacy-boundary.test.ts",
+          "category": "legacy-boundary",
+          "cases": 2,
+          "identityMultiset": {
+            "5c2970d22109ea3a0df10ffa43e502258cd671eb40bbb4a5687d617e55968c6f": 1,
+            "d57d5e89376033b355f18a5830662a6ceca2450350abef90f924e81f9c059afd": 1
+          }
+        },
+        {
+          "path": "tests/racial-natural-armor-interactions.test.ts",
+          "category": "mounted",
+          "cases": 2,
+          "identityMultiset": {
+            "2650f6169d35953fbcc03e0d94a6d7a182bfd0f96df6a2e9507fd326123f7b24": 1,
+            "4f8f84241c11f0981a71c8fd0c8e64bbf1c6173e3a312cd35523e9be39ab8e0c": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "source-level-hp",
+      "cases": 31,
+      "suites": 7,
+      "files": [
+        {
+          "path": "tests/source-level-hp-source.test.ts",
+          "category": "source",
+          "cases": 5,
+          "identityMultiset": {
+            "03d2f54548f5491837b91dc7db4e3543dffd5018843bbe3e4bb19a33912ff89b": 1,
+            "56e9d8662b80ba65c2edc86623128e4481d47413f960879986d470960ae04f7f": 1,
+            "76c59e1836b984eb2b781c56789136b20f46c5f0ae630b8f787fe0bfa684af3b": 1,
+            "8e6e1bbe8d8c9a8b73d4dc368fce9f3006b3973b690a36b275dcc785a56bd138": 1,
+            "9de7510947d84e562f6b25a339da006b0d1732c8d9c0b43d30b7547935768c81": 1
+          }
+        },
+        {
+          "path": "tests/source-level-hp-baseline.test.ts",
+          "category": "baseline",
+          "cases": 6,
+          "identityMultiset": {
+            "081d98cd3041ad89e192b8df07f7638a5884131caf00d66e8589a4dbb0e73e9c": 1,
+            "3fc1c54def3e1241febcefc31d26fef904548bbd51a3bb66420d23e8b19e8bbb": 1,
+            "84cb6638a7f5133faed564b9c961a3342a0861b5c1d9c036ced33b2159eed410": 1,
+            "b89a32d2aeacb11acb10515d93790989c5ca84b8723423bc039f1e82e32e6257": 1,
+            "ec7e5e7d9c9bd45522b17336d461bdaca87d4554a29aaee74afebc7d69572b47": 1,
+            "fe8da4601e8a1e90c55c0050a638e72b7763bd08f0e8b47a9d50d06fc413e44d": 1
+          }
+        },
+        {
+          "path": "tests/source-level-hp-core.test.ts",
+          "category": "guards",
+          "cases": 9,
+          "identityMultiset": {
+            "0ae3499006d10198277883c611120257e6ae7da160b15124edcb4f75740d7b88": 1,
+            "14e734eb60786f92c18c5a754d4fdd70f3d0f370c662025e78d6806fa89c43d9": 1,
+            "623efd587256bda29bc7d16505b2f7dd966de51e5de9b26f69ecae1192ce4c7d": 1,
+            "87acf87cde932dc64e4c48c5bd252dd40512dd4022c0b7be43183237e9ed6e1f": 1,
+            "8ee890840ef863d4fac930be84ff29ebeba68bb06cf851dcdf8375cab30d36ed": 1,
+            "9043d0d46887fba7d2bb2d47533c8b6513723172f44a6495645b693cbe52feb7": 1,
+            "a2fd3808fabec328d0e7fc56caaa46651b0d8aff5021e55a9a52a19513e9155e": 1,
+            "a4905423d7e6fb14b58a7fc324a051a69f977a51e03ab2d14c15b883a847865f": 1,
+            "e7338865a6abe0ffb74b69a41ea28046061102b77b057385f36cf7c2390ca8b6": 1
+          }
+        },
+        {
+          "path": "tests/source-level-hp-legacy-boundary.test.ts",
+          "category": "legacy-boundary",
+          "cases": 3,
+          "identityMultiset": {
+            "4c034b92bbfbc1df8e4c9d8af31f25266278e130dc2c564eef0a01a6657c30d9": 1,
+            "d8578a2c87ec95dec63ea4e2cf431bfeb5a0fa746df66dfd169c9aff38b727c8": 1,
+            "fb548e0c5413b7e585172b76ec1f7cc770e03d5023f4a34065facba79b7bada0": 1
+          }
+        },
+        {
+          "path": "tests/source-level-hp-workflow.test.ts",
+          "category": "workflow",
+          "cases": 3,
+          "identityMultiset": {
+            "27ddbd41d756e6ccf0145bd6600c607e59764723269e2e785927ad36b9648b39": 1,
+            "643682a272c6f3371e7cda73aa499f7b004eb3d9f554690050a8b2343f3d4326": 1,
+            "e82ad4b2ce9729c001e37542c61f4a17913baff53ed9208c52f419a35b4808be": 1
+          }
+        },
+        {
+          "path": "tests/source-level-hp-ui.test.ts",
+          "category": "mounted",
+          "cases": 2,
+          "identityMultiset": {
+            "b687188188ebd1f06d00f14b25a52d3c9fc6fca8aebd1af8d5b9b0e3c518c33f": 1,
+            "e798f93cdbcef1e2d0392d219c8b9ddb37eb5311c1fe84ca71cef3649c803a32": 1
+          }
+        },
+        {
+          "path": "tests/source-level-hp-interactions.test.ts",
+          "category": "mounted",
+          "cases": 3,
+          "identityMultiset": {
+            "1e4ae4b6555d8381c8c9540393e7ab75ff95c0087f20ab4ce1737169c8c7c7b3": 1,
+            "27d8d3473b19bb093096402569016ccfc22752272327d974bc5c0ba1f430eed6": 1,
+            "c486769486825a6bd0ba753923e508ffd33ae88ac7767337d2922f8ae9998529": 1
+          }
+        }
+      ]
     }
   ],
   "counts": {
-    "families": 16,
-    "files": 95,
-    "instances": 1491,
-    "distinctFileAndFullNamePairs": 1489,
-    "mountedFiles": 14,
-    "mountedCases": 34,
-    "coreSourceSsrCases": 1457
+    "families": 18,
+    "files": 109,
+    "instances": 1556,
+    "distinctFileAndFullNamePairs": 1554,
+    "mountedFiles": 17,
+    "mountedCases": 41,
+    "coreSourceSsrCases": 1515
   },
   "budgets": {
     "memoryMb": 512,
@@ -3489,7 +3772,9 @@
     "CLASS_MOVEMENT_FROZEN_DIR",
     "RACIAL_RESISTANCE_FROZEN_DIR",
     "INHERITED_RACIAL_RESISTANCE_FROZEN_DIR",
-    "RACIAL_CARRYING_FROZEN_DIR"
+    "RACIAL_CARRYING_FROZEN_DIR",
+    "RACIAL_NATURAL_ARMOR_FROZEN_DIR",
+    "SOURCE_LEVEL_HP_FROZEN_DIR"
   ],
   "currentRuntimePairClaimed": false,
   "wholeEntryOrReportCredit": false,
@@ -3514,6 +3799,34 @@
         "SheetEditContext"
       ],
       "componentOrProviderMocks": 0,
+      "fullAppProof": false
+    },
+    "racial-natural-armor": {
+      "realSubjects": [
+        "AutomationPanel",
+        "Overview",
+        "engine",
+        "SheetEditContext",
+        "ValueTraceProvider",
+        "armorAdjustmentReview",
+        "resolveLegacyArmorAdjustments"
+      ],
+      "unrelatedOverviewChildMocks": 6,
+      "fullAppProof": false
+    },
+    "source-level-hp": {
+      "realSubjects": [
+        "SourceLevelHpControl",
+        "AutomationPanel",
+        "Overview",
+        "engine",
+        "ChoiceWorkspaceContext",
+        "SheetEditContext",
+        "ValueTraceProvider"
+      ],
+      "unrelatedOverviewChildMocks": 6,
+      "clientReadonlyCases": 2,
+      "mountedInteractionCases": 3,
       "fullAppProof": false
     }
   }
