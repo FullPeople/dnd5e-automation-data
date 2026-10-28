@@ -1,0 +1,61 @@
+name: Pinned five-family Web source and mounted gate
+on:
+  push:
+    branches: ['codex/cloud-rules-five-family-source-gate-20261028']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-mounted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 2d5033c584b752e3445401351bdfb206a450da74
+          path: .cache/five-family-web
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+      - name: Verify frozen producer, Web source/tests/helpers/tools, locks and21-input metadata before installation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/five_family_source_gate.mjs verify \
+            --web-root .cache/five-family-web --output .cache/five-family-inputs \
+            --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
+      - name: Install only committed locked Web dependencies, including mounted-test jsdom
+        run: npm ci --prefix .cache/five-family-web
+      - name: Run all26 unchanged files sequentially by family, including all8 mounted cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/five_family_source_gate.mjs \
+            --web-root .cache/five-family-web --output .cache/five-family-inputs \
+            --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
+      - name: Validate the closed metadata-only artifact allowlist
+        id: artifacts
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/five_family_source_gate.mjs artifacts \
+            --web-root .cache/five-family-web --output .cache/five-family-inputs \
+            --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
+      - name: Upload only three closed technical receipts, never source bodies or raw logs
+        if: always() && steps.artifacts.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-family-source-${{ github.sha }}
+          path: |
+            five-family-source-evidence/inputs.json
+            five-family-source-evidence/side-source.json
+            five-family-source-evidence/gate.json
+          if-no-files-found: error
+          retention-days: 7
