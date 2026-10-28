@@ -86,11 +86,26 @@ export function verifySideReceipt(receipt){
  const expected={schemaVersion:1,kind:'optional-class-list-semantic-side-source',verified:true,repository:CONTRACT.sideSource.repository,revision:CONTRACT.sideSource.revision,path:CONTRACT.sideSource.path,retrievalUrl:CONTRACT.sideSource.retrievalUrl,rawBytes:CONTRACT.sideSource.rawBytes,rawSha256:CONTRACT.sideSource.rawSha256,gitBlobSha1:CONTRACT.sideSource.gitBlobSha1,semanticSideSourceOnly:true,runtimeInputExtension:false,sourceBodiesPublished:false};
  if(!equal(receipt,expected))fail('SIDE_RECEIPT');return receipt;
 }
-export function runnerPlan(p,family,privateRoot,root=ROOT){
+// Diagnostic execution is a closed four-case subset, never a full-gate fallback.
+export const OPTIONAL_MOUNTED_STAGES=Object.freeze(['start','confirmed','owner-routes','workspace-open','cantrip-navigation','learned-navigation','catalog-candidate','drop-target','pointerdown','pointermove','pointerup','learned-row','correct-owner','other-owner-preserved','manual-preserved']);
+export const OPTIONAL_MOUNTED_IDENTITY='e7b01ba66a5adc2fbe5952426cf344fbb11a4aa9cda8ce3d59e1ad6bc27b0ae3';
+export function gateScope(scope='full'){
+ if(scope==='full')return {kind:'five-family-web-source-and-mounted-technical-result',families:CONTRACT.families,expectedFiles:26,expectedCases:674,expectedMountedFiles:3,expectedMountedCases:8};
+ if(scope!=='optional-mounted-diagnostic')fail('SCOPE');
+ const family=CONTRACT.families.find(row=>row.id==='optional-class-list'),files=family.files.filter(row=>row.path==='tests/optional-class-list-interactions.test.ts'&&row.category==='mounted');
+ if(files.length!==1||files[0].cases!==4||files[0].identityMultiset[OPTIONAL_MOUNTED_IDENTITY]!==1)fail('DIAGNOSTIC_ROSTER');
+ return {kind:'five-family-optional-mounted-diagnostic',families:[{...family,files,cases:4,suites:1}],expectedFiles:1,expectedCases:4,expectedMountedFiles:1,expectedMountedCases:4};
+}
+export function diagnosticStages(stdout){
+ const stages=[];let previous=-1;
+ for(const line of stdout.split(/\r?\n/))if(line.startsWith('OPTIONAL_LIST_STAGE:')){const value=line.slice('OPTIONAL_LIST_STAGE:'.length),index=OPTIONAL_MOUNTED_STAGES.indexOf(value);if(index!==previous+1)fail('DIAGNOSTIC_STAGE');previous=index;stages.push(value);}
+ return {caseIdentitySha256:OPTIONAL_MOUNTED_IDENTITY,stages};
+}
+export function runnerPlan(p,family,privateRoot,root=ROOT,scope='full'){
  const guard=join(root,'scripts/five_family_network_guard.cjs'),preload=pathToFileURL(join(p.webRoot,'tests/helpers/offlineCatalogFetchPreload.mjs')).href;
  const env=Object.fromEntries(['PATH','HOME','TMPDIR','TMP','TEMP','SystemRoot'].filter(key=>typeof process.env[key]==='string').map(key=>[key,process.env[key]]));
  Object.assign(env,{CI:'true',TZ:'UTC',FORCE_COLOR:'0',NODE_OPTIONS:`--max-old-space-size=512 --require=${guard} --import=${preload}`,ITEM_CHARGE_FROZEN_DIR:p.output,RACIAL_DARKVISION_FROZEN_DIR:p.output,ITEM_ABILITY_FLOOR_FROZEN_DIR:p.output,RACIAL_MOVEMENT_FROZEN_DIR:p.output,OPTIONAL_CLASS_LIST_FROZEN_DIR:p.output,OPTIONAL_CLASS_LIST_SIDE_SOURCE_FILE:p.book});
- return {command:process.execPath,args:[join(p.webRoot,'node_modules/vitest/vitest.mjs'),'run',...family.files.map(file=>file.path),'--maxWorkers=1','--no-file-parallelism','--retry=0','--reporter=json','--outputFile='+join(privateRoot,'results.json')],options:{cwd:p.webRoot,encoding:'utf8',timeout:CONTRACT.budgets.processTimeoutMs,maxBuffer:CONTRACT.budgets.maxBufferBytes,env}};
+ return {command:process.execPath,args:[join(p.webRoot,'node_modules/vitest/vitest.mjs'),'run',...family.files.map(file=>file.path),'--maxWorkers=1','--no-file-parallelism','--retry=0','--reporter=json',...(scope==='optional-mounted-diagnostic'?['--reporter=default']:[]),'--outputFile='+join(privateRoot,'results.json')],options:{cwd:p.webRoot,encoding:'utf8',timeout:CONTRACT.budgets.processTimeoutMs,maxBuffer:CONTRACT.budgets.maxBufferBytes,env}};
 }
 const nameCounts=values=>{const counts={};for(const value of values)counts[value]=(counts[value]||0)+1;return Object.fromEntries(Object.entries(counts).sort(([a],[b])=>a.localeCompare(b)));};
 export function sanitizeResults(json,family,webRoot,exit){
@@ -110,33 +125,38 @@ export function sanitizeResults(json,family,webRoot,exit){
  return {files,counts,passed};
 }
 function writeJson(path,value){mkdirSync(dirname(path),{recursive:true});writeFileSync(path,JSON.stringify(value,null,2)+'\n',{flag:'wx'});}
-export async function runGate(options,{root=ROOT,verify=verifyCheckouts,metadataLoader=loadMetadata,indexVerifier=verifyInputIndex,sanitize=sanitizeResults,spawn=spawnSync,clock=Date.now,makePrivate=()=>mkdtempSync(join(root,'.cache/five-family-private-'))}={}){
- const p=verify(options,{root,dependencies:true}),metadata=await metadataLoader(p.webRoot,root);
+export async function runGate(options,{root=ROOT,verify=verifyCheckouts,metadataLoader=loadMetadata,indexVerifier=verifyInputIndex,sanitize=sanitizeResults,spawn=spawnSync,clock=Date.now,makePrivate=()=>mkdtempSync(join(root,'.cache/five-family-private-'))}={},scope='full'){
+ const selected=gateScope(scope),p=verify(options,{root,dependencies:true}),metadata=await metadataLoader(p.webRoot,root);
  for(const key of ['output','receipt','result','book','sideReceipt'])if(existsSync(p[key]))fail('OUTPUT_EXISTS');
  const stats=await metadata.api.materializeRows(metadata.rows,{output:p.output,caches:[]});indexVerifier(p.output,metadata.rows);writeJson(p.receipt,inputReceipt(metadata.rows,stats));
  const sideReceipt=await metadata.side.run(['--output',p.book,'--receipt',p.sideReceipt]);verifySideReceipt(sideReceipt);metadata.side.validateRawBook(readFileSync(p.book));if(!equal(JSON.parse(readFileSync(p.sideReceipt)),sideReceipt))fail('SIDE_RECEIPT');
- const families=[];let stopped=false;
- for(const family of CONTRACT.families){
+ const families=[];let stopped=false,diagnostic;
+ for(const family of selected.families){
   if(stopped){families.push({id:family.id,category:'not-run-after-process-failure',accepted:false,counts:null,files:[]});continue;}
-  const privateRoot=makePrivate(),plan=runnerPlan(p,family,privateRoot,root),start=clock(),run=spawn(plan.command,plan.args,plan.options),stdout=Buffer.from(run.stdout??''),stderr=Buffer.from(run.stderr??'');
+  const privateRoot=makePrivate(),plan=runnerPlan(p,family,privateRoot,root,scope),start=clock(),run=spawn(plan.command,plan.args,plan.options),stdout=Buffer.from(run.stdout??''),stderr=Buffer.from(run.stderr??'');
   writeFileSync(join(privateRoot,'stdout.log'),stdout);writeFileSync(join(privateRoot,'stderr.log'),stderr);
   const resultPath=join(privateRoot,'results.json'),bytes=existsSync(resultPath)?readFileSync(resultPath):null;let safe,category=bytes?'closed-result-contract-failure':'child-no-results';
   try{safe=sanitize(bytes?JSON.parse(bytes):null,family,p.webRoot,run.status);category=safe.passed?'passed':safe.counts.failed?'test-failure':'closed-result-contract-failure';}catch{}
+  if(scope==='optional-mounted-diagnostic'){diagnostic=diagnosticStages(stdout.toString());if(safe?.passed&&!equal(diagnostic.stages,OPTIONAL_MOUNTED_STAGES))category='closed-result-contract-failure';}
   if(/^FIVE_FAMILY_NETWORK_GUARD_VIOLATION$/m.test(stderr.toString()))category='network-guard-violation';
   if(run.signal){category=run.signal==='SIGKILL'?'process-killed-cause-unproven':'process-signal';stopped=true;}if(run.error){category=run.error.code==='ETIMEDOUT'?'process-timeout':'process-error';stopped=true;}
   families.push({id:family.id,category,accepted:category==='passed'&&!!safe?.passed&&!run.signal&&!run.error,durationMs:clock()-start,exitCode:Number.isInteger(run.status)?run.status:null,signal:['SIGKILL','SIGTERM','SIGABRT'].includes(run.signal)?run.signal:run.signal?'other':null,counts:safe?.counts??null,files:safe?.files??[],stdoutSha256:sha(stdout),stderrSha256:sha(stderr),resultsSha256:bytes?sha(bytes):null});
  }
- const accepted=families.every(row=>row.accepted),result={schemaVersion:1,kind:'five-family-web-source-and-mounted-technical-result',producerBaseline:CONTRACT.producer.baseline,producerSourceTree:CONTRACT.producer.sourceTree,producerRevision:p.producerRevision,webRevision:CONTRACT.web.revision,webSourceTree:CONTRACT.web.trees.src,contractSha256:sha(readFileSync(join(root,'scripts/five_family_source_contract.json'))),expectedFiles:26,expectedCases:674,expectedMountedFiles:3,expectedMountedCases:8,workerCount:1,retries:0,memoryMb:512,processTimeoutMs:360000,networkDeniedFromStartup:true,accepted,families,sourceBodiesPublished:false,rawOutputsPublished:false,currentRuntimePairClaimed:false,wholeEntryOrReportCredit:false};
+ const accepted=families.every(row=>row.accepted),result={schemaVersion:1,kind:selected.kind,producerBaseline:CONTRACT.producer.baseline,producerSourceTree:CONTRACT.producer.sourceTree,producerRevision:p.producerRevision,webRevision:CONTRACT.web.revision,webSourceTree:CONTRACT.web.trees.src,contractSha256:sha(readFileSync(join(root,'scripts/five_family_source_contract.json'))),expectedFiles:selected.expectedFiles,expectedCases:selected.expectedCases,expectedMountedFiles:selected.expectedMountedFiles,expectedMountedCases:selected.expectedMountedCases,workerCount:1,retries:0,memoryMb:512,processTimeoutMs:360000,networkDeniedFromStartup:true,accepted,families,sourceBodiesPublished:false,rawOutputsPublished:false,currentRuntimePairClaimed:false,wholeEntryOrReportCredit:false};
+ if(scope==='optional-mounted-diagnostic')result.mountedDiagnostic=diagnostic;
  writeJson(p.result,result);return accepted;
 }
 export function validateArtifacts(options,root=ROOT){
  const p=validatePaths(options,root),input=JSON.parse(readFileSync(p.receipt)),side=JSON.parse(readFileSync(p.sideReceipt)),result=JSON.parse(readFileSync(p.result));
  if(!equal(input,inputReceipt(CONTRACT.inputs,{reusedInputs:input.reusedInputs,downloadedInputs:input.downloadedInputs})))fail('ARTIFACT_INPUT');verifySideReceipt(side);
+ const selected=gateScope(result.kind==='five-family-optional-mounted-diagnostic'?'optional-mounted-diagnostic':'full');
  const resultKeys=['schemaVersion','kind','producerBaseline','producerSourceTree','producerRevision','webRevision','webSourceTree','contractSha256','expectedFiles','expectedCases','expectedMountedFiles','expectedMountedCases','workerCount','retries','memoryMb','processTimeoutMs','networkDeniedFromStartup','accepted','families','sourceBodiesPublished','rawOutputsPublished','currentRuntimePairClaimed','wholeEntryOrReportCredit'];
- if(!keys(result,resultKeys)||result.schemaVersion!==1||result.kind!=='five-family-web-source-and-mounted-technical-result'||result.producerBaseline!==CONTRACT.producer.baseline||result.producerSourceTree!==CONTRACT.producer.sourceTree||!/^[a-f0-9]{40}$/.test(result.producerRevision)||result.webRevision!==CONTRACT.web.revision||result.webSourceTree!==CONTRACT.web.trees.src||result.contractSha256!==sha(readFileSync(join(root,'scripts/five_family_source_contract.json')))||result.expectedFiles!==26||result.expectedCases!==674||result.expectedMountedFiles!==3||result.expectedMountedCases!==8||result.workerCount!==1||result.retries!==0||result.memoryMb!==512||result.processTimeoutMs!==360000||result.networkDeniedFromStartup!==true||typeof result.accepted!=='boolean'||!Array.isArray(result.families)||result.families.length!==5||result.sourceBodiesPublished!==false||result.rawOutputsPublished!==false||result.currentRuntimePairClaimed!==false||result.wholeEntryOrReportCredit!==false)fail('ARTIFACT_RESULT');
+ if(selected.expectedCases===4)resultKeys.push('mountedDiagnostic');
+ if(!keys(result,resultKeys)||result.schemaVersion!==1||result.kind!==selected.kind||result.producerBaseline!==CONTRACT.producer.baseline||result.producerSourceTree!==CONTRACT.producer.sourceTree||!/^[a-f0-9]{40}$/.test(result.producerRevision)||result.webRevision!==CONTRACT.web.revision||result.webSourceTree!==CONTRACT.web.trees.src||result.contractSha256!==sha(readFileSync(join(root,'scripts/five_family_source_contract.json')))||result.expectedFiles!==selected.expectedFiles||result.expectedCases!==selected.expectedCases||result.expectedMountedFiles!==selected.expectedMountedFiles||result.expectedMountedCases!==selected.expectedMountedCases||result.workerCount!==1||result.retries!==0||result.memoryMb!==512||result.processTimeoutMs!==360000||result.networkDeniedFromStartup!==true||typeof result.accepted!=='boolean'||!Array.isArray(result.families)||result.families.length!==selected.families.length||result.sourceBodiesPublished!==false||result.rawOutputsPublished!==false||result.currentRuntimePairClaimed!==false||result.wholeEntryOrReportCredit!==false)fail('ARTIFACT_RESULT');
  const hashes=value=>typeof value==='string'&&/^[a-f0-9]{64}$/.test(value);
- for(let i=0;i<5;i++){
-  const row=result.families[i],family=CONTRACT.families[i];if(row.id!==family.id)fail('ARTIFACT_FAMILY');
+ if(selected.expectedCases===4){const diagnostic=result.mountedDiagnostic;if(!keys(diagnostic,['caseIdentitySha256','stages'])||diagnostic.caseIdentitySha256!==OPTIONAL_MOUNTED_IDENTITY||!Array.isArray(diagnostic.stages)||!equal(diagnostic.stages,OPTIONAL_MOUNTED_STAGES.slice(0,diagnostic.stages.length))||diagnostic.stages.length>OPTIONAL_MOUNTED_STAGES.length||result.accepted&&!equal(diagnostic.stages,OPTIONAL_MOUNTED_STAGES))fail('ARTIFACT_DIAGNOSTIC');}
+ for(let i=0;i<selected.families.length;i++){
+  const row=result.families[i],family=selected.families[i];if(row.id!==family.id)fail('ARTIFACT_FAMILY');
   if(row.category==='not-run-after-process-failure'){if(!keys(row,['id','category','accepted','counts','files'])||row.accepted!==false||row.counts!==null||!equal(row.files,[]))fail('ARTIFACT_FAMILY');continue;}
   if(!keys(row,['id','category','accepted','durationMs','exitCode','signal','counts','files','stdoutSha256','stderrSha256','resultsSha256'])||!['passed','test-failure','child-no-results','network-guard-violation','closed-result-contract-failure','process-killed-cause-unproven','process-signal','process-timeout','process-error'].includes(row.category)||typeof row.accepted!=='boolean'||!Number.isFinite(row.durationMs)||row.durationMs<0||row.exitCode!==null&&!Number.isInteger(row.exitCode)||![null,'SIGKILL','SIGTERM','SIGABRT','other'].includes(row.signal)||!hashes(row.stdoutSha256)||!hashes(row.stderrSha256)||row.resultsSha256!==null&&!hashes(row.resultsSha256)||!Array.isArray(row.files))fail('ARTIFACT_FAMILY');
   if(row.counts!==null&&(!keys(row.counts,['total','passed','failed','skipped'])||!Object.values(row.counts).every(n=>Number.isSafeInteger(n)&&n>=0)||row.counts.total!==family.cases||row.counts.total!==row.counts.passed+row.counts.failed+row.counts.skipped))fail('ARTIFACT_COUNTS');
@@ -149,9 +169,9 @@ export function validateArtifacts(options,root=ROOT){
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  try{
-  const mode=['verify','artifacts'].includes(process.argv[2])?process.argv[2]:'run',options=parseArgs(process.argv.slice(mode==='run'?2:3));
+  const mode=['verify','artifacts','diagnose-optional-mounted'].includes(process.argv[2])?process.argv[2]:'run',options=parseArgs(process.argv.slice(mode==='run'?2:3));
   if(mode==='verify'){const p=verifyCheckouts(options);await loadMetadata(p.webRoot);process.stdout.write('FIVE_FAMILY_GATE_IMMUTABLE_CONTRACT_VERIFIED\n');}
   else if(mode==='artifacts'){validateArtifacts(options);process.stdout.write('FIVE_FAMILY_GATE_METADATA_ARTIFACTS_VERIFIED\n');}
-  else{const accepted=await runGate(options);process.stdout.write(accepted?'FIVE_FAMILY_GATE_PASSED\n':'FIVE_FAMILY_GATE_NOT_ACCEPTED\n');if(!accepted)process.exitCode=1;}
+  else{const accepted=await runGate(options,{},mode==='diagnose-optional-mounted'?'optional-mounted-diagnostic':'full');process.stdout.write(accepted?'FIVE_FAMILY_GATE_PASSED\n':'FIVE_FAMILY_GATE_NOT_ACCEPTED\n');if(!accepted)process.exitCode=1;}
  }catch{process.stderr.write('FIVE_FAMILY_GATE_FAILED; private source bodies and errors are not logged.\n');process.exitCode=1;}
 }

@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: FullPeople/DND-card-web
-          ref: 009cb254b26a24a4e98bd89cf60d85641b3e2514
+          ref: 6aff63b5f4960a38157d6cb3e2c5cc81df6c4a5f
           path: .cache/five-family-web
           persist-credentials: false
       - uses: actions/setup-node@v4
@@ -32,11 +32,11 @@ jobs:
             --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
       - name: Install only committed locked Web dependencies, including mounted-test jsdom
         run: npm ci --prefix .cache/five-family-web
-      - name: Run all26 unchanged files sequentially by family, including all8 mounted cases
+      - name: Diagnose only four optional-list mounted cases, never a full-gate fallback
         shell: bash
         run: |
           set -euo pipefail
-          node scripts/five_family_source_gate.mjs \
+          node scripts/five_family_source_gate.mjs diagnose-optional-mounted \
             --web-root .cache/five-family-web --output .cache/five-family-inputs \
             --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
       - name: Validate the closed metadata-only artifact allowlist
@@ -52,7 +52,7 @@ jobs:
         if: always() && steps.artifacts.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: five-family-source-${{ github.sha }}
+          name: five-family-mounted-diagnostic-${{ github.sha }}
           path: |
             five-family-source-evidence/inputs.json
             five-family-source-evidence/side-source.json
