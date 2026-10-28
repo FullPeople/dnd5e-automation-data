@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "kind": "closed-fourteen-family-source-mounted-contract",
+  "kind": "closed-sixteen-family-source-mounted-contract",
   "producer": {
-    "baseline": "03d93199f085d748a34a103b0900d77de8f26c63",
+    "baseline": "8c080c6abd839e50c605f3745f53130e18a3ad25",
     "sourceTree": "2fcacf10f269e0f3a2427c5be618d55f1fc1c233",
     "files": {
       "package.json": "cbe1b37d3c088094a7bb6dad69ab14555a6338029f54409f5c965d60879383b2",
@@ -19,10 +19,10 @@
     "originalReportConsumer": "b05e77ef248325e116a68106cfa140483138d858"
   },
   "web": {
-    "revision": "58e0faa707b5219b428235282de1865bf06c40bb",
+    "revision": "f96632b1ae40b898ebd250c166da70ddaeb9380a",
     "trees": {
-      "src": "4e3804324f4f2a257bae5c2650ffcfcee0e1a5ad",
-      "tests": "75c6a677c95ebf5c4d9658e39e987d6fb3a437bb",
+      "src": "4361ba2d60d57096a95d26013eec3bf177639ee4",
+      "tests": "77e60bcc5b2fdf52b97350d81d5a9e0c9b142464",
       "tools": "960985bf93e5edb987909304404826765b35bdb1",
       ".github": "bd8cfa4bbb64d1697ee697674cb362cb3a18d3a6"
     },
@@ -42,6 +42,10 @@
       "src/core/automation/classMovementEvidence.json": {
         "sha256": "cac231666b2a334cacd473ef1e85afbe8b7fb6745f7ad41290d54d6c3e52c249",
         "bytes": 24149
+      },
+      "src/core/automation/inheritedRacialResistanceEvidence.json": {
+        "sha256": "531fc4ea17000bbe9f97e57b7f579dbb9887bc00096751c96ff9304f57dddf72",
+        "bytes": 129516
       },
       "src/core/automation/itemAbilityFloorEvidence.json": {
         "sha256": "361541a9eaa513d4269b32df13fd126c3f58c07e6b1875df88f0ddac6335dfc2",
@@ -71,6 +75,14 @@
         "sha256": "bc8f5eec1d0eb83ac999edccbd7bf94188301f8a6287fecfe60ec4a0d92fe69c",
         "bytes": 98133
       },
+      "src/core/automation/racialCarrying.ts": {
+        "sha256": "597da234d81229f40b36bb4e53acd6a9a28d6390743f157db926ada3f2d18a7d",
+        "bytes": 5706
+      },
+      "src/core/automation/racialCarryingEvidence.json": {
+        "sha256": "da5a62dab1ad1cb42fbee9f4bcd0de7a696990bece88abedd6ee21fd263e23c8",
+        "bytes": 33410
+      },
       "src/core/automation/racialDarkvisionEvidence.json": {
         "sha256": "6803bd98ec11f19c9a027863a4c2e6c86bc4a31eed7f0535f4c69fa71e05a17d",
         "bytes": 494644
@@ -83,6 +95,10 @@
         "sha256": "368a9dfba6d8f07040bca391162d7a185643dfd6d8b49e0966f05d1142c09f80",
         "bytes": 117054
       },
+      "src/core/automation/racialResistances.ts": {
+        "sha256": "e43b1b20bd2e1597d90506a91c031bf9db238e3a0cc567df41b9a1ab97d08276",
+        "bytes": 6665
+      },
       "src/core/automation/relativeRacialMovementEvidence.json": {
         "sha256": "cd4c97112cf13706662b632c627e0539ea151915f819f0807fe8b4324b43fe72",
         "bytes": 14668
@@ -91,6 +107,10 @@
         "sha256": "32416295c147afe8e38ce0c59c5af7519ca111296d892667fc5d6585f7c5b1d3",
         "bytes": 1442248
       },
+      "src/core/carrying.ts": {
+        "sha256": "5283922afccc6a10520065860f2480defa5a7b06bf9c802e0da76b6730a32e10",
+        "bytes": 1806
+      },
       "src/core/spellWorkspace.ts": {
         "sha256": "eb05cef375f5b50ec01cc08349ed6424e8b67e9f673740593cfbaae79cf09038",
         "bytes": 11798
@@ -98,6 +118,10 @@
       "src/core/spells.ts": {
         "sha256": "4439d7a2f1075655f48c3da592e0430a09214b300ed2c2272ccdaffd5a3ba0e6",
         "bytes": 5102
+      },
+      "src/ui/InventoryMarks.tsx": {
+        "sha256": "888f46f9d5a2ceef82d6ac18509eb0fec4c4205409cc8bd656641e144fd17f73",
+        "bytes": 3839
       },
       "tests/charged-item-spell-guards.test.ts": {
         "sha256": "5ae443d3e7efa77ea0f1e1a252e456f8c365416a9e0b362354948b7d2360297a",
@@ -227,6 +251,14 @@
         "sha256": "521fa510069fcaf316555cabd77723f88778cdafd35195a318324d383fcad3b4",
         "bytes": 1916
       },
+      "tests/helpers/inheritedRacialResistanceFlowFixture.ts": {
+        "sha256": "3f942a87e2840be2066651e16ff8597e90a4894c7f82008de08c25165b78b243",
+        "bytes": 1616
+      },
+      "tests/helpers/inheritedRacialResistanceSourceFixture.ts": {
+        "sha256": "080c79dfbf8af1990ed61fc2d13eca0630550873c7be9fd05d471e0e212e5980",
+        "bytes": 22282
+      },
       "tests/helpers/installedPlaywrightSelectors.ts": {
         "sha256": "fdf028b84bc670566e34a36b7076d3344916f5d0a8d04e695446e851f4548465",
         "bytes": 2326
@@ -311,6 +343,14 @@
         "sha256": "7eddb809627a5a4582e95e0703cf4634d320a8081e5c62408dc2554e7319cc3f",
         "bytes": 4271
       },
+      "tests/helpers/racialCarryingFlowFixture.ts": {
+        "sha256": "f2b1e5e770ff55a2fdd3ed9d15f39c0d1f78584dfb561e506dcf27e72ff686c5",
+        "bytes": 1683
+      },
+      "tests/helpers/racialCarryingSourceFixture.ts": {
+        "sha256": "55a88c856900ae5026aa8749d075c91d54c554a3296cbcbdba58f8ecf0684f3b",
+        "bytes": 11622
+      },
       "tests/helpers/racialDarkvisionFixture.ts": {
         "sha256": "b876885ad8257ef17ab5fbf15a58a9e156c13aba2a629a5db6377e3bc5696f02",
         "bytes": 2741
@@ -366,6 +406,38 @@
       "tests/helpers/warforgedToolFixture.ts": {
         "sha256": "715153271dcd3f17d8c0066bf651b1d1851f0aac80b7cdb512e06a9a29dba2e0",
         "bytes": 821
+      },
+      "tests/inherited-racial-resistance-baseline.test.ts": {
+        "sha256": "48a7eabcdf97b14d7d09816b729a79a148c9c2631eea8ac225e9dabbc83f36ad",
+        "bytes": 1200
+      },
+      "tests/inherited-racial-resistance-composition.test.ts": {
+        "sha256": "8675e74e225c9a97af3d7b2101bfee17ab0d662abb2dbc1f2dbdd2e58a460d0b",
+        "bytes": 2678
+      },
+      "tests/inherited-racial-resistance-interactions.test.ts": {
+        "sha256": "53042a6dc40c9802ad47a6f7f036db8ec5e1ad690282e057bc106f451f06abca",
+        "bytes": 7715
+      },
+      "tests/inherited-racial-resistance-projection.test.ts": {
+        "sha256": "aef0e24635bd74e5ebec618dd88188946fb2cfb69b01d2b8ba5e19377f981a4b",
+        "bytes": 7350
+      },
+      "tests/inherited-racial-resistance-source.test.ts": {
+        "sha256": "8714a50c32f6a8868b541872b04eb05c430463de7d1d243ed56e7bb5bfc929a2",
+        "bytes": 10331
+      },
+      "tests/inherited-racial-resistance-ui.test.ts": {
+        "sha256": "1c80b30c3336c5b4c350c9a408715d0c85f92a2d0cf09beb698d7f3e67d2ada5",
+        "bytes": 3988
+      },
+      "tests/inherited-racial-resistance-workflow.test.ts": {
+        "sha256": "147b4b021daa1e09cfaaf270aa95a38484e9dbab3b26dca7ff04edc13cdbf156",
+        "bytes": 5592
+      },
+      "tests/inventory-173.test.ts": {
+        "sha256": "0561233bc14c003ebdcdfaac2ed0d26f5a6787ddc9dd7c284ca0ee2f1cb781b3",
+        "bytes": 7440
       },
       "tests/item-ability-floors-catalog.test.ts": {
         "sha256": "3eb92addffc613301456683b056830c7ad87387746beaf80e6d86d5c8c9536cd",
@@ -538,6 +610,30 @@
       "tests/optional-class-list-workflow.test.ts": {
         "sha256": "6f4c90b365cac484ac4386530f568d2d8747bd0e41b8329ab01a32ceb53fdca8",
         "bytes": 3800
+      },
+      "tests/racial-carrying-baseline.test.ts": {
+        "sha256": "7d9b720d8c8770e7b9de0a1917b6435815b4795ecf3f22797f5234cf1c520bd8",
+        "bytes": 1080
+      },
+      "tests/racial-carrying-interactions.test.ts": {
+        "sha256": "6e3b34f3a5f889b7a2b1259bd89f85a2bae3c6898596a0b5ba1bf90d8995a4da",
+        "bytes": 6124
+      },
+      "tests/racial-carrying-projection.test.ts": {
+        "sha256": "f25de386cbf77b94ee824f1a8478eaac12a8969383b0ca19913097fa8c67730e",
+        "bytes": 8623
+      },
+      "tests/racial-carrying-source.test.ts": {
+        "sha256": "76fd147a4e1712e5971034068028c1f465895ad8a16861b8f770759807f70443",
+        "bytes": 6999
+      },
+      "tests/racial-carrying-ui.test.ts": {
+        "sha256": "a48a9c23da79ae14fd12f0c28176774028f87e05c4330ba2840e131cac8b3561",
+        "bytes": 4977
+      },
+      "tests/racial-carrying-workflow.test.ts": {
+        "sha256": "cd8bd5464aba2091463b1e70cbb9892060da53994935b07e284756b368e8dd75",
+        "bytes": 5692
       },
       "tests/racial-darkvision-source.test.ts": {
         "sha256": "c0ba8b544102f4585a9c4fc3cca99e3633fa1bb46caea0a394bc50e1c8250573",
@@ -729,7 +825,9 @@
     "src/core/automation/relativeRacialMovementEvidence.json",
     "src/core/automation/variantItemResistanceBonusEvidence.json",
     "src/core/automation/classMovementEvidence.json",
-    "src/core/automation/racialResistanceEvidence.json"
+    "src/core/automation/racialResistanceEvidence.json",
+    "src/core/automation/inheritedRacialResistanceEvidence.json",
+    "src/core/automation/racialCarryingEvidence.json"
   ],
   "inputs": [
     {
@@ -3160,16 +3258,213 @@
           }
         }
       ]
+    },
+    {
+      "id": "inherited-racial-resistance",
+      "cases": 42,
+      "suites": 7,
+      "files": [
+        {
+          "path": "tests/inherited-racial-resistance-source.test.ts",
+          "category": "source",
+          "cases": 4,
+          "identityMultiset": {
+            "b75ec2b1ec514eaccdc5ff67e91ccf330eb09a43c70c836c75cc8e9b5a4fa287": 1,
+            "c9ddccc05bfce6ed2a2d932a1aa93a86c9ca38f5feee7d850c55999dd6ea4254": 1,
+            "d1f63649a757d597d61f7dfec3ab6b8291f745f7433767b4a3152751d024c4f8": 1,
+            "d6c44041fc28d7af7c07611c4e7cc28d2e147cb2de3404687e386d098f3db834": 1
+          }
+        },
+        {
+          "path": "tests/inherited-racial-resistance-baseline.test.ts",
+          "category": "baseline",
+          "cases": 26,
+          "identityMultiset": {
+            "0e5de7068e61b28b9f83994fd2e57ecb5ce6200a2536738b5a29413b454b1e80": 1,
+            "0eff7fbb102186af8647aee93f6c3445d188528fe6611886170bcadbcbb23952": 1,
+            "191bceffe197e6e5c94bd7954e473ea22dcc71290cfaf42ebf7ddbdaebe4271f": 1,
+            "2c9e07bd920d73248af4ce4a2af30ae2feeada2e88f2a8babf7faea980eec099": 1,
+            "32c19d6c6f54fce91aa03c26ea2e95e13a1b9872cdb9920ba326f4511c2713ed": 1,
+            "3f4eb666aa30fc28d8d2b8c44370aea434d3813b57d6d060bac7990ad82abd8b": 1,
+            "43478ec4bf3f43105e005e711a6c1093202c22a873494189927f789582dfb84b": 1,
+            "4727ba414d55fe5dcaeab1bf6f179b1444993c207dede815860c90778635341d": 1,
+            "609e63c1a8c5fa65a68a721f48aecda7586b1b180ebb7d90650e81c2cc9069c8": 1,
+            "693ce143b28ee43b2caf3d73c602254a8bd3a1aeac364d456be806b6cca5f809": 1,
+            "6f19ce83c09884bc83df7227732f70736b7c18d049a13263472afb8df8e85ae2": 1,
+            "7762557f555ae83facae40d05602a6761711e8ad974de162a21fa108257b7b92": 1,
+            "8c32ffaf2f19d32975939af22fa6a56ba985b06cf4473882ded3d13451c7c31c": 1,
+            "a8445ca5ad7aa20d1bbfcfd751ba34a6afb7dec618348e74427d40220858511d": 1,
+            "ad45a03467d78e54346b498dccbfa45a3789035948f638534003bd4c07de8e60": 1,
+            "b1ce27a6cbc5c4e921803bfe3bfa742e6fadd0fc2989308fa0fdca982c6ef866": 1,
+            "b1febffe91287784b28e7043d0d82d4ee554d5322b92c9f75f420723df63b904": 1,
+            "b89df207c461030a56b06375cf810dd6062574511b849a50c72d16778095fed4": 1,
+            "c30590806436505f9216668ec5c9ba7b10bb38f1625abada1f999ae20b9f4bec": 1,
+            "cda2f2206f6227a0c1516e010b2097748094e83d46c3e9f5a94162f819e97ad2": 1,
+            "d1e083b08e45ae8290d39b47678f57781b7bd29b752e43e292f7ec0c7b78f6aa": 1,
+            "db6ba7067e5cc7f492c80c7e6c3ab5863efc7eff9b3d3b622b7d17fbca871fcd": 1,
+            "e2ea118505511f3a22b6397d4394cce0971a34e459c1c8448f5d0becb8c3a6dd": 1,
+            "eadecdcd2fd876f78e58f1173a8155a6909b31ab9befa31cc4c2280857945d42": 1,
+            "f2cb6dd4d06c476425145ddf982faf7d3884b04d21fee7c47cf3d2e24f18386e": 1,
+            "f82ba5d53329bf25167f0c2e9729c864bf78088a07f132e54571ed40222fa140": 1
+          }
+        },
+        {
+          "path": "tests/inherited-racial-resistance-projection.test.ts",
+          "category": "guards",
+          "cases": 6,
+          "identityMultiset": {
+            "06dd7f39d7e97fa9abfdedb9f15fb05f6c64d00f83bed3374a79661d2e370d0e": 1,
+            "29cce1ccff3a094f68c060bd783e078a7c405d420debdec5c38bdb0fcfdd5182": 1,
+            "31dce28dca0f7927cc48a204fb4e84b3f2abdf9d8435ef3b56fc5c89ea45dea4": 1,
+            "9ee65b6409846b66cef06f14befc0ac746589fddb0b7bff169a3cd1f1570322c": 1,
+            "b3a5cfeaa7bd458273376dfa0012e0103f14aa1024e54211b8de2791e0413db5": 1,
+            "f51048d5e39c5ec2bc1fb3e582a320a89b0dd2f72e9c54e78be8afdda66156a7": 1
+          }
+        },
+        {
+          "path": "tests/inherited-racial-resistance-workflow.test.ts",
+          "category": "workflow",
+          "cases": 2,
+          "identityMultiset": {
+            "ac96a1790a70be19f489cf8927d730de1697e710c2cc80dfaea7c52817f8eb85": 1,
+            "ea22af08928fda746be5dd0416a86e0d0119656cce78cb44cbad47d07790d0b9": 1
+          }
+        },
+        {
+          "path": "tests/inherited-racial-resistance-ui.test.ts",
+          "category": "ssr",
+          "cases": 1,
+          "identityMultiset": {
+            "84276eb063be4eca23625875c55587125586d688136d79d62e57c932fdf6c00b": 1
+          }
+        },
+        {
+          "path": "tests/inherited-racial-resistance-interactions.test.ts",
+          "category": "mounted",
+          "cases": 2,
+          "identityMultiset": {
+            "98032f093647c869b50e30b0c53761ce5679aa07ba3fc8771e32d9aca098322c": 1,
+            "ccd8c09fd1804bdd8d8e15286da6bd1b1a76517ad18fe484f47eb52cdc7e789b": 1
+          }
+        },
+        {
+          "path": "tests/inherited-racial-resistance-composition.test.ts",
+          "category": "composition",
+          "cases": 1,
+          "identityMultiset": {
+            "58e42b3125600da1f6fb72d5377893127f3de653c5cfc11dcdd188a5f4bd2c00": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "racial-carrying",
+      "cases": 43,
+      "suites": 9,
+      "files": [
+        {
+          "path": "tests/racial-carrying-source.test.ts",
+          "category": "source",
+          "cases": 4,
+          "identityMultiset": {
+            "2cecf0fedd85c0d504fdfb4c76915f4475eac6b47e6e5493affee8606794f1d1": 1,
+            "5fe5b7d6750c585bada87725cc3331b83c8f4150928df91d1f668a81c5535f6c": 1,
+            "a2e51b2f1f4c98257c7584446a1f499ac946408d13d5959f79a0b715d1225ea3": 1,
+            "f6e0c2c3c0a8ebca792c8c6b0ce90def4bbd0117b7d98c43c000150b6e187971": 1
+          }
+        },
+        {
+          "path": "tests/racial-carrying-baseline.test.ts",
+          "category": "baseline",
+          "cases": 14,
+          "identityMultiset": {
+            "0c2e95f95688d577a4074acb3868bc2d916010999c3ee0d7a5ef2343403cbd6e": 1,
+            "262c3a180b42409cf07440a249609a871302a6a3f51e7df2f5c71bba658d40d0": 1,
+            "28d652b6ced6e1ed6634868bfc035dbf73c25746d7244f03e52246b73a0656b3": 1,
+            "29b210a9d1522493a01ba679a81de999d00946e972dc965341a7f3e0176878ee": 1,
+            "5d7a62a10f420d60c35642f5df088f933b35a1b3942ea241450f9a440126ca4f": 1,
+            "66c496909ae0ecaee09c7345e2e1dc62052d200dff765d90d7be396c3da4665f": 1,
+            "6fbf44a26b41bb7f8beff0bda80f0658e33cd29fe54bcacea54adb7e579b96f0": 1,
+            "976168c4866cf319ee15bb1a7dc7cd8e64a469c5d80ade181ef33614095a7fd0": 1,
+            "b4499cf268cdcd18c265fd87b276389f2be181739fd93cee95ef9d057f69cb62": 1,
+            "bec9b3a9462d53b6073700e11dac2c4d71816feaf5a63a689995aa73a169c01c": 1,
+            "c173471ee4cdf7e269b1ee1573b11e010d62d6721e4f290bd0ea91cad1872183": 1,
+            "de5b1fbd432332f80d18c77ec031261616686f1d448213d7ee0b895e283e9e73": 1,
+            "e7ec3329f168c58d00ae664c74fbd1adae41e83caf7358f2b187aa7d8a5537ff": 1,
+            "ff4f8152f8ad411cab71157dc020912692810c913ec42097a044147509f25603": 1
+          }
+        },
+        {
+          "path": "tests/racial-carrying-projection.test.ts",
+          "category": "guards",
+          "cases": 8,
+          "identityMultiset": {
+            "29612f1f62522d38b3ac3bbf1134cef30303f4f6ffd3e81abf3ab401e032f602": 1,
+            "33fd908c68afb0e936700a13b2f921d5c0f24042a8ce244a905e3f66a52c4021": 1,
+            "3bb5649e1f0ba128973dedb94ce5228a6cac1d577ea37c2289a3d815ba644f02": 1,
+            "4d266a62505faf512199a5bb1a15c19222c5cd753a737821d093ac01bf8b49c8": 1,
+            "7cd1fe6b85c4f556a248efd0f3c21ebb0846ef6a3fc26792918160c7128fae75": 1,
+            "ae3934f187fb3525e5938393d49e7094a77199136b4c093f417c0482514c8f4c": 1,
+            "c235900e70eb83220d5116a9bc60988ef3a176de872c780910ec12835c00fcb6": 1,
+            "e8f787f5c00c95dc972d23b3cc1ff43ada92215a716f35c5b76d3e7ccf132a94": 1
+          }
+        },
+        {
+          "path": "tests/racial-carrying-workflow.test.ts",
+          "category": "workflow",
+          "cases": 2,
+          "identityMultiset": {
+            "3b4a0521f5a3e04a5c5c4a61be47782196966c839fc4756baf3350966f517918": 1,
+            "5d1889bae50f271f383728c8f159dbef9549067b8fa071ae0c20e6a10d91e2bf": 1
+          }
+        },
+        {
+          "path": "tests/racial-carrying-ui.test.ts",
+          "category": "ssr",
+          "cases": 2,
+          "identityMultiset": {
+            "926df21b980de0b469718f7520f67ca4d618c72eabd6d101f36eb749d0b3e6fc": 1,
+            "f23e5d8a2c55bbe88469e145118ac9ff04ca88949adbd95857fbaf89c9660e5d": 1
+          }
+        },
+        {
+          "path": "tests/racial-carrying-interactions.test.ts",
+          "category": "mounted",
+          "cases": 2,
+          "identityMultiset": {
+            "b0cda1ae6be7e0acd85da8427af1e30e2e09df7fb5215be405d7613d9c523b37": 1,
+            "fc88a708ddb99dd2a148524770d1477768aa06cfc796c2b64c86cec28f16679f": 1
+          }
+        },
+        {
+          "path": "tests/inventory-173.test.ts",
+          "category": "retained-generic",
+          "cases": 11,
+          "identityMultiset": {
+            "019e3d8bb5a50541bbe674326adbb5eb7b89f97a306f6a9618f37fa61ecc49c6": 1,
+            "129ae6c924e1c846a54e1255166163f9468c7835419c473f485524597b9a8674": 1,
+            "18705b21fb9ed7f7d59df691fcc96f60d59e6a4546d113c344386683cec5b266": 1,
+            "1dedead72fe647b1ca16f967275ce98e74f1165f6006e16cbd37ff831a0405af": 1,
+            "2753da50e66f58e274d214c365e4b4e6f12cd553a381484ce30d5214e22c20fd": 1,
+            "71d6a8a493aec90a1fe8604c911d23a07b206c3f6c68a262c30a3717207ddb77": 1,
+            "a6faf27c9bd34a55d1fe42775073c3fa2442bd7a42986bfcdd9cad68f133d97c": 1,
+            "c1f3b3308bd532cec05d6c0d6f66fab41b8096de3f651009dad72c4a6ac673cc": 1,
+            "c21b0669ffa3039ed76f7f5dd3a39262b8b230166a9df580f06fc1436ec83ded": 1,
+            "db1a132edbc31850d49afedb8f483fcc8f4056476dee7d450e12fd1e465c27f1": 1,
+            "f054cb8395bd1f69cdd53bc8c866105562d1e251344fa5b1cfb50fa31d1956dc": 1
+          }
+        }
+      ]
     }
   ],
   "counts": {
-    "families": 14,
-    "files": 81,
-    "instances": 1406,
-    "distinctFileAndFullNamePairs": 1404,
-    "mountedFiles": 12,
-    "mountedCases": 30,
-    "coreSourceSsrCases": 1376
+    "families": 16,
+    "files": 95,
+    "instances": 1491,
+    "distinctFileAndFullNamePairs": 1489,
+    "mountedFiles": 14,
+    "mountedCases": 34,
+    "coreSourceSsrCases": 1457
   },
   "budgets": {
     "memoryMb": 512,
@@ -3192,9 +3487,34 @@
     "RELATIVE_RACIAL_MOVEMENT_FROZEN_DIR",
     "VARIANT_ITEM_RESISTANCE_BONUS_FROZEN_DIR",
     "CLASS_MOVEMENT_FROZEN_DIR",
-    "RACIAL_RESISTANCE_FROZEN_DIR"
+    "RACIAL_RESISTANCE_FROZEN_DIR",
+    "INHERITED_RACIAL_RESISTANCE_FROZEN_DIR",
+    "RACIAL_CARRYING_FROZEN_DIR"
   ],
   "currentRuntimePairClaimed": false,
   "wholeEntryOrReportCredit": false,
-  "inputSetSha256": "982930c581905bf3a5e15fcca39c2a72821781acf63014cd339c602899c13f16"
+  "inputSetSha256": "982930c581905bf3a5e15fcca39c2a72821781acf63014cd339c602899c13f16",
+  "mountedScope": {
+    "inherited-racial-resistance": {
+      "realSubjects": [
+        "AutomationPanel",
+        "Overview",
+        "engine",
+        "SheetEditContext",
+        "ValueTraceProvider"
+      ],
+      "unrelatedOverviewChildMocks": 6,
+      "fullAppProof": false
+    },
+    "racial-carrying": {
+      "realSubjects": [
+        "CarryCapacity",
+        "carrying",
+        "engine",
+        "SheetEditContext"
+      ],
+      "componentOrProviderMocks": 0,
+      "fullAppProof": false
+    }
+  }
 }

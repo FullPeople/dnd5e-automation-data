@@ -10,8 +10,8 @@ import {join,resolve} from 'node:path';
 // Web test discovery/execution, dependency installation or network request.
 const root=fileURLToPath(new URL('../',import.meta.url)),path=join(root,'.github/workflows/expanded-spell-source.yml');
 const yaml=existsSync(path)?readFileSync(path,'utf8'):'';
-const current='58e0faa707b5219b428235282de1865bf06c40bb',old='4069886e1bfcab2fb7e2958eca8919601a13dd62';
-const branch='codex/cloud-rules-fourteen-family-source-gate-20261028';
+const current='f96632b1ae40b898ebd250c166da70ddaeb9380a',old='4069886e1bfcab2fb7e2958eca8919601a13dd62';
+const branch='codex/cloud-rules-sixteen-family-source-gate-20261028';
 const args=['--web-root','.cache/expanded-spell-web','--output','.cache/expanded-spell-inputs','--receipt','expanded-spell-source-evidence/inputs.json','--result','expanded-spell-source-evidence/gate.json'];
 const artifacts=['inputs.json','side-sources.json','collection.json','gate.json'].map(name=>'expanded-spell-source-evidence/'+name);
 const blocks=()=>yaml.split(/(?=^      - )/m).slice(1);
@@ -20,8 +20,8 @@ function script(block){const match=block.match(/^        run: \|\n([\s\S]*)$/m);
 function gateCommand(block){const body=script(block);assert.ok(body,'missing gate script');assert.match(body,/^set -euo pipefail\n/);const lines=body.replace(/\\\n\s*/g,' ').split('\n').map(line=>line.trim()).filter(Boolean);assert.equal(lines.length,2,'gate script must not contain hidden extra commands');const tokens=lines[1].split(/\s+/);assert.deepEqual(tokens.slice(0,2),['node','scripts/expanded_spell_source_gate.mjs']);const mode=['verify','artifacts'].includes(tokens[2])?tokens[2]:undefined;assert.deepEqual(tokens.slice(mode?3:2),args);return {mode,body};}
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 
-test('separate fourteen-family workflow has only the approved branch/manual triggers and read-only job authority',()=>{
- assert.ok(yaml,'expanded workflow is not yet authored');assert.match(yaml,/^name: Pinned fourteen-family Web source and mounted gate$/m);assert.match(yaml,new RegExp("^    branches: \\['"+branch+"'\\]$",'m'));assert.match(yaml,/^  workflow_dispatch:\s*$/m);
+test('separate sixteen-family workflow has only the approved branch/manual triggers and read-only job authority',()=>{
+ assert.ok(yaml,'expanded workflow is not yet authored');assert.match(yaml,/^name: Pinned sixteen-family Web source and mounted gate$/m);assert.match(yaml,new RegExp("^    branches: \\['"+branch+"'\\]$",'m'));assert.match(yaml,/^  workflow_dispatch:\s*$/m);
  const permission=yaml.match(/^permissions:\n((?:  [^\n]+\n)+)/m);assert.ok(permission);assert.deepEqual(permission[1].trim().split('\n').map(line=>line.trim()),['contents: read']);assert.match(yaml,/^    timeout-minutes: 30$/m);assert.match(yaml,/^    runs-on: ubuntu-latest$/m);
  assert.ok(!/pull_request_target|repository_dispatch|workflow_call|schedule:|secrets\.|continue-on-error|\b(?:contents|actions|checks|deployments|id-token|packages|pull-requests|security-events|statuses):\s*write\b/.test(yaml));
 });
