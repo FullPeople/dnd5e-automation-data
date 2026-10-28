@@ -10,7 +10,7 @@ import {join,resolve} from 'node:path';
 // Web test discovery/execution, dependency installation or network request.
 const root=fileURLToPath(new URL('../',import.meta.url)),path=join(root,'.github/workflows/expanded-spell-source.yml');
 const yaml=existsSync(path)?readFileSync(path,'utf8'):'';
-const current='b416732093ad17d3f5ef269379fbaab1b4499021',old='4069886e1bfcab2fb7e2958eca8919601a13dd62';
+const current='37f367145422da0606db91b3c6301555331bcb86',old='4069886e1bfcab2fb7e2958eca8919601a13dd62';
 const branch='codex/cloud-rules-eighteen-family-source-gate-20261028';
 const args=['--web-root','.cache/expanded-spell-web','--output','.cache/expanded-spell-inputs','--receipt','expanded-spell-source-evidence/inputs.json','--result','expanded-spell-source-evidence/gate.json'];
 const artifacts=['inputs.json','side-sources.json','collection.json','gate.json'].map(name=>'expanded-spell-source-evidence/'+name);

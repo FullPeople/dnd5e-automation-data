@@ -19,10 +19,10 @@
     "originalReportConsumer": "b05e77ef248325e116a68106cfa140483138d858"
   },
   "web": {
-    "revision": "b416732093ad17d3f5ef269379fbaab1b4499021",
+    "revision": "37f367145422da0606db91b3c6301555331bcb86",
     "trees": {
       "src": "40f49d70e326e11dba2d69e8aa4b606a5d3d5181",
-      "tests": "57257e4b830bf4ac32d046f4e32731a4392bf4c0",
+      "tests": "ef20ee6145e404845bae4cdab30fcbba026e4a04",
       "tools": "960985bf93e5edb987909304404826765b35bdb1",
       ".github": "bd8cfa4bbb64d1697ee697674cb362cb3a18d3a6"
     },
@@ -704,8 +704,8 @@
         "bytes": 447
       },
       "tests/racial-movement-guards.test.ts": {
-        "sha256": "4002513076e96c6c2ff938307a25249dfeec98fe06697256ffe8e3c700bd8b12",
-        "bytes": 10850
+        "sha256": "7cee6fde032b0ebc2528d124ac02a9a0cdb946017637bb4ba2a7561474e42595",
+        "bytes": 11784
       },
       "tests/racial-movement-source.test.ts": {
         "sha256": "edb67f00f0edeb956131e9117a40fbaa3741639c367882a21a335b1cf8f51680",

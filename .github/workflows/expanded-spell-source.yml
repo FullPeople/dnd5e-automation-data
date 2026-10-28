@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: FullPeople/DND-card-web
-          ref: b416732093ad17d3f5ef269379fbaab1b4499021
+          ref: 37f367145422da0606db91b3c6301555331bcb86
           path: .cache/expanded-spell-web
           persist-credentials: false
       - name: Check out the complete immutable 406 reader without installing its dependencies
