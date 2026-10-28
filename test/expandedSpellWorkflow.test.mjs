@@ -10,8 +10,8 @@ import {join,resolve} from 'node:path';
 // Web test discovery/execution, dependency installation or network request.
 const root=fileURLToPath(new URL('../',import.meta.url)),path=join(root,'.github/workflows/expanded-spell-source.yml');
 const yaml=existsSync(path)?readFileSync(path,'utf8'):'';
-const current='7ee3556b0959ff12294d72ea53a65ff8ce9845ff',old='4069886e1bfcab2fb7e2958eca8919601a13dd62';
-const branch='codex/cloud-rules-expanded-spell-source-gate-20261028';
+const current='29fe71508747f92a9ce314f87aaa5f0909a6c963',old='4069886e1bfcab2fb7e2958eca8919601a13dd62';
+const branch='codex/cloud-rules-ten-family-source-gate-20261028';
 const args=['--web-root','.cache/expanded-spell-web','--output','.cache/expanded-spell-inputs','--receipt','expanded-spell-source-evidence/inputs.json','--result','expanded-spell-source-evidence/gate.json'];
 const artifacts=['inputs.json','side-sources.json','collection.json','gate.json'].map(name=>'expanded-spell-source-evidence/'+name);
 const blocks=()=>yaml.split(/(?=^      - )/m).slice(1);
@@ -20,8 +20,8 @@ function script(block){const match=block.match(/^        run: \|\n([\s\S]*)$/m);
 function gateCommand(block){const body=script(block);assert.ok(body,'missing gate script');assert.match(body,/^set -euo pipefail\n/);const lines=body.replace(/\\\n\s*/g,' ').split('\n').map(line=>line.trim()).filter(Boolean);assert.equal(lines.length,2,'gate script must not contain hidden extra commands');const tokens=lines[1].split(/\s+/);assert.deepEqual(tokens.slice(0,2),['node','scripts/expanded_spell_source_gate.mjs']);const mode=['verify','artifacts'].includes(tokens[2])?tokens[2]:undefined;assert.deepEqual(tokens.slice(mode?3:2),args);return {mode,body};}
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 
-test('separate seven-family workflow has only the approved branch/manual triggers and read-only job authority',()=>{
- assert.ok(yaml,'expanded workflow is not yet authored');assert.match(yaml,/^name: Pinned seven-family Web source and mounted gate$/m);assert.match(yaml,new RegExp("^    branches: \\['"+branch+"'\\]$",'m'));assert.match(yaml,/^  workflow_dispatch:\s*$/m);
+test('separate ten-family workflow has only the approved branch/manual triggers and read-only job authority',()=>{
+ assert.ok(yaml,'expanded workflow is not yet authored');assert.match(yaml,/^name: Pinned ten-family Web source and mounted gate$/m);assert.match(yaml,new RegExp("^    branches: \\['"+branch+"'\\]$",'m'));assert.match(yaml,/^  workflow_dispatch:\s*$/m);
  const permission=yaml.match(/^permissions:\n((?:  [^\n]+\n)+)/m);assert.ok(permission);assert.deepEqual(permission[1].trim().split('\n').map(line=>line.trim()),['contents: read']);assert.match(yaml,/^    timeout-minutes: 30$/m);assert.match(yaml,/^    runs-on: ubuntu-latest$/m);
  assert.ok(!/pull_request_target|repository_dispatch|workflow_call|schedule:|secrets\.|continue-on-error|\b(?:contents|actions|checks|deployments|id-token|packages|pull-requests|security-events|statuses):\s*write\b/.test(yaml));
 });
@@ -54,6 +54,7 @@ test('always-on finalizer validates setup/unknown envelopes before uploading exa
 
 test('workflow stays a technical source/mounted gate and preserves the old gate, build, producer report and locks byte-for-byte',()=>{
  assert.match(yaml,/# Technical source and mounted coverage only; no runtime-pair, full-App or whole-entry credit\./);
+ const build=readFileSync(resolve(root,'.github/workflows/build.yml'),'utf8');assert.match(build,/^  pipeline:\n    if: github\.event_name == 'workflow_dispatch' \|\| github\.event_name == 'schedule'$/m);
  const protectedFiles={'.github/workflows/build.yml':'0439991a8f0c968955fa894206155f59f87dba71659c1a73c4ee3d009aec608e','.github/workflows/five-family-source.yml':'af193d8ab9b484b120642acc03e0e281c475c911dec853178fe8875103abfb71','scripts/five_family_source_gate.mjs':'a072eab222cc09f526924ef9a4d118172b3ba3cf5cf7bb11bec698117d7c893d','scripts/five_family_source_contract.json':'715f9061233bc8c7b6735bfa3d7d80fcec4345d56d8d2a299f600543d3729012','scripts/five_family_network_guard.cjs':'84f08bbd7aaa29a85028bc6a9f8724f8715eaccfdd02e8aa1e9f27d953182a2e','test/fiveFamilySourceGate.test.mjs':'5c850c61f3795979a554909e438931931a5db836045058a472d389aa3da1cb8a','package.json':'cbe1b37d3c088094a7bb6dad69ab14555a6338029f54409f5c965d60879383b2','package-lock.json':'a92f3cb812676b4c7be27ec589fd0c7489402578b5c524873f38c10e9f1c587a','reports/progress/runtime-coverage.json':'cc6694329697a250bbf95b71a491705d8588069ef44854bc6b5f016cfe4685c8'};
  for(const [file,expected]of Object.entries(protectedFiles))assert.equal(sha(readFileSync(resolve(root,file))),expected,file);assert.ok(!/five_family_source_gate\.mjs|build\.yml|deploy|git push|git commit|curl |wget |sourceBodies|\.local-evidence/.test(yaml));
 });

@@ -1,8 +1,8 @@
-name: Pinned seven-family Web source and mounted gate
+name: Pinned ten-family Web source and mounted gate
 # Technical source and mounted coverage only; no runtime-pair, full-App or whole-entry credit.
 on:
   push:
-    branches: ['codex/cloud-rules-expanded-spell-source-gate-20261028']
+    branches: ['codex/cloud-rules-ten-family-source-gate-20261028']
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: FullPeople/DND-card-web
-          ref: 7ee3556b0959ff12294d72ea53a65ff8ce9845ff
+          ref: 29fe71508747f92a9ce314f87aaa5f0909a6c963
           path: .cache/expanded-spell-web
           persist-credentials: false
       - name: Check out the complete immutable 406 reader without installing its dependencies
@@ -43,7 +43,7 @@ jobs:
             --receipt expanded-spell-source-evidence/inputs.json --result expanded-spell-source-evidence/gate.json
       - name: Install only the committed locked current-Web dependencies
         run: npm ci --prefix .cache/expanded-spell-web
-      - name: Materialize the exact private sources, collect all 861 identities and run seven families sequentially
+      - name: Materialize the exact private sources, collect the expected 1016 identities and run ten families sequentially
         shell: bash
         run: |
           set -euo pipefail
