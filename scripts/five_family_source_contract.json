@@ -16,10 +16,10 @@
     "originalReportConsumer": "b05e77ef248325e116a68106cfa140483138d858"
   },
   "web": {
-    "revision": "2d5033c584b752e3445401351bdfb206a450da74",
+    "revision": "009cb254b26a24a4e98bd89cf60d85641b3e2514",
     "trees": {
       "src": "613a2849172dc99f74f0ecc35d7324e482f63062",
-      "tests": "d3dea0ab04a87a8accac5c1f79c4f3edb594eeb6",
+      "tests": "cbecab947ca4c9c99b4397b76e10afdeaf826070",
       "tools": "960985bf93e5edb987909304404826765b35bdb1",
       ".github": "bd8cfa4bbb64d1697ee697674cb362cb3a18d3a6"
     },
@@ -145,8 +145,8 @@
         "bytes": 16763
       },
       "tests/optional-class-list-interactions.test.ts": {
-        "sha256": "6ecbd9e295da8e67418d4066a8ecc61050f8825f2b7465956fbcf031e1c98453",
-        "bytes": 12676
+        "sha256": "afd8ac8e27b511ef2abab6ffd7269b1e9ee4efd5808972a6bec47525bd1ca358",
+        "bytes": 14870
       },
       "tests/optional-class-list-source-fetch.test.ts": {
         "sha256": "4f75b32a2bafc34f88427f5bf0952a77618875b57668f2b49837a4469d345a75",
@@ -157,8 +157,8 @@
         "bytes": 9624
       },
       "tests/optional-class-list-ui.test.ts": {
-        "sha256": "8fcfdeaf5a056227d0051708f4d16de2a588b658ea624be00b67a7e3dd8e7201",
-        "bytes": 14846
+        "sha256": "021f8257cbf765e7fd7b3fa6aa8178bcbadc5a196c7f3501331931f47c9cc44e",
+        "bytes": 15371
       },
       "tests/optional-class-list-workflow.test.ts": {
         "sha256": "6f4c90b365cac484ac4386530f568d2d8747bd0e41b8329ab01a32ceb53fdca8",
@@ -177,8 +177,8 @@
         "bytes": 5321
       },
       "tests/racial-darkvision-workflow.test.ts": {
-        "sha256": "e85789b8f7475153fa6e594f8ccc532216784aa1eaf81f05002f8089ace0f610",
-        "bytes": 2192
+        "sha256": "2f0d246c99ccaacb178f225d2590191e5c5a30d76014fd7e4698cb5b39ba6aba",
+        "bytes": 3051
       },
       "tests/racial-darkvision.test.ts": {
         "sha256": "84e48de9c690a515cf2c8b4457a50ac926575c5fbe28941fadecac8db250e1c5",
@@ -351,7 +351,7 @@
       "sha256": "d53f251428233b1b8852e3044093348909b8be0ebafad30196e594a43de9a007",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/1985 Games; \u80e7\u5fc6\u5c9b\uff1a\u84bf\u91ce\u7269\u8bed.json",
+      "path": "collection/1985 Games; 胧忆岛：蒿野物语.json",
       "gitBlobSha1": "453e5cd2c3c8fe14592d7b4a382d248a3772204f",
       "sourceBytes": 2343015,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/1985%20Games%3B%20%E8%83%A7%E5%BF%86%E5%B2%9B%EF%BC%9A%E8%92%BF%E9%87%8E%E7%89%A9%E8%AF%AD.json"
@@ -361,7 +361,7 @@
       "sha256": "300d3b501af0bfde6f26c7044fa2086c5a47f46f843e57b5466f32297a4586e4",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Avantris; \u6b6a\u66f2\u4e4b\u6708.json",
+      "path": "collection/Avantris; 歪曲之月.json",
       "gitBlobSha1": "060b85bd4fd53a11b9218025643d42990fdffd03",
       "sourceBytes": 4256737,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Avantris%3B%20%E6%AD%AA%E6%9B%B2%E4%B9%8B%E6%9C%88.json"
@@ -371,7 +371,7 @@
       "sha256": "3a0ebbb8eda1d4f327d64801ea55972d342b280c08821914a8f642e630a6e98e",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Griffin Macaulay; \u72ee\u9e6b\u7684\u978d\u4e2d\u73cd\u5b9d\u2161.json",
+      "path": "collection/Griffin Macaulay; 狮鹫的鞍中珍宝Ⅱ.json",
       "gitBlobSha1": "813c9a7b08d5243e8d061fdd5f3d41baa77e43e4",
       "sourceBytes": 2741848,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Griffin%20Macaulay%3B%20%E7%8B%AE%E9%B9%AB%E7%9A%84%E9%9E%8D%E4%B8%AD%E7%8F%8D%E5%AE%9D%E2%85%A1.json"
@@ -381,7 +381,7 @@
       "sha256": "1bef02d5e1e90cc94515734ac352c1f888e69ab059c01858abe5d6f43709422f",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "collection/Hit Point Press; \u8c26\u5351\u6797\u6218\u5f79\u8bbe\u5b9a\u96c6.json",
+      "path": "collection/Hit Point Press; 谦卑林战役设定集.json",
       "gitBlobSha1": "fb94685bdf80cfd090155dd600b47605ee54bdd6",
       "sourceBytes": 1245673,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/collection/Hit%20Point%20Press%3B%20%E8%B0%A6%E5%8D%91%E6%9E%97%E6%88%98%E5%BD%B9%E8%AE%BE%E5%AE%9A%E9%9B%86.json"
@@ -391,7 +391,7 @@
       "sha256": "c598cb6c84cb81354ebb600c8b5ecfbde8303a189705f400370db22e3b125c73",
       "repository": "tjliqy/homebrew-deploy",
       "revision": "546b44d773394f71bffe598f0161338361c26f56",
-      "path": "race/Sample - Giddy; \u89c9\u9192\u9ab7\u9ac5.json",
+      "path": "race/Sample - Giddy; 觉醒骷髅.json",
       "gitBlobSha1": "1509d8703bfe6a922d90333e63d1a398a60b6e4a",
       "sourceBytes": 2122,
       "retrievalUrl": "https://raw.githubusercontent.com/tjliqy/homebrew-deploy/546b44d773394f71bffe598f0161338361c26f56/race/Sample%20-%20Giddy%3B%20%E8%A7%89%E9%86%92%E9%AA%B7%E9%AB%85.json"
