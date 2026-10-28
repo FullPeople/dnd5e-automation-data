@@ -59,6 +59,10 @@ const modules=Object.keys(bundle.metafile!.inputs).map(p=>resolve(p)).filter(p=>
 const previousCoverage=JSON.parse(readFileSync('reports/progress/runtime-coverage.json','utf8'));
 // Exact grouped limited/item product seams, never test fixtures or raw sources.
 const groupedResourceSources=[
+ 'src/core/automation/itemAtWill.ts',
+ 'src/core/automation/itemAtWillSource.ts',
+ 'src/core/automation/itemAtWillEvidence.json',
+ 'src/ui/ItemAtWillSpellControl.tsx',
  'src/core/automation/actions.ts',
  'src/core/automation/featureResources.ts',
  'src/core/automation/ordinarySpellCasting.ts',
