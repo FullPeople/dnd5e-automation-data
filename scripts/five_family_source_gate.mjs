@@ -96,10 +96,18 @@ export function gateScope(scope='full'){
  if(files.length!==1||files[0].cases!==4||files[0].identityMultiset[OPTIONAL_MOUNTED_IDENTITY]!==1)fail('DIAGNOSTIC_ROSTER');
  return {kind:'five-family-optional-mounted-diagnostic',families:[{...family,files,cases:4,suites:1}],expectedFiles:1,expectedCases:4,expectedMountedFiles:1,expectedMountedCases:4};
 }
-export function diagnosticStages(stdout){
+export function stageValues(values){
  const stages=[];let previous=-1;
- for(const line of stdout.split(/\r?\n/))if(line.startsWith('OPTIONAL_LIST_STAGE:')){const value=line.slice('OPTIONAL_LIST_STAGE:'.length),index=OPTIONAL_MOUNTED_STAGES.indexOf(value);if(index!==previous+1){const error=Error('FIVE_FAMILY_GATE_DIAGNOSTIC_STAGE');error.diagnostic={caseIdentitySha256:OPTIONAL_MOUNTED_IDENTITY,stages,issue:index<0?'unknown-stage':index<=previous?'duplicate-stage':'out-of-order-stage',rejectedLineSha256:sha(line)};throw error;}previous=index;stages.push(value);}
+ const reject=(value,issue)=>{const error=Error('FIVE_FAMILY_GATE_DIAGNOSTIC_STAGE');error.diagnostic={caseIdentitySha256:OPTIONAL_MOUNTED_IDENTITY,stages:[...stages],issue,rejectedLineSha256:sha(JSON.stringify(value)??'undefined')};throw error;};
+ if(!Array.isArray(values)||values.length>15)reject(values,'unknown-stage');
+ for(const value of values){const index=OPTIONAL_MOUNTED_STAGES.indexOf(value);if(index!==previous+1)reject(value,index<0?'unknown-stage':index<=previous?'duplicate-stage':'out-of-order-stage');previous=index;stages.push(value);}
  return {caseIdentitySha256:OPTIONAL_MOUNTED_IDENTITY,stages};
+}
+export function diagnosticStages(stdout){return stageValues(stdout.split(/\r?\n/).filter(line=>line.startsWith('OPTIONAL_LIST_STAGE:')).map(line=>line.slice('OPTIONAL_LIST_STAGE:'.length)));}
+export function jsonDiagnosticStages(json,identity=OPTIONAL_MOUNTED_IDENTITY){
+ const rows=(json?.testResults||[]).flatMap(suite=>suite.assertionResults||[]).filter(row=>typeof row.fullName==='string'&&sha(row.fullName)===identity);
+ if(rows.length!==1)fail('DIAGNOSTIC_ROSTER');
+ return stageValues(rows[0].meta?.optionalListStages??[]);
 }
 export function runnerPlan(p,family,privateRoot,root=ROOT,scope='full'){
  const guard=join(root,'scripts/five_family_network_guard.cjs'),preload=pathToFileURL(join(p.webRoot,'tests/helpers/offlineCatalogFetchPreload.mjs')).href;
@@ -137,7 +145,7 @@ export async function runGate(options,{root=ROOT,verify=verifyCheckouts,metadata
   writeFileSync(join(privateRoot,'stdout.log'),stdout);writeFileSync(join(privateRoot,'stderr.log'),stderr);
   const resultPath=join(privateRoot,'results.json'),bytes=existsSync(resultPath)?readFileSync(resultPath):null;let safe,category=bytes?'closed-result-contract-failure':'child-no-results';
   try{safe=sanitize(bytes?JSON.parse(bytes):null,family,p.webRoot,run.status);category=safe.passed?'passed':safe.counts.failed?'test-failure':'closed-result-contract-failure';}catch{}
-  if(scope==='optional-mounted-diagnostic'){diagnostic=diagnosticStages(stdout.toString());if(safe?.passed&&!equal(diagnostic.stages,OPTIONAL_MOUNTED_STAGES))category='closed-result-contract-failure';}
+  if(scope==='optional-mounted-diagnostic'){diagnostic=jsonDiagnosticStages(bytes?JSON.parse(bytes):null);if(safe?.passed&&!equal(diagnostic.stages,OPTIONAL_MOUNTED_STAGES))category='closed-result-contract-failure';}
   if(/^FIVE_FAMILY_NETWORK_GUARD_VIOLATION$/m.test(stderr.toString()))category='network-guard-violation';
   if(run.signal){category=run.signal==='SIGKILL'?'process-killed-cause-unproven':'process-signal';stopped=true;}if(run.error){category=run.error.code==='ETIMEDOUT'?'process-timeout':'process-error';stopped=true;}
   families.push({id:family.id,category,accepted:category==='passed'&&!!safe?.passed&&!run.signal&&!run.error,durationMs:clock()-start,exitCode:Number.isInteger(run.status)?run.status:null,signal:['SIGKILL','SIGTERM','SIGABRT'].includes(run.signal)?run.signal:run.signal?'other':null,counts:safe?.counts??null,files:safe?.files??[],stdoutSha256:sha(stdout),stderrSha256:sha(stderr),resultsSha256:bytes?sha(bytes):null});

@@ -16,10 +16,10 @@
     "originalReportConsumer": "b05e77ef248325e116a68106cfa140483138d858"
   },
   "web": {
-    "revision": "6aff63b5f4960a38157d6cb3e2c5cc81df6c4a5f",
+    "revision": "9821eea0a14a9079b8d7ecc4c3051aaf383316e8",
     "trees": {
       "src": "613a2849172dc99f74f0ecc35d7324e482f63062",
-      "tests": "c2fe014259aeba35a0241f801b8f3e8c0f1f05f8",
+      "tests": "00610866c81da884a867db1059a20af3a5f2f5e8",
       "tools": "960985bf93e5edb987909304404826765b35bdb1",
       ".github": "bd8cfa4bbb64d1697ee697674cb362cb3a18d3a6"
     },
@@ -145,8 +145,8 @@
         "bytes": 16763
       },
       "tests/optional-class-list-interactions.test.ts": {
-        "sha256": "cf77774c1455c85ebc72971ac68164c0a1d383b85389d1baf6b460f85e6e220b",
-        "bytes": 15757
+        "sha256": "f86fa2067132d54955f5509cbcdfe6f64dd89d25c8d884342b950613510ae572",
+        "bytes": 15498
       },
       "tests/optional-class-list-source-fetch.test.ts": {
         "sha256": "4f75b32a2bafc34f88427f5bf0952a77618875b57668f2b49837a4469d345a75",
