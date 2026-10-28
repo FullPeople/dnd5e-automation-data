@@ -98,7 +98,7 @@ export function gateScope(scope='full'){
 }
 export function diagnosticStages(stdout){
  const stages=[];let previous=-1;
- for(const line of stdout.split(/\r?\n/))if(line.startsWith('OPTIONAL_LIST_STAGE:')){const value=line.slice('OPTIONAL_LIST_STAGE:'.length),index=OPTIONAL_MOUNTED_STAGES.indexOf(value);if(index!==previous+1)fail('DIAGNOSTIC_STAGE');previous=index;stages.push(value);}
+ for(const line of stdout.split(/\r?\n/))if(line.startsWith('OPTIONAL_LIST_STAGE:')){const value=line.slice('OPTIONAL_LIST_STAGE:'.length),index=OPTIONAL_MOUNTED_STAGES.indexOf(value);if(index!==previous+1){const error=Error('FIVE_FAMILY_GATE_DIAGNOSTIC_STAGE');error.diagnostic={caseIdentitySha256:OPTIONAL_MOUNTED_IDENTITY,stages,issue:index<0?'unknown-stage':index<=previous?'duplicate-stage':'out-of-order-stage',rejectedLineSha256:sha(line)};throw error;}previous=index;stages.push(value);}
  return {caseIdentitySha256:OPTIONAL_MOUNTED_IDENTITY,stages};
 }
 export function runnerPlan(p,family,privateRoot,root=ROOT,scope='full'){
@@ -149,6 +149,9 @@ export async function runGate(options,{root=ROOT,verify=verifyCheckouts,metadata
 export function validateArtifacts(options,root=ROOT){
  const p=validatePaths(options,root),input=JSON.parse(readFileSync(p.receipt)),side=JSON.parse(readFileSync(p.sideReceipt)),result=JSON.parse(readFileSync(p.result));
  if(!equal(input,inputReceipt(CONTRACT.inputs,{reusedInputs:input.reusedInputs,downloadedInputs:input.downloadedInputs})))fail('ARTIFACT_INPUT');verifySideReceipt(side);
+ validateGateResult(result,root);return ARTIFACTS;
+}
+export function validateGateResult(result,root=ROOT){
  const selected=gateScope(result.kind==='five-family-optional-mounted-diagnostic'?'optional-mounted-diagnostic':'full');
  const resultKeys=['schemaVersion','kind','producerBaseline','producerSourceTree','producerRevision','webRevision','webSourceTree','contractSha256','expectedFiles','expectedCases','expectedMountedFiles','expectedMountedCases','workerCount','retries','memoryMb','processTimeoutMs','networkDeniedFromStartup','accepted','families','sourceBodiesPublished','rawOutputsPublished','currentRuntimePairClaimed','wholeEntryOrReportCredit'];
  if(selected.expectedCases===4)resultKeys.push('mountedDiagnostic');
@@ -165,7 +168,7 @@ export function validateArtifacts(options,root=ROOT){
   for(const file of row.files)if(!['passed','failed','skipped'].every(key=>file[key]===file.outcomes.filter(outcome=>key==='skipped'?!['passed','failed'].includes(outcome.status):outcome.status===key).length))fail('ARTIFACT_COUNTS');
   if(row.accepted&&(row.category!=='passed'||row.exitCode!==0||row.signal!==null||row.counts?.passed!==family.cases||row.files.length!==family.files.length))fail('ARTIFACT_ACCEPTANCE');
  }
- if(result.accepted!==result.families.every(row=>row.accepted))fail('ARTIFACT_ACCEPTANCE');return ARTIFACTS;
+ if(result.accepted!==result.families.every(row=>row.accepted))fail('ARTIFACT_ACCEPTANCE');return true;
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  try{

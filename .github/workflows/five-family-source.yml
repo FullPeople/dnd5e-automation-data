@@ -23,39 +23,42 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.14.0'
-      - name: Verify frozen producer, Web source/tests/helpers/tools, locks and21-input metadata before installation
+      - id: verify
+        name: Verify frozen producer, Web source/tests/helpers/tools, locks and21-input metadata before installation
         shell: bash
         run: |
           set -euo pipefail
           node scripts/five_family_source_gate.mjs verify \
             --web-root .cache/five-family-web --output .cache/five-family-inputs \
             --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
-      - name: Install only committed locked Web dependencies, including mounted-test jsdom
+      - id: install
+        name: Install only committed locked Web dependencies, including mounted-test jsdom
         run: npm ci --prefix .cache/five-family-web
-      - name: Diagnose only four optional-list mounted cases, never a full-gate fallback
+      - id: diagnose
+        name: Diagnose only four optional-list mounted cases, never a full-gate fallback
         shell: bash
         run: |
           set -euo pipefail
-          node scripts/five_family_source_gate.mjs diagnose-optional-mounted \
+          node scripts/five_family_mounted_diagnostic.mjs run \
             --web-root .cache/five-family-web --output .cache/five-family-inputs \
             --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
       - name: Validate the closed metadata-only artifact allowlist
         id: artifacts
         if: always()
+        env:
+          DIAGNOSTIC_EXECUTION_OUTCOME: ${{ steps.diagnose.outcome }}
         shell: bash
         run: |
           set -euo pipefail
-          node scripts/five_family_source_gate.mjs artifacts \
+          node scripts/five_family_mounted_diagnostic.mjs finalize \
             --web-root .cache/five-family-web --output .cache/five-family-inputs \
             --receipt five-family-source-evidence/inputs.json --result five-family-source-evidence/gate.json
-      - name: Upload only three closed technical receipts, never source bodies or raw logs
+      - name: Upload only one closed diagnostic receipt, never source bodies or raw logs
         if: always() && steps.artifacts.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: five-family-mounted-diagnostic-${{ github.sha }}
           path: |
-            five-family-source-evidence/inputs.json
-            five-family-source-evidence/side-source.json
             five-family-source-evidence/gate.json
           if-no-files-found: error
           retention-days: 7
