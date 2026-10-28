@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {resolve,join,dirname} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync,spawnSync} from 'node:child_process';
+import {createRequire} from 'node:module';
 
 export const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const CURRENT='fd8aaf9045e22f08668c0c0367399a016c28b896', CURRENT_TREE='5b8d1ceee8c7c1424cce73c18b8005423d433309';
@@ -43,6 +44,41 @@ export const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const fail=code=>{throw Error('ITEM_ATWILL_GATE_'+code);};
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const hashFile=(root,path,expected)=>{if(sha(readFileSync(join(root,path)))!==expected)fail('FILE_HASH');};
+const DEPENDENCIES=Object.freeze({
+ vitest:{version:'4.0.18',integrity:'sha512-hOQuK7h0FGKgBAas7v0mSAsnvrIgAvWmRFjmzpJ7SwFHH3g1k2u37JtYwOwmEKhK6ZO3v9ggDBBm0La1LCK4uQ==',files:{'package.json':'d83c63a3391f403a6dce4793c90e9d9d02faf113c7ed8d77b424e59f48ef8328','vitest.mjs':'39db22f579acf5639bbb17a261408debbde03f4692c0c439e77e7f13aeba74d6'}},
+ esbuild:{version:'0.28.2',integrity:'sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA==',files:{'package.json':'9d0bc453f4e791553c4cc2298ba023b409241fd9801e494741666eb0f6051490','lib/main.js':'61ec0ba144ff93f4bf0e96ad6fab6f430ede0aa13e27ace8063ed63ba416b3cd'}},
+ idb:{version:'8.0.3',integrity:'sha512-LtwtVyVYO5BqRvcsKuB2iUMnHwPVByPCXFXOpuU96IZPPoPN6xjOGxZQ74pgSVVLQWtUOYgyeL4GE98BY5D3wg==',files:{'package.json':'de27a90ed57e80ba48275b631ddd889b8f19d72a3a3a65de42c3daee71548269','build/index.js':'b6720d6ed812254ba61009ea6b3de8bbf46a4fb5c2d5b65385c7525d18f4c80b','build/index.cjs':'76ebce4e677107d3dc925a80487e3932858d07661fb7fb65a7301dc3956ca121'}}
+});
+export function verifyLockedDependencies(currentRoot,oldRoot,root=ROOT){
+ const found={};
+ for(const [owner,names] of [[root,['vitest','esbuild']],[currentRoot,['idb']]]){
+  const lock=JSON.parse(readFileSync(join(owner,'package-lock.json'))),require=createRequire(join(owner,'package.json'));
+  for(const name of names){
+   const expected=DEPENDENCIES[name],row=lock.packages?.['node_modules/'+name];
+   if(!row||row.version!==expected.version||row.integrity!==expected.integrity||row.resolved!==`https://registry.npmjs.org/${name}/-/${name}-${expected.version}.tgz`)fail('DEPENDENCY_LOCK');
+   let directory,pkg,entry;try{directory=realpathSync(join(owner,'node_modules',name));pkg=realpathSync(require.resolve(name+'/package.json'));entry=realpathSync(require.resolve(name));}catch{fail('LOCKED_DEPENDENCY');}
+   if(pkg!==join(directory,'package.json'))fail('DEPENDENCY_RESOLUTION');
+   const installed=JSON.parse(readFileSync(pkg));if(installed.name!==name||installed.version!==row.version)fail('DEPENDENCY_VERSION');
+   for(const [path,hash] of Object.entries(expected.files))hashFile(directory,path,hash);
+   const expectedEntry=name==='idb'?'build/index.cjs':name==='esbuild'?'lib/main.js':'index.cjs';
+   if(entry!==join(directory,expectedEntry))fail('DEPENDENCY_RESOLUTION');
+   if(name==='vitest'&&realpathSync(join(root,'node_modules/vitest/vitest.mjs'))!==join(directory,'vitest.mjs'))fail('DEPENDENCY_RESOLUTION');
+   found[name]={directory,entry,version:row.version,integrity:row.integrity};
+  }
+ }
+ const oldModules=join(oldRoot,'node_modules');if(!lstatSync(oldModules).isSymbolicLink()||realpathSync(oldModules)!==realpathSync(join(currentRoot,'node_modules')))fail('OLD_DEPENDENCY_LINK');
+ return found;
+}
+export async function verifyBundlerResolution(currentRoot,oldRoot,root=ROOT){
+ const found=verifyLockedDependencies(currentRoot,oldRoot,root),esbuild=await import(pathToFileURL(found.esbuild.entry).href);
+ if(esbuild.version!==DEPENDENCIES.esbuild.version)fail('BUNDLER_VERSION');
+ // This compile-only smoke uses the same producer compiler and consumer
+ // resolveDir as the immutable adapter. It executes no catalog or source test.
+ const result=await esbuild.build({stdin:{contents:'export {openDB} from "idb";',resolveDir:currentRoot,loader:'ts'},bundle:true,platform:'node',format:'esm',write:false,metafile:true,logLevel:'silent'});
+ const inputs=Object.keys(result.metafile.inputs).filter(path=>path!=='<stdin>').map(path=>realpathSync(resolve(path)));
+ if(inputs.length!==1||inputs[0]!==join(found.idb.directory,'build/index.js'))fail('BUNDLER_RESOLUTION');
+ return {producerVitestVersion:found.vitest.version,producerEsbuildVersion:found.esbuild.version,consumerIdbVersion:found.idb.version,consumerIdbIntegrity:found.idb.integrity,consumerIdbEsmSha256:DEPENDENCIES.idb.files['build/index.js'],consumerIdbCjsSha256:DEPENDENCIES.idb.files['build/index.cjs'],actualBundlerResolutionVerified:true};
+}
 export function parseArgs(args){
  const flags={'--current-root':'currentRoot','--old-root':'oldRoot','--output':'output','--receipt':'receipt','--result':'result'},out={};
  for(let i=0;i<args.length;i+=2){const key=flags[args[i]],value=args[i+1];if(!key||!value||value.startsWith('-')||out[key])fail('ARGUMENT');out[key]=value;}
@@ -72,10 +108,7 @@ export function verifyCheckouts(options,{root=ROOT,git=(directory,args)=>execFil
  hashFile(p.oldRoot,'package-lock.json',CURRENT_FILES['package-lock.json']);
  for(const path of UNCHANGED)if(!readFileSync(join(p.currentRoot,path)).equals(readFileSync(join(p.oldRoot,path))))fail('OLD_MODULE');
  if(existsSync(join(p.oldRoot,'src/core/automation/itemAtWill.ts')))fail('OLD_CAPABILITY');
- if(dependencies){
-  for(const path of [join(root,'node_modules/vitest/vitest.mjs'),join(root,'node_modules/esbuild/package.json'),join(p.currentRoot,'node_modules/esbuild/package.json')])if(!existsSync(path))fail('LOCKED_DEPENDENCY');
-  const oldModules=join(p.oldRoot,'node_modules');if(!lstatSync(oldModules).isSymbolicLink()||realpathSync(oldModules)!==realpathSync(join(p.currentRoot,'node_modules')))fail('OLD_DEPENDENCY_LINK');
- }
+ if(dependencies)verifyLockedDependencies(p.currentRoot,p.oldRoot,root);
  return p;
 }
 export function selectPins(rows){
@@ -150,6 +183,7 @@ export function sanitizeResults(json,expected,exit){
 function writeJson(path,value){mkdirSync(dirname(path),{recursive:true});writeFileSync(path,JSON.stringify(value,null,2)+'\n',{flag:'wx'});}
 export async function runGate(options,{root=ROOT,verify=verifyCheckouts,metadataLoader=loadMetadata,spawn=spawnSync}={}){
  const p=verify(options,{root}),metadata=await metadataLoader(p.currentRoot,root);
+ await verifyBundlerResolution(p.currentRoot,p.oldRoot,root);
  if(existsSync(p.output)||existsSync(p.receipt)||existsSync(p.result))fail('OUTPUT_EXISTS');
  const stats=await metadata.api.materializeRows(metadata.rows,{output:p.output,caches:[]});
  verifySixIndex(p.output);writeJson(p.receipt,sixReceipt(metadata.rows,stats));

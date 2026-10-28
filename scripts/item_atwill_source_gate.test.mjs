@@ -1,12 +1,13 @@
 import {test,after} from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,writeFileSync,mkdirSync,copyFileSync,mkdtempSync,rmSync,symlinkSync,existsSync} from 'node:fs';
+import {readFileSync,writeFileSync,mkdirSync,copyFileSync,mkdtempSync,rmSync,symlinkSync,existsSync,realpathSync} from 'node:fs';
 import {join,resolve,dirname} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync,spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
-import {ROOT,CURRENT,CURRENT_TREE,OLD,OLD_TREE,PINS,SOURCE_FILES,parseArgs,validatePaths,verifyCheckouts,selectPins,loadMetadata,verifySixIndex,sixReceipt,expectedTests,runnerPlan,sanitizeResults,runGate,sha} from './item_atwill_source_gate.mjs';
+import {createRequire} from 'node:module';
+import {ROOT,CURRENT,CURRENT_TREE,OLD,OLD_TREE,PINS,SOURCE_FILES,parseArgs,validatePaths,verifyCheckouts,verifyLockedDependencies,verifyBundlerResolution,selectPins,loadMetadata,verifySixIndex,sixReceipt,expectedTests,runnerPlan,sanitizeResults,runGate,sha} from './item_atwill_source_gate.mjs';
 
 const scratch=mkdtempSync(join(tmpdir(),'item-atwill-wrapper-')),web=process.env.ITEM_ATWILL_PREFLIGHT_WEB_ROOT;
 after(()=>rmSync(scratch,{recursive:true,force:true}));
@@ -24,12 +25,33 @@ function fixture(){
   // Read immutable old commit objects, never its worktree, index or cache.
   const bytes=execFileSync('git',['--no-replace-objects','--no-optional-locks','-C',web,'show',OLD+':'+path],{maxBuffer:1024*1024});put(join(p.oldRoot,path),bytes);
  }
- put(join(root,'node_modules/vitest/vitest.mjs'),'// Authored path sentinel; never executed.\n');
- put(join(root,'node_modules/esbuild/package.json'),'{}\n');put(join(p.currentRoot,'node_modules/esbuild/package.json'),'{}\n');
+ // Reuse the actual producer install. Model only the audited real consumer
+ // dependency, never an invented esbuild or an unrelated shared Web install.
+ symlinkSync(realpathSync(join(ROOT,'node_modules')),join(root,'node_modules'),'dir');
+ mkdirSync(join(p.currentRoot,'node_modules'),{recursive:true});
+ const require=createRequire(join(resolve(web),'package.json'));
+ symlinkSync(dirname(require.resolve('idb/package.json')),join(p.currentRoot,'node_modules/idb'),'dir');
  symlinkSync(join(p.currentRoot,'node_modules'),join(p.oldRoot,'node_modules'),'dir');
  const calls=[],git=(directory,a)=>{calls.push([directory,a]);if(a[0]==='diff')return '';return directory===p.currentRoot?(a[1]==='HEAD'?CURRENT:CURRENT_TREE):(a[1]==='HEAD'?OLD:OLD_TREE);};
  return {root,p,calls,git};
 }
+
+test('real locked-layout regression accepts producer esbuild/Vitest and consumer idb without inventing consumer esbuild',()=>{
+ const f=fixture(),producer=JSON.parse(readFileSync(join(f.root,'package-lock.json'))),consumer=JSON.parse(readFileSync(join(f.p.currentRoot,'package-lock.json')));
+ assert.equal(producer.packages['node_modules/esbuild'].version,'0.28.2');assert.equal(producer.packages['node_modules/vitest'].version,'4.0.18');assert.equal(consumer.packages['node_modules/idb'].version,'8.0.3');assert.equal(consumer.packages['node_modules/esbuild'],undefined);assert.ok(!existsSync(join(f.p.currentRoot,'node_modules/esbuild/package.json')));
+ assert.deepEqual(verifyCheckouts(standard,{root:f.root,git:f.git}),f.p);
+});
+test('critical dependencies use exact lock integrity/version, real resolution and fixed entry hashes; wrong lock/version/body fail closed',async()=>{
+ const f=fixture(),found=verifyLockedDependencies(f.p.currentRoot,f.p.oldRoot,f.root);
+ assert.equal(found.vitest.version,'4.0.18');assert.equal(found.esbuild.version,'0.28.2');assert.equal(found.idb.version,'8.0.3');
+ assert.equal(found.idb.entry,join(realpathSync(join(f.p.currentRoot,'node_modules/idb')),'build/index.cjs'));
+ assert.equal((await verifyBundlerResolution(f.p.currentRoot,f.p.oldRoot,f.root)).actualBundlerResolutionVerified,true);
+ const lock=JSON.parse(readFileSync(join(f.p.currentRoot,'package-lock.json')));lock.packages['node_modules/idb'].integrity='sha512-'+Buffer.alloc(64).toString('base64');put(join(f.p.currentRoot,'package-lock.json'),JSON.stringify(lock));assert.throws(()=>verifyLockedDependencies(f.p.currentRoot,f.p.oldRoot,f.root),/DEPENDENCY_LOCK/);
+ const g=fixture(),idb=join(g.p.currentRoot,'node_modules/idb'),original=realpathSync(idb);rmSync(idb);
+ for(const path of ['package.json','build/index.js','build/index.cjs'])copy(original,path,idb);
+ const pkg=JSON.parse(readFileSync(join(idb,'package.json')));pkg.version='8.0.2';put(join(idb,'package.json'),JSON.stringify(pkg));assert.throws(()=>verifyLockedDependencies(g.p.currentRoot,g.p.oldRoot,g.root),/DEPENDENCY_VERSION/);
+ copy(original,'package.json',idb);put(join(idb,'build/index.js'),'// Authored invalid module bytes');assert.throws(()=>verifyLockedDependencies(g.p.currentRoot,g.p.oldRoot,g.root),/FILE_HASH/);
+});
 
 test('CLI requires every exact flag once and rejects malformed, duplicate, absent or extra arguments',()=>{
  assert.deepEqual(parseArgs(args),standard);
@@ -102,7 +124,7 @@ test('source transport is denied from process startup, including inherited Node 
  const script=`import {spawnSync} from 'node:child_process';import {request} from 'node:https';import {connect} from 'node:net';for(const f of [()=>fetch('https://example.invalid'),()=>request('https://example.invalid'),()=>connect(443,'example.invalid')]){try{f();process.exit(9);}catch(e){if(e.message!=='ITEM_ATWILL_NETWORK_DENIED')process.exit(8);}}const child=spawnSync(process.execPath,['-e',\"try{fetch('https://example.invalid');process.exit(7)}catch(e){if(e.message!=='ITEM_ATWILL_NETWORK_DENIED')process.exit(6)}\"],{env:process.env});if(child.status!==0)process.exit(5);if(Object.getOwnPropertyDescriptor(globalThis,'fetch').writable!==false)process.exit(4);`;
  const r=spawnSync(process.execPath,['--input-type=module','-e',script],{env:{...process.env,NODE_OPTIONS:'--require '+guard},encoding:'utf8',timeout:5000});assert.equal(r.status,0);assert.equal(r.stdout,'');
 });
-test('actual verify CLI exercises real isolated current/old checkouts without installation or source execution',()=>{
+test('actual verify CLI and complete adapter dependency bundles use real isolated current/old checkouts without installation or source execution',async()=>{
  const f=fixture();rmSync(f.p.currentRoot,{recursive:true,force:true});rmSync(f.p.oldRoot,{recursive:true,force:true});
  for(const [destination,revision] of [[f.p.currentRoot,CURRENT],[f.p.oldRoot,OLD]]){
   execFileSync('git',['clone','--shared','--no-checkout','--single-branch',web,destination],{stdio:['ignore','pipe','pipe'],timeout:15000});
@@ -111,6 +133,17 @@ test('actual verify CLI exercises real isolated current/old checkouts without in
  copy(ROOT,'scripts/item_atwill_source_gate.mjs',f.root);
  const result=spawnSync(process.execPath,[join(f.root,'scripts/item_atwill_source_gate.mjs'),'verify',...args],{encoding:'utf8',timeout:15000,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=512 --require '+join(ROOT,'scripts/item_atwill_network_guard.cjs')}});
  assert.equal(result.status,0);assert.equal(result.stdout,'ITEM_ATWILL_GATE_IMMUTABLE_CONTRACT_VERIFIED\n');assert.equal(result.stderr,'');assert.ok(!existsSync(f.p.output));assert.ok(!existsSync(f.p.receipt));assert.ok(!existsSync(f.p.result));
+ // Audit the complete immutable adapter dependency graph, compile only. The
+ // consumer has exactly the one real idb package, not the shared Web tree.
+ mkdirSync(join(f.p.currentRoot,'node_modules'));const require=createRequire(join(resolve(web),'package.json')),idb=dirname(require.resolve('idb/package.json'));
+ symlinkSync(idb,join(f.p.currentRoot,'node_modules/idb'),'dir');symlinkSync(join(f.p.currentRoot,'node_modules'),join(f.p.oldRoot,'node_modules'),'dir');
+ const found=verifyLockedDependencies(f.p.currentRoot,f.p.oldRoot,f.root),esbuild=await import(pathToFileURL(found.esbuild.entry).href),adapterPath=join(f.root,'adapter-audit.mjs');
+ await esbuild.build({entryPoints:[join(f.root,'src/runtimeCoverage/adapter.ts')],bundle:true,platform:'node',format:'esm',packages:'external',outfile:adapterPath,logLevel:'silent'});
+ const adapter=await import(pathToFileURL(adapterPath).href);
+ for(const [consumer,name] of [[f.p.currentRoot,'current'],[f.p.oldRoot,'old']]){
+  const bundle=await adapter.buildConsumerAdapter(consumer,join(f.root,name+'-adapter.mjs')),dependencies=Object.keys(bundle.metafile.inputs).filter(path=>path.replaceAll('\\','/').includes('/node_modules/')).map(path=>realpathSync(resolve(path)));
+  assert.deepEqual(dependencies,[join(realpathSync(idb),'build/index.js')]);
+ }
 });
 test('installed Vitest CLI accepts the planned bounded flags and yields the exact allowlisted JSON name/schema on authored data only',()=>{
  const root=mkdtempSync(join(scratch,'authored-vitest-'));symlinkSync(resolve(ROOT,'node_modules'),join(root,'node_modules'),'dir');
