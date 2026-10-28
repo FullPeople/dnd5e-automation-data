@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: FullPeople/DND-card-web
-          ref: 9821eea0a14a9079b8d7ecc4c3051aaf383316e8
+          ref: 77f3b9ba49ae4b5e8b8e2e12e1f92770318092ec
           path: .cache/five-family-web
           persist-credentials: false
       - uses: actions/setup-node@v4

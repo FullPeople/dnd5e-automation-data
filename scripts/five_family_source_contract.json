@@ -16,10 +16,10 @@
     "originalReportConsumer": "b05e77ef248325e116a68106cfa140483138d858"
   },
   "web": {
-    "revision": "9821eea0a14a9079b8d7ecc4c3051aaf383316e8",
+    "revision": "77f3b9ba49ae4b5e8b8e2e12e1f92770318092ec",
     "trees": {
-      "src": "613a2849172dc99f74f0ecc35d7324e482f63062",
-      "tests": "00610866c81da884a867db1059a20af3a5f2f5e8",
+      "src": "89f2a2d1c13633007f80c47777e71609acbfa1be",
+      "tests": "c4a70412d6adb31a3e671e52bcb1a84b686ff1f1",
       "tools": "960985bf93e5edb987909304404826765b35bdb1",
       ".github": "bd8cfa4bbb64d1697ee697674cb362cb3a18d3a6"
     },
@@ -219,6 +219,18 @@
       "vitest.config.ts": {
         "sha256": "31ecac77543ab4c38dbb56bebad072071cf1640467629db472da0c91c6e8097e",
         "bytes": 122
+      },
+      "src/core/spellWorkspace.ts": {
+        "bytes": 11798,
+        "sha256": "eb05cef375f5b50ec01cc08349ed6424e8b67e9f673740593cfbaae79cf09038"
+      },
+      "src/core/spells.ts": {
+        "bytes": 5102,
+        "sha256": "4439d7a2f1075655f48c3da592e0430a09214b300ed2c2272ccdaffd5a3ba0e6"
+      },
+      "tests/optional-class-list-allocation.test.ts": {
+        "bytes": 6807,
+        "sha256": "7768d00c0cf17f3e0dd2d46dba5e18db547c47c3910b2a0f6be5186f434f144b"
       }
     },
     "dependencies": {
@@ -1116,8 +1128,8 @@
     },
     {
       "id": "optional-class-list",
-      "cases": 224,
-      "suites": 6,
+      "cases": 228,
+      "suites": 7,
       "files": [
         {
           "path": "tests/optional-class-list-source.test.ts",
@@ -1383,6 +1395,17 @@
             "0fa6448027e99e05db138de380175738e616b8ced5686f5da302782a17f7c647": 1,
             "96860da3b7d6c3b9246e5bbe47037e8951508871b8522caf366e8f72409c20d3": 1,
             "e7b01ba66a5adc2fbe5952426cf344fbb11a4aa9cda8ce3d59e1ad6bc27b0ae3": 1
+          }
+        },
+        {
+          "path": "tests/optional-class-list-allocation.test.ts",
+          "cases": 4,
+          "category": "ownership-regression",
+          "identityMultiset": {
+            "46ccfe3c12f707afbbcf384ed024d3dd4e553dbd6568e329d5fb0d33557bebc2": 1,
+            "8c16fded3f150e1403e462a3aba33e961f10e49cec88190502a45bd2292ab5b1": 1,
+            "c513652296e780f6b7e7f84a136c15cbc272cfed9caef0f6e2c736c4343d1c11": 1,
+            "c5a06fb84c3e0364fae6d4c3395f14874e158c2b8589c879b6262f67310fc002": 1
           }
         }
       ]

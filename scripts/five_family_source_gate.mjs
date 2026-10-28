@@ -90,7 +90,7 @@ export function verifySideReceipt(receipt){
 export const OPTIONAL_MOUNTED_STAGES=Object.freeze(['start','confirmed','owner-routes','workspace-open','cantrip-navigation','learned-navigation','catalog-candidate','drop-target','pointerdown','pointermove','pointerup','learned-row','correct-owner','other-owner-preserved','manual-preserved']);
 export const OPTIONAL_MOUNTED_IDENTITY='e7b01ba66a5adc2fbe5952426cf344fbb11a4aa9cda8ce3d59e1ad6bc27b0ae3';
 export function gateScope(scope='full'){
- if(scope==='full')return {kind:'five-family-web-source-and-mounted-technical-result',families:CONTRACT.families,expectedFiles:26,expectedCases:674,expectedMountedFiles:3,expectedMountedCases:8};
+ if(scope==='full')return {kind:'five-family-web-source-and-mounted-technical-result',families:CONTRACT.families,expectedFiles:27,expectedCases:678,expectedMountedFiles:3,expectedMountedCases:8};
  if(scope!=='optional-mounted-diagnostic')fail('SCOPE');
  const family=CONTRACT.families.find(row=>row.id==='optional-class-list'),files=family.files.filter(row=>row.path==='tests/optional-class-list-interactions.test.ts'&&row.category==='mounted');
  if(files.length!==1||files[0].cases!==4||files[0].identityMultiset[OPTIONAL_MOUNTED_IDENTITY]!==1)fail('DIAGNOSTIC_ROSTER');
