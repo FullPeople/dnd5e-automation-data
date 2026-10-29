@@ -1,0 +1,11 @@
+# Limited source-use bridge: provisional source checkpoint
+
+This checkpoint depends on [Web source `54784d1fd8fa308e263ae0ee2ae9556d71e9fb88`](https://github.com/FullPeople/DND-card-web/commit/54784d1fd8fa308e263ae0ee2ae9556d71e9fb88). The final finite-use actor SHA256 is `4c952f4819441094246535d09e1dd5f83dd182730f322b92e5b514133c267b97`.
+
+Local final-source validation passed **59 focused checks: 34 actual-source, fault and compatibility cases plus 25 closed-report-contract cases**, with zero failures or skips. Direct Data/test types and diff checks passed. The earlier 164-check aggregate belongs to the pre-child-header-fix source; it is historical evidence, not a final-source aggregate.
+
+The new `limited-source-cast` observation requires an explicit genuine-grant/known-balance acknowledgment of **one remaining use**, current owned child synchronization, per-cast validity confirmation and an actual one-use debit. Acquisition/cast history, spell-action receipt, non-mutating duplicate acknowledgment, exhaustion, native reopening, later owner withdrawal/relearning and manual-resource preservation are checked. The tested generic resource edits, rest and reconciliation do not refill this owned balance. Opaque pool identifiers come from the current actor. Missing old capability is unsupported; a present broken runtime export fails closed. The ordinary observer retains its complete synchronized transaction checks after a pure native-base-class/list preflight.
+
+The genuine pre-limited consumer `3889ccba1d6067ce9f82892aba8dbb8dff14517c` lacks this explicit finite acquisition workflow. This is not an old-client editing-security guarantee. Campaign grant validity, spell effects, expiry and other conditions remain manual; one observed mechanism is not whole-rule completion.
+
+The existing ordinary runtime report is unchanged: **18,789 identities, 7,634 observed mechanisms**, SHA256 `cc6694329697a250bbf95b71a491705d8588069ef44854bc6b5f016cfe4685c8`. This source checkpoint adds no 32-entry runtime-witness claim or percentage increase. Grouped replay, report pairing, actual DOM/browser and exact-head CI acceptance remain pending. No PR, merge, deployment, raw source input or character data is included in this checkpoint.

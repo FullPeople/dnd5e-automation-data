@@ -1,4 +1,8 @@
+import {probeItemAtWill} from './itemAtWillProbe.ts';
 /** Calls the consumer's real functions on disposable cards; never executes IR payloads. */
+import {probeOrdinaryCasting} from './ordinaryProbe.ts';
+import {probeLimitedSourceUses} from './limitedProbe.ts';
+import {probeItemChargeAccounting} from './itemChargeProbe.ts';
 export interface RuntimeAdapter { [name: string]: any }
 export interface RuntimeWitness { kind: string; level: number; edition: string; before: unknown; after: unknown }
 const sourceCache=new WeakMap<any[],any[]>();
@@ -102,5 +106,5 @@ export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:an
    const ba=signature(b),aa=signature(a);if(changed(ba,aa))return {kind:'calculated-training',level,edition,before:ba,after:aa};
   }
  }
- return null;
+ return probeOrdinaryCasting(api,entry,catalog)||probeLimitedSourceUses(api,entry,catalog)||probeItemChargeAccounting(api,entry,catalog)||probeItemAtWill(api,entry,catalog);
 }

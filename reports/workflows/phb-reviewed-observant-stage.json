@@ -1,0 +1,3172 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-26T08:46:47.810Z",
+  "consumerRevision": "ade2af61ba68291f2b88ad988751ba1b60c79e96",
+  "consumerSourceTree": "3637581a13ac843f65dbb5ea282716757e536a5b",
+  "consumerModules": [
+    {
+      "path": "src/cloud/api.ts",
+      "sha256": "56fa8ea4277b19655bff6c7843af8d0b0b64985ffc643c7bae1eb4573f67fdab"
+    },
+    {
+      "path": "src/cloud/authorizationLease.ts",
+      "sha256": "ad8656538b81601bf8ca0da1c761be0a1ef178ccb868d2dbad0c08aa38b584b8"
+    },
+    {
+      "path": "src/cloud/room.ts",
+      "sha256": "a64a51c64f687f1e8e649f27a65a79185e04e04276993c12bd7db05854b5a52d"
+    },
+    {
+      "path": "src/cloud/sync.ts",
+      "sha256": "d3d615662a746ec99e2ded054b0df0f644285b33cf2c551b69a9d3743896c147"
+    },
+    {
+      "path": "src/core/automation/abilityAdvancements.ts",
+      "sha256": "c1ddf9f00a095707b3c317675d7a4d0d7d8c9fd1e0a303dee4445447fbf48713"
+    },
+    {
+      "path": "src/core/automation/actions.ts",
+      "sha256": "e4b9d522d395cd3040fe15aec7a47237cab7880d897e2c281dee6d8e461d5a22"
+    },
+    {
+      "path": "src/core/automation/active.ts",
+      "sha256": "0e553cee1963cadc09f368ac72c8ba3bf0cf946d3a9ed0a96daedc62b863f343"
+    },
+    {
+      "path": "src/core/automation/asi.ts",
+      "sha256": "a6593886a5b52694587eff7c009972d96b60ae8590f75ee5e2f3e942bdc45b03"
+    },
+    {
+      "path": "src/core/automation/asiEvidence.json",
+      "sha256": "a2b00af4db460bcada383cfcde1ef071f344ec6ee4a7acd6882fc4239a3c6968"
+    },
+    {
+      "path": "src/core/automation/backgroundAbilities.ts",
+      "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+    },
+    {
+      "path": "src/core/automation/baseAbilities.ts",
+      "sha256": "323cc0f3eff58f837b983646faedf82b188d5ec93f30d20a5e212712887ca40b"
+    },
+    {
+      "path": "src/core/automation/choices.ts",
+      "sha256": "e72b5e6e7885e68dd7ff0880b4629736d3cfce9268bb3ba573c83ac967277f35"
+    },
+    {
+      "path": "src/core/automation/classChoiceEvidence.json",
+      "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+    },
+    {
+      "path": "src/core/automation/classChoiceSourceGrant.ts",
+      "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+    },
+    {
+      "path": "src/core/automation/classChoiceSupport.ts",
+      "sha256": "1f9fdf075864b804e2c8ec567671918269608b0ad88e37a6d1cad9d7dabbdea8"
+    },
+    {
+      "path": "src/core/automation/classSpellChoices.ts",
+      "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+    },
+    {
+      "path": "src/core/automation/equipment.ts",
+      "sha256": "eca0e61970e136246ea8523e5e8b79c4f23c2403863e977e11fddc33f7ee5b65"
+    },
+    {
+      "path": "src/core/automation/featureArmor.ts",
+      "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+    },
+    {
+      "path": "src/core/automation/featureResources.ts",
+      "sha256": "a85e5fc1581fa29d8afb59108f9f32e1ce19538d34dbf40b33e7690b7507961c"
+    },
+    {
+      "path": "src/core/automation/infusionCharges.ts",
+      "sha256": "646436e80c689add94bba84e16ea009d26a375401d89ac70e960f61687888de9"
+    },
+    {
+      "path": "src/core/automation/infusionEvidence.json",
+      "sha256": "282a577c5c0a717fd4ee9a0e24ec60696f81818fc94e04bd65e3b5a736f5b9ff"
+    },
+    {
+      "path": "src/core/automation/infusions.ts",
+      "sha256": "095f098c1bcb0f7eb30b1b13480fcf931c71ab55a92c20c3bca4358245176471"
+    },
+    {
+      "path": "src/core/automation/invocationAtWillEvidence.json",
+      "sha256": "eba1cd137511d6804e17eeecef1be80c7ebd564eb54aae7b1b071ec97376e4f8"
+    },
+    {
+      "path": "src/core/automation/invocationDualEvidence.json",
+      "sha256": "5446130c185b9b4d7badb182ce1368fd0c074069885141458cf886c8fdc71d02"
+    },
+    {
+      "path": "src/core/automation/invocationEvidence.json",
+      "sha256": "6a143e3d18a100e2096b38bb5f3d0d09beeefd5d1f4ebf0720f6ade6288ea5f0"
+    },
+    {
+      "path": "src/core/automation/invocations.ts",
+      "sha256": "f1873dc472c90d797f4a639e68fbf5616762f44c9e3afec7dc85a79fb146f010"
+    },
+    {
+      "path": "src/core/automation/legacyAsiEvidence.json",
+      "sha256": "b665bc43dd08554e694abd9e4e0c1c5238b2b1ec9891b457232cba09f6f916fe"
+    },
+    {
+      "path": "src/core/automation/modernArmorTrainingEvidence.json",
+      "sha256": "042272849cd21ee5549a5c3385f01d0a6df3cbe1a5d20127b045539d8a636c90"
+    },
+    {
+      "path": "src/core/automation/refuelingRing.ts",
+      "sha256": "1edc59218356a6062d046676e8861176d30c93c7ce39371abaeca54ac7873f7a"
+    },
+    {
+      "path": "src/core/automation/refuelingSlotResolver.ts",
+      "sha256": "2e261aca5ca6a9b4371b79937675521e788b85c89efc2fcb478da60d85b3ab68"
+    },
+    {
+      "path": "src/core/automation/rest.ts",
+      "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+    },
+    {
+      "path": "src/core/automation/reviewedAlert.ts",
+      "sha256": "babea327357c7ec78c19327bc8c7ae0cb904996a807508db4415dc62c9107794"
+    },
+    {
+      "path": "src/core/automation/reviewedAlertEvidence.json",
+      "sha256": "0f358a5b4d627e03360bc7d6935d8a83c805629583a092933c42ca2ef1d3911f"
+    },
+    {
+      "path": "src/core/automation/reviewedAlertSource.ts",
+      "sha256": "e40e886262c145e770581622c65c993d10d8270e6fbf0bc08d2eae11e2b010f4"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatEvidence.json",
+      "sha256": "3771c726324b9bab21b6bdb4e244db276b6ca23ea00d795119fd913c9d59944e"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatIdentity.ts",
+      "sha256": "02d56569d521d950d2ecaadcf6aaa3877fb1289fb8862ee166ae6aca7db0c6a8"
+    },
+    {
+      "path": "src/core/automation/reviewedFeats.ts",
+      "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguist.ts",
+      "sha256": "501479b6fc54361f6b59c9a487c92ce2960612a7381d8b2f717e78754d3abee9"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguistEvidence.json",
+      "sha256": "059d3f9549ea81abec759c047d5a39e7fa96deaa80341535a0a7b9c3625896ae"
+    },
+    {
+      "path": "src/core/automation/reviewedObservant.ts",
+      "sha256": "06bc0487f579be031bed9f45e542e674172dd11b966487e3ec592b170898b0ae"
+    },
+    {
+      "path": "src/core/automation/reviewedObservantEvidence.json",
+      "sha256": "34f0d8c3e2ac8c701cfdd28f54a2a6e66f6f0a86fb360a76d5ebddea1d655e15"
+    },
+    {
+      "path": "src/core/automation/reviewedObservantSource.ts",
+      "sha256": "f239b343f5acece427c61abe65b6f00f1f23680a01a4892dc38396311ffa648a"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilled.ts",
+      "sha256": "43f2d69e557329b889fe2d0f69e6c1e232743fc59a23a29d71c4b7a486755949"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilledEvidence.json",
+      "sha256": "ab397763ebf45a34da3e5e418c2794df65cfe6b3ccbcf9055b250bb0072e17af"
+    },
+    {
+      "path": "src/core/automation/reviewedWeaponEvidence.json",
+      "sha256": "543f18f2404fe7619809b734de77de8b02645828a75a6fe72ed42945ae0c031f"
+    },
+    {
+      "path": "src/core/automation/reviewedWeapons.ts",
+      "sha256": "1c08ded5e19c2b1b2b0c7e17744c60c594f6ab40cce8be539531dc583238636c"
+    },
+    {
+      "path": "src/core/automation/sourceClassChoices.ts",
+      "sha256": "e6a519c3fa0712e640e77a254f51f56cd78b25b20e11fbd7f23ee0bd9d49369a"
+    },
+    {
+      "path": "src/core/automation/sourceEquipment.ts",
+      "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+    },
+    {
+      "path": "src/core/automation/sourceResourcePools.ts",
+      "sha256": "2b5194fe349a0310ab957c6703b59bfb49e7a1761857171c6ffed52eeee55dc6"
+    },
+    {
+      "path": "src/core/automation/sourceSpellPlan.ts",
+      "sha256": "606cb848730d7dfbe6676049c1e700250e9780bdb80f257be039599c49c1df42"
+    },
+    {
+      "path": "src/core/automation/sourceSpellState.ts",
+      "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
+    },
+    {
+      "path": "src/core/automation/sourceTextSha256.ts",
+      "sha256": "4afe6511c0903dca71e91cf9a8f7d9ae9ea2821126c1a9f489ec578d1a08b52f"
+    },
+    {
+      "path": "src/core/automation/state.ts",
+      "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+    },
+    {
+      "path": "src/core/automation/training.ts",
+      "sha256": "d681a4c68fe41ab82d1964fe8043f7a2d4f3097183616ef1f2f3efd38bebbac1"
+    },
+    {
+      "path": "src/core/automation/weapons.ts",
+      "sha256": "54a6df05b6349b87bc701537fa874847ee4d3fa8486fe72ca56879d1e8302dc0"
+    },
+    {
+      "path": "src/core/bookRituals.ts",
+      "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+    },
+    {
+      "path": "src/core/cardMigrationIssues.ts",
+      "sha256": "83db4860fd29b0335ae4c315c16c41a9708749bf9012e9186fee80068b1a05bd"
+    },
+    {
+      "path": "src/core/castingSnapshot.ts",
+      "sha256": "135b682315b5dba826d448e3099cf2936f1816804dfb2c2580645a463e8bbc25"
+    },
+    {
+      "path": "src/core/characterDetails.ts",
+      "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/characterReview.ts",
+      "sha256": "6a2c39d56170aad932ef8d4f3716a9878ac552a75d4683db3131e4a251f7b7f9"
+    },
+    {
+      "path": "src/core/classMigrationQuery.ts",
+      "sha256": "1a392ab5ee84877b4a20086eb28e99301ad3e07fd30190461d128fa58aeb1aae"
+    },
+    {
+      "path": "src/core/currency.ts",
+      "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "86bb0eec07c9bcf948343131190a74f2e10c53eb53c49af1ba3c5f37174f1e26"
+    },
+    {
+      "path": "src/core/entryNameIndex.ts",
+      "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+    },
+    {
+      "path": "src/core/entryReferences.ts",
+      "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+    },
+    {
+      "path": "src/core/export.ts",
+      "sha256": "4928ca1a19e07e69864e4a8022bae9c2868412ad046654d044a67fe20ca684ae"
+    },
+    {
+      "path": "src/core/featureOwnership.ts",
+      "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+    },
+    {
+      "path": "src/core/hitPoints.ts",
+      "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+    },
+    {
+      "path": "src/core/inlineTags.ts",
+      "sha256": "c64b8685c6584b8a5abc653a772ba1a061293852f0c5ca9d7a2d697216eb6786"
+    },
+    {
+      "path": "src/core/legacyTraining.ts",
+      "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+    },
+    {
+      "path": "src/core/model.ts",
+      "sha256": "01ac6bd296ea8e70ac159df9ccd5e7f664a0b1503b1c471ddc16dac4622484d3"
+    },
+    {
+      "path": "src/core/numericExpression.ts",
+      "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+    },
+    {
+      "path": "src/core/palette.ts",
+      "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+    },
+    {
+      "path": "src/core/preparation.ts",
+      "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+    },
+    {
+      "path": "src/core/proficiencyText.ts",
+      "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+    },
+    {
+      "path": "src/core/racialAbilities.ts",
+      "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+    },
+    {
+      "path": "src/core/resources.ts",
+      "sha256": "c0f8a72e1e46181cefe940b7f5cc42fc1ea072b46201963baaf9081ba8d896c8"
+    },
+    {
+      "path": "src/core/resourceWidgets.ts",
+      "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+    },
+    {
+      "path": "src/core/runtimeCharacterEdit.ts",
+      "sha256": "2228a38d43790e662daa62b16d838e9717b19bcde94b80b218b0acd4ae52716f"
+    },
+    {
+      "path": "src/core/sheet.ts",
+      "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
+    },
+    {
+      "path": "src/core/siteSources.ts",
+      "sha256": "57f7cc99458a0114a1b6a46a7f8af934baee7be588d695227c1c27d5bd670e7f"
+    },
+    {
+      "path": "src/core/sourceCorrections.ts",
+      "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/sourceDefaults.ts",
+      "sha256": "3eecd2210657c8ce12dd6e7b97ec5b478e80b9f3276941b06dfe8156f160f93a"
+    },
+    {
+      "path": "src/core/spellCapacity.ts",
+      "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+    },
+    {
+      "path": "src/core/spellcastingRules.ts",
+      "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+    },
+    {
+      "path": "src/core/spellResourceKeys.ts",
+      "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+    },
+    {
+      "path": "src/core/spells.ts",
+      "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+    },
+    {
+      "path": "src/core/spellWorkspace.ts",
+      "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+    },
+    {
+      "path": "src/core/transfers.ts",
+      "sha256": "649efa119abd3e0019b7c9b0d3530a3ebc93766cd4029150f2f99600e048c854"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "sha256": "52dc5a4bed5a67083e724f28a154125108bca21539c317a10d4396fd1a31168b"
+    },
+    {
+      "path": "src/core/weaponAttacks.ts",
+      "sha256": "9681b217186c314bd917c870f4ad93f3615c3b93f2b87fb6894814434b0cc6a5"
+    },
+    {
+      "path": "src/data/adapt.ts",
+      "sha256": "380ac9bc94b9ddff7950934211650894f521fb5a31344dbebb805f57adaea9aa"
+    },
+    {
+      "path": "src/data/catalog.ts",
+      "sha256": "612e37083e84549bb36d93d3a7d9fdb452a29a5ddda7ff75786c71f26002ba60"
+    },
+    {
+      "path": "src/data/catalogNormalizer.ts",
+      "sha256": "60a9e5835034862cf3401f7482e49af3e41342bb07ca892b322d1f5189b775cd"
+    },
+    {
+      "path": "src/data/catalogSnapshot.ts",
+      "sha256": "30c0d0354b41f0904ed82239fe621ae2fee9031ab7a81a924a1ebc41e8295e37"
+    },
+    {
+      "path": "src/data/catalogSource.ts",
+      "sha256": "606a0d0ec78329da078d47a42ce4b4890859586fecdb84d625f56e4d105981b1"
+    },
+    {
+      "path": "src/data/catalogTransport.ts",
+      "sha256": "f713ee0c9adf9c070626b1b71d11a0bc1a17a3afcfa0b8032fcae72b98a5916b"
+    },
+    {
+      "path": "src/data/expand.ts",
+      "sha256": "be28a83b74ca39d328beee2746b069af838b40a959640f8541e1017228eb13f3"
+    },
+    {
+      "path": "src/data/homebrew.ts",
+      "sha256": "e409edf591bfc1cda14729d61f6f91095b63508fdbd767769a60784c1f325b5e"
+    },
+    {
+      "path": "src/data/homebrewRecovery.ts",
+      "sha256": "1ad91a77e5c7e8d9649d58cfca77e5f2336a70fe1b9796237a42807742f1176f"
+    },
+    {
+      "path": "src/data/sizes.ts",
+      "sha256": "e73485b1746fb61651122985684c6c5a81418fda1087767a4a0a6327dd7b6f69"
+    },
+    {
+      "path": "src/data/weaponTraining.ts",
+      "sha256": "a946a8aec891b2c1308c271fb1fad2c22e5316607fb7faaa8b2e83f60f7d42cf"
+    },
+    {
+      "path": "src/platform/buildMode.ts",
+      "sha256": "09ba2983f92f6213bfd49819f41d013a3e708b64310512c5eec397319d5586dd"
+    },
+    {
+      "path": "src/platform/cardViewReconciliation.ts",
+      "sha256": "a1e355acc8d95152876204c15ffde072e208cf3397bcd59c5b7042c80b78b5fc"
+    },
+    {
+      "path": "src/platform/catalogReferenceIndex.ts",
+      "sha256": "3b08edaca82608f5ded9c7cf8104634710404f542db892b80dccad8f4452341b"
+    },
+    {
+      "path": "src/platform/choiceReview.ts",
+      "sha256": "bbc61abafae0d85535c6714bf09bb2e87f475d6b6224ad27ddf4be3b3978b7aa"
+    },
+    {
+      "path": "src/platform/requestTimeout.ts",
+      "sha256": "e2a9ae6f0bd30bc3dba2f842b1eb0a36a1aac0cc98eca84ed307bddc7f3e1380"
+    },
+    {
+      "path": "src/platform/settledSnapshotCheck.ts",
+      "sha256": "296bcebd9ababdfc50250be558cc0ade1369f43bfaee368dc3a43274db07517c"
+    },
+    {
+      "path": "src/platform/snapshotMemo.ts",
+      "sha256": "3a51316be1a50bc2b9152f4688f95eef25e8304699f1a9226442c2c0a484ce94"
+    },
+    {
+      "path": "src/platform/standaloneCardViews.ts",
+      "sha256": "58e89c91474098444af45a5c340d05f0b994613048c6726b4f52f7802a1c7a35"
+    },
+    {
+      "path": "src/platform/standaloneCatalogPublication.ts",
+      "sha256": "09f5869cd7277f893ea0ea8c0c696ab2bfe62a2b232cd08e69a6f8af7da4d495"
+    },
+    {
+      "path": "src/platform/storage.ts",
+      "sha256": "eeb31b10ca86d6015d96372db413119dda7cc9a307307b73e4e309a01b266533"
+    },
+    {
+      "path": "src/platform/workbenchMode.ts",
+      "sha256": "7620b3cb56cea694dad7d5930d2539c193c924ba5c5751c27f92037f78fb3c14"
+    },
+    {
+      "path": "src/platform/workspaceDatabase.ts",
+      "sha256": "7cc88eb29692a271270b8f8f5760ac9044eef55a877f219ab997feba58306df2"
+    },
+    {
+      "path": "src/platform/workspaceIdentity.ts",
+      "sha256": "8323a81b45c945d136d626e0a931aea19a0f7a59c369ddf3e02c0a7c82d7f9ab"
+    },
+    {
+      "path": "src/platform/workspaceNamespace.ts",
+      "sha256": "eb2509d68bf772144731a36a881ce3ff3ba2586fe09830b3ddda812130b7b278"
+    }
+  ],
+  "consumerStyleSources": [
+    {
+      "path": "src/ui/observantPassive.css",
+      "sha256": "018a27bbb99d5521a7dcdb6a6f59017c9d445db79f67112bbcd9f3cedea27e4a"
+    }
+  ],
+  "producerRevision": "eeb717d53f2f26d344ec5de185c9c4ddbfea575c",
+  "producerScriptSha256": "269427964635785522a0891f2e0344f2603ffdd1db093585eecd05238fea21de",
+  "retrievalRevisions": {
+    "class/class-artificer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-barbarian.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-bard.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-cleric.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-druid.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-fighter.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-monk.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-paladin.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-ranger.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-rogue.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-sorcerer.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-warlock.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "class/class-wizard.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "feats.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "languages.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "skills.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "items-base.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+    "items.json": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "variantrules.json": "e2623b204ddbdf2bcfa8317acfc962de89c676e2"
+  },
+  "inputs": {
+    "class/class-artificer.json": "c65cad57eebdfff6508a0cfb821ec670a41cc3f057512cadd19f3805cf1a01d7",
+    "class/class-barbarian.json": "23e2316b63e09a716519833a477f3452ec3ce229bd32c72374eb0c6673e5cb6f",
+    "class/class-bard.json": "ac95dc8f1d795c0764ae6314e846d8efdcbbb4b42a8c721551265467885ed31c",
+    "class/class-cleric.json": "011edfef6c76cd0f70143d83db3b5e8b9b0d31ca1557b4c0954bedc619615344",
+    "class/class-druid.json": "71fca887392f6653f41d5900066cbe6fa1cac0280bb908257075925311e1ec2c",
+    "class/class-fighter.json": "a4c5afc0e7ec7a444d1418a04ab4fe392b9a7a25907ac0fb9b8618a79d1ee509",
+    "class/class-monk.json": "17f8612781788c6b614fdafb81711cb537e0bdb8bec5d1da2f32864d6ec28dcb",
+    "class/class-paladin.json": "aa125ed2f15782924cf4d48677e1ff64c934076bbc4f66fa65f21ba797007b2e",
+    "class/class-ranger.json": "a0e58735bc5f1ef9b260b88cf2c9778ffc0d367c0b132e72fadc95baf198310a",
+    "class/class-rogue.json": "b5c62a8c5356438a09bc64bc96b71968fa3766d46102a0a1de11713e5ee0d251",
+    "class/class-sorcerer.json": "cc1c7c87b28903114e98310b00f6c820541a6f3458bd67e6badb79b014e4c670",
+    "class/class-warlock.json": "34721a04db792923cf0a19fbab3f90616093d9f6519a7cfe6f81a9eb52e775d4",
+    "class/class-wizard.json": "7533f3fb7bab70cd2d2f2b5dfb7e259dc66a2bfee24ee6ad3809042e53ba8a03",
+    "feats.json": "0491b421f5f1db6628c3a8aeb86bbc3b72b56bf101a14ba96acbe19c829a56a6",
+    "languages.json": "fae8ff63ba6d28b71a132f37da85dfb53c8a3dce9f931d49d2b7e12214afae98",
+    "skills.json": "313019e6987bffdcdb4c74bdd05edd475c6f33410637f7b42f85760c5beb8941",
+    "items-base.json": "8933a3e70e47aa4fd6196bd7f1f2e3a57d6d8dbe7e781d37bb6a0519d7c4ffff",
+    "items.json": "883f7bb4df2eb35fb37e7caa3a8765e0209014caa360d1c0358daa6f4b2da488",
+    "variantrules.json": "21eef107d25cf438eb85894387fb6f834478d80bc467791c54fe66db9e498c44"
+  },
+  "entryHashes": {
+    "feat": "dc6366743eb9242179fa25e00124d79e7e281c966242ac3beac52a9b9c905e8b",
+    "modern": "7008f8c724a3a19a2aa276bff3e19c354ff218f461934dfd66dcebd0125b5855",
+    "default": "75b2156dacae2a779a04406c4f12fe1feb5541631d463f22c3ccaab53dc50269"
+  },
+  "feat": {
+    "reference": "Observant|PHB",
+    "entryId": "kiwee:feat:phb:observant::::::",
+    "name": "观察力",
+    "english": "Observant",
+    "page": 168,
+    "entryHash": "dc6366743eb9242179fa25e00124d79e7e281c966242ac3beac52a9b9c905e8b",
+    "rawKeys": [
+      "ENG_name",
+      "name",
+      "source",
+      "page",
+      "reprintedAs",
+      "ability",
+      "entries",
+      "translator"
+    ],
+    "mechanics": {
+      "ability": [
+        {
+          "choose": {
+            "from": [
+              "int",
+              "wis"
+            ],
+            "amount": 1
+          }
+        }
+      ]
+    },
+    "entriesShape": {
+      "length": 2,
+      "introduction": "nonempty-string",
+      "list": {
+        "type": "list",
+        "keys": [
+          "type",
+          "items"
+        ],
+        "count": 2,
+        "itemType": "nonempty-string"
+      }
+    },
+    "clauses": {
+      "lipReading": {
+        "index": 0,
+        "sha256": "3dafc45f7a4cfe5101dfb90eca3ad9211ee49330363df8ffe9ada38b1e7bc240"
+      },
+      "passives": {
+        "index": 1,
+        "sha256": "e698e33cae17248724563b933c5fc9425c009996a73c2a6a7de206b0a9c5b983",
+        "bonuses": {
+          "perception": 5,
+          "investigation": 5
+        }
+      }
+    }
+  },
+  "modern": {
+    "reference": "Observant|XPHB",
+    "entryId": "kiwee:feat:xphb:observant::::::",
+    "name": "观察力",
+    "english": "Observant",
+    "page": 205,
+    "entryHash": "7008f8c724a3a19a2aa276bff3e19c354ff218f461934dfd66dcebd0125b5855",
+    "rawKeys": [
+      "ENG_name",
+      "name",
+      "source",
+      "page",
+      "category",
+      "prerequisite",
+      "ability",
+      "skillProficiencies",
+      "entries",
+      "translator"
+    ],
+    "mechanics": {
+      "category": "G",
+      "prerequisite": [
+        {
+          "level": 4,
+          "ability": [
+            {
+              "int": 13
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "ability": [
+            {
+              "wis": 13
+            }
+          ]
+        }
+      ],
+      "ability": [
+        {
+          "choose": {
+            "from": [
+              "int",
+              "wis"
+            ]
+          }
+        }
+      ],
+      "skillProficiencies": [
+        {
+          "choose": {
+            "from": [
+              "洞悉",
+              "调查",
+              "察觉"
+            ]
+          }
+        }
+      ]
+    },
+    "entriesSha256": "232a8430660648745621c6f964f269aa9edad485ed83644c169f5a3ef2074aa8"
+  },
+  "abilityDefault": {
+    "max": 20,
+    "revision": "5cc0bbe2c2b241a334e731af4448bdba2168e8bd",
+    "blob": "fd559e0baad858c2bc59a813603a55e41972a1f4",
+    "path": "js/render.js",
+    "startLine": 7093,
+    "endLine": 7123,
+    "expression": "abilityObj.max ?? 20",
+    "chooseAmount": 1,
+    "verifiedBlob": "fd559e0baad858c2bc59a813603a55e41972a1f4"
+  },
+  "passiveBaseline": {
+    "source": "PHB",
+    "edition": "2014",
+    "page": 175,
+    "input": {
+      "path": "data/book/book-phb.json",
+      "revision": "e2623b204ddbdf2bcfa8317acfc962de89c676e2",
+      "gitBlob": "ed5cf92310a2bab6f6edbab93b68cc4b3f0d1dbc",
+      "byteSha256": "cfeb7945e3037243bcceb87842a52b1266f5a09245a44c2b8a9b29b9ce3cb736",
+      "canonicalSha256": "0562fea72f24f845b599a309141812eb3e8eb69ee60c7bf1468346c35cc35941"
+    },
+    "entry": {
+      "path": [
+        "data",
+        7,
+        "entries",
+        9,
+        "entries",
+        7
+      ],
+      "english": "Passive Checks",
+      "sha256": "6f4c21191fca29b8e98d2b1ca5c1f7b76eb5686dc73822ac29ac89119bfe9925",
+      "formulaSha256": "211e7e616f0ac663fae918c45164f491448a15c6f42d6ae201c92102cc525495"
+    },
+    "base": 10,
+    "modifier": "final Investigation check modifier",
+    "situationalAdvantageDisadvantage": "manual",
+    "primaryReferences": [
+      "https://www.dndbeyond.com/sources/dnd/basic-rules-2014/using-ability-scores#PassiveChecks",
+      "https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf"
+    ]
+  },
+  "legacyClassSlots": [
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|4",
+      "level": 4,
+      "entryHash": "15ab494332298be52b81a227d8996ef555e215cbea744aef97bbf67ec62445bf"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|8",
+      "level": 8,
+      "entryHash": "d8d3746d7b102afa1163cc6a5ad93afd4df5a49ddf7fe8ad25e2476970453756"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|12",
+      "level": 12,
+      "entryHash": "5055f6ee30ef606a7adb7b124bc308370891192174895ca16a51a3a8c1d10e78"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|16",
+      "level": 16,
+      "entryHash": "1fd5d443928b6f4f9eb61d1fbbe3a2cb9b89b75284bd09ecc696d5d785593afc"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "feature": "属性值提升|奇械师|TCE|19",
+      "level": 19,
+      "entryHash": "2747b932a5b7d86cbbbb0a89e2041294f762802a79118118ed876543c8a6f100"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||4",
+      "level": 4,
+      "entryHash": "31c3ad6efd15b57d4c4b29540fd926b70343c4cd53c7f0951cb963c02f540517"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||8",
+      "level": 8,
+      "entryHash": "17e5368c82ee23cbab1dca513f3f6b94460ff75ac315db81d05e228cd9f0dc4a"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||12",
+      "level": 12,
+      "entryHash": "520341c206d11194d62e892d753bcc8f3a2f4428d94f93fa11a53fc4ca901766"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||16",
+      "level": 16,
+      "entryHash": "8003514f72b34e137fdbd55240c8ad897cd2a07459eb5b113de8fd2baf551280"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "feature": "属性值提升|野蛮人||19",
+      "level": 19,
+      "entryHash": "e9e23bbae288bbadd648364a267ed46b5798e0166fc8a735dc7c52ca1cda7dcd"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||4",
+      "level": 4,
+      "entryHash": "fb7a6129b1a5db145a692bc5667ba17ed55ee2b36aa1dfe3ddb8e2e01b8f84df"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||8",
+      "level": 8,
+      "entryHash": "ab1cca974e404072dd7b53198cc2d18dc5993bdd08da8439bea02de18aaacc3a"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||12",
+      "level": 12,
+      "entryHash": "700dd64dc6c9d5dd68035ad7e520e8dc98e80d50618e4e7475536f6e393b2ff3"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||16",
+      "level": 16,
+      "entryHash": "069d5d0c6ed5c90a494a27ebc7553bc66c895767ea5d7d6d032e4b59451c1671"
+    },
+    {
+      "owner": "Bard|PHB",
+      "feature": "属性值提升|吟游诗人||19",
+      "level": 19,
+      "entryHash": "c2422715c96b73bf81ad5cc4ef96e608c03bbf5074f7b8e8918b2dd5cfe6c09f"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||4",
+      "level": 4,
+      "entryHash": "7d19c66cea4163aadcd77e26e36a2221b2d30f37b416cfa34c3654a86f1168a9"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||8",
+      "level": 8,
+      "entryHash": "c57aa8d55099122f5971b72d1c757df9cfd5febed15fddf9140efe3f0d13a50b"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||12",
+      "level": 12,
+      "entryHash": "7dd65ad1d4d0b5523625e58e0d3966430474370a3fcd71dbaf9ceae0dd8f1272"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||16",
+      "level": 16,
+      "entryHash": "8038c4fd88b829ce94750d8911a815ae0a82e192295fad09acab3a452882c957"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "feature": "属性值提升|牧师||19",
+      "level": 19,
+      "entryHash": "27d2bede74614e75ece8965c4c7ec146ff2e907f2be77a87a3e0457a65724222"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||4",
+      "level": 4,
+      "entryHash": "d2f5332541bef50045b682d305de6ec8a6047a3303be2f562175e61b9b977d24"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||8",
+      "level": 8,
+      "entryHash": "70be5556318982a89d7a11189d4b310b30b4e84b500e2b6eb37cf4ed605cab5e"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||12",
+      "level": 12,
+      "entryHash": "17590280165ce2dec4c5d6ff73ed424d12a9d47ad17f697336a02a80b8466734"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||16",
+      "level": 16,
+      "entryHash": "fc0e2b88c7406888977d5df71b698f56f3fce70372423d4442a45944cd886a34"
+    },
+    {
+      "owner": "Druid|PHB",
+      "feature": "属性值提升|德鲁伊||19",
+      "level": 19,
+      "entryHash": "22cc85ba08053fd53dbd1149e665584eddacfa0ff48600997caa8a19e9403e6d"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||4",
+      "level": 4,
+      "entryHash": "ac086cf1ef21ef5c45f58ad3ed451817e5741b8dc11b20986cabbd34058fa0ca"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||6",
+      "level": 6,
+      "entryHash": "5ac3697b8daa222bcfb3bd43ba2da7e262891b24f6f92088f507f790f79c55f1"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||8",
+      "level": 8,
+      "entryHash": "780568025cbeaca1f8c1d043359a3d697784039a8c20580724983731bb7dd682"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||12",
+      "level": 12,
+      "entryHash": "768c71236814a3b29af268dbaee15b368a46b229cf2f426510863102a826bd6c"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||14",
+      "level": 14,
+      "entryHash": "5786ad6e646bc0482d6b30dc24eb11239ee78dedda2fa41cb8595cada87c3637"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||16",
+      "level": 16,
+      "entryHash": "1d157529596a6d3df93c36596e72e80eb6445a67560b9b5ee561dd7e4e827a21"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "feature": "属性值提升|战士||19",
+      "level": 19,
+      "entryHash": "35f0ca60360ca35348af23a26e3e63f87f7d8ac1b897cf70aed24105405c23d7"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||4",
+      "level": 4,
+      "entryHash": "5f91234176ec752a363b98dc16525d34d8eef8dad21909b0ca17e5fbe49590de"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||8",
+      "level": 8,
+      "entryHash": "2cec09000acfd439937d5362b10f89f253eacbdcb8c2ab40146924dce3b3f8ba"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||12",
+      "level": 12,
+      "entryHash": "0036039fe65729211663fde5a04f9fb6cdd9e28dee8e46e60ed5f6f5dcad70c9"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||16",
+      "level": 16,
+      "entryHash": "4ff774d519461f35304647e4aef2b358e1df0ed64c68c58f13b995f017bcfd88"
+    },
+    {
+      "owner": "Monk|PHB",
+      "feature": "属性值提升|武僧||19",
+      "level": 19,
+      "entryHash": "3a392751771a09443584dc9626b8b3e008ecffd14bcb7f362117f3bc6254094c"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||4",
+      "level": 4,
+      "entryHash": "3902e26b5cd452368cca4319022bf2779ac0da02e7bc1832e261954c38def7cd"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||8",
+      "level": 8,
+      "entryHash": "26d79d89c1412e51460aa8f352e92c7e334809521344e597e484136db0b2575c"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||12",
+      "level": 12,
+      "entryHash": "ea4e9eb2017dc2ec7abe91783e815721f24af7b952504196b7b85ef85f6c01bb"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||16",
+      "level": 16,
+      "entryHash": "3e59e0659534e3ef55cefb4f8f275fcf42b76d4421e236e911c38bb56426fb6f"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "feature": "属性值提升|圣武士||19",
+      "level": 19,
+      "entryHash": "cc0570d39a8b52cafee6351e1657ba83dc1b1623ec945c0b9b4c3a07d84afcd8"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||4",
+      "level": 4,
+      "entryHash": "5f359b870d1e8aa2dd0073f6949498aef31761dbf138fa4157ad3f2f68d98301"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||8",
+      "level": 8,
+      "entryHash": "7ce8d081930df98cb809a158feabfe79ac7aaf0ff1ea34daabc784928e6929c6"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||12",
+      "level": 12,
+      "entryHash": "741836e102c86d6e9578409e79e1eb7a5743068e68c8eab60b44351621f4df60"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||16",
+      "level": 16,
+      "entryHash": "ea2ecc290466d6648ff5f10c2f522b2caca3e6e15651ab64dae4ec016098f6f7"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "feature": "属性值提升|游侠||19",
+      "level": 19,
+      "entryHash": "d25024429c91923b824e14ee1d7eaba2eb82d24e4b6a5289a18af9f3ef23b152"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||4",
+      "level": 4,
+      "entryHash": "6f0bcb9e25c8d1ce4b23ee9f9ff71d68f7de1b4660f82386a1aee1028e5c1660"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||8",
+      "level": 8,
+      "entryHash": "85720074ddbb7b1e33057e35997eca6c33ce43127062384a1dac7c145bf749ab"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||10",
+      "level": 10,
+      "entryHash": "49624b617a2a33442981af56e2e3e5a5a2b02d9c7ae2b5c5683e8d9a3e034232"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||12",
+      "level": 12,
+      "entryHash": "a094e506678810be56035b3cac4cb7664fdcded8a079f16c2d556424b60ca25c"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||16",
+      "level": 16,
+      "entryHash": "d9a1fe450c05d6a66f10c1299f0361e448e5ac9ef64be2e1d85d15d0fb591c9d"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "feature": "属性值提升|游荡者||19",
+      "level": 19,
+      "entryHash": "3cc59ffd5abdb4e4ffedec0b2ac98cefa5903a0e6f7514ca9c78a91a9b0461de"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||4",
+      "level": 4,
+      "entryHash": "92d03c1a3bf08f5ad688ce12eac9615ead66535f13bbf9d0b215fd99b93c6427"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||8",
+      "level": 8,
+      "entryHash": "25b093303b5322d7cb1ca2171a46cc677bda00bbeb72e9959a710ea6f3ee83b8"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||12",
+      "level": 12,
+      "entryHash": "260beb8a1b9cfe3977f459afc135c7fff23812f4302ae3ad6609b0f27fd1efa3"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||16",
+      "level": 16,
+      "entryHash": "96ddb77c51948b141dcdb478e026e856d140765acef3212d14b5c7a72b583e48"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "feature": "属性值提升|术士||19",
+      "level": 19,
+      "entryHash": "c6236582a930473870340f1cb97927180d682429085c4072fc96c3dd254d563b"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||4",
+      "level": 4,
+      "entryHash": "3eb9619ba558ce55f8a58174dd4aad9a42fe69fc0a543f4720bd3d93eb632ee5"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||8",
+      "level": 8,
+      "entryHash": "66a664a14752cd91c96d7f3c21c4b2d29ec42adcd2c51fac4c3446dd99a68446"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||12",
+      "level": 12,
+      "entryHash": "62a78a0e6f97a054b8bd51b3c3909e13fbec0f3a0a803fbce2a244ed82560d1c"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||16",
+      "level": 16,
+      "entryHash": "5e47ffad882bc03369337e1cb8fe14fef134e1b4265af50d5462aa817ed968ad"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "feature": "属性值提升|魔契师||19",
+      "level": 19,
+      "entryHash": "674e3aea6b8fdb9a4bb6776b4e029acc613fbca5fcd76483e7ecb727a177d445"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||4",
+      "level": 4,
+      "entryHash": "d52bd6af091b578219c80f36b031cbda61a9a021c09bebbef42da895824fe1b4"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||8",
+      "level": 8,
+      "entryHash": "2762e9bcc5aa1985189b743312468166703728ebd11b825df09452665f657988"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||12",
+      "level": 12,
+      "entryHash": "9d5c4b1ef05b52a3fe38c8435acf253de713a828158f7542a6b26083c594a30a"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||16",
+      "level": 16,
+      "entryHash": "c3658786e7219043469fd6e64f1149c6dfbcb49280b8797bb3782f9067ff73cc"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "feature": "属性值提升|法师||19",
+      "level": 19,
+      "entryHash": "7f1eba99c34b672dd8d4b00e3c9bf69b97e1d72d60796ee59a0134f1c621db45"
+    }
+  ],
+  "legacyClassCanonicalIdentities": [
+    {
+      "owner": "Artificer|TCE",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:tce:artificer::::::",
+      "featureEntryId": "kiwee:feature:tce:ability%20score%20improvement:tce:%E5%A5%87%E6%A2%B0%E5%B8%88:::4:"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:tce:artificer::::::",
+      "featureEntryId": "kiwee:feature:tce:ability%20score%20improvement:tce:%E5%A5%87%E6%A2%B0%E5%B8%88:::8:"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:tce:artificer::::::",
+      "featureEntryId": "kiwee:feature:tce:ability%20score%20improvement:tce:%E5%A5%87%E6%A2%B0%E5%B8%88:::12:"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:tce:artificer::::::",
+      "featureEntryId": "kiwee:feature:tce:ability%20score%20improvement:tce:%E5%A5%87%E6%A2%B0%E5%B8%88:::16:"
+    },
+    {
+      "owner": "Artificer|TCE",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:tce:artificer::::::",
+      "featureEntryId": "kiwee:feature:tce:ability%20score%20improvement:tce:%E5%A5%87%E6%A2%B0%E5%B8%88:::19:"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:barbarian::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::4:"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:barbarian::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::8:"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:barbarian::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::12:"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:barbarian::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::16:"
+    },
+    {
+      "owner": "Barbarian|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:barbarian::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%87%8E%E8%9B%AE%E4%BA%BA:::19:"
+    },
+    {
+      "owner": "Bard|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:bard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::4:"
+    },
+    {
+      "owner": "Bard|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:bard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::8:"
+    },
+    {
+      "owner": "Bard|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:bard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::12:"
+    },
+    {
+      "owner": "Bard|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:bard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::16:"
+    },
+    {
+      "owner": "Bard|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:bard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%90%9F%E6%B8%B8%E8%AF%97%E4%BA%BA:::19:"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:cleric::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::4:"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:cleric::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::8:"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:cleric::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::12:"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:cleric::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::16:"
+    },
+    {
+      "owner": "Cleric|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:cleric::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E7%89%A7%E5%B8%88:::19:"
+    },
+    {
+      "owner": "Druid|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:druid::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::4:"
+    },
+    {
+      "owner": "Druid|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:druid::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::8:"
+    },
+    {
+      "owner": "Druid|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:druid::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::12:"
+    },
+    {
+      "owner": "Druid|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:druid::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::16:"
+    },
+    {
+      "owner": "Druid|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:druid::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%BE%B7%E9%B2%81%E4%BC%8A:::19:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::4:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 6,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::6:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::8:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::12:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 14,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::14:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::16:"
+    },
+    {
+      "owner": "Fighter|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:fighter::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%88%98%E5%A3%AB:::19:"
+    },
+    {
+      "owner": "Monk|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:monk::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::4:"
+    },
+    {
+      "owner": "Monk|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:monk::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::8:"
+    },
+    {
+      "owner": "Monk|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:monk::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::12:"
+    },
+    {
+      "owner": "Monk|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:monk::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::16:"
+    },
+    {
+      "owner": "Monk|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:monk::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%AD%A6%E5%83%A7:::19:"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:paladin::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::4:"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:paladin::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::8:"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:paladin::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::12:"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:paladin::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::16:"
+    },
+    {
+      "owner": "Paladin|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:paladin::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E5%9C%A3%E6%AD%A6%E5%A3%AB:::19:"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:ranger::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::4:"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:ranger::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::8:"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:ranger::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::12:"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:ranger::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::16:"
+    },
+    {
+      "owner": "Ranger|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:ranger::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E4%BE%A0:::19:"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:rogue::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::4:"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:rogue::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::8:"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "level": 10,
+      "ownerEntryId": "kiwee:class:phb:rogue::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::10:"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:rogue::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::12:"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:rogue::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::16:"
+    },
+    {
+      "owner": "Rogue|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:rogue::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B8%B8%E8%8D%A1%E8%80%85:::19:"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:sorcerer::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::4:"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:sorcerer::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::8:"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:sorcerer::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::12:"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:sorcerer::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::16:"
+    },
+    {
+      "owner": "Sorcerer|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:sorcerer::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%9C%AF%E5%A3%AB:::19:"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:warlock::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::4:"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:warlock::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::8:"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:warlock::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::12:"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:warlock::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::16:"
+    },
+    {
+      "owner": "Warlock|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:warlock::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E9%AD%94%E5%A5%91%E5%B8%88:::19:"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "level": 4,
+      "ownerEntryId": "kiwee:class:phb:wizard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B3%95%E5%B8%88:::4:"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "level": 8,
+      "ownerEntryId": "kiwee:class:phb:wizard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B3%95%E5%B8%88:::8:"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "level": 12,
+      "ownerEntryId": "kiwee:class:phb:wizard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B3%95%E5%B8%88:::12:"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "level": 16,
+      "ownerEntryId": "kiwee:class:phb:wizard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B3%95%E5%B8%88:::16:"
+    },
+    {
+      "owner": "Wizard|PHB",
+      "level": 19,
+      "ownerEntryId": "kiwee:class:phb:wizard::::::",
+      "featureEntryId": "kiwee:feature:phb:ability%20score%20improvement:phb:%E6%B3%95%E5%B8%88:::19:"
+    }
+  ],
+  "appCatalog": {
+    "scope": "full-original229-input-directory-construction-only",
+    "sourceInputs": 229,
+    "inputBinding": {
+      "scope": "full-original229-source-inputs",
+      "files": 229,
+      "manifestByteSha256": "53d555a47e4f42e01b19032c34f3088312b97bfdb86ec5d02136a701b194757a",
+      "committedCorpusReportSha256": "9a07d4498bf4fa933dd3b5e0a17b4ea3b80279b1cc983c8c73a4d37e5a2c95cb",
+      "inputSetSha256": "c32dc7d8000a47bf3b5b6d00022f968e87d02bc3bcce54b4d7986ee5bc245d7e"
+    },
+    "normalizedTargetedEntries": 5832,
+    "directoryEntries": 29459,
+    "appEntries": 29505,
+    "equipmentTrainingEntries": 34,
+    "snapshotCacheReload": true,
+    "fullCorpusRuleEvaluation": false
+  },
+  "oldConsumerBoundary": {
+    "revision": "0478305fb20ddc9b65538fc50d5740d622c1589c",
+    "nativeRoundtripPreservesOpaqueIntent": true,
+    "noOwnedAbilityOrPassiveEffects": true,
+    "noPassiveInvestigation": true,
+    "parentChangeSuspendsOnReturn": true,
+    "clearReselectRetainsStaleConsent": true,
+    "manualEditsCannotAttestFreshReview": true,
+    "downgradeLosesOwnedSourceLifecycle": true,
+    "safeEditingCompatibility": false
+  },
+  "oldConsumerModules": [
+    {
+      "path": "src/core/automation/abilityAdvancements.ts",
+      "sha256": "3c285e27d996783fc7870a525990aaecfb6e9db5ac879b5ddd5a9ace3eeb13d8"
+    },
+    {
+      "path": "src/core/automation/actions.ts",
+      "sha256": "e4b9d522d395cd3040fe15aec7a47237cab7880d897e2c281dee6d8e461d5a22"
+    },
+    {
+      "path": "src/core/automation/active.ts",
+      "sha256": "0e553cee1963cadc09f368ac72c8ba3bf0cf946d3a9ed0a96daedc62b863f343"
+    },
+    {
+      "path": "src/core/automation/asi.ts",
+      "sha256": "1b48b47ca57660fabdec8a2b2d458089d78ac9ae5c40f56eb183022ee4286769"
+    },
+    {
+      "path": "src/core/automation/asiEvidence.json",
+      "sha256": "a2b00af4db460bcada383cfcde1ef071f344ec6ee4a7acd6882fc4239a3c6968"
+    },
+    {
+      "path": "src/core/automation/backgroundAbilities.ts",
+      "sha256": "65f5b91d2819b0ebd9d32f0da7b236960aeb77bc0d025d0ebace16defc269c66"
+    },
+    {
+      "path": "src/core/automation/baseAbilities.ts",
+      "sha256": "37b9ddc46d39647daa18e1a38c1b107cf34a53c4b83113f867a06864004b90ce"
+    },
+    {
+      "path": "src/core/automation/choices.ts",
+      "sha256": "b25b073f8caa4390ebad7d8a84c2917e24c36b82af2f4bdf946fe5a9a56352e5"
+    },
+    {
+      "path": "src/core/automation/classChoiceEvidence.json",
+      "sha256": "aa3571986cb62851423345db23acec1ba78b370c5f700d7bd2384a8e4310dcca"
+    },
+    {
+      "path": "src/core/automation/classChoiceSourceGrant.ts",
+      "sha256": "c61e031783514f5b47112db07806475217f23ba7275e489a740314ac3f5b9795"
+    },
+    {
+      "path": "src/core/automation/classChoiceSupport.ts",
+      "sha256": "1f9fdf075864b804e2c8ec567671918269608b0ad88e37a6d1cad9d7dabbdea8"
+    },
+    {
+      "path": "src/core/automation/classSpellChoices.ts",
+      "sha256": "652e4aa60d1e12fa45fbfd4f30a8d962f13cf626f86844717f562b57eaa896bc"
+    },
+    {
+      "path": "src/core/automation/equipment.ts",
+      "sha256": "eca0e61970e136246ea8523e5e8b79c4f23c2403863e977e11fddc33f7ee5b65"
+    },
+    {
+      "path": "src/core/automation/featureArmor.ts",
+      "sha256": "57b0a790f11e6caa4c935cdfcbe9306d30f20227c2ed3c6365c768e236cdb8f8"
+    },
+    {
+      "path": "src/core/automation/featureResources.ts",
+      "sha256": "e3d85c9c4960525855a523d7656f812802e4b46c630798f9c8ce680bf2f08dbc"
+    },
+    {
+      "path": "src/core/automation/infusionCharges.ts",
+      "sha256": "646436e80c689add94bba84e16ea009d26a375401d89ac70e960f61687888de9"
+    },
+    {
+      "path": "src/core/automation/infusionEvidence.json",
+      "sha256": "282a577c5c0a717fd4ee9a0e24ec60696f81818fc94e04bd65e3b5a736f5b9ff"
+    },
+    {
+      "path": "src/core/automation/infusions.ts",
+      "sha256": "095f098c1bcb0f7eb30b1b13480fcf931c71ab55a92c20c3bca4358245176471"
+    },
+    {
+      "path": "src/core/automation/invocationAtWillEvidence.json",
+      "sha256": "eba1cd137511d6804e17eeecef1be80c7ebd564eb54aae7b1b071ec97376e4f8"
+    },
+    {
+      "path": "src/core/automation/invocationDualEvidence.json",
+      "sha256": "5446130c185b9b4d7badb182ce1368fd0c074069885141458cf886c8fdc71d02"
+    },
+    {
+      "path": "src/core/automation/invocationEvidence.json",
+      "sha256": "6a143e3d18a100e2096b38bb5f3d0d09beeefd5d1f4ebf0720f6ade6288ea5f0"
+    },
+    {
+      "path": "src/core/automation/invocations.ts",
+      "sha256": "f1873dc472c90d797f4a639e68fbf5616762f44c9e3afec7dc85a79fb146f010"
+    },
+    {
+      "path": "src/core/automation/legacyAsiEvidence.json",
+      "sha256": "b665bc43dd08554e694abd9e4e0c1c5238b2b1ec9891b457232cba09f6f916fe"
+    },
+    {
+      "path": "src/core/automation/modernArmorTrainingEvidence.json",
+      "sha256": "042272849cd21ee5549a5c3385f01d0a6df3cbe1a5d20127b045539d8a636c90"
+    },
+    {
+      "path": "src/core/automation/refuelingRing.ts",
+      "sha256": "1edc59218356a6062d046676e8861176d30c93c7ce39371abaeca54ac7873f7a"
+    },
+    {
+      "path": "src/core/automation/refuelingSlotResolver.ts",
+      "sha256": "2e261aca5ca6a9b4371b79937675521e788b85c89efc2fcb478da60d85b3ab68"
+    },
+    {
+      "path": "src/core/automation/rest.ts",
+      "sha256": "d9a5e0faa01564b13afb930a4f67e2816b7976690543b7ff7007d5334212257b"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatEvidence.json",
+      "sha256": "3771c726324b9bab21b6bdb4e244db276b6ca23ea00d795119fd913c9d59944e"
+    },
+    {
+      "path": "src/core/automation/reviewedFeatIdentity.ts",
+      "sha256": "1f8d40fa73dd720cae6e89740ba7ecc136a46f69ee9578036ad881bed6cebcc6"
+    },
+    {
+      "path": "src/core/automation/reviewedFeats.ts",
+      "sha256": "4014a7abb6b2287743f6f172cf9c135a4906a37a74574c2c012eba5df6b8922a"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguist.ts",
+      "sha256": "f7c045b6f95162671555402127e0e4baf1141c53145e950474936ac6bc340346"
+    },
+    {
+      "path": "src/core/automation/reviewedLinguistEvidence.json",
+      "sha256": "059d3f9549ea81abec759c047d5a39e7fa96deaa80341535a0a7b9c3625896ae"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilled.ts",
+      "sha256": "43f2d69e557329b889fe2d0f69e6c1e232743fc59a23a29d71c4b7a486755949"
+    },
+    {
+      "path": "src/core/automation/reviewedSkilledEvidence.json",
+      "sha256": "ab397763ebf45a34da3e5e418c2794df65cfe6b3ccbcf9055b250bb0072e17af"
+    },
+    {
+      "path": "src/core/automation/reviewedWeaponEvidence.json",
+      "sha256": "543f18f2404fe7619809b734de77de8b02645828a75a6fe72ed42945ae0c031f"
+    },
+    {
+      "path": "src/core/automation/reviewedWeapons.ts",
+      "sha256": "1c08ded5e19c2b1b2b0c7e17744c60c594f6ab40cce8be539531dc583238636c"
+    },
+    {
+      "path": "src/core/automation/sourceClassChoices.ts",
+      "sha256": "e6a519c3fa0712e640e77a254f51f56cd78b25b20e11fbd7f23ee0bd9d49369a"
+    },
+    {
+      "path": "src/core/automation/sourceEquipment.ts",
+      "sha256": "03b37ab02ef56632432eaf0509384785e732b1f75b2bd5234c2a55ae6f8decda"
+    },
+    {
+      "path": "src/core/automation/sourceResourcePools.ts",
+      "sha256": "d7d4d341e6f5a0a0be789a4cc04012d01047f1a928a657391778c84ec528f4da"
+    },
+    {
+      "path": "src/core/automation/sourceSpellPlan.ts",
+      "sha256": "2831cd4118814a00e869935d7727a2ce4551f4bf55cdd2c9c9ff67205482da48"
+    },
+    {
+      "path": "src/core/automation/sourceSpellState.ts",
+      "sha256": "3a22e097b1864baf4355825b175290db4d2f7b1e36567caa37b644a95f4c3556"
+    },
+    {
+      "path": "src/core/automation/state.ts",
+      "sha256": "0b9ab1e764e2b04ccde2ef3ee35ea77441b8d15adaf7445efd6c321457fca60d"
+    },
+    {
+      "path": "src/core/automation/training.ts",
+      "sha256": "e41916d9fdb4adbdd2ee35d6b2bd131b21ad3f28537718bf65b81740ba0bec69"
+    },
+    {
+      "path": "src/core/automation/weapons.ts",
+      "sha256": "54a6df05b6349b87bc701537fa874847ee4d3fa8486fe72ca56879d1e8302dc0"
+    },
+    {
+      "path": "src/core/bookRituals.ts",
+      "sha256": "2a0dd538a59bc5494879a70940824152508e0001056efdba7d4c3d12b150176b"
+    },
+    {
+      "path": "src/core/characterDetails.ts",
+      "sha256": "8f94ed8eba8e9b33b0c6f464a7afb97f20693dc9ba8b16a2d71b98911db852c1"
+    },
+    {
+      "path": "src/core/currency.ts",
+      "sha256": "8401eac68858eff1c6c524ac10888b1a07517c311f256b56f4a7b15f30dbfebe"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "f19ed99f904dd8dcd0c9dfa2c113ba9a6ab3bf257ed0b32175edb189ae4dd9ff"
+    },
+    {
+      "path": "src/core/entryNameIndex.ts",
+      "sha256": "8e58de46bae9b1e8519411ac64ef362dc81d152d2b7c3ba56dd8513cd2c44bab"
+    },
+    {
+      "path": "src/core/entryReferences.ts",
+      "sha256": "b8ef8f503db0f0a00d0f7475b93c927580dca83bf170c95e3348b91f27afc7e7"
+    },
+    {
+      "path": "src/core/export.ts",
+      "sha256": "d0e8842b37a3bae479a36ed4bc6726c28b952da51ea9a443ea172f05b4e8b2cf"
+    },
+    {
+      "path": "src/core/featureOwnership.ts",
+      "sha256": "ca572cd77419c208724f1d69904ec795ec599b6960def6030f6f65acb2b8424e"
+    },
+    {
+      "path": "src/core/hitPoints.ts",
+      "sha256": "b6f1f6d2dace8551832ea4470a81d5e74df524dc76d18ca3027bfd29fd098539"
+    },
+    {
+      "path": "src/core/inlineTags.ts",
+      "sha256": "c64b8685c6584b8a5abc653a772ba1a061293852f0c5ca9d7a2d697216eb6786"
+    },
+    {
+      "path": "src/core/legacyTraining.ts",
+      "sha256": "36e7593c54e027bcf17dce0f45ee8cdbc3a0cb57e1c897b95aafa237ee984c29"
+    },
+    {
+      "path": "src/core/model.ts",
+      "sha256": "e06ad2c8054871356f49c105d25b5cb5823206b65909e96de1c52b4622ff3d0c"
+    },
+    {
+      "path": "src/core/numericExpression.ts",
+      "sha256": "51aa78b88d4605083dcdbff2f95144b60e52dc1d76fc5e9b70e8f9c0d347586f"
+    },
+    {
+      "path": "src/core/palette.ts",
+      "sha256": "494ed2d61e0d06e66a1c0adace1572603014c43046e10eaf881d7a8f44c7d71b"
+    },
+    {
+      "path": "src/core/preparation.ts",
+      "sha256": "39370a4fb4cb00989eb6c9d3e84af1e0bb047a76215811f9b16fe8651e88c9e9"
+    },
+    {
+      "path": "src/core/proficiencyText.ts",
+      "sha256": "d589b6883da05bffadac1b25a0911161164f5e1d74fb340b99fbf837102aef2d"
+    },
+    {
+      "path": "src/core/racialAbilities.ts",
+      "sha256": "6e6e9b48b403ceb4cf9f4cbf294db3e815d33b40c735bf761c34b23035ee7763"
+    },
+    {
+      "path": "src/core/resources.ts",
+      "sha256": "35e793da45ee20d1dc60bdc231679cdd1bd601b68c4a1ffe27750f4a2102723d"
+    },
+    {
+      "path": "src/core/resourceWidgets.ts",
+      "sha256": "19ef0e9ebd19236f159e47d23708bc010457ef333fb11f684696f945e82a5907"
+    },
+    {
+      "path": "src/core/sheet.ts",
+      "sha256": "43164f3e241212a8eb41b8c7e57206ba83f816ec75427c73ecbb9462e4db02a5"
+    },
+    {
+      "path": "src/core/sourceCorrections.ts",
+      "sha256": "0a12d51444945e04d504d2a67d35c542bd314242349cb3f84b1833090e2d9e75"
+    },
+    {
+      "path": "src/core/spellCapacity.ts",
+      "sha256": "0c8cf10754a06c19660501f7ed24d2cb166a79d8f898240babf39645a883588e"
+    },
+    {
+      "path": "src/core/spellcastingRules.ts",
+      "sha256": "b418a28e9ec8866ea168c67c3b57e6b68e5e8d3249b34fb11d05fee043b6922b"
+    },
+    {
+      "path": "src/core/spellResourceKeys.ts",
+      "sha256": "24e978e787e25eaa49294ea72fbd85d259230ed15640d1cd93c38e662bbb65d9"
+    },
+    {
+      "path": "src/core/spells.ts",
+      "sha256": "0ae5dcdf44a437983e562bd5e7557c7062812fc246d7ee31f8911db7ffb862a9"
+    },
+    {
+      "path": "src/core/spellWorkspace.ts",
+      "sha256": "4839a9748ea685b77e33d66110cef5b4c91f32d57c48ee435e5160f83a7e7f51"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "sha256": "974e33b92434fabc382dbd8bb6280ab732065f8739ce5a349dd43f47a0e68b64"
+    },
+    {
+      "path": "src/core/weaponAttacks.ts",
+      "sha256": "9681b217186c314bd917c870f4ad93f3615c3b93f2b87fb6894814434b0cc6a5"
+    }
+  ],
+  "steps": [
+    {
+      "mechanism": "source-authentication",
+      "label": "Actual PHB and modern source records retain separate canonical identities and exact clause digests",
+      "passed": true
+    },
+    {
+      "mechanism": "app-directory",
+      "label": "Actual mixed-edition directory and authored App seed allow one PHB confirmation without name-only poisoning",
+      "passed": true
+    },
+    {
+      "mechanism": "snapshot-cache",
+      "label": "Actual cold and snapshot-cache App assemblies preserve both source editions and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "INT18 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "INT19 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "INT20 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "INT22 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "WIS18 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "WIS19 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "WIS20 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-cap",
+      "label": "WIS22 applies capped ability without suppressing either passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Artificer|TCE level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Artificer|TCE level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Artificer|TCE level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Artificer|TCE level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Artificer|TCE level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Barbarian|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Barbarian|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Barbarian|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Barbarian|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Barbarian|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Bard|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Bard|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Bard|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Bard|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Bard|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Cleric|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Cleric|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Cleric|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Cleric|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Cleric|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Druid|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Druid|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Druid|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Druid|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Druid|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level6 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level14 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Fighter|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Monk|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Monk|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Monk|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Monk|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Monk|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Paladin|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Paladin|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Paladin|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Paladin|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Paladin|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Ranger|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Ranger|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Ranger|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Ranger|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Ranger|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Rogue|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Rogue|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Rogue|PHB level10 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Rogue|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Rogue|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Rogue|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Sorcerer|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Sorcerer|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Sorcerer|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Sorcerer|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Sorcerer|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Warlock|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Warlock|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Warlock|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Warlock|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Warlock|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Wizard|PHB level4 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Wizard|PHB level8 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Wizard|PHB level12 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Wizard|PHB level16 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "source-slot",
+      "label": "Actual Wizard|PHB level19 confirms/revokes one fixed-ability and two-passive grant",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability \"str\" is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability \"dex\" is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability \"con\" is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability \"cha\" is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability \"INT\" is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability \"\" is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability null is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability [\"int\"] is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-ability",
+      "label": "Unreviewed ability {\"ability\":\"int\"} is rejected atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"kind\":\"linguist\"}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"confirmedManualAbilityExcluded\":false}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"confirmedManualPassivesExcluded\":false}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"amount\":2}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"max\":30}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"passiveBonus\":5}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"passivePerceptionBonus\":99}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"effects\":[]}",
+      "passed": true
+    },
+    {
+      "mechanism": "intent-shape",
+      "label": "Player payload cannot author effects {\"target\":\"passiveInvestigation\"}",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-invalid",
+      "label": "Invalid prior ability 19.5 cannot partially apply bonuses",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-invalid",
+      "label": "Invalid prior ability NaN cannot partially apply bonuses",
+      "passed": true
+    },
+    {
+      "mechanism": "ability-invalid",
+      "label": "Invalid prior ability Infinity cannot partially apply bonuses",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level4 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level4 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level8 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level8 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level13 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level13 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level20 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "none with PB at level20 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level4 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level4 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level8 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level8 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level13 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level13 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level20 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "proficient with PB at level20 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level4 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level4 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level8 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level8 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level13 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level13 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level20 and chosenint changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "passive-separation",
+      "label": "expertise with PB at level20 and chosenwis changes neither active check by passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P-4/I-3 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P-4/I0 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P-4/I4 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P-4/I5 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P0/I-3 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P0/I0 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P0/I4 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P0/I5 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P3/I-3 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P3/I0 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P3/I4 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P3/I5 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P5/I-3 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P5/I0 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P5/I4 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-offset",
+      "label": "Signed authored offsets P5/I5 remain separate from owned passive5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-final-passive",
+      "label": "Absolute Perception17 plus sheet offset2 stays19 while independent Investigation still gets5",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-total",
+      "label": "Authored final skill totals P-2/I-1 plus signed offsets remain inputs to passive baselines",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-total",
+      "label": "Authored final skill totals P-2/I19 plus signed offsets remain inputs to passive baselines",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-total",
+      "label": "Authored final skill totals P17/I-1 plus signed offsets remain inputs to passive baselines",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-skill-total",
+      "label": "Authored final skill totals P17/I19 plus signed offsets remain inputs to passive baselines",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-review",
+      "label": "Existing authored5 is not inferred as consent or removed automatically",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized source cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw source cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "normalized English cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw English cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "edition cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw edition cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "page cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "raw page cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "pack cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "kind cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "category cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "fixed amount cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "ability domain cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "max cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "prerequisite cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "repeatable cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "passive clause changed cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "lip clause changed cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "clause order cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "authored qualifying prose cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "list shape cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "reprint cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "effects cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "choices cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "dependencies cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "nonarray effects cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "nonarray choices cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "nonarray dependencies cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "feat-identity",
+      "label": "copy cannot authenticate PHB source or hide behind a valid duplicate in either directory order",
+      "passed": true
+    },
+    {
+      "mechanism": "snapshot-anchor",
+      "label": "A forged snapshot key/entry-ID anchor cannot expose the optional Investigation baseline",
+      "passed": true
+    },
+    {
+      "mechanism": "catalog-positive",
+      "label": "Exact feat duplicates, legitimate imported feat aliases and same-name non-feat namespaces do not poison the PHB grant",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-id",
+      "label": "A canonical PHB ID cannot be converted into genuine modern or unrelated generic execution",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-compatibility",
+      "label": "Genuine XPHB and alias retain existing generic behavior, not an invented new picker or PHB passive execution",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "canonical PHB ID cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "source cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "raw source cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "English cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "raw English cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "edition cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "pack cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "kind cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "category cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "modern category cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "page cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "prerequisite cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "ability cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "skill domain cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "modern prose hash cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "effects cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "choices cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "dependencies cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "modern-forgery",
+      "label": "nonarray effects cannot forge the retained modern exception or become PHB automation",
+      "passed": true
+    },
+    {
+      "mechanism": "source-alias",
+      "label": "Legitimate source owner and ASI aliases preserve exact owned source through native reopen",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-instance-availability",
+      "label": "owner canonical disable pauses all owned components but retains supported baseline and intent",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-instance-availability",
+      "label": "owner instance disable pauses all owned components but retains supported baseline and intent",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-instance-availability",
+      "label": "ASI canonical disable pauses all owned components but retains supported baseline and intent",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-instance-availability",
+      "label": "ASI instance disable pauses all owned components but retains supported baseline and intent",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-instance-availability",
+      "label": "feat canonical disable pauses all owned components but retains supported baseline and intent",
+      "passed": true
+    },
+    {
+      "mechanism": "canonical-instance-availability",
+      "label": "feat instance disable pauses all owned components but retains supported baseline and intent",
+      "passed": true
+    },
+    {
+      "mechanism": "pack-identity",
+      "label": "owner custom pack with source alias=false cannot grant ability or expose an authenticated Investigation score",
+      "passed": true
+    },
+    {
+      "mechanism": "pack-identity",
+      "label": "owner custom pack with source alias=true cannot grant ability or expose an authenticated Investigation score",
+      "passed": true
+    },
+    {
+      "mechanism": "pack-identity",
+      "label": "ASI custom pack with source alias=false cannot grant ability or expose an authenticated Investigation score",
+      "passed": true
+    },
+    {
+      "mechanism": "pack-identity",
+      "label": "ASI custom pack with source alias=true cannot grant ability or expose an authenticated Investigation score",
+      "passed": true
+    },
+    {
+      "mechanism": "pack-identity",
+      "label": "feat custom pack with source alias=false cannot grant ability or expose an authenticated Investigation score",
+      "passed": true
+    },
+    {
+      "mechanism": "pack-identity",
+      "label": "feat custom pack with source alias=true cannot grant ability or expose an authenticated Investigation score",
+      "passed": true
+    },
+    {
+      "mechanism": "common-suspension",
+      "label": "automation preserves independent intent while removing owned bonuses and showing only retained natural Investigation",
+      "passed": true
+    },
+    {
+      "mechanism": "common-suspension",
+      "label": "source preserves independent intent while removing owned bonuses and showing only retained natural Investigation",
+      "passed": true
+    },
+    {
+      "mechanism": "common-suspension",
+      "label": "optional feats preserves independent intent while removing owned bonuses and showing only retained natural Investigation",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "missing owner remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "missing ASI remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "cyclic ancestry remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "owner raw English remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "owner raw source remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "owner raw edition remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "feature list remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "ASI class remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "ASI grantKey remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "duplicate owner remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "duplicate ASI remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "duplicate confirmation remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "alien source claim remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "ownership",
+      "label": "manual same PHB feat remains inert without automatic ownership repair",
+      "passed": true
+    },
+    {
+      "mechanism": "advancement-order",
+      "label": "Earlier ASI reaches20 then Observant contributes0 ability and both passive5 bonuses",
+      "passed": true
+    },
+    {
+      "mechanism": "advancement-order",
+      "label": "Earlier Observant plus1 keeps later ASI atomic over-cap rejection",
+      "passed": true
+    },
+    {
+      "mechanism": "advancement-order",
+      "label": "Earlier confirmation rejects invalidating a valid later ASI; imported overlap uses actual target ownership",
+      "passed": true
+    },
+    {
+      "mechanism": "mixed-advancement",
+      "label": "Linguist-first shares deterministic cap without rewriting either independent domain",
+      "passed": true
+    },
+    {
+      "mechanism": "mixed-advancement",
+      "label": "Observant-first shares deterministic cap without rewriting either independent domain",
+      "passed": true
+    },
+    {
+      "mechanism": "mixed-advancement",
+      "label": "Resilient and independent ASI remain intact with reversed imported stores=false",
+      "passed": true
+    },
+    {
+      "mechanism": "mixed-advancement",
+      "label": "Resilient and independent ASI remain intact with reversed imported stores=true",
+      "passed": true
+    },
+    {
+      "mechanism": "mixed-advancement",
+      "label": "Earlier Observant cannot silently deactivate a previously confirmed later Resilient",
+      "passed": true
+    },
+    {
+      "mechanism": "base-source-effect",
+      "label": "Legitimate existing source ability effect is counted before Observant cap without being rewritten",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Native single-card preserves owned intent and passive values without a live directory",
+      "passed": true
+    },
+    {
+      "mechanism": "persistence",
+      "label": "Linked complete native preserves owned intent and passive values without a live directory",
+      "passed": true
+    },
+    {
+      "mechanism": "collection-atomicity",
+      "label": "Collection import preserves confirmed Observant but rejects one malformed member atomically",
+      "passed": true
+    },
+    {
+      "mechanism": "native-validation",
+      "label": "Malformed current intent cannot partially import or infer manual review",
+      "passed": true
+    },
+    {
+      "mechanism": "review-export",
+      "label": "Native review and offline review HTML expose the distinct Investigation result and its source trace",
+      "passed": true
+    },
+    {
+      "mechanism": "thin-export-boundary",
+      "label": "Thin Owlbear exports totals and Perception only; reimport stays manual/unowned",
+      "passed": true
+    },
+    {
+      "mechanism": "parent-withdrawal",
+      "label": "Tough removes only owned consent and reselect requires explicit fresh review",
+      "passed": true
+    },
+    {
+      "mechanism": "parent-withdrawal",
+      "label": "ability-plan removes only owned consent and reselect requires explicit fresh review",
+      "passed": true
+    },
+    {
+      "mechanism": "parent-withdrawal",
+      "label": "clear removes only owned consent and reselect requires explicit fresh review",
+      "passed": true
+    },
+    {
+      "mechanism": "idempotency",
+      "label": "Repeated explicit confirmation is one binding and exactly5 per passive",
+      "passed": true
+    },
+    {
+      "mechanism": "level-archive",
+      "label": "Level4 to3 to4 retains actual source ID/manual children/resources and displays only suspended baseline",
+      "passed": true
+    },
+    {
+      "mechanism": "manual-bypass",
+      "label": "Manual or forged PHB Observant raw/effects/old skill answers remain stored but never bypass consent",
+      "passed": true
+    },
+    {
+      "mechanism": "unknown-invalid",
+      "label": "Corrupt current and unknown future stores are inert/visible and do not expose a universal Investigation baseline",
+      "passed": true
+    },
+    {
+      "mechanism": "present-invalid-store",
+      "label": "Present malformed Observant null is not absence or a repair opportunity",
+      "passed": true
+    },
+    {
+      "mechanism": "present-invalid-store",
+      "label": "Present malformed Observant false is not absence or a repair opportunity",
+      "passed": true
+    },
+    {
+      "mechanism": "present-invalid-store",
+      "label": "Present malformed Observant 0 is not absence or a repair opportunity",
+      "passed": true
+    },
+    {
+      "mechanism": "present-invalid-store",
+      "label": "Present malformed Observant \"\" is not absence or a repair opportunity",
+      "passed": true
+    },
+    {
+      "mechanism": "future-domain-isolation",
+      "label": "Opaque future Observant never disables existing owned Tough or rewrites independent state",
+      "passed": true
+    },
+    {
+      "mechanism": "old-modern-equality",
+      "label": "Genuine modern canonical/alias choices and generic output equal actual0478 before and after historical skill answers",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer",
+      "label": "Actual0478 native roundtrip preserves opaque intent without executing new ability or passive effects",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer",
+      "label": "Old parent replacement retains opaque domain but does not authorize returned new effects",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer-unsafe",
+      "label": "Old clear/reselect retains stale review, not safe editing compatibility",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer-unsafe",
+      "label": "Old base/manual passive changes are not detectable fresh review and require explicit withdrawal/reconfirmation",
+      "passed": true
+    },
+    {
+      "mechanism": "old-consumer-unsafe",
+      "label": "Old downgrade/reupgrade cannot preserve the new owned source lifecycle or silently repair its claim",
+      "passed": true
+    }
+  ],
+  "definition": "Bounded owned PHB2014 Observant source/API proof: explicit INT/WIS+1 default cap20 and two independent passive5 bonuses through authentic legacy class ASI. Not lip-reading automation, modern Observant completion, generic passive automation, browser acceptance, cloud persistence or publication.",
+  "status": {
+    "source": "verified-against-frozen-data-and-separate-private-PHB175-input",
+    "mechanisms": "partial",
+    "fullRuleAutomation": false,
+    "reviewedFeats": 1,
+    "legacyClassSlots": 68,
+    "passiveScopes": [
+      "perception",
+      "investigation"
+    ],
+    "lipReading": "manual",
+    "situationalAdvantageDisadvantage": "manual",
+    "browser": "not-run",
+    "fullRuntimeReplay": "not-run",
+    "oldConsumerCompatibility": "opaque-roundtrip-only-old-editing-unsafe",
+    "currentReleaseAvailable": null
+  },
+  "boundaries": [
+    "Both exact PHB source clauses and the complete genuine modern entry-list hash authenticate against independently pinned digests; no qualifying publisher prose is bundled.",
+    "Private exact PHB175 Passive Checks is a separate bounded-proof input, not a230th corpus record/file or a retroactive replacement for the unchanged229 inputs. Official2014 primary review agrees with baseline10+normally applicable check modifiers.",
+    "PHB INT/WIS+1 cap20 is one ordered event; cap+0 retains both passive5. Passive bonuses never grant proficiency/expertise, scale with PB or increase active checks.",
+    "Manual final Perception override replaces the natural total before the old Perception-only sheet offset. Investigation uses final Investigation check modifiers and never borrows sheetBonuses.passive.",
+    "The optional derived Investigation score appears only for structurally authenticated retained known-domain intent, not every character, corrupt/future stores or forged source claims. No new saved total, adjustment target or bridge protocol is created.",
+    "Source/automation/level restriction preserves intent; explicit clear/replacement/withdraw removes owned confirmation. Duplicate/stale claims require explicit cleanup, never silent repair.",
+    "Genuine XPHB Observant keeps its separate existing skill-choice path but never becomes PHB ability/passive authorization. Unreviewed other-source features remain manual.",
+    "Lip-reading, language/visibility conditions, situational passive advantage/disadvantage, Quick Search and other modern effects remain manual or separately unsupported.",
+    "Native single/cardbook/linked payload preserve the independent intent. Thin Owlbear exposes totals and Perception only; reimport remains manual and cannot auto-create a grant. Workbench/XLSX passive Investigation interchange is not claimed.",
+    "Actual old0478 preserves unknown intent but clear/reselect or base/manual edits can retain stale review, and downgrade loses the new owned source lifecycle. safeEditingCompatibility is false; withdraw/review/reconfirm on a supporting client.",
+    "Source/API checks and optional full229 catalog construction do not evaluate18789 corpus rules or alter its denominator. Final full runtime replay, paired locks, exact-head CI and real App browser cases remain separate gates."
+  ]
+}

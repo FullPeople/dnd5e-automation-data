@@ -7,6 +7,46 @@ export interface CoverageReport {
 }
 const sha=(s:unknown,n=64)=>typeof s==='string'&&new RegExp(`^[a-f0-9]{${n}}$`).test(s);
 const n=(v:unknown)=>Number.isSafeInteger(v)&&Number(v)>=0;
+// A cast witness is a closed observed transaction, never a supported tag or
+// upstream payload. Keep the historical single-mechanism definition unchanged.
+function ordinaryTransaction(w:NonNullable<CoverageReport['records'][number]['witness']>):boolean {
+ const object=(v:unknown):v is Record<string,unknown>=>!!v&&typeof v==='object'&&!Array.isArray(v);
+ const keys=(v:Record<string,unknown>,expected:string[])=>Object.keys(v).length===expected.length&&expected.every(k=>Object.hasOwn(v,k));
+ const id=(v:unknown)=>typeof v==='string'&&v.length>0&&v.length<2000;
+ const integer=(v:unknown,min:number,max:number)=>Number.isSafeInteger(v)&&Number(v)>=min&&Number(v)<=max;
+ const b=w.before,a=w.after;
+ if(!object(b)||!object(a)||!keys(b,['spellId','classId','ready','remaining'])||!keys(a,['spellId','classId','spellLevel','castLevel','casts','remaining','resourceDebit','duplicateUnchanged','exhausted','nativePreserved','manualPreserved','sequenceDelta']))return false;
+ if(!id(b.spellId)||!id(b.classId)||a.spellId!==b.spellId||a.classId!==b.classId||b.ready!==true||!integer(b.remaining,0,100)||!integer(a.spellLevel,0,9)||!integer(a.castLevel,0,9)||Number(a.castLevel)<Number(a.spellLevel)||!integer(a.casts,1,100)||a.sequenceDelta!==a.casts||a.remaining!==0||a.duplicateUnchanged!==true||a.nativePreserved!==true||a.manualPreserved!==true)return false;
+ return a.spellLevel===0
+  ?b.remaining===0&&a.castLevel===0&&a.casts===1&&a.resourceDebit===0&&a.exhausted===false
+  :Number(b.remaining)>0&&a.casts===b.remaining&&a.resourceDebit===a.casts&&a.exhausted===true;
+}
+function limitedTransaction(w:NonNullable<CoverageReport['records'][number]['witness']>):boolean {
+ const object=(v:unknown):v is Record<string,unknown>=>!!v&&typeof v==='object'&&!Array.isArray(v);
+ const keys=(v:Record<string,unknown>,expected:string[])=>Object.keys(v).length===expected.length&&expected.every(k=>Object.hasOwn(v,k));
+ const id=(v:unknown)=>typeof v==='string'&&v.length>0&&v.length<2000;
+ const b=w.before,a=w.after;
+ if(!object(b)||!object(a)||!keys(b,['entryId','initialized','resourcePresent'])||!keys(a,['entryId','spellId','capacity','knownInitial','casts','resourceDebit','remaining','limitedSequenceDelta','actionSequenceDelta','explicitAcquisition','perCastConfirmed','duplicateUnchanged','exhausted','restNoRefill','genericEditsNoRefill','nativePreserved','ownerRevocationPreserved','manualPreserved']))return false;
+ return id(b.entryId)&&a.entryId===b.entryId&&id(a.spellId)&&b.initialized===false&&b.resourcePresent===false&&Number.isSafeInteger(a.capacity)&&Number(a.capacity)>=1&&Number(a.capacity)<=100&&a.knownInitial===1&&a.casts===1&&a.resourceDebit===1&&a.remaining===0&&a.limitedSequenceDelta===2&&a.actionSequenceDelta===1&&['explicitAcquisition','perCastConfirmed','duplicateUnchanged','exhausted','restNoRefill','genericEditsNoRefill','nativePreserved','ownerRevocationPreserved','manualPreserved'].every(key=>a[key]===true);
+}
+function itemChargeTransaction(w:NonNullable<CoverageReport['records'][number]['witness']>):boolean {
+ const object=(v:unknown):v is Record<string,unknown>=>!!v&&typeof v==='object'&&!Array.isArray(v);
+ const keys=(v:Record<string,unknown>,expected:string[])=>Object.keys(v).length===expected.length&&expected.every(k=>Object.hasOwn(v,k));
+ const id=(v:unknown)=>typeof v==='string'&&v.trim().length>0&&v.length<2000;
+ const b=w.before,a=w.after;
+ if(!object(b)||!object(a)||!keys(b,['entryId','initialized','resourcePresent'])||!keys(a,['entryId','actionKey','capacity','knownInitial','minimumAfter','remaining','resourceDebit','sequenceDelta','sourceDerivedCapacity','fixedCost','itemEffectApplied','recoveryClaimed','duplicateUnchanged','boundaryDebitRejected','genericEditsNoRefill','restNoRefill','nativePreserved','ownerRevocationPreserved','manualPreserved']))return false;
+ return id(b.entryId)&&a.entryId===b.entryId&&id(a.actionKey)&&b.initialized===false&&b.resourcePresent===false&&Number.isSafeInteger(a.capacity)&&Number(a.capacity)>=1&&Number(a.capacity)<=10000&&(a.minimumAfter===0||a.minimumAfter===1)&&a.knownInitial===1+a.minimumAfter&&Number(a.knownInitial)<=Number(a.capacity)&&a.remaining===a.minimumAfter&&a.resourceDebit===1&&a.fixedCost===1&&a.sequenceDelta===2&&a.itemEffectApplied===false&&a.recoveryClaimed===false&&['sourceDerivedCapacity','duplicateUnchanged','boundaryDebitRejected','genericEditsNoRefill','restNoRefill','nativePreserved','ownerRevocationPreserved','manualPreserved'].every(key=>a[key]===true);
+}
+function itemAtWillTransaction(w:NonNullable<CoverageReport['records'][number]['witness']>):boolean {
+ const object=(v:unknown):v is Record<string,any>=>!!v&&typeof v==='object'&&!Array.isArray(v);
+ const keys=(v:Record<string,unknown>,expected:string[])=>Object.keys(v).length===expected.length&&expected.every(k=>Object.hasOwn(v,k));
+ const id=(v:unknown)=>typeof v==='string'&&!!v.trim()&&v.length<2000;
+ const b=w.before,a=w.after;
+ if(!object(b)||!object(a)||!keys(b,['entryId','confirmed','grantCount','actionSequence'])||!keys(a,['entryId','explicitConfirmation','grantCount','branches','casts','actionSequenceDelta','resourceDebit','itemEffectsApplied','duplicateUnchanged','nativePreserved','withdrawPreserved','markLossRejected','sourceOffRejected','currentAuthorityRejected','manualPreserved']))return false;
+ if(!id(b.entryId)||a.entryId!==b.entryId||b.confirmed!==false||b.grantCount!==0||b.actionSequence!==0||a.explicitConfirmation!==true||!Number.isSafeInteger(a.grantCount)||a.grantCount<1||a.grantCount>100||!Array.isArray(a.branches)||a.branches.length!==a.grantCount||a.casts!==a.grantCount||a.actionSequenceDelta!==a.casts||a.resourceDebit!==0||a.itemEffectsApplied!==false||!['duplicateUnchanged','nativePreserved','withdrawPreserved','markLossRejected','sourceOffRejected','currentAuthorityRejected','manualPreserved'].every(k=>a[k]===true))return false;
+ if(new Set(a.branches.map((g:any)=>g?.key)).size!==a.grantCount||new Set(a.branches.map((g:any)=>g?.spellId)).size!==a.grantCount)return false;
+ return a.branches.every((g:any)=>object(g)&&keys(g,['key','spellId','targetScope','sourceActionTiming','paymentId','spellLevel','casts','resourceDebit'])&&id(g.key)&&id(g.spellId)&&['self','spell'].includes(g.targetScope)&&['action','bonus-action','spell-default'].includes(g.sourceActionTiming)&&g.paymentId==='free'&&Number.isInteger(g.spellLevel)&&g.spellLevel>=0&&g.spellLevel<=9&&g.casts===1&&g.resourceDebit===0);
+}
 export function validateCoverage(value:unknown):CoverageReport {
  const v=value as CoverageReport;
  const require=(fact:unknown,message:string)=>{if(!fact)throw Error('Invalid runtime coverage: '+message);};
@@ -19,7 +59,13 @@ export function validateCoverage(value:unknown):CoverageReport {
  for(const r of v.records){
   require(typeof r.id==='string'&&r.id.length<2000&&typeof r.source==='string'&&typeof r.reviewed==='boolean'&&['implemented','manual','unresolved','unavailable'].includes(r.status),'record');
   const w=r.witness;
-  if(r.status==='implemented')require(w&&/^(calculated-(sheet|resource|weapon|speed|equipment-context|training)|source-spell-(grant|choice)|choice:(skills|tools|languages|content|equipment|abilities|spells))$/.test(w.kind)&&Number.isInteger(w.level)&&w.level>=1&&w.level<=20&&['2014','2024'].includes(w.edition)&&w.before!==undefined&&w.after!==undefined&&JSON.stringify(w.before)!==JSON.stringify(w.after),'observed calculation/choice');
+  if(r.status==='implemented'){
+   require(w&&/^(item-atwill-source-cast|item-charge-accounting|limited-source-cast|ordinary-source-cast|calculated-(sheet|resource|weapon|speed|equipment-context|training)|source-spell-(grant|choice)|choice:(skills|tools|languages|content|equipment|abilities|spells))$/.test(w.kind)&&Number.isInteger(w.level)&&w.level>=1&&w.level<=20&&['2014','2024'].includes(w.edition)&&w.before!==undefined&&w.after!==undefined&&JSON.stringify(w.before)!==JSON.stringify(w.after),'observed calculation/choice');
+   if(w?.kind==='item-atwill-source-cast')require(itemAtWillTransaction(w),'item at-will transaction');
+   if(w?.kind==='ordinary-source-cast')require(ordinaryTransaction(w),'ordinary transaction');
+   if(w?.kind==='limited-source-cast')require(limitedTransaction(w),'limited transaction');
+   if(w?.kind==='item-charge-accounting')require(itemChargeTransaction(w),'item charge transaction');
+  }
   else require(w===undefined,'unverified record cannot have a positive witness');
  }
  require(v.records.filter(r=>r.reviewed).length===v.reviewed&&v.records.filter(r=>r.status==='implemented').length===v.implemented&&v.records.filter(r=>r.status==='unresolved').length===v.unresolved&&v.records.filter(r=>r.status==='unavailable').length===v.unavailable,'derived counts');
