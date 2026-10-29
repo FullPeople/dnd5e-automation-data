@@ -1,0 +1,110 @@
+name: Exact consumer runtime integration replay
+on:
+  push:
+    branches: [codex/rules-batch-final-data-20261029]
+    paths:
+      - .github/workflows/runtime-integration-replay.yml
+      - reports/progress/runtime-integration-target.json
+  workflow_dispatch:
+    inputs:
+      consumer_revision:
+        description: Published immutable Web consumer commit (40 hexadecimal characters)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      REQUESTED_CONSUMER_REVISION: ${{ inputs.consumer_revision }}
+      RUNTIME_COVERAGE_WORKERS: '4'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Validate immutable consumer target
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync,appendFileSync} from 'node:fs';
+          const target=JSON.parse(readFileSync('reports/progress/runtime-integration-target.json','utf8'));
+          const revision=process.env.REQUESTED_CONSUMER_REVISION||target.consumerRevision;
+          if(!/^[a-f0-9]{40}$/.test(revision))throw Error('Expected an immutable consumer commit');
+          appendFileSync(process.env.GITHUB_ENV,'CONSUMER_REVISION='+revision+'\n');
+          NODE
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: ${{ env.CONSUMER_REVISION }}
+          path: .cache/web-consumer
+          persist-credentials: false
+      - name: Verify the checked-out source target
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {readFileSync} from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const target=JSON.parse(readFileSync('reports/progress/runtime-integration-target.json','utf8'));
+          const git=ref=>execFileSync('git',['rev-parse',ref],{cwd:'.cache/web-consumer',encoding:'utf8'}).trim();
+          assert.equal(git('HEAD'),process.env.CONSUMER_REVISION);
+          if(process.env.CONSUMER_REVISION===target.consumerRevision)assert.equal(git('HEAD:src'),target.consumerSourceTree);
+          NODE
+      - run: npm ci
+      - run: npm ci --prefix .cache/web-consumer
+      - name: Materialize all 229 immutable original inputs without publishing source bodies
+        run: node .cache/web-consumer/tools/fetchReviewedAlertCorpus.mjs --report reports/progress/runtime-coverage.json --output .cache/runtime-inputs --receipt .cache/runtime-source-verification.json
+      - name: Run every observation from zero against the actual consumer source
+        run: |
+          mkdir -p .cache/runtime-integration
+          test ! -e .cache/runtime-integration/runtime-coverage.json.receipts.jsonl
+          node --experimental-strip-types scripts/audit_runtime_coverage.ts .cache/web-consumer .cache/runtime-inputs .cache/runtime-integration/runtime-coverage.json
+      - name: Verify exact module bytes and complete fresh observation receipts
+        run: |
+          node --experimental-strip-types scripts/verify_runtime_consumer.ts .cache/web-consumer .cache/runtime-integration/runtime-coverage.json
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {readFileSync,writeFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          import {execFileSync} from 'node:child_process';
+          const root='.cache/runtime-integration/',name='runtime-coverage.json';
+          const raw=readFileSync(root+name),report=JSON.parse(raw);
+          const assembly=readFileSync(root+name+'.assembly.json'),meta=JSON.parse(assembly);
+          const journal=readFileSync(root+name+'.receipts.jsonl');
+          assert.equal(journal.at(-1),10);
+          const lines=journal.toString('utf8').trimEnd().split('\n').map(row=>JSON.parse(row));
+          const header=lines.shift(),indices=new Set();
+          const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+          assert.equal(header.binding,meta.observationBinding);
+          assert.equal(meta.producerRevision,process.env.GITHUB_SHA);
+          assert.equal(meta.observationProducerRevision,process.env.GITHUB_SHA);
+          assert.equal(report.consumer.revision,process.env.CONSUMER_REVISION);
+          assert.equal(meta.consumerRevision,process.env.CONSUMER_REVISION);
+          assert.equal(meta.reassembledCompleteUnchangedSource,false);
+          assert.equal(lines.length,18789);
+          for(const row of lines){assert(Number.isSafeInteger(row.index)&&row.index>=0&&row.index<18789);assert(!indices.has(row.index));indices.add(row.index);assert.equal(row.sha256,sha(JSON.stringify({index:row.index,witness:row.witness})));}
+          assert.equal(indices.size,18789);
+          assert.equal(meta.observations,18789);
+          assert.equal(meta.observationsSha256,sha(journal));
+          assert.equal(meta.reportSha256,sha(raw));
+          assert.equal(meta.consumerSourceTree,execFileSync('git',['rev-parse','HEAD:src'],{cwd:'.cache/web-consumer',encoding:'utf8'}).trim());
+          for(const row of [...report.consumer.modules,...meta.styles])assert.equal(sha(readFileSync('.cache/web-consumer/'+row.path)),row.sha256);
+          const previous=JSON.parse(readFileSync('reports/progress/runtime-coverage.json','utf8'));
+          assert.deepEqual(report.inputs,previous.inputs);
+          assert.deepEqual(report.records,previous.records);
+          writeFileSync(root+'replay-provenance.json',JSON.stringify({producer:process.env.GITHUB_SHA,consumer:report.consumer.revision,sourceTree:meta.consumerSourceTree,observations:indices.size,fromZero:true,binding:header.binding,reportSha256:sha(raw),assemblySha256:sha(assembly),journalSha256:sha(journal),bytes:raw.length,node:process.version,runner:process.platform,rawSourcePublished:false},null,2)+'\n');
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: exact-consumer-runtime-replay
+          path: |
+            .cache/runtime-integration/runtime-coverage.json
+            .cache/runtime-integration/runtime-coverage.json.assembly.json
+            .cache/runtime-integration/runtime-coverage.json.receipts.jsonl
+            .cache/runtime-integration/replay-provenance.json
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,73 @@
+name: Pinned eighteen-family Web source and mounted gate
+# Technical source and mounted coverage only; no runtime-pair, full-App or whole-entry credit.
+on:
+  push:
+    branches: ['codex/cloud-rules-eighteen-family-source-gate-20261028']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-mounted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out the current producer without persisted credentials
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check out the exact combined Web source
+        uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 37f367145422da0606db91b3c6301555331bcb86
+          path: .cache/expanded-spell-web
+          persist-credentials: false
+      - name: Check out the complete immutable 406 reader without installing its dependencies
+        uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 4069886e1bfcab2fb7e2958eca8919601a13dd62
+          path: .cache/expanded-spell-old-web
+          persist-credentials: false
+      - name: Use the fixed Node version
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+      - name: Verify immutable producer, combined Web, old reader and input metadata before installation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/expanded_spell_source_gate.mjs verify \
+            --web-root .cache/expanded-spell-web --output .cache/expanded-spell-inputs \
+            --receipt expanded-spell-source-evidence/inputs.json --result expanded-spell-source-evidence/gate.json
+      - name: Install only the committed locked current-Web dependencies
+        run: npm ci --prefix .cache/expanded-spell-web
+      - name: Materialize the exact private sources, collect the expected 1556 instances and run eighteen families sequentially
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/expanded_spell_source_gate.mjs \
+            --web-root .cache/expanded-spell-web --output .cache/expanded-spell-inputs \
+            --receipt expanded-spell-source-evidence/inputs.json --result expanded-spell-source-evidence/gate.json
+      - name: Finalize setup or execution outcomes and validate the closed metadata-only allowlist
+        id: artifacts
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/expanded_spell_source_gate.mjs artifacts \
+            --web-root .cache/expanded-spell-web --output .cache/expanded-spell-inputs \
+            --receipt expanded-spell-source-evidence/inputs.json --result expanded-spell-source-evidence/gate.json
+      - name: Upload only the four validated technical receipts
+        if: always() && steps.artifacts.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: expanded-spell-source-${{ github.sha }}
+          path: |
+            expanded-spell-source-evidence/inputs.json
+            expanded-spell-source-evidence/side-sources.json
+            expanded-spell-source-evidence/collection.json
+            expanded-spell-source-evidence/gate.json
+          if-no-files-found: error
+          retention-days: 7

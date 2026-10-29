@@ -1,0 +1,66 @@
+name: Pinned item at-will source gate
+on:
+  push:
+    branches: ['codex/cloud-rules-rebuild-item-atwill-20261027']
+permissions:
+  contents: read
+jobs:
+  source45:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: fd8aaf9045e22f08668c0c0367399a016c28b896
+          path: .cache/item-atwill-web-current
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 4069886e1bfcab2fb7e2958eca8919601a13dd62
+          path: .cache/item-atwill-web-old
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+      - name: Verify immutable checkouts, modules, locks and metadata before installation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/item_atwill_source_gate.mjs verify \
+            --current-root .cache/item-atwill-web-current \
+            --old-root .cache/item-atwill-web-old \
+            --output .cache/item-atwill-six \
+            --receipt item-atwill-source-evidence/six-inputs.json \
+            --result item-atwill-source-evidence/gate.json
+      - name: Install only committed locked producer and current consumer dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          npm ci --prefix .cache/item-atwill-web-current
+          ln -s "$PWD/.cache/item-atwill-web-current/node_modules" .cache/item-atwill-web-old/node_modules
+      - name: Run unchanged source45 and closed29 once with a six-input fixture
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/item_atwill_source_gate.mjs \
+            --current-root .cache/item-atwill-web-current \
+            --old-root .cache/item-atwill-web-old \
+            --output .cache/item-atwill-six \
+            --receipt item-atwill-source-evidence/six-inputs.json \
+            --result item-atwill-source-evidence/gate.json
+      - name: Upload only closed technical metadata, never raw test output or source bodies
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: item-atwill-source-${{ github.sha }}
+          path: |
+            item-atwill-source-evidence/six-inputs.json
+            item-atwill-source-evidence/gate.json
+          if-no-files-found: warn
+          retention-days: 7

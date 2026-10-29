@@ -29,6 +29,25 @@ jobs:
           ref: ${{ steps.consumer.outputs.revision }}
           path: .cache/web-consumer
           persist-credentials: false
+      - name: Fetch immutable historical consumer objects before bounded proofs
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Separate old checkouts do not populate this shallow consumer's object database.
+          consumer_head="$(git --no-replace-objects -C .cache/web-consumer rev-parse HEAD)"
+          while read -r revision source_tree; do
+            [[ "$revision" =~ ^[a-f0-9]{40}$ && "$source_tree" =~ ^[a-f0-9]{40}$ ]]
+            git --no-replace-objects -C .cache/web-consumer fetch --no-tags --depth=1 --no-write-fetch-head origin "$revision"
+            test "$(git --no-replace-objects -C .cache/web-consumer rev-parse "$revision^{commit}")" = "$revision"
+            test "$(git --no-replace-objects -C .cache/web-consumer rev-parse "$revision:src")" = "$source_tree"
+          done <<'HISTORICAL_CONSUMERS'
+          52d5be10e161464d5e0846d1dc2202ea1169754b 4d40c102e1ecd0617c39dd9b33d711d34e9c5103
+          78e1fac62bddc52e36d5ad7a2cc4d18e8f0acc0e bbc6761e1bba50cba06315c2f8cb31c457cb5c63
+          0478305fb20ddc9b65538fc50d5740d622c1589c b1095fa3401b0052131d635425739cc3782bf59c
+          8e48bbbe801b21a57fbb9072b4d4c324379448ea ae3ae366ea3e70d096426410b5badc711164353e
+          bfdc77419b37773a1e762ab096898690e4d0fe0d 3637581a13ac843f65dbb5ea282716757e536a5b
+          HISTORICAL_CONSUMERS
+          test "$(git --no-replace-objects -C .cache/web-consumer rev-parse HEAD)" = "$consumer_head"
       - name: Verify audited consumer revision and actual module bytes
         run: node --experimental-strip-types scripts/verify_runtime_consumer.ts .cache/web-consumer
       - name: Test coverage against real pinned consumer functions
@@ -105,6 +124,68 @@ jobs:
             "https://raw.githubusercontent.com/tjliqy/5etools-cn/5cc0bbe2c2b241a334e731af4448bdba2168e8bd/js/render.js" \
             --output .cache/passive-feat-inputs/render.js
           node --experimental-strip-types scripts/audit_reviewed_linguist.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-linguist.json .cache/web-linguist-old-consumer .cache/passive-feat-inputs/render.js
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 0478305fb20ddc9b65538fc50d5740d622c1589c
+          path: .cache/web-observant-old-consumer
+          persist-credentials: false
+      - name: Share current locked dependencies with pinned pre-Observant consumer proof
+        run: ln -s "$PWD/.cache/web-consumer/node_modules" .cache/web-observant-old-consumer/node_modules
+      - name: Replay exact PHB2014 Observant targeted-domain workflow with separate private PHB175 source
+        shell: bash
+        run: |
+          set -euo pipefail
+          # This is the targeted complete feat/class/skill/language/equipment domain,
+          # not the separate local full229 directory construction or corpus replay.
+          curl --disable --fail --silent --show-error --max-time 60 --max-filesize 2000000 --proto '=https' \
+            "https://raw.githubusercontent.com/tjliqy/5etools-cn/e2623b204ddbdf2bcfa8317acfc962de89c676e2/data/book/book-phb.json" \
+            --output .cache/passive-feat-inputs/book-phb-e262.original.json
+          node --experimental-strip-types scripts/audit_reviewed_observant.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-observant.json .cache/web-observant-old-consumer .cache/passive-feat-inputs/render.js .cache/passive-feat-inputs/book-phb-e262.original.json
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: 8e48bbbe801b21a57fbb9072b4d4c324379448ea
+          path: .cache/web-alert-old-consumer
+          persist-credentials: false
+      - name: Share current locked dependencies with pinned pre-Alert consumer proof
+        run: ln -s "$PWD/.cache/web-consumer/node_modules" .cache/web-alert-old-consumer/node_modules
+      - name: Verify PHB2014 Alert targeted21 source/API and unsafe old-client boundaries (not full229)
+        # Final acceptance separately requires ALERT_FULL_CATALOG=1 with the original229
+        # private directory, cold/cache/App assemblies and all68 canonical real ASI slots.
+        # This CI stage does not fetch/evaluate the18789-record corpus or claim that full pass.
+        run: node --experimental-strip-types scripts/audit_reviewed_alert.ts .cache/web-consumer .cache/passive-feat-inputs .cache/reviewed-alert.json .cache/web-alert-old-consumer
+      - uses: actions/checkout@v4
+        with:
+          repository: FullPeople/DND-card-web
+          ref: bfdc77419b37773a1e762ab096898690e4d0fe0d
+          path: .cache/web-ordinary-old-consumer
+          persist-credentials: false
+      - name: Share locked dependencies with exact pre-ordinary capability boundary
+        run: ln -s "$PWD/.cache/web-consumer/node_modules" .cache/web-ordinary-old-consumer/node_modules
+      - name: Test actual ordinary casting transactions against exact sources and old capability absence
+        shell: bash
+        env:
+          RUNTIME_ORDINARY_SOURCE_TESTS: '1'
+          RUNTIME_ORDINARY_CONSUMER_ROOT: ${{ github.workspace }}/.cache/web-consumer
+          RUNTIME_ORDINARY_OLD_CONSUMER_ROOT: ${{ github.workspace }}/.cache/web-ordinary-old-consumer
+          ORDINARY_CASTING_FROZEN_DIR: ${{ github.workspace }}/.cache/ordinary-frozen
+        run: |
+          set -euo pipefail
+          test "$(git --no-replace-objects -C .cache/web-ordinary-old-consumer rev-parse HEAD)" = bfdc77419b37773a1e762ab096898690e4d0fe0d
+          test "$(git --no-replace-objects -C .cache/web-ordinary-old-consumer rev-parse HEAD:src)" = 3637581a13ac843f65dbb5ea282716757e536a5b
+          # Reuse the unchanged strict229 materializer and metadata-only source map.
+          # No raw source bodies are published; this is not a full corpus replay.
+          printf '%s\n' \
+            '13efb98da23086fb877e178b9f73a96deef9168da4425896695ee2c482afe2ad  .cache/web-consumer/tools/fetchReviewedAlertCorpus.mjs' \
+            '71c389aefe85d09d23808eb364a0225b775dd2780f1d2200a54c43f51c81754b  .cache/web-consumer/tools/reviewedAlertCorpusSources.json' \
+            | sha256sum --check --strict
+          node .cache/web-consumer/tools/fetchReviewedAlertCorpus.mjs \
+            --report reports/progress/runtime-coverage.json \
+            --output "$ORDINARY_CASTING_FROZEN_DIR" \
+            --receipt .cache/ordinary-full-source-verification.json \
+            --cache .cache/passive-feat-inputs
+          node node_modules/vitest/vitest.mjs run test/runtimeOrdinaryCasting.vitest.ts
       - name: Replay three explicit attuned TCE infusion workflows
         shell: bash
         run: |
