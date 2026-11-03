@@ -1,0 +1,15 @@
+{
+  "producer": "7be037a3856e2eccc8ea6559f5fe5ca215494446",
+  "consumer": "95f8dd0ad4b2e7e7d5f77758e48403ed7ebb154e",
+  "sourceTree": "0096b7492f68140388382e6b08fceaf32013441d",
+  "observations": 18789,
+  "fromZero": true,
+  "binding": "a066c5c4ad251494f0d77fc954a824b39b0f4e63b84c94aefa872f20f2f6046f",
+  "reportSha256": "9d1233a434ab58e71119e50bd4d85064925972b89330c24ea1cf6ba541bc9602",
+  "assemblySha256": "edbe0b1cfe75a6facf9a9a1f6a8ea567fe45930ccedd54f9264afeb00799b70f",
+  "journalSha256": "0efc9103389abcace576e6e49e9aca918bb182295cad57596c3537d1f085ae2c",
+  "bytes": 5092660,
+  "node": "v22.23.4",
+  "runner": "linux",
+  "rawSourcePublished": false
+}
