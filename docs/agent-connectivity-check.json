@@ -1,0 +1,7 @@
+{
+  "purpose": "development-agent connectivity smoke test",
+  "model_calls": 0,
+  "rule_changes": false,
+  "player_data_changes": false,
+  "production_deployment": false
+}
