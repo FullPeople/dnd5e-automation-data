@@ -1,4 +1,50 @@
-# Current checkpoint — 2026-11-06
+# Current candidate — 2026-11-06, complete replay and expanded source discovery
+
+The new candidate is not yet merged or deployed. It retains all 18,789 legacy
+registered identities and 4,561 source-reviewed flags. Exactly 7,868 identities
+now have at least one calculation or saved-choice witness, up from 7,858;
+this is partial mechanism evidence, not whole-rule execution or acceptance.
+
+Producer `887242cb7a1445f7509a8c53f5ed73aa761d04ae` and Web consumer
+`38af300cb6c8b4270a2798aa45bdc70a972f3453` completed independent local and
+[remote from-zero replays](https://github.com/FullPeople/dnd5e-automation-data/actions/runs/42104254132).
+Both have 18,789 fresh unique receipts and exactly equal record arrays,
+original inputs and source totals. All 308 runtime modules, two stylesheets
+and 229 immutable input bytes were independently checked. The published
+remote report SHA-256 is `fdb153d224447b2233def72ff4683593aa29a90d6889e86d2e0f500829f554a2`.
+The complete reviewed record-array digest is
+`c75c52dffac932c1d3e68ede5213099fc31c434c524f2c1f3d014fdc566677de`.
+Twelve records changed: ten new partial choice witnesses and two earlier
+observations of already positive records. Both original fixed grants were
+separately verified at their original edition/level before and after choices
+and native save/reopen. No previous positive record was lost.
+
+The old corpus contains 253 string-filter declarations. Actual source/control
+verification now covers 58 positive declarations across 11 sources, including
+one uppercase field the first inventory test omitted. Existing ritual support
+already handles that declaration; the initial claim of a missing ritual mode
+was corrected. The remaining 195 declarations are 193 class-list predicates
+and two empty declarations. Source prerequisites and all other effects are
+not qualified by the saved-choice witness.
+
+The live reader exposed a larger directory. The separate
+`catalog-source-discovery.json` records 425 source IDs; union with the Web
+registry gives 509 known sources, including 364 pending inventories. There
+are 28,880 newly discovered but unregistered candidate identities and a
+47,669-identity provisional mixed-epoch union, not a new accepted execution
+snapshot. All added review/model/execution/acceptance credits remain zero.
+Thirty-three identity diagnostics, nine content conflicts and 46 unclassified
+files remain visible. See [the discovery record](CATALOG-DISCOVERY-20261106.md).
+Do not call the old 229-input corpus the complete live catalog or stop at
+its denominator.
+
+The failed first replay and deliberately cancelled second replay remain in
+the history. New evidence starts from zero and never splices their partial
+receipts. A reviewed digest permits exactly the new record array; unchanged
+records remain the default, and identity, input, snapshot, witness and prior
+positive-evidence checks remain required. No API keys or model calls are used.
+
+# Previous checkpoint — 2026-11-06
 
 The integrated baseline is Data `8ae7b3fe43f69fea097c9068c770d44b5073f7f5`
 and Web `f5ce82fae695c2642f39a663a790630f97364a3b`. The current ledger has
