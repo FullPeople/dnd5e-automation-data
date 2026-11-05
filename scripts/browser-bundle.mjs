@@ -14,7 +14,8 @@ const record={$schema:schema.$schema,$id:schema.$id.replace('automation-ir','rec
 const ajv=new Ajv2020({allErrors:true,strict:true,strictRequired:false,code:{source:true,esm:true}});
 ajv.addSchema(schema);ajv.addSchema(overlay);ajv.addSchema(record);
 async function compiled(exports){
- const generated=standalone(ajv,exports),result=await build({stdin:{contents:generated,resolveDir:root,sourcefile:'schema-validation.generated.js'},bundle:true,write:false,metafile:true,format:'esm',platform:'browser',target:'es2022',legalComments:'inline'});
+ // Keep embedded dependency labels stable when a worktree shares node_modules.
+ const generated=standalone(ajv,exports),result=await build({stdin:{contents:generated,resolveDir:root,sourcefile:'schema-validation.generated.js'},bundle:true,preserveSymlinks:true,write:false,metafile:true,format:'esm',platform:'browser',target:'es2022',legalComments:'inline'});
  if(Object.values(result.metafile.outputs).some(output=>output.imports.length))throw Error('Browser validator contains an external import');
  const metadata='    ucs2length.code = \'require("ajv/dist/runtime/ucs2length").default\';\n';
  let code=result.outputFiles[0].text;if(!code.includes(metadata))throw Error('Ajv helper changed; review adapter');code=code.replace(metadata,'');
