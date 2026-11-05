@@ -40,6 +40,24 @@ export function candidateWitnessChoices(card:any,choices:any[]){
   q.sourceProgression==='optional'&&q.channel==='content'&&q.catalogKind==='feature'&&q.support?.rule==='verified'&&q.support.execution==='record-only'&&Number.isSafeInteger(q.count)&&q.count>0&&q.duplicateChoiceIds.some((id:any)=>optionalAliases.has(id))
  ));
 }
+/** Follow the consumer's current offers after every recorded choice. Rejected
+ * edits and silently missing records remain fatal, never execution evidence. */
+function recordSourceSpellChoices(api:RuntimeAdapter,card:any,catalog:any[],ownerId:string){
+ for(const offered of api.planSourceSpells(card,catalog).choices.filter((choice:any)=>choice.ownerId===ownerId)){
+  if(offered.abilities?.length)(card.automation.spellAbilities||={})[offered.key]=offered.abilities[0];
+  if(!offered.spells?.length)continue;
+  for(let step=0;step<100;step++){
+   const fresh=api.planSourceSpells(card,catalog).choices.find((choice:any)=>choice.key===offered.key&&choice.ownerId===ownerId);
+   if(!fresh||!Array.isArray(fresh.spells)||!Number.isSafeInteger(fresh.count)||fresh.count<1||fresh.count>100)throw Error('Invalid current source spell choice');
+   const selected=[...(card.automation.spellChoices?.[fresh.key]||[])];
+   if(selected.length>=fresh.count)break;
+   const next=fresh.spells.find((ref:string)=>!selected.includes(ref)&&!fresh.blockedSpells?.includes(ref));if(next===undefined)break;
+   api.setSourceSpellChoices(card,fresh.key,[...selected,next],catalog);
+   const after=card.automation.spellChoices?.[fresh.key];
+   if(!Array.isArray(after)||after.length!==selected.length+1||!after.includes(next)||selected.some((ref:string)=>!after.includes(ref)))throw Error('Source spell choice was not recorded');
+  }
+ }
+}
 export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:any[]):RuntimeWitness|null {
  let sources=sourceCache.get(catalog);if(!sources){sources=[...new Set(catalog.map(e=>e.source))];sourceCache.set(catalog,sources);}
  const root=['class','subclass','race','background'].includes(entry.kind);
@@ -71,7 +89,7 @@ export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:an
   // Declared choices must produce a real resolved spell grant after saving.
   if(gated)for(const set of Array.isArray(entry.raw.additionalSpells)?entry.raw.additionalSpells.map((_:any,i:number)=>i):[]){
    const trial=structuredClone(card);trial.automation.spellSets={candidate:set};
-   for(const q of api.planSourceSpells(trial,catalog).choices.filter((q:any)=>q.ownerId==='candidate')){if(q.abilities?.length)(trial.automation.spellAbilities||={})[q.key]=q.abilities[0];if(q.spells?.length)api.setSourceSpellChoices(trial,q.key,q.spells.slice(0,q.count),catalog);}
+   recordSourceSpellChoices(api,trial,catalog,'candidate');
    api.syncSourceSpells(trial,catalog);const delivered=trial.selections.filter((s:any)=>s.parentId==='candidate'&&s.grantKey?.startsWith('source-spell:'));
    if(delivered.length)return {kind:'source-spell-choice',level,edition,before:[],after:delivered.map((s:any)=>s.entry.id).sort()};
   }
