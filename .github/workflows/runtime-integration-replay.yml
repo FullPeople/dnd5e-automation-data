@@ -11,6 +11,10 @@ on:
         description: Published immutable Web consumer commit (40 hexadecimal characters)
         required: true
         type: string
+      expected_records_sha256:
+        description: Exact reviewed complete record-array SHA-256; omit to require unchanged records
+        required: false
+        type: string
 permissions:
   contents: read
 jobs:
@@ -19,6 +23,7 @@ jobs:
     timeout-minutes: 120
     env:
       REQUESTED_CONSUMER_REVISION: ${{ inputs.consumer_revision }}
+      EXPECTED_RECORDS_SHA256: ${{ inputs.expected_records_sha256 }}
       RUNTIME_COVERAGE_WORKERS: '4'
     steps:
       - uses: actions/checkout@v4
@@ -35,6 +40,7 @@ jobs:
           const target=JSON.parse(readFileSync('reports/progress/runtime-integration-target.json','utf8'));
           const revision=process.env.REQUESTED_CONSUMER_REVISION||target.consumerRevision;
           if(!/^[a-f0-9]{40}$/.test(revision))throw Error('Expected an immutable consumer commit');
+          if(process.env.EXPECTED_RECORDS_SHA256&&!/^[a-f0-9]{64}$/.test(process.env.EXPECTED_RECORDS_SHA256))throw Error('Expected an exact reviewed record-array digest');
           appendFileSync(process.env.GITHUB_ENV,'CONSUMER_REVISION='+revision+'\n');
           NODE
       - uses: actions/checkout@v4
@@ -66,11 +72,12 @@ jobs:
       - name: Verify exact module bytes and complete fresh observation receipts
         run: |
           node --experimental-strip-types scripts/verify_runtime_consumer.ts .cache/web-consumer .cache/runtime-integration/runtime-coverage.json
-          node --input-type=module <<'NODE'
+          node --experimental-strip-types --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
           import {readFileSync,writeFileSync} from 'node:fs';
           import {createHash} from 'node:crypto';
           import {execFileSync} from 'node:child_process';
+          import {verifyReplayRecords} from './src/runtimeCoverage/replayRecords.ts';
           const root='.cache/runtime-integration/',name='runtime-coverage.json';
           const raw=readFileSync(root+name),report=JSON.parse(raw);
           const assembly=readFileSync(root+name+'.assembly.json'),meta=JSON.parse(assembly);
@@ -94,8 +101,7 @@ jobs:
           assert.equal(meta.consumerSourceTree,execFileSync('git',['rev-parse','HEAD:src'],{cwd:'.cache/web-consumer',encoding:'utf8'}).trim());
           for(const row of [...report.consumer.modules,...meta.styles])assert.equal(sha(readFileSync('.cache/web-consumer/'+row.path)),row.sha256);
           const previous=JSON.parse(readFileSync('reports/progress/runtime-coverage.json','utf8'));
-          assert.deepEqual(report.inputs,previous.inputs);
-          assert.deepEqual(report.records,previous.records);
+          verifyReplayRecords(report,previous,process.env.EXPECTED_RECORDS_SHA256||undefined);
           writeFileSync(root+'replay-provenance.json',JSON.stringify({producer:process.env.GITHUB_SHA,consumer:report.consumer.revision,sourceTree:meta.consumerSourceTree,observations:indices.size,fromZero:true,binding:header.binding,reportSha256:sha(raw),assemblySha256:sha(assembly),journalSha256:sha(journal),bytes:raw.length,node:process.version,runner:process.platform,rawSourcePublished:false},null,2)+'\n');
           NODE
       - uses: actions/upload-artifact@v4

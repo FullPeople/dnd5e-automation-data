@@ -13,10 +13,28 @@ inventory. Missing inventories are unknown, not zero, inapplicable or complete.
 The 18,789-identity denominator does not include the still-unregistered content.
 
 The pending positive source-spell filter consumer is
-`836e71d4f0a4b704fdd15336908266ce981cfea7`. Its 57 declarations across 11 sources
+`38af300cb6c8b4270a2798aa45bdc70a972f3453`. Its 57 declarations across 11 sources
 are a first subset of all 253 string-filter declarations across 26 sources, not
 57 completed rules. Class-list and other unverified predicates remain visible
 and held. The original 229 input pins, sources and identities remain unchanged.
+
+The second replay against `836e71d` was deliberately cancelled after five
+fixed-grant/casting-level regressions were found: all five passed on main and
+failed on that candidate. The corrected consumer preserves fixed grants,
+explicit casting variants, other valid choices and spent resources; 18 Web
+test files and 966 checks passed without skips. Both partial replay journals
+remain retained. The third replay must start from zero with this exact new
+consumer. No full App or complete replay acceptance is claimed yet.
+
+The existing remote replay gate required every record to stay identical,
+which correctly protects unchanged consumers but rejects new observed
+mechanisms. Unchanged-record comparison remains the default. A new mechanism
+requires an explicit SHA-256 of the complete locally reviewed record array,
+then a fresh remote replay must match it exactly. Validation additionally
+retains all identities, source/review flags, input pins, snapshot binding and
+previous positive records. Initial strict-gate failure and missing-helper
+test setup failure are retained; six new boundary tests pass. This does not
+relax witness validation, whole-rule qualification or source/receipt checks.
 
 The first local and remote full replay against consumer `c4cb2ee` failed because
 the old probe reused a stale list and attempted duplicate choices. The rejected
