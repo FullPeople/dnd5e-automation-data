@@ -1,4 +1,41 @@
-# Player rule automation checklist
+# Current checkpoint — 2026-11-06
+
+The integrated baseline is Data `8ae7b3fe43f69fea097c9068c770d44b5073f7f5`
+and Web `f5ce82fae695c2642f39a663a790630f97364a3b`. The current ledger has
+18,789 registered identities, 4,561 source-reviewed identities and 7,858 with
+at least one observed calculation or usable choice. Whole-rule modeling,
+execution and acceptance counts remain unestablished. Historical complete flags
+do not qualify current whole-rule acceptance.
+
+[Web PR142](https://github.com/FullPeople/DND-card-web/pull/142) retains the
+full known directory of 229 sources, including 84 without an established rule
+inventory. Missing inventories are unknown, not zero, inapplicable or complete.
+The 18,789-identity denominator does not include the still-unregistered content.
+
+The pending positive source-spell filter consumer is
+`836e71d4f0a4b704fdd15336908266ce981cfea7`. Its 57 declarations across 11 sources
+are a first subset of all 253 string-filter declarations across 26 sources, not
+57 completed rules. Class-list and other unverified predicates remain visible
+and held. The original 229 input pins, sources and identities remain unchanged.
+
+The first local and remote full replay against consumer `c4cb2ee` failed because
+the old probe reused a stale list and attempted duplicate choices. The rejected
+run [42086997505](https://github.com/FullPeople/dnd5e-automation-data/actions/runs/42086997505)
+and incomplete local receipts are retained. The probe now rereads offered
+candidates after every saved selection; real rejections and silently unrecorded
+edits still fail the observation. Four new regressions first produced three
+failures and one pass; the related seven-file group subsequently passed all 62
+checks on the existing Node 24 runtime. No count, assertion, skip policy or
+whole-rule completion gate was relaxed. New full replay, exact bytes, independent
+receipts and consumer App/CI checks remain required before this candidate counts
+as delivered.
+
+Current standing authorization allows normal merges and the existing deployment
+flow after exact checks and protections. It does not authorize bypassing review,
+branch protection, publisher identity checks, private data boundaries or errors.
+The older queue below is retained as history and does not override this checkpoint.
+
+# Historical player rule automation checklist (superseded checkpoint)
 
 This is a batch queue, not a whole-rule completion count. The current inventory
 has 18,789 identities and 4,561 reviewed identities. The published 6,538 figure
