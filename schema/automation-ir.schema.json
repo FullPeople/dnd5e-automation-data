@@ -42,7 +42,7 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 1000,
-          "pattern": "^[A-Z0-9][A-Z0-9_:-]*$"
+          "pattern": "^[A-Z0-9][A-Z0-9_:&-]*(?: [A-Z0-9_:&-]+)*$"
         },
         "engName": {
           "type": "string",

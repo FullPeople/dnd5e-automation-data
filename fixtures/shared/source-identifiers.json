@@ -1,0 +1,5 @@
+{
+  "acceptedSources": ["2024 PHB Backgrounds with Fluff", "Selerim Homebrew Backgrounds", "Generic Oversized Longbow", "Psions Primer", "dragoon revisited", "Psions Primer-UAClassFeatureVariants", "5EPotion Making", "FT&S"],
+  "distinctSources": ["Authored & One", "Authored One", "Authored-One", "Authored_One"],
+  "rejectedSources": ["BOOK|PHB", "BOOK#1", "BOOK/PHB", "BOOK\\PHB", "BOOK%7CPHB", "BOOK\"PHB", "BOOK\nPHB", "BOOK\tPHB", "BOOK  ONE", "BOOK ", " BOOK", "BOOK\u00a0ONE"]
+}
