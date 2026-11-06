@@ -4,6 +4,7 @@ import {probeEntry} from '../src/runtimeCoverage/probe.ts';
 function fixture(options={available:2,reject:false,silent:false}){
  const calls:{key:string;refs:string[]}[]=[],entry={id:'authored-owner',kind:'feat',edition:'2014',source:'PHB',raw:{additionalSpells:[{}]}},catalog=[entry],keys=['first','second'];
  const api:any={
+  entryEdition:(entry:any)=>entry.edition,
   newCharacter:()=>({selections:[],profile:{enabledSources:[],optional:{}},runtime:{resources:{}}}),newAutomationState:()=>({}),selectionAllowed:()=>true,syncAutoResources:()=>{},syncFeatures:()=>{},evaluate:()=>({skills:{}}),automaticWeaponAttacks:()=>({attacks:[]}),
   planSourceSpells:(card:any)=>({choices:keys.map(key=>{const own=card.automation.spellChoices?.[key]||[],used=Object.entries(card.automation.spellChoices||{}).filter(([other])=>other!==key).flatMap(([,refs])=>refs as string[]);return {key,ownerId:'candidate',count:1,distinctGroup:'authored-group',spells:['one|PHB','two|PHB'].slice(0,options.available),blockedSpells:used.filter(ref=>!own.includes(ref))};})}),
   setSourceSpellChoices:(card:any,key:string,refs:string[])=>{

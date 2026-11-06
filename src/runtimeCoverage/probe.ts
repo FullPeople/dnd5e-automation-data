@@ -63,7 +63,11 @@ export function probeEntry(api:RuntimeAdapter,entry:any,catalog:any[],parents:an
  const root=['class','subclass','race','background'].includes(entry.kind);
  const gated=entry.raw.additionalSpells!=null;
  const levels=entry.kind==='item'||entry.kind==='spell'||entry.kind==='condition'||entry.kind==='rule'?[1]:gated?Array.from({length:20},(_,i)=>i+1).filter(n=>n>=Number(entry.raw.level||0)):[Math.max(1,Number(entry.raw.level||0)),20];
- for(const edition of entry.edition==='both'?['2014','2024']:[entry.edition])for(const level of levels){
+ // A publication can contain an adaptation for a different parent edition.
+ // Use the consumer's own availability policy, never infer from the book label.
+ const effectiveEdition=api.entryEdition(entry);
+ if(!['2014','2024','both'].includes(effectiveEdition))throw Error('Invalid consumer entry edition');
+ for(const edition of effectiveEdition==='both'?['2014','2024']:[effectiveEdition])for(const level of levels){
   const base=api.newCharacter(edition);base.id='audit';base.automation=api.newAutomationState();base.profile.enabledSources=sources;base.profile.optional.multiclass=true;
   base.training={armor:'轻甲、中甲、重甲、盾牌',weapons:'简易武器、军用武器'};
   for(const parent of parents)base.selections.push({id:'parent:'+parent.id,entry:parent,level,quantity:1,equipped:false});

@@ -18,6 +18,7 @@ export async function buildConsumerAdapter(webRoot:string,output:string,includeC
   'src/core/validation.ts':['readCharacter'],
   ...(includeCatalog?{'src/data/spellLookup.ts':['hydrateSpellLookup']}:{})
  }:{};
+ required['src/core/model.ts']=['entryEdition'];
  if(limited){
   const additions:Record<string,string[]>={
    'src/core/automation/limitedSourceUses.ts':['limitedSourceRule','limitedSourceUseOffers','limitedSourceUseRequest','performLimitedSourceUseAction','limitedSourceSpellOffer','ownedLimitedSourceResource','assertLimitedSourceResourceEdit'],
