@@ -34,9 +34,11 @@ The safe formula parser accepts a small arithmetic/dice grammar without eval.
 
 The browser bundle contains precompiled strict schema validators and semantic
 checks with no runtime package dependencies. Its single `identity.ts` module is
-SHA-256 locked and includes explicit protocol and formula signatures. Web
-imports that module and the hashed artifact; it does not import
-this repository or its test tooling at runtime.
+SHA-256 locked and includes explicit protocol and formula signatures. The current
+DND-card-web website owns its pure executor and stored entry snapshots; its pinned
+progress, runtime and source-directory reports do not make this optional browser
+SDK the live website executor. Neither project imports this repository's test
+tooling into its player runtime.
 
 Raw publisher inputs stay in ignored `.cache/`; do not commit them or player
 cards. Public artifacts omit rule bodies and CJK text. This repository retains
