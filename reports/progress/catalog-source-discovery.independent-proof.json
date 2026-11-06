@@ -1,0 +1,49 @@
+{
+  "verified": true,
+  "scope": "independent current-source directory proof only; no rule payload or acceptance credit",
+  "producer": "bdda092bfb3e6cbd0383fd13fa6bb7b8602c18ca",
+  "sourceTree": "a8a92331694094b7d446c673ae10c9c573caf07a",
+  "reportSha256": "d8e7c518798fc53d8d8f6946073b02b92700db5e1802b8dd181affa4629bf49a",
+  "reportBytes": 561271,
+  "currentIdentityCount": 47674,
+  "newCandidateCount": 28898,
+  "legacyAbsentPreserved": 13,
+  "provisionalUnionCount": 47687,
+  "sourceRows": 501,
+  "webKnownSources": 513,
+  "webPendingRuleInventories": 368,
+  "addedSources": [
+    {
+      "id": "HFLOTT",
+      "name": "英雄宴桌坛传奇",
+      "nameStatus": "unique-metadata",
+      "inventory": "pending"
+    },
+    {
+      "id": "PL",
+      "name": "拉莫迪亚计划",
+      "nameStatus": "unique-metadata",
+      "inventory": "pending"
+    },
+    {
+      "id": "RWG",
+      "name": "红袍巫师的博弈",
+      "nameStatus": "unique-metadata",
+      "inventory": "pending"
+    },
+    {
+      "id": "SOS",
+      "name": "席斯库斯之影",
+      "nameStatus": "unique-metadata",
+      "inventory": "pending"
+    }
+  ],
+  "unclassifiedFiles": 178,
+  "diagnostics": {
+    "identity-unresolved": 30,
+    "duplicate-conflict": 6
+  },
+  "allCreditsZero": true,
+  "sourceBodiesPublished": false,
+  "observedAt": "2026-11-06T04:13:48.319260+00:00"
+}

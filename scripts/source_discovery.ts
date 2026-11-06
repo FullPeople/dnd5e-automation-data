@@ -7,6 +7,11 @@ const text=(value:unknown):value is string=>typeof value==='string'&&!!value.tri
 const onlyKeys=(value:unknown,keys:readonly string[])=>!!value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).every(key=>keys.includes(key));
 const sourceId=(value:string)=>value.trim().toUpperCase();
 const sourceUrl=(value:unknown)=>{try{const url=new URL(String(value));return url.protocol==='https:'&&['5e.kiwee.top','homebrew.kiwee.top','raw.githubusercontent.com'].includes(url.hostname)&&!url.username&&!url.password&&!url.search&&!url.hash;}catch{return false;}};
+/** Compare URL transport spelling with the Git member name; never use this
+ * decoding to locate a private filesystem input. */
+export function sourceInputMatchesGitPath(inputUrl:string,localPath:string,upstreamPath:string):boolean{
+ try{const url=new URL(inputUrl);return url.protocol==='https:'&&['5e.kiwee.top','homebrew.kiwee.top'].includes(url.hostname)&&!url.username&&!url.password&&!url.search&&!url.hash&&url.pathname.slice(1)===localPath&&decodeURIComponent(url.pathname.slice(1))===upstreamPath;}catch{return false;}
+}
 export interface DiscoveryInput {url:string;sha256:string;rawSha256:string;role:'legacy'|'extra';body:Record<string,any>;recoveredFrom?:string}
 export interface SourceDiscoveryInput {
  producerRevision:string;generatedAt:string;legacySnapshotSha256:string;legacySources:{id:string;name:string}[];
@@ -22,6 +27,16 @@ export interface SourceDiscoveryReport {
  indexIssues:{id:string;reason:'unusable-index-path'}[];unclassifiedExtraFiles:{url:string;sha256:string;reason:'needs-category-review'}[];
  creditAdded:{sourceReviewed:0;modeled:0;executed:0;accepted:0};sourceBodiesPublished:false;
 }
+/** Compare separate epochs without deriving a mixed corpus or deleting absent
+ * legacy identities. A source-directory union is not the current rule count. */
+export function compareDiscoveryEpochs(legacyIdentities:readonly string[],currentRows:readonly {id:string;source:string}[]){
+ assert(legacyIdentities.every(text)&&new Set(legacyIdentities).size===legacyIdentities.length,'Invalid or duplicate legacy identity');
+ assert(currentRows.every(row=>text(row.id)&&text(row.source))&&new Set(currentRows.map(row=>row.id)).size===currentRows.length,'Invalid or duplicate current identity');
+ const old=new Set(legacyIdentities),current=new Set(currentRows.map(row=>row.id));
+ const candidateIdentities=currentRows.filter(row=>!old.has(row.id)).map(row=>({id:row.id,source:row.source}));
+ const absentLegacyIdentities=legacyIdentities.filter(id=>!current.has(id));
+ return {candidateIdentities,absentLegacyIdentities,currentIdentityCount:currentRows.length,retainedIdentityCount:currentRows.length-candidateIdentities.length,provisionalUnionIdentityCount:legacyIdentities.length+candidateIdentities.length};
+}
 export function buildSourceDiscovery(input:SourceDiscoveryInput):SourceDiscoveryReport {
  assert(new Set(input.legacyIdentities).size===input.legacyIdentities.length&&new Set(input.candidateIdentities.map(row=>row.id)).size===input.candidateIdentities.length,'Duplicate identity');
  const original=new Set(input.legacyIdentities);assert(input.candidateIdentities.every(row=>text(row.id)&&text(row.source)&&!original.has(row.id)),'Overlapping or invalid identity');
@@ -32,7 +47,13 @@ export function buildSourceDiscovery(input:SourceDiscoveryInput):SourceDiscovery
   add(id,undefined,input.index.sha256);
   if(typeof path!=='string'||!path.endsWith('.json')||/^[a-z]+:|^[\\/]|[?#\\]/i.test(path)||path.split('/').some(part=>!part||part==='.'||part==='..'))indexIssues.push({id:sourceId(id),reason:'unusable-index-path'});
  }
- for(const file of input.inputs)for(const row of Array.isArray(file.body._meta?.sources)?file.body._meta.sources:[])add(row.json,row.full||row.abbreviation,file.sha256);
+ for(const file of input.inputs){
+  for(const row of Array.isArray(file.body._meta?.sources)?file.body._meta.sources:[])add(row.json,row.full||row.abbreviation,file.sha256);
+  // Only these primary metadata indexes own book/adventure titles. A chapter's
+  // document ID is not a source ID (for example PS-A versus declared PSA).
+  const metadataKind=file.url==='https://5e.kiwee.top/data/books.json'?'book':file.url==='https://5e.kiwee.top/data/adventures.json'?'adventure':undefined;
+  if(metadataKind)for(const row of Array.isArray(file.body[metadataKind])?file.body[metadataKind]:[])if(text(row?.source))add(row.source,row.name,file.sha256);
+ }
  for(const row of input.candidateIdentities)add(row.source,undefined,candidateSha);
  const diagnostics:Record<string,number>={};for(const row of input.diagnostics)diagnostics[row.code]=(diagnostics[row.code]||0)+1;
  const sources=[...rows].map<SourceDiscoveryReport['sources'][number]>(([id,row])=>{const names=[...row.names].sort(),baseline=baselineNames.get(id);return{id,name:baseline|| (names.length===1?names[0]:id),names,nameStatus:baseline?'baseline':names.length===1?'unique-metadata':names.length?'needs-review':'code-only',inventory:baselineNames.has(id)?'legacy':'pending',inputRefs:[...row.refs].sort()};}).sort((a,b)=>a.id.localeCompare(b.id));

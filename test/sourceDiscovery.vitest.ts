@@ -1,6 +1,7 @@
 import {expect,it} from 'vitest';
 import {readFileSync} from 'node:fs';
-import {buildSourceDiscovery,validateSourceDiscovery} from '../scripts/source_discovery.ts';
+import {createHash} from 'node:crypto';
+import {buildSourceDiscovery,validateSourceDiscovery,compareDiscoveryEpochs,sourceInputMatchesGitPath} from '../scripts/source_discovery.ts';
 const hash='a'.repeat(64),pin=(body:any,role:'legacy'|'extra'='extra')=>({url:'https://homebrew.kiwee.top/book/authored.json',sha256:hash,rawSha256:hash,role,body});
 const setup=()=>({producerRevision:'b'.repeat(40),generatedAt:'2026-11-06T00:00:00Z',legacySnapshotSha256:hash,legacySources:[{id:'PHB',name:'旧版基础书'}],legacyIdentities:['original:phb'],candidateIdentities:[{id:'authored:xphb',source:'XPHB'}],inputs:[pin({_meta:{sources:[{json:'XPHB',full:'同名书'}]},class:[{name:'private authored rule sentinel'}]})],index:{url:'https://homebrew.kiwee.top/_generated/index-sources.json',sha256:hash,body:{PHB:'book/old.json',XPHB:'book/new.json',EMPTY:'book/empty.json'}},diagnostics:[]});
 it('keeps all source-directory IDs including empty inventories and distinct editions',()=>{
@@ -12,4 +13,53 @@ it('preserves old public names and exposes conflicting new metadata names',()=>{
 it('rejects duplicate or overlapping candidate identities rather than shrinking their denominator',()=>{const input=setup();input.candidateIdentities.push({...input.candidateIdentities[0]});expect(()=>buildSourceDiscovery(input)).toThrow('identity');const other=setup();other.candidateIdentities[0].id=other.legacyIdentities[0];expect(()=>buildSourceDiscovery(other)).toThrow('identity');});
 it('rejects invented credit, changed counts, duplicate sources, missing provenance and undeclared payloads',()=>{for(const change of [(r:any)=>r.creditAdded.executed++,(r:any)=>r.counts.sources++,(r:any)=>r.sources.push(r.sources[0]),(r:any)=>r.inputs[0].sha256='invalid',(r:any)=>r.sources[0].rawBody='unreviewed body',(r:any)=>r.extraSourceText='unreviewed text']){const report=buildSourceDiscovery(setup());change(report);expect(()=>validateSourceDiscovery(report)).toThrow();}});
 it('keeps chapter-only files and diagnostics visible without calling them inapplicable',()=>{const input=setup();input.inputs.push({...pin({book:[{id:'authored chapter'}]}),url:'https://homebrew.kiwee.top/book/chapters.json'});input.diagnostics=[{key:'unresolved',code:'identity-unresolved',files:['book/chapters.json']}] as any;const report=buildSourceDiscovery(input);expect(report.unclassifiedExtraFiles).toHaveLength(1);expect(report.diagnostics.counts['identity-unresolved']).toBe(1);expect(report.unclassifiedExtraFiles[0].reason).toBe('needs-category-review');});
-it('validates the real discovery artifact while preserving the old registered inventory and all zero credits',()=>{const report=validateSourceDiscovery(JSON.parse(readFileSync('reports/progress/catalog-source-discovery.json','utf8'))),snapshot=JSON.parse(readFileSync('reports/progress/automation-rule-status.json','utf8'));expect(report.counts.legacyRegisteredIdentities).toBe(snapshot.records.length);expect(report.counts.newCandidateIdentities).toBe(28880);expect(report.counts.provisionalCombinedIdentities).toBe(47669);expect(report.sources).toHaveLength(425);expect(report.inputs).toHaveLength(463);expect(report.index.sourceIds).toBe(322);for(const row of snapshot.sources)expect(report.sources.some(source=>source.id===row.id)).toBe(true);expect(Object.values(report.creditAdded)).toEqual([0,0,0,0]);});
+it('validates the current directory against both proof summaries while preserving the old registered inventory and all zero credits',()=>{
+ const bytes=readFileSync('reports/progress/catalog-source-discovery.json'),report=validateSourceDiscovery(JSON.parse(bytes.toString())),snapshot=JSON.parse(readFileSync('reports/progress/automation-rule-status.json','utf8'));
+ const proof=JSON.parse(readFileSync('reports/progress/catalog-source-discovery.current-epoch-proof.json','utf8')),independent=JSON.parse(readFileSync('reports/progress/catalog-source-discovery.independent-proof.json','utf8')),digest=createHash('sha256').update(bytes).digest('hex');
+ expect(digest).toBe(proof.reportSha256);expect(digest).toBe(independent.reportSha256);expect(report.producerRevision).toBe(proof.producerRevision);
+ expect(proof).toMatchObject({currentInputs:469,currentRawBytes:131035829,currentCatalogInputs:459,gitObjectsVerified:462,legacyRegisteredIdentities:18789,currentIdentities:47674,retainedIdentities:18776,newCandidateIdentities:28898,legacyAbsentFromCurrent:13,provisionalUnionIdentities:47687,sourceDirectoryCount:501,sourceBodiesPublished:false});
+ expect(report.counts.legacyRegisteredIdentities).toBe(snapshot.records.length);expect(report.counts.newCandidateIdentities).toBe(proof.newCandidateIdentities);expect(report.counts.provisionalCombinedIdentities).toBe(proof.provisionalUnionIdentities);
+ expect(report.sources).toHaveLength(501);expect(report.inputs).toHaveLength(688);expect(report.index.sourceIds).toBe(322);
+ for(const row of snapshot.sources)expect(report.sources.find(source=>source.id===row.id)?.name).toBe(row.name);
+ for(const id of ['HFLOTT','PL','RWG','SOS'])expect(report.sources.find(row=>row.id===id)).toMatchObject({nameStatus:'unique-metadata',inventory:'pending'});
+ expect(independent).toMatchObject({verified:true,currentIdentityCount:47674,newCandidateCount:28898,legacyAbsentPreserved:13,provisionalUnionCount:47687,sourceRows:501,webKnownSources:513,webPendingRuleInventories:368,allCreditsZero:true,sourceBodiesPublished:false});
+ expect(Object.values(report.creditAdded)).toEqual([0,0,0,0]);expect(proof.creditAdded).toEqual(report.creditAdded);
+});
+
+it('registers primary book metadata by declared source identity rather than a document alias, without exporting publisher bodies',()=>{
+ const input=setup();input.inputs.push({...pin({book:[{id:'PS-A',source:'PSA',name:'Authored plane source',entries:['PRIVATE_PUBLISHER_SENTINEL']},{id:'PL',source:'PL',name:'Authored current source'}]}),url:'https://5e.kiwee.top/data/books.json'});
+ const report=buildSourceDiscovery(input);expect(report.sources.some(row=>row.id==='PS-A')).toBe(false);
+ expect(report.sources.find(row=>row.id==='PSA')).toMatchObject({name:'Authored plane source',nameStatus:'unique-metadata',inventory:'pending'});
+ expect(report.sources.find(row=>row.id==='PL')).toMatchObject({name:'Authored current source',inventory:'pending'});expect(JSON.stringify(report)).not.toContain('PRIVATE_PUBLISHER_SENTINEL');expect(report.creditAdded).toEqual({sourceReviewed:0,modeled:0,executed:0,accepted:0});
+});
+it('retains adventure sources with no modeled player entries and never turns their absence into inapplicability',()=>{
+ const input=setup();input.inputs.push({...pin({adventure:[{id:'DOC-ONLY',source:'NEW-ADVENTURE',name:'Authored source with no modeled entries'}]}),url:'https://5e.kiwee.top/data/adventures.json'});
+ const report=buildSourceDiscovery(input);expect(report.sources.find(row=>row.id==='NEW-ADVENTURE')).toMatchObject({inventory:'pending'});expect(report.sources.some(row=>row.id==='DOC-ONLY')).toBe(false);expect(report.unclassifiedExtraFiles).toContainEqual({url:'https://5e.kiwee.top/data/adventures.json',sha256:hash,reason:'needs-category-review'});
+});
+it('does not reinterpret arbitrary chapter arrays or missing metadata source IDs as new book identities',()=>{
+ const input=setup();input.inputs.push({...pin({book:[{id:'DO-NOT-GUESS',name:'PRIVATE_CHAPTER_SENTINEL'},{source:'CHAPTER-NOT-BOOK',name:'PRIVATE_CHAPTER_SENTINEL'}]}),url:'https://homebrew.kiwee.top/book/chapters.json'});
+ input.inputs.push({...pin({book:[{id:'PRIMARY-DOC-ONLY',name:'PRIVATE_UNMAPPED_TITLE'}]}),url:'https://5e.kiwee.top/data/books.json'});
+ const report=buildSourceDiscovery(input);expect(report.sources.some(row=>['DO-NOT-GUESS','CHAPTER-NOT-BOOK','PRIMARY-DOC-ONLY'].includes(row.id))).toBe(false);expect(JSON.stringify(report)).not.toContain('PRIVATE_CHAPTER_SENTINEL');expect(JSON.stringify(report)).not.toContain('PRIVATE_UNMAPPED_TITLE');
+});
+
+it('keeps current and provisional union counts distinct and preserves absent legacy identities without mutating either epoch',()=>{
+ const old=['old:retained','old:absent'],current=[{id:'old:retained',source:'PHB'},{id:'new:entry',source:'PL'}],before=JSON.stringify([old,current]);
+ expect(compareDiscoveryEpochs(old,current)).toEqual({candidateIdentities:[{id:'new:entry',source:'PL'}],absentLegacyIdentities:['old:absent'],currentIdentityCount:2,retainedIdentityCount:1,provisionalUnionIdentityCount:3});expect(JSON.stringify([old,current])).toBe(before);
+});
+it('preserves source-qualified edition identities even when their display names would be identical',()=>{
+ const result=compareDiscoveryEpochs(['2014:PHB:same-name'],[{id:'2024:XPHB:same-name',source:'XPHB'}]);expect(result.currentIdentityCount).toBe(1);expect(result.provisionalUnionIdentityCount).toBe(2);expect(result.retainedIdentityCount).toBe(0);expect(result.absentLegacyIdentities).toEqual(['2014:PHB:same-name']);
+});
+it('rejects duplicate epoch identities instead of silently reducing the candidate denominator',()=>{
+ expect(()=>compareDiscoveryEpochs(['same','same'],[])).toThrow('duplicate legacy');expect(()=>compareDiscoveryEpochs([],[{id:'same',source:'PHB'},{id:'same',source:'XPHB'}])).toThrow('duplicate current');
+});
+
+it('matches encoded transport paths to exact Git names once while keeping literal filesystem spellings distinct',()=>{
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Sample%20-%20Giddy%3B%20%E7%86%84%E7%81%AD.json','action/Sample%20-%20Giddy%3B%20%E7%86%84%E7%81%AD.json','action/Sample - Giddy; 熄灭.json')).toBe(true);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Literal%2520.json','action/Literal%2520.json','action/Literal%20.json')).toBe(true);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Literal%2520.json','action/Literal%2520.json','action/Literal .json')).toBe(false);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Name%20One.json','action/Name One.json','action/Name One.json')).toBe(false);
+});
+it('rejects redirected, ambiguous or malformed source-path associations instead of relaxing their identity check',()=>{
+ for(const url of ['https://homebrew.kiwee.top/action/a.json?override=1','https://homebrew.kiwee.top/action/a.json#other','https://private@homebrew.kiwee.top/action/a.json','http://homebrew.kiwee.top/action/a.json','https://example.invalid/action/a.json','https://homebrew.kiwee.top/action/%ZZ.json'])expect(sourceInputMatchesGitPath(url,'action/a.json','action/a.json')).toBe(false);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/a.json','action/a.json','action/b.json')).toBe(false);
+});
