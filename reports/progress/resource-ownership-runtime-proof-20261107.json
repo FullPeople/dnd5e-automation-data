@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "scope": "Fresh full historical-input replay for the manual unowned-resource collision guard; authored collision/App and current-epoch lifecycle acceptance are separate.",
+  "local": {
+    "verified": true,
+    "mode": "local",
+    "crossHostRecordsCompared": false,
+    "producer": "17a179633072b53017b6f3d5fa97273066a09e1b",
+    "consumer": "dcd1e3d17af4b4114b0b6d17df1be052741becb8",
+    "sourceTree": "2b905d57f9f3cf1304230ab6053571fe7e302cc1",
+    "fromZero": true,
+    "receipts": 18789,
+    "modules": 312,
+    "styles": 2,
+    "inputs": 229,
+    "reportSha256": "2206e7d75d5f9a8e31a7784ed0d1a7c83f4ac108d2d4713685f8c183d0f54a74",
+    "assemblySha256": "7efd50ac0bafd86c718cdb46b4aea02e06d816f392dd89cc0c2e10347ba72633",
+    "journalSha256": "381e676aa0dec18610ff219c83f07e3f7f0b78fff717d3d5b1682f3eff34bd7b",
+    "recordsSha256": "3e019659a43f96853c51d52f9a1fec3e0800347f4c9b0d0233abc0d5bb2de965",
+    "changedRecords": 0,
+    "lostPriorPositiveRecords": 0,
+    "registered": 18789,
+    "sourceReviewed": 4561,
+    "partialMechanismObservations": 7934,
+    "newWholeRuleOrAcceptanceCredit": 0,
+    "rawSourcePublished": false
+  },
+  "remote": {
+    "verified": true,
+    "mode": "remote",
+    "crossHostRecordsCompared": true,
+    "producer": "17a179633072b53017b6f3d5fa97273066a09e1b",
+    "consumer": "dcd1e3d17af4b4114b0b6d17df1be052741becb8",
+    "sourceTree": "2b905d57f9f3cf1304230ab6053571fe7e302cc1",
+    "fromZero": true,
+    "receipts": 18789,
+    "modules": 312,
+    "styles": 2,
+    "inputs": 229,
+    "reportSha256": "840a9d543b47202853e38ad97063b9adcceb4b7055d7ff7e3733ddc30ed81af4",
+    "assemblySha256": "f8c7c3eb950bd6926bebc29088fb3a9cc298d5e4a05738a5a35add356b66b0a0",
+    "journalSha256": "70f7f6a52e911020e66068031e20afb6fc25453ebc4f6e9d450bf00b50dd96ae",
+    "recordsSha256": "3e019659a43f96853c51d52f9a1fec3e0800347f4c9b0d0233abc0d5bb2de965",
+    "changedRecords": 0,
+    "lostPriorPositiveRecords": 0,
+    "registered": 18789,
+    "sourceReviewed": 4561,
+    "partialMechanismObservations": 7934,
+    "newWholeRuleOrAcceptanceCredit": 0,
+    "rawSourcePublished": false
+  },
+  "artifact": {
+    "verified": true,
+    "run": 42257452145,
+    "artifactId": 13524379946,
+    "producer": "17a179633072b53017b6f3d5fa97273066a09e1b",
+    "bytes": 1214625,
+    "zipSha256": "ca54fb0c26637f371969f87e6e1efdd9b34cdd93366749506fbfad72fa2c7cb4",
+    "files": [
+      {
+        "name": "runtime-coverage.json.assembly.json",
+        "bytes": 995,
+        "sha256": "f8c7c3eb950bd6926bebc29088fb3a9cc298d5e4a05738a5a35add356b66b0a0"
+      },
+      {
+        "name": "runtime-coverage.json",
+        "bytes": 5113038,
+        "sha256": "840a9d543b47202853e38ad97063b9adcceb4b7055d7ff7e3733ddc30ed81af4"
+      },
+      {
+        "name": "runtime-coverage.json.receipts.jsonl",
+        "bytes": 6617709,
+        "sha256": "70f7f6a52e911020e66068031e20afb6fc25453ebc4f6e9d450bf00b50dd96ae"
+      },
+      {
+        "name": "replay-provenance.json",
+        "bytes": 660,
+        "sha256": "80fc58d8aea805a2d51a7dd9503ca1a12c0b1cd0067040d71c7767d8d9d1dd06"
+      }
+    ],
+    "observedAt": "2026-11-06T17:40:06.116180+00:00",
+    "priorDownload": "0-byte first transfer retained; URL expired17:38:32Z before request17:39:01Z returned403. Fresh same authorized connector artifact URL used; no permission or identity changes.",
+    "scope": "Immutable artifact ZIP digest/length and all extracted bytes verified; full source/journal/cross-host qualification remains pending"
+  },
+  "bindingDerivation": {
+    "verified": true,
+    "producer": "17a179633072b53017b6f3d5fa97273066a09e1b",
+    "consumer": "dcd1e3d17af4b4114b0b6d17df1be052741becb8",
+    "localBinding": "884a878503185d21e1f0123bbb6fc20f0ee9663d83a02e19c12ec1f5cbf5817e",
+    "remoteBinding": "dbf0c9a5974a8a57c02f1307b7052db7997adf232a0706eedb0be051f8d0c35e",
+    "localAdapterSha256": "5e4718e01cde5e806a9732bd3bd717331521eb96e07395e33c28036b62d1171a",
+    "remoteAdapterReconstructedSha256": "42120ad16874ac74cc6278c679a8326dab5a48bb055248c3ade4a1d092c30878",
+    "onlySourceCommentPathsChanged": 148,
+    "officialAuditSha256": "de01b26e64f17913922c9f333edc365e7b1c91054d3bc0028d44c1b083311957",
+    "snapshotSha256": "7ee119297b4a93c1193f52e35c3fa8dc5e819dabd71ee508de5747848c68759a",
+    "inputs": 229,
+    "inputsSha256": "e56d46b8a82ca0625665e7871404790e6da02d04fe177a79b7aaaedc236fa089",
+    "jobs": 18789,
+    "jobsSha256": "24416163b08b5b641a1d934f17d2b5c22cdce074ba19cc0fd24f0c4bbca4ce4a",
+    "actualRemoteLogSha256": "6eb50a42f0cb6f916635129d83ffe72655bbe3a4fa003bb15f2c4c3e49873b2c",
+    "actualRemoteResumed": 0,
+    "observationsRerun": false,
+    "receiptOrReportBytesChanged": false,
+    "scope": "Independently reproduce exact official binding recipe from frozen producer/consumer and original inputs; remote adapter differs from local only by esbuild source path comments. No runtime observation is rerun or altered."
+  },
+  "currentEpochAcceptance": {
+    "proofPath": "reports/progress/resource-ownership-current-input-proof-20261107.json",
+    "consumer": "dcd1e3d17af4b4114b0b6d17df1be052741becb8",
+    "reportSha256": "5d63d1ecb249706c3dd83fa650427ac011feaa36c89673f712a3d25307190be1",
+    "journalSha256": "d55ad17561e51a4470e3f1ffd2cac717c4b043a38c33a6dda93324cd4761e3e1",
+    "allInputsVerified": 469,
+    "editionCases": 375,
+    "selectedTargets": 407,
+    "everySemanticCaseAndTargetEqualPriorQualifiedProbe": true,
+    "wholeRuleOrAcceptanceCreditAdded": 0
+  },
+  "newWholeRuleOrAcceptanceCredit": 0
+}

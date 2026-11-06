@@ -1,3 +1,9 @@
+# 2026-11-07 · 手工次数归属候选的完整回放
+
+准确冻结网站 `dcd1e3d17af4b4114b0b6d17df1be052741becb8`／源码树 `2b905d57f9f3cf1304230ab6053571fe7e302cc1` 在独立本机和 Linux 各从零完成 18,789 条，312 模块、两份样式、229 输入及全部回执核对通过。完整记录与来源统计逐条一致，相对前版零机械记录变化、零正向丢失。采用 Linux 报告 `840a9d543b47202853e38ad97063b9adcceb4b7055d7ff7e3733ddc30ed81af4`，见[本批范围](RESOURCE-OWNERSHIP-20261107.md)。当前 469 输入／375 场景已在新源码完整复验并逐项一致：393 目标闭环、14 目标阻止，29 筛选场景阻止与一个未提供候选保持。报告尚未合并，网站配对、实际界面和准确 CI 仍待完成。
+
+18,789 登记／4,561 来源核验／7,934 局部观察保持；完整建模、执行、整条验收和当前 47,674 草稿仍待核实。以下均为历史检查点。
+
 # Current native-integration checkpoint — 2026-11-06
 
 The corrected immutable Web `2deda6a4a15a3e6f463da5329da85587f7fddb0a` has new independently qualified local and Linux from-zero replays: all18,789 receipts,312 modules,two styles and229 inputs match. Every mechanical record and source total is unchanged, without a digest override. Registered18,789/source-reviewed4,561/partial7,934 stay unchanged; whole-rule credit remains zero. See [the native-integration record](CLASS-FILTER-NATIVE-INTEGRATION-20261106.md) and its exact proof/report hashes.
