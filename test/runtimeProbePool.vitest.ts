@@ -26,7 +26,7 @@ it('rejects a worker import failure instead of accepting an incomplete corpus',a
 it('propagates real probe and receipt-write failures without leaving sibling workers active',async()=>{
  const {root,adapter}=fixture('');try{
   const entry={id:'authored',kind:'feat',edition:'2014',raw:{},source:'PHB'};
-  await expect(runRuntimeProbePool(adapter,[entry],[{index:0,entry:entry.id,parents:[]}],{workers:2})).rejects.toThrow('newCharacter');
+  await expect(runRuntimeProbePool(adapter,[entry],[{index:0,entry:entry.id,parents:[]}],{workers:2})).rejects.toThrow('entryEdition');
   await expect(runRuntimeProbePool(adapter,[],[{index:0,parents:[]},{index:1,parents:[]}],{workers:2,onResult:()=>{throw Error('authored receipt failure');}})).rejects.toThrow('authored receipt failure');
  }finally{rmSync(root,{recursive:true,force:true});}
 });
