@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "observedAt": "2026-11-06T18:16:19.332871+00:00",
+  "consumerRevision": "dcd1e3d17af4b4114b0b6d17df1be052741becb8",
+  "sourceTree": "2b905d57f9f3cf1304230ab6053571fe7e302cc1",
+  "reportSha256": "5d63d1ecb249706c3dd83fa650427ac011feaa36c89673f712a3d25307190be1",
+  "journalSha256": "d55ad17561e51a4470e3f1ffd2cac717c4b043a38c33a6dda93324cd4761e3e1",
+  "recipeSha256": "d9e70db6430f9ffc2d74f19f79a3e9e845fea606055669d1406ecffb03a4b582",
+  "allRawInputsReverified": 469,
+  "allRawBytes": 131035829,
+  "manifestSha256": "f8ded94ec3a948b9459afa2ef3ce6ddf93062fe9cf1509392c2a6790bac4f6ed",
+  "declarations": 300,
+  "editionCases": 375,
+  "fullChoiceCounts": 345,
+  "selectedTargets": 407,
+  "castTargets": 407,
+  "lifecycle": {
+    "all-selected-targets-cast-and-restored": 332,
+    "selected-targets-with-held-casts": 13,
+    "filter-held": 29,
+    "source-choice-not-offered": 1
+  },
+  "castStatuses": {
+    "chosen-reopened-cast-and-restored": 393,
+    "reopened-grant-without-current-payment": 14
+  },
+  "incompleteCases": 317,
+  "everySemanticCaseAndTargetEqualPriorQualifiedProbe": true,
+  "priorProbeSha256": "42f90f8e5e94386825d7da450eb9e2e28f1b62d37880eb148249032e291c138d",
+  "wholeRuleOrAcceptanceCreditAdded": 0,
+  "rawSourceBodiesPublished": false,
+  "priorPublishedCaseLedger": {
+    "repository": "FullPeople/dnd5e-automation-data",
+    "revision": "29a3d95b287bcc2288fb49a483b69fc81afab86b",
+    "path": "reports/progress/class-native-current-input-probes-20261106.json",
+    "sha256": "9f09e85ca114faae9d5406eae97404baccb9f5ca966e2d08161d1197d1859865",
+    "everySemanticCaseAndTargetEqual": true
+  },
+  "independentProofSha256": "fd4ce661ab7318e74aa0fbe3fe9db17adfce44cbdd9904ffd4c428314234b6b4"
+}
