@@ -2,6 +2,7 @@ import {expect,it} from 'vitest';
 import {mkdtempSync,mkdirSync,writeFileSync,rmSync} from 'node:fs';
 import {dirname,join,resolve} from 'node:path';
 import {tmpdir} from 'node:os';
+import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 import {buildConsumerAdapter} from '../src/runtimeCoverage/adapter.ts';
 
@@ -21,8 +22,10 @@ it.each([false,true])('requires a callable consumer edition policy after bundlin
    writeFileSync(file,exports.map(name=>`export const ${name}=()=>undefined;`).join('\n')+(path.endsWith('/model.ts')?erased?'\nexport type entryEdition={notCallable:true};':'\nexport const entryEdition=(entry:{edition:string})=>entry.edition;':''));
   }
   const output=join(root,'consumer.mjs');await buildConsumerAdapter(root,output,false);
-  if(erased)await expect(import(pathToFileURL(output).href)).rejects.toThrow('Missing ordinary casting runtime export: entryEdition');
-  else expect((await import(pathToFileURL(output).href)).entryEdition({edition:'both'})).toBe('both');
+  const expected='Missing ordinary casting runtime export: entryEdition';
+  const source=`try{const api=await import(${JSON.stringify(pathToFileURL(output).href)});process.stdout.write(api.entryEdition({edition:'both'}));process.exitCode=0;}catch(error){if(error instanceof Error&&error.message===${JSON.stringify(expected)}){process.stderr.write(error.message);process.exitCode=23;}else{process.stderr.write('UNEXPECTED_NATIVE_IMPORT_ERROR');process.exitCode=24;}}`;
+  const result=spawnSync(process.execPath,['--input-type=module','-e',source],{encoding:'utf8',timeout:3500});
+  expect(result.error).toBeUndefined();expect(result.status).toBe(erased?23:0);expect(result.stdout).toBe(erased?'':'both');expect(result.stderr).toBe(erased?expected:'');
  }finally{
   if(dirname(root)!==base)throw Error('Unexpected adapter fixture path');rmSync(root,{recursive:true});
  }

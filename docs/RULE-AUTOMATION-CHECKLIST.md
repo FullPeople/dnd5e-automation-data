@@ -1,3 +1,9 @@
+# Current class-query checkpoint — 2026-11-06
+
+The independently qualified local replay retains 18,789 registered identities and 4,561 source-reviewed flags, with 7,934 partial mechanism witnesses. All 1,350 changed observations were reviewed; prior positives were rechecked at their original context and none were lost. This is not whole-rule completion. The exact independent Linux replay is still running at this checkpoint; Web complete-App acceptance and final CI remain required. See [the current class-query record](CLASS-FILTER-RUNTIME-20261106.md) for exact revisions, hashes, all current-input outcomes, corrected earlier target-attribution claims and remaining holds.
+
+The merged known-source directory is 513 source identifiers, including 368 pending rule inventories. The current 469-input / 47,674-identity valid draft remains wholly pending annotation. Neither discovery nor a partial witness grants whole-rule registration, review, modeling, execution or acceptance credit. Published 309 still uses its previous report and directory. The following sections are historical checkpoints.
+
 # Current candidate — 2026-11-06, complete replay and expanded source discovery
 
 The new candidate is not yet merged or deployed. It retains all 18,789 legacy
