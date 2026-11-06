@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {materialize} from '../src/derive/catalogue.ts';
-import {buildSourceDiscovery,compareDiscoveryEpochs,type DiscoveryInput} from './source_discovery.ts';
+import {buildSourceDiscovery,compareDiscoveryEpochs,sourceInputMatchesGitPath,type DiscoveryInput} from './source_discovery.ts';
 
 const args=process.argv.slice(2);
 assert(args.length===5,'Usage: export_current_source_discovery.ts LEGACY_CACHE CURRENT_CACHE CURRENT_GIT_OBJECT_PROOF NEW_REPORT_JSON NEW_PROOF_JSON');
@@ -40,13 +40,13 @@ for(const pin of manifest.inputs){
  if(!['catalog','index'].includes(pin.role)){assert(['foundry','version'].includes(pin.role),'Unknown current input role');continue;}
  const rows=gitProof.rows.filter((row:any)=>row.url===pin.url);assert(rows.length===1,'Current input has no unique Git-object receipt');const receipt=rows[0];
  const actualBlob=createHash('sha1').update(Buffer.concat([Buffer.from(`blob ${bytes.length}\0`),bytes])).digest('hex');
- assert(receipt.repository===repositories[pin.namespace]&&receipt.upstreamPath===pin.path&&/^[a-f0-9]{40}$/.test(receipt.revision)&&receipt.matched===true&&receipt.rawSha256===pin.sha256&&receipt.expectedBytes===bytes.length&&receipt.gitBlobSha1===actualBlob&&receipt.expectedBlob===actualBlob,'Current Git object differs from its immutable receipt');
+ assert(receipt.repository===repositories[pin.namespace]&&sourceInputMatchesGitPath(pin.url,pin.path,receipt.upstreamPath)&&/^[a-f0-9]{40}$/.test(receipt.revision)&&receipt.matched===true&&receipt.rawSha256===pin.sha256&&receipt.expectedBytes===bytes.length&&receipt.gitBlobSha1===actualBlob&&receipt.expectedBlob===actualBlob,'Current Git object differs from its immutable receipt');
  const repository=gitProof.repositories.filter((row:any)=>row.repository===receipt.repository&&row.revision===receipt.revision);assert(repository.length===1&&/^[a-f0-9]{40}$/.test(repository[0].treeSha),'Current repository epoch is ambiguous');gitObjects++;
  const body=JSON.parse(bytes.toString()),canonical=sha(JSON.stringify(body));assert.equal(canonical,receipt.sha256,'Current canonical input changed');
  if(pin.url==='https://homebrew.kiwee.top/_generated/index-sources.json'){assert(pin.role==='index'&&!indexPin,'Current source index is ambiguous');indexBody=body;indexPin=pin;}
  if(pin.role!=='catalog')continue;
  for(const [url,kind]of [['https://5e.kiwee.top/data/books.json','book'],['https://5e.kiwee.top/data/adventures.json','adventure']])if(pin.url===url){assert(Array.isArray(body[kind])&&body[kind].every((row:any)=>typeof row.source==='string'&&!!row.source.trim()),'Primary metadata has an unmapped source identity; inspect before exporting');}
- current.push({url:pin.url,sha256:canonical,rawSha256:pin.sha256,role:'extra',body,recoveredFrom:`https://raw.githubusercontent.com/${receipt.repository}/${receipt.revision}/${receipt.upstreamPath}`});
+ current.push({url:pin.url,sha256:canonical,rawSha256:pin.sha256,role:'extra',body,recoveredFrom:`https://raw.githubusercontent.com/${receipt.repository}/${receipt.revision}/${receipt.upstreamPath.split('/').map(encodeURIComponent).join('/')}`});
  currentCorpus.push({input:pin,body});
 }
 assert(indexPin,'Current source index is missing');

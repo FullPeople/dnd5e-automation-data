@@ -7,6 +7,11 @@ const text=(value:unknown):value is string=>typeof value==='string'&&!!value.tri
 const onlyKeys=(value:unknown,keys:readonly string[])=>!!value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).every(key=>keys.includes(key));
 const sourceId=(value:string)=>value.trim().toUpperCase();
 const sourceUrl=(value:unknown)=>{try{const url=new URL(String(value));return url.protocol==='https:'&&['5e.kiwee.top','homebrew.kiwee.top','raw.githubusercontent.com'].includes(url.hostname)&&!url.username&&!url.password&&!url.search&&!url.hash;}catch{return false;}};
+/** Compare URL transport spelling with the Git member name; never use this
+ * decoding to locate a private filesystem input. */
+export function sourceInputMatchesGitPath(inputUrl:string,localPath:string,upstreamPath:string):boolean{
+ try{const url=new URL(inputUrl);return url.protocol==='https:'&&['5e.kiwee.top','homebrew.kiwee.top'].includes(url.hostname)&&!url.username&&!url.password&&!url.search&&!url.hash&&url.pathname.slice(1)===localPath&&decodeURIComponent(url.pathname.slice(1))===upstreamPath;}catch{return false;}
+}
 export interface DiscoveryInput {url:string;sha256:string;rawSha256:string;role:'legacy'|'extra';body:Record<string,any>;recoveredFrom?:string}
 export interface SourceDiscoveryInput {
  producerRevision:string;generatedAt:string;legacySnapshotSha256:string;legacySources:{id:string;name:string}[];

@@ -1,6 +1,6 @@
 import {expect,it} from 'vitest';
 import {readFileSync} from 'node:fs';
-import {buildSourceDiscovery,validateSourceDiscovery,compareDiscoveryEpochs} from '../scripts/source_discovery.ts';
+import {buildSourceDiscovery,validateSourceDiscovery,compareDiscoveryEpochs,sourceInputMatchesGitPath} from '../scripts/source_discovery.ts';
 const hash='a'.repeat(64),pin=(body:any,role:'legacy'|'extra'='extra')=>({url:'https://homebrew.kiwee.top/book/authored.json',sha256:hash,rawSha256:hash,role,body});
 const setup=()=>({producerRevision:'b'.repeat(40),generatedAt:'2026-11-06T00:00:00Z',legacySnapshotSha256:hash,legacySources:[{id:'PHB',name:'旧版基础书'}],legacyIdentities:['original:phb'],candidateIdentities:[{id:'authored:xphb',source:'XPHB'}],inputs:[pin({_meta:{sources:[{json:'XPHB',full:'同名书'}]},class:[{name:'private authored rule sentinel'}]})],index:{url:'https://homebrew.kiwee.top/_generated/index-sources.json',sha256:hash,body:{PHB:'book/old.json',XPHB:'book/new.json',EMPTY:'book/empty.json'}},diagnostics:[]});
 it('keeps all source-directory IDs including empty inventories and distinct editions',()=>{
@@ -39,4 +39,15 @@ it('preserves source-qualified edition identities even when their display names 
 });
 it('rejects duplicate epoch identities instead of silently reducing the candidate denominator',()=>{
  expect(()=>compareDiscoveryEpochs(['same','same'],[])).toThrow('duplicate legacy');expect(()=>compareDiscoveryEpochs([],[{id:'same',source:'PHB'},{id:'same',source:'XPHB'}])).toThrow('duplicate current');
+});
+
+it('matches encoded transport paths to exact Git names once while keeping literal filesystem spellings distinct',()=>{
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Sample%20-%20Giddy%3B%20%E7%86%84%E7%81%AD.json','action/Sample%20-%20Giddy%3B%20%E7%86%84%E7%81%AD.json','action/Sample - Giddy; 熄灭.json')).toBe(true);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Literal%2520.json','action/Literal%2520.json','action/Literal%20.json')).toBe(true);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Literal%2520.json','action/Literal%2520.json','action/Literal .json')).toBe(false);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/Name%20One.json','action/Name One.json','action/Name One.json')).toBe(false);
+});
+it('rejects redirected, ambiguous or malformed source-path associations instead of relaxing their identity check',()=>{
+ for(const url of ['https://homebrew.kiwee.top/action/a.json?override=1','https://homebrew.kiwee.top/action/a.json#other','https://private@homebrew.kiwee.top/action/a.json','http://homebrew.kiwee.top/action/a.json','https://example.invalid/action/a.json','https://homebrew.kiwee.top/action/%ZZ.json'])expect(sourceInputMatchesGitPath(url,'action/a.json','action/a.json')).toBe(false);
+ expect(sourceInputMatchesGitPath('https://homebrew.kiwee.top/action/a.json','action/a.json','action/b.json')).toBe(false);
 });
