@@ -410,17 +410,17 @@ function specificMagicItems(body) {
     const checks = Object.entries(conditions).map(([key, value]) => Array.isArray(value) ? list(candidate[key]).some((v) => value.includes(v)) : value && typeof value === "object" ? match(candidate[key], value, all) : list(candidate[key]).includes(value));
     return all ? checks.every(Boolean) : checks.some(Boolean);
   };
-  const edition = (raw) => ["classic", "\u7ECF\u5178"].includes(raw.edition) || ["PHB", "DMG"].includes(raw.source) ? "2014" : ["one", "\u4E00"].includes(raw.edition) || ["XPHB", "XDMG"].includes(raw.source) ? "2024" : "";
+  const edition2 = (raw) => ["classic", "\u7ECF\u5178"].includes(raw.edition) || ["PHB", "DMG"].includes(raw.source) ? "2014" : ["one", "\u4E00"].includes(raw.edition) || ["XPHB", "XDMG"].includes(raw.source) ? "2024" : "";
   for (const base of body.baseitem || []) for (const variant of body.magicvariant || []) {
     if (base.packContents || base._copy || variant._copy || !variant.inherits) continue;
-    if (edition(base) && edition(variant) && edition(base) !== edition(variant)) continue;
+    if (edition2(base) && edition2(variant) && edition2(base) !== edition2(variant)) continue;
     if (!list(variant.requires).some((req) => match(base, req, true)) || match(base, variant.excludes, false)) continue;
     const inherits = variant.inherits, item = { ...structuredClone(base), ...structuredClone(inherits) };
     for (const key of ["value", ...metadata]) if (!(key in inherits)) delete item[key];
     const name = inherits.nameRemove ? base.name.split(inherits.nameRemove).join("") : base.name;
     item.name = `${inherits.namePrefix || ""}${name}${inherits.nameSuffix || ""}`;
     item.ENG_name = `${base.ENG_name || base.name} (${variant.ENG_name || variant.name})`;
-    item.edition = edition(base) === "2014" ? "classic" : edition(base) === "2024" ? "one" : variant.edition;
+    item.edition = edition2(base) === "2014" ? "classic" : edition2(base) === "2024" ? "one" : variant.edition;
     item._variantIdentity = `${base.source}|${base.ENG_name || base.name}|${variant.source}|${variant.ENG_name || variant.name}`;
     item.baseItem = `${base.name}|${base.source}`;
     item.entries = [...substitute(inherits.entries || [], { ...base, ...inherits }), ...base.entries || []];
@@ -563,13 +563,13 @@ function materialize(files, aliases = []) {
     }
     const { key: _key, unresolved: _unresolved, ...fields2 } = pending;
     const id = createIdentity({ ...fields2, packId: namespace });
-    const edition = ["PHB", "DMG", "MM"].includes(id.source) || ["classic", "\u7ECF\u5178"].includes(raw.edition) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(id.source) || ["one", "\u4E00"].includes(raw.edition) ? "2024" : void 0;
+    const edition2 = ["PHB", "DMG", "MM"].includes(id.source) || ["classic", "\u7ECF\u5178"].includes(raw.edition) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(id.source) || ["one", "\u4E00"].includes(raw.edition) ? "2024" : void 0;
     const old = rows.get(id.key), fingerprint = digest(raw);
     if (old) {
       old.files = [.../* @__PURE__ */ new Set([...old.files, label(file)])].sort();
       if (fingerprints.get(id.key) !== fingerprint) diagnostics.push({ key: id.key, code: "duplicate-conflict", files: old.files });
     } else {
-      rows.set(id.key, { identity: id, raw, namespace, files: [label(file)], edition, expansion });
+      rows.set(id.key, { identity: id, raw, namespace, files: [label(file)], edition: edition2, expansion });
       fingerprints.set(id.key, fingerprint);
     }
   };
@@ -1129,6 +1129,11 @@ function classes(row, ctx, out) {
 
 // src/derive/structured/equipment.ts
 var code = (value) => String(value || "").split("|")[0].toUpperCase();
+var edition = (row) => row.edition || (["PHB", "DMG", "MM"].includes(row.identity.source) ? "2014" : ["XPHB", "XDMG", "XMM"].includes(row.identity.source) ? "2024" : void 0);
+function crossesEdition(owner, target2) {
+  const from = edition(owner), to = edition(target2);
+  return !!from && !!to && from !== "both" && to !== "both" && from !== to;
+}
 function equipment(row, ctx, out) {
   const raw = row.raw, model = {};
   if (["item", "baseitem", "magicvariant"].includes(row.identity.kind)) {
@@ -1182,7 +1187,7 @@ function equipment(row, ctx, out) {
     });
     fields(raw, out, ["baseItem"], (field, value) => {
       const target2 = typeof value === "string" ? ctx.resolve(value, "item") : void 0;
-      if (target2 && row.edition && target2.edition && row.edition !== target2.edition) unsupported(out, "equipment", "cross-edition-base-item", field);
+      if (target2 && crossesEdition(row, target2)) unsupported(out, "equipment", "cross-edition-base-item", field);
       else if (target2) model.baseItem = target2.identity.key;
       else unsupported(out, "equipment", "unresolved-base-item", field);
     });
@@ -1246,7 +1251,7 @@ function equipment(row, ctx, out) {
       const options = [];
       for (const [key, items] of Object.entries(block)) {
         const parts = [];
-        for (const item of items) {
+        for (const [itemIndex, item] of items.entries()) {
           const quantity = typeof item === "string" ? 1 : item?.quantity ?? 1;
           if (!integer(quantity, 1, 3e3)) {
             unsupported(out, "startingEquipment", "equipment-quantity", `${field}/${i}/${key}`);
@@ -1255,7 +1260,11 @@ function equipment(row, ctx, out) {
           const ref = typeof item === "string" ? item : item?.item, part = { quantity };
           if (ref) {
             const target2 = typeof ref === "string" ? ctx.resolve(ref, "item") : void 0, group = typeof ref === "string" ? ctx.resolve(ref, "itemGroup") : void 0, focus = group && code(group.raw.type) === "SCF" ? { holy: "focusSpellcastingHoly", arcane: "focusSpellcastingArcane", druid: "focusSpellcastingDruidic" }[group.raw.scfType] : void 0;
-            if (target2) part.identity = target2.identity.key;
+            const resolved = target2 || (focus ? group : void 0);
+            if (resolved && crossesEdition(row, resolved)) {
+              unsupported(out, "startingEquipment", "cross-edition-equipment", `${field}/${i}/${key}/${itemIndex}`);
+              part.unresolved = true;
+            } else if (target2) part.identity = target2.identity.key;
             else if (focus) part.category = focus;
             else {
               unsupported(out, "startingEquipment", "unresolved-equipment", `${field}/${i}/${key}`);
@@ -1393,8 +1402,8 @@ function spells(row, ctx, out) {
               const ref = (value2) => {
                 const [uid, level] = value2.split("#"), target2 = ctx.resolve(uid, "spell", uid.includes("|") ? void 0 : "PHB");
                 if (level && !/^(c|[1-9])$/.test(level) || level === "c" && target2?.raw.level !== 0) return;
-                const edition = row.edition || coreEdition(row.identity.source), targetEdition = target2?.edition || coreEdition(target2?.identity.source || "");
-                if (target2 && edition && edition !== "both" && targetEdition && targetEdition !== "both" && edition !== targetEdition) return;
+                const edition2 = row.edition || coreEdition(row.identity.source), targetEdition = target2?.edition || coreEdition(target2?.identity.source || "");
+                if (target2 && edition2 && edition2 !== "both" && targetEdition && targetEdition !== "both" && edition2 !== targetEdition) return;
                 if (level && level !== "c") spellLevel = Number(level);
                 if (target2) referenceAliases[target2.identity.key] = encodeURIComponent(value2);
                 return target2?.identity.key;
@@ -30634,8 +30643,8 @@ function recordChecks(record, index, issues, path) {
       issue(issues, "reference-key", location, "Referenced identity is not a canonical identity key");
       return;
     }
-    const edition = editionForSource(parts[2].toUpperCase());
-    if (edition && recordEdition(record) && edition !== recordEdition(record)) issue(issues, "edition-reference", location, "A reference crosses the 2014 and 2024 boundary");
+    const edition2 = editionForSource(parts[2].toUpperCase());
+    if (edition2 && recordEdition(record) && edition2 !== recordEdition(record)) issue(issues, "edition-reference", location, "A reference crosses the 2014 and 2024 boundary");
     const kinds = kind === "feature" ? ["classfeature", "subclassfeature", "optionalfeature"] : kind === "item" ? ["item", "baseitem", "magicvariant"] : kind ? [kind.toLowerCase()] : void 0;
     if (kinds && !kinds.includes(parts[1].toLowerCase())) {
       issue(issues, "reference-kind", location, "Referenced identity has the wrong kind");

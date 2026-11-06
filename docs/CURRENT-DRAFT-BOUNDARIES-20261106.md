@@ -16,10 +16,18 @@ The mapper now checks the 26 declared native IDs directly, including the pseudo-
 
 Unknown native IDs remain explicit gaps. In particular, a `poison` damage code is not rewritten to the `poisoned` condition, and a custom catalog condition cannot invent a native immunity ID. Timed, disabled and item effects still do not grant unconditional ownership modifiers; unreviewed migration versions remain rejected. Other custom effect-status namespaces require their own review and are outside this native `ci` mapping.
 
+## Starting-equipment edition references
+
+After those representation fixes, the full rehearsal at producer `65dec439baaa0939c1d8c00f922708125f66d4f9` reached semantic validation and failed closed with eight edition-reference observations at four distinct equipment paths. No output was accepted. Both the source-built standalone generator and five of six focused cases reproduced the missing guard.
+
+The equipment mapper now uses explicit material editions, with the existing six core source codes as a fallback. It preserves distinct source identities, quantities, currencies, independent alternatives and the class-only initial-kit scope. A reference between incompatible single editions becomes an unresolved part with a `cross-edition-equipment` diagnostic at the exact block, option and item index. It is not replaced by a same-name item from another source. The guard also covers a resolved focus group before converting it to a generic category. An explicitly both-edition extension remains compatible; the base-item guard now follows the same rule. Unknown extension editions are not inferred from names or dates.
+
+The unresolved part continues to block delivery of its entire package; this change is not permission to issue a partial kit. Raw upstream files, aliases, source corrections and the strict edition validator are unchanged. A later reviewed applicability decision is still required for each source conflict. These visible gaps add no completion credit.
+
 ## Evidence and limits
 
 The initial seven-case regression had six failures and one pass. The first combined run retained one invalid item fixture without migration version 3; correcting that fixture preserved the original migration rejection and all assertions. The four focused suites then passed 293 tests. Browser/producer validation and source-built/checked-in standalone generation also passed, including independence from the unrelated catalog condition and preserving the other progression limits.
 
-A fresh full current-input derive must be bound to the exact producer commit and immutable input hashes before a complete draft can be accepted. The earlier invalid draft and failures remain private evidence. Source snapshots, aliases, input corrections, existing public execution receipts, runtime player state and protocol are unchanged.
+The equipment regressions now pass all six cases. The combined four suites pass 28 tests, including compiled browser validation and complete source-built/checked-in standalone output parity. The initial generator-only reproduction selected one case and left eight unselected cases; all nine generator cases ran in the passing combined run. A fresh full current-input derive must still be bound to the exact next producer commit and immutable input hashes before a complete draft can be accepted. The earlier invalid draft and failures remain private evidence. Source snapshots, aliases, input corrections, existing public execution receipts, runtime player state and protocol are unchanged.
 
 This is draft representation compatibility. It does not approve source content, promote a record beyond `needsAnnotation`, adopt the new corpus in Web, or add whole-rule modeling, execution or acceptance credit.
