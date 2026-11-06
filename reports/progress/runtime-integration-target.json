@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "consumerRepository": "FullPeople/DND-card-web",
-  "consumerRevision": "38af300cb6c8b4270a2798aa45bdc70a972f3453",
-  "consumerSourceTree": "aa9d4ab7b54fd674050930f59cd60fce25e4342d",
+  "consumerRevision": "9a0a27c92a4aba954c7c104249608eced3cf2a46",
+  "consumerSourceTree": "81904006a341fea8cbae56e54c3b90e4cfafa936",
   "purpose": "Generate a fresh complete integration report from the published consumer source; no deployment"
 }
