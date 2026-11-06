@@ -42,6 +42,8 @@ defs['equipmentPart']=O({'identity':S(maxLength=6000),'category':E('weaponSimple
 defs['equipmentOption']=O({'key':S(maxLength=100),'items':A(R('equipmentPart'),0,1000)},['key','items'])
 defs['startingEquipment']=O({'blocks':A(O({'key':S(maxLength=100),'options':A(R('equipmentOption'),1,100)},['key','options']),0,100),'scope':E('all','firstClass')},['blocks','scope'])
 defs['classModel']['properties']['referenceAliases']=defs['grant']['properties']['referenceAliases']
+# Book entries accumulate at most twenty separately bounded (0..100) increments.
+defs['classModel']['properties']['bookProgression']=A(N(0,2000),0,20)
 defs['classModel']['properties']['ritualAccess']=E('book','prepared','known')
 defs['equipmentModel']['properties'].update({'weaponType':E('melee','ranged'),'spellFocus':E('holy','arcane','druid'),'firearm':B})
 

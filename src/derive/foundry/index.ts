@@ -11,6 +11,15 @@ import type { Action, Effect, Modifier, Resource } from '../../protocol.ts';
 export interface Decision { key: string; route: string; reason: string; ref: string }
 const mode = (value: unknown): Modifier['op'] | undefined => ({ADD:'add',OVERRIDE:'set',UPGRADE:'max',DOWNGRADE:'min','2':'add','5':'set','4':'max','3':'min'} as Record<string,Modifier['op']>)[String(value).toUpperCase()];
 const tokenList = (value: unknown): string[] | undefined => Array.isArray(value) && value.every(v=>typeof v==='string') ? value : typeof value === 'string' ? value.split(/[;,]/).map(s=>s.trim()).filter(Boolean) : undefined;
+// Native ci values reference DND5E.conditionTypes, not same-name catalog entries.
+// foundryvtt/dnd5e@87e94dbd9f930135e0694cd7e7d49f210603cd2c module/config.mjs.
+const nativeConditionIds = new Set([
+  'bleeding','blinded','burning','charmed','cursed','dehydration','deafened','diseased',
+  'exhaustion','falling','frightened','grappled','incapacitated','invisible','malnutrition',
+  'paralyzed','petrified','poisoned','prone','restrained','silenced','stunned','suffocation',
+  'surprised','transformed','unconscious',
+]);
+const nativeConditionToken = (value: string): string | undefined => { const token=canonical(value);return nativeConditionIds.has(token)?token:undefined; };
 const activation = (value: unknown): Action['activation'] => ['action','bonus','reaction','special','minute','hour','day','rest'].includes(String(value)) ? String(value) : 'none';
 const target = (value: unknown): Action['target'] => ['self','creature','object'].includes(String(value)) ? String(value) : ['space','sphere','cube','cone','cylinder','line'].includes(String(value)) ? 'area' : 'other';
 function addGaps(out: Result, other: Result): void { for(const gap of other.unsupported)unsupported(out,gap.family,gap.code,gap.ref); }
@@ -28,7 +37,7 @@ function mappedChange(change: Raw, out: Result, ctx: DerivationContext, aliases:
     // OVERRIDE must replace the whole set; setting one flag cannot model that.
     if(op!=='add'){unsupported(out,'traitReplacement','trait-set-replacement-deferred',ref);return {modifiers:mods,grants};}
     const values=tokenList(change.value), family=spec.target==='conditionImmune'?'condition':spec.route==='trait'?'damage':spec.target==='languageProficiency'?'language':'weapon';
-    const tokens=values?.map(v=>ctx.token(v,family));
+    const tokens=values?.map(v=>spec.target==='conditionImmune'?nativeConditionToken(v):ctx.token(v,family));
     if(!tokens?.length || tokens.some(v=>!v)){unsupported(out,spec.family,'unresolved-effect-token',ref);return {modifiers:mods,grants};}
     if(spec.route==='trait')for(const t of new Set(tokens))mods.push({target:`${spec.target}:${t}`,op:'set',value:true});
     else grants.push({type:spec.target!,fixed:[...new Set(tokens as string[])]});

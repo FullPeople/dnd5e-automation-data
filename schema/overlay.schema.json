@@ -1037,7 +1037,7 @@
           "items": {
             "type": "integer",
             "minimum": 0,
-            "maximum": 100
+            "maximum": 2000
           },
           "minItems": 0,
           "maxItems": 20

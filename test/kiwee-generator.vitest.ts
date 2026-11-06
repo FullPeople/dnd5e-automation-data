@@ -131,3 +131,26 @@ it('both generators preserve declared source identifiers and reject invalid repl
   }
  }finally{paths.forEach((path,index)=>writeFileSync(join(work,path),originals[index]));}
 });
+
+it('both generators preserve extended cumulative books and native immunity independently of an unrelated catalog condition',()=>{
+ const paths=['data/feats.json','data/foundry-feats.json','data/class/class-synthetic.json','data/class/foundry.json','data/spells/spells-synthetic.json','data/optionalfeatures.json','data/conditionsdiseases.json'];
+ const originals=paths.map(path=>readFileSync(join(work,path))),generators=[script,fileURLToPath(new URL('../generate-automation.mjs',import.meta.url))],featSnapshots:any[]=[];
+ try{
+  for(const path of paths)source(path,{});
+  source('data/class/class-synthetic.json',{class:[{ENG_name:'Authored Book Owner',source:'PHB',spellsKnownProgressionFixed:Array(20).fill(100)}]});
+  source('data/feats.json',{feat:[{ENG_name:'Authored Immunity Owner',source:'PHB'}]});
+  source('data/foundry-feats.json',{feat:[{ENG_name:'Authored Immunity Owner',source:'PHB',migrationVersion:3,effects:[{transfer:true,changes:[{key:'system.traits.ci.value',mode:'ADD',value:'diseased'}]}]}]});
+  for(const withForeign of [false,true]){
+   source('data/conditionsdiseases.json',withForeign?{condition:[{ENG_name:'Diseased',source:'HB'}]}:{});
+   const results=generators.map((generator,index)=>{
+    const target=join(work,`native-book-${withForeign}-${index}`);execFileSync(process.execPath,[generator,'--data',data,'--out',target,'--fetched-at','2026-11-06T00:00:00.000Z'],{cwd:work,stdio:'pipe'});
+    const book=JSON.parse(readFileSync(join(target,'gendata-automation-class.json'),'utf8')),feat=JSON.parse(readFileSync(join(target,'gendata-automation-feat.json'),'utf8'));
+    validateAutomation(book);validateAutomation(feat);expect(book.records).toHaveLength(1);expect(book.records[0].mechanics.classModel.bookProgression).toEqual(Array.from({length:20},(_,i)=>(i+1)*100));
+    expect(feat.records).toHaveLength(1);expect(feat.records[0].mechanics.modifiers).toEqual([{target:'conditionImmune:diseased',op:'set',value:true}]);expect(feat.records[0].mechanics.effects[0].deferred).toBe(true);
+    expect([...book.records,...feat.records].every(row=>row.verdict==='needsAnnotation')).toBe(true);return {book,feat};
+   });
+   expect(results[1]).toEqual(results[0]);featSnapshots.push(results[0].feat.records);
+  }
+  expect(featSnapshots[1]).toEqual(featSnapshots[0]);
+ }finally{paths.forEach((path,index)=>writeFileSync(join(work,path),originals[index]));}
+});
