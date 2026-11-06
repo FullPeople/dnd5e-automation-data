@@ -41,7 +41,9 @@ SDK the live website executor. Neither project imports this repository's test
 tooling into its player runtime.
 
 Raw publisher inputs stay in ignored `.cache/`; do not commit them or player
-cards. Public artifacts omit rule bodies and CJK text. This repository retains
+cards. Public automation payloads omit rule bodies and CJK prose. Source-directory
+reports contain only source metadata, input references, hashes and counts, never
+raw inputs or player cards. This repository retains
 **DND Card Noncommercial Share-Alike License 1.0** for migrated source;
 third-party data retain their own licenses. Mechanical extracts do not grant
 permission to redistribute third-party prose.

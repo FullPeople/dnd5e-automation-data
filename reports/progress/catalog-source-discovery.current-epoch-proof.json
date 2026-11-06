@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "scope": "current-epoch source-directory metadata only; old registered records preserved; no rule-body publication or acceptance credit",
+  "producerRevision": "bdda092bfb3e6cbd0383fd13fa6bb7b8602c18ca",
+  "producerSourceTree": "a8a92331694094b7d446c673ae10c9c573caf07a",
+  "reportSha256": "d8e7c518798fc53d8d8f6946073b02b92700db5e1802b8dd181affa4629bf49a",
+  "currentManifestSha256": "f8ded94ec3a948b9459afa2ef3ce6ddf93062fe9cf1509392c2a6790bac4f6ed",
+  "gitObjectReceiptSha256": "38795c81502dc58068ba6bf945f986eb0a6aee198049e408192faa704c8ac299",
+  "currentInputs": 469,
+  "currentRawBytes": 131035829,
+  "currentCatalogInputs": 459,
+  "gitObjectsVerified": 462,
+  "currentRepositories": [
+    {
+      "repository": "tjliqy/5etools-cn",
+      "revision": "774a320e4a92d71d100673bc0df965661d9e8c1b",
+      "treeSha": "1f0d228785f3dd611fdfae8de71b1734388762a9"
+    },
+    {
+      "repository": "tjliqy/homebrew-deploy",
+      "revision": "e225d226fdb6df4d22754f673e423cd5906ddc22",
+      "treeSha": "91c3a21405cbfa79552df3aced0683640faaa0f7"
+    }
+  ],
+  "legacyRegisteredIdentities": 18789,
+  "currentIdentities": 47674,
+  "retainedIdentities": 18776,
+  "newCandidateIdentities": 28898,
+  "legacyAbsentFromCurrent": 13,
+  "legacyAbsentIdentitySetSha256": "a07611937b7a6a47ae4ea3a83ce03fd58ca0b65e53242fc950348c72ba106daa",
+  "provisionalUnionIdentities": 47687,
+  "legacyIdentitySetSha256": "342ab85113255d1dc76d5c14f81e90a74efa7b8fc800b4e60caf8167d3f65363",
+  "currentIdentitySetSha256": "b01713c79c005fe3f8f04a69b19847935680dee1ae3c325081c042449305bdd2",
+  "sourceDirectoryCount": 501,
+  "creditAdded": {
+    "sourceReviewed": 0,
+    "modeled": 0,
+    "executed": 0,
+    "accepted": 0
+  },
+  "sourceBodiesPublished": false
+}
