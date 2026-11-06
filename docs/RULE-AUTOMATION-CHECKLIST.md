@@ -1,3 +1,9 @@
+# Current native-integration checkpoint — 2026-11-06
+
+The corrected immutable Web `2deda6a4a15a3e6f463da5329da85587f7fddb0a` has new independently qualified local and Linux from-zero replays: all18,789 receipts,312 modules,two styles and229 inputs match. Every mechanical record and source total is unchanged, without a digest override. Registered18,789/source-reviewed4,561/partial7,934 stay unchanged; whole-rule credit remains zero. See [the native-integration record](CLASS-FILTER-NATIVE-INTEGRATION-20261106.md) and its exact proof/report hashes.
+
+The new current469-input lifecycle run also independently matches all375 prior semantic cases while binding the corrected source:393 selected targets complete casting and restoration,14 targets remain held;29 filter-held cases and one unavailable source choice remain visible. Full prerequisites, real accounts, devices and rooms are not accepted. Current47,674 draft identities remain unreviewed/unregistered. The following sections are historical checkpoints.
+
 # Current class-query checkpoint — 2026-11-06
 
 The independently qualified local replay retains 18,789 registered identities and 4,561 source-reviewed flags, with 7,934 partial mechanism witnesses. All 1,350 changed observations were reviewed; prior positives were rechecked at their original context and none were lost. This is not whole-rule completion. The exact independent Linux replay also completed and independently matched every record, source and input. Web complete-App acceptance and final CI remain required. See [the current class-query record](CLASS-FILTER-RUNTIME-20261106.md) for exact revisions, hashes, all current-input outcomes, corrected earlier target-attribution claims and remaining holds.

@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "scope": "Exact native-consumer integration; unchanged historical records and partial current-input lifecycles only",
+  "state": "Independent local and remote from-zero replay qualified; dependent Web App/CI and publication still pending",
+  "producer": "9f6e318cb35949dffefb73a7e38a63544cd083ec",
+  "consumer": "2deda6a4a15a3e6f463da5329da85587f7fddb0a",
+  "sourceTree": "eaeedbcbb646e8e5eb4428b6bf7c0c27c34bb853",
+  "canonicalReport": {
+    "runner": "linux",
+    "node": "v22.23.4",
+    "sha256": "90d43ca61fc50abf4a632eaea4f4d49b9c65ce46513758766eb33f3b9ca25438"
+  },
+  "local": {
+    "verified": true,
+    "mode": "local",
+    "producer": "9f6e318cb35949dffefb73a7e38a63544cd083ec",
+    "consumer": "2deda6a4a15a3e6f463da5329da85587f7fddb0a",
+    "sourceTree": "eaeedbcbb646e8e5eb4428b6bf7c0c27c34bb853",
+    "fromZero": true,
+    "receipts": 18789,
+    "modules": 312,
+    "styles": 2,
+    "inputs": 229,
+    "reportSha256": "007f37323c3026580182d53461c2e2ae7004eda72a09de1ffd0e28e6a968e936",
+    "assemblySha256": "9906b9d0ccce22e2c7adca68d689396726d8705ddff63ef8bac95104e4ba998a",
+    "journalSha256": "18c5a9aef01d8853d73e61b4f1cdcfd0a05e3ba82612206755529f83146047eb",
+    "recordsSha256": "3e019659a43f96853c51d52f9a1fec3e0800347f4c9b0d0233abc0d5bb2de965",
+    "changedRecords": 0,
+    "lostPriorPositiveRecords": 0,
+    "registered": 18789,
+    "sourceReviewed": 4561,
+    "partialMechanismObservations": 7934,
+    "newWholeRuleOrAcceptanceCredit": 0,
+    "rawSourcePublished": false,
+    "node": "v24.22.1",
+    "runner": "win32"
+  },
+  "remote": {
+    "verified": true,
+    "mode": "remote",
+    "producer": "9f6e318cb35949dffefb73a7e38a63544cd083ec",
+    "consumer": "2deda6a4a15a3e6f463da5329da85587f7fddb0a",
+    "sourceTree": "eaeedbcbb646e8e5eb4428b6bf7c0c27c34bb853",
+    "fromZero": true,
+    "receipts": 18789,
+    "modules": 312,
+    "styles": 2,
+    "inputs": 229,
+    "reportSha256": "90d43ca61fc50abf4a632eaea4f4d49b9c65ce46513758766eb33f3b9ca25438",
+    "assemblySha256": "e9957a58625775a750dd52243c2dd81dd0e639452046a3b924a567800cc85344",
+    "journalSha256": "f8c806e53422e7c7f17900acabe53ce4c6e721afb153f7e46fbe2587c457118f",
+    "recordsSha256": "3e019659a43f96853c51d52f9a1fec3e0800347f4c9b0d0233abc0d5bb2de965",
+    "changedRecords": 0,
+    "lostPriorPositiveRecords": 0,
+    "registered": 18789,
+    "sourceReviewed": 4561,
+    "partialMechanismObservations": 7934,
+    "newWholeRuleOrAcceptanceCredit": 0,
+    "rawSourcePublished": false,
+    "node": "v22.23.4",
+    "runner": "linux",
+    "run": 42209800495,
+    "artifact": 13499242964
+  },
+  "archive": {
+    "artifact": 13499242964,
+    "run": 42209800495,
+    "zipSha256": "c13cb8a56e4fcbe252ccaecf55201659d16291b229a875ad4583e25ca23f0dff",
+    "zipBytes": 1215041,
+    "allExtractedFilesMatchArchive": true,
+    "entries": [
+      {
+        "name": "runtime-coverage.json",
+        "bytes": 5113038,
+        "sha256": "90d43ca61fc50abf4a632eaea4f4d49b9c65ce46513758766eb33f3b9ca25438"
+      },
+      {
+        "name": "runtime-coverage.json.assembly.json",
+        "bytes": 995,
+        "sha256": "e9957a58625775a750dd52243c2dd81dd0e639452046a3b924a567800cc85344"
+      },
+      {
+        "name": "runtime-coverage.json.receipts.jsonl",
+        "bytes": 6617709,
+        "sha256": "f8c806e53422e7c7f17900acabe53ce4c6e721afb153f7e46fbe2587c457118f"
+      },
+      {
+        "name": "replay-provenance.json",
+        "bytes": 660,
+        "sha256": "b11bc4ab420b2aa3edce2a194dd116dfadfc71c5dff4da47790e0183847e58b9"
+      }
+    ],
+    "completeRecordsSourcesAndInputsEqualPreviousData95": true,
+    "recordsSha256": "3e019659a43f96853c51d52f9a1fec3e0800347f4c9b0d0233abc0d5bb2de965"
+  },
+  "completeLocalRemoteRecordsSourcesAndInputsEqual": true,
+  "historicalReplayVerificationRecipeSha256": "47c182d590921d3d3b582a3f20434e97e2ede13a3362d48d04848973d571fb91",
+  "currentInput": {
+    "verified": true,
+    "observedAt": "2026-11-06T11:59:32.962621+00:00",
+    "consumerRevision": "2deda6a4a15a3e6f463da5329da85587f7fddb0a",
+    "sourceTree": "eaeedbcbb646e8e5eb4428b6bf7c0c27c34bb853",
+    "reportSha256": "42f90f8e5e94386825d7da450eb9e2e28f1b62d37880eb148249032e291c138d",
+    "journalSha256": "eb766646df4f817b610ac248d96d85bc423b2f11d32e59e569edda5c8667e292",
+    "recipeSha256": "9bd0d9f6423b904ab5f0678f6dda26bb701c53a1a252f35fed1d2603b9819676",
+    "allRawInputsReverified": 469,
+    "allRawBytes": 131035829,
+    "manifestSha256": "f8ded94ec3a948b9459afa2ef3ce6ddf93062fe9cf1509392c2a6790bac4f6ed",
+    "declarations": 300,
+    "editionCases": 375,
+    "fullChoiceCounts": 345,
+    "selectedTargets": 407,
+    "castTargets": 407,
+    "lifecycle": {
+      "all-selected-targets-cast-and-restored": 332,
+      "selected-targets-with-held-casts": 13,
+      "filter-held": 29,
+      "source-choice-not-offered": 1
+    },
+    "castStatuses": {
+      "chosen-reopened-cast-and-restored": 393,
+      "reopened-grant-without-current-payment": 14
+    },
+    "incompleteCases": 317,
+    "everySemanticCaseAndTargetEqualPriorQualifiedProbe": true,
+    "priorProbeSha256": "76785f48dc2e672c4426ca1cb9f409aa1a70343987d7237b046b2c7ceca0be6d",
+    "wholeRuleOrAcceptanceCreditAdded": 0,
+    "rawSourceBodiesPublished": false
+  },
+  "currentInputVerificationRecipeSha256": "bcab15db739ce8adf9118b503d7d5c5eaa14a3fced9a685410461adb6653f776",
+  "wholeRuleCreditAdded": 0,
+  "rawSourceBodiesPublished": false
+}
