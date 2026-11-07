@@ -417,6 +417,7 @@ const groupedResourceSources=[
  'src/core/automation/slotCapacityReview.ts',
  'src/core/automation/slotBalanceRecovery.ts',
  'src/core/automation/slotBalanceHistory.ts',
+ 'src/core/automation/manualSlotPreservation.ts',
  'src/ui/SlotBalanceRecoveryControl.tsx',
  'src/ui/ResourceModuleFace.tsx',
  'src/ui/MobilePlayResources.tsx',

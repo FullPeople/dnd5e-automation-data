@@ -62,6 +62,15 @@ describe.skipIf(!opted)('ordinary casting real-source transaction bridge, not sp
   const before=digest(entries),result=probeEntry(api,spell,[wizard,spell],[]);
   assertWitness(result,spell,wizard);expect(digest(entries)).toBe(before);
  });
+ it.skipIf(!existsSync(join(current,'src/core/automation/slotCapacityReview.ts')))('the current ledger ABI requires an actual debit and preserves the established real-source witness',()=>{
+  expect(api.ordinarySlotBalanceCapability).toBe(1);expect(typeof api.validateSlotCapacityReview).toBe('function');const {spell,cls,catalog}=pair();let paid=0;
+  const wrapped={...api,performSpellAction:(c:any,q:any,a:any)=>{const before=structuredClone(c.runtime.slotCapacityReview),r=api.performSpellAction(c,q,a);if(r.status==='applied'){const id=q.paymentId.slice('ordinary:'.length);expect(c.runtime.slotCapacityReview.balances[id]).toEqual({...before.balances[id],spent:before.balances[id].spent+1,current:before.balances[id].current-1});paid++;}return r;}};
+  assertWitness(probeOrdinaryCasting(wrapped,spell,catalog),spell,cls);expect(paid).toBe(4);
+ });
+ it.skipIf(!existsSync(join(current,'src/core/automation/slotCapacityReview.ts'))).each(['extra-debit','drop-ledger','other-capacity','unrelated-note'] as const)('strict whole-character comparison still rejects a successful real cast with %s',mode=>{
+  const {spell,catalog}=pair();let applied=0;const wrapped={...api,performSpellAction:(c:any,q:any,a:any)=>{const r=api.performSpellAction(c,q,a);if(r.status==='applied'){applied++;const id=q.paymentId.slice('ordinary:'.length);if(mode==='extra-debit')c.runtime.slotCapacityReview.balances[id].spent++;if(mode==='drop-ledger')delete c.runtime.slotCapacityReview;if(mode==='other-capacity')c.runtime.slotCapacityReview.previous['spell-slot:9']=(c.runtime.slotCapacityReview.previous['spell-slot:9']||0)+1;if(mode==='unrelated-note')c.notes='authored corrupt unrelated note';}return r;}};
+  expect(probeOrdinaryCasting(wrapped,spell,catalog)).toBeNull();expect(applied).toBe(1);
+ });
  it.each([
   ['Sorcerer','Magic Missile','PHB'],['Warlock','Armor of Agathys','PHB'],['Wizard','Fire Bolt','PHB'],['Wizard','Magic Missile','XPHB'],['Wizard','Armament','OBOJIMATALLGRASS']
  ])('real %s/%s/%s uses actual known/cantrip/prepared ownership and paid/free action', (caster,english,source)=>{

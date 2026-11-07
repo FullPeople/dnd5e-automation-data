@@ -19,6 +19,8 @@ jobs:
           python-version: '3.12'
       - name: Test public progress export (six regression tests)
         run: python -B -m unittest discover -s scripts -p test_export_progress_status.py -v
+      - name: Test safe runtime failure receipts
+        run: python -B -m unittest discover -s scripts -p test_export_runtime_failure_receipt.py -v
       - run: npm ci
       - name: Type-check the source-discovery exporter without changing rule execution
         run: node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --module NodeNext --moduleResolution NodeNext --target es2023 --types node --rewriteRelativeImportExtensions --skipLibCheck scripts/source_discovery.ts scripts/export_source_discovery.ts

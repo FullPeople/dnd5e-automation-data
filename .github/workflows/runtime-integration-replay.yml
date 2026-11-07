@@ -104,6 +104,21 @@ jobs:
           verifyReplayRecords(report,previous,process.env.EXPECTED_RECORDS_SHA256||undefined);
           writeFileSync(root+'replay-provenance.json',JSON.stringify({producer:process.env.GITHUB_SHA,consumer:report.consumer.revision,sourceTree:meta.consumerSourceTree,observations:indices.size,fromZero:true,binding:header.binding,reportSha256:sha(raw),assemblySha256:sha(assembly),journalSha256:sha(journal),bytes:raw.length,node:process.version,runner:process.platform,rawSourcePublished:false},null,2)+'\n');
           NODE
+      - name: Retain failed replay metadata without publishing failed witness payloads
+        if: failure() || cancelled()
+        run: >-
+          python3 scripts/export_runtime_failure_receipt.py
+          --report .cache/runtime-integration/runtime-coverage.json
+          --assembly .cache/runtime-integration/runtime-coverage.json.assembly.json
+          --journal .cache/runtime-integration/runtime-coverage.json.receipts.jsonl
+          --output .cache/runtime-integration/failure-receipt.json
+      - uses: actions/upload-artifact@v4
+        if: failure() || cancelled()
+        with:
+          name: exact-consumer-runtime-failure
+          path: .cache/runtime-integration/failure-receipt.json
+          if-no-files-found: error
+          retention-days: 14
       - uses: actions/upload-artifact@v4
         with:
           name: exact-consumer-runtime-replay

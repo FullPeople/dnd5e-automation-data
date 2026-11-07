@@ -1,4 +1,5 @@
 import type {RuntimeAdapter,RuntimeWitness} from './probe.ts';
+import {ordinarySlotLedgerAfterDebit} from './ordinarySlotLedger.ts';
 
 const required=['ordinaryCastingRule','ordinaryDirectBaseClassList','ordinarySpellOffer','casterProfiles','learnActiveSpell','chooseCantrip','prepareSpellEntry','classSpellGroups','cantripGroups','spellIsReady','spellPayments','spellActionRequest','performSpellAction','exportCharacter','readCharacter'] as const;
 const same=(a:unknown,b:unknown)=>JSON.stringify(a)===JSON.stringify(b);
@@ -17,6 +18,7 @@ const authority={canEdit:true,gm:false};
 export function probeOrdinaryCasting(api:RuntimeAdapter,entry:any,catalog:any[]):RuntimeWitness|null{
  if(api.ordinaryCastingCapability===undefined)return null;
  if(api.ordinaryCastingCapability!==1)throw Error('Unsupported ordinary casting adapter capability');
+ if(api.ordinarySlotBalanceCapability!==undefined&&(api.ordinarySlotBalanceCapability!==1||typeof api.validateSlotCapacityReview!=='function'))throw Error('Unsupported ordinary slot balance adapter capability');
  for(const name of required)if(typeof api[name]!=='function')throw Error('Missing ordinary casting runtime export: '+name);
  if(entry?.kind!=='spell'||!api.ordinaryCastingRule(entry)||!Number.isSafeInteger(entry.raw.level)||entry.raw.level<0||entry.raw.level>9)return null;
  for(const edition of entry.edition==='both'?['2014','2024']:[entry.edition])for(const cls of ordinaryProbeClasses(api,catalog)){
@@ -69,6 +71,10 @@ export function probeOrdinaryCasting(api:RuntimeAdapter,entry:any,catalog:any[])
    if(result?.status!=='applied'||!receipt||receipt.id!==q.id||receipt.selectionId!==id||receipt.sequence!==sequence+at||receipt.mode!=='cast'||receipt.level!==option.level||c.runtime.automationActions?.sequence!==sequence+at+1||!same(c.runtime.automationActions.last,receipt)||!same(c.runtime.resources,expected)||(!free&&(receipt.resourceId!==option.resourceId||receipt.before!==resourceBefore[option.resourceId].current||receipt.after!==expected[option.resourceId].current))){valid=false;break;}
    characterBefore.runtime.resources=expected;characterBefore.runtime.automationActions={version:1,sequence:sequence+at+1,last:receipt};
    if(!free&&option.resourceId.startsWith('spell-slot:'))characterBefore.spellSettings.slots[option.resourceId.split(':')[1]]={max:expected[option.resourceId].max,used:expected[option.resourceId].max-expected[option.resourceId].current};
+   if(!free&&option.resourceId.startsWith('spell-slot:')&&api.ordinarySlotBalanceCapability===1){
+    observe(()=>api.validateSlotCapacityReview(characterBefore.runtime.slotCapacityReview),c);
+    characterBefore.runtime.slotCapacityReview=ordinarySlotLedgerAfterDebit(characterBefore.runtime.slotCapacityReview,option.resourceId,resourceBefore[option.resourceId],expected[option.resourceId]);
+   }
    if(!same(c,characterBefore)){valid=false;break;}
    const after=JSON.stringify(c),duplicate=api.performSpellAction(c,q,authority);duplicateUnchanged&&=duplicate?.status==='duplicate'&&JSON.stringify(c)===after;
    if(!duplicateUnchanged){valid=false;break;}
