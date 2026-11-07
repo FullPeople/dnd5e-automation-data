@@ -190,6 +190,7 @@ const groupedResourceSources=[
  "src/core/characterReview.ts",
  "src/core/classMigrationQuery.ts",
  "src/core/classSpellLists.ts",
+ "src/core/characterConstruction.ts",
  "src/core/currency.ts",
  "src/core/dashboardDraft.ts",
  "src/core/displayCharacterEdit.ts",
