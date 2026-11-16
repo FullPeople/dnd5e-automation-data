@@ -1,3 +1,4 @@
+import { reviewedFlamewokenResource } from './reviewedFlamewokenResource.ts';
 import { abilities } from './abilities.ts';
 import { proficiencies } from './proficiencies.ts';
 import { traits } from './traits.ts';
@@ -13,7 +14,7 @@ import { containsCjk } from '../../identity.ts';
 import { parseFormula } from '../../validate/formula.ts';
 export function deriveStructured(row:Material,ctx:DerivationContext) {
   const out=result(),raw=row.raw;if(['classFeature','subclassFeature','optionalfeature'].includes(row.identity.kind)&&row.identity.level!==undefined)out.handled.add('level');
-  abilities(raw,out);proficiencies(raw,ctx,out);traits(raw,ctx,out);resources(raw,out);classes(row,ctx,out);equipment(row,ctx,out);spells(row,ctx,out);choices(row,ctx,out);
+  abilities(raw,out);proficiencies(raw,ctx,out);traits(raw,ctx,out);resources(raw,out);reviewedFlamewokenResource(row,ctx,out);classes(row,ctx,out);equipment(row,ctx,out);spells(row,ctx,out);choices(row,ctx,out);
   for(const field of STRUCTURED_FIELDS)if(Object.hasOwn(raw,field)&&!out.handled.has(field))unsupported(out,'structuredField','unmapped-field',field);
   for(const [field,family,code]of [['script','scripts','script-execution-deferred'],['_custom','customRule','custom-rule-conversion-required'],['_workbenchCustom','customRule','custom-rule-conversion-required'],['attackBonus','manualWeapon','manual-weapon-data'],['items','equipmentBundle','equipment-bundle-pending']] as const)if(Object.hasOwn(raw,field)){out.handled.add(field);unsupported(out,family,code,field);}
   if(raw._copy)unsupported(out,'inheritance','unresolved-copy');if(raw._unresolvedParent||raw._unresolvedVariant)unsupported(out,'inheritance','unresolved-parent');

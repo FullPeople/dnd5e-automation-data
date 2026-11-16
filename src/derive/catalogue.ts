@@ -7,7 +7,7 @@ import type { CorpusBody } from '../report/inventory.ts';
 import type { Edition } from '../protocol.ts';
 export type Raw = Record<string, any>;
 export interface IdentityAlias { inventoryKey: string; engName: string; ref: string; reviewer: string; reviewedAt: string }
-export interface Material { identity: Identity; raw: Raw; namespace: string; files: string[]; edition?: Edition; expansion: string }
+export interface Material { identity: Identity; raw: Raw; namespace: string; files: string[]; edition?: Edition; expansion: string; identityConflict?: true }
 export interface Diagnostic { key: string; code: string; files: string[] }
 /** Expansion matches the G1 denominator; raw snapshots remain private inputs. */
 export function materialize(files: CorpusBody[], aliases: IdentityAlias[] = []) {
@@ -28,7 +28,10 @@ export function materialize(files: CorpusBody[], aliases: IdentityAlias[] = []) 
     const old = rows.get(id.key), fingerprint = digest(raw);
     if (old) {
       old.files = [...new Set([...old.files, label(file)])].sort();
-      if (fingerprints.get(id.key) !== fingerprint) diagnostics.push({ key: id.key, code: 'duplicate-conflict', files: old.files });
+      if (fingerprints.get(id.key) !== fingerprint) {
+        old.identityConflict = true;
+        diagnostics.push({ key: id.key, code: 'duplicate-conflict', files: old.files });
+      }
     } else { rows.set(id.key, { identity: id, raw, namespace, files: [label(file)], edition, expansion }); fingerprints.set(id.key, fingerprint); }
   };
   for (const namespace of [...new Set(catalog.map(file => file.input.namespace))].sort()) {
